@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Service Area | Enhance My Ride Auto Spa</title>
-<meta name="description" content="Enhance My Ride Auto Spa & Mobile Detailing brings premium mobile detailing to San Francisco and the greater Bay Area.">
+<meta name="description" content="Enhance My Ride Auto Spa & Mobile Detailing serves San Francisco and the Greater Bay Area. See our mobile detailing service area and request a quote.">
 <style>
 * {
     margin: 0;
@@ -54,40 +54,52 @@ nav {
 .brand span {
     color: var(--gold-light);
 }
-.menu-toggle {
+.menu-wrapper {
+    position: relative;
+}
+.menu-dropdown {
+    position: relative;
+}
+.menu-dropdown summary {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 48px;
     height: 42px;
-    background: transparent;
     border: 1px solid rgba(201,162,39,.5);
     color: var(--gold-light);
     font-size: 23px;
     cursor: pointer;
+    list-style: none;
+    user-select: none;
     transition: .3s;
 }
-.menu-toggle:hover {
+.menu-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+.menu-dropdown summary:hover {
+    background: var(--gold);
+    color: #080808;
+}
+.menu-dropdown[open] summary {
     background: var(--gold);
     color: #080808;
 }
 .nav-menu {
     position: absolute;
-    top: 78px;
-    right: 6%;
+    top: 52px;
+    right: 0;
     width: 230px;
     padding: 12px;
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 5px;
     background: rgba(12,12,12,.98);
     border: 1px solid rgba(201,162,39,.35);
     box-shadow: 0 20px 50px rgba(0,0,0,.6);
 }
-.nav-menu.active {
-    display: flex;
-}
 .nav-menu a {
+    display: block;
     padding: 13px 15px;
     color: #ccc;
     font-size: 11px;
@@ -128,7 +140,7 @@ nav {
     margin-bottom: 15px;
 }
 .page-hero h1 {
-    font-size: clamp(45px,8vw,85px);
+    font-size: clamp(44px,8vw,90px);
     line-height: .95;
     text-transform: uppercase;
     letter-spacing: -3px;
@@ -137,7 +149,7 @@ nav {
     color: var(--gold-light);
 }
 .page-hero p {
-    max-width: 700px;
+    max-width: 720px;
     margin: 25px auto 0;
     color: #999;
     font-size: 17px;
@@ -149,167 +161,149 @@ nav {
     padding: 100px 7%;
     background: #0a0a0a;
 }
-.area-container {
-    max-width: 1100px;
-    margin: auto;
-}
-.area-intro {
+.section-heading {
     max-width: 750px;
-    margin: 0 auto 70px;
+    margin: 0 auto 60px;
     text-align: center;
 }
-.area-intro h2 {
-    font-size: clamp(35px,5vw,58px);
+.section-heading h2 {
+    font-size: clamp(38px,5vw,60px);
     line-height: 1;
     text-transform: uppercase;
 }
-.area-intro h2 span {
+.section-heading h2 span {
     color: var(--gold-light);
 }
-.area-intro p {
-    margin-top: 20px;
+.section-heading p {
+    margin-top: 18px;
     color: #888;
 }
-/* AREA CARDS */
-.area-grid {
+.area-container {
+    max-width: 1100px;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
 }
 .area-card {
-    padding: 35px 25px;
+    padding: 40px 35px;
     background: linear-gradient(145deg,#181818,#0d0d0d);
     border: 1px solid #292929;
     transition: .3s;
 }
 .area-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(201,162,39,.7);
+    border-color: rgba(201,162,39,.6);
 }
-.area-card .number {
+.area-card.featured {
+    border-color: rgba(201,162,39,.6);
+}
+.area-number {
     color: var(--gold-light);
     font-size: 10px;
     font-weight: 900;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 .area-card h3 {
     margin-top: 15px;
-    font-size: 22px;
-    text-transform: uppercase;
-}
-.area-card p {
-    margin-top: 12px;
-    color: #888;
-    font-size: 13px;
-}
-.area-list {
-    margin-top: 20px;
-    list-style: none;
-}
-.area-list li {
-    padding: 7px 0;
-    border-bottom: 1px solid #292929;
-    color: #bbb;
-    font-size: 13px;
-}
-.area-list li::before {
-    content: "✓";
-    margin-right: 9px;
-    color: var(--gold-light);
-    font-weight: 900;
-}
-/* =========================
-   MOBILE DETAILING
-========================= */
-.mobile-section {
-    padding: 100px 7%;
-    background: #111;
-}
-.mobile-container {
-    max-width: 1000px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-.mobile-text .label {
-    margin-bottom: 15px;
-}
-.mobile-text h2 {
-    font-size: clamp(35px,5vw,58px);
-    line-height: 1;
-    text-transform: uppercase;
-}
-.mobile-text h2 span {
-    color: var(--gold-light);
-}
-.mobile-text p {
-    margin-top: 20px;
-    color: #888;
-}
-.mobile-benefits {
-    margin-top: 25px;
-    list-style: none;
-}
-.mobile-benefits li {
-    margin-bottom: 12px;
-    color: #bbb;
-    font-size: 14px;
-}
-.mobile-benefits li::before {
-    content: "✦";
-    margin-right: 10px;
-    color: var(--gold-light);
-}
-.location-box {
-    padding: 45px 35px;
-    background:
-        radial-gradient(circle at center,rgba(201,162,39,.12),transparent 60%),
-        #080808;
-    border: 1px solid rgba(201,162,39,.35);
-}
-.location-box h3 {
-    color: var(--gold-light);
     font-size: 25px;
     text-transform: uppercase;
 }
-.location-box p {
+.area-card p {
     margin-top: 15px;
-    color: #999;
+    color: #888;
     font-size: 14px;
 }
-.location-box strong {
-    color: #f5f2ea;
+.city-list {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 8px;
+    list-style: none;
+}
+.city-list li {
+    padding: 10px;
+    background: #0a0a0a;
+    border: 1px solid #252525;
+    color: #aaa;
+    font-size: 12px;
+}
+.city-list li::before {
+    content: "•";
+    margin-right: 7px;
+    color: var(--gold-light);
 }
 /* =========================
-   TRAVEL AREA
+   PRIMARY AREA
 ========================= */
-.travel-section {
-    padding: 90px 7%;
-    background: #0a0a0a;
+.primary-area {
+    padding: 100px 7%;
+    background: #111;
+}
+.primary-box {
+    max-width: 1050px;
+    margin: auto;
+    padding: 65px 45px;
     text-align: center;
+    background:
+        radial-gradient(circle at center,rgba(201,162,39,.1),transparent 55%),
+        #0a0a0a;
+    border: 1px solid rgba(201,162,39,.3);
+}
+.primary-box h2 {
+    font-size: clamp(38px,6vw,65px);
+    line-height: 1;
+    text-transform: uppercase;
+}
+.primary-box h2 span {
+    color: var(--gold-light);
+}
+.primary-box p {
+    max-width: 700px;
+    margin: 20px auto 0;
+    color: #888;
+}
+.primary-location {
+    margin-top: 30px;
+    color: var(--gold-light);
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+/* =========================
+   TRAVEL
+========================= */
+.travel {
+    padding: 100px 7%;
+    background: #0a0a0a;
 }
 .travel-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
+    text-align: center;
 }
 .travel-container h2 {
-    font-size: clamp(35px,5vw,55px);
+    font-size: clamp(38px,5vw,58px);
+    line-height: 1;
     text-transform: uppercase;
 }
 .travel-container h2 span {
     color: var(--gold-light);
 }
 .travel-container p {
-    margin-top: 18px;
+    max-width: 700px;
+    margin: 20px auto 0;
     color: #888;
 }
 .travel-note {
-    margin-top: 30px;
-    padding: 22px;
+    margin-top: 35px;
+    padding: 25px;
     background: rgba(201,162,39,.05);
     border: 1px solid rgba(201,162,39,.25);
+}
+.travel-note p {
+    margin: 0;
     color: #aaa;
     font-size: 13px;
 }
@@ -379,14 +373,10 @@ footer p {
 /* =========================
    RESPONSIVE
 ========================= */
-@media(max-width:900px) {
-    .area-grid {
+@media(max-width:850px) {
+    .area-container {
         grid-template-columns: 1fr;
-        max-width: 600px;
-        margin: auto;
-    }
-    .mobile-container {
-        grid-template-columns: 1fr;
+        max-width: 650px;
     }
 }
 @media(max-width:600px) {
@@ -400,11 +390,20 @@ footer p {
         padding: 140px 5% 70px;
     }
     .area-section,
-    .mobile-section,
-    .travel-section,
+    .primary-area,
+    .travel,
     .cta {
         padding-left: 5%;
         padding-right: 5%;
+    }
+    .area-card {
+        padding: 32px 25px;
+    }
+    .city-list {
+        grid-template-columns: 1fr;
+    }
+    .primary-box {
+        padding: 50px 25px;
     }
     .mobile-bar {
         display: flex;
@@ -435,10 +434,12 @@ footer p {
 <a href="index.html" class="brand">
 ENHANCE <span>MY RIDE</span>
 </a>
-<button class="menu-toggle" onclick="toggleMenu()" aria-label="Open Menu">
+<div class="menu-wrapper">
+<details class="menu-dropdown">
+<summary aria-label="Open navigation menu">
 ☰
-</button>
-<div class="nav-menu" id="navMenu">
+</summary>
+<div class="nav-menu">
 
 Home
 
@@ -454,133 +455,107 @@ Service Area
 Get a Quote
 </a>
 </div>
+</details>
+</div>
 </nav>
 <header class="page-hero">
 <div class="label">
-We Come To You
+Mobile Detailing Throughout The Bay
 </div>
 <h1>
-Service <span>Area</span>
+Where We <span>Serve</span>
 </h1>
 <p>
-Premium mobile detailing brought directly to your location.
-We proudly serve San Francisco and communities throughout
-the greater Bay Area.
+Enhance My Ride brings premium mobile detailing directly to
+your home, workplace, or convenient location throughout
+San Francisco and the Greater Bay Area.
 </p>
 </header>
 <section class="area-section">
-<div class="area-container">
-<div class="area-intro">
+<div class="section-heading">
 <div class="label">
-Where We Detail
-</div>
-<h2>
-Serving The <span>Bay Area</span>
-</h2>
-<p>
-Enhance My Ride Auto Spa & Mobile Detailing is built around
-convenience. Instead of you spending your day waiting at a shop,
-we bring the detailing experience directly to you.
-</p>
-</div>
-<div class="area-grid">
-<div class="area-card">
-<div class="number">
-01 / PRIMARY
-</div>
-<h3>
-San Francisco
-</h3>
-<p>
-Our primary service area and home of premium mobile detailing.
-</p>
-<ul class="area-list">
-<li>Downtown San Francisco</li>
-<li>Mission District</li>
-<li>SoMa</li>
-<li>Pacific Heights</li>
-<li>Marina District</li>
-<li>Sunset District</li>
-</ul>
-</div>
-<div class="area-card">
-<div class="number">
-02 / EAST BAY
-</div>
-<h3>
-East Bay
-</h3>
-<p>
-Professional mobile detailing throughout the East Bay.
-</p>
-<ul class="area-list">
-<li>Oakland</li>
-<li>Berkeley</li>
-<li>Emeryville</li>
-<li>Alameda</li>
-<li>San Leandro</li>
-<li>Hayward</li>
-</ul>
-</div>
-<div class="area-card">
-<div class="number">
-03 / GREATER BAY
-</div>
-<h3>
-Greater Bay Area
-</h3>
-<p>
-Select locations throughout the greater Bay Area are available.
-</p>
-<ul class="area-list">
-<li>Walnut Creek</li>
-<li>Concord</li>
-<li>Martinez</li>
-<li>Richmond</li>
-<li>Vallejo</li>
-<li>Surrounding Areas</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section class="mobile-section">
-<div class="mobile-container">
-<div class="mobile-text">
-<div class="label">
-The Enhance Difference
+Our Service Area
 </div>
 <h2>
 We Come <span>To You.</span>
 </h2>
 <p>
-Your time is valuable. That's why we bring the detailing
-experience directly to your home, office, workplace, or
-another convenient location.
+Our mobile setup allows us to bring professional detailing
+services directly to customers across the Bay Area.
 </p>
-<ul class="mobile-benefits">
-<li>No waiting around at a detailing shop.</li>
-<li>Professional detailing at your location.</li>
-<li>Convenient scheduling around your day.</li>
-<li>Premium service with attention to detail.</li>
-</ul>
 </div>
-<div class="location-box">
+<div class="area-container">
+<div class="area-card featured">
+<div class="area-number">
+01 / PRIMARY SERVICE AREA
+</div>
 <h3>
-Your Location.
-Our Expertise.
+San Francisco
 </h3>
 <p>
-Whether you're at home, at work, or somewhere convenient,
-we'll bring the Enhance My Ride experience to you.
+San Francisco is at the heart of our service area.
+We proudly provide premium mobile detailing throughout
+the city.
 </p>
+<ul class="city-list">
+<li>Downtown</li>
+<li>Mission District</li>
+<li>SoMa</li>
+<li>Marina District</li>
+<li>Richmond District</li>
+<li>Sunset District</li>
+<li>Pacific Heights</li>
+<li>Bernal Heights</li>
+</ul>
+</div>
+<div class="area-card">
+<div class="area-number">
+02 / GREATER BAY AREA
+</div>
+<h3>
+Bay Area Coverage
+</h3>
 <p>
-<strong>Serving San Francisco and the Greater Bay Area.</strong>
+We also serve customers throughout surrounding Bay Area
+communities. Availability may vary by location and schedule.
 </p>
+<ul class="city-list">
+<li>Oakland</li>
+<li>Berkeley</li>
+<li>Alameda</li>
+<li>Richmond</li>
+<li>Concord</li>
+<li>Walnut Creek</li>
+<li>Martinez</li>
+<li>Vallejo</li>
+<li>Fairfield</li>
+<li>San Rafael</li>
+<li>San Mateo</li>
+<li>Daly City</li>
+</ul>
 </div>
 </div>
 </section>
-<section class="travel-section">
+<section class="primary-area">
+<div class="primary-box">
+<div class="label">
+Your Location. Our Expertise.
+</div>
+<h2>
+Premium Detailing<br>
+<span>Delivered To You.</span>
+</h2>
+<p>
+Whether you're at home, at work, or somewhere convenient,
+our mobile detailing service is designed around your schedule.
+Tell us where you are located and we'll confirm availability.
+</p>
+<div class="primary-location">
+Serving San Francisco & The Greater Bay Area
+</div>
+</div>
+</section>
+<section class="travel">
 <div class="travel-container">
 <div class="label">
 Outside Our Standard Area?
@@ -589,17 +564,16 @@ Outside Our Standard Area?
 Let's See If We Can <span>Reach You.</span>
 </h2>
 <p>
-Have a vehicle outside our regular service area?
-Send us your location when requesting a quote.
-We'll confirm availability and let you know if a
-travel fee applies.
+If your location isn't listed above, don't worry.
+We may still be able to accommodate your vehicle depending
+on distance, availability, and scheduling.
 </p>
 <div class="travel-note">
-
-Travel fees may apply for locations outside our standard
-service area. Final pricing and availability will be confirmed
-before your appointment is scheduled.
-
+<p>
+Additional travel fees may apply for locations outside our
+standard service area. Contact us with your city or ZIP code
+and we'll let you know what's available.
+</p>
 </div>
 </div>
 </section>
@@ -608,12 +582,12 @@ before your appointment is scheduled.
 Ready To Book?
 </div>
 <h2>
-Your Ride.<br>
-<span>Enhanced.</span>
+Tell Us <span>Where</span><br>
+You Are.
 </h2>
 <p>
-Tell us where you are and what your vehicle needs.
-We'll help you choose the right service.
+Submit a quote request and let us bring the Enhance experience
+directly to your location.
 </p>
 <a href="quote.html" class="btn">
 Request Your Quote
@@ -644,22 +618,5 @@ We come to you. You relax. We Enhance.
 REQUEST A QUOTE
 </a>
 </div>
-<script>
-function toggleMenu() {
-const menu = document.getElementById("navMenu");
-menu.classList.toggle("active");
-}
-document.addEventListener("click", function(event) {
-const menu = document.getElementById("navMenu");
-const button = document.querySelector(".menu-toggle");
-if (
-menu.classList.contains("active") &&
-!menu.contains(event.target) &&
-!button.contains(event.target)
-) {
-menu.classList.remove("active");
-}
-});
-</script>
 </body>
 </html>
