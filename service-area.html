@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Service Area | Enhance My Ride Auto Spa</title>
-<meta name="description" content="Enhance My Ride Auto Spa & Mobile Detailing proudly serves San Francisco and the greater Bay Area. Check our service area and request a mobile detailing quote.">
+<meta name="description" content="Enhance My Ride Auto Spa & Mobile Detailing brings premium mobile detailing to San Francisco and the greater Bay Area.">
 <style>
 * {
     margin: 0;
@@ -19,6 +19,7 @@ body {
     background: #070707;
     color: #f5f2ea;
     line-height: 1.6;
+    padding-bottom: 0;
 }
 a {
     color: inherit;
@@ -53,7 +54,6 @@ nav {
 .brand span {
     color: var(--gold-light);
 }
-/* MENU BUTTON */
 .menu-toggle {
     display: flex;
     align-items: center;
@@ -71,7 +71,6 @@ nav {
     background: var(--gold);
     color: #080808;
 }
-/* DROPDOWN MENU */
 .nav-menu {
     position: absolute;
     top: 78px;
@@ -109,7 +108,6 @@ nav {
 }
 .nav-menu .menu-quote:hover {
     background: var(--gold-light);
-    color: #080808;
 }
 /* =========================
    HERO
@@ -130,7 +128,7 @@ nav {
     margin-bottom: 15px;
 }
 .page-hero h1 {
-    font-size: clamp(48px,8vw,90px);
+    font-size: clamp(45px,8vw,85px);
     line-height: .95;
     text-transform: uppercase;
     letter-spacing: -3px;
@@ -145,23 +143,23 @@ nav {
     font-size: 17px;
 }
 /* =========================
-   MAIN SERVICE AREA
+   SERVICE AREA
 ========================= */
 .area-section {
     padding: 100px 7%;
     background: #0a0a0a;
 }
 .area-container {
-    max-width: 1150px;
+    max-width: 1100px;
     margin: auto;
 }
 .area-intro {
     max-width: 750px;
-    margin: 0 auto 60px;
+    margin: 0 auto 70px;
     text-align: center;
 }
 .area-intro h2 {
-    font-size: clamp(38px,5vw,60px);
+    font-size: clamp(35px,5vw,58px);
     line-height: 1;
     text-transform: uppercase;
 }
@@ -172,106 +170,148 @@ nav {
     margin-top: 20px;
     color: #888;
 }
-/* =========================
-   LOCATION GRID
-========================= */
-.location-grid {
+/* AREA CARDS */
+.area-grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 18px;
+    gap: 20px;
 }
-.location-card {
-    padding: 30px 25px;
-    background: linear-gradient(145deg,#181818,#101010);
+.area-card {
+    padding: 35px 25px;
+    background: linear-gradient(145deg,#181818,#0d0d0d);
     border: 1px solid #292929;
     transition: .3s;
 }
-.location-card:hover {
+.area-card:hover {
     transform: translateY(-5px);
-    border-color: var(--gold);
+    border-color: rgba(201,162,39,.7);
 }
-.location-card h3 {
+.area-card .number {
     color: var(--gold-light);
-    font-size: 18px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
-.location-card p {
-    margin-top: 10px;
+.area-card h3 {
+    margin-top: 15px;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.area-card p {
+    margin-top: 12px;
     color: #888;
     font-size: 13px;
 }
+.area-list {
+    margin-top: 20px;
+    list-style: none;
+}
+.area-list li {
+    padding: 7px 0;
+    border-bottom: 1px solid #292929;
+    color: #bbb;
+    font-size: 13px;
+}
+.area-list li::before {
+    content: "✓";
+    margin-right: 9px;
+    color: var(--gold-light);
+    font-weight: 900;
+}
 /* =========================
-   COVERAGE
+   MOBILE DETAILING
 ========================= */
-.coverage {
+.mobile-section {
     padding: 100px 7%;
     background: #111;
 }
-.coverage-container {
+.mobile-container {
     max-width: 1000px;
     margin: auto;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
 }
-.coverage h2 {
-    font-size: clamp(38px,6vw,65px);
-    line-height: .95;
-    text-transform: uppercase;
+.mobile-text .label {
+    margin-bottom: 15px;
 }
-.coverage h2 span {
-    color: var(--gold-light);
-}
-.coverage p {
-    max-width: 700px;
-    margin: 22px auto 0;
-    color: #888;
-}
-.coverage-box {
-    margin-top: 45px;
-    padding: 40px;
-    background: #0a0a0a;
-    border: 1px solid #292929;
-}
-.coverage-box h3 {
-    color: var(--gold-light);
-    font-size: 20px;
-}
-.coverage-box p {
-    margin-top: 12px;
-}
-/* =========================
-   SERVICE AREA FAQ
-========================= */
-.faq {
-    padding: 100px 7%;
-    background: #080808;
-}
-.faq-container {
-    max-width: 850px;
-    margin: auto;
-}
-.faq-heading {
-    text-align: center;
-    margin-bottom: 45px;
-}
-.faq-heading h2 {
-    font-size: clamp(38px,5vw,60px);
+.mobile-text h2 {
+    font-size: clamp(35px,5vw,58px);
     line-height: 1;
     text-transform: uppercase;
 }
-.faq-heading h2 span {
+.mobile-text h2 span {
     color: var(--gold-light);
 }
-.faq-item {
-    padding: 25px 0;
-    border-bottom: 1px solid #292929;
-}
-.faq-item h3 {
-    color: #eee;
-    font-size: 17px;
-}
-.faq-item p {
-    margin-top: 10px;
+.mobile-text p {
+    margin-top: 20px;
     color: #888;
+}
+.mobile-benefits {
+    margin-top: 25px;
+    list-style: none;
+}
+.mobile-benefits li {
+    margin-bottom: 12px;
+    color: #bbb;
     font-size: 14px;
+}
+.mobile-benefits li::before {
+    content: "✦";
+    margin-right: 10px;
+    color: var(--gold-light);
+}
+.location-box {
+    padding: 45px 35px;
+    background:
+        radial-gradient(circle at center,rgba(201,162,39,.12),transparent 60%),
+        #080808;
+    border: 1px solid rgba(201,162,39,.35);
+}
+.location-box h3 {
+    color: var(--gold-light);
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.location-box p {
+    margin-top: 15px;
+    color: #999;
+    font-size: 14px;
+}
+.location-box strong {
+    color: #f5f2ea;
+}
+/* =========================
+   TRAVEL AREA
+========================= */
+.travel-section {
+    padding: 90px 7%;
+    background: #0a0a0a;
+    text-align: center;
+}
+.travel-container {
+    max-width: 800px;
+    margin: auto;
+}
+.travel-container h2 {
+    font-size: clamp(35px,5vw,55px);
+    text-transform: uppercase;
+}
+.travel-container h2 span {
+    color: var(--gold-light);
+}
+.travel-container p {
+    margin-top: 18px;
+    color: #888;
+}
+.travel-note {
+    margin-top: 30px;
+    padding: 22px;
+    background: rgba(201,162,39,.05);
+    border: 1px solid rgba(201,162,39,.25);
+    color: #aaa;
+    font-size: 13px;
 }
 /* =========================
    CTA
@@ -340,8 +380,13 @@ footer p {
    RESPONSIVE
 ========================= */
 @media(max-width:900px) {
-    .location-grid {
-        grid-template-columns: repeat(2,1fr);
+    .area-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: auto;
+    }
+    .mobile-container {
+        grid-template-columns: 1fr;
     }
 }
 @media(max-width:600px) {
@@ -355,17 +400,11 @@ footer p {
         padding: 140px 5% 70px;
     }
     .area-section,
-    .coverage,
-    .faq,
+    .mobile-section,
+    .travel-section,
     .cta {
         padding-left: 5%;
         padding-right: 5%;
-    }
-    .location-grid {
-        grid-template-columns: 1fr;
-    }
-    .coverage-box {
-        padding: 30px 22px;
     }
     .mobile-bar {
         display: flex;
@@ -392,7 +431,6 @@ footer p {
 </style>
 </head>
 <body>
-<!-- NAVIGATION -->
 <nav>
 <a href="index.html" class="brand">
 ENHANCE <span>MY RIDE</span>
@@ -412,193 +450,175 @@ About
 
 Service Area
 
+<a href="quote.html" class="menu-quote">
 Get a Quote
-
+</a>
 </div>
 </nav>
-<!-- PAGE HERO -->
 <header class="page-hero">
 <div class="label">
-Mobile Detailing Throughout The Bay Area
+We Come To You
 </div>
 <h1>
-Our <span>Service Area</span>
+Service <span>Area</span>
 </h1>
 <p>
-Professional mobile detailing delivered directly to your
-home, workplace, or preferred location.
+Premium mobile detailing brought directly to your location.
+We proudly serve San Francisco and communities throughout
+the greater Bay Area.
 </p>
 </header>
-<!-- MAIN AREA -->
 <section class="area-section">
 <div class="area-container">
 <div class="area-intro">
+<div class="label">
+Where We Detail
+</div>
 <h2>
-We Bring The Detail<br>
-<span>To You.</span>
+Serving The <span>Bay Area</span>
 </h2>
 <p>
-Enhance My Ride Auto Spa & Mobile Detailing proudly serves
-customers throughout San Francisco and the greater Bay Area.
-Our mobile service is designed to make premium vehicle care
-convenient for your schedule.
+Enhance My Ride Auto Spa & Mobile Detailing is built around
+convenience. Instead of you spending your day waiting at a shop,
+we bring the detailing experience directly to you.
 </p>
 </div>
-<div class="location-grid">
-<div class="location-card">
+<div class="area-grid">
+<div class="area-card">
+<div class="number">
+01 / PRIMARY
+</div>
 <h3>
 San Francisco
 </h3>
 <p>
-Serving customers throughout San Francisco and surrounding
-neighborhoods.
+Our primary service area and home of premium mobile detailing.
 </p>
+<ul class="area-list">
+<li>Downtown San Francisco</li>
+<li>Mission District</li>
+<li>SoMa</li>
+<li>Pacific Heights</li>
+<li>Marina District</li>
+<li>Sunset District</li>
+</ul>
 </div>
-<div class="location-card">
+<div class="area-card">
+<div class="number">
+02 / EAST BAY
+</div>
 <h3>
 East Bay
 </h3>
 <p>
-Serving cities throughout the East Bay and surrounding areas.
+Professional mobile detailing throughout the East Bay.
 </p>
+<ul class="area-list">
+<li>Oakland</li>
+<li>Berkeley</li>
+<li>Emeryville</li>
+<li>Alameda</li>
+<li>San Leandro</li>
+<li>Hayward</li>
+</ul>
 </div>
-<div class="location-card">
-<h3>
-Contra Costa County
-</h3>
-<p>
-Mobile detailing available throughout Contra Costa County.
-</p>
+<div class="area-card">
+<div class="number">
+03 / GREATER BAY
 </div>
-<div class="location-card">
-<h3>
-Alameda County
-</h3>
-<p>
-Serving Alameda County and surrounding communities.
-</p>
-</div>
-<div class="location-card">
-<h3>
-Solano County
-</h3>
-<p>
-Mobile detailing available in select Solano County locations.
-</p>
-</div>
-<div class="location-card">
 <h3>
 Greater Bay Area
 </h3>
 <p>
-Don't see your city? Contact us and we'll check availability.
+Select locations throughout the greater Bay Area are available.
 </p>
+<ul class="area-list">
+<li>Walnut Creek</li>
+<li>Concord</li>
+<li>Martinez</li>
+<li>Richmond</li>
+<li>Vallejo</li>
+<li>Surrounding Areas</li>
+</ul>
 </div>
 </div>
 </div>
 </section>
-<!-- COVERAGE -->
-<section class="coverage">
-<div class="coverage-container">
+<section class="mobile-section">
+<div class="mobile-container">
+<div class="mobile-text">
 <div class="label">
-Mobile Service
+The Enhance Difference
 </div>
 <h2>
-Your Location.<br>
-<span>Your Convenience.</span>
+We Come <span>To You.</span>
 </h2>
 <p>
-We come to your home, workplace, office, or another
-approved location where mobile detailing is permitted.
+Your time is valuable. That's why we bring the detailing
+experience directly to your home, office, workplace, or
+another convenient location.
 </p>
-<div class="coverage-box">
+<ul class="mobile-benefits">
+<li>No waiting around at a detailing shop.</li>
+<li>Professional detailing at your location.</li>
+<li>Convenient scheduling around your day.</li>
+<li>Premium service with attention to detail.</li>
+</ul>
+</div>
+<div class="location-box">
 <h3>
-Outside Our Standard Service Area?
+Your Location.
+Our Expertise.
 </h3>
 <p>
-We may be able to travel farther depending on availability
-and scheduling. Additional travel fees may apply for locations
-outside our standard service area.
+Whether you're at home, at work, or somewhere convenient,
+we'll bring the Enhance My Ride experience to you.
 </p>
 <p>
-The best way to confirm availability is to request a quote
-and provide your exact service location.
+<strong>Serving San Francisco and the Greater Bay Area.</strong>
 </p>
 </div>
 </div>
 </section>
-<!-- FAQ -->
-<section class="faq">
-<div class="faq-container">
-<div class="faq-heading">
+<section class="travel-section">
+<div class="travel-container">
 <div class="label">
-Service Area Questions
+Outside Our Standard Area?
 </div>
 <h2>
-Frequently Asked <span>Questions</span>
+Let's See If We Can <span>Reach You.</span>
 </h2>
-</div>
-<div class="faq-item">
-<h3>
-Do you come to my home?
-</h3>
 <p>
-Yes. As long as the location allows mobile detailing and
-provides a safe working environment, we can come directly
-to your home.
+Have a vehicle outside our regular service area?
+Send us your location when requesting a quote.
+We'll confirm availability and let you know if a
+travel fee applies.
 </p>
-</div>
-<div class="faq-item">
-<h3>
-Can you detail my vehicle at work?
-</h3>
-<p>
-Yes. Many customers choose to have their vehicle detailed
-while they're at work. Please make sure your workplace or
-property allows mobile detailing services.
-</p>
-</div>
-<div class="faq-item">
-<h3>
-Do I need to provide water or power?
-</h3>
-<p>
-Our mobile setup is designed to make the process as
-convenient as possible. Availability of water and power
-requirements can vary depending on the service requested.
-We'll confirm any requirements when scheduling your detail.
-</p>
-</div>
-<div class="faq-item">
-<h3>
-How do I know if you service my city?
-</h3>
-<p>
-Send us your location when requesting a quote. We'll confirm
-availability and let you know if any additional travel fee
-applies.
-</p>
+<div class="travel-note">
+
+Travel fees may apply for locations outside our standard
+service area. Final pricing and availability will be confirmed
+before your appointment is scheduled.
+
 </div>
 </div>
 </section>
-<!-- CTA -->
 <section class="cta">
 <div class="label">
-Ready When You Are
+Ready To Book?
 </div>
 <h2>
-Let's <span>Enhance</span><br>
-Your Ride.
+Your Ride.<br>
+<span>Enhanced.</span>
 </h2>
 <p>
 Tell us where you are and what your vehicle needs.
-We'll take care of the rest.
+We'll help you choose the right service.
 </p>
 <a href="quote.html" class="btn">
 Request Your Quote
 </a>
 </section>
-<!-- FOOTER -->
 <footer>
 <div class="footer-logo">
 ENHANCE <span>MY RIDE</span>
@@ -616,7 +636,6 @@ We come to you. You relax. We Enhance.
 © 2026 Enhance My Ride. All Rights Reserved.
 </p>
 </footer>
-<!-- MOBILE BAR -->
 <div class="mobile-bar">
 <a href="tel:13233271806">
 ☎ CALL / TEXT
@@ -625,22 +644,21 @@ We come to you. You relax. We Enhance.
 REQUEST A QUOTE
 </a>
 </div>
-<!-- JAVASCRIPT -->
 <script>
 function toggleMenu() {
-    const menu = document.getElementById("navMenu");
-    menu.classList.toggle("active");
+const menu = document.getElementById("navMenu");
+menu.classList.toggle("active");
 }
 document.addEventListener("click", function(event) {
-    const menu = document.getElementById("navMenu");
-    const button = document.querySelector(".menu-toggle");
-    if (
-        menu.classList.contains("active") &&
-        !menu.contains(event.target) &&
-        !button.contains(event.target)
-    ) {
-        menu.classList.remove("active");
-    }
+const menu = document.getElementById("navMenu");
+const button = document.querySelector(".menu-toggle");
+if (
+menu.classList.contains("active") &&
+!menu.contains(event.target) &&
+!button.contains(event.target)
+) {
+menu.classList.remove("active");
+}
 });
 </script>
 </body>
