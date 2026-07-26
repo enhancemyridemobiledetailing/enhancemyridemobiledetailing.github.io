@@ -6,13 +6,9 @@
 
 <title>Enhance My Ride | Premium Mobile Detailing</title>
 
-<meta name="description" content="Premium mobile auto detailing serving San Francisco and the entire Bay Area. We come to you. You relax. We Enhance.">
+<meta name="description" content="Enhance My Ride Auto Spa & Mobile Detailing. Premium mobile auto detailing serving San Francisco and the entire Bay Area.">
 
 <style>
-
-/* =========================
-   RESET
-========================= */
 
 * {
     margin: 0;
@@ -40,10 +36,9 @@ a {
     --gold: #c9a227;
     --gold-light: #e4c45c;
     --black: #070707;
-    --dark: #0d0d0d;
-    --card: #131313;
-    --line: rgba(201,162,39,0.25);
-    --muted: #a5a5a5;
+    --dark: #101010;
+    --card: #151515;
+    --muted: #999;
 }
 
 
@@ -56,19 +51,19 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 1000;
     padding: 18px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(7,7,7,0.92);
+    background: rgba(7,7,7,.94);
     backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,.07);
 }
 
 .brand {
     font-size: 17px;
-    font-weight: 800;
+    font-weight: 900;
     letter-spacing: 2px;
 }
 
@@ -78,17 +73,27 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 28px;
-    font-size: 13px;
-    color: #d8d8d8;
+    align-items: center;
+    gap: 24px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .nav-links a {
+    color: #ccc;
     transition: .3s;
 }
 
 .nav-links a:hover {
     color: var(--gold-light);
+}
+
+.nav-cta {
+    background: var(--gold);
+    color: #080808 !important;
+    padding: 11px 16px;
 }
 
 
@@ -97,41 +102,32 @@ nav {
 ========================= */
 
 .hero {
-    min-height: 100vh;
-    padding: 150px 7% 90px;
+    min-height: 92vh;
+    padding: 150px 7% 80px;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
 
     background:
-        radial-gradient(circle at 80% 20%, rgba(201,162,39,.14), transparent 30%),
-        radial-gradient(circle at 20% 80%, rgba(201,162,39,.07), transparent 30%),
-        linear-gradient(135deg,#050505,#111111 55%,#050505);
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(90deg, transparent 0%, rgba(255,255,255,.02) 50%, transparent 100%);
-    pointer-events: none;
+        radial-gradient(circle at 80% 25%, rgba(201,162,39,.16), transparent 30%),
+        radial-gradient(circle at 15% 80%, rgba(201,162,39,.07), transparent 28%),
+        linear-gradient(135deg,#050505,#121212 55%,#050505);
 }
 
 .hero-content {
+    max-width: 850px;
     position: relative;
     z-index: 2;
-    max-width: 900px;
 }
 
 .eyebrow {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     color: var(--gold-light);
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 25px;
@@ -139,17 +135,16 @@ nav {
 
 .eyebrow::before {
     content: "";
-    width: 35px;
+    width: 38px;
     height: 1px;
     background: var(--gold);
 }
 
 .hero h1 {
-    font-size: clamp(48px, 9vw, 105px);
+    font-size: clamp(48px, 9vw, 100px);
     line-height: .92;
     letter-spacing: -4px;
     text-transform: uppercase;
-    max-width: 950px;
 }
 
 .hero h1 span {
@@ -158,27 +153,26 @@ nav {
 
 .hero-description {
     max-width: 650px;
-    margin-top: 30px;
+    color: #aaa;
     font-size: 18px;
-    color: #bdbdbd;
+    margin-top: 28px;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 14px;
+    gap: 12px;
     flex-wrap: wrap;
     margin-top: 35px;
 }
 
 .btn {
     display: inline-flex;
-    align-items: center;
     justify-content: center;
-    padding: 16px 25px;
+    align-items: center;
     min-width: 170px;
-    border-radius: 2px;
-    font-size: 12px;
-    font-weight: 800;
+    padding: 16px 24px;
+    font-size: 11px;
+    font-weight: 900;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     transition: .3s;
@@ -195,7 +189,7 @@ nav {
 }
 
 .btn-outline {
-    border: 1px solid rgba(201,162,39,.7);
+    border: 1px solid var(--gold);
     color: var(--gold-light);
 }
 
@@ -205,298 +199,216 @@ nav {
     transform: translateY(-3px);
 }
 
-.hero-bottom {
-    margin-top: 70px;
+.hero-stats {
     display: flex;
     gap: 45px;
     flex-wrap: wrap;
+    margin-top: 60px;
 }
 
-.hero-stat strong {
+.stat strong {
     display: block;
     color: var(--gold-light);
-    font-size: 20px;
+    font-size: 18px;
 }
 
-.hero-stat span {
-    font-size: 11px;
-    color: #888;
+.stat span {
+    display: block;
+    color: #777;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 
 /* =========================
-   INTRO STRIP
+   TAGLINE STRIP
 ========================= */
 
-.intro-strip {
+.tagline {
+    padding: 20px;
     background: var(--gold);
     color: #080808;
-    padding: 22px 7%;
     text-align: center;
-    font-size: 13px;
-    font-weight: 800;
+    font-size: 12px;
+    font-weight: 900;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 
 /* =========================
-   SECTIONS
+   FEATURED SERVICES
 ========================= */
 
-section {
-    padding: 100px 7%;
+.services {
+    padding: 90px 7%;
+    background: #0a0a0a;
 }
 
-.section-header {
-    max-width: 750px;
-    margin-bottom: 55px;
-}
-
-.section-header.center {
-    margin-left: auto;
-    margin-right: auto;
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
     text-align: center;
 }
 
-.section-label {
+.label {
     color: var(--gold-light);
-    font-size: 11px;
-    font-weight: 800;
+    font-size: 10px;
+    font-weight: 900;
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 12px;
 }
 
-.section-header h2 {
-    font-size: clamp(35px, 5vw, 65px);
+.section-heading h2 {
+    font-size: clamp(36px,5vw,60px);
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: -2px;
 }
 
-.section-header p {
-    color: var(--muted);
-    margin-top: 20px;
-    font-size: 17px;
+.section-heading p {
+    color: #888;
+    margin-top: 18px;
 }
 
-
-/* =========================
-   SERVICES
-========================= */
-
-.services {
-    background: #0a0a0a;
-}
-
-.service-grid {
+.package-grid {
+    max-width: 1200px;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 22px;
-    max-width: 1250px;
-    margin: auto;
+    gap: 20px;
 }
 
-.service-card {
-    position: relative;
+.package {
+    padding: 35px 30px;
     background: linear-gradient(145deg,#171717,#0e0e0e);
-    border: 1px solid #262626;
-    padding: 40px 32px;
-    transition: .4s;
+    border: 1px solid #292929;
+    transition: .3s;
 }
 
-.service-card:hover {
-    transform: translateY(-8px);
+.package:hover {
+    transform: translateY(-7px);
     border-color: var(--gold);
 }
 
-.service-card.featured {
+.package.featured {
     border-color: var(--gold);
 }
 
-.popular {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: var(--gold);
-    color: #080808;
-    padding: 8px 14px;
-    font-size: 9px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.service-number {
-    color: #555;
-    font-size: 12px;
+.package-number {
+    color: #666;
+    font-size: 10px;
     letter-spacing: 2px;
 }
 
-.service-card h3 {
-    margin-top: 20px;
-    font-size: 26px;
+.package h3 {
+    margin-top: 18px;
+    font-size: 24px;
 }
 
 .price {
-    margin: 12px 0 20px;
+    margin: 10px 0 15px;
     color: var(--gold-light);
-    font-size: 27px;
-    font-weight: 800;
+    font-size: 25px;
+    font-weight: 900;
 }
 
-.service-card p {
+.package p {
     color: #999;
     font-size: 14px;
-    margin-bottom: 25px;
 }
 
-.service-list {
-    list-style: none;
-}
-
-.service-list li {
-    padding: 9px 0;
-    border-bottom: 1px solid #252525;
-    font-size: 13px;
-    color: #d1d1d1;
-}
-
-.service-list li::before {
-    content: "✓";
+.package-link {
+    display: inline-block;
+    margin-top: 22px;
     color: var(--gold-light);
-    font-weight: bold;
-    margin-right: 10px;
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 
 /* =========================
-   EXPERIENCE
+   WHY ENHANCE
 ========================= */
 
-.experience {
+.why {
+    padding: 100px 7%;
     background: #111;
 }
 
-.experience-grid {
+.why-grid {
+    max-width: 1150px;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 70px;
     align-items: center;
-    max-width: 1200px;
-    margin: auto;
 }
 
-.experience-visual {
-    min-height: 520px;
-    position: relative;
-    background:
-        radial-gradient(circle at 50% 35%, rgba(201,162,39,.3), transparent 25%),
-        linear-gradient(145deg,#1d1d1d,#070707);
-    border: 1px solid #292929;
+.why-visual {
+    min-height: 430px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    overflow: hidden;
+    align-items: center;
+    background:
+        radial-gradient(circle,rgba(201,162,39,.18),transparent 40%),
+        #090909;
+    border: 1px solid #292929;
 }
 
-.visual-text {
+.emr {
     text-align: center;
 }
 
-.visual-text strong {
+.emr strong {
     display: block;
-    font-size: 90px;
+    color: rgba(201,162,39,.25);
+    font-size: 100px;
     line-height: 1;
-    color: rgba(201,162,39,.2);
 }
 
-.visual-text span {
+.emr span {
     color: var(--gold-light);
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 4px;
     text-transform: uppercase;
 }
 
-.experience-copy h2 {
-    font-size: clamp(35px,5vw,60px);
+.why-copy h2 {
+    font-size: clamp(36px,5vw,60px);
     line-height: 1;
     text-transform: uppercase;
 }
 
-.experience-copy h2 span {
+.why-copy h2 span {
     color: var(--gold-light);
 }
 
-.experience-copy p {
-    color: #aaa;
+.why-copy p {
+    color: #999;
+    margin-top: 22px;
+}
+
+.points {
     margin-top: 25px;
-    font-size: 16px;
 }
 
-.experience-list {
-    margin-top: 30px;
-}
-
-.experience-item {
-    display: flex;
-    gap: 18px;
-    padding: 18px 0;
+.point {
+    padding: 15px 0;
     border-bottom: 1px solid #292929;
 }
 
-.experience-icon {
-    color: var(--gold-light);
-    font-size: 20px;
-}
-
-.experience-item strong {
+.point strong {
     display: block;
-    margin-bottom: 4px;
+    color: #eee;
 }
 
-.experience-item span {
-    color: #888;
-    font-size: 13px;
-}
-
-
-/* =========================
-   PROCESS
-========================= */
-
-.process {
-    background: #080808;
-}
-
-.process-grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.process-card {
-    padding: 30px 25px;
-    border-top: 1px solid var(--gold);
-    background: #101010;
-}
-
-.process-number {
-    color: var(--gold-light);
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.process-card h3 {
-    margin: 15px 0 10px;
-}
-
-.process-card p {
-    color: #888;
+.point span {
+    color: #777;
     font-size: 13px;
 }
 
@@ -506,16 +418,17 @@ section {
 ========================= */
 
 .area {
+    padding: 80px 7%;
     text-align: center;
     background:
-        radial-gradient(circle at center,rgba(201,162,39,.1),transparent 45%),
-        #0c0c0c;
+        radial-gradient(circle at center,rgba(201,162,39,.12),transparent 50%),
+        #090909;
 }
 
 .area h2 {
-    font-size: clamp(40px,6vw,75px);
-    text-transform: uppercase;
+    font-size: clamp(38px,6vw,70px);
     line-height: .95;
+    text-transform: uppercase;
 }
 
 .area h2 span {
@@ -524,76 +437,31 @@ section {
 
 .area p {
     max-width: 650px;
-    margin: 25px auto 35px;
-    color: #999;
+    margin: 20px auto 30px;
+    color: #888;
 }
 
-.area-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.area-list span {
-    padding: 10px 18px;
-    border: 1px solid #333;
-    color: #bbb;
-    font-size: 12px;
-}
-
-
-/* =========================
-   REVIEWS
-========================= */
-
-.reviews {
-    background: #0a0a0a;
-}
-
-.review-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.review {
-    background: #141414;
-    padding: 35px;
-    border: 1px solid #242424;
-}
-
-.stars {
+.area-link {
     color: var(--gold-light);
-    letter-spacing: 3px;
-}
-
-.review p {
-    margin: 20px 0;
-    color: #aaa;
-    font-size: 14px;
-}
-
-.review strong {
-    font-size: 13px;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 
 /* =========================
-   CTA
+   FINAL CTA
 ========================= */
 
 .cta {
+    padding: 100px 7%;
     text-align: center;
-    background:
-        radial-gradient(circle at center,rgba(201,162,39,.16),transparent 50%),
-        #080808;
+    background: #0d0d0d;
 }
 
 .cta h2 {
-    font-size: clamp(40px,7vw,80px);
+    font-size: clamp(42px,7vw,80px);
     line-height: .95;
     text-transform: uppercase;
 }
@@ -603,44 +471,16 @@ section {
 }
 
 .cta p {
-    max-width: 650px;
-    margin: 25px auto 35px;
-    color: #999;
+    max-width: 600px;
+    margin: 20px auto 30px;
+    color: #888;
 }
 
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact {
-    background: #111;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.contact-card {
-    padding: 35px 20px;
-    text-align: center;
-    border: 1px solid #292929;
-    background: #151515;
-}
-
-.contact-card h3 {
-    color: var(--gold-light);
-    margin-bottom: 10px;
-}
-
-.contact-card p {
-    color: #aaa;
-    font-size: 13px;
-    word-break: break-word;
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 
@@ -649,9 +489,9 @@ section {
 ========================= */
 
 footer {
-    background: #050505;
     padding: 50px 7% 90px;
     text-align: center;
+    background: #050505;
 }
 
 .footer-logo {
@@ -665,14 +505,14 @@ footer {
 }
 
 footer p {
-    margin-top: 12px;
+    margin-top: 10px;
     color: #666;
     font-size: 12px;
 }
 
 
 /* =========================
-   MOBILE BOOKING BAR
+   MOBILE BAR
 ========================= */
 
 .mobile-bar {
@@ -681,49 +521,38 @@ footer p {
 
 
 /* =========================
-   MOBILE
+   RESPONSIVE
 ========================= */
 
-@media(max-width:900px) {
+@media(max-width:950px) {
 
-    .nav-links {
+    .nav-links a:not(.nav-cta) {
         display: none;
     }
 
-    .service-grid,
-    .review-grid {
+    .package-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .why-grid {
         grid-template-columns: 1fr;
     }
 
-    .experience-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .process-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .experience-visual {
-        min-height: 350px;
-    }
 }
 
 @media(max-width:600px) {
 
     body {
-        padding-bottom: 65px;
+        padding-bottom: 62px;
     }
 
-    section {
-        padding: 75px 5%;
+    nav {
+        padding: 17px 5%;
     }
 
     .hero {
+        min-height: 90vh;
         padding: 130px 5% 70px;
     }
 
@@ -743,13 +572,21 @@ footer p {
         width: 100%;
     }
 
-    .hero-bottom {
+    .hero-stats {
         gap: 25px;
-        margin-top: 50px;
+        margin-top: 45px;
     }
 
-    .process-grid {
-        grid-template-columns: 1fr;
+    .services,
+    .why,
+    .area,
+    .cta {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .why-visual {
+        min-height: 300px;
     }
 
     .mobile-bar {
@@ -758,29 +595,29 @@ footer p {
         bottom: 0;
         left: 0;
         right: 0;
-        z-index: 1000;
-        background: rgba(5,5,5,.96);
-        border-top: 1px solid var(--line);
+        z-index: 9999;
+        background: #050505;
+        border-top: 1px solid rgba(201,162,39,.3);
     }
 
     .mobile-bar a {
-        flex: 1;
+        width: 50%;
         padding: 17px 5px;
         text-align: center;
         font-size: 10px;
-        font-weight: 800;
+        font-weight: 900;
         letter-spacing: .5px;
     }
 
     .mobile-bar a:first-child {
         color: var(--gold-light);
-        border-right: 1px solid #222;
     }
 
     .mobile-bar a:last-child {
         background: var(--gold);
         color: #080808;
     }
+
 }
 
 </style>
@@ -794,16 +631,26 @@ footer p {
 
 <nav>
 
-<div class="brand">
+<a href="index.html" class="brand">
 ENHANCE <span>MY RIDE</span>
-</div>
+</a>
 
 <div class="nav-links">
-<a href="#services">Services</a>
-<a href="#experience">About</a>
-<a href="#process">How It Works</a>
-<a href="#reviews">Reviews</a>
-<a href="#contact">Contact</a>
+
+<a href="index.html">Home</a>
+
+<a href="services.html">Services</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="about.html">About</a>
+
+<a href="service-area.html">Service Area</a>
+
+<a href="quote.html" class="nav-cta">
+Get a Quote
+</a>
+
 </div>
 
 </nav>
@@ -826,38 +673,36 @@ At Your Door.
 </h1>
 
 <p class="hero-description">
-A premium mobile detailing experience designed for people
-who expect more than an ordinary car wash.
-We bring the detail to you, wherever you are in the Bay Area.
+Premium mobile auto detailing brought directly to your home,
+workplace, or preferred location. Serving San Francisco
+and the entire Bay Area.
 </p>
 
 <div class="hero-buttons">
 
-<a class="btn btn-gold"
-href="tel:13233271806">
-Call or Text
+<a href="quote.html" class="btn btn-gold">
+Request a Quote
 </a>
 
-<a class="btn btn-outline"
-href="mailto:Enhancemyridemobiledetailing@gmail.com?subject=Detailing%20Quote%20Request">
-Request a Quote
+<a href="tel:13233271806" class="btn btn-outline">
+Call or Text
 </a>
 
 </div>
 
-<div class="hero-bottom">
+<div class="hero-stats">
 
-<div class="hero-stat">
+<div class="stat">
 <strong>Mobile</strong>
 <span>We Come To You</span>
 </div>
 
-<div class="hero-stat">
+<div class="stat">
 <strong>Premium</strong>
 <span>Detailing Experience</span>
 </div>
 
-<div class="hero-stat">
+<div class="stat">
 <strong>Bay Area</strong>
 <span>Service Coverage</span>
 </div>
@@ -869,21 +714,21 @@ Request a Quote
 </header>
 
 
-<!-- GOLD STRIP -->
+<!-- TAGLINE -->
 
-<div class="intro-strip">
+<div class="tagline">
 We Come To You. You Relax. We Enhance.
 </div>
 
 
-<!-- SERVICES -->
+<!-- FEATURED SERVICES -->
 
-<section class="services" id="services">
+<section class="services">
 
-<div class="section-header center">
+<div class="section-heading">
 
-<div class="section-label">
-Our Signature Services
+<div class="label">
+Our Signature Packages
 </div>
 
 <h2>
@@ -891,21 +736,19 @@ Choose Your <span style="color:#e4c45c;">Enhancement</span>
 </h2>
 
 <p>
-Every vehicle is different. Every detail is customized
-to the condition of your vehicle and the finish you want.
+Three premium detailing experiences designed for
+different levels of vehicle care.
 </p>
 
 </div>
 
 
-<div class="service-grid">
+<div class="package-grid">
 
 
-<!-- GOLD -->
+<div class="package">
 
-<div class="service-card">
-
-<div class="service-number">
+<div class="package-number">
 01 / ESSENTIAL
 </div>
 
@@ -918,37 +761,25 @@ Starting at $150
 </div>
 
 <p>
-A premium maintenance detail designed to restore
-the clean, fresh appearance of your vehicle.
+A premium maintenance detail designed to keep
+your vehicle clean, fresh, and looking its best.
 </p>
 
-<ul class="service-list">
-<li>Exterior Hand Wash</li>
-<li>Wheels & Tire Cleaning</li>
-<li>Foam Wash</li>
-<li>Interior Vacuum</li>
-<li>Interior Surface Cleaning</li>
-<li>Interior Glass Cleaning</li>
-<li>Tire Dressing</li>
-</ul>
+<a href="services.html" class="package-link">
+View Package →
+</a>
 
 </div>
 
 
-<!-- BLACK LABEL -->
+<div class="package featured">
 
-<div class="service-card featured">
-
-<div class="popular">
-MOST POPULAR
-</div>
-
-<div class="service-number">
+<div class="package-number">
 02 / SIGNATURE
 </div>
 
 <h3>
-Black Label
+Enhance Black Label
 </h3>
 
 <div class="price">
@@ -957,32 +788,24 @@ Starting at $250
 
 <p>
 Our signature deep-cleaning experience for vehicles
-that need a serious interior and exterior refresh.
+that need a serious interior and exterior transformation.
 </p>
 
-<ul class="service-list">
-<li>Everything in Enhance Gold</li>
-<li>Deep Interior Cleaning</li>
-<li>Carpet & Mat Cleaning</li>
-<li>Leather Cleaning</li>
-<li>Crevice & Detail Brushing</li>
-<li>Premium Exterior Protection</li>
-<li>Enhanced Tire Finish</li>
-</ul>
+<a href="services.html" class="package-link">
+View Package →
+</a>
 
 </div>
 
 
-<!-- SHOWROOM -->
+<div class="package">
 
-<div class="service-card">
-
-<div class="service-number">
-03 / SIGNATURE+
+<div class="package-number">
+03 / ULTIMATE
 </div>
 
 <h3>
-Showroom Edition
+Enhance Showroom Edition
 </h3>
 
 <div class="price">
@@ -991,18 +814,12 @@ Starting at $350
 
 <p>
 Our ultimate detailing experience for customers
-who want their vehicle looking its absolute best.
+who demand a showroom-level finish.
 </p>
 
-<ul class="service-list">
-<li>Everything in Black Label</li>
-<li>Deep Interior Restoration</li>
-<li>Full Carpet Extraction</li>
-<li>Detailed Crevice Cleaning</li>
-<li>Paint Enhancement</li>
-<li>Premium Paint Protection</li>
-<li>Final Showroom Inspection</li>
-</ul>
+<a href="services.html" class="package-link">
+View Package →
+</a>
 
 </div>
 
@@ -1012,16 +829,16 @@ who want their vehicle looking its absolute best.
 </section>
 
 
-<!-- EXPERIENCE -->
+<!-- WHY ENHANCE -->
 
-<section class="experience" id="experience">
+<section class="why">
 
-<div class="experience-grid">
+<div class="why-grid">
 
 
-<div class="experience-visual">
+<div class="why-visual">
 
-<div class="visual-text">
+<div class="emr">
 
 <strong>EMR</strong>
 
@@ -1034,9 +851,9 @@ Enhance My Ride
 </div>
 
 
-<div class="experience-copy">
+<div class="why-copy">
 
-<div class="section-label">
+<div class="label">
 The Enhance Difference
 </div>
 
@@ -1047,161 +864,51 @@ More Than A Car Wash.<br>
 
 <p>
 Your vehicle deserves more than a quick wash and a vacuum.
-Enhance My Ride brings a professional detailing experience
-directly to your home, workplace, or preferred location.
+Enhance My Ride brings a premium detailing experience
+directly to you.
 </p>
 
+<div class="points">
 
-<div class="experience-list">
+<div class="point">
 
-<div class="experience-item">
-
-<div class="experience-icon">
-✦
-</div>
-
-<div>
 <strong>Convenience First</strong>
+
 <span>
-You don't have to rearrange your day. We come to you.
+We come directly to your home, workplace, or approved location.
 </span>
-</div>
 
 </div>
 
+<div class="point">
 
-<div class="experience-item">
-
-<div class="experience-icon">
-✦
-</div>
-
-<div>
 <strong>Attention To Detail</strong>
+
 <span>
 We focus on the areas most people overlook.
 </span>
-</div>
 
 </div>
 
+<div class="point">
 
-<div class="experience-item">
-
-<div class="experience-icon">
-✦
-</div>
-
-<div>
 <strong>Premium Presentation</strong>
+
 <span>
 We treat every vehicle like it deserves to be showcased.
 </span>
-</div>
-
-</div>
-
 
 </div>
 
 </div>
 
-</div>
+<br>
 
-</section>
-
-
-<!-- PROCESS -->
-
-<section class="process" id="process">
-
-<div class="section-header center">
-
-<div class="section-label">
-Simple. Professional. Convenient.
-</div>
-
-<h2>
-The <span style="color:#e4c45c;">Enhance</span> Process
-</h2>
+<a href="about.html" class="btn btn-outline">
+Discover Our Story
+</a>
 
 </div>
-
-
-<div class="process-grid">
-
-
-<div class="process-card">
-
-<div class="process-number">
-01
-</div>
-
-<h3>
-Book
-</h3>
-
-<p>
-Call, text, or request a quote.
-We'll discuss your vehicle and the service you need.
-</p>
-
-</div>
-
-
-<div class="process-card">
-
-<div class="process-number">
-02
-</div>
-
-<h3>
-We Arrive
-</h3>
-
-<p>
-We come directly to your home, workplace,
-or approved service location.
-</p>
-
-</div>
-
-
-<div class="process-card">
-
-<div class="process-number">
-03
-</div>
-
-<h3>
-We Enhance
-</h3>
-
-<p>
-Our detailing process transforms your vehicle
-inside and out.
-</p>
-
-</div>
-
-
-<div class="process-card">
-
-<div class="process-number">
-04
-</div>
-
-<h3>
-You Relax
-</h3>
-
-<p>
-When we're finished, your vehicle is ready
-for you to enjoy.
-</p>
-
-</div>
-
 
 </div>
 
@@ -1212,129 +919,32 @@ for you to enjoy.
 
 <section class="area">
 
-<div class="section-label">
-Serving The Bay Area
+<div class="label">
+Serving San Francisco & The Bay Area
 </div>
 
 <h2>
-Premium Detailing<br>
+Premium Detailing.<br>
 <span>Where You Are.</span>
 </h2>
 
 <p>
-Enhance My Ride provides mobile detailing throughout
-San Francisco and surrounding Bay Area communities.
-Service availability and travel fees may vary by location.
+We bring the Enhance My Ride experience directly to you.
+Explore our service area and find out if we cover your location.
 </p>
 
-
-<div class="area-list">
-
-<span>San Francisco</span>
-<span>Oakland</span>
-<span>Berkeley</span>
-<span>Alameda</span>
-<span>Concord</span>
-<span>Walnut Creek</span>
-<span>Richmond</span>
-<span>Vallejo</span>
-<span>Fairfield</span>
-<span>Bay Area</span>
-
-</div>
+<a href="service-area.html" class="area-link">
+Explore Our Service Area →
+</a>
 
 </section>
 
 
-<!-- REVIEWS -->
-
-<section class="reviews" id="reviews">
-
-<div class="section-header center">
-
-<div class="section-label">
-The Enhance Experience
-</div>
-
-<h2>
-What Our Clients <span style="color:#e4c45c;">Say</span>
-</h2>
-
-<p>
-Real customer reviews will be featured here as
-Enhance My Ride grows.
-</p>
-
-</div>
-
-
-<div class="review-grid">
-
-
-<div class="review">
-
-<div class="stars">
-★★★★★
-</div>
-
-<p>
-"Professional service, convenient location,
-and my vehicle looked incredible when they were finished."
-</p>
-
-<strong>
-— Enhance My Ride Client
-</strong>
-
-</div>
-
-
-<div class="review">
-
-<div class="stars">
-★★★★★
-</div>
-
-<p>
-"Being able to have my car detailed while I was
-at home made the whole experience extremely easy."
-</p>
-
-<strong>
-— Enhance My Ride Client
-</strong>
-
-</div>
-
-
-<div class="review">
-
-<div class="stars">
-★★★★★
-</div>
-
-<p>
-"Attention to detail was exactly what I was looking for.
-I'll definitely be booking again."
-</p>
-
-<strong>
-— Enhance My Ride Client
-</strong>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- CTA -->
+<!-- FINAL CTA -->
 
 <section class="cta">
 
-<div class="section-label">
+<div class="label">
 Your Vehicle Is Ready
 </div>
 
@@ -1348,86 +958,15 @@ Stop settling for ordinary. Experience premium mobile detailing
 without leaving your driveway.
 </p>
 
-<div class="hero-buttons" style="justify-content:center;">
+<div class="cta-buttons">
 
-<a class="btn btn-gold"
-href="tel:13233271806">
+<a href="quote.html" class="btn btn-gold">
+Get Your Quote
+</a>
+
+<a href="tel:13233271806" class="btn btn-outline">
 Call 323-327-1806
 </a>
-
-<a class="btn btn-outline"
-href="mailto:Enhancemyridemobiledetailing@gmail.com?subject=Book%20My%20Detail">
-Book By Email
-</a>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<div class="section-header center">
-
-<div class="section-label">
-Get In Touch
-</div>
-
-<h2>
-Let's <span style="color:#e4c45c;">Enhance</span> Your Ride
-</h2>
-
-</div>
-
-
-<div class="contact-grid">
-
-
-<div class="contact-card">
-
-<h3>
-Call or Text
-</h3>
-
-<p>
-<a href="tel:13233271806">
-323-327-1806
-</a>
-</p>
-
-</div>
-
-
-<div class="contact-card">
-
-<h3>
-Email
-</h3>
-
-<p>
-<a href="mailto:Enhancemyridemobiledetailing@gmail.com">
-Enhancemyridemobiledetailing@gmail.com
-</a>
-</p>
-
-</div>
-
-
-<div class="contact-card">
-
-<h3>
-Service Area
-</h3>
-
-<p>
-San Francisco &<br>
-The Entire Bay Area
-</p>
-
-</div>
-
 
 </div>
 
@@ -1465,7 +1004,7 @@ We come to you. You relax. We Enhance.
 ☎ CALL / TEXT
 </a>
 
-<a href="mailto:Enhancemyridemobiledetailing@gmail.com?subject=Detailing%20Quote%20Request">
+<a href="quote.html">
 REQUEST A QUOTE
 </a>
 
