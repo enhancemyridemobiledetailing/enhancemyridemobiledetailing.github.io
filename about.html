@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us | Enhance My Ride Auto Spa</title>
-<meta name="description" content="Learn about Enhance My Ride Auto Spa & Mobile Detailing, a premium mobile detailing company serving San Francisco and the greater Bay Area.">
+<meta name="description" content="Learn about Enhance My Ride Auto Spa & Mobile Detailing, a premium mobile detailing company serving San Francisco and the Greater Bay Area.">
 <style>
 * {
     margin: 0;
@@ -19,6 +19,7 @@ body {
     background: #070707;
     color: #f5f2ea;
     line-height: 1.6;
+    padding-bottom: 0;
 }
 a {
     color: inherit;
@@ -53,42 +54,52 @@ nav {
 .brand span {
     color: var(--gold-light);
 }
-/* MENU BUTTON */
-.menu-toggle {
+.menu-wrapper {
+    position: relative;
+}
+.menu-dropdown {
+    position: relative;
+}
+.menu-dropdown summary {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 48px;
     height: 42px;
-    background: transparent;
     border: 1px solid rgba(201,162,39,.5);
     color: var(--gold-light);
     font-size: 23px;
     cursor: pointer;
+    list-style: none;
+    user-select: none;
     transition: .3s;
 }
-.menu-toggle:hover {
+.menu-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+.menu-dropdown summary:hover {
     background: var(--gold);
     color: #080808;
 }
-/* DROPDOWN MENU */
+.menu-dropdown[open] summary {
+    background: var(--gold);
+    color: #080808;
+}
 .nav-menu {
     position: absolute;
-    top: 78px;
-    right: 6%;
+    top: 52px;
+    right: 0;
     width: 230px;
     padding: 12px;
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 5px;
     background: rgba(12,12,12,.98);
     border: 1px solid rgba(201,162,39,.35);
     box-shadow: 0 20px 50px rgba(0,0,0,.6);
 }
-.nav-menu.active {
-    display: flex;
-}
 .nav-menu a {
+    display: block;
     padding: 13px 15px;
     color: #ccc;
     font-size: 11px;
@@ -109,10 +120,9 @@ nav {
 }
 .nav-menu .menu-quote:hover {
     background: var(--gold-light);
-    color: #080808;
 }
 /* =========================
-   PAGE HERO
+   HERO
 ========================= */
 .page-hero {
     padding: 165px 7% 90px;
@@ -139,7 +149,7 @@ nav {
     color: var(--gold-light);
 }
 .page-hero p {
-    max-width: 650px;
+    max-width: 700px;
     margin: 25px auto 0;
     color: #999;
     font-size: 17px;
@@ -148,30 +158,35 @@ nav {
    STORY
 ========================= */
 .story {
-    padding: 100px 7%;
+    padding: 110px 7%;
     background: #0a0a0a;
 }
-.story-grid {
-    max-width: 1150px;
+.story-container {
+    max-width: 1050px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 70px;
     align-items: center;
 }
-.story-text .label {
-    margin-bottom: 12px;
-}
-.story-text h2 {
-    font-size: clamp(38px,5vw,62px);
-    line-height: .98;
+.story-label {
+    color: var(--gold-light);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
-.story-text h2 span {
+.story h2 {
+    margin-top: 15px;
+    font-size: clamp(38px,5vw,62px);
+    line-height: .95;
+    text-transform: uppercase;
+}
+.story h2 span {
     color: var(--gold-light);
 }
 .story-text p {
-    margin-top: 22px;
+    margin-top: 20px;
     color: #999;
     font-size: 15px;
 }
@@ -181,52 +196,42 @@ nav {
     align-items: center;
     justify-content: center;
     background:
-        radial-gradient(circle,rgba(201,162,39,.18),transparent 40%),
-        linear-gradient(145deg,#191919,#0b0b0b);
+        radial-gradient(circle at center,rgba(201,162,39,.15),transparent 55%),
+        linear-gradient(145deg,#191919,#0c0c0c);
     border: 1px solid #292929;
 }
-.story-mark {
-    font-size: 110px;
-    font-weight: 900;
-    letter-spacing: -10px;
-    color: rgba(201,162,39,.2);
-}
-/* =========================
-   MISSION
-========================= */
-.mission {
-    padding: 100px 7%;
-    background: #111;
-}
-.mission-container {
-    max-width: 1000px;
-    margin: auto;
+.visual-content {
     text-align: center;
+    padding: 30px;
 }
-.mission h2 {
-    font-size: clamp(40px,6vw,70px);
-    line-height: .95;
+.visual-content .big-text {
+    font-size: 70px;
+    font-weight: 900;
+    line-height: .8;
+    color: rgba(201,162,39,.15);
+}
+.visual-content h3 {
+    margin-top: 30px;
+    color: var(--gold-light);
+    font-size: 24px;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
-.mission h2 span {
-    color: var(--gold-light);
-}
-.mission p {
-    max-width: 750px;
-    margin: 25px auto 0;
-    color: #999;
-    font-size: 17px;
+.visual-content p {
+    margin-top: 10px;
+    color: #777;
+    font-size: 12px;
 }
 /* =========================
    VALUES
 ========================= */
 .values {
     padding: 100px 7%;
-    background: #080808;
+    background: #111;
 }
 .section-heading {
     max-width: 700px;
-    margin: 0 auto 50px;
+    margin: 0 auto 60px;
     text-align: center;
 }
 .section-heading h2 {
@@ -250,58 +255,67 @@ nav {
 }
 .value-card {
     padding: 35px 28px;
-    background: #111;
+    background: #0a0a0a;
     border: 1px solid #292929;
     transition: .3s;
 }
 .value-card:hover {
     transform: translateY(-5px);
-    border-color: var(--gold);
+    border-color: rgba(201,162,39,.6);
 }
 .value-number {
     color: var(--gold-light);
     font-size: 11px;
     font-weight: 900;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 .value-card h3 {
     margin-top: 18px;
-    font-size: 21px;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 .value-card p {
     margin-top: 12px;
-    color: #888;
-    font-size: 14px;
+    color: #777;
+    font-size: 13px;
 }
 /* =========================
    EXPERIENCE
 ========================= */
 .experience {
-    padding: 100px 7%;
-    background:
-        radial-gradient(circle at center,rgba(201,162,39,.08),transparent 45%),
-        #0d0d0d;
+    padding: 110px 7%;
+    background: #0a0a0a;
 }
-.experience-grid {
-    max-width: 1100px;
+.experience-container {
+    max-width: 1000px;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+    text-align: center;
 }
-.experience-card {
-    padding: 35px 28px;
-    border: 1px solid #292929;
-    background: rgba(15,15,15,.8);
+.experience-container h2 {
+    font-size: clamp(40px,6vw,70px);
+    line-height: .95;
+    text-transform: uppercase;
 }
-.experience-card h3 {
+.experience-container h2 span {
     color: var(--gold-light);
-    font-size: 18px;
 }
-.experience-card p {
-    margin-top: 12px;
+.experience-container p {
+    max-width: 700px;
+    margin: 25px auto 0;
     color: #888;
-    font-size: 14px;
+}
+.experience-quote {
+    margin-top: 40px;
+    padding: 35px;
+    border: 1px solid rgba(201,162,39,.3);
+    background: rgba(201,162,39,.04);
+}
+.experience-quote p {
+    margin: 0;
+    color: #ccc;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
 }
 /* =========================
    CTA
@@ -369,12 +383,15 @@ footer p {
 /* =========================
    RESPONSIVE
 ========================= */
-@media(max-width:900px) {
-    .story-grid {
+@media(max-width:850px) {
+    .story-container {
         grid-template-columns: 1fr;
+        max-width: 650px;
     }
-    .values-grid,
-    .experience-grid {
+    .story-visual {
+        min-height: 350px;
+    }
+    .values-grid {
         grid-template-columns: 1fr;
         max-width: 600px;
     }
@@ -390,7 +407,6 @@ footer p {
         padding: 140px 5% 70px;
     }
     .story,
-    .mission,
     .values,
     .experience,
     .cta {
@@ -398,10 +414,7 @@ footer p {
         padding-right: 5%;
     }
     .story-visual {
-        min-height: 320px;
-    }
-    .story-mark {
-        font-size: 75px;
+        min-height: 300px;
     }
     .mobile-bar {
         display: flex;
@@ -428,124 +441,99 @@ footer p {
 </style>
 </head>
 <body>
-<!-- =========================
-     NAVIGATION
-========================= -->
 <nav>
 <a href="index.html" class="brand">
 ENHANCE <span>MY RIDE</span>
 </a>
-<button class="menu-toggle" onclick="toggleMenu()" aria-label="Open Menu">
+<div class="menu-wrapper">
+<details class="menu-dropdown">
+<summary aria-label="Open navigation menu">
 ☰
-</button>
-<div class="nav-menu" id="navMenu">
-<a href="index.html">
+</summary>
+<div class="nav-menu">
+
 Home
-</a>
-<a href="services.html">
+
 Services
-</a>
-<a href="gallery.html">
+
 Gallery
-</a>
-<a href="about.html">
+
 About
-</a>
-<a href="service-area.html">
+
 Service Area
-</a>
+
 <a href="quote.html" class="menu-quote">
 Get a Quote
 </a>
 </div>
+</details>
+</div>
 </nav>
-<!-- =========================
-     PAGE HERO
-========================= -->
 <header class="page-hero">
 <div class="label">
-The Enhance Standard
+About Enhance My Ride
 </div>
 <h1>
-About <span>Enhance</span>
+More Than A <span>Detail.</span>
 </h1>
 <p>
-Premium mobile detailing built around convenience,
-craftsmanship, and the belief that your vehicle deserves
-more than an ordinary car wash.
+We believe professional vehicle care should be convenient,
+personal, and done right. That's why we bring the experience
+directly to you.
 </p>
 </header>
-<!-- =========================
-     OUR STORY
-========================= -->
 <section class="story">
-<div class="story-grid">
+<div class="story-container">
 <div class="story-text">
-<div class="label">
+<div class="story-label">
 Our Story
 </div>
 <h2>
-More Than A<br>
-Car <span>Wash.</span>
+Built To <span>Enhance</span> Your Experience
 </h2>
 <p>
 Enhance My Ride Auto Spa & Mobile Detailing was created
-with one simple idea: professional vehicle care should
-fit into your life instead of interrupting it.
+with one simple idea: your vehicle deserves premium care
+without you having to rearrange your entire day.
 </p>
 <p>
-We bring the detailing experience directly to you.
-Whether you're at home, at work, or somewhere in between,
-our goal is to make premium vehicle care convenient,
-professional, and personal.
+Instead of spending hours waiting at a traditional car wash
+or detailing shop, we bring the service directly to your
+home, workplace, office, or convenient location.
 </p>
 <p>
-Every vehicle receives the attention it deserves.
-From the first wash to the final inspection, we focus
-on the details that create a noticeable difference.
+From the first wash to the final inspection, our goal is to
+deliver a professional experience that makes your vehicle
+look better, feel better, and stay better.
 </p>
 </div>
 <div class="story-visual">
-<div class="story-mark">
+<div class="visual-content">
+<div class="big-text">
 EMR
 </div>
-</div>
-</div>
-</section>
-<!-- =========================
-     MISSION
-========================= -->
-<section class="mission">
-<div class="mission-container">
-<div class="label">
-Our Mission
-</div>
-<h2>
-We Come To You.<br>
-You Relax.<br>
-<span>We Enhance.</span>
-</h2>
+<h3>
+Your Ride.<br>
+Enhanced.
+</h3>
 <p>
-Our mission is to provide a premium mobile detailing
-experience that saves you time while giving your vehicle
-the professional care it deserves.
+Premium mobile vehicle care.
 </p>
 </div>
+</div>
+</div>
 </section>
-<!-- =========================
-     VALUES
-========================= -->
 <section class="values">
 <div class="section-heading">
 <div class="label">
 What We Stand For
 </div>
 <h2>
-The <span>Enhance</span> Values
+The <span>Enhance</span> Standard
 </h2>
 <p>
-Everything we do is built around delivering a better
-experience for our customers and their vehicles.
+Every vehicle deserves attention to detail.
+Every customer deserves a premium experience.
 </p>
 </div>
 <div class="values-grid">
@@ -554,144 +542,79 @@ experience for our customers and their vehicles.
 01 / QUALITY
 </div>
 <h3>
-Quality Over Quantity
+Attention To Detail
 </h3>
 <p>
-We would rather deliver exceptional results on fewer
-vehicles than rush through a large number of jobs.
+We don't believe in rushing through a vehicle.
+We take the time to focus on the areas that make
+the biggest difference.
 </p>
 </div>
 <div class="value-card">
 <div class="value-number">
-02 / DETAIL
+02 / CONVENIENCE
 </div>
-<h3>
-Details Matter
-</h3>
-<p>
-The difference between clean and truly enhanced is
-often found in the smallest details.
-</p>
-</div>
-<div class="value-card">
-<div class="value-number">
-03 / SERVICE
-</div>
-<h3>
-Your Time Matters
-</h3>
-<p>
-Our mobile model is designed around your schedule,
-making professional detailing more convenient.
-</p>
-</div>
-<div class="value-card">
-<div class="value-number">
-04 / TRUST
-</div>
-<h3>
-Professionalism
-</h3>
-<p>
-We believe in clear communication, honest pricing,
-and treating every vehicle with care and respect.
-</p>
-</div>
-<div class="value-card">
-<div class="value-number">
-05 / PRIDE
-</div>
-<h3>
-Take Pride In The Work
-</h3>
-<p>
-We don't just want your vehicle to look clean.
-We want you to feel proud when you see it.
-</p>
-</div>
-<div class="value-card">
-<div class="value-number">
-06 / EXPERIENCE
-</div>
-<h3>
-The Enhance Experience
-</h3>
-<p>
-From booking to final inspection, every part of your
-experience should feel premium.
-</p>
-</div>
-</div>
-</section>
-<!-- =========================
-     THE EXPERIENCE
-========================= -->
-<section class="experience">
-<div class="section-heading">
-<div class="label">
-Why Enhance My Ride
-</div>
-<h2>
-A Better Way To<br>
-<span>Detail Your Vehicle</span>
-</h2>
-<p>
-We combine mobile convenience with a premium detailing
-mindset to create a service experience designed around you.
-</p>
-</div>
-<div class="experience-grid">
-<div class="experience-card">
 <h3>
 We Come To You
 </h3>
 <p>
-No waiting rooms. No dropping your vehicle off.
-We bring the service directly to your location.
+Your time matters. We bring our mobile detailing
+experience directly to your location so you can
+focus on your day.
 </p>
 </div>
-<div class="experience-card">
-<h3>
-Premium Attention
-</h3>
-<p>
-We focus on the areas that are often overlooked
-and take pride in delivering a thorough result.
-</p>
+<div class="value-card">
+<div class="value-number">
+03 / EXPERIENCE
 </div>
-<div class="experience-card">
 <h3>
-Built For Your Vehicle
+You Relax. We Enhance.
 </h3>
 <p>
-Every vehicle has different needs. We'll help you
-choose the service that makes the most sense for yours.
+From booking to final reveal, our goal is to make
+professional vehicle care simple, convenient,
+and enjoyable.
 </p>
 </div>
 </div>
 </section>
-<!-- =========================
-     CTA
-========================= -->
-<section class="cta">
+<section class="experience">
+<div class="experience-container">
 <div class="label">
-Ready To Experience The Difference?
+The Enhance Experience
 </div>
 <h2>
-Let's <span>Enhance</span><br>
-Your Ride.
+Premium Care.<br>
+<span>Delivered.</span>
 </h2>
 <p>
-Tell us about your vehicle and we'll help you choose
-the right detailing service.
+We combine professional detailing techniques, quality
+products, and a mobile-first approach to give you a
+convenient detailing experience without compromising
+on the quality of the work.
+</p>
+<div class="experience-quote">
+<p>
+"We come to you. You relax. We Enhance."
+</p>
+</div>
+</div>
+</section>
+<section class="cta">
+<div class="label">
+Experience The Difference
+</div>
+<h2>
+Ready To <span>Enhance</span><br>
+Your Ride?
+</h2>
+<p>
+Let's give your vehicle the attention it deserves.
 </p>
 <a href="quote.html" class="btn">
 Request Your Quote
 </a>
 </section>
-<!-- =========================
-     FOOTER
-========================= -->
 <footer>
 <div class="footer-logo">
 ENHANCE <span>MY RIDE</span>
@@ -709,9 +632,6 @@ We come to you. You relax. We Enhance.
 © 2026 Enhance My Ride. All Rights Reserved.
 </p>
 </footer>
-<!-- =========================
-     MOBILE BAR
-========================= -->
 <div class="mobile-bar">
 <a href="tel:13233271806">
 ☎ CALL / TEXT
@@ -720,25 +640,5 @@ We come to you. You relax. We Enhance.
 REQUEST A QUOTE
 </a>
 </div>
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-<script>
-function toggleMenu() {
-    const menu = document.getElementById("navMenu");
-    menu.classList.toggle("active");
-}
-document.addEventListener("click", function(event) {
-    const menu = document.getElementById("navMenu");
-    const button = document.querySelector(".menu-toggle");
-    if (
-        menu.classList.contains("active") &&
-        !menu.contains(event.target) &&
-        !button.contains(event.target)
-    ) {
-        menu.classList.remove("active");
-    }
-});
-</script>
 </body>
 </html>
