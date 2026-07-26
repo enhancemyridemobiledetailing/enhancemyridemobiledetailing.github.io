@@ -3,49 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Enhance My Ride | Premium Mobile Detailing</title>
-
-<meta name="description" content="Enhance My Ride Auto Spa & Mobile Detailing. Premium mobile auto detailing serving San Francisco and the entire Bay Area.">
-
+<title>Enhance My Ride Auto Spa | Premium Mobile Detailing</title>
+<meta name="description" content="Enhance My Ride Auto Spa & Mobile Detailing provides premium mobile auto detailing throughout San Francisco and the Bay Area. We come to you. You relax. We Enhance.">
 <style>
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #070707;
     color: #f5f2ea;
     line-height: 1.6;
 }
-
 a {
     color: inherit;
     text-decoration: none;
 }
-
 :root {
     --gold: #c9a227;
     --gold-light: #e4c45c;
-    --black: #070707;
-    --dark: #101010;
+    --dark: #070707;
     --card: #151515;
     --muted: #999;
 }
-
-
 /* =========================
    NAVIGATION
 ========================= */
-
 nav {
     position: fixed;
     top: 0;
@@ -56,291 +44,155 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(7,7,7,.94);
+    background: rgba(7,7,7,.96);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255,255,255,.07);
 }
-
 .brand {
     font-size: 17px;
     font-weight: 900;
     letter-spacing: 2px;
 }
-
 .brand span {
     color: var(--gold-light);
 }
-
-.nav-links {
+/* MENU BUTTON */
+.menu-toggle {
     display: flex;
     align-items: center;
-    gap: 24px;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.nav-links a {
-    color: #ccc;
+    justify-content: center;
+    width: 48px;
+    height: 42px;
+    background: transparent;
+    border: 1px solid rgba(201,162,39,.5);
+    color: var(--gold-light);
+    font-size: 23px;
+    cursor: pointer;
     transition: .3s;
 }
-
-.nav-links a:hover {
-    color: var(--gold-light);
-}
-
-.nav-cta {
+.menu-toggle:hover {
     background: var(--gold);
-    color: #080808 !important;
-    padding: 11px 16px;
+    color: #080808;
 }
-
-
+/* DROPDOWN MENU */
+.nav-menu {
+    position: absolute;
+    top: 78px;
+    right: 6%;
+    width: 230px;
+    padding: 12px;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(12,12,12,.98);
+    border: 1px solid rgba(201,162,39,.35);
+    box-shadow: 0 20px 50px rgba(0,0,0,.6);
+}
+.nav-menu.active {
+    display: flex;
+}
+.nav-menu a {
+    padding: 13px 15px;
+    color: #ccc;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+.nav-menu a:hover {
+    color: var(--gold-light);
+    background: rgba(201,162,39,.08);
+}
+.nav-menu .menu-quote {
+    margin-top: 5px;
+    background: var(--gold);
+    color: #080808;
+    text-align: center;
+}
+.nav-menu .menu-quote:hover {
+    background: var(--gold-light);
+    color: #080808;
+}
 /* =========================
    HERO
 ========================= */
-
 .hero {
-    min-height: 92vh;
+    min-height: 100vh;
     padding: 150px 7% 80px;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
-
     background:
-        radial-gradient(circle at 80% 25%, rgba(201,162,39,.16), transparent 30%),
-        radial-gradient(circle at 15% 80%, rgba(201,162,39,.07), transparent 28%),
-        linear-gradient(135deg,#050505,#121212 55%,#050505);
+        radial-gradient(circle at 70% 40%, rgba(201,162,39,.18), transparent 35%),
+        radial-gradient(circle at 20% 80%, rgba(201,162,39,.08), transparent 30%),
+        linear-gradient(135deg,#050505,#141414);
 }
-
 .hero-content {
     max-width: 850px;
-    position: relative;
-    z-index: 2;
 }
-
 .eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 12px;
     color: var(--gold-light);
     font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 3px;
+    font-weight: 900;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
-
-.eyebrow::before {
-    content: "";
-    width: 38px;
-    height: 1px;
-    background: var(--gold);
-}
-
 .hero h1 {
-    font-size: clamp(48px, 9vw, 100px);
-    line-height: .92;
-    letter-spacing: -4px;
+    font-size: clamp(55px,9vw,120px);
+    line-height: .88;
+    letter-spacing: -5px;
     text-transform: uppercase;
 }
-
 .hero h1 span {
     color: var(--gold-light);
 }
-
-.hero-description {
+.hero-subtitle {
     max-width: 650px;
+    margin-top: 30px;
     color: #aaa;
     font-size: 18px;
-    margin-top: 28px;
 }
-
 .hero-buttons {
     display: flex;
-    gap: 12px;
+    gap: 15px;
     flex-wrap: wrap;
     margin-top: 35px;
 }
-
 .btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 170px;
-    padding: 16px 24px;
+    display: inline-block;
+    padding: 16px 27px;
+    background: var(--gold);
+    color: #080808;
     font-size: 11px;
     font-weight: 900;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     transition: .3s;
 }
-
-.btn-gold {
-    background: var(--gold);
-    color: #080808;
-}
-
-.btn-gold:hover {
+.btn:hover {
     background: var(--gold-light);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
-
 .btn-outline {
-    border: 1px solid var(--gold);
-    color: var(--gold-light);
+    background: transparent;
+    color: #f5f2ea;
+    border: 1px solid rgba(201,162,39,.6);
 }
-
 .btn-outline:hover {
-    background: var(--gold);
-    color: #080808;
-    transform: translateY(-3px);
-}
-
-.hero-stats {
-    display: flex;
-    gap: 45px;
-    flex-wrap: wrap;
-    margin-top: 60px;
-}
-
-.stat strong {
-    display: block;
+    background: rgba(201,162,39,.1);
     color: var(--gold-light);
-    font-size: 18px;
 }
-
-.stat span {
-    display: block;
-    color: #777;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-
 /* =========================
-   TAGLINE STRIP
+   INTRO
 ========================= */
-
-.tagline {
-    padding: 20px;
-    background: var(--gold);
-    color: #080808;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-
-/* =========================
-   FEATURED SERVICES
-========================= */
-
-.services {
-    padding: 90px 7%;
+.intro {
+    padding: 100px 7%;
     background: #0a0a0a;
 }
-
-.section-heading {
-    max-width: 700px;
-    margin: 0 auto 50px;
-    text-align: center;
-}
-
-.label {
-    color: var(--gold-light);
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}
-
-.section-heading h2 {
-    font-size: clamp(36px,5vw,60px);
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: -2px;
-}
-
-.section-heading p {
-    color: #888;
-    margin-top: 18px;
-}
-
-.package-grid {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-}
-
-.package {
-    padding: 35px 30px;
-    background: linear-gradient(145deg,#171717,#0e0e0e);
-    border: 1px solid #292929;
-    transition: .3s;
-}
-
-.package:hover {
-    transform: translateY(-7px);
-    border-color: var(--gold);
-}
-
-.package.featured {
-    border-color: var(--gold);
-}
-
-.package-number {
-    color: #666;
-    font-size: 10px;
-    letter-spacing: 2px;
-}
-
-.package h3 {
-    margin-top: 18px;
-    font-size: 24px;
-}
-
-.price {
-    margin: 10px 0 15px;
-    color: var(--gold-light);
-    font-size: 25px;
-    font-weight: 900;
-}
-
-.package p {
-    color: #999;
-    font-size: 14px;
-}
-
-.package-link {
-    display: inline-block;
-    margin-top: 22px;
-    color: var(--gold-light);
-    font-size: 11px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-
-/* =========================
-   WHY ENHANCE
-========================= */
-
-.why {
-    padding: 100px 7%;
-    background: #111;
-}
-
-.why-grid {
+.intro-grid {
     max-width: 1150px;
     margin: auto;
     display: grid;
@@ -348,247 +200,274 @@ nav {
     gap: 70px;
     align-items: center;
 }
-
-.why-visual {
-    min-height: 430px;
+.section-label {
+    color: var(--gold-light);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.intro h2 {
+    margin-top: 15px;
+    font-size: clamp(38px,5vw,65px);
+    line-height: .98;
+    text-transform: uppercase;
+}
+.intro h2 span {
+    color: var(--gold-light);
+}
+.intro p {
+    margin-top: 22px;
+    color: #999;
+}
+.intro-visual {
+    min-height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
     background:
         radial-gradient(circle,rgba(201,162,39,.18),transparent 40%),
-        #090909;
+        linear-gradient(145deg,#181818,#0b0b0b);
     border: 1px solid #292929;
 }
-
-.emr {
-    text-align: center;
-}
-
-.emr strong {
-    display: block;
-    color: rgba(201,162,39,.25);
+.emr-mark {
     font-size: 100px;
-    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -8px;
+    color: rgba(201,162,39,.2);
 }
-
-.emr span {
-    color: var(--gold-light);
-    font-size: 11px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-}
-
-.why-copy h2 {
-    font-size: clamp(36px,5vw,60px);
-    line-height: 1;
-    text-transform: uppercase;
-}
-
-.why-copy h2 span {
-    color: var(--gold-light);
-}
-
-.why-copy p {
-    color: #999;
-    margin-top: 22px;
-}
-
-.points {
-    margin-top: 25px;
-}
-
-.point {
-    padding: 15px 0;
-    border-bottom: 1px solid #292929;
-}
-
-.point strong {
-    display: block;
-    color: #eee;
-}
-
-.point span {
-    color: #777;
-    font-size: 13px;
-}
-
-
 /* =========================
-   SERVICE AREA
+   SERVICES PREVIEW
 ========================= */
-
-.area {
-    padding: 80px 7%;
-    text-align: center;
-    background:
-        radial-gradient(circle at center,rgba(201,162,39,.12),transparent 50%),
-        #090909;
+.services-preview {
+    padding: 100px 7%;
+    background: #111;
 }
-
-.area h2 {
-    font-size: clamp(38px,6vw,70px);
-    line-height: .95;
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+.section-heading h2 {
+    margin-top: 12px;
+    font-size: clamp(38px,5vw,60px);
+    line-height: 1;
     text-transform: uppercase;
 }
-
-.area h2 span {
+.section-heading h2 span {
     color: var(--gold-light);
 }
-
-.area p {
-    max-width: 650px;
-    margin: 20px auto 30px;
+.section-heading p {
+    margin-top: 18px;
     color: #888;
 }
-
-.area-link {
+.service-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.service-card {
+    padding: 35px 28px;
+    background: linear-gradient(145deg,#191919,#101010);
+    border: 1px solid #292929;
+    transition: .3s;
+}
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+}
+.service-number {
+    color: var(--gold-light);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.service-card h3 {
+    margin-top: 18px;
+    font-size: 24px;
+    line-height: 1.1;
+}
+.service-price {
+    margin-top: 15px;
+    color: var(--gold-light);
+    font-size: 18px;
+    font-weight: 900;
+}
+.service-card p {
+    margin-top: 15px;
+    color: #888;
+    font-size: 14px;
+}
+.service-link {
+    display: inline-block;
+    margin-top: 25px;
     color: var(--gold-light);
     font-size: 11px;
     font-weight: 900;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-
-
 /* =========================
-   FINAL CTA
+   WHY CHOOSE US
 ========================= */
-
-.cta {
+.why {
     padding: 100px 7%;
-    text-align: center;
-    background: #0d0d0d;
+    background: #080808;
 }
-
-.cta h2 {
-    font-size: clamp(42px,7vw,80px);
-    line-height: .95;
+.why-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.why-card {
+    padding: 35px 28px;
+    border: 1px solid #252525;
+    background: #111;
+}
+.why-card span {
+    color: var(--gold-light);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.why-card h3 {
+    margin-top: 18px;
+    font-size: 20px;
+}
+.why-card p {
+    margin-top: 12px;
+    color: #888;
+    font-size: 14px;
+}
+/* =========================
+   SERVICE AREA
+========================= */
+.area {
+    padding: 100px 7%;
+    background:
+        radial-gradient(circle at center,rgba(201,162,39,.08),transparent 45%),
+        #0d0d0d;
+    text-align: center;
+}
+.area h2 {
+    font-size: clamp(40px,6vw,70px);
+    line-height: 1;
     text-transform: uppercase;
 }
-
+.area h2 span {
+    color: var(--gold-light);
+}
+.area p {
+    max-width: 650px;
+    margin: 20px auto 30px;
+    color: #888;
+}
+/* =========================
+   CTA
+========================= */
+.cta {
+    padding: 110px 7%;
+    text-align: center;
+    background:
+        radial-gradient(circle at center,rgba(201,162,39,.15),transparent 50%),
+        #080808;
+}
+.cta h2 {
+    font-size: clamp(45px,7vw,85px);
+    line-height: .92;
+    text-transform: uppercase;
+}
 .cta h2 span {
     color: var(--gold-light);
 }
-
 .cta p {
     max-width: 600px;
     margin: 20px auto 30px;
     color: #888;
 }
-
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-
 /* =========================
    FOOTER
 ========================= */
-
 footer {
     padding: 50px 7% 90px;
     text-align: center;
     background: #050505;
 }
-
 .footer-logo {
     font-size: 20px;
     font-weight: 900;
     letter-spacing: 3px;
 }
-
 .footer-logo span {
     color: var(--gold-light);
 }
-
 footer p {
     margin-top: 10px;
     color: #666;
     font-size: 12px;
 }
-
-
 /* =========================
-   MOBILE BAR
+   MOBILE BOTTOM BAR
 ========================= */
-
 .mobile-bar {
     display: none;
 }
-
-
 /* =========================
    RESPONSIVE
 ========================= */
-
-@media(max-width:950px) {
-
-    .nav-links a:not(.nav-cta) {
-        display: none;
+@media(max-width:900px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
     }
-
-    .package-grid {
+    .service-grid {
         grid-template-columns: 1fr;
         max-width: 600px;
     }
-
     .why-grid {
         grid-template-columns: 1fr;
+        max-width: 600px;
     }
-
 }
-
 @media(max-width:600px) {
-
     body {
         padding-bottom: 62px;
     }
-
     nav {
         padding: 17px 5%;
     }
-
     .hero {
         min-height: 90vh;
-        padding: 130px 5% 70px;
+        padding: 140px 5% 70px;
     }
-
     .hero h1 {
-        letter-spacing: -2px;
+        letter-spacing: -3px;
     }
-
-    .hero-description {
+    .hero-subtitle {
         font-size: 16px;
     }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
-    .hero-stats {
-        gap: 25px;
-        margin-top: 45px;
-    }
-
-    .services,
+    .intro,
+    .services-preview,
     .why,
     .area,
     .cta {
         padding-left: 5%;
         padding-right: 5%;
     }
-
-    .why-visual {
+    .intro-visual {
         min-height: 300px;
     }
-
+    .emr-mark {
+        font-size: 75px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+    .hero-buttons .btn {
+        text-align: center;
+    }
     .mobile-bar {
         display: flex;
         position: fixed;
@@ -599,417 +478,331 @@ footer p {
         background: #050505;
         border-top: 1px solid rgba(201,162,39,.3);
     }
-
     .mobile-bar a {
         width: 50%;
         padding: 17px 5px;
         text-align: center;
         font-size: 10px;
         font-weight: 900;
-        letter-spacing: .5px;
     }
-
-    .mobile-bar a:first-child {
-        color: var(--gold-light);
-    }
-
     .mobile-bar a:last-child {
         background: var(--gold);
         color: #080808;
     }
-
 }
-
 </style>
 </head>
-
-
 <body>
-
-
-<!-- NAVIGATION -->
-
+<!-- =========================
+     NAVIGATION
+========================= -->
 <nav>
-
 <a href="index.html" class="brand">
 ENHANCE <span>MY RIDE</span>
 </a>
-
-<div class="nav-links">
-
-<a href="index.html">Home</a>
-
-<a href="services.html">Services</a>
-
-<a href="gallery.html">Gallery</a>
-
-<a href="about.html">About</a>
-
-<a href="service-area.html">Service Area</a>
-
-<a href="quote.html" class="nav-cta">
+<button class="menu-toggle" onclick="toggleMenu()" aria-label="Open Menu">
+☰
+</button>
+<div class="nav-menu" id="navMenu">
+<a href="index.html">
+Home
+</a>
+<a href="services.html">
+Services
+</a>
+<a href="gallery.html">
+Gallery
+</a>
+<a href="about.html">
+About
+</a>
+<a href="service-area.html">
+Service Area
+</a>
+<a href="quote.html" class="menu-quote">
 Get a Quote
 </a>
-
 </div>
-
 </nav>
-
-
-<!-- HERO -->
-
-<header class="hero">
-
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero">
 <div class="hero-content">
-
 <div class="eyebrow">
 Premium Mobile Auto Detailing
 </div>
-
 <h1>
-Your Car.<br>
-<span>Enhanced.</span><br>
-At Your Door.
+We Come To You.<br>
+You Relax.<br>
+<span>We Enhance.</span>
 </h1>
-
-<p class="hero-description">
-Premium mobile auto detailing brought directly to your home,
-workplace, or preferred location. Serving San Francisco
-and the entire Bay Area.
+<p class="hero-subtitle">
+Premium mobile auto detailing delivered directly to your
+home, workplace, or preferred location throughout San Francisco
+and the greater Bay Area.
 </p>
-
 <div class="hero-buttons">
-
-<a href="quote.html" class="btn btn-gold">
-Request a Quote
+<a href="quote.html" class="btn">
+Request A Quote
 </a>
-
-<a href="tel:13233271806" class="btn btn-outline">
-Call or Text
+<a href="services.html" class="btn btn-outline">
+Explore Services
 </a>
-
 </div>
-
-<div class="hero-stats">
-
-<div class="stat">
-<strong>Mobile</strong>
-<span>We Come To You</span>
 </div>
-
-<div class="stat">
-<strong>Premium</strong>
-<span>Detailing Experience</span>
+</section>
+<!-- =========================
+     INTRO
+========================= -->
+<section class="intro">
+<div class="intro-grid">
+<div>
+<div class="section-label">
+The Enhance Experience
 </div>
-
-<div class="stat">
-<strong>Bay Area</strong>
-<span>Service Coverage</span>
-</div>
-
-</div>
-
-</div>
-
-</header>
-
-
-<!-- TAGLINE -->
-
-<div class="tagline">
-We Come To You. You Relax. We Enhance.
-</div>
-
-
-<!-- FEATURED SERVICES -->
-
-<section class="services">
-
-<div class="section-heading">
-
-<div class="label">
-Our Signature Packages
-</div>
-
 <h2>
-Choose Your <span style="color:#e4c45c;">Enhancement</span>
+Your Car.<br>
+Our <span>Standard.</span>
 </h2>
-
 <p>
-Three premium detailing experiences designed for
-different levels of vehicle care.
+At Enhance My Ride Auto Spa & Mobile Detailing, we believe
+professional vehicle care should be convenient, personal,
+and worth the investment.
 </p>
-
+<p>
+That's why we bring the detailing experience directly to you.
+No waiting rooms. No wasted afternoons. Just premium vehicle
+care delivered wherever you are.
+</p>
+<a href="about.html" class="btn" style="margin-top:25px;">
+Discover Our Story
+</a>
 </div>
-
-
-<div class="package-grid">
-
-
-<div class="package">
-
-<div class="package-number">
+<div class="intro-visual">
+<div class="emr-mark">
+EMR
+</div>
+</div>
+</div>
+</section>
+<!-- =========================
+     SERVICES PREVIEW
+========================= -->
+<section class="services-preview">
+<div class="section-heading">
+<div class="section-label">
+Premium Vehicle Care
+</div>
+<h2>
+Choose Your <span>Enhance</span>
+</h2>
+<p>
+From a premium refresh to a complete showroom transformation,
+we have an experience designed for your vehicle.
+</p>
+</div>
+<div class="service-grid">
+<div class="service-card">
+<div class="service-number">
 01 / ESSENTIAL
 </div>
-
 <h3>
 Enhance Gold
 </h3>
-
-<div class="price">
+<div class="service-price">
 Starting at $150
 </div>
-
 <p>
-A premium maintenance detail designed to keep
-your vehicle clean, fresh, and looking its best.
+A premium interior and exterior refresh designed to
+restore your vehicle's clean, fresh appearance.
 </p>
-
-<a href="services.html" class="package-link">
+<a href="services.html" class="service-link">
 View Package →
 </a>
-
 </div>
-
-
-<div class="package featured">
-
-<div class="package-number">
+<div class="service-card">
+<div class="service-number">
 02 / SIGNATURE
 </div>
-
 <h3>
 Enhance Black Label
 </h3>
-
-<div class="price">
+<div class="service-price">
 Starting at $250
 </div>
-
 <p>
 Our signature deep-cleaning experience for vehicles
-that need a serious interior and exterior transformation.
+that need a more thorough transformation.
 </p>
-
-<a href="services.html" class="package-link">
+<a href="services.html" class="service-link">
 View Package →
 </a>
-
 </div>
-
-
-<div class="package">
-
-<div class="package-number">
+<div class="service-card">
+<div class="service-number">
 03 / ULTIMATE
 </div>
-
 <h3>
 Enhance Showroom Edition
 </h3>
-
-<div class="price">
+<div class="service-price">
 Starting at $350
 </div>
-
 <p>
-Our ultimate detailing experience for customers
-who demand a showroom-level finish.
+Our ultimate detailing experience for customers who
+demand the highest level of vehicle presentation.
 </p>
-
-<a href="services.html" class="package-link">
+<a href="services.html" class="service-link">
 View Package →
 </a>
-
 </div>
-
-
 </div>
-
 </section>
-
-
-<!-- WHY ENHANCE -->
-
+<!-- =========================
+     WHY CHOOSE US
+========================= -->
 <section class="why">
-
-<div class="why-grid">
-
-
-<div class="why-visual">
-
-<div class="emr">
-
-<strong>EMR</strong>
-
-<span>
-Enhance My Ride
-</span>
-
+<div class="section-heading">
+<div class="section-label">
+The Enhance Standard
 </div>
-
-</div>
-
-
-<div class="why-copy">
-
-<div class="label">
-The Enhance Difference
-</div>
-
 <h2>
-More Than A Car Wash.<br>
-<span>A Better Experience.</span>
+Why Choose <span>Us?</span>
 </h2>
-
 <p>
-Your vehicle deserves more than a quick wash and a vacuum.
-Enhance My Ride brings a premium detailing experience
-directly to you.
+We focus on the details that turn a basic car wash
+into a premium vehicle care experience.
 </p>
-
-<div class="points">
-
-<div class="point">
-
-<strong>Convenience First</strong>
-
+</div>
+<div class="why-grid">
+<div class="why-card">
 <span>
-We come directly to your home, workplace, or approved location.
+01
 </span>
-
+<h3>
+We Come To You
+</h3>
+<p>
+Your time matters. Our mobile service brings professional
+vehicle care directly to your location.
+</p>
 </div>
-
-<div class="point">
-
-<strong>Attention To Detail</strong>
-
+<div class="why-card">
 <span>
-We focus on the areas most people overlook.
+02
 </span>
-
+<h3>
+Attention To Detail
+</h3>
+<p>
+We take our time with the details that make a noticeable
+difference in the final result.
+</p>
 </div>
-
-<div class="point">
-
-<strong>Premium Presentation</strong>
-
+<div class="why-card">
 <span>
-We treat every vehicle like it deserves to be showcased.
+03
 </span>
-
+<h3>
+Premium Experience
+</h3>
+<p>
+From your first quote request to the final walk-around,
+we aim to deliver a professional experience every time.
+</p>
 </div>
-
 </div>
-
-<br>
-
-<a href="about.html" class="btn btn-outline">
-Discover Our Story
-</a>
-
-</div>
-
-</div>
-
 </section>
-
-
-<!-- SERVICE AREA -->
-
+<!-- =========================
+     SERVICE AREA
+========================= -->
 <section class="area">
-
-<div class="label">
-Serving San Francisco & The Bay Area
+<div class="section-label">
+Serving The Bay Area
 </div>
-
 <h2>
 Premium Detailing.<br>
-<span>Where You Are.</span>
+<span>Delivered To You.</span>
 </h2>
-
 <p>
-We bring the Enhance My Ride experience directly to you.
-Explore our service area and find out if we cover your location.
+We proudly serve San Francisco and the greater Bay Area.
+Don't see your city listed? Contact us and we'll confirm
+availability for your location.
 </p>
-
-<a href="service-area.html" class="area-link">
-Explore Our Service Area →
+<a href="service-area.html" class="btn">
+View Service Area
 </a>
-
 </section>
-
-
-<!-- FINAL CTA -->
-
+<!-- =========================
+     CTA
+========================= -->
 <section class="cta">
-
-<div class="label">
-Your Vehicle Is Ready
+<div class="section-label">
+Your Vehicle Deserves The Enhance Experience
 </div>
-
 <h2>
 Ready To<br>
-<span>Enhance</span> Your Ride?
+<span>Enhance Your Ride?</span>
 </h2>
-
 <p>
-Stop settling for ordinary. Experience premium mobile detailing
-without leaving your driveway.
+Tell us about your vehicle and we'll help you choose
+the right service for your needs.
 </p>
-
-<div class="cta-buttons">
-
-<a href="quote.html" class="btn btn-gold">
-Get Your Quote
+<a href="quote.html" class="btn">
+Request Your Quote
 </a>
-
-<a href="tel:13233271806" class="btn btn-outline">
-Call 323-327-1806
-</a>
-
-</div>
-
 </section>
-
-
-<!-- FOOTER -->
-
+<!-- =========================
+     FOOTER
+========================= -->
 <footer>
-
 <div class="footer-logo">
 ENHANCE <span>MY RIDE</span>
 </div>
-
 <p>
 Enhance My Ride Auto Spa & Mobile Detailing
 </p>
-
 <p>
 We come to you. You relax. We Enhance.
 </p>
-
+<p>
+323-327-1806 · Enhancemyridemobiledetailing@gmail.com
+</p>
 <p>
 © 2026 Enhance My Ride. All Rights Reserved.
 </p>
-
 </footer>
-
-
-<!-- MOBILE BOOKING BAR -->
-
+<!-- =========================
+     MOBILE BOTTOM BAR
+========================= -->
 <div class="mobile-bar">
-
 <a href="tel:13233271806">
 ☎ CALL / TEXT
 </a>
-
 <a href="quote.html">
 REQUEST A QUOTE
 </a>
-
 </div>
-
-
+<!-- =========================
+     MENU JAVASCRIPT
+========================= -->
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+}
+document.addEventListener("click", function(event) {
+    const menu = document.getElementById("navMenu");
+    const button = document.querySelector(".menu-toggle");
+    if (
+        menu.classList.contains("active") &&
+        !menu.contains(event.target) &&
+        !button.contains(event.target)
+    ) {
+        menu.classList.remove("active");
+    }
+});
+</script>
 </body>
 </html>
