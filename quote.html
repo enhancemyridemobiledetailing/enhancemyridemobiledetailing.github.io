@@ -19,6 +19,7 @@ body {
     background: #070707;
     color: #f5f2ea;
     line-height: 1.6;
+    padding-bottom: 0;
 }
 a {
     color: inherit;
@@ -53,7 +54,6 @@ nav {
 .brand span {
     color: var(--gold-light);
 }
-/* MENU BUTTON */
 .menu-toggle {
     display: flex;
     align-items: center;
@@ -71,7 +71,6 @@ nav {
     background: var(--gold);
     color: #080808;
 }
-/* DROPDOWN MENU */
 .nav-menu {
     position: absolute;
     top: 78px;
@@ -109,13 +108,12 @@ nav {
 }
 .nav-menu .menu-quote:hover {
     background: var(--gold-light);
-    color: #080808;
 }
 /* =========================
    HERO
 ========================= */
 .page-hero {
-    padding: 165px 7% 80px;
+    padding: 165px 7% 85px;
     text-align: center;
     background:
         radial-gradient(circle at center, rgba(201,162,39,.15), transparent 45%),
@@ -139,7 +137,7 @@ nav {
     color: var(--gold-light);
 }
 .page-hero p {
-    max-width: 700px;
+    max-width: 650px;
     margin: 25px auto 0;
     color: #999;
     font-size: 17px;
@@ -159,16 +157,14 @@ nav {
     gap: 60px;
     align-items: start;
 }
-/* =========================
-   CONTACT INFO
-========================= */
+/* LEFT SIDE */
 .quote-info {
     position: sticky;
     top: 110px;
 }
 .quote-info h2 {
-    font-size: clamp(36px,5vw,55px);
-    line-height: .98;
+    font-size: clamp(35px,5vw,55px);
+    line-height: 1;
     text-transform: uppercase;
 }
 .quote-info h2 span {
@@ -177,29 +173,40 @@ nav {
 .quote-info > p {
     margin-top: 20px;
     color: #888;
+    font-size: 14px;
+}
+.info-list {
+    margin-top: 30px;
+    list-style: none;
+}
+.info-list li {
+    margin-bottom: 18px;
+    padding-left: 20px;
+    border-left: 2px solid var(--gold);
+    color: #aaa;
+    font-size: 13px;
 }
 .contact-box {
     margin-top: 35px;
+    padding: 25px;
+    background: #111;
+    border: 1px solid #292929;
 }
-.contact-item {
-    padding: 20px 0;
-    border-bottom: 1px solid #292929;
-}
-.contact-label {
+.contact-box h3 {
     color: var(--gold-light);
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-.contact-item a,
-.contact-item p {
-    display: block;
-    margin-top: 6px;
-    color: #ddd;
     font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-.contact-item a:hover {
+.contact-box p {
+    margin-top: 10px;
+    color: #999;
+    font-size: 13px;
+}
+.contact-box a {
+    color: #f5f2ea;
+}
+.contact-box a:hover {
     color: var(--gold-light);
 }
 /* =========================
@@ -207,30 +214,28 @@ nav {
 ========================= */
 .quote-form {
     padding: 40px;
-    background: linear-gradient(145deg,#181818,#0f0f0f);
+    background: linear-gradient(145deg,#181818,#0d0d0d);
     border: 1px solid #292929;
 }
-.quote-form h2 {
-    font-size: 28px;
+.form-title {
+    margin-bottom: 30px;
+}
+.form-title h2 {
+    font-size: 27px;
     text-transform: uppercase;
 }
-.quote-form > p {
+.form-title p {
     margin-top: 8px;
-    color: #888;
-    font-size: 13px;
-}
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    color: #777;
+    font-size: 12px;
 }
 .form-group {
-    margin-top: 22px;
+    margin-bottom: 22px;
 }
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    color: #bbb;
+    color: #aaa;
     font-size: 10px;
     font-weight: 900;
     letter-spacing: 1px;
@@ -240,13 +245,13 @@ nav {
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 14px 15px;
-    background: #090909;
-    color: #f5f2ea;
+    padding: 15px;
+    background: #080808;
     border: 1px solid #333;
-    outline: none;
+    color: #f5f2ea;
     font-family: inherit;
     font-size: 14px;
+    outline: none;
     transition: .3s;
 }
 .form-group input:focus,
@@ -254,84 +259,62 @@ nav {
 .form-group textarea:focus {
     border-color: var(--gold);
 }
+.form-group select {
+    cursor: pointer;
+}
 .form-group textarea {
-    min-height: 120px;
+    min-height: 130px;
     resize: vertical;
 }
-.form-submit {
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.submit-btn {
     width: 100%;
-    margin-top: 25px;
-    padding: 17px;
+    padding: 18px;
+    border: none;
     background: var(--gold);
     color: #080808;
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
     font-size: 11px;
     font-weight: 900;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
 }
-.form-submit:hover {
+.submit-btn:hover {
     background: var(--gold-light);
 }
-/* =========================
-   FORM NOTE
-========================= */
 .form-note {
-    margin-top: 15px;
+    margin-top: 18px;
     color: #666;
     font-size: 11px;
     text-align: center;
 }
 /* =========================
-   QUICK CONTACT
+   CTA
 ========================= */
-.quick-contact {
-    padding: 90px 7%;
-    background: #111;
+.cta {
+    padding: 100px 7%;
     text-align: center;
+    background:
+        radial-gradient(circle at center,rgba(201,162,39,.12),transparent 50%),
+        #080808;
 }
-.quick-contact h2 {
-    font-size: clamp(38px,5vw,60px);
-    line-height: 1;
+.cta h2 {
+    font-size: clamp(40px,7vw,75px);
+    line-height: .95;
     text-transform: uppercase;
 }
-.quick-contact h2 span {
+.cta h2 span {
     color: var(--gold-light);
 }
-.quick-contact p {
+.cta p {
     max-width: 600px;
-    margin: 20px auto 30px;
+    margin: 20px auto;
     color: #888;
-}
-.quick-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-.btn {
-    display: inline-block;
-    padding: 16px 26px;
-    background: var(--gold);
-    color: #080808;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-.btn:hover {
-    background: var(--gold-light);
-}
-.btn-outline {
-    background: transparent;
-    color: #f5f2ea;
-    border: 1px solid rgba(201,162,39,.6);
-}
-.btn-outline:hover {
-    background: rgba(201,162,39,.1);
-    color: var(--gold-light);
 }
 /* =========================
    FOOTER
@@ -363,9 +346,10 @@ footer p {
 /* =========================
    RESPONSIVE
 ========================= */
-@media(max-width:900px) {
+@media(max-width:850px) {
     .quote-container {
         grid-template-columns: 1fr;
+        max-width: 650px;
     }
     .quote-info {
         position: static;
@@ -382,7 +366,7 @@ footer p {
         padding: 140px 5% 70px;
     }
     .quote-section,
-    .quick-contact {
+    .cta {
         padding-left: 5%;
         padding-right: 5%;
     }
@@ -417,7 +401,6 @@ footer p {
 </style>
 </head>
 <body>
-<!-- NAVIGATION -->
 <nav>
 <a href="index.html" class="brand">
 ENHANCE <span>MY RIDE</span>
@@ -437,96 +420,97 @@ About
 
 Service Area
 
+<a href="quote.html" class="menu-quote">
 Get a Quote
-
-</div>
-</nav>
-<!-- PAGE HERO -->
-<header class="page-hero">
-<div class="label">
-Let's Get Your Vehicle Enhanced
-</div>
-<h1>
-Request A <span>Quote</span>
-</h1>
-<p>
-Tell us about your vehicle and what you're looking for.
-We'll review your request and get back to you with
-your detailing options.
-</p>
-</header>
-<!-- QUOTE SECTION -->
-<section class="quote-section">
-<div class="quote-container">
-<!-- CONTACT INFO -->
-<div class="quote-info">
-<div class="label">
-Start Your Enhance Experience
-</div>
-<h2>
-Let's Get<br>
-Your Ride <span>Right.</span>
-</h2>
-<p>
-Fill out the form and tell us what your vehicle needs.
-We'll use the information you provide to prepare your quote.
-</p>
-<div class="contact-box">
-<div class="contact-item">
-<div class="contact-label">
-Call or Text
-</div>
-<a href="tel:13233271806">
-323-327-1806
 </a>
 </div>
-<div class="contact-item">
-<div class="contact-label">
-Email
+</nav>
+<header class="page-hero">
+<div class="label">
+Let's Enhance Your Ride
 </div>
+<h1>
+Get A <span>Quote</span>
+</h1>
+<p>
+Tell us about your vehicle and what you'd like done.
+We'll review your request and get back to you with
+your personalized detailing quote.
+</p>
+</header>
+<section class="quote-section">
+<div class="quote-container">
+<div class="quote-info">
+<div class="label">
+Premium Mobile Detailing
+</div>
+<h2>
+Your Ride.<br>
+<span>Our Expertise.</span>
+</h2>
+<p>
+Every vehicle is different. That's why we provide
+personalized quotes based on your vehicle, condition,
+service needs, and location.
+</p>
+<ul class="info-list">
+<li>
+We come directly to your location.
+</li>
+<li>
+Professional detailing for your vehicle.
+</li>
+<li>
+Serving San Francisco and the Greater Bay Area.
+</li>
+<li>
+No pressure. No obligation. Just a personalized quote.
+</li>
+</ul>
+<div class="contact-box">
+<h3>
+Prefer To Call Or Text?
+</h3>
+<p>
+Call or text us directly:
+</p>
+<p>
+<a href="tel:13233271806">
+<strong>323-327-1806</strong>
+</a>
+</p>
+<p>
 <a href="mailto:Enhancemyridemobiledetailing@gmail.com">
 Enhancemyridemobiledetailing@gmail.com
 </a>
-</div>
-<div class="contact-item">
-<div class="contact-label">
-Service Area
-</div>
-<p>
-San Francisco & Greater Bay Area
-</p>
-</div>
-<div class="contact-item">
-<div class="contact-label">
-Hours
-</div>
-<p>
-By Appointment
 </p>
 </div>
 </div>
-</div>
-<!-- FORM -->
 <div class="quote-form">
+<div class="form-title">
 <h2>
 Request Your Quote
 </h2>
 <p>
-The more information you provide, the more accurate
-we can make your quote.
+Complete the form below and we'll follow up with you.
 </p>
-<form action="mailto:Enhancemyridemobiledetailing@gmail.com" method="post" enctype="text/plain">
+</div>
+<form
+action="mailto:Enhancemyridemobiledetailing@gmail.com"
+method="post"
+enctype="text/plain"
+>
 <div class="form-row">
 <div class="form-group">
 <label for="name">
-Full Name
+Your Name
 </label>
 
 <input
 type=“text”
 id=“name”
 name=“Name”
-placeholder=“Your name”
+placeholder=“Your full name”
 required
 
 </div>
@@ -539,7 +523,7 @@ Phone Number
 type=“tel”
 id=“phone”
 name=“Phone”
-placeholder=”(555) 555-5555”
+placeholder=“323-555-5555”
 required
 
 </div>
@@ -558,20 +542,6 @@ required
 
 </div>
 <div class="form-group">
-<label for="location">
-Service Location
-</label>
-
-<input
-type=“text”
-id=“location”
-name=“Service Location”
-placeholder=“City or ZIP code”
-required
-
-</div>
-<div class="form-row">
-<div class="form-group">
 <label for="vehicle">
 Vehicle
 </label>
@@ -588,55 +558,64 @@ required
 <label for="package">
 Preferred Package
 </label>
-<select id="package" name="Preferred Package">
+<select id="package" name="Preferred Package" required>
 <option value="">
 Select a package
 </option>
-<option value="Enhance Gold">
+<option value="Enhance Gold - Starting at $150">
 Enhance Gold — Starting at $150
 </option>
-<option value="Enhance Black Label">
+<option value="Enhance Black Label - Starting at $250">
 Enhance Black Label — Starting at $250
 </option>
-<option value="Enhance Showroom Edition">
+<option value="Enhance Showroom Edition - Starting at $350">
 Enhance Showroom Edition — Starting at $350
 </option>
-<option value="Not Sure">
-I'm Not Sure
+<option value="Not Sure - Need Recommendation">
+I'm Not Sure — Recommend One
 </option>
 </select>
-</div>
 </div>
 <div class="form-group">
 <label for="addons">
 Add-On Services
 </label>
 <select id="addons" name="Add-On Services">
-<option value="">
-Select an add-on
+<option value="None">
+None
 </option>
-<option value="Pet Hair Removal — Starting at $30">
+<option value="Pet Hair Removal - Starting at $30">
 Pet Hair Removal — Starting at $30
 </option>
-<option value="Stain Treatment — Starting at $25">
+<option value="Stain Treatment - Starting at $25">
 Stain Treatment — Starting at $25
 </option>
-<option value="Carpet Extraction — Starting at $40">
+<option value="Carpet Extraction - Starting at $40">
 Carpet Extraction — Starting at $40
 </option>
-<option value="Engine Bay Cleaning — $50">
+<option value="Engine Bay Cleaning - $50">
 Engine Bay Cleaning — $50
 </option>
-<option value="Headlight Restoration — Starting at $75">
+<option value="Headlight Restoration - Starting at $75">
 Headlight Restoration — Starting at $75
 </option>
-<option value="Additional Protection — Starting at $50">
+<option value="Additional Protection - Starting at $50">
 Additional Protection — Starting at $50
 </option>
-<option value="None">
-No Add-On
-</option>
 </select>
+</div>
+<div class="form-group">
+<label for="location">
+Service Location
+</label>
+
+<input
+type=“text”
+id=“location”
+name=“Service Location”
+placeholder=“City or ZIP Code”
+required
+
 </div>
 <div class="form-group">
 <label for="message">
@@ -644,43 +623,38 @@ Tell Us About Your Vehicle
 </label>
 <textarea
 id="message"
-name="Message"
-placeholder="Tell us about your vehicle, its condition, and anything specific you'd like us to know."
+name="Vehicle Details"
+placeholder="Tell us about the vehicle's condition, stains, pet hair, or anything else you'd like us to know."
 ></textarea>
 </div>
-<button type="submit" class="form-submit">
-Submit Quote Request
-</button>
-<p class="form-note">
-We'll review your request and contact you to confirm availability
-and provide your final quote.
-</p>
+
+<button
+type=“submit”
+class=“submit-btn”
+
+Send My Quote Request
+<div class="form-note">
+
+By submitting this form, you are requesting a quote.
+Final pricing will be confirmed before service begins.
+
+</div>
 </form>
 </div>
 </div>
 </section>
-<!-- QUICK CONTACT -->
-<section class="quick-contact">
+<section class="cta">
 <div class="label">
-Prefer To Talk?
+Enhance Your Experience
 </div>
 <h2>
-Call Or <span>Text Us.</span>
+We Come To You.<br>
+<span>You Relax. We Enhance.</span>
 </h2>
 <p>
-If you prefer to speak with us directly, give us a call or
-send us a text and we'll be happy to discuss your vehicle.
+Premium mobile detailing delivered directly to your door.
 </p>
-<div class="quick-buttons">
-<a href="tel:13233271806" class="btn">
-Call 323-327-1806
-</a>
-<a href="sms:13233271806" class="btn btn-outline">
-Send A Text
-</a>
-</div>
 </section>
-<!-- FOOTER -->
 <footer>
 <div class="footer-logo">
 ENHANCE <span>MY RIDE</span>
@@ -698,7 +672,6 @@ We come to you. You relax. We Enhance.
 © 2026 Enhance My Ride. All Rights Reserved.
 </p>
 </footer>
-<!-- MOBILE BAR -->
 <div class="mobile-bar">
 <a href="tel:13233271806">
 ☎ CALL / TEXT
@@ -707,22 +680,21 @@ We come to you. You relax. We Enhance.
 REQUEST A QUOTE
 </a>
 </div>
-<!-- JAVASCRIPT -->
 <script>
 function toggleMenu() {
-    const menu = document.getElementById("navMenu");
-    menu.classList.toggle("active");
+const menu = document.getElementById("navMenu");
+menu.classList.toggle("active");
 }
 document.addEventListener("click", function(event) {
-    const menu = document.getElementById("navMenu");
-    const button = document.querySelector(".menu-toggle");
-    if (
-        menu.classList.contains("active") &&
-        !menu.contains(event.target) &&
-        !button.contains(event.target)
-    ) {
-        menu.classList.remove("active");
-    }
+const menu = document.getElementById("navMenu");
+const button = document.querySelector(".menu-toggle");
+if (
+menu.classList.contains("active") &&
+!menu.contains(event.target) &&
+!button.contains(event.target)
+) {
+menu.classList.remove("active");
+}
 });
 </script>
 </body>
