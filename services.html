@@ -3,48 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Services | Enhance My Ride Auto Spa</title>
-
-<meta name="description" content="Explore Enhance My Ride premium mobile detailing packages including Enhance Gold, Enhance Black Label, and Enhance Showroom Edition.">
-
+<title>Services & Pricing | Enhance My Ride Auto Spa</title>
+<meta name="description" content="Explore premium mobile detailing packages and add-on services from Enhance My Ride Auto Spa & Mobile Detailing. Serving San Francisco and the greater Bay Area.">
 <style>
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #070707;
     color: #f5f2ea;
     line-height: 1.6;
 }
-
 a {
     color: inherit;
     text-decoration: none;
 }
-
 :root {
     --gold: #c9a227;
     --gold-light: #e4c45c;
-    --dark: #0d0d0d;
-    --card: #151515;
-    --muted: #999;
 }
-
-
 /* =========================
    NAVIGATION
 ========================= */
-
 nav {
     position: fixed;
     top: 0;
@@ -55,58 +41,86 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(7,7,7,.95);
+    background: rgba(7,7,7,.96);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255,255,255,.07);
 }
-
 .brand {
     font-size: 17px;
     font-weight: 900;
     letter-spacing: 2px;
 }
-
 .brand span {
     color: var(--gold-light);
 }
-
-.nav-links {
+/* MENU BUTTON */
+.menu-toggle {
     display: flex;
     align-items: center;
-    gap: 24px;
-    font-size: 12px;
-    font-weight: 700;
+    justify-content: center;
+    width: 48px;
+    height: 42px;
+    background: transparent;
+    border: 1px solid rgba(201,162,39,.5);
+    color: var(--gold-light);
+    font-size: 23px;
+    cursor: pointer;
+    transition: .3s;
+}
+.menu-toggle:hover {
+    background: var(--gold);
+    color: #080808;
+}
+/* DROPDOWN MENU */
+.nav-menu {
+    position: absolute;
+    top: 78px;
+    right: 6%;
+    width: 230px;
+    padding: 12px;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(12,12,12,.98);
+    border: 1px solid rgba(201,162,39,.35);
+    box-shadow: 0 20px 50px rgba(0,0,0,.6);
+}
+.nav-menu.active {
+    display: flex;
+}
+.nav-menu a {
+    padding: 13px 15px;
+    color: #ccc;
+    font-size: 11px;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: .3s;
 }
-
-.nav-links a {
-    color: #ccc;
-}
-
-.nav-links a:hover {
+.nav-menu a:hover {
     color: var(--gold-light);
+    background: rgba(201,162,39,.08);
 }
-
-.nav-cta {
+.nav-menu .menu-quote {
+    margin-top: 5px;
     background: var(--gold);
-    color: #080808 !important;
-    padding: 11px 16px;
+    color: #080808;
+    text-align: center;
 }
-
-
+.nav-menu .menu-quote:hover {
+    background: var(--gold-light);
+    color: #080808;
+}
 /* =========================
-   PAGE HERO
+   HERO
 ========================= */
-
 .page-hero {
-    padding: 170px 7% 90px;
+    padding: 165px 7% 90px;
     text-align: center;
     background:
         radial-gradient(circle at center, rgba(201,162,39,.15), transparent 45%),
         linear-gradient(135deg,#050505,#141414);
 }
-
 .label {
     color: var(--gold-light);
     font-size: 10px;
@@ -115,262 +129,222 @@ nav {
     text-transform: uppercase;
     margin-bottom: 15px;
 }
-
 .page-hero h1 {
     font-size: clamp(48px,8vw,90px);
     line-height: .95;
     text-transform: uppercase;
     letter-spacing: -3px;
 }
-
 .page-hero h1 span {
     color: var(--gold-light);
 }
-
 .page-hero p {
-    max-width: 650px;
+    max-width: 700px;
     margin: 25px auto 0;
     color: #999;
     font-size: 17px;
 }
-
-
 /* =========================
-   PACKAGE SECTION
+   PACKAGES
 ========================= */
-
 .packages {
-    padding: 90px 7%;
+    padding: 100px 7%;
     background: #0a0a0a;
 }
-
-.package-container {
-    max-width: 1250px;
-    margin: auto;
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    text-align: center;
 }
-
-
-/* =========================
-   PACKAGE CARD
-========================= */
-
+.section-heading h2 {
+    font-size: clamp(38px,5vw,60px);
+    line-height: 1;
+    text-transform: uppercase;
+}
+.section-heading h2 span {
+    color: var(--gold-light);
+}
+.section-heading p {
+    margin-top: 18px;
+    color: #888;
+}
+/* PACKAGE GRID */
+.package-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+/* PACKAGE CARD */
 .package-card {
     position: relative;
-    margin-bottom: 35px;
-    padding: 45px;
+    padding: 40px 30px;
     background: linear-gradient(145deg,#181818,#0e0e0e);
     border: 1px solid #292929;
+    transition: .3s;
 }
-
-.package-card.featured {
+.package-card:hover {
+    transform: translateY(-7px);
     border-color: var(--gold);
+    box-shadow: 0 20px 50px rgba(0,0,0,.5);
 }
-
-.popular {
+.package-card.featured {
+    border-color: rgba(201,162,39,.7);
+}
+.package-badge {
     position: absolute;
     top: 0;
-    right: 0;
-    padding: 9px 18px;
+    right: 25px;
+    transform: translateY(-50%);
+    padding: 7px 12px;
+    background: var(--gold);
+    color: #080808;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.package-number {
+    color: var(--gold-light);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.package-card h3 {
+    margin-top: 15px;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+.price {
+    margin-top: 18px;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--gold-light);
+}
+.price span {
+    display: block;
+    color: #777;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.package-description {
+    margin-top: 15px;
+    color: #888;
+    font-size: 13px;
+}
+.package-list {
+    margin-top: 25px;
+    list-style: none;
+}
+.package-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #292929;
+    color: #bbb;
+    font-size: 13px;
+}
+.package-list li::before {
+    content: "✓";
+    margin-right: 10px;
+    color: var(--gold-light);
+    font-weight: 900;
+}
+.package-btn {
+    display: block;
+    margin-top: 30px;
+    padding: 15px;
+    text-align: center;
     background: var(--gold);
     color: #080808;
     font-size: 10px;
     font-weight: 900;
     letter-spacing: 1px;
-}
-
-.package-top {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 30px;
-    align-items: start;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #292929;
-}
-
-.package-number {
-    color: #666;
-    font-size: 11px;
-    letter-spacing: 2px;
-}
-
-.package-card h2 {
-    margin-top: 12px;
-    font-size: clamp(30px,4vw,48px);
-    line-height: 1;
-}
-
-.package-description {
-    margin-top: 15px;
-    max-width: 650px;
-    color: #999;
-    font-size: 15px;
-}
-
-.price {
-    color: var(--gold-light);
-    font-size: 30px;
-    font-weight: 900;
-    white-space: nowrap;
-}
-
-.package-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    padding-top: 30px;
-}
-
-.package-content h3 {
-    margin-bottom: 15px;
-    color: #eee;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.feature-list {
-    list-style: none;
-}
-
-.feature-list li {
-    padding: 9px 0;
-    color: #c8c8c8;
-    font-size: 14px;
-    border-bottom: 1px solid #222;
-}
-
-.feature-list li::before {
-    content: "✓";
-    color: var(--gold-light);
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-.package-button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 22px;
-    background: var(--gold);
-    color: #080808;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 1px;
     text-transform: uppercase;
 }
-
-.package-button:hover {
+.package-btn:hover {
     background: var(--gold-light);
 }
-
-
 /* =========================
-   ADD ONS
+   ADD-ONS
 ========================= */
-
 .addons {
-    padding: 90px 7%;
+    padding: 100px 7%;
     background: #111;
 }
-
-.section-heading {
-    max-width: 700px;
-    margin: 0 auto 50px;
-    text-align: center;
-}
-
-.section-heading h2 {
-    font-size: clamp(36px,5vw,60px);
-    line-height: 1;
-    text-transform: uppercase;
-}
-
-.section-heading h2 span {
-    color: var(--gold-light);
-}
-
-.section-heading p {
-    margin-top: 18px;
-    color: #888;
-}
-
 .addon-grid {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 18px;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
 }
-
-.addon {
+.addon-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
     padding: 25px;
-    background: #151515;
+    background: #0a0a0a;
     border: 1px solid #292929;
+    transition: .3s;
 }
-
-.addon h3 {
+.addon-card:hover {
+    border-color: rgba(201,162,39,.6);
+}
+.addon-info h3 {
+    font-size: 17px;
+}
+.addon-info p {
+    margin-top: 5px;
+    color: #777;
+    font-size: 12px;
+}
+.addon-price {
+    white-space: nowrap;
     color: var(--gold-light);
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 900;
 }
-
-.addon p {
-    margin-top: 8px;
-    color: #888;
-    font-size: 13px;
-}
-
-
 /* =========================
    IMPORTANT NOTE
 ========================= */
-
 .note {
-    max-width: 900px;
+    max-width: 850px;
     margin: 50px auto 0;
     padding: 25px;
-    background: rgba(201,162,39,.06);
+    background: rgba(201,162,39,.05);
     border: 1px solid rgba(201,162,39,.25);
     text-align: center;
 }
-
-.note strong {
-    color: var(--gold-light);
-}
-
 .note p {
-    margin-top: 8px;
     color: #999;
-    font-size: 13px;
+    font-size: 12px;
 }
-
-
 /* =========================
    CTA
 ========================= */
-
 .cta {
-    padding: 100px 7%;
+    padding: 110px 7%;
     text-align: center;
     background:
         radial-gradient(circle at center,rgba(201,162,39,.14),transparent 50%),
         #080808;
 }
-
 .cta h2 {
     font-size: clamp(42px,7vw,80px);
     line-height: .95;
     text-transform: uppercase;
 }
-
 .cta h2 span {
     color: var(--gold-light);
 }
-
 .cta p {
     max-width: 600px;
     margin: 20px auto 30px;
     color: #888;
 }
-
 .btn {
     display: inline-block;
     padding: 16px 26px;
@@ -381,103 +355,74 @@ nav {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-
 .btn:hover {
     background: var(--gold-light);
 }
-
-
 /* =========================
    FOOTER
 ========================= */
-
 footer {
     padding: 50px 7% 90px;
     text-align: center;
     background: #050505;
 }
-
 .footer-logo {
     font-size: 20px;
     font-weight: 900;
     letter-spacing: 3px;
 }
-
 .footer-logo span {
     color: var(--gold-light);
 }
-
 footer p {
     margin-top: 10px;
     color: #666;
     font-size: 12px;
 }
-
-
 /* =========================
    MOBILE BAR
 ========================= */
-
 .mobile-bar {
     display: none;
 }
-
-
 /* =========================
    RESPONSIVE
 ========================= */
-
-@media(max-width:900px) {
-
-    .nav-links a:not(.nav-cta) {
-        display: none;
-    }
-
-    .package-top {
-        grid-template-columns: 1fr;
-    }
-
-    .package-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .addon-grid {
+@media(max-width:950px) {
+    .package-grid {
         grid-template-columns: 1fr;
         max-width: 600px;
     }
-
 }
-
+@media(max-width:700px) {
+    .addon-grid {
+        grid-template-columns: 1fr;
+    }
+}
 @media(max-width:600px) {
-
     body {
         padding-bottom: 62px;
     }
-
     nav {
         padding: 17px 5%;
     }
-
     .page-hero {
         padding: 140px 5% 70px;
     }
-
     .packages,
     .addons,
     .cta {
         padding-left: 5%;
         padding-right: 5%;
     }
-
     .package-card {
-        padding: 30px 22px;
+        padding: 35px 25px;
     }
-
-    .price {
-        font-size: 25px;
+    .addon-card {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
     }
-
     .mobile-bar {
         display: flex;
         position: fixed;
@@ -488,7 +433,6 @@ footer p {
         background: #050505;
         border-top: 1px solid rgba(201,162,39,.3);
     }
-
     .mobile-bar a {
         width: 50%;
         padding: 17px 5px;
@@ -496,549 +440,349 @@ footer p {
         font-size: 10px;
         font-weight: 900;
     }
-
     .mobile-bar a:last-child {
         background: var(--gold);
         color: #080808;
     }
-
 }
-
 </style>
 </head>
-
-
 <body>
-
-
-<!-- NAVIGATION -->
-
+<!-- =========================
+     NAVIGATION
+========================= -->
 <nav>
-
 <a href="index.html" class="brand">
 ENHANCE <span>MY RIDE</span>
 </a>
-
-<div class="nav-links">
-
-<a href="index.html">Home</a>
-
-<a href="services.html">Services</a>
-
-<a href="gallery.html">Gallery</a>
-
-<a href="about.html">About</a>
-
-<a href="service-area.html">Service Area</a>
-
-<a href="quote.html" class="nav-cta">
+<button class="menu-toggle" onclick="toggleMenu()" aria-label="Open Menu">
+☰
+</button>
+<div class="nav-menu" id="navMenu">
+<a href="index.html">
+Home
+</a>
+<a href="services.html">
+Services
+</a>
+<a href="gallery.html">
+Gallery
+</a>
+<a href="about.html">
+About
+</a>
+<a href="service-area.html">
+Service Area
+</a>
+<a href="quote.html" class="menu-quote">
 Get a Quote
 </a>
-
 </div>
-
 </nav>
-
-
-<!-- PAGE HERO -->
-
+<!-- =========================
+     PAGE HERO
+========================= -->
 <header class="page-hero">
-
 <div class="label">
-Premium Mobile Auto Detailing
+Premium Mobile Detailing
 </div>
-
 <h1>
-Our <span>Enhance</span><br>
-Services
+Our <span>Services</span>
 </h1>
-
 <p>
-Choose the level of care that matches your vehicle.
-Every service is designed to deliver a premium experience
-directly to your location.
+Premium detailing packages designed to restore, protect,
+and enhance your vehicle — delivered directly to you.
 </p>
-
 </header>
-
-
-<!-- PACKAGES -->
-
+<!-- =========================
+     PACKAGES
+========================= -->
 <section class="packages">
-
-<div class="package-container">
-
-
+<div class="section-heading">
+<div class="label">
+Choose Your Enhance Experience
+</div>
+<h2>
+Detailing <span>Packages</span>
+</h2>
+<p>
+Choose the level of care that best fits your vehicle.
+Every package is designed with quality, attention to detail,
+and your convenience in mind.
+</p>
+</div>
+<div class="package-grid">
 <!-- ENHANCE GOLD -->
-
 <div class="package-card">
-
-<div class="package-top">
-
-<div>
-
 <div class="package-number">
 01 / ESSENTIAL
 </div>
-
-<h2>
+<h3>
 Enhance Gold
-</h2>
-
-<p class="package-description">
-Our premium maintenance detail for vehicles that need
-a thorough clean, refresh, and professional finish.
-</p>
-
-</div>
-
+</h3>
 <div class="price">
-Starting at $150
+$150
+<span>Starting Price</span>
 </div>
-
-</div>
-
-
-<div class="package-content">
-
-<div>
-
-<h3>
-Exterior Enhancement
-</h3>
-
-<ul class="feature-list">
-
-<li>Professional hand wash</li>
-
-<li>Foam pre-wash</li>
-
-<li>Wheels and tire cleaning</li>
-
-<li>Wheel face cleaning</li>
-
-<li>Exterior glass cleaning</li>
-
-<li>Premium tire dressing</li>
-
+<p class="package-description">
+The perfect refresh for vehicles that need a professional
+inside-and-out clean and reset.
+</p>
+<ul class="package-list">
+<li>Exterior Hand Wash</li>
+<li>Wheels & Tires Cleaned</li>
+<li>Foam Pre-Wash</li>
+<li>Interior Vacuum</li>
+<li>Dashboard & Console Cleaning</li>
+<li>Interior Glass Cleaning</li>
+<li>Exterior Drying</li>
+<li>Tire Dressing</li>
 </ul>
-
-</div>
-
-
-<div>
-
-<h3>
-Interior Enhancement
-</h3>
-
-<ul class="feature-list">
-
-<li>Complete interior vacuum</li>
-
-<li>Floor and mat vacuuming</li>
-
-<li>Interior surface cleaning</li>
-
-<li>Dashboard cleaning</li>
-
-<li>Door panel cleaning</li>
-
-<li>Interior glass cleaning</li>
-
-</ul>
-
-<a href="quote.html" class="package-button">
+<a href="quote.html" class="package-btn">
 Book Enhance Gold
 </a>
-
 </div>
-
-</div>
-
-</div>
-
-
 <!-- ENHANCE BLACK LABEL -->
-
 <div class="package-card featured">
-
-<div class="popular">
-MOST POPULAR
+<div class="package-badge">
+Most Popular
 </div>
-
-<div class="package-top">
-
-<div>
-
 <div class="package-number">
 02 / SIGNATURE
 </div>
-
-<h2>
+<h3>
 Enhance Black Label
-</h2>
-
-<p class="package-description">
-Our signature deep-cleaning experience for vehicles
-that need a serious interior and exterior transformation.
-</p>
-
-</div>
-
+</h3>
 <div class="price">
-Starting at $250
+$250
+<span>Starting Price</span>
 </div>
-
-</div>
-
-
-<div class="package-content">
-
-<div>
-
-<h3>
-Everything In Enhance Gold, Plus
-</h3>
-
-<ul class="feature-list">
-
-<li>Deep wheel cleaning</li>
-
-<li>Detailed tire cleaning</li>
-
-<li>Exterior decontamination</li>
-
-<li>Premium exterior protection</li>
-
-<li>Door jamb cleaning</li>
-
-<li>Enhanced exterior finish</li>
-
+<p class="package-description">
+A deeper, more comprehensive detail designed for vehicles
+that need serious attention inside and out.
+</p>
+<ul class="package-list">
+<li>Everything in Enhance Gold</li>
+<li>Deep Interior Cleaning</li>
+<li>Detailed Interior Surfaces</li>
+<li>Carpet & Mat Cleaning</li>
+<li>Door Jamb Cleaning</li>
+<li>Deep Wheel Cleaning</li>
+<li>Exterior Trim Treatment</li>
+<li>Premium Tire Dressing</li>
+<li>Interior UV Protection</li>
 </ul>
-
-</div>
-
-
-<div>
-
-<h3>
-Interior Deep Clean
-</h3>
-
-<ul class="feature-list">
-
-<li>Deep interior cleaning</li>
-
-<li>Carpet and mat cleaning</li>
-
-<li>Leather cleaning</li>
-
-<li>Detailed crevice brushing</li>
-
-<li>Deep surface cleaning</li>
-
-<li>Premium interior finish</li>
-
-</ul>
-
-<a href="quote.html" class="package-button">
-Book Black Label
+<a href="quote.html" class="package-btn">
+Book Enhance Black Label
 </a>
-
 </div>
-
-</div>
-
-</div>
-
-
-<!-- ENHANCE SHOWROOM EDITION -->
-
+<!-- ENHANCE SHOWROOM -->
 <div class="package-card">
-
-<div class="package-top">
-
-<div>
-
 <div class="package-number">
 03 / ULTIMATE
 </div>
-
-<h2>
+<h3>
 Enhance Showroom Edition
-</h2>
-
-<p class="package-description">
-Our ultimate detailing experience for customers
-who demand the highest level of presentation.
-</p>
-
-</div>
-
+</h3>
 <div class="price">
-Starting at $350
+$350
+<span>Starting Price</span>
 </div>
-
-</div>
-
-
-<div class="package-content">
-
-<div>
-
-<h3>
-Everything In Black Label, Plus
-</h3>
-
-<ul class="feature-list">
-
-<li>Full exterior decontamination</li>
-
-<li>Paint enhancement</li>
-
-<li>Premium paint protection</li>
-
-<li>Enhanced gloss finish</li>
-
-<li>Detailed exterior inspection</li>
-
-<li>Showroom-level presentation</li>
-
-</ul>
-
-</div>
-
-
-<div>
-
-<h3>
-Ultimate Interior Restoration
-</h3>
-
-<ul class="feature-list">
-
-<li>Deep interior restoration</li>
-
-<li>Full carpet extraction</li>
-
-<li>Detailed crevice cleaning</li>
-
-<li>Deep stain treatment</li>
-
-<li>Premium interior protection</li>
-
-<li>Final showroom inspection</li>
-
-</ul>
-
-<a href="quote.html" class="package-button">
-Book Showroom Edition
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- NOTE -->
-
-<div class="note">
-
-<strong>
-Every vehicle is different.
-</strong>
-
-<p>
-Prices shown are starting prices and may vary based on vehicle size,
-condition, excessive pet hair, heavy staining, or other special
-cleaning requirements. A final quote will be provided before service.
+<p class="package-description">
+Our ultimate detailing experience for customers who want
+their vehicle looking its absolute best.
 </p>
-
+<ul class="package-list">
+<li>Everything in Enhance Black Label</li>
+<li>Deep Interior Detail</li>
+<li>Carpet & Upholstery Extraction</li>
+<li>Detailed Crevice Cleaning</li>
+<li>Premium Exterior Wash</li>
+<li>Paint Decontamination</li>
+<li>Clay Treatment</li>
+<li>Premium Paint Protection</li>
+<li>Final Quality Inspection</li>
+</ul>
+<a href="quote.html" class="package-btn">
+Book Enhance Showroom
+</a>
 </div>
-
-
 </div>
-
 </section>
-
-
-<!-- ADD-ONS -->
-
+<!-- =========================
+     ADD-ONS
+========================= -->
 <section class="addons">
-
 <div class="section-heading">
-
 <div class="label">
 Customize Your Detail
 </div>
-
 <h2>
-Enhance <span>Your Experience</span>
+Enhance <span>Add-Ons</span>
 </h2>
-
 <p>
-Need something extra? Ask about available add-on services
-to customize your detailing experience.
+Need a little extra attention? Add specialized services
+to your detailing package for an even more complete result.
 </p>
-
 </div>
-
-
 <div class="addon-grid">
-
-
-<div class="addon">
-
+<div class="addon-card">
+<div class="addon-info">
 <h3>
 Pet Hair Removal
 </h3>
-
 <p>
-Additional pet hair removal for vehicles requiring extra time and attention.
+Thorough removal of embedded pet hair from carpets and upholstery.
 </p>
-
 </div>
-
-
-<div class="addon">
-
+<div class="addon-price">
+Starting at $30
+</div>
+</div>
+<div class="addon-card">
+<div class="addon-info">
 <h3>
 Stain Treatment
 </h3>
-
 <p>
-Targeted treatment for stubborn interior stains and heavily soiled areas.
+Targeted treatment for interior stains and heavily soiled areas.
 </p>
-
 </div>
-
-
-<div class="addon">
-
+<div class="addon-price">
+Starting at $25
+</div>
+</div>
+<div class="addon-card">
+<div class="addon-info">
 <h3>
 Carpet Extraction
 </h3>
-
 <p>
-Deep extraction cleaning for carpets, mats, and heavily soiled fabric surfaces.
+Deep cleaning and extraction for carpets and fabric surfaces.
 </p>
-
 </div>
-
-
-<div class="addon">
-
+<div class="addon-price">
+Starting at $40
+</div>
+</div>
+<div class="addon-card">
+<div class="addon-info">
 <h3>
 Engine Bay Cleaning
 </h3>
-
 <p>
-Professional cleaning and presentation of accessible engine bay surfaces.
+Careful cleaning and detailing of the engine compartment.
 </p>
-
 </div>
-
-
-<div class="addon">
-
+<div class="addon-price">
+$50
+</div>
+</div>
+<div class="addon-card">
+<div class="addon-info">
 <h3>
 Headlight Restoration
 </h3>
-
 <p>
-Restore clarity and improve the appearance of faded or oxidized headlights.
+Restore clarity and improve the appearance of faded headlights.
 </p>
-
 </div>
-
-
-<div class="addon">
-
+<div class="addon-price">
+Starting at $75
+</div>
+</div>
+<div class="addon-card">
+<div class="addon-info">
 <h3>
 Additional Protection
 </h3>
-
 <p>
-Ask about premium protection options available for your vehicle.
+Add additional protection to help maintain your vehicle's finish.
 </p>
-
 </div>
-
-
+<div class="addon-price">
+Starting at $50
 </div>
-
+</div>
+</div>
+<div class="note">
+<p>
+<strong>Pricing Notice:</strong> All prices are starting prices.
+Final pricing may vary depending on vehicle size, condition,
+level of contamination, and service location. A final quote
+will be confirmed before service begins.
+</p>
+</div>
 </section>
-
-
-<!-- CTA -->
-
+<!-- =========================
+     CTA
+========================= -->
 <section class="cta">
-
 <div class="label">
-Your Vehicle Deserves The Enhance Experience
+Ready To Enhance Your Ride?
 </div>
-
 <h2>
-Ready To<br>
-<span>Book Your Detail?</span>
+Let's Make Your<br>
+Vehicle <span>Shine.</span>
 </h2>
-
 <p>
 Tell us about your vehicle and we'll help you choose
-the right Enhance package for your needs.
+the right package and services.
 </p>
-
 <a href="quote.html" class="btn">
 Request Your Quote
 </a>
-
 </section>
-
-
-<!-- FOOTER -->
-
+<!-- =========================
+     FOOTER
+========================= -->
 <footer>
-
 <div class="footer-logo">
 ENHANCE <span>MY RIDE</span>
 </div>
-
 <p>
 Enhance My Ride Auto Spa & Mobile Detailing
 </p>
-
 <p>
 We come to you. You relax. We Enhance.
 </p>
-
 <p>
 323-327-1806 · Enhancemyridemobiledetailing@gmail.com
 </p>
-
 <p>
 © 2026 Enhance My Ride. All Rights Reserved.
 </p>
-
 </footer>
-
-
-<!-- MOBILE BAR -->
-
+<!-- =========================
+     MOBILE BAR
+========================= -->
 <div class="mobile-bar">
-
 <a href="tel:13233271806">
 ☎ CALL / TEXT
 </a>
-
 <a href="quote.html">
 REQUEST A QUOTE
 </a>
-
 </div>
-
-
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+}
+document.addEventListener("click", function(event) {
+    const menu = document.getElementById("navMenu");
+    const button = document.querySelector(".menu-toggle");
+    if (
+        menu.classList.contains("active") &&
+        !menu.contains(event.target) &&
+        !button.contains(event.target)
+    ) {
+        menu.classList.remove("active");
+    }
+});
+</script>
 </body>
 </html>
