@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us | Enhance My Ride Auto Spa</title>
-<meta name="description" content="Learn about Enhance My Ride Auto Spa & Mobile Detailing, a premium mobile detailing company serving San Francisco and the greater Bay Area.">
+<title>Service Area | Enhance My Ride Auto Spa</title>
+<meta name="description" content="Enhance My Ride Auto Spa & Mobile Detailing proudly serves San Francisco and the greater Bay Area. Check our service area and request a mobile detailing quote.">
 <style>
 * {
     margin: 0;
@@ -112,7 +112,7 @@ nav {
     color: #080808;
 }
 /* =========================
-   PAGE HERO
+   HERO
 ========================= */
 .page-hero {
     padding: 165px 7% 90px;
@@ -139,167 +139,137 @@ nav {
     color: var(--gold-light);
 }
 .page-hero p {
-    max-width: 650px;
+    max-width: 700px;
     margin: 25px auto 0;
     color: #999;
     font-size: 17px;
 }
 /* =========================
-   STORY
+   MAIN SERVICE AREA
 ========================= */
-.story {
+.area-section {
     padding: 100px 7%;
     background: #0a0a0a;
 }
-.story-grid {
+.area-container {
     max-width: 1150px;
     margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    align-items: center;
 }
-.story-text .label {
-    margin-bottom: 12px;
-}
-.story-text h2 {
-    font-size: clamp(38px,5vw,62px);
-    line-height: .98;
-    text-transform: uppercase;
-}
-.story-text h2 span {
-    color: var(--gold-light);
-}
-.story-text p {
-    margin-top: 22px;
-    color: #999;
-    font-size: 15px;
-}
-.story-visual {
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:
-        radial-gradient(circle,rgba(201,162,39,.18),transparent 40%),
-        linear-gradient(145deg,#191919,#0b0b0b);
-    border: 1px solid #292929;
-}
-.story-mark {
-    font-size: 110px;
-    font-weight: 900;
-    letter-spacing: -10px;
-    color: rgba(201,162,39,.2);
-}
-/* =========================
-   MISSION
-========================= */
-.mission {
-    padding: 100px 7%;
-    background: #111;
-}
-.mission-container {
-    max-width: 1000px;
-    margin: auto;
-    text-align: center;
-}
-.mission h2 {
-    font-size: clamp(40px,6vw,70px);
-    line-height: .95;
-    text-transform: uppercase;
-}
-.mission h2 span {
-    color: var(--gold-light);
-}
-.mission p {
+.area-intro {
     max-width: 750px;
-    margin: 25px auto 0;
-    color: #999;
-    font-size: 17px;
-}
-/* =========================
-   VALUES
-========================= */
-.values {
-    padding: 100px 7%;
-    background: #080808;
-}
-.section-heading {
-    max-width: 700px;
-    margin: 0 auto 50px;
+    margin: 0 auto 60px;
     text-align: center;
 }
-.section-heading h2 {
+.area-intro h2 {
     font-size: clamp(38px,5vw,60px);
     line-height: 1;
     text-transform: uppercase;
 }
-.section-heading h2 span {
+.area-intro h2 span {
     color: var(--gold-light);
 }
-.section-heading p {
-    margin-top: 18px;
+.area-intro p {
+    margin-top: 20px;
     color: #888;
 }
-.values-grid {
-    max-width: 1100px;
-    margin: auto;
+/* =========================
+   LOCATION GRID
+========================= */
+.location-grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+    gap: 18px;
 }
-.value-card {
-    padding: 35px 28px;
-    background: #111;
+.location-card {
+    padding: 30px 25px;
+    background: linear-gradient(145deg,#181818,#101010);
     border: 1px solid #292929;
     transition: .3s;
 }
-.value-card:hover {
+.location-card:hover {
     transform: translateY(-5px);
     border-color: var(--gold);
 }
-.value-number {
-    color: var(--gold-light);
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-.value-card h3 {
-    margin-top: 18px;
-    font-size: 21px;
-}
-.value-card p {
-    margin-top: 12px;
-    color: #888;
-    font-size: 14px;
-}
-/* =========================
-   EXPERIENCE
-========================= */
-.experience {
-    padding: 100px 7%;
-    background:
-        radial-gradient(circle at center,rgba(201,162,39,.08),transparent 45%),
-        #0d0d0d;
-}
-.experience-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-}
-.experience-card {
-    padding: 35px 28px;
-    border: 1px solid #292929;
-    background: rgba(15,15,15,.8);
-}
-.experience-card h3 {
+.location-card h3 {
     color: var(--gold-light);
     font-size: 18px;
 }
-.experience-card p {
+.location-card p {
+    margin-top: 10px;
+    color: #888;
+    font-size: 13px;
+}
+/* =========================
+   COVERAGE
+========================= */
+.coverage {
+    padding: 100px 7%;
+    background: #111;
+}
+.coverage-container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+.coverage h2 {
+    font-size: clamp(38px,6vw,65px);
+    line-height: .95;
+    text-transform: uppercase;
+}
+.coverage h2 span {
+    color: var(--gold-light);
+}
+.coverage p {
+    max-width: 700px;
+    margin: 22px auto 0;
+    color: #888;
+}
+.coverage-box {
+    margin-top: 45px;
+    padding: 40px;
+    background: #0a0a0a;
+    border: 1px solid #292929;
+}
+.coverage-box h3 {
+    color: var(--gold-light);
+    font-size: 20px;
+}
+.coverage-box p {
     margin-top: 12px;
+}
+/* =========================
+   SERVICE AREA FAQ
+========================= */
+.faq {
+    padding: 100px 7%;
+    background: #080808;
+}
+.faq-container {
+    max-width: 850px;
+    margin: auto;
+}
+.faq-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.faq-heading h2 {
+    font-size: clamp(38px,5vw,60px);
+    line-height: 1;
+    text-transform: uppercase;
+}
+.faq-heading h2 span {
+    color: var(--gold-light);
+}
+.faq-item {
+    padding: 25px 0;
+    border-bottom: 1px solid #292929;
+}
+.faq-item h3 {
+    color: #eee;
+    font-size: 17px;
+}
+.faq-item p {
+    margin-top: 10px;
     color: #888;
     font-size: 14px;
 }
@@ -370,13 +340,8 @@ footer p {
    RESPONSIVE
 ========================= */
 @media(max-width:900px) {
-    .story-grid {
-        grid-template-columns: 1fr;
-    }
-    .values-grid,
-    .experience-grid {
-        grid-template-columns: 1fr;
-        max-width: 600px;
+    .location-grid {
+        grid-template-columns: repeat(2,1fr);
     }
 }
 @media(max-width:600px) {
@@ -389,19 +354,18 @@ footer p {
     .page-hero {
         padding: 140px 5% 70px;
     }
-    .story,
-    .mission,
-    .values,
-    .experience,
+    .area-section,
+    .coverage,
+    .faq,
     .cta {
         padding-left: 5%;
         padding-right: 5%;
     }
-    .story-visual {
-        min-height: 320px;
+    .location-grid {
+        grid-template-columns: 1fr;
     }
-    .story-mark {
-        font-size: 75px;
+    .coverage-box {
+        padding: 30px 22px;
     }
     .mobile-bar {
         display: flex;
@@ -428,9 +392,7 @@ footer p {
 </style>
 </head>
 <body>
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- NAVIGATION -->
 <nav>
 <a href="index.html" class="brand">
 ENHANCE <span>MY RIDE</span>
@@ -439,259 +401,204 @@ ENHANCE <span>MY RIDE</span>
 ☰
 </button>
 <div class="nav-menu" id="navMenu">
-<a href="index.html">
+
 Home
-</a>
-<a href="services.html">
+
 Services
-</a>
-<a href="gallery.html">
+
 Gallery
-</a>
-<a href="about.html">
+
 About
-</a>
-<a href="service-area.html">
+
 Service Area
-</a>
-<a href="quote.html" class="menu-quote">
+
 Get a Quote
-</a>
+
 </div>
 </nav>
-<!-- =========================
-     PAGE HERO
-========================= -->
+<!-- PAGE HERO -->
 <header class="page-hero">
 <div class="label">
-The Enhance Standard
+Mobile Detailing Throughout The Bay Area
 </div>
 <h1>
-About <span>Enhance</span>
+Our <span>Service Area</span>
 </h1>
 <p>
-Premium mobile detailing built around convenience,
-craftsmanship, and the belief that your vehicle deserves
-more than an ordinary car wash.
+Professional mobile detailing delivered directly to your
+home, workplace, or preferred location.
 </p>
 </header>
-<!-- =========================
-     OUR STORY
-========================= -->
-<section class="story">
-<div class="story-grid">
-<div class="story-text">
-<div class="label">
-Our Story
-</div>
+<!-- MAIN AREA -->
+<section class="area-section">
+<div class="area-container">
+<div class="area-intro">
 <h2>
-More Than A<br>
-Car <span>Wash.</span>
+We Bring The Detail<br>
+<span>To You.</span>
 </h2>
 <p>
-Enhance My Ride Auto Spa & Mobile Detailing was created
-with one simple idea: professional vehicle care should
-fit into your life instead of interrupting it.
-</p>
-<p>
-We bring the detailing experience directly to you.
-Whether you're at home, at work, or somewhere in between,
-our goal is to make premium vehicle care convenient,
-professional, and personal.
-</p>
-<p>
-Every vehicle receives the attention it deserves.
-From the first wash to the final inspection, we focus
-on the details that create a noticeable difference.
+Enhance My Ride Auto Spa & Mobile Detailing proudly serves
+customers throughout San Francisco and the greater Bay Area.
+Our mobile service is designed to make premium vehicle care
+convenient for your schedule.
 </p>
 </div>
-<div class="story-visual">
-<div class="story-mark">
-EMR
+<div class="location-grid">
+<div class="location-card">
+<h3>
+San Francisco
+</h3>
+<p>
+Serving customers throughout San Francisco and surrounding
+neighborhoods.
+</p>
+</div>
+<div class="location-card">
+<h3>
+East Bay
+</h3>
+<p>
+Serving cities throughout the East Bay and surrounding areas.
+</p>
+</div>
+<div class="location-card">
+<h3>
+Contra Costa County
+</h3>
+<p>
+Mobile detailing available throughout Contra Costa County.
+</p>
+</div>
+<div class="location-card">
+<h3>
+Alameda County
+</h3>
+<p>
+Serving Alameda County and surrounding communities.
+</p>
+</div>
+<div class="location-card">
+<h3>
+Solano County
+</h3>
+<p>
+Mobile detailing available in select Solano County locations.
+</p>
+</div>
+<div class="location-card">
+<h3>
+Greater Bay Area
+</h3>
+<p>
+Don't see your city? Contact us and we'll check availability.
+</p>
 </div>
 </div>
 </div>
 </section>
-<!-- =========================
-     MISSION
-========================= -->
-<section class="mission">
-<div class="mission-container">
+<!-- COVERAGE -->
+<section class="coverage">
+<div class="coverage-container">
 <div class="label">
-Our Mission
+Mobile Service
 </div>
 <h2>
-We Come To You.<br>
-You Relax.<br>
-<span>We Enhance.</span>
+Your Location.<br>
+<span>Your Convenience.</span>
 </h2>
 <p>
-Our mission is to provide a premium mobile detailing
-experience that saves you time while giving your vehicle
-the professional care it deserves.
+We come to your home, workplace, office, or another
+approved location where mobile detailing is permitted.
 </p>
-</div>
-</section>
-<!-- =========================
-     VALUES
-========================= -->
-<section class="values">
-<div class="section-heading">
-<div class="label">
-What We Stand For
-</div>
-<h2>
-The <span>Enhance</span> Values
-</h2>
-<p>
-Everything we do is built around delivering a better
-experience for our customers and their vehicles.
-</p>
-</div>
-<div class="values-grid">
-<div class="value-card">
-<div class="value-number">
-01 / QUALITY
-</div>
+<div class="coverage-box">
 <h3>
-Quality Over Quantity
+Outside Our Standard Service Area?
 </h3>
 <p>
-We would rather deliver exceptional results on fewer
-vehicles than rush through a large number of jobs.
+We may be able to travel farther depending on availability
+and scheduling. Additional travel fees may apply for locations
+outside our standard service area.
 </p>
-</div>
-<div class="value-card">
-<div class="value-number">
-02 / DETAIL
-</div>
-<h3>
-Details Matter
-</h3>
 <p>
-The difference between clean and truly enhanced is
-often found in the smallest details.
-</p>
-</div>
-<div class="value-card">
-<div class="value-number">
-03 / SERVICE
-</div>
-<h3>
-Your Time Matters
-</h3>
-<p>
-Our mobile model is designed around your schedule,
-making professional detailing more convenient.
-</p>
-</div>
-<div class="value-card">
-<div class="value-number">
-04 / TRUST
-</div>
-<h3>
-Professionalism
-</h3>
-<p>
-We believe in clear communication, honest pricing,
-and treating every vehicle with care and respect.
-</p>
-</div>
-<div class="value-card">
-<div class="value-number">
-05 / PRIDE
-</div>
-<h3>
-Take Pride In The Work
-</h3>
-<p>
-We don't just want your vehicle to look clean.
-We want you to feel proud when you see it.
-</p>
-</div>
-<div class="value-card">
-<div class="value-number">
-06 / EXPERIENCE
-</div>
-<h3>
-The Enhance Experience
-</h3>
-<p>
-From booking to final inspection, every part of your
-experience should feel premium.
+The best way to confirm availability is to request a quote
+and provide your exact service location.
 </p>
 </div>
 </div>
 </section>
-<!-- =========================
-     THE EXPERIENCE
-========================= -->
-<section class="experience">
-<div class="section-heading">
+<!-- FAQ -->
+<section class="faq">
+<div class="faq-container">
+<div class="faq-heading">
 <div class="label">
-Why Enhance My Ride
+Service Area Questions
 </div>
 <h2>
-A Better Way To<br>
-<span>Detail Your Vehicle</span>
+Frequently Asked <span>Questions</span>
 </h2>
-<p>
-We combine mobile convenience with a premium detailing
-mindset to create a service experience designed around you.
-</p>
 </div>
-<div class="experience-grid">
-<div class="experience-card">
+<div class="faq-item">
 <h3>
-We Come To You
+Do you come to my home?
 </h3>
 <p>
-No waiting rooms. No dropping your vehicle off.
-We bring the service directly to your location.
+Yes. As long as the location allows mobile detailing and
+provides a safe working environment, we can come directly
+to your home.
 </p>
 </div>
-<div class="experience-card">
+<div class="faq-item">
 <h3>
-Premium Attention
+Can you detail my vehicle at work?
 </h3>
 <p>
-We focus on the areas that are often overlooked
-and take pride in delivering a thorough result.
+Yes. Many customers choose to have their vehicle detailed
+while they're at work. Please make sure your workplace or
+property allows mobile detailing services.
 </p>
 </div>
-<div class="experience-card">
+<div class="faq-item">
 <h3>
-Built For Your Vehicle
+Do I need to provide water or power?
 </h3>
 <p>
-Every vehicle has different needs. We'll help you
-choose the service that makes the most sense for yours.
+Our mobile setup is designed to make the process as
+convenient as possible. Availability of water and power
+requirements can vary depending on the service requested.
+We'll confirm any requirements when scheduling your detail.
+</p>
+</div>
+<div class="faq-item">
+<h3>
+How do I know if you service my city?
+</h3>
+<p>
+Send us your location when requesting a quote. We'll confirm
+availability and let you know if any additional travel fee
+applies.
 </p>
 </div>
 </div>
 </section>
-<!-- =========================
-     CTA
-========================= -->
+<!-- CTA -->
 <section class="cta">
 <div class="label">
-Ready To Experience The Difference?
+Ready When You Are
 </div>
 <h2>
 Let's <span>Enhance</span><br>
 Your Ride.
 </h2>
 <p>
-Tell us about your vehicle and we'll help you choose
-the right detailing service.
+Tell us where you are and what your vehicle needs.
+We'll take care of the rest.
 </p>
 <a href="quote.html" class="btn">
 Request Your Quote
 </a>
 </section>
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 <footer>
 <div class="footer-logo">
 ENHANCE <span>MY RIDE</span>
@@ -709,9 +616,7 @@ We come to you. You relax. We Enhance.
 © 2026 Enhance My Ride. All Rights Reserved.
 </p>
 </footer>
-<!-- =========================
-     MOBILE BAR
-========================= -->
+<!-- MOBILE BAR -->
 <div class="mobile-bar">
 <a href="tel:13233271806">
 ☎ CALL / TEXT
@@ -720,9 +625,7 @@ We come to you. You relax. We Enhance.
 REQUEST A QUOTE
 </a>
 </div>
-<!-- =========================
-     JAVASCRIPT
-========================= -->
+<!-- JAVASCRIPT -->
 <script>
 function toggleMenu() {
     const menu = document.getElementById("navMenu");
