@@ -3,576 +3,742 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>About | Enhance My Ride Auto Spa</title>
-
-<meta name="description" content="Learn about Enhance My Ride Auto Spa & Mobile Detailing, a premium mobile detailing company serving San Francisco and the Bay Area.">
-
+<title>About Us | Enhance My Ride Auto Spa</title>
+<meta name="description" content="Learn about Enhance My Ride Auto Spa & Mobile Detailing, a premium mobile detailing company serving San Francisco and the greater Bay Area.">
 <style>
-
 * {
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
-font-family:Arial,Helvetica,sans-serif;
-background:#070707;
-color:#f5f2ea;
-line-height:1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #070707;
+    color: #f5f2ea;
+    line-height: 1.6;
 }
-
 a {
-color:inherit;
-text-decoration:none;
+    color: inherit;
+    text-decoration: none;
 }
-
 :root {
---gold:#c9a227;
---gold-light:#e4c45c;
+    --gold: #c9a227;
+    --gold-light: #e4c45c;
 }
-
+/* =========================
+   NAVIGATION
+========================= */
 nav {
-position:fixed;
-top:0;
-left:0;
-width:100%;
-z-index:1000;
-padding:18px 6%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(7,7,7,.95);
-backdrop-filter:blur(15px);
-border-bottom:1px solid rgba(255,255,255,.07);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(7,7,7,.96);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,.07);
 }
-
 .brand {
-font-size:17px;
-font-weight:900;
-letter-spacing:2px;
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
-
 .brand span {
-color:var(--gold-light);
+    color: var(--gold-light);
 }
-
-.nav-links {
-display:flex;
-align-items:center;
-gap:24px;
-font-size:12px;
-font-weight:700;
-text-transform:uppercase;
-letter-spacing:1px;
+/* MENU BUTTON */
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 42px;
+    background: transparent;
+    border: 1px solid rgba(201,162,39,.5);
+    color: var(--gold-light);
+    font-size: 23px;
+    cursor: pointer;
+    transition: .3s;
 }
-
-.nav-links a {
-color:#ccc;
+.menu-toggle:hover {
+    background: var(--gold);
+    color: #080808;
 }
-
-.nav-links a:hover {
-color:var(--gold-light);
+/* DROPDOWN MENU */
+.nav-menu {
+    position: absolute;
+    top: 78px;
+    right: 6%;
+    width: 230px;
+    padding: 12px;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(12,12,12,.98);
+    border: 1px solid rgba(201,162,39,.35);
+    box-shadow: 0 20px 50px rgba(0,0,0,.6);
 }
-
-.nav-cta {
-background:var(--gold);
-color:#080808!important;
-padding:11px 16px;
+.nav-menu.active {
+    display: flex;
 }
-
-.hero {
-padding:170px 7% 100px;
-text-align:center;
-background:
-radial-gradient(circle at center,rgba(201,162,39,.15),transparent 45%),
-linear-gradient(135deg,#050505,#141414);
+.nav-menu a {
+    padding: 13px 15px;
+    color: #ccc;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: .3s;
 }
-
+.nav-menu a:hover {
+    color: var(--gold-light);
+    background: rgba(201,162,39,.08);
+}
+.nav-menu .menu-quote {
+    margin-top: 5px;
+    background: var(--gold);
+    color: #080808;
+    text-align: center;
+}
+.nav-menu .menu-quote:hover {
+    background: var(--gold-light);
+    color: #080808;
+}
+/* =========================
+   PAGE HERO
+========================= */
+.page-hero {
+    padding: 165px 7% 90px;
+    text-align: center;
+    background:
+        radial-gradient(circle at center, rgba(201,162,39,.15), transparent 45%),
+        linear-gradient(135deg,#050505,#141414);
+}
 .label {
-color:var(--gold-light);
-font-size:10px;
-font-weight:900;
-letter-spacing:3px;
-text-transform:uppercase;
-margin-bottom:15px;
+    color: var(--gold-light);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
-
-.hero h1 {
-font-size:clamp(48px,8vw,90px);
-line-height:.95;
-text-transform:uppercase;
-letter-spacing:-3px;
+.page-hero h1 {
+    font-size: clamp(48px,8vw,90px);
+    line-height: .95;
+    text-transform: uppercase;
+    letter-spacing: -3px;
 }
-
-.hero h1 span {
-color:var(--gold-light);
+.page-hero h1 span {
+    color: var(--gold-light);
 }
-
-.hero p {
-max-width:650px;
-margin:25px auto 0;
-color:#999;
-font-size:17px;
+.page-hero p {
+    max-width: 650px;
+    margin: 25px auto 0;
+    color: #999;
+    font-size: 17px;
 }
-
+/* =========================
+   STORY
+========================= */
 .story {
-padding:100px 7%;
-background:#0a0a0a;
+    padding: 100px 7%;
+    background: #0a0a0a;
 }
-
 .story-grid {
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:70px;
-align-items:center;
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
 }
-
-.visual {
-min-height:450px;
-display:flex;
-justify-content:center;
-align-items:center;
-background:
-radial-gradient(circle,rgba(201,162,39,.2),transparent 40%),
-#111;
-border:1px solid #292929;
+.story-text .label {
+    margin-bottom: 12px;
 }
-
-.visual strong {
-font-size:110px;
-color:rgba(201,162,39,.2);
+.story-text h2 {
+    font-size: clamp(38px,5vw,62px);
+    line-height: .98;
+    text-transform: uppercase;
 }
-
-.copy h2 {
-font-size:clamp(38px,5vw,60px);
-line-height:1;
-text-transform:uppercase;
+.story-text h2 span {
+    color: var(--gold-light);
 }
-
-.copy h2 span {
-color:var(--gold-light);
+.story-text p {
+    margin-top: 22px;
+    color: #999;
+    font-size: 15px;
 }
-
-.copy p {
-margin-top:20px;
-color:#999;
+.story-visual {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle,rgba(201,162,39,.18),transparent 40%),
+        linear-gradient(145deg,#191919,#0b0b0b);
+    border: 1px solid #292929;
 }
-
+.story-mark {
+    font-size: 110px;
+    font-weight: 900;
+    letter-spacing: -10px;
+    color: rgba(201,162,39,.2);
+}
+/* =========================
+   MISSION
+========================= */
+.mission {
+    padding: 100px 7%;
+    background: #111;
+}
+.mission-container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+.mission h2 {
+    font-size: clamp(40px,6vw,70px);
+    line-height: .95;
+    text-transform: uppercase;
+}
+.mission h2 span {
+    color: var(--gold-light);
+}
+.mission p {
+    max-width: 750px;
+    margin: 25px auto 0;
+    color: #999;
+    font-size: 17px;
+}
+/* =========================
+   VALUES
+========================= */
 .values {
-padding:100px 7%;
-background:#111;
+    padding: 100px 7%;
+    background: #080808;
 }
-
-.heading {
-max-width:700px;
-margin:0 auto 50px;
-text-align:center;
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
 }
-
-.heading h2 {
-font-size:clamp(38px,5vw,60px);
-line-height:1;
-text-transform:uppercase;
+.section-heading h2 {
+    font-size: clamp(38px,5vw,60px);
+    line-height: 1;
+    text-transform: uppercase;
 }
-
-.heading h2 span {
-color:var(--gold-light);
+.section-heading h2 span {
+    color: var(--gold-light);
 }
-
-.heading p {
-margin-top:18px;
-color:#888;
+.section-heading p {
+    margin-top: 18px;
+    color: #888;
 }
-
-.value-grid {
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
+.values-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
 }
-
-.value {
-padding:35px 28px;
-background:#151515;
-border:1px solid #292929;
+.value-card {
+    padding: 35px 28px;
+    background: #111;
+    border: 1px solid #292929;
+    transition: .3s;
 }
-
+.value-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
 .value-number {
-color:var(--gold-light);
-font-size:12px;
-letter-spacing:2px;
+    color: var(--gold-light);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
-
-.value h3 {
-margin-top:18px;
-font-size:21px;
+.value-card h3 {
+    margin-top: 18px;
+    font-size: 21px;
 }
-
-.value p {
-margin-top:12px;
-color:#888;
-font-size:14px;
+.value-card p {
+    margin-top: 12px;
+    color: #888;
+    font-size: 14px;
 }
-
+/* =========================
+   EXPERIENCE
+========================= */
+.experience {
+    padding: 100px 7%;
+    background:
+        radial-gradient(circle at center,rgba(201,162,39,.08),transparent 45%),
+        #0d0d0d;
+}
+.experience-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.experience-card {
+    padding: 35px 28px;
+    border: 1px solid #292929;
+    background: rgba(15,15,15,.8);
+}
+.experience-card h3 {
+    color: var(--gold-light);
+    font-size: 18px;
+}
+.experience-card p {
+    margin-top: 12px;
+    color: #888;
+    font-size: 14px;
+}
+/* =========================
+   CTA
+========================= */
 .cta {
-padding:100px 7%;
-text-align:center;
-background:
-radial-gradient(circle at center,rgba(201,162,39,.14),transparent 50%),
-#080808;
+    padding: 110px 7%;
+    text-align: center;
+    background:
+        radial-gradient(circle at center,rgba(201,162,39,.14),transparent 50%),
+        #080808;
 }
-
 .cta h2 {
-font-size:clamp(42px,7vw,80px);
-line-height:.95;
-text-transform:uppercase;
+    font-size: clamp(42px,7vw,80px);
+    line-height: .95;
+    text-transform: uppercase;
 }
-
 .cta h2 span {
-color:var(--gold-light);
+    color: var(--gold-light);
 }
-
 .cta p {
-max-width:600px;
-margin:20px auto 30px;
-color:#888;
+    max-width: 600px;
+    margin: 20px auto 30px;
+    color: #888;
 }
-
 .btn {
-display:inline-block;
-padding:16px 26px;
-background:var(--gold);
-color:#080808;
-font-size:11px;
-font-weight:900;
-letter-spacing:1px;
-text-transform:uppercase;
+    display: inline-block;
+    padding: 16px 26px;
+    background: var(--gold);
+    color: #080808;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
-
+.btn:hover {
+    background: var(--gold-light);
+}
+/* =========================
+   FOOTER
+========================= */
 footer {
-padding:50px 7% 90px;
-text-align:center;
-background:#050505;
+    padding: 50px 7% 90px;
+    text-align: center;
+    background: #050505;
 }
-
 .footer-logo {
-font-size:20px;
-font-weight:900;
-letter-spacing:3px;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 3px;
 }
-
 .footer-logo span {
-color:var(--gold-light);
+    color: var(--gold-light);
 }
-
 footer p {
-margin-top:10px;
-color:#666;
-font-size:12px;
+    margin-top: 10px;
+    color: #666;
+    font-size: 12px;
 }
-
+/* =========================
+   MOBILE BAR
+========================= */
 .mobile-bar {
-display:none;
+    display: none;
 }
-
+/* =========================
+   RESPONSIVE
+========================= */
 @media(max-width:900px) {
-
-.nav-links a:not(.nav-cta) {
-display:none;
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+    .values-grid,
+    .experience-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
 }
-
-.story-grid {
-grid-template-columns:1fr;
-}
-
-.value-grid {
-grid-template-columns:1fr;
-max-width:600px;
-}
-
-}
-
 @media(max-width:600px) {
-
-body {
-padding-bottom:62px;
+    body {
+        padding-bottom: 62px;
+    }
+    nav {
+        padding: 17px 5%;
+    }
+    .page-hero {
+        padding: 140px 5% 70px;
+    }
+    .story,
+    .mission,
+    .values,
+    .experience,
+    .cta {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .story-visual {
+        min-height: 320px;
+    }
+    .story-mark {
+        font-size: 75px;
+    }
+    .mobile-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background: #050505;
+        border-top: 1px solid rgba(201,162,39,.3);
+    }
+    .mobile-bar a {
+        width: 50%;
+        padding: 17px 5px;
+        text-align: center;
+        font-size: 10px;
+        font-weight: 900;
+    }
+    .mobile-bar a:last-child {
+        background: var(--gold);
+        color: #080808;
+    }
 }
-
-nav {
-padding:17px 5%;
-}
-
-.story,
-.values,
-.cta {
-padding-left:5%;
-padding-right:5%;
-}
-
-.visual {
-min-height:300px;
-}
-
-.mobile-bar {
-display:flex;
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-z-index:9999;
-background:#050505;
-border-top:1px solid rgba(201,162,39,.3);
-}
-
-.mobile-bar a {
-width:50%;
-padding:17px 5px;
-text-align:center;
-font-size:10px;
-font-weight:900;
-}
-
-.mobile-bar a:last-child {
-background:var(--gold);
-color:#080808;
-}
-
-}
-
 </style>
 </head>
-
 <body>
-
+<!-- =========================
+     NAVIGATION
+========================= -->
 <nav>
-
 <a href="index.html" class="brand">
 ENHANCE <span>MY RIDE</span>
 </a>
-
-<div class="nav-links">
-
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="gallery.html">Gallery</a>
-<a href="about.html">About</a>
-<a href="service-area.html">Service Area</a>
-<a href="quote.html" class="nav-cta">Get a Quote</a>
-
+<button class="menu-toggle" onclick="toggleMenu()" aria-label="Open Menu">
+☰
+</button>
+<div class="nav-menu" id="navMenu">
+<a href="index.html">
+Home
+</a>
+<a href="services.html">
+Services
+</a>
+<a href="gallery.html">
+Gallery
+</a>
+<a href="about.html">
+About
+</a>
+<a href="service-area.html">
+Service Area
+</a>
+<a href="quote.html" class="menu-quote">
+Get a Quote
+</a>
 </div>
-
 </nav>
-
-
-<header class="hero">
-
-<div class="label">
-The Story Behind Enhance My Ride
-</div>
-
-<h1>
-More Than<br>
-<span>Detailing.</span>
-</h1>
-
-<p>
-We created Enhance My Ride to bring a premium detailing
-experience directly to the customer.
-</p>
-
-</header>
-
-
-<section class="story">
-
-<div class="story-grid">
-
-<div class="visual">
-
-<strong>EMR</strong>
-
-</div>
-
-<div class="copy">
-
-<div class="label">
-Our Mission
-</div>
-
-<h2>
-We Come To You.<br>
-<span>You Relax.<br>
-We Enhance.</span>
-</h2>
-
-<p>
-Enhance My Ride Auto Spa & Mobile Detailing was built around
-a simple idea: getting your vehicle professionally detailed
-should be convenient, personal, and worth the investment.
-</p>
-
-<p>
-Instead of spending your day waiting at a shop, we bring the
-detailing experience directly to you. Your home, your workplace,
-or another approved location—we work around your schedule.
-</p>
-
-<p>
-Our goal is simple: deliver a premium experience and leave
-your vehicle looking better than when we arrived.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="values">
-
-<div class="heading">
-
+<!-- =========================
+     PAGE HERO
+========================= -->
+<header class="page-hero">
 <div class="label">
 The Enhance Standard
 </div>
-
-<h2>
-What We <span>Stand For</span>
-</h2>
-
+<h1>
+About <span>Enhance</span>
+</h1>
 <p>
-Every detail is guided by the same commitment to quality,
-convenience, and customer experience.
+Premium mobile detailing built around convenience,
+craftsmanship, and the belief that your vehicle deserves
+more than an ordinary car wash.
 </p>
-
-</div>
-
-
-<div class="value-grid">
-
-<div class="value">
-
-<div class="value-number">
-01
-</div>
-
-<h3>
-Attention To Detail
-</h3>
-
-<p>
-We don't rush through vehicles. We focus on the small details
-that make a big difference in the final result.
-</p>
-
-</div>
-
-
-<div class="value">
-
-<div class="value-number">
-02
-</div>
-
-<h3>
-Premium Experience
-</h3>
-
-<p>
-From the moment you request a quote to the final walk-around,
-we aim to deliver a professional experience from start to finish.
-</p>
-
-</div>
-
-
-<div class="value">
-
-<div class="value-number">
-03
-</div>
-
-<h3>
-Convenience
-</h3>
-
-<p>
-Your time matters. Our mobile service brings professional
-vehicle care directly to your location.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="cta">
-
+</header>
+<!-- =========================
+     OUR STORY
+========================= -->
+<section class="story">
+<div class="story-grid">
+<div class="story-text">
 <div class="label">
-Experience The Difference
+Our Story
 </div>
-
+<h2>
+More Than A<br>
+Car <span>Wash.</span>
+</h2>
+<p>
+Enhance My Ride Auto Spa & Mobile Detailing was created
+with one simple idea: professional vehicle care should
+fit into your life instead of interrupting it.
+</p>
+<p>
+We bring the detailing experience directly to you.
+Whether you're at home, at work, or somewhere in between,
+our goal is to make premium vehicle care convenient,
+professional, and personal.
+</p>
+<p>
+Every vehicle receives the attention it deserves.
+From the first wash to the final inspection, we focus
+on the details that create a noticeable difference.
+</p>
+</div>
+<div class="story-visual">
+<div class="story-mark">
+EMR
+</div>
+</div>
+</div>
+</section>
+<!-- =========================
+     MISSION
+========================= -->
+<section class="mission">
+<div class="mission-container">
+<div class="label">
+Our Mission
+</div>
+<h2>
+We Come To You.<br>
+You Relax.<br>
+<span>We Enhance.</span>
+</h2>
+<p>
+Our mission is to provide a premium mobile detailing
+experience that saves you time while giving your vehicle
+the professional care it deserves.
+</p>
+</div>
+</section>
+<!-- =========================
+     VALUES
+========================= -->
+<section class="values">
+<div class="section-heading">
+<div class="label">
+What We Stand For
+</div>
+<h2>
+The <span>Enhance</span> Values
+</h2>
+<p>
+Everything we do is built around delivering a better
+experience for our customers and their vehicles.
+</p>
+</div>
+<div class="values-grid">
+<div class="value-card">
+<div class="value-number">
+01 / QUALITY
+</div>
+<h3>
+Quality Over Quantity
+</h3>
+<p>
+We would rather deliver exceptional results on fewer
+vehicles than rush through a large number of jobs.
+</p>
+</div>
+<div class="value-card">
+<div class="value-number">
+02 / DETAIL
+</div>
+<h3>
+Details Matter
+</h3>
+<p>
+The difference between clean and truly enhanced is
+often found in the smallest details.
+</p>
+</div>
+<div class="value-card">
+<div class="value-number">
+03 / SERVICE
+</div>
+<h3>
+Your Time Matters
+</h3>
+<p>
+Our mobile model is designed around your schedule,
+making professional detailing more convenient.
+</p>
+</div>
+<div class="value-card">
+<div class="value-number">
+04 / TRUST
+</div>
+<h3>
+Professionalism
+</h3>
+<p>
+We believe in clear communication, honest pricing,
+and treating every vehicle with care and respect.
+</p>
+</div>
+<div class="value-card">
+<div class="value-number">
+05 / PRIDE
+</div>
+<h3>
+Take Pride In The Work
+</h3>
+<p>
+We don't just want your vehicle to look clean.
+We want you to feel proud when you see it.
+</p>
+</div>
+<div class="value-card">
+<div class="value-number">
+06 / EXPERIENCE
+</div>
+<h3>
+The Enhance Experience
+</h3>
+<p>
+From booking to final inspection, every part of your
+experience should feel premium.
+</p>
+</div>
+</div>
+</section>
+<!-- =========================
+     THE EXPERIENCE
+========================= -->
+<section class="experience">
+<div class="section-heading">
+<div class="label">
+Why Enhance My Ride
+</div>
+<h2>
+A Better Way To<br>
+<span>Detail Your Vehicle</span>
+</h2>
+<p>
+We combine mobile convenience with a premium detailing
+mindset to create a service experience designed around you.
+</p>
+</div>
+<div class="experience-grid">
+<div class="experience-card">
+<h3>
+We Come To You
+</h3>
+<p>
+No waiting rooms. No dropping your vehicle off.
+We bring the service directly to your location.
+</p>
+</div>
+<div class="experience-card">
+<h3>
+Premium Attention
+</h3>
+<p>
+We focus on the areas that are often overlooked
+and take pride in delivering a thorough result.
+</p>
+</div>
+<div class="experience-card">
+<h3>
+Built For Your Vehicle
+</h3>
+<p>
+Every vehicle has different needs. We'll help you
+choose the service that makes the most sense for yours.
+</p>
+</div>
+</div>
+</section>
+<!-- =========================
+     CTA
+========================= -->
+<section class="cta">
+<div class="label">
+Ready To Experience The Difference?
+</div>
 <h2>
 Let's <span>Enhance</span><br>
 Your Ride.
 </h2>
-
 <p>
-Ready to give your vehicle the treatment it deserves?
-Request your quote today.
+Tell us about your vehicle and we'll help you choose
+the right detailing service.
 </p>
-
 <a href="quote.html" class="btn">
 Request Your Quote
 </a>
-
 </section>
-
-
+<!-- =========================
+     FOOTER
+========================= -->
 <footer>
-
 <div class="footer-logo">
 ENHANCE <span>MY RIDE</span>
 </div>
-
 <p>
 Enhance My Ride Auto Spa & Mobile Detailing
 </p>
-
 <p>
 We come to you. You relax. We Enhance.
 </p>
-
 <p>
 323-327-1806 · Enhancemyridemobiledetailing@gmail.com
 </p>
-
 <p>
 © 2026 Enhance My Ride. All Rights Reserved.
 </p>
-
 </footer>
-
-
+<!-- =========================
+     MOBILE BAR
+========================= -->
 <div class="mobile-bar">
-
 <a href="tel:13233271806">
 ☎ CALL / TEXT
 </a>
-
 <a href="quote.html">
 REQUEST A QUOTE
 </a>
-
 </div>
-
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+}
+document.addEventListener("click", function(event) {
+    const menu = document.getElementById("navMenu");
+    const button = document.querySelector(".menu-toggle");
+    if (
+        menu.classList.contains("active") &&
+        !menu.contains(event.target) &&
+        !button.contains(event.target)
+    ) {
+        menu.classList.remove("active");
+    }
+});
+</script>
 </body>
 </html>
