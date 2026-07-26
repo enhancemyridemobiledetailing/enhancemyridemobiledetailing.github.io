@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services & Pricing | Enhance My Ride Auto Spa</title>
-<meta name="description" content="Explore premium mobile detailing packages and add-on services from Enhance My Ride Auto Spa & Mobile Detailing. Serving San Francisco and the greater Bay Area.">
+<meta name="description" content="Premium mobile detailing packages and add-on services from Enhance My Ride Auto Spa & Mobile Detailing. Serving San Francisco and the Greater Bay Area.">
 <style>
 * {
     margin: 0;
@@ -19,6 +19,7 @@ body {
     background: #070707;
     color: #f5f2ea;
     line-height: 1.6;
+    padding-bottom: 0;
 }
 a {
     color: inherit;
@@ -53,42 +54,52 @@ nav {
 .brand span {
     color: var(--gold-light);
 }
-/* MENU BUTTON */
-.menu-toggle {
+.menu-wrapper {
+    position: relative;
+}
+.menu-dropdown {
+    position: relative;
+}
+.menu-dropdown summary {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 48px;
     height: 42px;
-    background: transparent;
     border: 1px solid rgba(201,162,39,.5);
     color: var(--gold-light);
     font-size: 23px;
     cursor: pointer;
+    list-style: none;
+    user-select: none;
     transition: .3s;
 }
-.menu-toggle:hover {
+.menu-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+.menu-dropdown summary:hover {
     background: var(--gold);
     color: #080808;
 }
-/* DROPDOWN MENU */
+.menu-dropdown[open] summary {
+    background: var(--gold);
+    color: #080808;
+}
 .nav-menu {
     position: absolute;
-    top: 78px;
-    right: 6%;
+    top: 52px;
+    right: 0;
     width: 230px;
     padding: 12px;
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 5px;
     background: rgba(12,12,12,.98);
     border: 1px solid rgba(201,162,39,.35);
     box-shadow: 0 20px 50px rgba(0,0,0,.6);
 }
-.nav-menu.active {
-    display: flex;
-}
 .nav-menu a {
+    display: block;
     padding: 13px 15px;
     color: #ccc;
     font-size: 11px;
@@ -109,7 +120,6 @@ nav {
 }
 .nav-menu .menu-quote:hover {
     background: var(--gold-light);
-    color: #080808;
 }
 /* =========================
    HERO
@@ -168,7 +178,6 @@ nav {
     margin-top: 18px;
     color: #888;
 }
-/* PACKAGE GRID */
 .package-grid {
     max-width: 1150px;
     margin: auto;
@@ -176,7 +185,6 @@ nav {
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
 }
-/* PACKAGE CARD */
 .package-card {
     position: relative;
     padding: 40px 30px;
@@ -307,9 +315,6 @@ nav {
     font-size: 16px;
     font-weight: 900;
 }
-/* =========================
-   IMPORTANT NOTE
-========================= */
 .note {
     max-width: 850px;
     margin: 50px auto 0;
@@ -448,40 +453,34 @@ footer p {
 </style>
 </head>
 <body>
-<!-- =========================
-     NAVIGATION
-========================= -->
 <nav>
 <a href="index.html" class="brand">
 ENHANCE <span>MY RIDE</span>
 </a>
-<button class="menu-toggle" onclick="toggleMenu()" aria-label="Open Menu">
+<div class="menu-wrapper">
+<details class="menu-dropdown">
+<summary aria-label="Open navigation menu">
 ☰
-</button>
-<div class="nav-menu" id="navMenu">
-<a href="index.html">
+</summary>
+<div class="nav-menu">
+
 Home
-</a>
-<a href="services.html">
+
 Services
-</a>
-<a href="gallery.html">
+
 Gallery
-</a>
-<a href="about.html">
+
 About
-</a>
-<a href="service-area.html">
+
 Service Area
-</a>
+
 <a href="quote.html" class="menu-quote">
 Get a Quote
 </a>
 </div>
+</details>
+</div>
 </nav>
-<!-- =========================
-     PAGE HERO
-========================= -->
 <header class="page-hero">
 <div class="label">
 Premium Mobile Detailing
@@ -494,9 +493,6 @@ Premium detailing packages designed to restore, protect,
 and enhance your vehicle — delivered directly to you.
 </p>
 </header>
-<!-- =========================
-     PACKAGES
-========================= -->
 <section class="packages">
 <div class="section-heading">
 <div class="label">
@@ -512,7 +508,6 @@ and your convenience in mind.
 </p>
 </div>
 <div class="package-grid">
-<!-- ENHANCE GOLD -->
 <div class="package-card">
 <div class="package-number">
 01 / ESSENTIAL
@@ -542,7 +537,6 @@ inside-and-out clean and reset.
 Book Enhance Gold
 </a>
 </div>
-<!-- ENHANCE BLACK LABEL -->
 <div class="package-card featured">
 <div class="package-badge">
 Most Popular
@@ -576,7 +570,6 @@ that need serious attention inside and out.
 Book Enhance Black Label
 </a>
 </div>
-<!-- ENHANCE SHOWROOM -->
 <div class="package-card">
 <div class="package-number">
 03 / ULTIMATE
@@ -609,9 +602,6 @@ Book Enhance Showroom
 </div>
 </div>
 </section>
-<!-- =========================
-     ADD-ONS
-========================= -->
 <section class="addons">
 <div class="section-heading">
 <div class="label">
@@ -714,9 +704,6 @@ will be confirmed before service begins.
 </p>
 </div>
 </section>
-<!-- =========================
-     CTA
-========================= -->
 <section class="cta">
 <div class="label">
 Ready To Enhance Your Ride?
@@ -733,9 +720,6 @@ the right package and services.
 Request Your Quote
 </a>
 </section>
-<!-- =========================
-     FOOTER
-========================= -->
 <footer>
 <div class="footer-logo">
 ENHANCE <span>MY RIDE</span>
@@ -753,9 +737,6 @@ We come to you. You relax. We Enhance.
 © 2026 Enhance My Ride. All Rights Reserved.
 </p>
 </footer>
-<!-- =========================
-     MOBILE BAR
-========================= -->
 <div class="mobile-bar">
 <a href="tel:13233271806">
 ☎ CALL / TEXT
@@ -764,25 +745,5 @@ We come to you. You relax. We Enhance.
 REQUEST A QUOTE
 </a>
 </div>
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-<script>
-function toggleMenu() {
-    const menu = document.getElementById("navMenu");
-    menu.classList.toggle("active");
-}
-document.addEventListener("click", function(event) {
-    const menu = document.getElementById("navMenu");
-    const button = document.querySelector(".menu-toggle");
-    if (
-        menu.classList.contains("active") &&
-        !menu.contains(event.target) &&
-        !button.contains(event.target)
-    ) {
-        menu.classList.remove("active");
-    }
-});
-</script>
 </body>
 </html>
