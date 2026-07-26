@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Enhance My Ride Auto Spa | Premium Mobile Detailing</title>
+<title>Enhance My Ride | Premium Mobile Detailing</title>
 <meta name="description" content="Enhance My Ride Auto Spa & Mobile Detailing. Premium mobile detailing serving San Francisco and the Greater Bay Area. We come to you. You relax. We Enhance.">
 <style>
 * {
@@ -19,7 +19,10 @@ body {
     background: #070707;
     color: #f5f2ea;
     line-height: 1.6;
-    padding-bottom: 0;
+    overflow-x: hidden;
+}
+body.menu-open {
+    overflow: hidden;
 }
 a {
     color: inherit;
@@ -28,6 +31,7 @@ a {
 :root {
     --gold: #c9a227;
     --gold-light: #e4c45c;
+    --dark: #070707;
 }
 /* =========================
    NAVIGATION
@@ -54,87 +58,117 @@ nav {
 .brand span {
     color: var(--gold-light);
 }
-.menu-wrapper {
-    position: relative;
-}
-.menu-dropdown {
-    position: relative;
-}
-.menu-dropdown summary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* HAMBURGER BUTTON */
+.menu-button {
     width: 48px;
     height: 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
     border: 1px solid rgba(201,162,39,.5);
-    color: var(--gold-light);
-    font-size: 23px;
     cursor: pointer;
-    list-style: none;
-    user-select: none;
-    transition: .3s;
+    padding: 0;
+    z-index: 1100;
 }
-.menu-dropdown summary::-webkit-details-marker {
-    display: none;
+.menu-button span {
+    display: block;
+    width: 21px;
+    height: 2px;
+    background: var(--gold-light);
+    transition: all .3s ease;
 }
-.menu-dropdown summary:hover {
-    background: var(--gold);
-    color: #080808;
+.menu-button.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
 }
-.menu-dropdown[open] summary {
-    background: var(--gold);
-    color: #080808;
+.menu-button.active span:nth-child(2) {
+    opacity: 0;
 }
+.menu-button.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+/* MENU */
 .nav-menu {
-    position: absolute;
-    top: 52px;
-    right: 0;
-    width: 230px;
-    padding: 12px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(340px, 85%);
+    height: 100vh;
+    padding: 110px 30px 40px;
+    background: rgba(10,10,10,.98);
+    border-left: 1px solid rgba(201,162,39,.3);
+    box-shadow: -20px 0 60px rgba(0,0,0,.6);
     display: flex;
     flex-direction: column;
     gap: 5px;
-    background: rgba(12,12,12,.98);
-    border: 1px solid rgba(201,162,39,.35);
-    box-shadow: 0 20px 50px rgba(0,0,0,.6);
+    transition: right .35s ease;
+    z-index: 1050;
+}
+.nav-menu.open {
+    right: 0;
 }
 .nav-menu a {
     display: block;
-    padding: 13px 15px;
+    padding: 16px 18px;
     color: #ccc;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255,255,255,.06);
     transition: .3s;
 }
 .nav-menu a:hover {
     color: var(--gold-light);
-    background: rgba(201,162,39,.08);
+    padding-left: 25px;
 }
 .nav-menu .menu-quote {
-    margin-top: 5px;
+    margin-top: 15px;
     background: var(--gold);
     color: #080808;
     text-align: center;
+    border: none;
 }
 .nav-menu .menu-quote:hover {
     background: var(--gold-light);
+    color: #080808;
+    padding-left: 18px;
+}
+/* DARK OVERLAY */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 1040;
+}
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
 }
 /* =========================
    HERO
 ========================= */
 .hero {
     min-height: 100vh;
+    padding: 150px 7% 90px;
     display: flex;
     align-items: center;
-    padding: 150px 7% 100px;
+    position: relative;
+    overflow: hidden;
     background:
-        radial-gradient(circle at 75% 40%, rgba(201,162,39,.18), transparent 35%),
-        linear-gradient(135deg,#050505,#151515);
+        radial-gradient(circle at 75% 45%, rgba(201,162,39,.18), transparent 35%),
+        radial-gradient(circle at 20% 80%, rgba(201,162,39,.06), transparent 30%),
+        linear-gradient(135deg,#050505,#111);
 }
 .hero-content {
     max-width: 850px;
+    position: relative;
+    z-index: 2;
 }
 .label {
     color: var(--gold-light);
@@ -145,19 +179,19 @@ nav {
     margin-bottom: 20px;
 }
 .hero h1 {
-    font-size: clamp(55px,10vw,120px);
-    line-height: .88;
-    letter-spacing: -5px;
+    font-size: clamp(55px,9vw,120px);
+    line-height: .87;
     text-transform: uppercase;
+    letter-spacing: -5px;
 }
 .hero h1 span {
     color: var(--gold-light);
 }
 .hero p {
-    max-width: 650px;
+    max-width: 600px;
     margin-top: 30px;
     color: #999;
-    font-size: 18px;
+    font-size: 17px;
 }
 .hero-buttons {
     display: flex;
@@ -167,10 +201,10 @@ nav {
 }
 .btn {
     display: inline-block;
-    padding: 16px 27px;
+    padding: 17px 28px;
     background: var(--gold);
     color: #080808;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 900;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -178,11 +212,18 @@ nav {
 }
 .btn:hover {
     background: var(--gold-light);
+    transform: translateY(-2px);
 }
 .btn-outline {
-    background: transparent;
-    color: var(--gold-light);
+    display: inline-block;
+    padding: 16px 28px;
     border: 1px solid rgba(201,162,39,.6);
+    color: var(--gold-light);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: .3s;
 }
 .btn-outline:hover {
     background: var(--gold);
@@ -192,32 +233,50 @@ nav {
    INTRO
 ========================= */
 .intro {
-    padding: 100px 7%;
+    padding: 110px 7%;
     background: #0a0a0a;
 }
 .intro-container {
-    max-width: 1000px;
+    max-width: 1050px;
     margin: auto;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
 }
 .intro h2 {
-    font-size: clamp(38px,6vw,70px);
+    font-size: clamp(40px,5vw,65px);
     line-height: .95;
     text-transform: uppercase;
 }
 .intro h2 span {
     color: var(--gold-light);
 }
-.intro p {
-    max-width: 700px;
-    margin: 25px auto 0;
+.intro-text p {
+    margin-top: 20px;
     color: #888;
+    font-size: 15px;
+}
+.intro-card {
+    padding: 50px;
+    background: linear-gradient(145deg,#181818,#0c0c0c);
+    border: 1px solid #292929;
+}
+.intro-card h3 {
+    color: var(--gold-light);
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.intro-card p {
+    margin-top: 15px;
+    color: #888;
+    font-size: 14px;
 }
 /* =========================
    PACKAGES
 ========================= */
 .packages {
-    padding: 100px 7%;
+    padding: 110px 7%;
     background: #111;
 }
 .section-heading {
@@ -226,15 +285,15 @@ nav {
     text-align: center;
 }
 .section-heading h2 {
-    font-size: clamp(38px,5vw,60px);
-    line-height: 1;
+    font-size: clamp(42px,6vw,70px);
+    line-height: .95;
     text-transform: uppercase;
 }
 .section-heading h2 span {
     color: var(--gold-light);
 }
 .section-heading p {
-    margin-top: 18px;
+    margin-top: 20px;
     color: #888;
 }
 .package-grid {
@@ -245,84 +304,80 @@ nav {
     gap: 20px;
 }
 .package-card {
-    padding: 35px 28px;
-    background: linear-gradient(145deg,#181818,#0d0d0d);
+    padding: 40px 30px;
+    background: #090909;
     border: 1px solid #292929;
+    position: relative;
     transition: .3s;
 }
 .package-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(201,162,39,.7);
+    transform: translateY(-7px);
+    border-color: rgba(201,162,39,.6);
 }
 .package-card.featured {
     border-color: rgba(201,162,39,.7);
 }
-.package-card h3 {
-    font-size: 23px;
-    text-transform: uppercase;
-}
-.price {
-    margin-top: 15px;
-    color: var(--gold-light);
-    font-size: 32px;
+.package-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px 12px;
+    background: var(--gold);
+    color: #080808;
+    font-size: 8px;
     font-weight: 900;
-}
-.price span {
-    display: block;
-    color: #777;
-    font-size: 9px;
     letter-spacing: 1px;
+}
+.package-card h3 {
+    font-size: 24px;
     text-transform: uppercase;
+}
+.package-price {
+    margin-top: 12px;
+    color: var(--gold-light);
+    font-size: 24px;
+    font-weight: 900;
 }
 .package-card p {
     margin-top: 15px;
-    color: #888;
+    color: #777;
     font-size: 13px;
 }
-.package-btn {
-    display: block;
+.package-link {
+    display: inline-block;
     margin-top: 25px;
-    padding: 14px;
-    text-align: center;
-    background: var(--gold);
-    color: #080808;
+    color: var(--gold-light);
     font-size: 10px;
     font-weight: 900;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 /* =========================
-   WHY US
+   EXPERIENCE
 ========================= */
-.why {
-    padding: 100px 7%;
-    background: #0a0a0a;
+.experience {
+    padding: 110px 7%;
+    text-align: center;
+    background:
+        radial-gradient(circle at center,rgba(201,162,39,.13),transparent 45%),
+        #080808;
 }
-.why-grid {
-    max-width: 1050px;
+.experience-container {
+    max-width: 850px;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
 }
-.why-card {
-    padding: 35px 25px;
-    border: 1px solid #292929;
-    background: #111;
-}
-.why-card span {
-    color: var(--gold-light);
-    font-size: 25px;
-}
-.why-card h3 {
-    margin-top: 15px;
-    font-size: 18px;
+.experience h2 {
+    font-size: clamp(45px,7vw,85px);
+    line-height: .9;
     text-transform: uppercase;
 }
-.why-card p {
-    margin-top: 10px;
-    color: #777;
-    font-size: 13px;
+.experience h2 span {
+    color: var(--gold-light);
+}
+.experience p {
+    max-width: 650px;
+    margin: 25px auto 0;
+    color: #888;
 }
 /* =========================
    CTA
@@ -330,20 +385,17 @@ nav {
 .cta {
     padding: 110px 7%;
     text-align: center;
-    background:
-        radial-gradient(circle at center,rgba(201,162,39,.14),transparent 50%),
-        #080808;
+    background: #111;
 }
 .cta h2 {
-    font-size: clamp(45px,7vw,85px);
-    line-height: .95;
+    font-size: clamp(45px,7vw,80px);
+    line-height: .9;
     text-transform: uppercase;
 }
 .cta h2 span {
     color: var(--gold-light);
 }
 .cta p {
-    max-width: 600px;
     margin: 20px auto 30px;
     color: #888;
 }
@@ -351,12 +403,12 @@ nav {
    FOOTER
 ========================= */
 footer {
-    padding: 50px 7% 90px;
+    padding: 55px 7% 90px;
     text-align: center;
     background: #050505;
 }
 .footer-logo {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 900;
     letter-spacing: 3px;
 }
@@ -369,7 +421,7 @@ footer p {
     font-size: 12px;
 }
 /* =========================
-   MOBILE BAR
+   MOBILE BOTTOM BAR
 ========================= */
 .mobile-bar {
     display: none;
@@ -378,8 +430,11 @@ footer p {
    RESPONSIVE
 ========================= */
 @media(max-width:900px) {
-    .package-grid,
-    .why-grid {
+    .intro-container {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+    .package-grid {
         grid-template-columns: 1fr;
         max-width: 600px;
     }
@@ -392,17 +447,27 @@ footer p {
         padding: 17px 5%;
     }
     .hero {
+        min-height: 90vh;
         padding: 140px 5% 80px;
+    }
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+    .hero-buttons a {
+        text-align: center;
     }
     .intro,
     .packages,
-    .why,
+    .experience,
     .cta {
         padding-left: 5%;
         padding-right: 5%;
     }
-    .hero h1 {
-        letter-spacing: -3px;
+    .intro-card {
+        padding: 30px;
     }
     .mobile-bar {
         display: flex;
@@ -429,85 +494,128 @@ footer p {
 </style>
 </head>
 <body>
+<!-- =========================
+     NAVIGATION
+========================= -->
 <nav>
 <a href="index.html" class="brand">
 ENHANCE <span>MY RIDE</span>
 </a>
-<div class="menu-wrapper">
-<details class="menu-dropdown">
-<summary aria-label="Open navigation menu">
-☰
-</summary>
-<div class="nav-menu">
 
+<button
+class=“menu-button”
+id=“menuButton”
+aria-label=“Open navigation menu”
+aria-expanded=“false”
+type=“button”
+
+</button>
+</nav>
+<!-- MENU OVERLAY -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<!-- NAVIGATION MENU -->
+<div class="nav-menu" id="navMenu">
+<a href="index.html">
 Home
-
+</a>
+<a href="services.html">
 Services
-
+</a>
+<a href="gallery.html">
 Gallery
-
+</a>
+<a href="about.html">
 About
-
+</a>
+<a href="service-area.html">
 Service Area
-
+</a>
 <a href="quote.html" class="menu-quote">
-Get a Quote
+Get A Quote
 </a>
 </div>
-</details>
-</div>
-</nav>
-<section class="hero">
+<!-- =========================
+     HERO
+========================= -->
+<header class="hero">
 <div class="hero-content">
 <div class="label">
 Premium Mobile Detailing
 </div>
 <h1>
-We Come<br>
-To <span>You.</span>
+We Come To You.<br>
+You Relax.<br>
+<span>We Enhance.</span>
 </h1>
 <p>
-Your ride deserves more than a quick wash.
-Enhance My Ride Auto Spa & Mobile Detailing delivers
-premium vehicle care directly to your location.
+Premium mobile detailing brought directly to your home,
+workplace, or convenient location throughout San Francisco
+and the Greater Bay Area.
 </p>
 <div class="hero-buttons">
 <a href="quote.html" class="btn">
-Get Your Quote
+Request A Quote
 </a>
-<a href="services.html" class="btn btn-outline">
+<a href="services.html" class="btn-outline">
 Explore Services
 </a>
 </div>
 </div>
-</section>
+</header>
+<!-- =========================
+     INTRO
+========================= -->
 <section class="intro">
 <div class="intro-container">
+<div class="intro-text">
 <div class="label">
 The Enhance Experience
 </div>
 <h2>
-You Relax.<br>
-<span>We Enhance.</span>
+Premium Care.<br>
+<span>Delivered.</span>
 </h2>
 <p>
-Professional mobile detailing designed around your schedule.
-We bring the tools, products, and attention to detail directly
-to your home, office, workplace, or convenient location.
+Your vehicle deserves more than a quick wash. Enhance My Ride
+provides professional mobile detailing designed around your
+schedule and your vehicle.
+</p>
+<p>
+We bring the equipment, products, and attention to detail
+directly to you — so you don't have to waste your day sitting
+in a detailing shop.
 </p>
 </div>
+<div class="intro-card">
+<h3>
+Your Vehicle.<br>
+Our Mission.
+</h3>
+<p>
+From daily drivers to vehicles that deserve showroom-level
+attention, we focus on delivering a premium experience from
+the moment you book to the moment we reveal your enhanced ride.
+</p>
+<a href="about.html" class="package-link">
+Learn More About Us →
+</a>
+</div>
+</div>
 </section>
+<!-- =========================
+     PACKAGES
+========================= -->
 <section class="packages">
 <div class="section-heading">
 <div class="label">
-Premium Vehicle Care
+Choose Your Experience
 </div>
 <h2>
-Choose Your <span>Enhance</span>
+Our <span>Signature</span> Packages
 </h2>
 <p>
-Professional detailing packages designed for every level
-of vehicle care.
+Professional detailing packages designed to restore,
+refresh, and enhance your vehicle.
 </p>
 </div>
 <div class="package-grid">
@@ -515,115 +623,93 @@ of vehicle care.
 <h3>
 Enhance Gold
 </h3>
-<div class="price">
-$150
-<span>Starting Price</span>
+<div class="package-price">
+Starting At $150
 </div>
 <p>
-A professional inside-and-out refresh for vehicles
-that need a clean, polished reset.
+Our essential premium detail for vehicles that need a
+professional refresh inside and out.
 </p>
-<a href="services.html" class="package-btn">
-View Package
+<a href="services.html" class="package-link">
+View Package →
 </a>
 </div>
 <div class="package-card featured">
+<div class="package-tag">
+MOST POPULAR
+</div>
 <h3>
 Enhance Black Label
 </h3>
-<div class="price">
-$250
-<span>Starting Price</span>
+<div class="package-price">
+Starting At $250
 </div>
 <p>
-Our signature deeper clean for vehicles that need
-extra attention inside and out.
+A deeper level of interior and exterior detailing for
+customers looking for a more complete transformation.
 </p>
-<a href="services.html" class="package-btn">
-View Package
+<a href="services.html" class="package-link">
+View Package →
 </a>
 </div>
 <div class="package-card">
 <h3>
 Enhance Showroom Edition
 </h3>
-<div class="price">
-$350
-<span>Starting Price</span>
+<div class="package-price">
+Starting At $350
 </div>
 <p>
-Our ultimate detailing experience for customers who
-want their vehicle looking its absolute best.
+Our highest-level detailing experience for customers who
+want their vehicle looking as close to showroom-ready as possible.
 </p>
-<a href="services.html" class="package-btn">
-View Package
+<a href="services.html" class="package-link">
+View Package →
 </a>
 </div>
 </div>
 </section>
-<section class="why">
-<div class="section-heading">
+<!-- =========================
+     EXPERIENCE
+========================= -->
+<section class="experience">
+<div class="experience-container">
 <div class="label">
 Why Enhance My Ride
 </div>
 <h2>
-Detailing <span>Different</span>
+Your Time Matters.<br>
+<span>We Bring The Detail To You.</span>
 </h2>
-</div>
-<div class="why-grid">
-<div class="why-card">
-
-01
-
-<h3>
-We Come To You
-</h3>
 <p>
-No waiting rooms. No wasting your day.
-We bring the detailing experience directly to you.
+No waiting rooms. No rearranging your entire day.
+Just professional mobile detailing brought directly
+to your location.
 </p>
-</div>
-<div class="why-card">
-
-02
-
-<h3>
-Premium Results
-</h3>
-<p>
-We focus on the details that make your vehicle
-look and feel truly refreshed.
-</p>
-</div>
-<div class="why-card">
-
-03
-
-<h3>
-Convenient Service
-</h3>
-<p>
-Book around your schedule and let us handle the work
-while you relax.
-</p>
-</div>
 </div>
 </section>
+<!-- =========================
+     CTA
+========================= -->
 <section class="cta">
 <div class="label">
-Ready To Enhance Your Ride?
+Ready To Transform Your Ride?
 </div>
 <h2>
-Your Ride.<br>
-<span>Enhanced.</span>
+Let's <span>Enhance</span><br>
+Your Vehicle.
 </h2>
 <p>
-Premium mobile detailing delivered directly to your location.
+Tell us about your vehicle and we'll help you choose
+the right detailing experience.
 </p>
 <a href="quote.html" class="btn">
-Request Your Quote
+Get Your Quote
 </a>
 </section>
+<!-- =========================
+     FOOTER
+========================= -->
 <footer>
 <div class="footer-logo">
 ENHANCE <span>MY RIDE</span>
@@ -641,6 +727,9 @@ We come to you. You relax. We Enhance.
 © 2026 Enhance My Ride. All Rights Reserved.
 </p>
 </footer>
+<!-- =========================
+     MOBILE BOTTOM BAR
+========================= -->
 <div class="mobile-bar">
 <a href="tel:13233271806">
 ☎ CALL / TEXT
@@ -649,5 +738,50 @@ We come to you. You relax. We Enhance.
 REQUEST A QUOTE
 </a>
 </div>
+<!-- =========================
+     MENU JAVASCRIPT
+========================= -->
+<script>
+const menuButton = document.getElementById("menuButton");
+const navMenu = document.getElementById("navMenu");
+const menuOverlay = document.getElementById("menuOverlay");
+const menuLinks = navMenu.querySelectorAll("a");
+function openMenu() {
+    navMenu.classList.add("open");
+    menuOverlay.classList.add("open");
+    menuButton.classList.add("active");
+    menuButton.setAttribute("aria-expanded", "true");
+    menuButton.setAttribute("aria-label", "Close navigation menu");
+    document.body.classList.add("menu-open");
+}
+function closeMenu() {
+    navMenu.classList.remove("open");
+    menuOverlay.classList.remove("open");
+    menuButton.classList.remove("active");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open navigation menu");
+    document.body.classList.remove("menu-open");
+}
+menuButton.addEventListener("click", function() {
+    if (navMenu.classList.contains("open")) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
+});
+menuOverlay.addEventListener("click", function() {
+    closeMenu();
+});
+menuLinks.forEach(function(link) {
+    link.addEventListener("click", function() {
+        closeMenu();
+    });
+});
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeMenu();
+    }
+});
+</script>
 </body>
 </html>
