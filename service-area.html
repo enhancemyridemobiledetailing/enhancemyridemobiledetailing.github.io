@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Enhance My Ride Auto Spa</title>
-<meta name="description" content="Explore premium mobile detailing packages and add-on services from Enhance My Ride Auto Spa & Mobile Detailing. Serving San Francisco and the Bay Area.">
+<title>About Us | Enhance My Ride Auto Spa</title>
+<meta name="description" content="Learn about Enhance My Ride Auto Spa & Mobile Detailing, a premium mobile detailing company serving San Francisco and the greater Bay Area.">
 <style>
 * {
     margin: 0;
@@ -27,9 +27,6 @@ a {
 :root {
     --gold: #c9a227;
     --gold-light: #e4c45c;
-    --dark: #070707;
-    --card: #151515;
-    --muted: #999;
 }
 /* =========================
    NAVIGATION
@@ -148,117 +145,84 @@ nav {
     font-size: 17px;
 }
 /* =========================
-   PACKAGES
+   STORY
 ========================= */
-.packages {
-    padding: 90px 7%;
+.story {
+    padding: 100px 7%;
     background: #0a0a0a;
 }
-.package-container {
-    max-width: 1250px;
+.story-grid {
+    max-width: 1150px;
     margin: auto;
-}
-/* PACKAGE CARD */
-.package-card {
-    position: relative;
-    margin-bottom: 35px;
-    padding: 45px;
-    background: linear-gradient(145deg,#181818,#0e0e0e);
-    border: 1px solid #292929;
-}
-.package-card.featured {
-    border-color: var(--gold);
-    box-shadow: 0 0 35px rgba(201,162,39,.07);
-}
-.popular {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 9px 18px;
-    background: var(--gold);
-    color: #080808;
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-.package-top {
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 30px;
-    align-items: start;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #292929;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
 }
-.package-number {
-    color: #666;
-    font-size: 11px;
-    letter-spacing: 2px;
+.story-text .label {
+    margin-bottom: 12px;
 }
-.package-card h2 {
-    margin-top: 12px;
-    font-size: clamp(30px,4vw,48px);
-    line-height: 1;
+.story-text h2 {
+    font-size: clamp(38px,5vw,62px);
+    line-height: .98;
+    text-transform: uppercase;
 }
-.package-description {
-    margin-top: 15px;
-    max-width: 650px;
+.story-text h2 span {
+    color: var(--gold-light);
+}
+.story-text p {
+    margin-top: 22px;
     color: #999;
     font-size: 15px;
 }
-.price {
-    color: var(--gold-light);
-    font-size: 30px;
+.story-visual {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle,rgba(201,162,39,.18),transparent 40%),
+        linear-gradient(145deg,#191919,#0b0b0b);
+    border: 1px solid #292929;
+}
+.story-mark {
+    font-size: 110px;
     font-weight: 900;
-    white-space: nowrap;
-}
-.package-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    padding-top: 30px;
-}
-.package-content h3 {
-    margin-bottom: 15px;
-    color: #eee;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-.feature-list {
-    list-style: none;
-}
-.feature-list li {
-    padding: 9px 0;
-    color: #c8c8c8;
-    font-size: 14px;
-    border-bottom: 1px solid #222;
-}
-.feature-list li::before {
-    content: "✓";
-    color: var(--gold-light);
-    font-weight: bold;
-    margin-right: 10px;
-}
-.package-button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 22px;
-    background: var(--gold);
-    color: #080808;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-.package-button:hover {
-    background: var(--gold-light);
+    letter-spacing: -10px;
+    color: rgba(201,162,39,.2);
 }
 /* =========================
-   ADD-ONS
+   MISSION
 ========================= */
-.addons {
-    padding: 90px 7%;
+.mission {
+    padding: 100px 7%;
     background: #111;
+}
+.mission-container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+.mission h2 {
+    font-size: clamp(40px,6vw,70px);
+    line-height: .95;
+    text-transform: uppercase;
+}
+.mission h2 span {
+    color: var(--gold-light);
+}
+.mission p {
+    max-width: 750px;
+    margin: 25px auto 0;
+    color: #999;
+    font-size: 17px;
+}
+/* =========================
+   VALUES
+========================= */
+.values {
+    padding: 100px 7%;
+    background: #080808;
 }
 .section-heading {
     max-width: 700px;
@@ -266,7 +230,7 @@ nav {
     text-align: center;
 }
 .section-heading h2 {
-    font-size: clamp(36px,5vw,60px);
+    font-size: clamp(38px,5vw,60px);
     line-height: 1;
     text-transform: uppercase;
 }
@@ -277,62 +241,73 @@ nav {
     margin-top: 18px;
     color: #888;
 }
-.addon-grid {
+.values-grid {
     max-width: 1100px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 18px;
+    gap: 20px;
 }
-.addon {
-    padding: 28px 25px;
-    background: linear-gradient(145deg,#181818,#101010);
+.value-card {
+    padding: 35px 28px;
+    background: #111;
     border: 1px solid #292929;
     transition: .3s;
 }
-.addon:hover {
+.value-card:hover {
     transform: translateY(-5px);
     border-color: var(--gold);
 }
-.addon h3 {
-    color: #f5f2ea;
-    font-size: 18px;
-}
-.addon-price {
-    margin-top: 8px;
+.value-number {
     color: var(--gold-light);
-    font-size: 20px;
+    font-size: 11px;
     font-weight: 900;
+    letter-spacing: 2px;
 }
-.addon p {
-    margin-top: 10px;
+.value-card h3 {
+    margin-top: 18px;
+    font-size: 21px;
+}
+.value-card p {
+    margin-top: 12px;
     color: #888;
-    font-size: 13px;
+    font-size: 14px;
 }
 /* =========================
-   NOTE
+   EXPERIENCE
 ========================= */
-.note {
-    max-width: 900px;
-    margin: 50px auto 0;
-    padding: 25px;
-    background: rgba(201,162,39,.06);
-    border: 1px solid rgba(201,162,39,.25);
-    text-align: center;
+.experience {
+    padding: 100px 7%;
+    background:
+        radial-gradient(circle at center,rgba(201,162,39,.08),transparent 45%),
+        #0d0d0d;
 }
-.note strong {
+.experience-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.experience-card {
+    padding: 35px 28px;
+    border: 1px solid #292929;
+    background: rgba(15,15,15,.8);
+}
+.experience-card h3 {
     color: var(--gold-light);
+    font-size: 18px;
 }
-.note p {
-    margin-top: 8px;
-    color: #999;
-    font-size: 13px;
+.experience-card p {
+    margin-top: 12px;
+    color: #888;
+    font-size: 14px;
 }
 /* =========================
    CTA
 ========================= */
 .cta {
-    padding: 100px 7%;
+    padding: 110px 7%;
     text-align: center;
     background:
         radial-gradient(circle at center,rgba(201,162,39,.14),transparent 50%),
@@ -395,14 +370,11 @@ footer p {
    RESPONSIVE
 ========================= */
 @media(max-width:900px) {
-    .package-top {
+    .story-grid {
         grid-template-columns: 1fr;
     }
-    .package-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    .addon-grid {
+    .values-grid,
+    .experience-grid {
         grid-template-columns: 1fr;
         max-width: 600px;
     }
@@ -417,17 +389,19 @@ footer p {
     .page-hero {
         padding: 140px 5% 70px;
     }
-    .packages,
-    .addons,
+    .story,
+    .mission,
+    .values,
+    .experience,
     .cta {
         padding-left: 5%;
         padding-right: 5%;
     }
-    .package-card {
-        padding: 30px 22px;
+    .story-visual {
+        min-height: 320px;
     }
-    .price {
-        font-size: 25px;
+    .story-mark {
+        font-size: 75px;
     }
     .mobile-bar {
         display: flex;
@@ -490,299 +464,210 @@ Get a Quote
 ========================= -->
 <header class="page-hero">
 <div class="label">
-Premium Mobile Auto Detailing
+The Enhance Standard
 </div>
 <h1>
-Our <span>Enhance</span><br>
-Services
+About <span>Enhance</span>
 </h1>
 <p>
-Choose the level of care that matches your vehicle.
-Every service is designed to deliver a premium experience
-directly to your location.
+Premium mobile detailing built around convenience,
+craftsmanship, and the belief that your vehicle deserves
+more than an ordinary car wash.
 </p>
 </header>
 <!-- =========================
-     PACKAGES
+     OUR STORY
 ========================= -->
-<section class="packages">
-<div class="package-container">
-<!-- ENHANCE GOLD -->
-<div class="package-card">
-<div class="package-top">
-<div>
-<div class="package-number">
-01 / ESSENTIAL
+<section class="story">
+<div class="story-grid">
+<div class="story-text">
+<div class="label">
+Our Story
 </div>
 <h2>
-Enhance Gold
+More Than A<br>
+Car <span>Wash.</span>
 </h2>
-<p class="package-description">
-Our premium maintenance detail for vehicles that need
-a thorough clean, refresh, and professional finish.
-</p>
-</div>
-<div class="price">
-Starting at $150
-</div>
-</div>
-<div class="package-content">
-<div>
-<h3>
-Exterior Enhancement
-</h3>
-<ul class="feature-list">
-<li>Professional hand wash</li>
-<li>Foam pre-wash</li>
-<li>Wheels and tire cleaning</li>
-<li>Wheel face cleaning</li>
-<li>Exterior glass cleaning</li>
-<li>Premium tire dressing</li>
-</ul>
-</div>
-<div>
-<h3>
-Interior Enhancement
-</h3>
-<ul class="feature-list">
-<li>Complete interior vacuum</li>
-<li>Floor and mat vacuuming</li>
-<li>Interior surface cleaning</li>
-<li>Dashboard cleaning</li>
-<li>Door panel cleaning</li>
-<li>Interior glass cleaning</li>
-</ul>
-<a href="quote.html" class="package-button">
-Book Enhance Gold
-</a>
-</div>
-</div>
-</div>
-<!-- ENHANCE BLACK LABEL -->
-<div class="package-card featured">
-<div class="popular">
-MOST POPULAR
-</div>
-<div class="package-top">
-<div>
-<div class="package-number">
-02 / SIGNATURE
-</div>
-<h2>
-Enhance Black Label
-</h2>
-<p class="package-description">
-Our signature deep-cleaning experience for vehicles
-that need a serious interior and exterior transformation.
-</p>
-</div>
-<div class="price">
-Starting at $250
-</div>
-</div>
-<div class="package-content">
-<div>
-<h3>
-Everything In Enhance Gold, Plus
-</h3>
-<ul class="feature-list">
-<li>Deep wheel cleaning</li>
-<li>Detailed tire cleaning</li>
-<li>Exterior decontamination</li>
-<li>Premium exterior protection</li>
-<li>Door jamb cleaning</li>
-<li>Enhanced exterior finish</li>
-</ul>
-</div>
-<div>
-<h3>
-Interior Deep Clean
-</h3>
-<ul class="feature-list">
-<li>Deep interior cleaning</li>
-<li>Carpet and mat cleaning</li>
-<li>Leather cleaning</li>
-<li>Detailed crevice brushing</li>
-<li>Deep surface cleaning</li>
-<li>Premium interior finish</li>
-</ul>
-<a href="quote.html" class="package-button">
-Book Black Label
-</a>
-</div>
-</div>
-</div>
-<!-- ENHANCE SHOWROOM EDITION -->
-<div class="package-card">
-<div class="package-top">
-<div>
-<div class="package-number">
-03 / ULTIMATE
-</div>
-<h2>
-Enhance Showroom Edition
-</h2>
-<p class="package-description">
-Our ultimate detailing experience for customers
-who demand the highest level of presentation.
-</p>
-</div>
-<div class="price">
-Starting at $350
-</div>
-</div>
-<div class="package-content">
-<div>
-<h3>
-Everything In Black Label, Plus
-</h3>
-<ul class="feature-list">
-<li>Full exterior decontamination</li>
-<li>Paint enhancement</li>
-<li>Premium paint protection</li>
-<li>Enhanced gloss finish</li>
-<li>Detailed exterior inspection</li>
-<li>Showroom-level presentation</li>
-</ul>
-</div>
-<div>
-<h3>
-Ultimate Interior Restoration
-</h3>
-<ul class="feature-list">
-<li>Deep interior restoration</li>
-<li>Full carpet extraction</li>
-<li>Detailed crevice cleaning</li>
-<li>Deep stain treatment</li>
-<li>Premium interior protection</li>
-<li>Final showroom inspection</li>
-</ul>
-<a href="quote.html" class="package-button">
-Book Showroom Edition
-</a>
-</div>
-</div>
-</div>
-<!-- PRICING NOTE -->
-<div class="note">
-<strong>
-Every vehicle is different.
-</strong>
 <p>
-Prices shown are starting prices and may vary based on vehicle size,
-condition, excessive pet hair, heavy staining, or other special
-cleaning requirements. Add-on services may also vary based on
-vehicle condition. A final quote will be provided before service.
+Enhance My Ride Auto Spa & Mobile Detailing was created
+with one simple idea: professional vehicle care should
+fit into your life instead of interrupting it.
+</p>
+<p>
+We bring the detailing experience directly to you.
+Whether you're at home, at work, or somewhere in between,
+our goal is to make premium vehicle care convenient,
+professional, and personal.
+</p>
+<p>
+Every vehicle receives the attention it deserves.
+From the first wash to the final inspection, we focus
+on the details that create a noticeable difference.
+</p>
+</div>
+<div class="story-visual">
+<div class="story-mark">
+EMR
+</div>
+</div>
+</div>
+</section>
+<!-- =========================
+     MISSION
+========================= -->
+<section class="mission">
+<div class="mission-container">
+<div class="label">
+Our Mission
+</div>
+<h2>
+We Come To You.<br>
+You Relax.<br>
+<span>We Enhance.</span>
+</h2>
+<p>
+Our mission is to provide a premium mobile detailing
+experience that saves you time while giving your vehicle
+the professional care it deserves.
+</p>
+</div>
+</section>
+<!-- =========================
+     VALUES
+========================= -->
+<section class="values">
+<div class="section-heading">
+<div class="label">
+What We Stand For
+</div>
+<h2>
+The <span>Enhance</span> Values
+</h2>
+<p>
+Everything we do is built around delivering a better
+experience for our customers and their vehicles.
+</p>
+</div>
+<div class="values-grid">
+<div class="value-card">
+<div class="value-number">
+01 / QUALITY
+</div>
+<h3>
+Quality Over Quantity
+</h3>
+<p>
+We would rather deliver exceptional results on fewer
+vehicles than rush through a large number of jobs.
+</p>
+</div>
+<div class="value-card">
+<div class="value-number">
+02 / DETAIL
+</div>
+<h3>
+Details Matter
+</h3>
+<p>
+The difference between clean and truly enhanced is
+often found in the smallest details.
+</p>
+</div>
+<div class="value-card">
+<div class="value-number">
+03 / SERVICE
+</div>
+<h3>
+Your Time Matters
+</h3>
+<p>
+Our mobile model is designed around your schedule,
+making professional detailing more convenient.
+</p>
+</div>
+<div class="value-card">
+<div class="value-number">
+04 / TRUST
+</div>
+<h3>
+Professionalism
+</h3>
+<p>
+We believe in clear communication, honest pricing,
+and treating every vehicle with care and respect.
+</p>
+</div>
+<div class="value-card">
+<div class="value-number">
+05 / PRIDE
+</div>
+<h3>
+Take Pride In The Work
+</h3>
+<p>
+We don't just want your vehicle to look clean.
+We want you to feel proud when you see it.
+</p>
+</div>
+<div class="value-card">
+<div class="value-number">
+06 / EXPERIENCE
+</div>
+<h3>
+The Enhance Experience
+</h3>
+<p>
+From booking to final inspection, every part of your
+experience should feel premium.
 </p>
 </div>
 </div>
 </section>
 <!-- =========================
-     ADD-ONS
+     THE EXPERIENCE
 ========================= -->
-<section class="addons">
+<section class="experience">
 <div class="section-heading">
 <div class="label">
-Customize Your Detail
+Why Enhance My Ride
 </div>
 <h2>
-Enhance <span>Your Experience</span>
+A Better Way To<br>
+<span>Detail Your Vehicle</span>
 </h2>
 <p>
-Need something extra? Add the services you need to customize
-your detailing experience.
+We combine mobile convenience with a premium detailing
+mindset to create a service experience designed around you.
 </p>
 </div>
-<div class="addon-grid">
-<!-- PET HAIR -->
-<div class="addon">
+<div class="experience-grid">
+<div class="experience-card">
 <h3>
-Pet Hair Removal
+We Come To You
 </h3>
-<div class="addon-price">
-Starting at $30
-</div>
 <p>
-Additional pet hair removal for vehicles requiring
-extra time and attention.
+No waiting rooms. No dropping your vehicle off.
+We bring the service directly to your location.
 </p>
 </div>
-<!-- STAIN TREATMENT -->
-<div class="addon">
+<div class="experience-card">
 <h3>
-Stain Treatment
+Premium Attention
 </h3>
-<div class="addon-price">
-Starting at $25
-</div>
 <p>
-Targeted treatment for stubborn interior stains
-and heavily soiled areas.
+We focus on the areas that are often overlooked
+and take pride in delivering a thorough result.
 </p>
 </div>
-<!-- CARPET EXTRACTION -->
-<div class="addon">
+<div class="experience-card">
 <h3>
-Carpet Extraction
+Built For Your Vehicle
 </h3>
-<div class="addon-price">
-Starting at $40
-</div>
 <p>
-Deep extraction cleaning for carpets, mats,
-and heavily soiled fabric surfaces.
+Every vehicle has different needs. We'll help you
+choose the service that makes the most sense for yours.
 </p>
 </div>
-<!-- ENGINE BAY -->
-<div class="addon">
-<h3>
-Engine Bay Cleaning
-</h3>
-<div class="addon-price">
-$50
-</div>
-<p>
-Professional cleaning and presentation of
-accessible engine bay surfaces.
-</p>
-</div>
-<!-- HEADLIGHT RESTORATION -->
-<div class="addon">
-<h3>
-Headlight Restoration
-</h3>
-<div class="addon-price">
-Starting at $75
-</div>
-<p>
-Restore clarity and improve the appearance
-of faded or oxidized headlights.
-</p>
-</div>
-<!-- ADDITIONAL PROTECTION -->
-<div class="addon">
-<h3>
-Additional Protection
-</h3>
-<div class="addon-price">
-Starting at $50
-</div>
-<p>
-Add an additional layer of protection to help
-keep your vehicle looking cleaner for longer.
-</p>
-</div>
-</div>
-<!-- ADD-ON NOTE -->
-<div class="note">
-<strong>
-Add-ons are available with select detailing packages.
-</strong>
-<p>
-Final pricing may vary depending on vehicle size,
-condition, and the amount of work required.
-Ask about available add-ons when requesting your quote.
-</p>
 </div>
 </section>
 <!-- =========================
@@ -790,15 +675,15 @@ Ask about available add-ons when requesting your quote.
 ========================= -->
 <section class="cta">
 <div class="label">
-Your Vehicle Deserves The Enhance Experience
+Ready To Experience The Difference?
 </div>
 <h2>
-Ready To<br>
-<span>Book Your Detail?</span>
+Let's <span>Enhance</span><br>
+Your Ride.
 </h2>
 <p>
 Tell us about your vehicle and we'll help you choose
-the right Enhance package for your needs.
+the right detailing service.
 </p>
 <a href="quote.html" class="btn">
 Request Your Quote
@@ -825,7 +710,7 @@ We come to you. You relax. We Enhance.
 </p>
 </footer>
 <!-- =========================
-     MOBILE BOTTOM BAR
+     MOBILE BAR
 ========================= -->
 <div class="mobile-bar">
 <a href="tel:13233271806">
@@ -836,7 +721,7 @@ REQUEST A QUOTE
 </a>
 </div>
 <!-- =========================
-     MENU JAVASCRIPT
+     JAVASCRIPT
 ========================= -->
 <script>
 function toggleMenu() {
