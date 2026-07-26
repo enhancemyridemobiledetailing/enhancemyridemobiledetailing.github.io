@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Enhance My Ride | Premium Mobile Detailing</title>
-<meta name="description" content="Enhance My Ride Auto Spa & Mobile Detailing. Premium mobile detailing serving San Francisco and the Greater Bay Area. We come to you. You relax. We Enhance.">
+<title>Enhance My Ride Auto Spa | Premium Mobile Detailing</title>
+<meta name="description" content="Enhance My Ride Auto Spa & Mobile Detailing provides premium mobile car detailing throughout San Francisco and the Greater Bay Area.">
 <style>
 * {
     margin: 0;
@@ -21,134 +21,116 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
-body.menu-open {
-    overflow: hidden;
-}
 a {
-    color: inherit;
     text-decoration: none;
+    color: inherit;
 }
 :root {
     --gold: #c9a227;
     --gold-light: #e4c45c;
-    --dark: #070707;
 }
 /* =========================
    NAVIGATION
 ========================= */
-nav {
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
-    padding: 18px 6%;
+    height: 78px;
+    padding: 0 6%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background: rgba(7,7,7,.96);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255,255,255,.07);
+    justify-content: space-between;
+    background: rgba(5,5,5,0.97);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    z-index: 9999;
 }
-.brand {
+.logo {
     font-size: 17px;
     font-weight: 900;
     letter-spacing: 2px;
 }
-.brand span {
+.logo span {
     color: var(--gold-light);
 }
-/* HAMBURGER BUTTON */
-.menu-button {
+/* HAMBURGER */
+.menu-toggle {
     width: 48px;
-    height: 42px;
+    height: 44px;
+    background: transparent;
+    border: 1px solid rgba(201,162,39,0.6);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 5px;
-    background: transparent;
-    border: 1px solid rgba(201,162,39,.5);
     cursor: pointer;
-    padding: 0;
-    z-index: 1100;
+    position: relative;
+    z-index: 10001;
 }
-.menu-button span {
-    display: block;
-    width: 21px;
+.menu-toggle span {
+    width: 22px;
     height: 2px;
     background: var(--gold-light);
-    transition: all .3s ease;
+    display: block;
+    transition: 0.3s ease;
 }
-.menu-button.active span:nth-child(1) {
+/* X ANIMATION */
+.menu-toggle.active span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
 }
-.menu-button.active span:nth-child(2) {
+.menu-toggle.active span:nth-child(2) {
     opacity: 0;
 }
-.menu-button.active span:nth-child(3) {
+.menu-toggle.active span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
 }
-/* MENU */
-.nav-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: min(340px, 85%);
-    height: 100vh;
-    padding: 110px 30px 40px;
-    background: rgba(10,10,10,.98);
-    border-left: 1px solid rgba(201,162,39,.3);
-    box-shadow: -20px 0 60px rgba(0,0,0,.6);
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    transition: right .35s ease;
-    z-index: 1050;
+/* DROPDOWN MENU */
+.menu {
+    position: absolute;
+    top: 65px;
+    right: 6%;
+    width: 240px;
+    padding: 10px;
+    background: #101010;
+    border: 1px solid rgba(201,162,39,0.45);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: 0.25s ease;
 }
-.nav-menu.open {
-    right: 0;
+.menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
-.nav-menu a {
+.menu a {
     display: block;
-    padding: 16px 18px;
-    color: #ccc;
-    font-size: 12px;
+    padding: 14px 16px;
+    color: #d0d0d0;
+    font-size: 11px;
     font-weight: 800;
-    text-transform: uppercase;
     letter-spacing: 1px;
-    border-bottom: 1px solid rgba(255,255,255,.06);
-    transition: .3s;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: 0.2s;
 }
-.nav-menu a:hover {
+.menu a:hover {
     color: var(--gold-light);
-    padding-left: 25px;
+    background: rgba(201,162,39,0.08);
 }
-.nav-menu .menu-quote {
-    margin-top: 15px;
+.menu .quote-link {
+    margin-top: 8px;
     background: var(--gold);
     color: #080808;
     text-align: center;
     border: none;
 }
-.nav-menu .menu-quote:hover {
+.menu .quote-link:hover {
     background: var(--gold-light);
     color: #080808;
-    padding-left: 18px;
-}
-/* DARK OVERLAY */
-.menu-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.7);
-    opacity: 0;
-    visibility: hidden;
-    transition: .3s;
-    z-index: 1040;
-}
-.menu-overlay.open {
-    opacity: 1;
-    visibility: visible;
 }
 /* =========================
    HERO
@@ -158,19 +140,14 @@ nav {
     padding: 150px 7% 90px;
     display: flex;
     align-items: center;
-    position: relative;
-    overflow: hidden;
     background:
-        radial-gradient(circle at 75% 45%, rgba(201,162,39,.18), transparent 35%),
-        radial-gradient(circle at 20% 80%, rgba(201,162,39,.06), transparent 30%),
-        linear-gradient(135deg,#050505,#111);
+    radial-gradient(circle at 75% 45%, rgba(201,162,39,0.18), transparent 35%),
+    linear-gradient(135deg,#050505,#151515);
 }
 .hero-content {
-    max-width: 850px;
-    position: relative;
-    z-index: 2;
+    max-width: 900px;
 }
-.label {
+.eyebrow {
     color: var(--gold-light);
     font-size: 10px;
     font-weight: 900;
@@ -179,27 +156,27 @@ nav {
     margin-bottom: 20px;
 }
 .hero h1 {
-    font-size: clamp(55px,9vw,120px);
-    line-height: .87;
-    text-transform: uppercase;
+    font-size: clamp(52px,9vw,115px);
+    line-height: 0.88;
     letter-spacing: -5px;
+    text-transform: uppercase;
 }
 .hero h1 span {
     color: var(--gold-light);
 }
-.hero p {
-    max-width: 600px;
+.hero-text {
+    max-width: 620px;
     margin-top: 30px;
     color: #999;
     font-size: 17px;
 }
 .hero-buttons {
+    margin-top: 35px;
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-top: 35px;
 }
-.btn {
+.button {
     display: inline-block;
     padding: 17px 28px;
     background: var(--gold);
@@ -208,24 +185,23 @@ nav {
     font-weight: 900;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: .3s;
+    transition: 0.3s;
 }
-.btn:hover {
+.button:hover {
     background: var(--gold-light);
     transform: translateY(-2px);
 }
-.btn-outline {
+.button-outline {
     display: inline-block;
     padding: 16px 28px;
-    border: 1px solid rgba(201,162,39,.6);
+    border: 1px solid rgba(201,162,39,0.6);
     color: var(--gold-light);
     font-size: 11px;
     font-weight: 900;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: .3s;
 }
-.btn-outline:hover {
+.button-outline:hover {
     background: var(--gold);
     color: #080808;
 }
@@ -236,40 +212,46 @@ nav {
     padding: 110px 7%;
     background: #0a0a0a;
 }
-.intro-container {
-    max-width: 1050px;
+.intro-grid {
+    max-width: 1100px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 70px;
     align-items: center;
 }
+.section-label {
+    color: var(--gold-light);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
 .intro h2 {
+    margin-top: 15px;
     font-size: clamp(40px,5vw,65px);
-    line-height: .95;
+    line-height: 0.95;
     text-transform: uppercase;
 }
 .intro h2 span {
     color: var(--gold-light);
 }
-.intro-text p {
+.intro p {
     margin-top: 20px;
     color: #888;
     font-size: 15px;
 }
-.intro-card {
-    padding: 50px;
+.intro-box {
+    padding: 45px;
     background: linear-gradient(145deg,#181818,#0c0c0c);
     border: 1px solid #292929;
 }
-.intro-card h3 {
+.intro-box h3 {
     color: var(--gold-light);
-    font-size: 22px;
+    font-size: 24px;
     text-transform: uppercase;
 }
-.intro-card p {
-    margin-top: 15px;
-    color: #888;
+.intro-box p {
     font-size: 14px;
 }
 /* =========================
@@ -279,20 +261,22 @@ nav {
     padding: 110px 7%;
     background: #111;
 }
-.section-heading {
+.heading {
     max-width: 700px;
-    margin: 0 auto 60px;
+    margin: auto;
     text-align: center;
+    margin-bottom: 60px;
 }
-.section-heading h2 {
-    font-size: clamp(42px,6vw,70px);
-    line-height: .95;
+.heading h2 {
+    margin-top: 15px;
+    font-size: clamp(40px,6vw,70px);
+    line-height: 0.95;
     text-transform: uppercase;
 }
-.section-heading h2 span {
+.heading h2 span {
     color: var(--gold-light);
 }
-.section-heading p {
+.heading p {
     margin-top: 20px;
     color: #888;
 }
@@ -303,47 +287,32 @@ nav {
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
 }
-.package-card {
+.package {
     padding: 40px 30px;
     background: #090909;
     border: 1px solid #292929;
-    position: relative;
-    transition: .3s;
+    transition: 0.3s;
 }
-.package-card:hover {
+.package:hover {
     transform: translateY(-7px);
-    border-color: rgba(201,162,39,.6);
+    border-color: rgba(201,162,39,0.6);
 }
-.package-card.featured {
-    border-color: rgba(201,162,39,.7);
-}
-.package-tag {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 8px 12px;
-    background: var(--gold);
-    color: #080808;
-    font-size: 8px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-.package-card h3 {
-    font-size: 24px;
+.package h3 {
+    font-size: 23px;
     text-transform: uppercase;
 }
-.package-price {
+.price {
     margin-top: 12px;
     color: var(--gold-light);
-    font-size: 24px;
+    font-size: 23px;
     font-weight: 900;
 }
-.package-card p {
+.package p {
     margin-top: 15px;
     color: #777;
     font-size: 13px;
 }
-.package-link {
+.package a {
     display: inline-block;
     margin-top: 25px;
     color: var(--gold-light);
@@ -359,16 +328,17 @@ nav {
     padding: 110px 7%;
     text-align: center;
     background:
-        radial-gradient(circle at center,rgba(201,162,39,.13),transparent 45%),
-        #080808;
+    radial-gradient(circle at center,rgba(201,162,39,0.13),transparent 45%),
+    #080808;
 }
-.experience-container {
-    max-width: 850px;
+.experience-inner {
+    max-width: 900px;
     margin: auto;
 }
 .experience h2 {
+    margin-top: 15px;
     font-size: clamp(45px,7vw,85px);
-    line-height: .9;
+    line-height: 0.9;
     text-transform: uppercase;
 }
 .experience h2 span {
@@ -376,7 +346,7 @@ nav {
 }
 .experience p {
     max-width: 650px;
-    margin: 25px auto 0;
+    margin: 25px auto;
     color: #888;
 }
 /* =========================
@@ -388,8 +358,9 @@ nav {
     background: #111;
 }
 .cta h2 {
+    margin-top: 15px;
     font-size: clamp(45px,7vw,80px);
-    line-height: .9;
+    line-height: 0.9;
     text-transform: uppercase;
 }
 .cta h2 span {
@@ -427,10 +398,10 @@ footer p {
     display: none;
 }
 /* =========================
-   RESPONSIVE
+   MOBILE
 ========================= */
-@media(max-width:900px) {
-    .intro-container {
+@media(max-width:850px) {
+    .intro-grid {
         grid-template-columns: 1fr;
         max-width: 700px;
     }
@@ -443,12 +414,17 @@ footer p {
     body {
         padding-bottom: 62px;
     }
-    nav {
-        padding: 17px 5%;
+    .navbar {
+        height: 70px;
+        padding: 0 5%;
+    }
+    .menu {
+        right: 5%;
+        width: 250px;
     }
     .hero {
         min-height: 90vh;
-        padding: 140px 5% 80px;
+        padding: 130px 5% 80px;
     }
     .hero h1 {
         letter-spacing: -3px;
@@ -466,7 +442,7 @@ footer p {
         padding-left: 5%;
         padding-right: 5%;
     }
-    .intro-card {
+    .intro-box {
         padding: 30px;
     }
     .mobile-bar {
@@ -474,10 +450,10 @@ footer p {
         position: fixed;
         bottom: 0;
         left: 0;
-        right: 0;
-        z-index: 9999;
+        width: 100%;
+        z-index: 9998;
         background: #050505;
-        border-top: 1px solid rgba(201,162,39,.3);
+        border-top: 1px solid rgba(201,162,39,0.3);
     }
     .mobile-bar a {
         width: 50%;
@@ -497,49 +473,42 @@ footer p {
 <!-- =========================
      NAVIGATION
 ========================= -->
-<nav>
-<a href="index.html" class="brand">
+<nav class="navbar">
+<a href="index.html" class="logo">
 ENHANCE <span>MY RIDE</span>
 </a>
 
 <button
-class=“menu-button”
-id=“menuButton”
-aria-label=“Open navigation menu”
-aria-expanded=“false”
 type=“button”
+class=“menu-toggle”
+id=“menuToggle”
+aria-label=“Open menu”
+aria-expanded=“false”
 
 </button>
-</nav>
-<!-- MENU OVERLAY -->
-<div class="menu-overlay" id="menuOverlay"></div>
-<!-- NAVIGATION MENU -->
-<div class="nav-menu" id="navMenu">
-<a href="index.html">
+<div class="menu" id="mainMenu">
+
 Home
-</a>
-<a href="services.html">
+
 Services
-</a>
-<a href="gallery.html">
+
 Gallery
-</a>
-<a href="about.html">
+
 About
-</a>
-<a href="service-area.html">
+
 Service Area
-</a>
-<a href="quote.html" class="menu-quote">
+
+<a href="quote.html" class="quote-link">
 Get A Quote
 </a>
 </div>
+</nav>
 <!-- =========================
      HERO
 ========================= -->
 <header class="hero">
 <div class="hero-content">
-<div class="label">
+<div class="eyebrow">
 Premium Mobile Detailing
 </div>
 <h1>
@@ -547,16 +516,16 @@ We Come To You.<br>
 You Relax.<br>
 <span>We Enhance.</span>
 </h1>
-<p>
+<p class="hero-text">
 Premium mobile detailing brought directly to your home,
 workplace, or convenient location throughout San Francisco
 and the Greater Bay Area.
 </p>
 <div class="hero-buttons">
-<a href="quote.html" class="btn">
+<a href="quote.html" class="button">
 Request A Quote
 </a>
-<a href="services.html" class="btn-outline">
+<a href="services.html" class="button-outline">
 Explore Services
 </a>
 </div>
@@ -566,9 +535,9 @@ Explore Services
      INTRO
 ========================= -->
 <section class="intro">
-<div class="intro-container">
-<div class="intro-text">
-<div class="label">
+<div class="intro-grid">
+<div>
+<div class="section-label">
 The Enhance Experience
 </div>
 <h2>
@@ -582,21 +551,21 @@ schedule and your vehicle.
 </p>
 <p>
 We bring the equipment, products, and attention to detail
-directly to you — so you don't have to waste your day sitting
-in a detailing shop.
+directly to you — so you don't have to waste your day waiting
+at a detailing shop.
 </p>
 </div>
-<div class="intro-card">
+<div class="intro-box">
 <h3>
 Your Vehicle.<br>
 Our Mission.
 </h3>
 <p>
 From daily drivers to vehicles that deserve showroom-level
-attention, we focus on delivering a premium experience from
+attention, our goal is to deliver a premium experience from
 the moment you book to the moment we reveal your enhanced ride.
 </p>
-<a href="about.html" class="package-link">
+<a href="about.html" class="package">
 Learn More About Us →
 </a>
 </div>
@@ -606,8 +575,8 @@ Learn More About Us →
      PACKAGES
 ========================= -->
 <section class="packages">
-<div class="section-heading">
-<div class="label">
+<div class="heading">
+<div class="section-label">
 Choose Your Experience
 </div>
 <h2>
@@ -619,51 +588,48 @@ refresh, and enhance your vehicle.
 </p>
 </div>
 <div class="package-grid">
-<div class="package-card">
+<div class="package">
 <h3>
 Enhance Gold
 </h3>
-<div class="package-price">
+<div class="price">
 Starting At $150
 </div>
 <p>
 Our essential premium detail for vehicles that need a
 professional refresh inside and out.
 </p>
-<a href="services.html" class="package-link">
+<a href="services.html">
 View Package →
 </a>
 </div>
-<div class="package-card featured">
-<div class="package-tag">
-MOST POPULAR
-</div>
+<div class="package">
 <h3>
 Enhance Black Label
 </h3>
-<div class="package-price">
+<div class="price">
 Starting At $250
 </div>
 <p>
 A deeper level of interior and exterior detailing for
 customers looking for a more complete transformation.
 </p>
-<a href="services.html" class="package-link">
+<a href="services.html">
 View Package →
 </a>
 </div>
-<div class="package-card">
+<div class="package">
 <h3>
 Enhance Showroom Edition
 </h3>
-<div class="package-price">
+<div class="price">
 Starting At $350
 </div>
 <p>
 Our highest-level detailing experience for customers who
 want their vehicle looking as close to showroom-ready as possible.
 </p>
-<a href="services.html" class="package-link">
+<a href="services.html">
 View Package →
 </a>
 </div>
@@ -673,8 +639,8 @@ View Package →
      EXPERIENCE
 ========================= -->
 <section class="experience">
-<div class="experience-container">
-<div class="label">
+<div class="experience-inner">
+<div class="section-label">
 Why Enhance My Ride
 </div>
 <h2>
@@ -692,7 +658,7 @@ to your location.
      CTA
 ========================= -->
 <section class="cta">
-<div class="label">
+<div class="section-label">
 Ready To Transform Your Ride?
 </div>
 <h2>
@@ -703,7 +669,7 @@ Your Vehicle.
 Tell us about your vehicle and we'll help you choose
 the right detailing experience.
 </p>
-<a href="quote.html" class="btn">
+<a href="quote.html" class="button">
 Get Your Quote
 </a>
 </section>
@@ -732,54 +698,42 @@ We come to you. You relax. We Enhance.
 ========================= -->
 <div class="mobile-bar">
 <a href="tel:13233271806">
-☎ CALL / TEXT
+CALL / TEXT
 </a>
 <a href="quote.html">
 REQUEST A QUOTE
 </a>
 </div>
 <!-- =========================
-     MENU JAVASCRIPT
+     MENU SCRIPT
 ========================= -->
 <script>
-const menuButton = document.getElementById("menuButton");
-const navMenu = document.getElementById("navMenu");
-const menuOverlay = document.getElementById("menuOverlay");
-const menuLinks = navMenu.querySelectorAll("a");
-function openMenu() {
-    navMenu.classList.add("open");
-    menuOverlay.classList.add("open");
-    menuButton.classList.add("active");
-    menuButton.setAttribute("aria-expanded", "true");
-    menuButton.setAttribute("aria-label", "Close navigation menu");
-    document.body.classList.add("menu-open");
-}
-function closeMenu() {
-    navMenu.classList.remove("open");
-    menuOverlay.classList.remove("open");
-    menuButton.classList.remove("active");
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-label", "Open navigation menu");
-    document.body.classList.remove("menu-open");
-}
-menuButton.addEventListener("click", function() {
-    if (navMenu.classList.contains("open")) {
-        closeMenu();
-    } else {
-        openMenu();
-    }
-});
-menuOverlay.addEventListener("click", function() {
-    closeMenu();
-});
-menuLinks.forEach(function(link) {
-    link.addEventListener("click", function() {
-        closeMenu();
-    });
-});
-document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
-        closeMenu();
+document.addEventListener("DOMContentLoaded", function() {
+    var menuButton = document.getElementById("menuToggle");
+    var menu = document.getElementById("mainMenu");
+    var links = menu.getElementsByTagName("a");
+    menuButton.onclick = function() {
+        menu.classList.toggle("active");
+        menuButton.classList.toggle("active");
+        var isOpen = menu.classList.contains("active");
+        menuButton.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Close menu" : "Open menu"
+        );
+    };
+    for (var i = 0; i < links.length; i++) {
+        links[i].onclick = function() {
+            menu.classList.remove("active");
+            menuButton.classList.remove("active");
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+        };
     }
 });
 </script>
