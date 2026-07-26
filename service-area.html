@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services | Enhance My Ride Auto Spa</title>
-<meta name="description" content="Explore Enhance My Ride premium mobile detailing packages including Enhance Gold, Enhance Black Label, and Enhance Showroom Edition.">
+<meta name="description" content="Explore premium mobile detailing packages and add-on services from Enhance My Ride Auto Spa & Mobile Detailing. Serving San Francisco and the Bay Area.">
 <style>
 * {
     margin: 0;
@@ -27,7 +27,7 @@ a {
 :root {
     --gold: #c9a227;
     --gold-light: #e4c45c;
-    --dark: #0d0d0d;
+    --dark: #070707;
     --card: #151515;
     --muted: #999;
 }
@@ -44,7 +44,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(7,7,7,.95);
+    background: rgba(7,7,7,.96);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255,255,255,.07);
 }
@@ -56,31 +56,69 @@ nav {
 .brand span {
     color: var(--gold-light);
 }
-.nav-links {
+/* MENU BUTTON */
+.menu-toggle {
     display: flex;
     align-items: center;
-    gap: 24px;
-    font-size: 12px;
-    font-weight: 700;
+    justify-content: center;
+    width: 48px;
+    height: 42px;
+    background: transparent;
+    border: 1px solid rgba(201,162,39,.5);
+    color: var(--gold-light);
+    font-size: 23px;
+    cursor: pointer;
+    transition: .3s;
+}
+.menu-toggle:hover {
+    background: var(--gold);
+    color: #080808;
+}
+/* DROPDOWN MENU */
+.nav-menu {
+    position: absolute;
+    top: 78px;
+    right: 6%;
+    width: 230px;
+    padding: 12px;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(12,12,12,.98);
+    border: 1px solid rgba(201,162,39,.35);
+    box-shadow: 0 20px 50px rgba(0,0,0,.6);
+}
+.nav-menu.active {
+    display: flex;
+}
+.nav-menu a {
+    padding: 13px 15px;
+    color: #ccc;
+    font-size: 11px;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: .3s;
 }
-.nav-links a {
-    color: #ccc;
-}
-.nav-links a:hover {
+.nav-menu a:hover {
     color: var(--gold-light);
+    background: rgba(201,162,39,.08);
 }
-.nav-cta {
+.nav-menu .menu-quote {
+    margin-top: 5px;
     background: var(--gold);
-    color: #080808 !important;
-    padding: 11px 16px;
+    color: #080808;
+    text-align: center;
+}
+.nav-menu .menu-quote:hover {
+    background: var(--gold-light);
+    color: #080808;
 }
 /* =========================
    PAGE HERO
 ========================= */
 .page-hero {
-    padding: 170px 7% 90px;
+    padding: 165px 7% 90px;
     text-align: center;
     background:
         radial-gradient(circle at center, rgba(201,162,39,.15), transparent 45%),
@@ -110,7 +148,7 @@ nav {
     font-size: 17px;
 }
 /* =========================
-   PACKAGE SECTION
+   PACKAGES
 ========================= */
 .packages {
     padding: 90px 7%;
@@ -120,9 +158,7 @@ nav {
     max-width: 1250px;
     margin: auto;
 }
-/* =========================
-   PACKAGE CARD
-========================= */
+/* PACKAGE CARD */
 .package-card {
     position: relative;
     margin-bottom: 35px;
@@ -218,7 +254,7 @@ nav {
     background: var(--gold-light);
 }
 /* =========================
-   ADD ONS
+   ADD-ONS
 ========================= */
 .addons {
     padding: 90px 7%;
@@ -274,7 +310,7 @@ nav {
     font-size: 13px;
 }
 /* =========================
-   IMPORTANT NOTE
+   NOTE
 ========================= */
 .note {
     max-width: 900px;
@@ -359,9 +395,6 @@ footer p {
    RESPONSIVE
 ========================= */
 @media(max-width:900px) {
-    .nav-links a:not(.nav-cta) {
-        display: none;
-    }
     .package-top {
         grid-template-columns: 1fr;
     }
@@ -421,29 +454,40 @@ footer p {
 </style>
 </head>
 <body>
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 <nav>
 <a href="index.html" class="brand">
 ENHANCE <span>MY RIDE</span>
 </a>
-<div class="nav-links">
-
+<button class="menu-toggle" onclick="toggleMenu()" aria-label="Open Menu">
+☰
+</button>
+<div class="nav-menu" id="navMenu">
+<a href="index.html">
 Home
-
+</a>
+<a href="services.html">
 Services
-
+</a>
+<a href="gallery.html">
 Gallery
-
+</a>
+<a href="about.html">
 About
-
+</a>
+<a href="service-area.html">
 Service Area
-
-<a href="quote.html" class="nav-cta">
+</a>
+<a href="quote.html" class="menu-quote">
 Get a Quote
 </a>
 </div>
 </nav>
-<!-- PAGE HERO -->
+<!-- =========================
+     PAGE HERO
+========================= -->
 <header class="page-hero">
 <div class="label">
 Premium Mobile Auto Detailing
@@ -458,7 +502,9 @@ Every service is designed to deliver a premium experience
 directly to your location.
 </p>
 </header>
-<!-- PACKAGES -->
+<!-- =========================
+     PACKAGES
+========================= -->
 <section class="packages">
 <div class="package-container">
 <!-- ENHANCE GOLD -->
@@ -617,7 +663,7 @@ Book Showroom Edition
 </div>
 </div>
 </div>
-<!-- IMPORTANT NOTE -->
+<!-- PRICING NOTE -->
 <div class="note">
 <strong>
 Every vehicle is different.
@@ -631,7 +677,9 @@ vehicle condition. A final quote will be provided before service.
 </div>
 </div>
 </section>
-<!-- ADD ONS -->
+<!-- =========================
+     ADD-ONS
+========================= -->
 <section class="addons">
 <div class="section-heading">
 <div class="label">
@@ -737,7 +785,9 @@ Ask about available add-ons when requesting your quote.
 </p>
 </div>
 </section>
-<!-- CTA -->
+<!-- =========================
+     CTA
+========================= -->
 <section class="cta">
 <div class="label">
 Your Vehicle Deserves The Enhance Experience
@@ -754,7 +804,9 @@ the right Enhance package for your needs.
 Request Your Quote
 </a>
 </section>
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 <footer>
 <div class="footer-logo">
 ENHANCE <span>MY RIDE</span>
@@ -772,7 +824,9 @@ We come to you. You relax. We Enhance.
 © 2026 Enhance My Ride. All Rights Reserved.
 </p>
 </footer>
-<!-- MOBILE BAR -->
+<!-- =========================
+     MOBILE BOTTOM BAR
+========================= -->
 <div class="mobile-bar">
 <a href="tel:13233271806">
 ☎ CALL / TEXT
@@ -781,5 +835,25 @@ We come to you. You relax. We Enhance.
 REQUEST A QUOTE
 </a>
 </div>
+<!-- =========================
+     MENU JAVASCRIPT
+========================= -->
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+}
+document.addEventListener("click", function(event) {
+    const menu = document.getElementById("navMenu");
+    const button = document.querySelector(".menu-toggle");
+    if (
+        menu.classList.contains("active") &&
+        !menu.contains(event.target) &&
+        !button.contains(event.target)
+    ) {
+        menu.classList.remove("active");
+    }
+});
+</script>
 </body>
 </html>
