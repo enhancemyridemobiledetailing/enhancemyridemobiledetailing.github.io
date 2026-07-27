@@ -1,741 +1,1720 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get a Quote | Enhance My Ride Auto Spa</title>
-<meta name="description" content="Request a premium mobile detailing quote from Enhance My Ride Auto Spa. Serving San Francisco and the Greater Bay Area.">
+
+<title>Get A Quote | Enhance My Ride Auto Spa & Mobile Detailing</title>
+
+<meta name="description" content="Request a premium mobile detailing quote from Enhance My Ride Auto Spa serving San Francisco and the entire Bay Area.">
+
+
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+/* =========================================
+RESET
+========================================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
-html {
-    scroll-behavior: smooth;
+
+
+html{
+scroll-behavior:smooth;
 }
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #070707;
-    color: #f5f2ea;
-    line-height: 1.6;
-    padding-bottom: 0;
+
+
+body{
+background:#080808;
+color:#f5f5f5;
+font-family:Arial, Helvetica, sans-serif;
+line-height:1.6;
+overflow-x:hidden;
 }
-a {
-    color: inherit;
-    text-decoration: none;
+
+
+a{
+color:inherit;
+text-decoration:none;
 }
-:root {
-    --gold: #c9a227;
-    --gold-light: #e4c45c;
+
+
+button,
+input,
+textarea,
+select{
+font-family:inherit;
 }
-/* =========================
-   NAVIGATION
-========================= */
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 18px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(7,7,7,.96);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255,255,255,.07);
+
+
+
+/* =========================================
+COLORS
+========================================= */
+
+:root{
+
+--black:#080808;
+--dark:#111111;
+--dark2:#151515;
+--gold:#c9a227;
+--gold-light:#e6c85c;
+--white:#f5f5f5;
+--gray:#a5a5a5;
+--border:rgba(201,162,39,.3);
+
 }
-.brand {
-    font-size: 17px;
-    font-weight: 900;
-    letter-spacing: 2px;
+
+
+
+/* =========================================
+NAVBAR
+========================================= */
+
+.navbar{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:78px;
+
+z-index:10000;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:0 6%;
+
+background:rgba(8,8,8,.98);
+
+border-bottom:1px solid var(--border);
+
 }
-.brand span {
-    color: var(--gold-light);
+
+
+
+/* =========================================
+LOGO
+========================================= */
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:12px;
+
 }
-.menu-wrapper {
-    position: relative;
+
+
+.logo-mark{
+
+width:44px;
+height:44px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border:1px solid var(--gold);
+
+color:var(--gold);
+
+font-size:11px;
+font-weight:bold;
+
+letter-spacing:1px;
+
 }
-.menu-dropdown {
-    position: relative;
+
+
+
+.logo-text{
+
+display:flex;
+flex-direction:column;
+
 }
-.menu-dropdown summary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 42px;
-    border: 1px solid rgba(201,162,39,.5);
-    color: var(--gold-light);
-    font-size: 23px;
-    cursor: pointer;
-    list-style: none;
-    user-select: none;
-    transition: .3s;
+
+
+
+.logo-main{
+
+color:white;
+
+font-size:12px;
+
+font-weight:bold;
+
+letter-spacing:2px;
+
+white-space:nowrap;
+
 }
-.menu-dropdown summary::-webkit-details-marker {
-    display: none;
+
+
+
+.logo-sub{
+
+color:var(--gold);
+
+font-size:8px;
+
+letter-spacing:2px;
+
+white-space:nowrap;
+
 }
-.menu-dropdown summary:hover {
-    background: var(--gold);
-    color: #080808;
+
+
+
+/* =========================================
+DESKTOP NAV
+========================================= */
+
+
+.nav-menu{
+
+display:flex;
+
+align-items:center;
+
+gap:28px;
+
+list-style:none;
+
 }
-.menu-dropdown[open] summary {
-    background: var(--gold);
-    color: #080808;
+
+
+
+.nav-menu a{
+
+color:#eee;
+
+font-size:11px;
+
+font-weight:bold;
+
+letter-spacing:1.5px;
+
+text-transform:uppercase;
+
 }
-.nav-menu {
-    position: absolute;
-    top: 52px;
-    right: 0;
-    width: 230px;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background: rgba(12,12,12,.98);
-    border: 1px solid rgba(201,162,39,.35);
-    box-shadow: 0 20px 50px rgba(0,0,0,.6);
+
+
+
+.nav-menu a:hover{
+
+color:var(--gold-light);
+
 }
-.nav-menu a {
-    display: block;
-    padding: 13px 15px;
-    color: #ccc;
-    font-size: 11px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: .3s;
+
+
+
+.nav-quote{
+
+border:1px solid var(--gold);
+
+padding:11px 18px;
+
+color:var(--gold-light)!important;
+
 }
-.nav-menu a:hover {
-    color: var(--gold-light);
-    background: rgba(201,162,39,.08);
+
+
+
+
+/* =========================================
+HAMBURGER
+========================================= */
+
+
+.menu-toggle{
+
+display:none;
+
+width:48px;
+height:48px;
+
+background:#080808;
+
+border:1px solid var(--gold);
+
+cursor:pointer;
+
+align-items:center;
+
+justify-content:center;
+
+flex-direction:column;
+
+gap:5px;
+
 }
-.nav-menu .menu-quote {
-    margin-top: 5px;
-    background: var(--gold);
-    color: #080808;
-    text-align: center;
+
+
+
+.menu-toggle span{
+
+width:23px;
+
+height:2px;
+
+background:var(--gold);
+
+transition:.25s;
+
+display:block;
+
 }
-.nav-menu .menu-quote:hover {
-    background: var(--gold-light);
+
+
+
+.menu-toggle.active span:nth-child(1){
+
+transform:translateY(7px) rotate(45deg);
+
 }
-/* =========================
-   HERO
-========================= */
-.page-hero {
-    padding: 165px 7% 90px;
-    text-align: center;
-    background:
-        radial-gradient(circle at center, rgba(201,162,39,.15), transparent 45%),
-        linear-gradient(135deg,#050505,#141414);
+
+
+
+.menu-toggle.active span:nth-child(2){
+
+opacity:0;
+
 }
-.label {
-    color: var(--gold-light);
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+
+
+
+.menu-toggle.active span:nth-child(3){
+
+transform:translateY(-7px) rotate(-45deg);
+
 }
-.page-hero h1 {
-    font-size: clamp(44px,8vw,90px);
-    line-height: .95;
-    text-transform: uppercase;
-    letter-spacing: -3px;
+
+
+
+
+
+/* =========================================
+QUOTE HERO
+========================================= */
+
+
+.quote-hero{
+
+min-height:70vh;
+
+display:flex;
+
+align-items:center;
+
+padding:150px 8% 90px;
+
+
+background:
+
+linear-gradient(
+90deg,
+rgba(0,0,0,.95),
+rgba(0,0,0,.65)
+),
+
+url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=85")
+
+center/cover no-repeat;
+
 }
-.page-hero h1 span {
-    color: var(--gold-light);
+
+
+
+.hero-content{
+
+max-width:750px;
+
 }
-.page-hero p {
-    max-width: 700px;
-    margin: 25px auto 0;
-    color: #999;
-    font-size: 17px;
+
+
+
+.eyebrow{
+
+color:var(--gold-light);
+
+font-size:11px;
+
+font-weight:bold;
+
+letter-spacing:4px;
+
+margin-bottom:20px;
+
 }
-/* =========================
-   QUOTE SECTION
-========================= */
-.quote-section {
-    padding: 100px 7%;
-    background: #0a0a0a;
+
+
+
+.quote-hero h1{
+
+font-family:Georgia,serif;
+
+font-size:clamp(55px,8vw,100px);
+
+line-height:.95;
+
+letter-spacing:-3px;
+
+margin-bottom:25px;
+
 }
-.quote-container {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: .8fr 1.2fr;
-    gap: 50px;
-    align-items: start;
+
+
+
+.quote-hero h1 span{
+
+color:var(--gold-light);
+
 }
-/* =========================
-   INFO
-========================= */
-.quote-info {
-    padding: 40px;
-    background: linear-gradient(145deg,#181818,#0d0d0d);
-    border: 1px solid #292929;
+
+
+
+.quote-hero p{
+
+max-width:650px;
+
+color:#ccc;
+
+font-size:17px;
+
+line-height:1.8;
+
 }
-.quote-info h2 {
-    font-size: 34px;
-    line-height: 1;
-    text-transform: uppercase;
+
+
+
+/* =========================================
+QUOTE SECTION
+========================================= */
+
+
+.quote-section{
+
+padding:100px 8%;
+
+background:#0c0c0c;
+
 }
-.quote-info h2 span {
-    color: var(--gold-light);
+
+
+
+.quote-container{
+
+max-width:1000px;
+
+margin:auto;
+
+background:#121212;
+
+border:1px solid rgba(255,255,255,.08);
+
+padding:50px;
+
 }
-.quote-info > p {
-    margin-top: 20px;
-    color: #888;
-    font-size: 14px;
+
+
+
+.quote-title{
+
+text-align:center;
+
+margin-bottom:50px;
+
 }
-.contact-list {
-    margin-top: 30px;
-    list-style: none;
+
+
+
+.quote-title h2{
+
+font-family:Georgia,serif;
+
+font-size:clamp(38px,5vw,55px);
+
+margin-bottom:15px;
+
 }
-.contact-list li {
-    padding: 18px 0;
-    border-bottom: 1px solid #292929;
+
+
+
+.quote-title h2 span{
+
+color:var(--gold-light);
+
 }
-.contact-label {
-    color: var(--gold-light);
-    font-size: 9px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+
+
+
+.quote-title p{
+
+color:var(--gray);
+
 }
-.contact-value {
-    display: block;
-    margin-top: 5px;
-    color: #ccc;
-    font-size: 14px;
+
+
+/* =========================================
+FORM GRID
+========================================= */
+
+
+.form-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
 }
-.contact-value:hover {
-    color: var(--gold-light);
+
+
+
+.form-group{
+
+display:flex;
+
+flex-direction:column;
+
 }
-.quote-note {
-    margin-top: 30px;
-    padding: 20px;
-    background: rgba(201,162,39,.05);
-    border: 1px solid rgba(201,162,39,.25);
+
+
+
+.form-group.full{
+
+grid-column:1/-1;
+
 }
-.quote-note p {
-    color: #999;
-    font-size: 12px;
+
+
+
+.form-group label{
+
+color:#ddd;
+
+font-size:11px;
+
+font-weight:bold;
+
+letter-spacing:1.5px;
+
+text-transform:uppercase;
+
+margin-bottom:10px;
+
 }
-/* =========================
-   FORM
-========================= */
-.quote-form {
-    padding: 45px;
-    background: #111;
-    border: 1px solid #292929;
-}
-.form-heading {
-    margin-bottom: 30px;
-}
-.form-heading h2 {
-    font-size: 30px;
-    text-transform: uppercase;
-}
-.form-heading p {
-    margin-top: 8px;
-    color: #777;
-    font-size: 13px;
-}
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-.form-group {
-    margin-bottom: 18px;
-}
-.form-group label {
-    display: block;
-    margin-bottom: 7px;
-    color: #aaa;
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
+
+
+
 .form-group input,
 .form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 14px 15px;
-    background: #080808;
-    border: 1px solid #303030;
-    color: #f5f2ea;
-    font-family: inherit;
-    font-size: 13px;
-    outline: none;
-    transition: .3s;
+.form-group textarea{
+
+width:100%;
+
+padding:15px;
+
+background:#080808;
+
+border:1px solid rgba(255,255,255,.15);
+
+color:white;
+
+font-size:14px;
+
+outline:none;
+
 }
+
+
+
 .form-group input:focus,
 .form-group select:focus,
-.form-group textarea:focus {
-    border-color: var(--gold);
+.form-group textarea:focus{
+
+border-color:var(--gold);
+
 }
-.form-group textarea {
-    min-height: 130px;
-    resize: vertical;
+
+
+
+.form-group textarea{
+
+min-height:140px;
+
+resize:vertical;
+
 }
-.form-group select {
-    appearance: auto;
+
+
+
+.form-group select option{
+
+background:#080808;
+
+color:white;
+
 }
-.submit-btn {
-    width: 100%;
-    padding: 17px;
-    border: none;
-    background: var(--gold);
-    color: #080808;
-    font-family: inherit;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: .3s;
+
+
+
+/* =========================================
+FORM BUTTON
+========================================= */
+
+
+.submit-button{
+
+margin-top:35px;
+
+width:100%;
+
+padding:18px;
+
+background:var(--gold);
+
+border:none;
+
+color:#080808;
+
+font-size:12px;
+
+font-weight:bold;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+cursor:pointer;
+
+transition:.25s;
+
 }
-.submit-btn:hover {
-    background: var(--gold-light);
+
+
+
+.submit-button:hover{
+
+background:var(--gold-light);
+
 }
-/* =========================
-   HOW IT WORKS
-========================= */
-.how-it-works {
-    padding: 100px 7%;
-    background: #111;
+
+
+
+/* =========================================
+INFO CARDS
+========================================= */
+
+
+.quote-info{
+
+padding:90px 8%;
+
+background:#101010;
+
 }
-.section-heading {
-    max-width: 700px;
-    margin: 0 auto 60px;
-    text-align: center;
+
+
+
+.info-grid{
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
 }
-.section-heading h2 {
-    font-size: clamp(38px,5vw,60px);
-    line-height: 1;
-    text-transform: uppercase;
+
+
+
+.info-card{
+
+background:#141414;
+
+padding:35px 25px;
+
+border:1px solid rgba(255,255,255,.08);
+
 }
-.section-heading h2 span {
-    color: var(--gold-light);
+
+
+
+.info-number{
+
+color:var(--gold);
+
+font-size:11px;
+
+font-weight:bold;
+
+letter-spacing:2px;
+
 }
-.section-heading p {
-    margin-top: 18px;
-    color: #888;
+
+
+
+.info-card h3{
+
+font-family:Georgia,serif;
+
+font-size:28px;
+
+margin:15px 0;
+
 }
-.steps-grid {
-    max-width: 1000px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+
+
+
+.info-card p{
+
+color:var(--gray);
+
+font-size:14px;
+
+line-height:1.8;
+
 }
-.step-card {
-    padding: 35px 25px;
-    text-align: center;
-    background: #0a0a0a;
-    border: 1px solid #292929;
+
+
+
+/* =========================================
+CTA
+========================================= */
+
+
+.quote-cta{
+
+padding:100px 8%;
+
+text-align:center;
+
+background:
+
+linear-gradient(
+rgba(8,8,8,.9),
+rgba(8,8,8,.9)
+),
+
+url("https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=2000&q=85")
+
+center/cover no-repeat;
+
 }
-.step-number {
-    color: var(--gold-light);
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 3px;
+
+
+
+.quote-cta h2{
+
+font-family:Georgia,serif;
+
+font-size:clamp(40px,6vw,65px);
+
+line-height:1.1;
+
+margin-bottom:25px;
+
 }
-.step-card h3 {
-    margin-top: 15px;
-    font-size: 19px;
-    text-transform: uppercase;
+
+
+
+.quote-cta h2 span{
+
+color:var(--gold-light);
+
 }
-.step-card p {
-    margin-top: 10px;
-    color: #777;
-    font-size: 12px;
+
+
+
+.quote-cta p{
+
+max-width:650px;
+
+margin:0 auto;
+
+color:#bbb;
+
 }
-/* =========================
-   FOOTER
-========================= */
-footer {
-    padding: 50px 7% 90px;
-    text-align: center;
-    background: #050505;
+
+
+
+/* =========================================
+FOOTER
+========================================= */
+
+
+footer{
+
+padding:60px 8% 30px;
+
+background:#050505;
+
+border-top:1px solid var(--border);
+
+text-align:center;
+
 }
-.footer-logo {
-    font-size: 20px;
-    font-weight: 900;
-    letter-spacing: 3px;
+
+
+
+.footer-logo{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:12px;
+
+margin-bottom:20px;
+
 }
-.footer-logo span {
-    color: var(--gold-light);
+
+
+
+.footer-logo-mark{
+
+width:44px;
+
+height:44px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border:1px solid var(--gold);
+
+color:var(--gold);
+
+font-size:11px;
+
+font-weight:bold;
+
 }
-footer p {
-    margin-top: 10px;
-    color: #666;
-    font-size: 12px;
+
+
+
+.footer-name{
+
+text-align:left;
+
 }
-/* =========================
-   MOBILE BAR
-========================= */
-.mobile-bar {
-    display: none;
+
+
+
+.footer-name strong{
+
+display:block;
+
+font-size:12px;
+
+letter-spacing:2px;
+
 }
-/* =========================
-   RESPONSIVE
-========================= */
-@media(max-width:850px) {
-    .quote-container {
-        grid-template-columns: 1fr;
-        max-width: 700px;
-    }
-    .steps-grid {
-        grid-template-columns: 1fr;
-        max-width: 600px;
-    }
+
+
+
+.footer-name small{
+
+color:var(--gold);
+
+font-size:8px;
+
+letter-spacing:2px;
+
 }
-@media(max-width:600px) {
-    body {
-        padding-bottom: 62px;
-    }
-    nav {
-        padding: 17px 5%;
-    }
-    .page-hero {
-        padding: 140px 5% 70px;
-    }
-    .quote-section,
-    .how-it-works {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-    .quote-info,
-    .quote-form {
-        padding: 30px 22px;
-    }
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-    .mobile-bar {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 9999;
-        background: #050505;
-        border-top: 1px solid rgba(201,162,39,.3);
-    }
-    .mobile-bar a {
-        width: 50%;
-        padding: 17px 5px;
-        text-align: center;
-        font-size: 10px;
-        font-weight: 900;
-    }
-    .mobile-bar a:last-child {
-        background: var(--gold);
-        color: #080808;
-    }
+
+
+
+.footer-slogan{
+
+color:var(--gray);
+
+font-size:12px;
+
+margin-bottom:25px;
+
 }
+
+
+
+.footer-contact{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:25px;
+
+margin-bottom:30px;
+
+}
+
+
+
+.footer-contact a{
+
+color:var(--gold-light);
+
+font-size:11px;
+
+letter-spacing:1px;
+
+}
+
+
+
+.copyright{
+
+color:#555;
+
+font-size:10px;
+
+}
+
+
+
+/* =========================================
+MOBILE
+========================================= */
+
+
+@media(max-width:900px){
+
+
+.navbar{
+
+padding:0 5%;
+
+}
+
+
+.menu-toggle{
+
+display:flex;
+
+}
+
+
+.nav-menu{
+
+position:fixed;
+
+top:78px;
+
+left:0;
+
+width:100%;
+
+max-height:0;
+
+overflow:hidden;
+
+display:flex;
+
+flex-direction:column;
+
+background:#080808;
+
+padding:0 5%;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.3s;
+
+}
+
+
+
+.nav-menu.active{
+
+max-height:500px;
+
+padding-top:15px;
+
+padding-bottom:25px;
+
+opacity:1;
+
+visibility:visible;
+
+border-bottom:1px solid var(--gold);
+
+}
+
+
+
+.nav-menu li{
+
+width:100%;
+
+}
+
+
+
+.nav-menu a{
+
+display:block;
+
+padding:16px 5px;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.form-group.full{
+
+grid-column:auto;
+
+}
+
+
+
+.quote-container{
+
+padding:30px 20px;
+
+}
+
+
+
+.info-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+
+
 </style>
+
 </head>
+
 <body>
+
+
+<!-- =========================================
+NAVIGATION
+========================================= -->
+
+
+<header class="navbar">
+
+
+<a href="index.html" class="logo">
+
+<div class="logo-mark">
+EMR
+</div>
+
+
+<div class="logo-text">
+
+<span class="logo-main">
+ENHANCE MY RIDE
+</span>
+
+
+<span class="logo-sub">
+AUTO SPA & MOBILE DETAILING
+</span>
+
+
+</div>
+
+</a>
+
+
+
+<button
+type="button"
+class="menu-toggle"
+id="menuToggle"
+aria-label="Open navigation menu"
+aria-expanded="false"
+>
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+
+
 <nav>
-<a href="index.html" class="brand">
-ENHANCE <span>MY RIDE</span>
-</a>
-<div class="menu-wrapper">
-<details class="menu-dropdown">
-<summary aria-label="Open navigation menu">
-☰
-</summary>
-<div class="nav-menu">
 
+<ul class="nav-menu" id="navMenu">
+
+
+<li>
+<a href="index.html">
 Home
+</a>
+</li>
 
+
+<li>
+<a href="services.html">
 Services
+</a>
+</li>
 
+
+<li>
+<a href="service-area.html">
+Service Area
+</a>
+</li>
+
+
+<li>
+<a href="gallery.html">
 Gallery
+</a>
+</li>
 
+
+<li>
+<a href="about.html">
 About
+</a>
+</li>
 
-Service Area
 
-<a href="quote.html" class="menu-quote">
-Get a Quote
-</a>
-</div>
-</details>
-</div>
-</nav>
-<header class="page-hero">
-<div class="label">
-Premium Mobile Detailing
-</div>
-<h1>
-Get Your <span>Quote</span>
-</h1>
-<p>
-Tell us about your vehicle, your location, and the service
-you're looking for. We'll review your request and get back
-to you with a personalized quote.
-</p>
-</header>
-<section class="quote-section">
-<div class="quote-container">
-<div class="quote-info">
-<div class="label">
-Let's Get Started
-</div>
-<h2>
-Your Ride.<br>
-<span>Our Expertise.</span>
-</h2>
-<p>
-Complete the quote request and give us a few details about
-your vehicle. The more information you provide, the better
-we can understand your needs.
-</p>
-<ul class="contact-list">
 <li>
-<span class="contact-label">
-Call or Text
-</span>
-<a href="tel:13233271806" class="contact-value">
-323-327-1806
+<a href="quote.html" class="nav-quote">
+Get A Quote
 </a>
 </li>
-<li>
-<span class="contact-label">
-Email
-</span>
-<a href="mailto:Enhancemyridemobiledetailing@gmail.com" class="contact-value">
-Enhancemyridemobiledetailing@gmail.com
-</a>
-</li>
-<li>
-<span class="contact-label">
-Service Area
-</span>
-<span class="contact-value">
-San Francisco & Greater Bay Area
-</span>
-</li>
+
+
 </ul>
-<div class="quote-note">
-<p>
-<strong>Pricing:</strong> All package prices are starting prices.
-Final pricing may vary based on vehicle size, condition,
-location, and the services requested.
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<main>
+
+
+
+<!-- =========================================
+HERO
+========================================= -->
+
+
+<section class="quote-hero">
+
+
+<div class="hero-content">
+
+
+<p class="eyebrow">
+BOOK YOUR DETAIL
 </p>
+
+
+<h1>
+Request<br>
+<span>Your Quote.</span>
+</h1>
+
+
+<p>
+Tell us about your vehicle and we’ll create a
+personalized detailing recommendation designed
+around your needs.
+</p>
+
+
 </div>
-</div>
-<form class="quote-form" action="mailto:Enhancemyridemobiledetailing@gmail.com" method="post" enctype="text/plain">
-<div class="form-heading">
+
+
+</section>
+
+
+
+
+
+<!-- =========================================
+QUOTE FORM
+========================================= -->
+
+
+<section class="quote-section">
+
+
+<div class="quote-container">
+
+
+<div class="quote-title">
+
 <h2>
-Request A Quote
+Let's <span>Enhance</span> Your Ride
 </h2>
+
+
 <p>
-Fill out the form below and we'll be in touch.
+Complete the form below and we’ll get back to you
+with your custom quote.
 </p>
+
+
 </div>
-<div class="form-row">
+
+
+
+
+<form>
+
+
+
+<div class="form-grid">
+
+
+
 <div class="form-group">
-<label for="name">
+
+<label>
 Full Name
 </label>
 
-<input
-type=“text”
-id=“name”
-name=“Name”
-placeholder=“Your name”
-required
+<input 
+type="text"
+placeholder="Your Name"
+>
 
 </div>
+
+
+
+
 <div class="form-group">
-<label for="phone">
+
+<label>
 Phone Number
 </label>
 
-<input
-type=“tel”
-id=“phone”
-name=“Phone”
-placeholder=“Your phone number”
-required
+<input 
+type="tel"
+placeholder="(000) 000-0000"
+>
 
 </div>
-</div>
+
+
+
+
 <div class="form-group">
-<label for="email">
+
+<label>
 Email Address
 </label>
 
-<input
-type=“email”
-id=“email”
-name=“Email”
-placeholder=“Your email address”
-required
+<input 
+type="email"
+placeholder="Your Email"
+>
 
 </div>
-<div class="form-row">
+
+
+
+
 <div class="form-group">
-<label for="vehicle">
-Vehicle
+
+<label>
+Vehicle Year / Make / Model
 </label>
 
-<input
-type=“text”
-id=“vehicle”
-name=“Vehicle”
-placeholder=“Year, Make & Model”
-required
+<input 
+type="text"
+placeholder="Example: 2015 Honda CR-V"
+>
 
 </div>
+
+
+
+
 <div class="form-group">
-<label for="location">
-City / ZIP Code
+
+<label>
+Select Service
 </label>
 
-<input
-type=“text”
-id=“location”
-name=“Location”
-placeholder=“Where is your vehicle located?”
-required
 
-</div>
-</div>
-<div class="form-group">
-<label for="package">
-Preferred Package
-</label>
-<select id="package" name="Preferred Package">
-<option value="">
-Select a package
+<select>
+
+<option>
+Choose Package
 </option>
-<option value="Enhance Gold">
-Enhance Gold — Starting at $150
+
+<option>
+Enhance Gold Package
 </option>
-<option value="Enhance Black Label">
-Enhance Black Label — Starting at $250
+
+<option>
+Black Label Package
 </option>
-<option value="Enhance Showroom Edition">
-Enhance Showroom Edition — Starting at $350
+
+<option>
+Showroom Edition
 </option>
-<option value="Not Sure">
-I'm Not Sure — Help Me Choose
+
+<option>
+Custom Detail
 </option>
+
+
 </select>
+
+
 </div>
+
+
+
+
 <div class="form-group">
-<label for="addons">
-Add-On Services
+
+<label>
+Vehicle Condition
 </label>
 
-<input
-type=“text”
-id=“addons”
-name=“Add-On Services”
-placeholder=“Pet hair, stain treatment, headlight restoration, etc.”
+
+<select>
+
+
+<option>
+Select Condition
+</option>
+
+<option>
+Light Maintenance
+</option>
+
+<option>
+Moderately Dirty
+</option>
+
+<option>
+Heavy Cleaning Needed
+</option>
+
+<option>
+Show Vehicle / Premium Care
+</option>
+
+
+</select>
+
 
 </div>
+
+
+
+
 <div class="form-group">
-<label for="message">
+
+<label>
+Preferred Service Date
+</label>
+
+
+<input 
+type="date"
+>
+
+
+</div>
+
+
+
+
+<div class="form-group">
+
+<label>
+City / Location
+</label>
+
+
+<input
+type="text"
+placeholder="Your City"
+>
+
+
+</div>
+
+
+
+
+<div class="form-group full">
+
+
+<label>
 Tell Us About Your Vehicle
 </label>
+
+
 <textarea
-id="message"
-name="Vehicle Details"
-placeholder="Tell us about the condition of your vehicle, what you'd like done, and anything else we should know."
+placeholder="Describe your vehicle, concerns, stains, scratches, or anything else we should know..."
 ></textarea>
+
+
 </div>
-<button type="submit" class="submit-btn">
-Send My Quote Request
+
+
+
+</div>
+
+
+
+
+<button 
+type="submit"
+class="submit-button"
+>
+
+Request My Quote
+
 </button>
+
+
+
 </form>
+
+
+
 </div>
+
+
 </section>
-<section class="how-it-works">
-<div class="section-heading">
-<div class="label">
-Simple. Convenient. Premium.
-</div>
-<h2>
-How It <span>Works</span>
-</h2>
-<p>
-Getting your vehicle detailed doesn't have to be complicated.
-</p>
-</div>
-<div class="steps-grid">
-<div class="step-card">
-<div class="step-number">
-01
-</div>
+
+
+
+
+
+
+<!-- =========================================
+INFO
+========================================= -->
+
+
+<section class="quote-info">
+
+
+<div class="info-grid">
+
+
+
+<div class="info-card">
+
+
+<span class="info-number">
+01 · CONSULTATION
+</span>
+
+
 <h3>
-Request A Quote
+We Review
 </h3>
+
+
 <p>
-Tell us about your vehicle and where it's located.
+We learn about your vehicle and recommend the best
+service option.
 </p>
+
+
 </div>
-<div class="step-card">
-<div class="step-number">
-02
-</div>
-<h3>
-We Confirm
-</h3>
-<p>
-We'll review your request, discuss your needs,
-and confirm pricing and availability.
-</p>
-</div>
-<div class="step-card">
-<div class="step-number">
-03
-</div>
+
+
+
+
+
+<div class="info-card">
+
+
+<span class="info-number">
+02 · DETAIL
+</span>
+
+
 <h3>
 We Enhance
 </h3>
+
+
 <p>
-We come to you, you relax, and we transform
-your vehicle with professional detailing.
+Our mobile detailing process brings a premium finish
+directly to you.
 </p>
+
+
 </div>
+
+
+
+
+
+<div class="info-card">
+
+
+<span class="info-number">
+03 · RESULTS
+</span>
+
+
+<h3>
+You Enjoy
+</h3>
+
+
+<p>
+A cleaner, refreshed vehicle without losing your time
+at a shop.
+</p>
+
+
 </div>
+
+
+
+</div>
+
+
 </section>
+
+
+
+
+
+
+<!-- =========================================
+CTA
+========================================= -->
+
+
+<section class="quote-cta">
+
+
+<p class="eyebrow">
+SAN FRANCISCO · BAY AREA
+</p>
+
+
+<h2>
+
+Ready To
+<span>
+Enhance Your Ride?
+</span>
+
+</h2>
+
+
+<p>
+Premium mobile detailing delivered directly to your
+door.
+</p>
+
+
+</section>
+
+
+
+</main>
+
+
+
+
+
+
+
+<!-- =========================================
+FOOTER
+========================================= -->
+
+
 <footer>
+
+
 <div class="footer-logo">
-ENHANCE <span>MY RIDE</span>
+
+
+<div class="footer-logo-mark">
+EMR
 </div>
-<p>
-Enhance My Ride Auto Spa & Mobile Detailing
+
+
+
+<div class="footer-name">
+
+
+<strong>
+ENHANCE MY RIDE
+</strong>
+
+
+<small>
+AUTO SPA & MOBILE DETAILING
+</small>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<p class="footer-slogan">
+We come to you. Your relax. We Enhance.
 </p>
-<p>
-We come to you. You relax. We Enhance.
+
+
+
+
+<div class="footer-contact">
+
+
+<a href="tel:3233271806">
+(323) 327-1806
+</a>
+
+
+<a href="mailto:Enhancemyridemobiledetailing@gmail.com">
+Enhancemyridemobiledetailing@gmail.com
+</a>
+
+
+</div>
+
+
+
+
+<p class="copyright">
+© 2026 Enhance My Ride Auto Spa & Mobile Detailing.
+All rights reserved.
 </p>
-<p>
-323-327-1806 · Enhancemyridemobiledetailing@gmail.com
-</p>
-<p>
-© 2026 Enhance My Ride. All Rights Reserved.
-</p>
+
+
+
 </footer>
-<div class="mobile-bar">
-<a href="tel:13233271806">
-☎ CALL / TEXT
-</a>
-<a href="quote.html">
-REQUEST A QUOTE
-</a>
-</div>
+
+
+
+
+
+
+<!-- =========================================
+MENU JAVASCRIPT
+========================================= -->
+
+
+<script>
+
+
+const menuToggle =
+document.getElementById("menuToggle");
+
+
+const navMenu =
+document.getElementById("navMenu");
+
+
+
+menuToggle.addEventListener("click", function(){
+
+
+const open =
+menuToggle.classList.toggle("active");
+
+
+navMenu.classList.toggle("active", open);
+
+
+menuToggle.setAttribute(
+"aria-expanded",
+open
+);
+
+
+
+});
+
+
+
+
+
+document.querySelectorAll(".nav-menu a")
+.forEach(function(link){
+
+
+link.addEventListener("click", function(){
+
+
+menuToggle.classList.remove("active");
+
+navMenu.classList.remove("active");
+
+
+});
+
+
+});
+
+
+
+</script>
+
+
+
+
 </body>
+
 </html>
