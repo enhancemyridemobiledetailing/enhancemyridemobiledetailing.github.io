@@ -1,0 +1,565 @@
+/* =========================================
+   ENHANCE MY RIDE
+   MASTER WEBSITE STYLES
+========================================= */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #080808;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+
+/* =========================================
+   COLORS
+========================================= */
+
+
+:root {
+
+    --black: #080808;
+
+    --dark: #101010;
+
+    --card: #151515;
+
+    --gold: #c9a227;
+
+    --gold-light: #e6c85c;
+
+    --white: #f5f5f5;
+
+    --gray: #a5a5a5;
+
+    --border: rgba(201,162,39,.3);
+
+}
+
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+
+.container {
+
+    width: 84%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+.section {
+
+    padding: 110px 0;
+
+}
+
+
+.eyebrow {
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+
+}
+
+
+.section-title {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(40px,5vw,65px);
+
+    line-height: 1.1;
+
+}
+
+
+.section-title span {
+
+    color: var(--gold-light);
+
+}
+
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+
+.button {
+
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    border: 1px solid var(--gold);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition: .3s ease;
+
+}
+
+
+
+.button-gold {
+
+    background: var(--gold);
+
+    color: #080808;
+
+}
+
+
+.button-gold:hover {
+
+    background: var(--gold-light);
+
+}
+
+
+
+.button-outline {
+
+    color:white;
+
+    background:rgba(0,0,0,.3);
+
+}
+
+
+.button-outline:hover {
+
+    background:var(--gold);
+
+    color:#080808;
+
+}
+
+
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+
+.navbar {
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:78px;
+
+    background:rgba(8,8,8,.96);
+
+    border-bottom:1px solid var(--border);
+
+    z-index:9999;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 6%;
+
+}
+
+
+
+.logo {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+
+.logo-mark {
+
+    width:44px;
+
+    height:44px;
+
+    border:1px solid var(--gold);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    font-weight:bold;
+
+}
+
+
+
+.logo-main {
+
+    display:block;
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.logo-sub {
+
+    display:block;
+
+    color:var(--gold);
+
+    font-size:8px;
+
+    letter-spacing:2px;
+
+}
+
+
+
+
+
+.nav-menu {
+
+    display:flex;
+
+    list-style:none;
+
+    gap:30px;
+
+}
+
+
+
+.nav-menu a {
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.nav-menu a:hover {
+
+    color:var(--gold-light);
+
+}
+
+
+
+.nav-quote {
+
+    border:1px solid var(--gold);
+
+    padding:11px 18px;
+
+    color:var(--gold-light);
+
+}
+
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+
+.menu-toggle {
+
+    display:none;
+
+    width:48px;
+
+    height:48px;
+
+    border:1px solid var(--gold);
+
+    background:none;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:5px;
+
+}
+
+
+
+.menu-toggle span {
+
+    width:23px;
+
+    height:2px;
+
+    background:var(--gold);
+
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+
+footer {
+
+    background:#050505;
+
+    border-top:1px solid var(--border);
+
+    padding:70px 0 30px;
+
+}
+
+
+
+.footer-grid {
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:50px;
+
+}
+
+
+
+.footer-title {
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.footer-sub {
+
+    color:var(--gold);
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.footer-text {
+
+    color:#999;
+
+    font-size:13px;
+
+    margin-top:20px;
+
+}
+
+
+
+.social-icons {
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+
+
+.social-icons a {
+
+    width:40px;
+
+    height:40px;
+
+    border:1px solid var(--gold);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--gold-light);
+
+}
+
+
+
+.social-icons a:hover {
+
+    background:var(--gold);
+
+    color:#080808;
+
+}
+
+
+
+.copyright {
+
+    text-align:center;
+
+    color:#555;
+
+    font-size:10px;
+
+    margin-top:40px;
+
+}
+
+
+
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+
+@media(max-width:900px){
+
+
+.nav-menu {
+
+    position:fixed;
+
+    top:78px;
+
+    left:0;
+
+    width:100%;
+
+    background:#080808;
+
+    flex-direction:column;
+
+    padding:0 6%;
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+}
+
+
+
+.nav-menu.active {
+
+    max-height:500px;
+
+    padding-top:20px;
+
+    padding-bottom:25px;
+
+}
+
+
+
+.menu-toggle {
+
+    display:flex;
+
+}
+
+
+
+.footer-grid {
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
