@@ -4,14 +4,21 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get A Quote | Enhance My Ride Auto Spa & Mobile Detailing</title>
+<title>Get A Quote | Enhance My Ride Auto Spa</title>
 
-<meta name="description" content="Request a premium mobile detailing quote from Enhance My Ride serving San Francisco and the entire Bay Area.">
+<meta name="description" content="Book premium mobile detailing with Enhance My Ride Auto Spa serving San Francisco and the Bay Area.">
 
 
 <style>
+
+
+/* =========================================
+RESET
+========================================= */
+
 
 *{
 margin:0;
@@ -19,73 +26,111 @@ padding:0;
 box-sizing:border-box;
 }
 
+
 html{
 scroll-behavior:smooth;
 }
 
+
 body{
+
 background:#080808;
+
 color:#f5f5f5;
+
 font-family:Arial, Helvetica, sans-serif;
+
 line-height:1.6;
+
 overflow-x:hidden;
+
 }
+
 
 a{
+
 color:inherit;
+
 text-decoration:none;
+
 }
+
 
 :root{
+
+--black:#080808;
+
+--dark:#111111;
+
 --gold:#c9a227;
+
 --gold-light:#e6c85c;
+
 --gray:#a5a5a5;
+
 --border:rgba(201,162,39,.3);
+
 }
 
 
-/* NAVBAR */
+
+/* =========================================
+NAVBAR
+========================================= */
+
 
 .navbar{
 
 position:fixed;
+
 top:0;
+
 left:0;
 
 width:100%;
+
 height:78px;
 
-z-index:9999;
+z-index:10000;
 
 display:flex;
+
 align-items:center;
+
 justify-content:space-between;
 
 padding:0 6%;
 
-background:#080808;
+background:rgba(8,8,8,.98);
 
 border-bottom:1px solid var(--border);
 
 }
 
 
+
 .logo{
 
 display:flex;
+
 align-items:center;
+
 gap:12px;
 
 }
 
 
+
 .logo-mark{
 
 width:44px;
+
 height:44px;
 
 display:flex;
+
 align-items:center;
+
 justify-content:center;
 
 border:1px solid var(--gold);
@@ -93,27 +138,37 @@ border:1px solid var(--gold);
 color:var(--gold);
 
 font-size:11px;
+
 font-weight:bold;
 
+letter-spacing:1px;
+
 }
+
 
 
 .logo-text{
 
 display:flex;
+
 flex-direction:column;
 
 }
 
 
+
 .logo-main{
 
 font-size:12px;
+
 font-weight:bold;
 
 letter-spacing:2px;
 
+white-space:nowrap;
+
 }
+
 
 
 .logo-sub{
@@ -124,23 +179,29 @@ letter-spacing:2px;
 
 color:var(--gold);
 
+white-space:nowrap;
+
 }
 
 
-/* MENU */
+
+/* =========================================
+DESKTOP MENU
+========================================= */
 
 
 .nav-menu{
 
 display:flex;
 
-gap:28px;
-
 align-items:center;
+
+gap:28px;
 
 list-style:none;
 
 }
+
 
 
 .nav-menu a{
@@ -153,7 +214,10 @@ letter-spacing:1.5px;
 
 text-transform:uppercase;
 
+transition:.2s;
+
 }
+
 
 
 .nav-menu a:hover{
@@ -163,18 +227,22 @@ color:var(--gold-light);
 }
 
 
+
 .nav-quote{
 
 border:1px solid var(--gold);
 
 padding:11px 18px;
 
-color:var(--gold-light);
+color:var(--gold-light)!important;
 
 }
 
 
-/* HAMBURGER */
+
+/* =========================================
+HAMBURGER
+========================================= */
 
 
 .menu-toggle{
@@ -189,6 +257,8 @@ background:#080808;
 
 border:1px solid var(--gold);
 
+cursor:pointer;
+
 align-items:center;
 
 justify-content:center;
@@ -197,9 +267,8 @@ flex-direction:column;
 
 gap:5px;
 
-cursor:pointer;
-
 }
+
 
 
 .menu-toggle span{
@@ -212,7 +281,10 @@ height:2px;
 
 background:var(--gold);
 
+transition:.25s;
+
 }
+
 
 
 .menu-toggle.active span:nth-child(1){
@@ -222,11 +294,13 @@ transform:translateY(7px) rotate(45deg);
 }
 
 
+
 .menu-toggle.active span:nth-child(2){
 
 opacity:0;
 
 }
+
 
 
 .menu-toggle.active span:nth-child(3){
@@ -237,18 +311,21 @@ transform:translateY(-7px) rotate(-45deg);
 
 
 
-/* HERO */
+/* =========================================
+HERO
+========================================= */
 
 
-.hero{
+.quote-hero{
 
-min-height:70vh;
+min-height:75vh;
 
 display:flex;
 
 align-items:center;
 
 padding:150px 8% 90px;
+
 
 background:
 
@@ -265,11 +342,13 @@ center/cover no-repeat;
 }
 
 
+
 .hero-content{
 
 max-width:750px;
 
 }
+
 
 
 .eyebrow{
@@ -287,29 +366,32 @@ margin-bottom:20px;
 }
 
 
-.hero h1{
 
-font-family:Georgia,serif;
+.quote-hero h1{
 
-font-size:clamp(55px,8vw,100px);
+font-family:Georgia,"Times New Roman",serif;
+
+font-size:clamp(55px,9vw,110px);
 
 line-height:.95;
 
-letter-spacing:-3px;
+letter-spacing:-4px;
+
+margin-bottom:25px;
 
 }
 
 
-.hero h1 span{
+
+.quote-hero h1 span{
 
 color:var(--gold-light);
 
 }
 
 
-.hero p{
 
-margin-top:25px;
+.quote-hero p{
 
 max-width:600px;
 
@@ -317,16 +399,19 @@ font-size:17px;
 
 color:#ccc;
 
+line-height:1.8;
+
 }
 
 
-
-/* FORM SECTION */
+/* =========================================
+QUOTE SECTION
+========================================= */
 
 
 .quote-section{
 
-padding:100px 8%;
+padding:110px 8%;
 
 background:#0c0c0c;
 
@@ -335,7 +420,7 @@ background:#0c0c0c;
 
 .quote-box{
 
-max-width:1000px;
+max-width:1100px;
 
 margin:auto;
 
@@ -343,38 +428,44 @@ background:#121212;
 
 border:1px solid rgba(255,255,255,.08);
 
-padding:50px;
+padding:55px;
 
 }
 
 
-.quote-box h2{
+.quote-heading{
 
 text-align:center;
 
-font-family:Georgia,serif;
-
-font-size:50px;
-
-margin-bottom:15px;
+margin-bottom:50px;
 
 }
 
 
-.quote-box h2 span{
+.quote-heading h2{
+
+font-family:Georgia,"Times New Roman",serif;
+
+font-size:clamp(38px,5vw,60px);
+
+line-height:1.1;
+
+}
+
+
+
+.quote-heading h2 span{
 
 color:var(--gold-light);
 
 }
 
 
-.quote-box>p{
-
-text-align:center;
+.quote-heading p{
 
 color:var(--gray);
 
-margin-bottom:45px;
+margin-top:15px;
 
 }
 
@@ -383,14 +474,15 @@ margin-bottom:45px;
 
 display:grid;
 
-grid-template-columns:1fr 1fr;
+grid-template-columns:repeat(2,1fr);
 
 gap:25px;
 
 }
 
 
-.field{
+
+.form-group{
 
 display:flex;
 
@@ -399,68 +491,74 @@ flex-direction:column;
 }
 
 
-.field.full{
+
+.form-group.full{
 
 grid-column:1/-1;
 
 }
 
 
-label{
+
+.form-group label{
 
 font-size:11px;
 
-letter-spacing:1.5px;
-
 font-weight:bold;
 
-margin-bottom:8px;
+letter-spacing:1.5px;
 
 color:#ddd;
+
+margin-bottom:10px;
 
 }
 
 
-input,
-select,
-textarea{
+
+.form-group input,
+.form-group select,
+.form-group textarea{
 
 background:#080808;
 
 border:1px solid rgba(255,255,255,.15);
 
-padding:15px;
-
 color:white;
+
+padding:16px;
 
 font-size:14px;
 
-}
-
-
-textarea{
-
-height:140px;
-
-resize:none;
-
-}
-
-
-input:focus,
-select:focus,
-textarea:focus{
-
 outline:none;
+
+}
+
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
 
 border-color:var(--gold);
 
 }
 
 
-.submit{
 
-margin-top:30px;
+.form-group textarea{
+
+height:150px;
+
+resize:none;
+
+}
+
+
+
+.submit-button{
+
+margin-top:35px;
 
 width:100%;
 
@@ -470,25 +568,322 @@ background:var(--gold);
 
 border:none;
 
-font-size:12px;
-
 font-weight:bold;
 
 letter-spacing:2px;
+
+font-size:12px;
 
 cursor:pointer;
 
 }
 
 
-.submit:hover{
+
+.submit-button:hover{
 
 background:var(--gold-light);
 
 }
 
 
+
+
+/* INFO */
+
+
+.quote-info{
+
+padding:90px 8%;
+
+background:#101010;
+
+}
+
+
+
+.info-grid{
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+}
+
+
+
+.info-card{
+
+background:#151515;
+
+padding:35px 25px;
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.info-number{
+
+font-size:11px;
+
+letter-spacing:2px;
+
+color:var(--gold);
+
+font-weight:bold;
+
+}
+
+
+
+.info-card h3{
+
+font-family:Georgia,serif;
+
+font-size:30px;
+
+margin:15px 0;
+
+}
+
+
+
+.info-card p{
+
+color:var(--gray);
+
+font-size:14px;
+
+}
+
+
+
+/* CTA */
+
+
+.final-cta{
+
+padding:100px 8%;
+
+text-align:center;
+
+background:
+
+linear-gradient(
+rgba(8,8,8,.9),
+rgba(8,8,8,.9)
+),
+
+url("https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=2000&q=85")
+
+center/cover;
+
+}
+
+
+
+.final-cta h2{
+
+font-family:Georgia,serif;
+
+font-size:clamp(40px,6vw,70px);
+
+}
+
+
+
+.final-cta h2 span{
+
+color:var(--gold-light);
+
+}
+
+
+
+.final-cta p{
+
+color:#bbb;
+
+margin:20px auto 0;
+
+}
+
+
+
+/* FOOTER */
+
+
+footer{
+
+padding:60px 8% 30px;
+
+background:#050505;
+
+border-top:1px solid var(--border);
+
+text-align:center;
+
+}
+
+
+
+.footer-contact{
+
+margin-top:20px;
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.footer-contact a{
+
+color:var(--gold-light);
+
+font-size:12px;
+
+}
+
+
+
+.copyright{
+
+margin-top:25px;
+
+color:#555;
+
+font-size:10px;
+
+}
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:900px){
+
+
+.menu-toggle{
+
+display:flex;
+
+}
+
+
+.nav-menu{
+
+position:fixed;
+
+top:78px;
+
+left:0;
+
+width:100%;
+
+background:#080808;
+
+max-height:0;
+
+overflow:hidden;
+
+display:flex;
+
+flex-direction:column;
+
+padding:0 5%;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.3s;
+
+}
+
+
+
+.nav-menu.active{
+
+max-height:500px;
+
+padding-top:15px;
+
+padding-bottom:25px;
+
+opacity:1;
+
+visibility:visible;
+
+border-bottom:1px solid var(--gold);
+
+}
+
+
+
+.nav-menu li{
+
+width:100%;
+
+}
+
+
+
+.nav-menu a{
+
+display:block;
+
+padding:16px 5px;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.quote-box{
+
+padding:30px 20px;
+
+}
+
+
+
+.info-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+}
 </style>
+
 
 </head>
 
@@ -496,10 +891,12 @@ background:var(--gold-light);
 <body>
 
 
+
 <header class="navbar">
 
 
 <a href="index.html" class="logo">
+
 
 <div class="logo-mark">
 EMR
@@ -512,18 +909,18 @@ EMR
 ENHANCE MY RIDE
 </span>
 
-
 <span class="logo-sub">
 AUTO SPA & MOBILE DETAILING
 </span>
 
 </div>
 
+
 </a>
 
 
 
-<button class="menu-toggle" id="menuToggle" type="button">
+<button class="menu-toggle" id="menuToggle">
 
 <span></span>
 <span></span>
@@ -548,11 +945,7 @@ AUTO SPA & MOBILE DETAILING
 
 <li><a href="about.html">About</a></li>
 
-<li>
-<a href="quote.html" class="nav-quote">
-Get A Quote
-</a>
-</li>
+<li><a href="quote.html" class="nav-quote">Get A Quote</a></li>
 
 
 </ul>
@@ -566,11 +959,11 @@ Get A Quote
 
 
 
+
 <main>
 
 
-
-<section class="hero">
+<section class="quote-hero">
 
 
 <div class="hero-content">
@@ -588,9 +981,8 @@ Request<br>
 
 
 <p>
-Tell us about your vehicle and we’ll create a
-personalized detailing recommendation built around
-your needs.
+Tell us about your vehicle and we’ll create a premium
+detailing recommendation built around your needs.
 </p>
 
 
@@ -603,11 +995,13 @@ your needs.
 
 
 
-
 <section class="quote-section">
 
 
 <div class="quote-box">
+
+
+<div class="quote-heading">
 
 
 <h2>
@@ -616,8 +1010,11 @@ Let's <span>Enhance</span> Your Ride
 
 
 <p>
-Fill out the form below and we will contact you with your custom quote.
+Complete the form below and we will contact you with your custom quote.
 </p>
+
+
+</div>
 
 
 
@@ -628,11 +1025,10 @@ Fill out the form below and we will contact you with your custom quote.
 <div class="form-grid">
 
 
-
-<div class="field">
+<div class="form-group">
 
 <label>
-FULL NAME
+NAME
 </label>
 
 <input type="text" placeholder="Your Name">
@@ -641,11 +1037,10 @@ FULL NAME
 
 
 
-
-<div class="field">
+<div class="form-group">
 
 <label>
-PHONE NUMBER
+PHONE
 </label>
 
 <input type="tel" placeholder="(000) 000-0000">
@@ -654,8 +1049,7 @@ PHONE NUMBER
 
 
 
-
-<div class="field">
+<div class="form-group">
 
 <label>
 EMAIL
@@ -667,165 +1061,113 @@ EMAIL
 
 
 
-
-<div class="field">
+<div class="form-group">
 
 <label>
 VEHICLE
 </label>
 
-<input type="text" placeholder="Year Make Model">
+<input type="text" placeholder="2015 Honda CR-V">
 
 </div>
 
 
 
-
-<div class="field">
+<div class="form-group">
 
 <label>
 SERVICE PACKAGE
 </label>
 
-
 <select>
 
-<option>
-Select Package
-</option>
+<option>Select Package</option>
 
-<option>
-Enhance Gold Package
-</option>
+<option>Enhance Gold Package</option>
 
-<option>
-Black Label Package
-</option>
+<option>Black Label Package</option>
 
-<option>
-Showroom Edition
-</option>
+<option>Showroom Edition</option>
 
-<option>
-Custom Detail
-</option>
-
+<option>Custom Detail</option>
 
 </select>
-
 
 </div>
 
 
 
-
-
-<div class="field">
+<div class="form-group">
 
 <label>
 VEHICLE CONDITION
 </label>
 
-
 <select>
 
+<option>Select Condition</option>
 
-<option>
-Select Condition
-</option>
+<option>Light Maintenance</option>
 
-<option>
-Light Maintenance
-</option>
+<option>Moderately Dirty</option>
 
-<option>
-Moderately Dirty
-</option>
+<option>Heavy Cleaning</option>
 
-<option>
-Heavy Cleaning Needed
-</option>
-
-<option>
-Extreme Restoration
-</option>
-
+<option>Full Restoration</option>
 
 </select>
 
-
 </div>
 
 
 
-
-
-
-<div class="field">
+<div class="form-group">
 
 <label>
-PREFERRED DATE
+CITY
 </label>
-
-
-<input type="date">
-
-
-</div>
-
-
-
-
-
-
-<div class="field">
-
-<label>
-CITY / LOCATION
-</label>
-
 
 <input type="text" placeholder="Your City">
 
-
 </div>
 
 
 
-
-
-
-
-<div class="field full">
+<div class="form-group">
 
 <label>
-ADDITIONAL DETAILS
+DATE REQUESTED
 </label>
 
+<input type="date">
 
-<textarea placeholder="Tell us about your vehicle, stains, scratches, concerns, or anything else we should know."></textarea>
+</div>
+
+
+
+<div class="form-group full">
+
+<label>
+MESSAGE
+</label>
+
+<textarea placeholder="Tell us about your vehicle..."></textarea>
+
+</div>
 
 
 </div>
 
 
 
-
-</div>
-
-
-
-
-<button class="submit" type="submit">
+<button class="submit-button">
 
 REQUEST MY QUOTE
 
 </button>
 
 
-
 </form>
-
 
 
 </div>
@@ -838,35 +1180,89 @@ REQUEST MY QUOTE
 
 
 
+<section class="quote-info">
 
-<section class="quote-section">
+
+<div class="info-grid">
 
 
-<div class="quote-box">
+<div class="info-card">
+
+<span class="info-number">
+01 · BOOK
+</span>
+
+<h3>
+Schedule
+</h3>
+
+<p>
+Choose a service and tell us about your vehicle.
+</p>
+
+</div>
+
+
+
+<div class="info-card">
+
+<span class="info-number">
+02 · DETAIL
+</span>
+
+<h3>
+Enhance
+</h3>
+
+<p>
+We bring the premium mobile detailing experience to you.
+</p>
+
+</div>
+
+
+
+<div class="info-card">
+
+<span class="info-number">
+03 · ENJOY
+</span>
+
+<h3>
+Drive
+</h3>
+
+<p>
+Enjoy a cleaner, refreshed vehicle.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="final-cta">
 
 
 <h2>
-Why Choose <span>Enhance?</span>
+Ready To
+<span>Enhance Your Ride?</span>
 </h2>
 
 
 <p>
-
-✓ Mobile service delivered to your location<br>
-✓ Premium detailing process<br>
-✓ Convenient scheduling<br>
-✓ Professional vehicle care
-
+Premium mobile detailing serving San Francisco and the entire Bay Area.
 </p>
 
 
-</div>
-
-
 </section>
-
-
-
 
 
 </main>
@@ -879,67 +1275,23 @@ Why Choose <span>Enhance?</span>
 <footer>
 
 
-<div class="footer-logo">
-
-
-<div class="logo-mark">
-EMR
-</div>
-
-
-<div class="footer-name">
-
-
-<span class="logo-main">
-ENHANCE MY RIDE
-</span>
-
-
-<span class="logo-sub">
-AUTO SPA & MOBILE DETAILING
-</span>
-
-
-</div>
-
-
-</div>
-
-
-
-
-<p>
-
-We come to you. Your relax. We Enhance.
-
-</p>
-
-
-
-<br>
-
+<div class="footer-contact">
 
 <a href="tel:3233271806">
 (323) 327-1806
 </a>
-
-<br><br>
 
 
 <a href="mailto:Enhancemyridemobiledetailing@gmail.com">
 Enhancemyridemobiledetailing@gmail.com
 </a>
 
+</div>
 
-<br><br>
 
-
-<small>
-
+<p class="copyright">
 © 2026 Enhance My Ride Auto Spa & Mobile Detailing
-
-</small>
-
+</p>
 
 
 </footer>
@@ -949,18 +1301,19 @@ Enhancemyridemobiledetailing@gmail.com
 
 
 
-
-
 <script>
 
 
-const menuToggle = document.getElementById("menuToggle");
-
-const navMenu = document.getElementById("navMenu");
-
+const menuToggle =
+document.getElementById("menuToggle");
 
 
-menuToggle.addEventListener("click", function(){
+const navMenu =
+document.getElementById("navMenu");
+
+
+
+menuToggle.addEventListener("click",()=>{
 
 
 menuToggle.classList.toggle("active");
@@ -972,11 +1325,10 @@ navMenu.classList.toggle("active");
 
 
 
+document.querySelectorAll(".nav-menu a").forEach(link=>{
 
-document.querySelectorAll(".nav-menu a").forEach(function(link){
 
-
-link.addEventListener("click",function(){
+link.addEventListener("click",()=>{
 
 
 menuToggle.classList.remove("active");
@@ -988,7 +1340,6 @@ navMenu.classList.remove("active");
 
 
 });
-
 
 
 </script>
