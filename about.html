@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Enhance My Ride Auto Spa & Mobile Detailing</title>
+
+<meta
+name=“description”
+content=“Learn about Enhance My Ride Auto Spa & Mobile Detailing, a premium mobile detailing company serving San Francisco and the entire Bay Area.”
+
+<style>
+/* =========================================================
+   RESET
+========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #080808;
+  color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font-family: inherit;
+}
+/* =========================================================
+   COLORS
+========================================================= */
+:root {
+  --black: #080808;
+  --dark: #111111;
+  --dark-2: #171717;
+  --gold: #c9a227;
+  --gold-light: #e6c85c;
+  --white: #f5f5f5;
+  --gray: #a5a5a5;
+  --border: rgba(201, 162, 39, 0.3);
+}
+/* =========================================================
+   NAVIGATION
+========================================================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 78px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  background: rgba(8, 8, 8, 0.98);
+  border-bottom: 1px solid var(--border);
+}
+/* =========================================================
+   LOGO
+========================================================= */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.logo-mark {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+.logo-main {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+.logo-sub {
+  color: var(--gold);
+  font-size: 8px;
+  letter-spacing: 2px;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+.nav-menu a {
+  color: #eeeeee;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+.nav-menu a:hover {
+  color: var(--gold-light);
+}
+.nav-quote {
+  border: 1px solid var(--gold);
+  padding: 11px 18px;
+  color: var(--gold-light) !important;
+}
+.nav-quote:hover {
+  background: var(--gold);
+  color: #080808 !important;
+}
+/* =========================================================
+   MOBILE HAMBURGER
+========================================================= */
+.menu-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  background: #080808;
+  border: 1px solid var(--gold);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  z-index: 10002;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.menu-toggle span {
+  display: block;
+  width: 23px;
+  height: 2px;
+  background: var(--gold);
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+/* =========================================================
+   HAMBURGER ANIMATION
+========================================================= */
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+/* =========================================================
+   PAGE HERO
+========================================================= */
+.page-hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 150px 8% 90px;
+  position: relative;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.96) 0%,
+      rgba(0,0,0,0.80) 50%,
+      rgba(0,0,0,0.55) 100%
+    ),
+    url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=85")
+    center / cover no-repeat;
+}
+.page-hero-content {
+  max-width: 800px;
+}
+.eyebrow {
+  color: var(--gold-light);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+.page-hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(55px, 8vw, 100px);
+  line-height: 0.95;
+  letter-spacing: -3px;
+  margin-bottom: 25px;
+}
+.page-hero h1 span {
+  color: var(--gold-light);
+}
+.page-hero p {
+  max-width: 650px;
+  color: #cccccc;
+  font-size: 17px;
+  line-height: 1.8;
+}
+/* =========================================================
+   OUR STORY
+========================================================= */
+.story {
+  padding: 110px 8%;
+  background: #0c0c0c;
+}
+.story-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.story-image {
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.story-image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+.story-content {
+  max-width: 600px;
+}
+.story-content h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 5vw, 62px);
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+.story-content h2 span {
+  color: var(--gold-light);
+}
+.story-content p {
+  color: var(--gray);
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+.story-signature {
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border);
+  color: var(--gold-light);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+/* =========================================================
+   MISSION
+========================================================= */
+.mission {
+  padding: 110px 8%;
+  background: #080808;
+  text-align: center;
+}
+.mission-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+.mission-content h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 5vw, 65px);
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+.mission-content h2 span {
+  color: var(--gold-light);
+}
+.mission-content p {
+  color: var(--gray);
+  font-size: 16px;
+  line-height: 1.9;
+}
+/* =========================================================
+   VALUES
+========================================================= */
+.values {
+  padding: 110px 8%;
+  background: #101010;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.section-heading {
+  max-width: 750px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+.section-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 5vw, 62px);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.section-heading h2 span {
+  color: var(--gold-light);
+}
+.section-heading p:last-child {
+  color: var(--gray);
+  font-size: 15px;
+}
+.values-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.value-card {
+  padding: 45px 30px;
+  background: #141414;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+.value-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+.value-number {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.value-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  margin: 15px 0;
+}
+.value-card p {
+  color: var(--gray);
+  font-size: 13px;
+  line-height: 1.8;
+}
+/* =========================================================
+   WHY ENHANCE
+========================================================= */
+.why-enhance {
+  padding: 110px 8%;
+  background: #0c0c0c;
+}
+.why-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+.why-content h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 5vw, 62px);
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+.why-content h2 span {
+  color: var(--gold-light);
+}
+.why-content > p {
+  color: var(--gray);
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 35px;
+}
+.why-list {
+  list-style: none;
+}
+.why-list li {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: #dddddd;
+  font-size: 13px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+.why-list li:first-child {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.why-check {
+  color: var(--gold-light);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+.why-image {
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.why-image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+/* =========================================================
+   SERVICE AREA
+========================================================= */
+.service-area {
+  padding: 100px 8%;
+  background: #101010;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+.service-area-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.service-area h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 5vw, 60px);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.service-area h2 span {
+  color: var(--gold-light);
+}
+.service-area p {
+  color: var(--gray);
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+/* =========================================================
+   BUTTON
+========================================================= */
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  border: 1px solid var(--gold);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+.button-gold {
+  background: var(--gold);
+  color: #080808;
+}
+.button-gold:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+}
+/* =========================================================
+   CTA
+========================================================= */
+.cta {
+  padding: 110px 8%;
+  text-align: center;
+  background:
+    linear-gradient(
+      rgba(8,8,8,0.90),
+      rgba(8,8,8,0.90)
+    ),
+    url("https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=2000&q=85")
+    center / cover no-repeat;
+}
+.cta h2 {
+  max-width: 800px;
+  margin: 0 auto 25px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 6vw, 70px);
+  line-height: 1.1;
+}
+.cta h2 span {
+  color: var(--gold-light);
+}
+.cta p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: #bbbbbb;
+  font-size: 15px;
+}
+/* =========================================================
+   FOOTER
+========================================================= */
+footer {
+  padding: 60px 8% 30px;
+  background: #050505;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.footer-logo-mark {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: bold;
+}
+.footer-name {
+  text-align: left;
+}
+.footer-name strong {
+  display: block;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.footer-name small {
+  color: var(--gold);
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+.footer-slogan {
+  color: var(--gray);
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+.footer-contact a {
+  color: var(--gold-light);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.copyright {
+  color: #555555;
+  font-size: 10px;
+}
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 5%;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .nav-menu {
+    position: fixed;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 5%;
+    background: #080808;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      max-height 0.3s ease,
+      opacity 0.2s ease,
+      visibility 0.2s ease,
+      padding 0.3s ease,
+      border-color 0.3s ease;
+  }
+  .nav-menu.active {
+    max-height: 500px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    border-bottom-color: var(--gold);
+    box-shadow:
+      0 10px 30px rgba(0,0,0,0.5);
+  }
+  .nav-menu li {
+    width: 100%;
+  }
+  .nav-menu a {
+    display: block;
+    width: 100%;
+    padding: 16px 5px;
+    border-bottom:
+      1px solid rgba(255,255,255,0.08);
+  }
+  .nav-quote {
+    margin-top: 10px;
+    text-align: center;
+    border: 1px solid var(--gold) !important;
+  }
+  .story-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .story-image,
+  .why-image {
+    min-height: 500px;
+  }
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+@media (max-width: 600px) {
+  .logo-main {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+  .logo-sub {
+    font-size: 7px;
+  }
+  .logo-mark {
+    width: 40px;
+    height: 40px;
+  }
+  .menu-toggle {
+    width: 46px;
+    height: 46px;
+  }
+  .page-hero {
+    min-height: 70vh;
+    padding-top: 130px;
+    padding-bottom: 80px;
+  }
+  .page-hero h1 {
+    font-size: 60px;
+  }
+  .page-hero p {
+    font-size: 15px;
+  }
+  .story,
+  .mission,
+  .values,
+  .why-enhance {
+    padding: 80px 6%;
+  }
+  .story-image,
+  .why-image {
+    min-height: 400px;
+  }
+  .service-area {
+    padding: 80px 6%;
+  }
+  .cta {
+    padding: 85px 6%;
+  }
+  .footer-contact {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+</style>
+</head>
+<body>
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+<header class="navbar">
+  <!-- LOGO -->
+  <a href="index.html" class="logo">
+<div class="logo-mark">
+  EMR
+</div>
+<div class="logo-text">
+  <span class="logo-main">
+    ENHANCE MY RIDE
+  </span>
+  <span class="logo-sub">
+    AUTO SPA & MOBILE DETAILING
+  </span>
+</div>
+  </a>
+  <!-- MOBILE HAMBURGER -->
+
+<button
+type=“button”
+class=“menu-toggle”
+id=“menuToggle”
+aria-label=“Open navigation menu”
+aria-expanded=“false”
+aria-controls=“navMenu”
+
+<span></span>
+<span></span>
+<span></span>
+  </button>
+  <!-- NAVIGATION -->
+  <nav>
+<ul class="nav-menu" id="navMenu">
+  <li>
+    <a href="index.html">
+      Home
+    </a>
+  </li>
+  <li>
+    <a href="services.html">
+      Services
+    </a>
+  </li>
+  <li>
+    <a href="service-area.html">
+      Service Area
+    </a>
+  </li>
+  <li>
+    <a href="gallery.html">
+      Gallery
+    </a>
+  </li>
+  <li>
+    <a href="about.html">
+      About
+    </a>
+  </li>
+  <li>
+    <a href="quote.html" class="nav-quote">
+      Get a Quote
+    </a>
+  </li>
+</ul>
+  </nav>
+</header>
+<!-- =========================================================
+     MAIN
+========================================================= -->
+<main>
+<!-- =========================================================
+     PAGE HERO
+========================================================= -->
+<section class="page-hero">
+  <div class="page-hero-content">
+<p class="eyebrow">
+  ABOUT ENHANCE MY RIDE
+</p>
+<h1>
+  More Than<br>
+  <span>A Detail.</span>
+</h1>
+<p>
+  Enhance My Ride was created to bring a premium,
+  convenient, and professional auto spa experience
+  directly to our customers.
+</p>
+  </div>
+</section>
+<!-- =========================================================
+     OUR STORY
+========================================================= -->
+<section class="story">
+  <div class="story-grid">
+<div class="story-image">
+  <img
+    src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=85"
+    alt="Premium vehicle representing Enhance My Ride"
+    loading="lazy"
+  >
+</div>
+<div class="story-content">
+  <p class="eyebrow">
+    OUR STORY
+  </p>
+  <h2>
+    Built Around<br>
+    <span>Your Ride.</span>
+  </h2>
+  <p>
+    Enhance My Ride Auto Spa & Mobile Detailing was built
+    around a simple idea: your vehicle should be cared for
+    with the same attention to detail that you expect from
+    a premium service.
+  </p>
+  <p>
+    We understand that life gets busy. Between work,
+    family, responsibilities, and everything else that
+    fills your day, finding time to sit at a traditional
+    car wash or detailing shop isn't always convenient.
+  </p>
+  <p>
+    That's why we bring the experience to you.
+    Whether you're at home, at work, or wherever your
+    schedule takes you, our goal is to make professional
+    vehicle care easier, more convenient, and more enjoyable.
+  </p>
+  <p>
+    We don't believe in rushing through a vehicle.
+    We believe in taking the time to do the job right,
+    using a professional process and paying attention
+    to the details that make the difference.
+  </p>
+  <div class="story-signature">
+    We come to you. Your relax. We Enhance.
+  </div>
+</div>
+  </div>
+</section>
+<!-- =========================================================
+     MISSION
+========================================================= -->
+<section class="mission">
+  <div class="mission-content">
+<p class="eyebrow">
+  OUR MISSION
+</p>
+<h2>
+  To Make Every Ride Feel<br>
+  <span>Worth Driving.</span>
+</h2>
+<p>
+  Our mission is to deliver a premium mobile detailing
+  experience that combines convenience, craftsmanship,
+  and exceptional customer service. Every vehicle we touch
+  should leave looking better, feeling fresher, and ready
+  for the road.
+</p>
+  </div>
+</section>
+<!-- =========================================================
+     VALUES
+========================================================= -->
+<section class="values">
+  <div class="section-heading">
+<p class="eyebrow">
+  WHAT WE STAND FOR
+</p>
+<h2>
+  The Enhance
+  <span>
+    Standard.
+  </span>
+</h2>
+<p>
+  The experience we deliver is built on three principles
+  that guide every detail we perform.
+</p>
+  </div>
+  <div class="values-grid">
+<article class="value-card">
+  <span class="value-number">
+    01 · QUALITY
+  </span>
+  <h3>
+    Attention to Detail
+  </h3>
+  <p>
+    The difference is in the details. We take pride in
+    the small things that separate a basic clean from
+    a professional detail.
+  </p>
+</article>
+<article class="value-card">
+  <span class="value-number">
+    02 · CONVENIENCE
+  </span>
+  <h3>
+    We Come To You
+  </h3>
+  <p>
+    Your time matters. Our mobile service is designed
+    around your schedule so you can get your vehicle
+    professionally cared for without the traditional wait.
+  </p>
+</article>
+<article class="value-card">
+  <span class="value-number">
+    03 · EXPERIENCE
+  </span>
+  <h3>
+    Premium Service
+  </h3>
+  <p>
+    From the first conversation to the final walk-around,
+    we aim to provide a professional experience that
+    makes you want to come back.
+  </p>
+</article>
+  </div>
+</section>
+<!-- =========================================================
+     WHY ENHANCE
+========================================================= -->
+<section class="why-enhance">
+  <div class="why-grid">
+<div class="why-content">
+  <p class="eyebrow">
+    WHY ENHANCE MY RIDE
+  </p>
+  <h2>
+    Your Vehicle.<br>
+    <span>Our Standard.</span>
+  </h2>
+  <p>
+    Choosing a detailer isn't just about getting your car
+    clean. It's about trusting someone with something you
+    depend on every day.
+  </p>
+  <ul class="why-list">
+    <li>
+      <span class="why-check">
+        ✓
+      </span>
+      <span>
+        Mobile service designed around your convenience.
+      </span>
+    </li>
+    <li>
+      <span class="why-check">
+        ✓
+      </span>
+      <span>
+        Professional products and a detail-focused process.
+      </span>
+    </li>
+    <li>
+      <span class="why-check">
+        ✓
+      </span>
+      <span>
+        Services designed for maintenance, deep cleaning,
+        and complete vehicle transformations.
+      </span>
+    </li>
+    <li>
+      <span class="why-check">
+        ✓
+      </span>
+      <span>
+        Clear communication and a professional customer
+        experience from booking to completion.
+      </span>
+    </li>
+    <li>
+      <span class="why-check">
+        ✓
+      </span>
+      <span>
+        A commitment to treating every vehicle with care,
+        patience, and attention to detail.
+      </span>
+    </li>
+  </ul>
+</div>
+<div class="why-image">
+  <img
+    src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=85"
+    alt="Premium vehicle representing professional detailing"
+    loading="lazy"
+  >
+</div>
+  </div>
+</section>
+<!-- =========================================================
+     SERVICE AREA
+========================================================= -->
+<section class="service-area">
+  <div class="service-area-content">
+<p class="eyebrow">
+  PROUDLY MOBILE
+</p>
+<h2>
+  Serving San Francisco<br>
+  <span>& The Entire Bay Area.</span>
+</h2>
+<p>
+  We bring the Enhance experience directly to your location.
+  Check our service area to see if we're available near you.
+</p>
+<a
+  href="service-area.html"
+  class="button button-gold"
+>
+  View Service Area
+</a>
+  </div>
+</section>
+<!-- =========================================================
+     CTA
+========================================================= -->
+<section class="cta">
+  <p class="eyebrow">
+    YOUR RIDE IS NEXT
+  </p>
+  <h2>
+    Ready To
+    <span>
+      Enhance Your Ride?
+    </span>
+  </h2>
+  <p>
+    Let us bring the premium mobile auto spa experience
+    directly to you.
+  </p>
+
+<a
+href=“quote.html”
+class=“button button-gold”
+
+Request Your Quote
+  </a>
+</section>
+</main>
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+<footer>
+  <div class="footer-logo">
+<div class="footer-logo-mark">
+  EMR
+</div>
+<div class="footer-name">
+  <strong>
+    ENHANCE MY RIDE
+  </strong>
+  <small>
+    AUTO SPA & MOBILE DETAILING
+  </small>
+</div>
+  </div>
+  <p class="footer-slogan">
+    We come to you. Your relax. We Enhance.
+  </p>
+  <div class="footer-contact">
+<a href="tel:3233271806">
+  (323) 327-1806
+</a>
+<a href="mailto:Enhancemyridemobiledetailing@gmail.com">
+  Enhancemyridemobiledetailing@gmail.com
+</a>
+  </div>
+  <p class="copyright">
+    © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
+    All rights reserved.
+  </p>
+</footer>
+<!-- =========================================================
+     MOBILE MENU JAVASCRIPT
+========================================================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle =
+    document.getElementById("menuToggle");
+  const navMenu =
+    document.getElementById("navMenu");
+  if (!menuToggle || !navMenu) {
+    console.error(
+      "Mobile navigation elements not found."
+    );
+    return;
+  }
+  /* OPEN / CLOSE MENU */
+  menuToggle.addEventListener(
+    "click",
+    function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const isOpen =
+        navMenu.classList.contains("active");
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+  );
+  /* OPEN MENU */
+  function openMenu() {
+    navMenu.classList.add("active");
+    menuToggle.classList.add("active");
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "true"
+    );
+    menuToggle.setAttribute(
+      "aria-label",
+      "Close navigation menu"
+    );
+  }
+  /* CLOSE MENU */
+  function closeMenu() {
+    navMenu.classList.remove("active");
+    menuToggle.classList.remove("active");
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+    menuToggle.setAttribute(
+      "aria-label",
+      "Open navigation menu"
+    );
+  }
+  /* CLOSE AFTER NAVIGATION */
+  const navLinks =
+    navMenu.querySelectorAll("a");
+  navLinks.forEach(function (link) {
+    link.addEventListener(
+      "click",
+      function () {
+        closeMenu();
+      }
+    );
+  });
+  /* CLOSE WHEN CLICKING OUTSIDE */
+  document.addEventListener(
+    "click",
+    function (event) {
+      const clickedInsideMenu =
+        navMenu.contains(event.target);
+      const clickedToggle =
+        menuToggle.contains(event.target);
+      if (
+        !clickedInsideMenu &&
+        !clickedToggle
+      ) {
+        closeMenu();
+      }
+    }
+  );
+  /* CLOSE WITH ESCAPE */
+  document.addEventListener(
+    "keydown",
+    function (event) {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    }
+  );
+  /* CLOSE ON DESKTOP RESIZE */
+  window.addEventListener(
+    "resize",
+    function () {
+      if (window.innerWidth > 900) {
+        closeMenu();
+      }
+    }
+  );
+});
+</script>
+</body>
+</html>
