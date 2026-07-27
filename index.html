@@ -7,453 +7,239 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
 <title>
 Enhance My Ride | Premium Mobile Detailing San Francisco Bay Area
 </title>
 
+
 <meta name="description" content="Enhance My Ride Auto Spa & Mobile Detailing provides premium mobile detailing throughout San Francisco and the entire Bay Area. We come to you. You relax. We Enhance.">
 
-<link rel="icon" type="image/png" href="favicon.png">
 
-<!-- SOCIAL MEDIA ICONS -->
+<!-- MASTER CSS -->
+<link rel="stylesheet" href="style.css">
+
+
+<!-- SOCIAL ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
-<style>
-
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-
-html{
-scroll-behavior:smooth;
-}
-
-
-body{
-
-background:#080808;
-
-color:#f5f5f5;
-
-font-family:Arial, Helvetica, sans-serif;
-
-line-height:1.6;
-
-overflow-x:hidden;
-
-}
-
-
-a{
-
-text-decoration:none;
-
-color:inherit;
-
-}
-
-
-:root{
-
---black:#080808;
-
---dark:#111111;
-
---dark2:#171717;
-
---gold:#c9a227;
-
---gold-light:#e6c85c;
-
---gray:#a5a5a5;
-
---border:rgba(201,162,39,.3);
-
-}
+</head>
 
 
 
-/* =========================
+<body>
+
+
+<!-- =========================
 NAVIGATION
-========================= */
+========================= -->
 
 
-.navbar{
+<header class="navbar">
 
-position:fixed;
 
-top:0;
+<a href="index.html" class="logo">
 
-left:0;
 
-width:100%;
+<div class="logo-mark">
 
-height:78px;
+EMR
 
-z-index:10000;
+</div>
 
-display:flex;
 
-align-items:center;
 
-justify-content:space-between;
+<div>
 
-padding:0 6%;
+<span class="logo-main">
 
-background:rgba(8,8,8,.98);
+ENHANCE MY RIDE
 
-border-bottom:1px solid var(--border);
+</span>
 
-}
 
+<span class="logo-sub">
 
+AUTO SPA & MOBILE DETAILING
 
-.logo{
+</span>
 
-display:flex;
 
-align-items:center;
+</div>
 
-gap:12px;
 
-}
+</a>
 
 
 
-.logo-mark{
 
-width:44px;
 
-height:44px;
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">
 
-border:1px solid var(--gold);
 
-display:flex;
+<span></span>
 
-align-items:center;
+<span></span>
 
-justify-content:center;
+<span></span>
 
-color:var(--gold);
 
-font-size:11px;
+</button>
 
-font-weight:bold;
 
-letter-spacing:1px;
 
-}
 
 
+<nav>
 
-.logo-text{
 
-display:flex;
+<ul class="nav-menu" id="navMenu">
 
-flex-direction:column;
 
-}
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
 
 
+<li>
+<a href="services.html">
+Services
+</a>
+</li>
 
-.logo-main{
 
-font-size:12px;
+<li>
+<a href="service-area.html">
+Service Area
+</a>
+</li>
 
-font-weight:bold;
 
-letter-spacing:2px;
+<li>
+<a href="gallery.html">
+Gallery
+</a>
+</li>
 
-}
 
+<li>
+<a href="about.html">
+About
+</a>
+</li>
 
 
-.logo-sub{
+<li>
+<a href="quote.html" class="nav-quote">
+Get Quote
+</a>
+</li>
 
-font-size:8px;
 
-color:var(--gold);
+</ul>
 
-letter-spacing:2px;
 
-}
+</nav>
 
 
+</header>
 
-/* DESKTOP MENU */
 
 
-.nav-menu{
 
-display:flex;
 
-gap:28px;
+<!-- =========================
+HERO
+========================= -->
 
-align-items:center;
 
-list-style:none;
+<section class="hero">
 
-}
 
+<div class="hero-content">
 
 
-.nav-menu a{
+<p class="eyebrow">
 
-font-size:11px;
+PREMIUM MOBILE AUTO SPA
 
-font-weight:bold;
+</p>
 
-letter-spacing:1.5px;
 
-text-transform:uppercase;
 
-}
+<h1>
 
+Your Car.
 
+<br>
 
-.nav-menu a:hover{
+<span>
 
-color:var(--gold-light);
+Elevated.
 
-}
+</span>
 
 
+</h1>
 
-.nav-quote{
 
-border:1px solid var(--gold);
 
-padding:11px 18px;
+<p class="hero-description">
 
-color:var(--gold-light)!important;
+Professional mobile detailing brought directly to your driveway.
 
-}
+Premium products, meticulous attention to detail, and a finish
 
+that turns heads.
 
+</p>
 
-/* HAMBURGER */
 
 
-.menu-toggle{
 
-display:none;
+<div class="button-row">
 
-width:48px;
 
-height:48px;
+<a href="quote.html" class="button button-gold">
 
-background:#080808;
+Book Your Detail
 
-border:1px solid var(--gold);
+</a>
 
-align-items:center;
 
-justify-content:center;
 
-flex-direction:column;
+<a href="services.html" class="button button-outline">
 
-gap:5px;
+Explore Services
 
-cursor:pointer;
+</a>
 
-}
 
 
+</div>
 
-.menu-toggle span{
 
-width:23px;
 
-height:2px;
+<p class="hero-slogan">
 
-background:var(--gold);
+We come to you. You relax. We Enhance.
 
-display:block;
+</p>
 
-transition:.3s;
 
-}
 
+</div>
 
 
-.menu-toggle.active span:nth-child(1){
+</section>
 
-transform:translateY(7px) rotate(45deg);
 
-}
 
 
-.menu-toggle.active span:nth-child(2){
 
-opacity:0;
-
-}
-
-
-.menu-toggle.active span:nth-child(3){
-
-transform:translateY(-7px) rotate(-45deg);
-
-}
-
-
-
-
-/* HERO */
-
-
-.hero{
-
-min-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-padding:140px 8% 80px;
-
-
-background:
-
-linear-gradient(
-90deg,
-rgba(0,0,0,.95),
-rgba(0,0,0,.65)
-),
-
-url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=85")
-
-center/cover no-repeat;
-
-}
-
-
-
-.hero-content{
-
-max-width:750px;
-
-}
-
-
-
-.eyebrow{
-
-color:var(--gold-light);
-
-font-size:11px;
-
-font-weight:bold;
-
-letter-spacing:4px;
-
-margin-bottom:20px;
-
-}
-
-
-
-.hero h1{
-
-font-family:Georgia,serif;
-
-font-size:clamp(60px,9vw,115px);
-
-line-height:.95;
-
-letter-spacing:-4px;
-
-margin-bottom:30px;
-
-}
-
-
-
-.hero h1 span{
-
-color:var(--gold-light);
-
-}
-
-
-
-.hero-description{
-
-max-width:600px;
-
-font-size:17px;
-
-color:#d0d0d0;
-
-margin-bottom:35px;
-
-}
-
-
-
-.button-row{
-
-display:flex;
-
-gap:15px;
-
-flex-wrap:wrap;
-
-}
-
-
-.button{
-
-padding:15px 25px;
-
-border:1px solid var(--gold);
-
-font-size:11px;
-
-font-weight:bold;
-
-letter-spacing:1.5px;
-
-text-transform:uppercase;
-
-}
-
-
-
-.button-gold{
-
-background:var(--gold);
-
-color:#080808;
-
-}
-
-
-
-.button-outline{
-
-background:rgba(0,0,0,.3);
-
-}
-
-
-
-.hero-slogan{
-
-margin-top:45px;
-
-font-size:12px;
-
-letter-spacing:2px;
-
-color:#999;
-
-}
 
 
 <!-- =========================
@@ -471,11 +257,15 @@ TRUST BAR
 </strong>
 
 <span>
-Professional<br>
+
+Professional
+<br>
 Attention To Detail
+
 </span>
 
 </div>
+
 
 
 
@@ -486,11 +276,15 @@ Attention To Detail
 </strong>
 
 <span>
-Premium Products<br>
+
+Premium Products
+<br>
 & Process
+
 </span>
 
 </div>
+
 
 
 
@@ -502,11 +296,15 @@ Premium Products<br>
 </strong>
 
 <span>
-We Come<br>
+
+We Come
+<br>
 To You
+
 </span>
 
 </div>
+
 
 
 
@@ -518,11 +316,15 @@ To You
 </strong>
 
 <span>
-Luxury Finish<br>
+
+Luxury Finish
+<br>
 Every Time
+
 </span>
 
 </div>
+
 
 
 </section>
@@ -531,40 +333,39 @@ Every Time
 
 
 
+
+
 <!-- =========================
-SERVICES
+SERVICES PREVIEW
 ========================= -->
 
 
-<section class="services-preview">
+<section class="section">
 
 
-<div class="section-heading">
+<div class="container">
 
 
 <p class="eyebrow">
+
 THE ENHANCE EXPERIENCE
+
 </p>
 
 
-<h2>
+
+<h2 class="section-title">
 
 Choose Your
 
 <span>
+
 Level Of Clean.
+
 </span>
 
+
 </h2>
-
-
-<p>
-Premium detailing designed to deliver a noticeable transformation,
-not just a quick wash.
-</p>
-
-
-</div>
 
 
 
@@ -573,118 +374,113 @@ not just a quick wash.
 
 
 
-<article class="service-card">
-
-
-<span>
-01 · SIGNATURE
-</span>
+<div class="service-card">
 
 
 <h3>
+
 Enhance Gold
+
 </h3>
 
 
-<p class="price">
+<p>
+
 Starting at
+
 <strong>
+
 $149
+
 </strong>
+
 </p>
 
 
 <p>
-A premium maintenance detail designed to keep
-your vehicle looking fresh and protected.
+
+Premium maintenance detail to keep your vehicle fresh.
+
 </p>
 
 
-<a href="services.html">
-View Package →
-</a>
-
-
-</article>
+</div>
 
 
 
 
 
-
-<article class="service-card featured">
-
-
-<span>
-02 · PREMIUM
-</span>
+<div class="service-card">
 
 
 <h3>
+
 Black Label
+
 </h3>
 
 
-<p class="price">
+<p>
+
 Starting at
+
 <strong>
+
 $249
+
 </strong>
+
 </p>
 
 
 <p>
-Our premium full-service detail for a deeper reset
-and elevated interior and exterior finish.
+
+Deep interior and exterior transformation.
+
 </p>
 
 
-<a href="services.html">
-View Package →
-</a>
-
-
-</article>
+</div>
 
 
 
 
 
-
-<article class="service-card">
-
-
-<span>
-03 · SIGNATURE PLUS
-</span>
+<div class="service-card">
 
 
 <h3>
+
 Showroom Edition
+
 </h3>
 
 
-<p class="price">
+<p>
+
 Starting at
+
 <strong>
+
 $399
+
 </strong>
+
 </p>
 
 
 <p>
-The ultimate transformation for special occasions,
-neglected vehicles, and premium clients.
+
+The ultimate vehicle restoration experience.
+
 </p>
 
 
-<a href="services.html">
-View Package →
-</a>
+</div>
 
 
-</article>
 
+</div>
 
 
 </div>
@@ -696,27 +492,33 @@ View Package →
 
 
 
-
-
 <!-- =========================
-GOOGLE REVIEWS SECTION
+REVIEWS
 ========================= -->
 
 
-<section class="reviews">
+<section class="section">
+
+
+<div class="container">
 
 
 <p class="eyebrow">
+
 CUSTOMER TRUST
+
 </p>
 
 
-<h2>
+
+<h2 class="section-title">
 
 Trusted By
 
 <span>
+
 Bay Area Drivers.
+
 </span>
 
 </h2>
@@ -725,56 +527,29 @@ Bay Area Drivers.
 
 <p>
 
-See what customers are saying about Enhance My Ride
-on Google.
+See what customers are saying about Enhance My Ride.
 
 </p>
 
 
 
 
-<div class="review-box">
+<br>
 
 
-<div class="stars">
 
-★★★★★
+<a href="https://g.page/r/CRy_PYJmq6NYEBM/review" class="button button-gold" target="_blank">
 
-</div>
-
-
-<h3>
-
-Love Your Detail?
-
-</h3>
-
-
-<p>
-
-Help other Bay Area drivers discover a premium
-mobile detailing experience.
-
-</p>
-
-
-<a 
-href="https://g.page/r/CRy_PYJmq6NYEBM/review"
-target="_blank"
-class="review-button">
-
-⭐ View Our Google Reviews
+⭐ View Google Reviews
 
 </a>
+
 
 
 </div>
 
 
 </section>
-
-
-
 
 
 
@@ -788,8 +563,13 @@ CTA
 <section class="cta">
 
 
+<div class="container">
+
+
 <p class="eyebrow">
+
 SAN FRANCISCO · BAY AREA
+
 </p>
 
 
@@ -799,7 +579,9 @@ SAN FRANCISCO · BAY AREA
 Your Vehicle Deserves
 
 <span>
+
 The Enhance Treatment.
+
 </span>
 
 
@@ -807,14 +589,13 @@ The Enhance Treatment.
 
 
 
-
 <p>
 
-We bring the premium auto spa experience directly
-to your driveway. No waiting rooms. No wasted time.
+We come directly to you. No waiting rooms. No wasted time.
+
+Just a professionally detailed vehicle.
 
 </p>
-
 
 
 
@@ -825,705 +606,10 @@ Request Your Quote
 </a>
 
 
+</div>
+
 
 </section>
-
-
-
-
-
-<style>
-
-
-/* TRUST */
-
-.trust-bar{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-background:#101010;
-
-border-top:1px solid var(--border);
-
-border-bottom:1px solid var(--border);
-
-}
-
-
-.trust-item{
-
-padding:30px 20px;
-
-display:flex;
-
-align-items:center;
-
-gap:15px;
-
-border-right:1px solid var(--border);
-
-}
-
-
-.trust-item:last-child{
-
-border-right:none;
-
-}
-
-
-.trust-item strong{
-
-color:var(--gold);
-
-}
-
-
-
-.trust-item span{
-
-font-size:10px;
-
-font-weight:bold;
-
-letter-spacing:1px;
-
-text-transform:uppercase;
-
-color:#ccc;
-
-}
-
-
-
-
-
-/* SERVICES */
-
-
-.services-preview{
-
-padding:110px 8%;
-
-background:#0c0c0c;
-
-}
-
-
-
-.section-heading{
-
-text-align:center;
-
-max-width:750px;
-
-margin:auto;
-
-}
-
-
-
-.section-heading h2{
-
-font-family:Georgia,serif;
-
-font-size:clamp(40px,5vw,62px);
-
-margin-bottom:20px;
-
-}
-
-
-
-.section-heading h2 span{
-
-color:var(--gold-light);
-
-}
-
-
-
-.section-heading p:last-child{
-
-color:var(--gray);
-
-}
-
-
-
-.service-cards{
-
-max-width:1200px;
-
-margin:60px auto 0;
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:20px;
-
-}
-
-
-
-.service-card{
-
-background:#121212;
-
-border:1px solid rgba(255,255,255,.08);
-
-padding:40px 30px;
-
-}
-
-
-
-.service-card.featured{
-
-border-color:var(--gold);
-
-}
-
-
-
-.service-card span{
-
-color:var(--gold);
-
-font-size:10px;
-
-letter-spacing:2px;
-
-}
-
-
-
-.service-card h3{
-
-font-family:Georgia,serif;
-
-font-size:32px;
-
-margin:20px 0;
-
-}
-
-
-
-.service-card p{
-
-color:var(--gray);
-
-font-size:14px;
-
-}
-
-
-
-.service-card strong{
-
-color:white;
-
-font-size:22px;
-
-}
-
-
-
-.service-card a{
-
-display:inline-block;
-
-margin-top:25px;
-
-color:var(--gold-light);
-
-font-size:11px;
-
-letter-spacing:1px;
-
-font-weight:bold;
-
-}
-
-
-
-
-
-/* REVIEWS */
-
-
-.reviews{
-
-padding:100px 8%;
-
-background:#101010;
-
-text-align:center;
-
-}
-
-
-
-.reviews h2{
-
-font-family:Georgia,serif;
-
-font-size:clamp(40px,5vw,62px);
-
-}
-
-
-
-.reviews h2 span{
-
-color:var(--gold-light);
-
-}
-
-
-
-.reviews p{
-
-color:#aaa;
-
-}
-
-
-
-.review-box{
-
-max-width:500px;
-
-margin:40px auto 0;
-
-background:#151515;
-
-padding:40px;
-
-border:1px solid var(--border);
-
-}
-
-
-
-.stars{
-
-color:var(--gold-light);
-
-font-size:25px;
-
-letter-spacing:5px;
-
-}
-
-
-
-.review-box h3{
-
-font-family:Georgia,serif;
-
-font-size:30px;
-
-margin:15px 0;
-
-}
-
-
-
-.review-button{
-
-display:inline-block;
-
-margin-top:25px;
-
-padding:14px 25px;
-
-border:1px solid var(--gold);
-
-color:var(--gold-light);
-
-font-size:11px;
-
-letter-spacing:1px;
-
-font-weight:bold;
-
-}
-
-
-
-
-/* CTA */
-
-
-.cta{
-
-padding:100px 8%;
-
-text-align:center;
-
-}
-
-
-
-.cta h2{
-
-font-family:Georgia,serif;
-
-font-size:clamp(40px,6vw,70px);
-
-}
-
-
-
-.cta h2 span{
-
-color:var(--gold-light);
-
-}
-
-
-
-.cta p:not(.eyebrow){
-
-max-width:600px;
-
-margin:20px auto 35px;
-
-color:#aaa;
-
-}
-
-
-<style>
-
-
-/* =========================
-FOOTER
-========================= */
-
-
-footer{
-
-background:#050505;
-
-border-top:1px solid var(--border);
-
-padding:70px 8% 30px;
-
-}
-
-
-
-.footer-container{
-
-max-width:1100px;
-
-margin:auto;
-
-display:grid;
-
-grid-template-columns:2fr 1fr;
-
-gap:50px;
-
-}
-
-
-
-.footer-title{
-
-font-size:15px;
-
-font-weight:bold;
-
-letter-spacing:2px;
-
-}
-
-
-
-.footer-sub{
-
-font-size:9px;
-
-letter-spacing:2px;
-
-color:var(--gold);
-
-margin-top:5px;
-
-}
-
-
-
-.footer-text{
-
-color:#999;
-
-font-size:13px;
-
-margin-top:20px;
-
-}
-
-
-
-.social-icons{
-
-display:flex;
-
-gap:15px;
-
-margin-top:25px;
-
-}
-
-
-
-.social-icons a{
-
-width:40px;
-
-height:40px;
-
-border:1px solid var(--gold);
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-color:var(--gold-light);
-
-font-size:18px;
-
-transition:.3s;
-
-}
-
-
-
-.social-icons a:hover{
-
-background:var(--gold);
-
-color:#080808;
-
-}
-
-
-
-
-.footer-contact h3{
-
-font-size:12px;
-
-letter-spacing:2px;
-
-margin-bottom:20px;
-
-}
-
-
-
-.footer-contact a{
-
-display:block;
-
-color:#ccc;
-
-font-size:13px;
-
-margin-bottom:15px;
-
-}
-
-
-
-.footer-contact a:hover{
-
-color:var(--gold-light);
-
-}
-
-
-
-.footer-review{
-
-display:inline-flex!important;
-
-align-items:center;
-
-justify-content:center;
-
-gap:8px;
-
-border:1px solid var(--gold);
-
-padding:14px 20px;
-
-color:var(--gold-light)!important;
-
-font-size:11px!important;
-
-letter-spacing:1px;
-
-margin-top:10px;
-
-}
-
-
-
-.copyright{
-
-margin-top:50px;
-
-padding-top:25px;
-
-border-top:1px solid rgba(255,255,255,.08);
-
-text-align:center;
-
-font-size:10px;
-
-color:#555;
-
-}
-
-
-
-
-
-/* =========================
-MOBILE
-========================= */
-
-
-@media(max-width:900px){
-
-
-.menu-toggle{
-
-display:flex;
-
-}
-
-
-
-.nav-menu{
-
-position:fixed;
-
-top:78px;
-
-left:0;
-
-width:100%;
-
-background:#080808;
-
-display:flex;
-
-flex-direction:column;
-
-max-height:0;
-
-overflow:hidden;
-
-opacity:0;
-
-visibility:hidden;
-
-transition:.3s;
-
-}
-
-
-
-.nav-menu.active{
-
-max-height:500px;
-
-opacity:1;
-
-visibility:visible;
-
-padding:15px 5% 25px;
-
-border-bottom:1px solid var(--gold);
-
-}
-
-
-
-.nav-menu a{
-
-display:block;
-
-padding:16px 5px;
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
-}
-
-
-
-.trust-bar{
-
-grid-template-columns:1fr;
-
-}
-
-
-
-.trust-item{
-
-border-right:none;
-
-border-bottom:1px solid var(--border);
-
-}
-
-
-
-.service-cards{
-
-grid-template-columns:1fr;
-
-}
-
-
-
-.footer-container{
-
-grid-template-columns:1fr;
-
-}
-
-
-
-.hero h1{
-
-letter-spacing:-2px;
-
-}
-
-
-
-}
-
-</style>
-
-
-
-
-
 
 
 <!-- =========================
@@ -1534,7 +620,7 @@ FOOTER
 <footer>
 
 
-<div class="footer-container">
+<div class="container footer-grid">
 
 
 
@@ -1564,10 +650,11 @@ We come to you. You relax. We Enhance.
 
 <br><br>
 
-Premium mobile detailing serving
-San Francisco and the entire Bay Area.
+Premium mobile detailing serving San Francisco
+and the entire Bay Area.
 
 </p>
+
 
 
 
@@ -1591,7 +678,7 @@ San Francisco and the entire Bay Area.
 
 
 
-<a href="https://tiktok.com/@enhancemyride" target="_blank" aria-label="TikTok">
+<a href="https://www.tiktok.com/@enhancemyride" target="_blank" aria-label="TikTok">
 
 <i class="fa-brands fa-tiktok"></i>
 
@@ -1614,26 +701,32 @@ San Francisco and the entire Bay Area.
 </a>
 
 
-</div>
-
 
 </div>
 
 
 
+</div>
 
 
 
 
-<div class="footer-contact">
 
 
-<h3>
+
+<div>
+
+
+<div class="footer-title">
 
 CONTACT
 
-</h3>
+</div>
 
+
+
+
+<p class="footer-text">
 
 
 <a href="mailto:info@enhancemyride.com">
@@ -1647,6 +740,7 @@ info@enhancemyride.com
 </a>
 
 
+<br><br>
 
 
 <a href="tel:3233271806">
@@ -1661,16 +755,22 @@ info@enhancemyride.com
 
 
 
+</p>
+
+
+
+
+<br>
+
+
 
 
 <a 
 href="https://g.page/r/CRy_PYJmq6NYEBM/review"
 target="_blank"
-class="footer-review">
+class="button button-outline">
 
-<i class="fa-brands fa-google"></i>
-
-View Google Reviews
+⭐ View Google Reviews
 
 </a>
 
@@ -1680,8 +780,8 @@ View Google Reviews
 
 
 
-</div>
 
+</div>
 
 
 
@@ -1689,10 +789,11 @@ View Google Reviews
 
 <p class="copyright">
 
-© 2026 Enhance My Ride Auto Spa & Mobile Detailing. All Rights Reserved.
+© <span id="year"></span>
+Enhance My Ride Auto Spa & Mobile Detailing.
+All Rights Reserved.
 
 </p>
-
 
 
 
@@ -1703,55 +804,9 @@ View Google Reviews
 
 
 
+<!-- MASTER JAVASCRIPT -->
 
-
-<script>
-
-
-const menuToggle = document.getElementById("menuToggle");
-
-const navMenu = document.getElementById("navMenu");
-
-
-
-menuToggle.addEventListener("click", function(){
-
-
-menuToggle.classList.toggle("active");
-
-
-navMenu.classList.toggle("active");
-
-
-});
-
-
-
-
-
-document.querySelectorAll(".nav-menu a").forEach(function(link){
-
-
-link.addEventListener("click",function(){
-
-
-menuToggle.classList.remove("active");
-
-
-navMenu.classList.remove("active");
-
-
-});
-
-
-});
-
-
-
-
-
-</script>
-
+<script src="script.js"></script>
 
 
 
