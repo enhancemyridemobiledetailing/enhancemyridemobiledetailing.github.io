@@ -1,607 +1,1814 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gallery | Enhance My Ride Auto Spa</title>
-<meta name="description" content="Explore the Enhance My Ride Auto Spa mobile detailing experience. Premium vehicle care delivered throughout San Francisco and the Greater Bay Area.">
+
+<title>Gallery | Enhance My Ride Auto Spa & Mobile Detailing</title>
+
+<meta
+  name="description"
+  content="View the Enhance My Ride mobile detailing gallery and see examples of premium automotive care, interior detailing, exterior detailing, and vehicle transformations."
+>
+
 <style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #070707;
-    color: #f5f2ea;
-    line-height: 1.6;
-    padding-bottom: 0;
+  background: #080808;
+  color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
+
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
+
+button {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
 :root {
-    --gold: #c9a227;
-    --gold-light: #e4c45c;
+  --black: #080808;
+  --dark: #111111;
+  --dark-2: #171717;
+  --gold: #c9a227;
+  --gold-light: #e6c85c;
+  --white: #f5f5f5;
+  --gray: #a5a5a5;
+  --border: rgba(201, 162, 39, 0.3);
 }
-/* =========================
+
+
+/* =========================================================
    NAVIGATION
-========================= */
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 18px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(7,7,7,.96);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255,255,255,.07);
+========================================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 78px;
+
+  z-index: 10000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  background: rgba(8, 8, 8, 0.98);
+
+  border-bottom: 1px solid var(--border);
 }
-.brand {
-    font-size: 17px;
-    font-weight: 900;
-    letter-spacing: 2px;
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 0;
 }
-.brand span {
-    color: var(--gold-light);
+
+.logo-mark {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--gold);
+
+  color: var(--gold);
+
+  font-size: 11px;
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  flex-shrink: 0;
 }
-.menu-wrapper {
-    position: relative;
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
 }
-.menu-dropdown {
-    position: relative;
+
+.logo-main {
+  color: white;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
 }
-.menu-dropdown summary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 42px;
-    border: 1px solid rgba(201,162,39,.5);
-    color: var(--gold-light);
-    font-size: 23px;
-    cursor: pointer;
-    list-style: none;
-    user-select: none;
-    transition: .3s;
+
+.logo-sub {
+  color: var(--gold);
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  margin-top: 2px;
+
+  white-space: nowrap;
 }
-.menu-dropdown summary::-webkit-details-marker {
-    display: none;
-}
-.menu-dropdown summary:hover {
-    background: var(--gold);
-    color: #080808;
-}
-.menu-dropdown[open] summary {
-    background: var(--gold);
-    color: #080808;
-}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
 .nav-menu {
-    position: absolute;
-    top: 52px;
-    right: 0;
-    width: 230px;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background: rgba(12,12,12,.98);
-    border: 1px solid rgba(201,162,39,.35);
-    box-shadow: 0 20px 50px rgba(0,0,0,.6);
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  list-style: none;
 }
+
 .nav-menu a {
-    display: block;
-    padding: 13px 15px;
-    color: #ccc;
-    font-size: 11px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: .3s;
+  color: #eeeeee;
+
+  font-size: 11px;
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  transition: color 0.2s ease;
 }
+
 .nav-menu a:hover {
-    color: var(--gold-light);
-    background: rgba(201,162,39,.08);
+  color: var(--gold-light);
 }
-.nav-menu .menu-quote {
-    margin-top: 5px;
-    background: var(--gold);
-    color: #080808;
-    text-align: center;
+
+.nav-quote {
+  border: 1px solid var(--gold);
+
+  padding: 11px 18px;
+
+  color: var(--gold-light) !important;
 }
-.nav-menu .menu-quote:hover {
-    background: var(--gold-light);
+
+.nav-quote:hover {
+  background: var(--gold);
+
+  color: #080808 !important;
 }
-/* =========================
-   HERO
-========================= */
+
+
+/* =========================================================
+   MOBILE HAMBURGER
+========================================================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 48px;
+  height: 48px;
+
+  padding: 0;
+
+  background: #080808;
+
+  border: 1px solid var(--gold);
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  position: relative;
+
+  z-index: 10002;
+
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.menu-toggle span {
+  display: block;
+
+  width: 23px;
+  height: 2px;
+
+  background: var(--gold);
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   HAMBURGER X ANIMATION
+========================================================= */
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
+
 .page-hero {
-    padding: 165px 7% 90px;
-    text-align: center;
-    background:
-        radial-gradient(circle at center, rgba(201,162,39,.15), transparent 45%),
-        linear-gradient(135deg,#050505,#141414);
+  min-height: 65vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 150px 8% 90px;
+
+  position: relative;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.95) 0%,
+      rgba(0,0,0,0.78) 50%,
+      rgba(0,0,0,0.58) 100%
+    ),
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=85")
+    center / cover no-repeat;
 }
-.label {
-    color: var(--gold-light);
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+
+.page-hero-content {
+  max-width: 800px;
 }
+
+.eyebrow {
+  color: var(--gold-light);
+
+  font-size: 11px;
+  font-weight: bold;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 20px;
+}
+
 .page-hero h1 {
-    font-size: clamp(48px,8vw,90px);
-    line-height: .95;
-    text-transform: uppercase;
-    letter-spacing: -3px;
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(55px, 8vw, 100px);
+
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 25px;
 }
+
 .page-hero h1 span {
-    color: var(--gold-light);
+  color: var(--gold-light);
 }
+
 .page-hero p {
-    max-width: 700px;
-    margin: 25px auto 0;
-    color: #999;
-    font-size: 17px;
+  max-width: 650px;
+
+  color: #cccccc;
+
+  font-size: 17px;
+
+  line-height: 1.8;
 }
-/* =========================
-   GALLERY
-========================= */
+
+
+/* =========================================================
+   GALLERY INTRO
+========================================================= */
+
+.gallery-intro {
+  padding: 100px 8%;
+
+  background: #0c0c0c;
+
+  text-align: center;
+}
+
+.gallery-intro-content {
+  max-width: 800px;
+
+  margin: 0 auto;
+}
+
+.gallery-intro h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(38px, 5vw, 60px);
+
+  line-height: 1.1;
+
+  margin-bottom: 25px;
+}
+
+.gallery-intro h2 span {
+  color: var(--gold-light);
+}
+
+.gallery-intro p {
+  color: var(--gray);
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   GALLERY SECTION
+========================================================= */
+
 .gallery-section {
-    padding: 100px 7%;
-    background: #0a0a0a;
+  padding: 110px 6%;
+
+  background: #080808;
 }
+
 .section-heading {
-    max-width: 700px;
-    margin: 0 auto 60px;
-    text-align: center;
+  max-width: 750px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
 }
+
 .section-heading h2 {
-    font-size: clamp(38px,5vw,60px);
-    line-height: 1;
-    text-transform: uppercase;
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(40px, 5vw, 62px);
+
+  line-height: 1.1;
+
+  margin-bottom: 20px;
 }
+
 .section-heading h2 span {
-    color: var(--gold-light);
+  color: var(--gold-light);
 }
+
 .section-heading p {
-    margin-top: 18px;
-    color: #888;
+  color: var(--gray);
+
+  font-size: 15px;
 }
-/* =========================
+
+
+/* =========================================================
    GALLERY GRID
-========================= */
+========================================================= */
+
 .gallery-grid {
-    max-width: 1150px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 15px;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
 }
-.gallery-item {
-    position: relative;
-    min-height: 320px;
-    overflow: hidden;
-    background:
-        linear-gradient(145deg,#1b1b1b,#0d0d0d);
-    border: 1px solid #292929;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .4s;
+
+
+/* =========================================================
+   GALLERY CARD
+========================================================= */
+
+.gallery-card {
+  position: relative;
+
+  min-height: 420px;
+
+  overflow: hidden;
+
+  background: #121212;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  cursor: pointer;
 }
-.gallery-item:hover {
-    transform: translateY(-5px);
-    border-color: rgba(201,162,39,.7);
+
+.gallery-card.large {
+  grid-row: span 2;
+
+  min-height: 858px;
 }
-.gallery-item::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(circle at center,rgba(201,162,39,.12),transparent 60%);
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+
+  inset: 0;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.5s ease;
 }
-.gallery-placeholder {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 30px;
+
+.gallery-card:hover img {
+  transform: scale(1.06);
 }
-.gallery-placeholder .number {
-    color: var(--gold-light);
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 3px;
+
+
+/* =========================================================
+   GALLERY OVERLAY
+========================================================= */
+
+.gallery-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.90) 0%,
+      rgba(0,0,0,0.35) 45%,
+      rgba(0,0,0,0.05) 100%
+    );
 }
-.gallery-placeholder h3 {
-    margin-top: 12px;
-    font-size: 22px;
-    text-transform: uppercase;
+
+.gallery-number {
+  color: var(--gold-light);
+
+  font-size: 10px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 8px;
 }
-.gallery-placeholder p {
-    margin-top: 8px;
-    color: #777;
-    font-size: 12px;
+
+.gallery-overlay h3 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 30px;
+
+  margin-bottom: 5px;
 }
-/* =========================
-   FEATURED GALLERY
-========================= */
-.featured-gallery {
-    grid-column: span 2;
-    min-height: 400px;
+
+.gallery-overlay p {
+  color: #cccccc;
+
+  font-size: 12px;
 }
-.featured-gallery h3 {
-    font-size: 32px;
+
+
+/* =========================================================
+   BEFORE / AFTER SECTION
+========================================================= */
+
+.transformation {
+  padding: 110px 8%;
+
+  background: #101010;
+
+  border-top: 1px solid var(--border);
+
+  border-bottom: 1px solid var(--border);
 }
-/* =========================
-   INSTAGRAM CTA
-========================= */
+
+.transformation-heading {
+  max-width: 750px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.transformation-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(40px, 5vw, 62px);
+
+  line-height: 1.1;
+
+  margin-bottom: 20px;
+}
+
+.transformation-heading h2 span {
+  color: var(--gold-light);
+}
+
+.transformation-heading p {
+  color: var(--gray);
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   TRANSFORMATION GRID
+========================================================= */
+
+.transformation-grid {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+.transformation-card {
+  position: relative;
+
+  min-height: 450px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.transformation-card img {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+
+  inset: 0;
+
+  object-fit: cover;
+}
+
+.transformation-label {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  padding: 8px 14px;
+
+  background: rgba(8,8,8,0.90);
+
+  border: 1px solid var(--gold);
+
+  color: var(--gold-light);
+
+  font-size: 9px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   SOCIAL SECTION
+========================================================= */
+
 .social-section {
-    padding: 100px 7%;
-    background: #111;
-    text-align: center;
+  padding: 100px 8%;
+
+  background: #0c0c0c;
+
+  text-align: center;
 }
-.social-box {
-    max-width: 850px;
-    margin: auto;
-    padding: 70px 30px;
-    border: 1px solid rgba(201,162,39,.3);
-    background:
-        radial-gradient(circle at center,rgba(201,162,39,.1),transparent 55%),
-        #0a0a0a;
+
+.social-content {
+  max-width: 750px;
+
+  margin: 0 auto;
 }
-.social-box h2 {
-    font-size: clamp(38px,6vw,65px);
-    line-height: 1;
-    text-transform: uppercase;
+
+.social-content h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(38px, 5vw, 58px);
+
+  line-height: 1.1;
+
+  margin-bottom: 20px;
 }
-.social-box h2 span {
-    color: var(--gold-light);
+
+.social-content h2 span {
+  color: var(--gold-light);
 }
-.social-box p {
-    max-width: 600px;
-    margin: 20px auto 30px;
-    color: #888;
+
+.social-content p {
+  color: var(--gray);
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  margin-bottom: 30px;
 }
-.social-btn {
-    display: inline-block;
-    padding: 16px 28px;
-    background: var(--gold);
-    color: #080808;
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+
+.social-handle {
+  display: inline-block;
+
+  color: var(--gold-light);
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 30px;
 }
-.social-btn:hover {
-    background: var(--gold-light);
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.button {
+  display: inline-block;
+
+  padding: 15px 25px;
+
+  border: 1px solid var(--gold);
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  transition: all 0.2s ease;
 }
-/* =========================
+
+.button-gold {
+  background: var(--gold);
+
+  color: #080808;
+}
+
+.button-gold:hover {
+  background: var(--gold-light);
+
+  border-color: var(--gold-light);
+}
+
+
+/* =========================================================
    CTA
-========================= */
+========================================================= */
+
 .cta {
-    padding: 110px 7%;
-    text-align: center;
-    background:
-        radial-gradient(circle at center,rgba(201,162,39,.14),transparent 50%),
-        #080808;
+  padding: 110px 8%;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(8,8,8,0.90),
+      rgba(8,8,8,0.90)
+    ),
+    url("https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=2000&q=85")
+    center / cover no-repeat;
 }
+
 .cta h2 {
-    font-size: clamp(42px,7vw,80px);
-    line-height: .95;
-    text-transform: uppercase;
+  max-width: 800px;
+
+  margin: 0 auto 25px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(40px, 6vw, 70px);
+
+  line-height: 1.1;
 }
+
 .cta h2 span {
-    color: var(--gold-light);
+  color: var(--gold-light);
 }
+
 .cta p {
-    max-width: 600px;
-    margin: 20px auto 30px;
-    color: #888;
+  max-width: 600px;
+
+  margin: 0 auto 30px;
+
+  color: #bbbbbb;
+
+  font-size: 15px;
 }
-.btn {
-    display: inline-block;
-    padding: 16px 26px;
-    background: var(--gold);
-    color: #080808;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-.btn:hover {
-    background: var(--gold-light);
-}
-/* =========================
+
+
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
+
 footer {
-    padding: 50px 7% 90px;
-    text-align: center;
-    background: #050505;
+  padding: 60px 8% 30px;
+
+  background: #050505;
+
+  border-top: 1px solid var(--border);
+
+  text-align: center;
 }
+
 .footer-logo {
-    font-size: 20px;
-    font-weight: 900;
-    letter-spacing: 3px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
 }
-.footer-logo span {
-    color: var(--gold-light);
+
+.footer-logo-mark {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--gold);
+
+  color: var(--gold);
+
+  font-size: 11px;
+
+  font-weight: bold;
 }
-footer p {
+
+.footer-name {
+  text-align: left;
+}
+
+.footer-name strong {
+  display: block;
+
+  color: white;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+}
+
+.footer-name small {
+  color: var(--gold);
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+
+.footer-slogan {
+  color: var(--gray);
+
+  font-size: 12px;
+
+  margin-bottom: 25px;
+}
+
+.footer-contact {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+
+  margin-bottom: 30px;
+}
+
+.footer-contact a {
+  color: var(--gold-light);
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+}
+
+.copyright {
+  color: #555555;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+
+    top: 78px;
+    left: 0;
+
+    width: 100%;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    padding: 0 5%;
+
+    background: #080808;
+
+    border-bottom: 1px solid transparent;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+      max-height 0.3s ease,
+      opacity 0.2s ease,
+      visibility 0.2s ease,
+      padding 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .nav-menu.active {
+    max-height: 500px;
+
+    padding-top: 15px;
+    padding-bottom: 25px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    border-bottom-color: var(--gold);
+
+    box-shadow:
+      0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-menu a {
+    display: block;
+
+    width: 100%;
+
+    padding: 16px 5px;
+
+    border-bottom:
+      1px solid rgba(255,255,255,0.08);
+  }
+
+  .nav-quote {
     margin-top: 10px;
-    color: #666;
-    font-size: 12px;
+
+    text-align: center;
+
+    border: 1px solid var(--gold) !important;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-card.large {
+    grid-row: span 1;
+
+    min-height: 420px;
+  }
+
 }
-/* =========================
-   MOBILE BAR
-========================= */
-.mobile-bar {
-    display: none;
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .logo-main {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .logo-sub {
+    font-size: 7px;
+  }
+
+  .logo-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-toggle {
+    width: 46px;
+    height: 46px;
+  }
+
+  .page-hero {
+    min-height: 70vh;
+
+    padding-top: 130px;
+
+    padding-bottom: 80px;
+  }
+
+  .page-hero h1 {
+    font-size: 60px;
+  }
+
+  .page-hero p {
+    font-size: 15px;
+  }
+
+  .gallery-intro {
+    padding: 80px 6%;
+  }
+
+  .gallery-section {
+    padding: 80px 5%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .gallery-card,
+  .gallery-card.large {
+    min-height: 420px;
+  }
+
+  .transformation {
+    padding: 80px 6%;
+  }
+
+  .transformation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transformation-card {
+    min-height: 350px;
+  }
+
+  .social-section {
+    padding: 80px 6%;
+  }
+
+  .cta {
+    padding: 85px 6%;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
 }
-/* =========================
-   RESPONSIVE
-========================= */
-@media(max-width:850px) {
-    .gallery-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
-    .featured-gallery {
-        grid-column: span 2;
-    }
-}
-@media(max-width:600px) {
-    body {
-        padding-bottom: 62px;
-    }
-    nav {
-        padding: 17px 5%;
-    }
-    .page-hero {
-        padding: 140px 5% 70px;
-    }
-    .gallery-section,
-    .social-section,
-    .cta {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-    .featured-gallery {
-        grid-column: span 1;
-    }
-    .gallery-item,
-    .featured-gallery {
-        min-height: 280px;
-    }
-    .mobile-bar {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 9999;
-        background: #050505;
-        border-top: 1px solid rgba(201,162,39,.3);
-    }
-    .mobile-bar a {
-        width: 50%;
-        padding: 17px 5px;
-        text-align: center;
-        font-size: 10px;
-        font-weight: 900;
-    }
-    .mobile-bar a:last-child {
-        background: var(--gold);
-        color: #080808;
-    }
-}
+
 </style>
+
 </head>
+
+
 <body>
-<nav>
-<a href="index.html" class="brand">
-ENHANCE <span>MY RIDE</span>
-</a>
-<div class="menu-wrapper">
-<details class="menu-dropdown">
-<summary aria-label="Open navigation menu">
-☰
-</summary>
-<div class="nav-menu">
 
-Home
 
-Services
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
-Gallery
+<header class="navbar">
 
-About
 
-Service Area
+  <!-- LOGO -->
 
-<a href="quote.html" class="menu-quote">
-Get a Quote
-</a>
-</div>
-</details>
-</div>
-</nav>
-<header class="page-hero">
-<div class="label">
-The Enhance Experience
-</div>
-<h1>
-Our <span>Gallery</span>
-</h1>
-<p>
-See the difference professional detailing can make.
-Explore the Enhance My Ride experience and the level
-of care we bring directly to every vehicle.
-</p>
+  <a href="index.html" class="logo">
+
+    <div class="logo-mark">
+      EMR
+    </div>
+
+    <div class="logo-text">
+
+      <span class="logo-main">
+        ENHANCE MY RIDE
+      </span>
+
+      <span class="logo-sub">
+        AUTO SPA & MOBILE DETAILING
+      </span>
+
+    </div>
+
+  </a>
+
+
+  <!-- MOBILE HAMBURGER -->
+
+  <button
+    type="button"
+    class="menu-toggle"
+    id="menuToggle"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="navMenu"
+  >
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </button>
+
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <ul class="nav-menu" id="navMenu">
+
+      <li>
+        <a href="index.html">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="services.html">
+          Services
+        </a>
+      </li>
+
+      <li>
+        <a href="service-area.html">
+          Service Area
+        </a>
+      </li>
+
+      <li>
+        <a href="gallery.html">
+          Gallery
+        </a>
+      </li>
+
+      <li>
+        <a href="about.html">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="quote.html" class="nav-quote">
+          Get a Quote
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
 </header>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+
+<!-- =========================================================
+     PAGE HERO
+========================================================= -->
+
+<section class="page-hero">
+
+  <div class="page-hero-content">
+
+    <p class="eyebrow">
+      THE ENHANCE TRANSFORMATION
+    </p>
+
+    <h1>
+      See The<br>
+      <span>Difference.</span>
+    </h1>
+
+    <p>
+      Every vehicle deserves more than a quick wash.
+      Explore the Enhance My Ride experience and see the
+      level of care we bring to every detail.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     GALLERY INTRO
+========================================================= -->
+
+<section class="gallery-intro">
+
+  <div class="gallery-intro-content">
+
+    <h2>
+      Clean Is Good.<br>
+      <span>Enhanced Is Better.</span>
+    </h2>
+
+    <p>
+      From deep interior cleaning to exterior finishing,
+      our goal is simple: deliver a noticeable transformation
+      that makes you proud to get back behind the wheel.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     GALLERY
+========================================================= -->
+
 <section class="gallery-section">
-<div class="section-heading">
-<div class="label">
-Before & After
-</div>
-<h2>
-The <span>Enhance</span> Difference
-</h2>
-<p>
-Our gallery will continue to grow as we transform more
-vehicles throughout San Francisco and the Greater Bay Area.
-</p>
-</div>
-<div class="gallery-grid">
-<div class="gallery-item featured-gallery">
-<div class="gallery-placeholder">
-<div class="number">
-ENHANCE 01
-</div>
-<h3>
-Premium Exterior Detail
-</h3>
-<p>
-Professional exterior care. Coming soon.
-</p>
-</div>
-</div>
-<div class="gallery-item">
-<div class="gallery-placeholder">
-<div class="number">
-ENHANCE 02
-</div>
-<h3>
-Interior Transformation
-</h3>
-<p>
-Deep interior cleaning. Coming soon.
-</p>
-</div>
-</div>
-<div class="gallery-item">
-<div class="gallery-placeholder">
-<div class="number">
-ENHANCE 03
-</div>
-<h3>
-Wheel & Tire Detail
-</h3>
-<p>
-Detailed wheels and tires. Coming soon.
-</p>
-</div>
-</div>
-<div class="gallery-item">
-<div class="gallery-placeholder">
-<div class="number">
-ENHANCE 04
-</div>
-<h3>
-Showroom Finish
-</h3>
-<p>
-Ultimate vehicle enhancement. Coming soon.
-</p>
-</div>
-</div>
-<div class="gallery-item">
-<div class="gallery-placeholder">
-<div class="number">
-ENHANCE 05
-</div>
-<h3>
-Interior Refresh
-</h3>
-<p>
-Clean, fresh, and enhanced. Coming soon.
-</p>
-</div>
-</div>
-<div class="gallery-item">
-<div class="gallery-placeholder">
-<div class="number">
-ENHANCE 06
-</div>
-<h3>
-The Final Reveal
-</h3>
-<p>
-Your vehicle. Enhanced. Coming soon.
-</p>
-</div>
-</div>
-</div>
+
+
+  <div class="section-heading">
+
+    <p class="eyebrow">
+      OUR WORK
+    </p>
+
+    <h2>
+      The Enhance
+      <span>
+        Gallery.
+      </span>
+    </h2>
+
+    <p>
+      A look at the vehicles, finishes, and details that
+      inspire the Enhance My Ride experience.
+    </p>
+
+  </div>
+
+
+  <div class="gallery-grid">
+
+
+    <!-- GALLERY 01 -->
+
+    <article class="gallery-card large">
+
+      <img
+        src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85"
+        alt="Premium sports car exterior detailing"
+        loading="lazy"
+      >
+
+      <div class="gallery-overlay">
+
+        <span class="gallery-number">
+          01 · EXTERIOR
+        </span>
+
+        <h3>
+          Exterior Perfection
+        </h3>
+
+        <p>
+          Clean lines. Deep finish. Attention to every detail.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- GALLERY 02 -->
+
+    <article class="gallery-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1000&q=85"
+        alt="Clean luxury vehicle exterior"
+        loading="lazy"
+      >
+
+      <div class="gallery-overlay">
+
+        <span class="gallery-number">
+          02 · FINISH
+        </span>
+
+        <h3>
+          The Final Touch
+        </h3>
+
+        <p>
+          A finish designed to turn heads.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- GALLERY 03 -->
+
+    <article class="gallery-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=85"
+        alt="Luxury vehicle detail"
+        loading="lazy"
+      >
+
+      <div class="gallery-overlay">
+
+        <span class="gallery-number">
+          03 · DETAIL
+        </span>
+
+        <h3>
+          Every Detail Matters
+        </h3>
+
+        <p>
+          Precision care from start to finish.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- GALLERY 04 -->
+
+    <article class="gallery-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1000&q=85"
+        alt="Luxury car parked outdoors"
+        loading="lazy"
+      >
+
+      <div class="gallery-overlay">
+
+        <span class="gallery-number">
+          04 · EXPERIENCE
+        </span>
+
+        <h3>
+          Drive Different
+        </h3>
+
+        <p>
+          The feeling of a freshly enhanced vehicle.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- GALLERY 05 -->
+
+    <article class="gallery-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=1000&q=85"
+        alt="Clean detailed car exterior"
+        loading="lazy"
+      >
+
+      <div class="gallery-overlay">
+
+        <span class="gallery-number">
+          05 · PREMIUM
+        </span>
+
+        <h3>
+          Premium Finish
+        </h3>
+
+        <p>
+          Because the details make the difference.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- GALLERY 06 -->
+
+    <article class="gallery-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1000&q=85"
+        alt="Detailed automotive interior"
+        loading="lazy"
+      >
+
+      <div class="gallery-overlay">
+
+        <span class="gallery-number">
+          06 · INTERIOR
+        </span>
+
+        <h3>
+          Interior Reset
+        </h3>
+
+        <p>
+          A cleaner, fresher space every time.
+        </p>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
 </section>
+
+
+<!-- =========================================================
+     TRANSFORMATION
+========================================================= -->
+
+<section class="transformation">
+
+
+  <div class="transformation-heading">
+
+    <p class="eyebrow">
+      THE TRANSFORMATION
+    </p>
+
+    <h2>
+      Before The Detail.<br>
+      <span>After The Enhance.</span>
+    </h2>
+
+    <p>
+      Real results start with a professional process.
+      Every vehicle receives the level of attention its
+      condition and service package require.
+    </p>
+
+  </div>
+
+
+  <div class="transformation-grid">
+
+
+    <div class="transformation-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1200&q=85"
+        alt="Vehicle before professional detailing"
+        loading="lazy"
+      >
+
+      <span class="transformation-label">
+        BEFORE
+      </span>
+
+    </div>
+
+
+    <div class="transformation-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85"
+        alt="Vehicle after professional detailing"
+        loading="lazy"
+      >
+
+      <span class="transformation-label">
+        AFTER
+      </span>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     SOCIAL
+========================================================= -->
+
 <section class="social-section">
-<div class="social-box">
-<div class="label">
-Follow The Journey
-</div>
-<h2>
-More <span>Enhancements</span>
-</h2>
-<p>
-Follow Enhance My Ride on social media for vehicle transformations,
-before-and-after results, detailing tips, and behind-the-scenes content.
-</p>
-<a href="https://www.instagram.com/enhancemyridemobiledetailing/" class="social-btn">
-Follow On Instagram
-</a>
-</div>
+
+  <div class="social-content">
+
+    <p class="eyebrow">
+      FOLLOW THE JOURNEY
+    </p>
+
+    <h2>
+      More Rides.<br>
+      <span>More Enhancements.</span>
+    </h2>
+
+    <p>
+      Follow Enhance My Ride on social media for new vehicle
+      transformations, detailing tips, behind-the-scenes content,
+      and the latest work from our mobile auto spa.
+    </p>
+
+    <div class="social-handle">
+      @enhancemyridemobiledetailing
+    </div>
+
+    <br>
+
+    <a
+      href="https://www.instagram.com/enhancemyridemobiledetailing/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="button button-gold"
+    >
+      Follow On Instagram
+    </a>
+
+  </div>
+
 </section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
 <section class="cta">
-<div class="label">
-Ready For Your Transformation?
-</div>
-<h2>
-Let's <span>Enhance</span><br>
-Your Ride.
-</h2>
-<p>
-Book your premium mobile detailing experience today.
-</p>
-<a href="quote.html" class="btn">
-Request Your Quote
-</a>
+
+  <p class="eyebrow">
+    READY FOR YOUR TRANSFORMATION?
+  </p>
+
+  <h2>
+    Let's
+    <span>
+      Enhance Your Ride.
+    </span>
+  </h2>
+
+  <p>
+    Your vehicle deserves to look its best.
+    Let us bring the premium mobile detailing experience
+    directly to you.
+  </p>
+
+  <a
+    href="quote.html"
+    class="button button-gold"
+  >
+    Request Your Quote
+  </a>
+
 </section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
 <footer>
-<div class="footer-logo">
-ENHANCE <span>MY RIDE</span>
-</div>
-<p>
-Enhance My Ride Auto Spa & Mobile Detailing
-</p>
-<p>
-We come to you. You relax. We Enhance.
-</p>
-<p>
-323-327-1806 · Enhancemyridemobiledetailing@gmail.com
-</p>
-<p>
-© 2026 Enhance My Ride. All Rights Reserved.
-</p>
+
+  <div class="footer-logo">
+
+    <div class="footer-logo-mark">
+      EMR
+    </div>
+
+    <div class="footer-name">
+
+      <strong>
+        ENHANCE MY RIDE
+      </strong>
+
+      <small>
+        AUTO SPA & MOBILE DETAILING
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <p class="footer-slogan">
+    We come to you. Your relax. We Enhance.
+  </p>
+
+
+  <div class="footer-contact">
+
+    <a href="tel:3233271806">
+      (323) 327-1806
+    </a>
+
+    <a href="mailto:Enhancemyridemobiledetailing@gmail.com">
+      Enhancemyridemobiledetailing@gmail.com
+    </a>
+
+  </div>
+
+
+  <p class="copyright">
+    © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
+    All rights reserved.
+  </p>
+
 </footer>
-<div class="mobile-bar">
-<a href="tel:13233271806">
-☎ CALL / TEXT
-</a>
-<a href="quote.html">
-REQUEST A QUOTE
-</a>
-</div>
+
+
+<!-- =========================================================
+     MOBILE MENU JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+  const menuToggle =
+    document.getElementById("menuToggle");
+
+  const navMenu =
+    document.getElementById("navMenu");
+
+
+  if (!menuToggle || !navMenu) {
+
+    console.error(
+      "Mobile navigation elements not found."
+    );
+
+    return;
+
+  }
+
+
+  /* OPEN / CLOSE MENU */
+
+  menuToggle.addEventListener(
+    "click",
+    function (event) {
+
+      event.preventDefault();
+
+      event.stopPropagation();
+
+      const isOpen =
+        navMenu.classList.contains("active");
+
+
+      if (isOpen) {
+
+        closeMenu();
+
+      } else {
+
+        openMenu();
+
+      }
+
+    }
+  );
+
+
+  /* OPEN MENU */
+
+  function openMenu() {
+
+    navMenu.classList.add("active");
+
+    menuToggle.classList.add("active");
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "true"
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      "Close navigation menu"
+    );
+
+  }
+
+
+  /* CLOSE MENU */
+
+  function closeMenu() {
+
+    navMenu.classList.remove("active");
+
+    menuToggle.classList.remove("active");
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      "Open navigation menu"
+    );
+
+  }
+
+
+  /* CLOSE AFTER NAVIGATION */
+
+  const navLinks =
+    navMenu.querySelectorAll("a");
+
+
+  navLinks.forEach(function (link) {
+
+    link.addEventListener(
+      "click",
+      function () {
+
+        closeMenu();
+
+      }
+    );
+
+  });
+
+
+  /* CLOSE WHEN CLICKING OUTSIDE */
+
+  document.addEventListener(
+    "click",
+    function (event) {
+
+      const clickedInsideMenu =
+        navMenu.contains(event.target);
+
+      const clickedToggle =
+        menuToggle.contains(event.target);
+
+
+      if (
+        !clickedInsideMenu &&
+        !clickedToggle
+      ) {
+
+        closeMenu();
+
+      }
+
+    }
+  );
+
+
+  /* CLOSE WITH ESCAPE */
+
+  document.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (event.key === "Escape") {
+
+        closeMenu();
+
+      }
+
+    }
+  );
+
+
+  /* CLOSE ON DESKTOP RESIZE */
+
+  window.addEventListener(
+    "resize",
+    function () {
+
+      if (window.innerWidth > 900) {
+
+        closeMenu();
+
+      }
+
+    }
+  );
+
+
+});
+
+</script>
+
+
 </body>
+
 </html>
