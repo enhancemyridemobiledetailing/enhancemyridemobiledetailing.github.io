@@ -1,622 +1,1676 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Service Area | Enhance My Ride Auto Spa</title>
-<meta name="description" content="Enhance My Ride Auto Spa & Mobile Detailing serves San Francisco and the Greater Bay Area. See our mobile detailing service area and request a quote.">
+
+<title>Service Area | Enhance My Ride Auto Spa & Mobile Detailing</title>
+
+<meta
+  name="description"
+  content="Enhance My Ride Auto Spa & Mobile Detailing provides premium mobile detailing throughout San Francisco and the entire Bay Area."
+>
+
 <style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #070707;
-    color: #f5f2ea;
-    line-height: 1.6;
-    padding-bottom: 0;
+  background: #080808;
+  color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
+
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
+
+button {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
 :root {
-    --gold: #c9a227;
-    --gold-light: #e4c45c;
+  --black: #080808;
+  --dark: #111111;
+  --dark-2: #171717;
+  --gold: #c9a227;
+  --gold-light: #e6c85c;
+  --white: #f5f5f5;
+  --gray: #a5a5a5;
+  --border: rgba(201, 162, 39, 0.3);
 }
-/* =========================
+
+
+/* =========================================================
    NAVIGATION
-========================= */
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 18px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(7,7,7,.96);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255,255,255,.07);
+========================================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 78px;
+
+  z-index: 10000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  background: rgba(8, 8, 8, 0.98);
+
+  border-bottom: 1px solid var(--border);
 }
-.brand {
-    font-size: 17px;
-    font-weight: 900;
-    letter-spacing: 2px;
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 0;
 }
-.brand span {
-    color: var(--gold-light);
+
+.logo-mark {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--gold);
+
+  color: var(--gold);
+
+  font-size: 11px;
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  flex-shrink: 0;
 }
-.menu-wrapper {
-    position: relative;
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
 }
-.menu-dropdown {
-    position: relative;
+
+.logo-main {
+  color: white;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
 }
-.menu-dropdown summary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 42px;
-    border: 1px solid rgba(201,162,39,.5);
-    color: var(--gold-light);
-    font-size: 23px;
-    cursor: pointer;
-    list-style: none;
-    user-select: none;
-    transition: .3s;
+
+.logo-sub {
+  color: var(--gold);
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  margin-top: 2px;
+
+  white-space: nowrap;
 }
-.menu-dropdown summary::-webkit-details-marker {
-    display: none;
-}
-.menu-dropdown summary:hover {
-    background: var(--gold);
-    color: #080808;
-}
-.menu-dropdown[open] summary {
-    background: var(--gold);
-    color: #080808;
-}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
 .nav-menu {
-    position: absolute;
-    top: 52px;
-    right: 0;
-    width: 230px;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background: rgba(12,12,12,.98);
-    border: 1px solid rgba(201,162,39,.35);
-    box-shadow: 0 20px 50px rgba(0,0,0,.6);
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  list-style: none;
 }
+
 .nav-menu a {
-    display: block;
-    padding: 13px 15px;
-    color: #ccc;
-    font-size: 11px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: .3s;
+  color: #eeeeee;
+
+  font-size: 11px;
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  transition: color 0.2s ease;
 }
+
 .nav-menu a:hover {
-    color: var(--gold-light);
-    background: rgba(201,162,39,.08);
+  color: var(--gold-light);
 }
-.nav-menu .menu-quote {
-    margin-top: 5px;
-    background: var(--gold);
-    color: #080808;
-    text-align: center;
+
+.nav-quote {
+  border: 1px solid var(--gold);
+
+  padding: 11px 18px;
+
+  color: var(--gold-light) !important;
 }
-.nav-menu .menu-quote:hover {
-    background: var(--gold-light);
+
+.nav-quote:hover {
+  background: var(--gold);
+
+  color: #080808 !important;
 }
-/* =========================
-   HERO
-========================= */
+
+
+/* =========================================================
+   MOBILE HAMBURGER
+========================================================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 48px;
+  height: 48px;
+
+  padding: 0;
+
+  background: #080808;
+
+  border: 1px solid var(--gold);
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  position: relative;
+
+  z-index: 10002;
+
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.menu-toggle span {
+  display: block;
+
+  width: 23px;
+  height: 2px;
+
+  background: var(--gold);
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   HAMBURGER X ANIMATION
+========================================================= */
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
+
 .page-hero {
-    padding: 165px 7% 90px;
-    text-align: center;
-    background:
-        radial-gradient(circle at center, rgba(201,162,39,.15), transparent 45%),
-        linear-gradient(135deg,#050505,#141414);
+  min-height: 65vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 150px 8% 90px;
+
+  position: relative;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.96) 0%,
+      rgba(0,0,0,0.80) 50%,
+      rgba(0,0,0,0.60) 100%
+    ),
+    url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=2000&q=85")
+    center / cover no-repeat;
 }
-.label {
-    color: var(--gold-light);
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+
+.page-hero-content {
+  max-width: 800px;
 }
+
+.eyebrow {
+  color: var(--gold-light);
+
+  font-size: 11px;
+  font-weight: bold;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 20px;
+}
+
 .page-hero h1 {
-    font-size: clamp(44px,8vw,90px);
-    line-height: .95;
-    text-transform: uppercase;
-    letter-spacing: -3px;
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(55px, 8vw, 100px);
+
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 25px;
 }
+
 .page-hero h1 span {
-    color: var(--gold-light);
+  color: var(--gold-light);
 }
+
 .page-hero p {
-    max-width: 720px;
-    margin: 25px auto 0;
-    color: #999;
-    font-size: 17px;
+  max-width: 650px;
+
+  color: #cccccc;
+
+  font-size: 17px;
+
+  line-height: 1.8;
 }
-/* =========================
-   SERVICE AREA
-========================= */
-.area-section {
-    padding: 100px 7%;
-    background: #0a0a0a;
+
+
+/* =========================================================
+   SERVICE AREA INTRO
+========================================================= */
+
+.area-intro {
+  padding: 100px 8%;
+
+  background: #0c0c0c;
+
+  text-align: center;
 }
+
+.area-intro-content {
+  max-width: 800px;
+
+  margin: 0 auto;
+}
+
+.area-intro h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(38px, 5vw, 60px);
+
+  line-height: 1.1;
+
+  margin-bottom: 25px;
+}
+
+.area-intro h2 span {
+  color: var(--gold-light);
+}
+
+.area-intro p {
+  color: var(--gray);
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   SERVICE AREAS
+========================================================= */
+
+.service-areas {
+  padding: 110px 8%;
+
+  background: #080808;
+}
+
 .section-heading {
-    max-width: 750px;
-    margin: 0 auto 60px;
-    text-align: center;
+  max-width: 750px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
 }
+
 .section-heading h2 {
-    font-size: clamp(38px,5vw,60px);
-    line-height: 1;
-    text-transform: uppercase;
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(40px, 5vw, 62px);
+
+  line-height: 1.1;
+
+  margin-bottom: 20px;
 }
+
 .section-heading h2 span {
-    color: var(--gold-light);
+  color: var(--gold-light);
 }
+
 .section-heading p {
-    margin-top: 18px;
-    color: #888;
+  color: var(--gray);
+
+  font-size: 15px;
 }
-.area-container {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+
+
+/* =========================================================
+   AREA GRID
+========================================================= */
+
+.area-grid {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
 }
+
 .area-card {
-    padding: 40px 35px;
-    background: linear-gradient(145deg,#181818,#0d0d0d);
-    border: 1px solid #292929;
-    transition: .3s;
+  padding: 30px 25px;
+
+  background: #121212;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
 }
+
 .area-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(201,162,39,.6);
+  transform: translateY(-5px);
+
+  border-color: var(--gold);
 }
-.area-card.featured {
-    border-color: rgba(201,162,39,.6);
-}
+
 .area-number {
-    color: var(--gold-light);
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 3px;
+  color: var(--gold);
+
+  font-size: 10px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 12px;
 }
+
 .area-card h3 {
-    margin-top: 15px;
-    font-size: 25px;
-    text-transform: uppercase;
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 27px;
+
+  margin-bottom: 10px;
 }
+
 .area-card p {
-    margin-top: 15px;
-    color: #888;
-    font-size: 14px;
+  color: var(--gray);
+
+  font-size: 13px;
+
+  line-height: 1.7;
 }
-.city-list {
-    margin-top: 25px;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 8px;
-    list-style: none;
+
+
+/* =========================================================
+   FEATURED SAN FRANCISCO SECTION
+========================================================= */
+
+.featured-area {
+  padding: 100px 8%;
+
+  background: #101010;
+
+  border-top: 1px solid var(--border);
+
+  border-bottom: 1px solid var(--border);
 }
-.city-list li {
-    padding: 10px;
-    background: #0a0a0a;
-    border: 1px solid #252525;
-    color: #aaa;
-    font-size: 12px;
+
+.featured-area-inner {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
 }
-.city-list li::before {
-    content: "•";
-    margin-right: 7px;
-    color: var(--gold-light);
+
+.featured-area-image {
+  min-height: 450px;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.30),
+      rgba(0,0,0,0.30)
+    ),
+    url("https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1200&q=85")
+    center / cover no-repeat;
+
+  border: 1px solid var(--border);
 }
-/* =========================
-   PRIMARY AREA
-========================= */
-.primary-area {
-    padding: 100px 7%;
-    background: #111;
+
+.featured-area-content .eyebrow {
+  margin-bottom: 15px;
 }
-.primary-box {
-    max-width: 1050px;
-    margin: auto;
-    padding: 65px 45px;
-    text-align: center;
-    background:
-        radial-gradient(circle at center,rgba(201,162,39,.1),transparent 55%),
-        #0a0a0a;
-    border: 1px solid rgba(201,162,39,.3);
+
+.featured-area-content h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(38px, 5vw, 58px);
+
+  line-height: 1.1;
+
+  margin-bottom: 20px;
 }
-.primary-box h2 {
-    font-size: clamp(38px,6vw,65px);
-    line-height: 1;
-    text-transform: uppercase;
+
+.featured-area-content h2 span {
+  color: var(--gold-light);
 }
-.primary-box h2 span {
-    color: var(--gold-light);
+
+.featured-area-content p {
+  color: var(--gray);
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  margin-bottom: 25px;
 }
-.primary-box p {
-    max-width: 700px;
-    margin: 20px auto 0;
-    color: #888;
-}
-.primary-location {
-    margin-top: 30px;
-    color: var(--gold-light);
-    font-size: 14px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-/* =========================
-   TRAVEL
-========================= */
+
+
+/* =========================================================
+   TRAVEL AREA
+========================================================= */
+
 .travel {
-    padding: 100px 7%;
-    background: #0a0a0a;
+  padding: 100px 8%;
+
+  background: #0c0c0c;
+
+  text-align: center;
 }
-.travel-container {
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
+
+.travel-content {
+  max-width: 800px;
+
+  margin: 0 auto;
 }
-.travel-container h2 {
-    font-size: clamp(38px,5vw,58px);
-    line-height: 1;
-    text-transform: uppercase;
+
+.travel h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(38px, 5vw, 58px);
+
+  line-height: 1.1;
+
+  margin-bottom: 20px;
 }
-.travel-container h2 span {
-    color: var(--gold-light);
+
+.travel h2 span {
+  color: var(--gold-light);
 }
-.travel-container p {
-    max-width: 700px;
-    margin: 20px auto 0;
-    color: #888;
+
+.travel p {
+  color: var(--gray);
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  margin-bottom: 20px;
 }
+
 .travel-note {
-    margin-top: 35px;
-    padding: 25px;
-    background: rgba(201,162,39,.05);
-    border: 1px solid rgba(201,162,39,.25);
+  color: var(--gold-light) !important;
+
+  font-size: 13px !important;
+
+  font-weight: bold;
 }
-.travel-note p {
-    margin: 0;
-    color: #aaa;
-    font-size: 13px;
-}
-/* =========================
+
+
+/* =========================================================
    CTA
-========================= */
+========================================================= */
+
 .cta {
-    padding: 110px 7%;
-    text-align: center;
-    background:
-        radial-gradient(circle at center,rgba(201,162,39,.14),transparent 50%),
-        #080808;
+  padding: 110px 8%;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(8,8,8,0.90),
+      rgba(8,8,8,0.90)
+    ),
+    url("https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=2000&q=85")
+    center / cover no-repeat;
 }
+
 .cta h2 {
-    font-size: clamp(42px,7vw,80px);
-    line-height: .95;
-    text-transform: uppercase;
+  max-width: 800px;
+
+  margin: 0 auto 25px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(40px, 6vw, 70px);
+
+  line-height: 1.1;
 }
+
 .cta h2 span {
-    color: var(--gold-light);
+  color: var(--gold-light);
 }
+
 .cta p {
-    max-width: 600px;
-    margin: 20px auto 30px;
-    color: #888;
+  max-width: 600px;
+
+  margin: 0 auto 30px;
+
+  color: #bbbbbb;
+
+  font-size: 15px;
 }
-.btn {
-    display: inline-block;
-    padding: 16px 26px;
-    background: var(--gold);
-    color: #080808;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+
+.button {
+  display: inline-block;
+
+  padding: 15px 25px;
+
+  border: 1px solid var(--gold);
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  transition: all 0.2s ease;
 }
-.btn:hover {
-    background: var(--gold-light);
+
+.button-gold {
+  background: var(--gold);
+
+  color: #080808;
 }
-/* =========================
+
+.button-gold:hover {
+  background: var(--gold-light);
+
+  border-color: var(--gold-light);
+}
+
+
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
+
 footer {
-    padding: 50px 7% 90px;
-    text-align: center;
-    background: #050505;
+  padding: 60px 8% 30px;
+
+  background: #050505;
+
+  border-top: 1px solid var(--border);
+
+  text-align: center;
 }
+
 .footer-logo {
-    font-size: 20px;
-    font-weight: 900;
-    letter-spacing: 3px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
 }
-.footer-logo span {
-    color: var(--gold-light);
+
+.footer-logo-mark {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--gold);
+
+  color: var(--gold);
+
+  font-size: 11px;
+
+  font-weight: bold;
 }
-footer p {
+
+.footer-name {
+  text-align: left;
+}
+
+.footer-name strong {
+  display: block;
+
+  color: white;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+}
+
+.footer-name small {
+  color: var(--gold);
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+
+.footer-slogan {
+  color: var(--gray);
+
+  font-size: 12px;
+
+  margin-bottom: 25px;
+}
+
+.footer-contact {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+
+  margin-bottom: 30px;
+}
+
+.footer-contact a {
+  color: var(--gold-light);
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+}
+
+.copyright {
+  color: #555555;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+
+    top: 78px;
+    left: 0;
+
+    width: 100%;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    padding: 0 5%;
+
+    background: #080808;
+
+    border-bottom: 1px solid transparent;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+      max-height 0.3s ease,
+      opacity 0.2s ease,
+      visibility 0.2s ease,
+      padding 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .nav-menu.active {
+    max-height: 500px;
+
+    padding-top: 15px;
+    padding-bottom: 25px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    border-bottom-color: var(--gold);
+
+    box-shadow:
+      0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-menu a {
+    display: block;
+
+    width: 100%;
+
+    padding: 16px 5px;
+
+    border-bottom:
+      1px solid rgba(255,255,255,0.08);
+  }
+
+  .nav-quote {
     margin-top: 10px;
-    color: #666;
-    font-size: 12px;
+
+    text-align: center;
+
+    border: 1px solid var(--gold) !important;
+  }
+
+  .area-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-area-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-area-image {
+    min-height: 350px;
+  }
+
 }
-/* =========================
-   MOBILE BAR
-========================= */
-.mobile-bar {
-    display: none;
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .logo-main {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .logo-sub {
+    font-size: 7px;
+  }
+
+  .logo-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-toggle {
+    width: 46px;
+    height: 46px;
+  }
+
+  .page-hero {
+    min-height: 70vh;
+
+    padding-top: 130px;
+
+    padding-bottom: 80px;
+  }
+
+  .page-hero h1 {
+    font-size: 60px;
+  }
+
+  .page-hero p {
+    font-size: 15px;
+  }
+
+  .area-intro {
+    padding: 80px 6%;
+  }
+
+  .service-areas {
+    padding: 80px 6%;
+  }
+
+  .area-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-area {
+    padding: 80px 6%;
+  }
+
+  .featured-area-image {
+    min-height: 280px;
+  }
+
+  .travel {
+    padding: 80px 6%;
+  }
+
+  .cta {
+    padding: 85px 6%;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
 }
-/* =========================
-   RESPONSIVE
-========================= */
-@media(max-width:850px) {
-    .area-container {
-        grid-template-columns: 1fr;
-        max-width: 650px;
-    }
-}
-@media(max-width:600px) {
-    body {
-        padding-bottom: 62px;
-    }
-    nav {
-        padding: 17px 5%;
-    }
-    .page-hero {
-        padding: 140px 5% 70px;
-    }
-    .area-section,
-    .primary-area,
-    .travel,
-    .cta {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-    .area-card {
-        padding: 32px 25px;
-    }
-    .city-list {
-        grid-template-columns: 1fr;
-    }
-    .primary-box {
-        padding: 50px 25px;
-    }
-    .mobile-bar {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 9999;
-        background: #050505;
-        border-top: 1px solid rgba(201,162,39,.3);
-    }
-    .mobile-bar a {
-        width: 50%;
-        padding: 17px 5px;
-        text-align: center;
-        font-size: 10px;
-        font-weight: 900;
-    }
-    .mobile-bar a:last-child {
-        background: var(--gold);
-        color: #080808;
-    }
-}
+
 </style>
+
 </head>
+
+
 <body>
-<nav>
-<a href="index.html" class="brand">
-ENHANCE <span>MY RIDE</span>
-</a>
-<div class="menu-wrapper">
-<details class="menu-dropdown">
-<summary aria-label="Open navigation menu">
-☰
-</summary>
-<div class="nav-menu">
 
-Home
 
-Services
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
-Gallery
+<header class="navbar">
 
-About
 
-Service Area
+  <!-- LOGO -->
 
-<a href="quote.html" class="menu-quote">
-Get a Quote
-</a>
-</div>
-</details>
-</div>
-</nav>
-<header class="page-hero">
-<div class="label">
-Mobile Detailing Throughout The Bay
-</div>
-<h1>
-Where We <span>Serve</span>
-</h1>
-<p>
-Enhance My Ride brings premium mobile detailing directly to
-your home, workplace, or convenient location throughout
-San Francisco and the Greater Bay Area.
-</p>
+  <a href="index.html" class="logo">
+
+    <div class="logo-mark">
+      EMR
+    </div>
+
+    <div class="logo-text">
+
+      <span class="logo-main">
+        ENHANCE MY RIDE
+      </span>
+
+      <span class="logo-sub">
+        AUTO SPA & MOBILE DETAILING
+      </span>
+
+    </div>
+
+  </a>
+
+
+  <!-- MOBILE HAMBURGER -->
+
+  <button
+    type="button"
+    class="menu-toggle"
+    id="menuToggle"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="navMenu"
+  >
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </button>
+
+
+  <!-- NAVIGATION LINKS -->
+
+  <nav>
+
+    <ul class="nav-menu" id="navMenu">
+
+      <li>
+        <a href="index.html">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="services.html">
+          Services
+        </a>
+      </li>
+
+      <li>
+        <a href="service-area.html">
+          Service Area
+        </a>
+      </li>
+
+      <li>
+        <a href="gallery.html">
+          Gallery
+        </a>
+      </li>
+
+      <li>
+        <a href="about.html">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="quote.html" class="nav-quote">
+          Get a Quote
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
 </header>
-<section class="area-section">
-<div class="section-heading">
-<div class="label">
-Our Service Area
-</div>
-<h2>
-We Come <span>To You.</span>
-</h2>
-<p>
-Our mobile setup allows us to bring professional detailing
-services directly to customers across the Bay Area.
-</p>
-</div>
-<div class="area-container">
-<div class="area-card featured">
-<div class="area-number">
-01 / PRIMARY SERVICE AREA
-</div>
-<h3>
-San Francisco
-</h3>
-<p>
-San Francisco is at the heart of our service area.
-We proudly provide premium mobile detailing throughout
-the city.
-</p>
-<ul class="city-list">
-<li>Downtown</li>
-<li>Mission District</li>
-<li>SoMa</li>
-<li>Marina District</li>
-<li>Richmond District</li>
-<li>Sunset District</li>
-<li>Pacific Heights</li>
-<li>Bernal Heights</li>
-</ul>
-</div>
-<div class="area-card">
-<div class="area-number">
-02 / GREATER BAY AREA
-</div>
-<h3>
-Bay Area Coverage
-</h3>
-<p>
-We also serve customers throughout surrounding Bay Area
-communities. Availability may vary by location and schedule.
-</p>
-<ul class="city-list">
-<li>Oakland</li>
-<li>Berkeley</li>
-<li>Alameda</li>
-<li>Richmond</li>
-<li>Concord</li>
-<li>Walnut Creek</li>
-<li>Martinez</li>
-<li>Vallejo</li>
-<li>Fairfield</li>
-<li>San Rafael</li>
-<li>San Mateo</li>
-<li>Daly City</li>
-</ul>
-</div>
-</div>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+
+<!-- =========================================================
+     PAGE HERO
+========================================================= -->
+
+<section class="page-hero">
+
+  <div class="page-hero-content">
+
+    <p class="eyebrow">
+      WE COME TO YOU
+    </p>
+
+    <h1>
+      Mobile Detailing<br>
+      <span>Across the Bay.</span>
+    </h1>
+
+    <p>
+      Enhance My Ride brings a premium mobile detailing experience
+      directly to your home, office, or preferred location throughout
+      San Francisco and the greater Bay Area.
+    </p>
+
+  </div>
+
 </section>
-<section class="primary-area">
-<div class="primary-box">
-<div class="label">
-Your Location. Our Expertise.
-</div>
-<h2>
-Premium Detailing<br>
-<span>Delivered To You.</span>
-</h2>
-<p>
-Whether you're at home, at work, or somewhere convenient,
-our mobile detailing service is designed around your schedule.
-Tell us where you are located and we'll confirm availability.
-</p>
-<div class="primary-location">
-Serving San Francisco & The Greater Bay Area
-</div>
-</div>
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="area-intro">
+
+  <div class="area-intro-content">
+
+    <h2>
+      Your Location.<br>
+      <span>Our Expertise.</span>
+    </h2>
+
+    <p>
+      You don't need to rearrange your day or sit in a waiting room.
+      We bring the equipment, products, and professional detailing
+      process directly to you. Whether you're at home, at work,
+      or somewhere convenient, we'll work to make your vehicle
+      look its best.
+    </p>
+
+  </div>
+
 </section>
+
+
+<!-- =========================================================
+     SERVICE AREAS
+========================================================= -->
+
+<section class="service-areas">
+
+  <div class="section-heading">
+
+    <p class="eyebrow">
+      WHERE WE DETAIL
+    </p>
+
+    <h2>
+      Serving the
+      <span>
+        Bay Area.
+      </span>
+    </h2>
+
+    <p>
+      Our mobile detailing service covers San Francisco and
+      surrounding Bay Area communities. If you don't see your
+      city listed, contact us to confirm availability.
+    </p>
+
+  </div>
+
+
+  <div class="area-grid">
+
+
+    <article class="area-card">
+
+      <div class="area-number">
+        01
+      </div>
+
+      <h3>
+        San Francisco
+      </h3>
+
+      <p>
+        Serving neighborhoods throughout San Francisco with
+        convenient mobile detailing at your location.
+      </p>
+
+    </article>
+
+
+    <article class="area-card">
+
+      <div class="area-number">
+        02
+      </div>
+
+      <h3>
+        Oakland
+      </h3>
+
+      <p>
+        Professional mobile detailing services available
+        throughout Oakland and surrounding communities.
+      </p>
+
+    </article>
+
+
+    <article class="area-card">
+
+      <div class="area-number">
+        03
+      </div>
+
+      <h3>
+        Berkeley
+      </h3>
+
+      <p>
+        Premium vehicle care brought directly to homes,
+        workplaces, and convenient locations.
+      </p>
+
+    </article>
+
+
+    <article class="area-card">
+
+      <div class="area-number">
+        04
+      </div>
+
+      <h3>
+        Walnut Creek
+      </h3>
+
+      <p>
+        Mobile detailing services available throughout
+        Walnut Creek and nearby East Bay communities.
+      </p>
+
+    </article>
+
+
+    <article class="area-card">
+
+      <div class="area-number">
+        05
+      </div>
+
+      <h3>
+        Concord
+      </h3>
+
+      <p>
+        Convenient mobile detailing for customers in Concord
+        and surrounding areas.
+      </p>
+
+    </article>
+
+
+    <article class="area-card">
+
+      <div class="area-number">
+        06
+      </div>
+
+      <h3>
+        Fairfield
+      </h3>
+
+      <p>
+        Mobile detailing services available in Fairfield
+        and nearby Solano County communities.
+      </p>
+
+    </article>
+
+
+    <article class="area-card">
+
+      <div class="area-number">
+        07
+      </div>
+
+      <h3>
+        Vallejo
+      </h3>
+
+      <p>
+        Professional vehicle detailing brought directly
+        to customers throughout Vallejo.
+      </p>
+
+    </article>
+
+
+    <article class="area-card">
+
+      <div class="area-number">
+        08
+      </div>
+
+      <h3>
+        Martinez
+      </h3>
+
+      <p>
+        Convenient mobile detailing available throughout
+        Martinez and surrounding communities.
+      </p>
+
+    </article>
+
+
+    <article class="area-card">
+
+      <div class="area-number">
+        09
+      </div>
+
+      <h3>
+        Surrounding Bay Area
+      </h3>
+
+      <p>
+        Not sure if we service your location? Reach out and
+        we'll confirm availability and travel options.
+      </p>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     SAN FRANCISCO FEATURE
+========================================================= -->
+
+<section class="featured-area">
+
+  <div class="featured-area-inner">
+
+
+    <div class="featured-area-image">
+    </div>
+
+
+    <div class="featured-area-content">
+
+      <p class="eyebrow">
+        OUR SERVICE REGION
+      </p>
+
+      <h2>
+        Premium Detailing<br>
+        <span>Where You Are.</span>
+      </h2>
+
+      <p>
+        Enhance My Ride was built around convenience. Our mobile
+        service allows you to skip the traditional detailing shop
+        and have your vehicle professionally cared for wherever
+        you're located.
+      </p>
+
+      <p>
+        We proudly serve customers throughout San Francisco and
+        the greater Bay Area. Service availability may depend on
+        your exact location, vehicle size, and scheduling needs.
+      </p>
+
+      <a
+        href="quote.html"
+        class="button button-gold"
+      >
+        Check Availability
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     TRAVEL AREA
+========================================================= -->
+
 <section class="travel">
-<div class="travel-container">
-<div class="label">
-Outside Our Standard Area?
-</div>
-<h2>
-Let's See If We Can <span>Reach You.</span>
-</h2>
-<p>
-If your location isn't listed above, don't worry.
-We may still be able to accommodate your vehicle depending
-on distance, availability, and scheduling.
-</p>
-<div class="travel-note">
-<p>
-Additional travel fees may apply for locations outside our
-standard service area. Contact us with your city or ZIP code
-and we'll let you know what's available.
-</p>
-</div>
-</div>
+
+  <div class="travel-content">
+
+    <p class="eyebrow">
+      OUTSIDE OUR CORE AREA?
+    </p>
+
+    <h2>
+      We're Always
+      <span>
+        Expanding.
+      </span>
+    </h2>
+
+    <p>
+      If you're outside our regular service area, don't hesitate
+      to reach out. Depending on our schedule and your location,
+      extended travel may be available.
+    </p>
+
+    <p class="travel-note">
+      Additional travel fees may apply for locations outside
+      our standard service area.
+    </p>
+
+  </div>
+
 </section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
 <section class="cta">
-<div class="label">
-Ready To Book?
-</div>
-<h2>
-Tell Us <span>Where</span><br>
-You Are.
-</h2>
-<p>
-Submit a quote request and let us bring the Enhance experience
-directly to your location.
-</p>
-<a href="quote.html" class="btn">
-Request Your Quote
-</a>
+
+  <p class="eyebrow">
+    SAN FRANCISCO · BAY AREA
+  </p>
+
+  <h2>
+    Wherever You Are,
+    <span>
+      We'll Enhance Your Ride.
+    </span>
+  </h2>
+
+  <p>
+    Tell us where you're located and what your vehicle needs.
+    We'll confirm availability and help you choose the right
+    detailing service.
+  </p>
+
+  <a
+    href="quote.html"
+    class="button button-gold"
+  >
+    Request Your Quote
+  </a>
+
 </section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
 <footer>
-<div class="footer-logo">
-ENHANCE <span>MY RIDE</span>
-</div>
-<p>
-Enhance My Ride Auto Spa & Mobile Detailing
-</p>
-<p>
-We come to you. You relax. We Enhance.
-</p>
-<p>
-323-327-1806 · Enhancemyridemobiledetailing@gmail.com
-</p>
-<p>
-© 2026 Enhance My Ride. All Rights Reserved.
-</p>
+
+  <div class="footer-logo">
+
+    <div class="footer-logo-mark">
+      EMR
+    </div>
+
+    <div class="footer-name">
+
+      <strong>
+        ENHANCE MY RIDE
+      </strong>
+
+      <small>
+        AUTO SPA & MOBILE DETAILING
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <p class="footer-slogan">
+    We come to you. Your relax. We Enhance.
+  </p>
+
+
+  <div class="footer-contact">
+
+    <a href="tel:3233271806">
+      (323) 327-1806
+    </a>
+
+    <a href="mailto:Enhancemyridemobiledetailing@gmail.com">
+      Enhancemyridemobiledetailing@gmail.com
+    </a>
+
+  </div>
+
+
+  <p class="copyright">
+    © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
+    All rights reserved.
+  </p>
+
 </footer>
-<div class="mobile-bar">
-<a href="tel:13233271806">
-☎ CALL / TEXT
-</a>
-<a href="quote.html">
-REQUEST A QUOTE
-</a>
-</div>
+
+
+<!-- =========================================================
+     MOBILE MENU JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuToggle =
+    document.getElementById("menuToggle");
+
+  const navMenu =
+    document.getElementById("navMenu");
+
+
+  if (!menuToggle || !navMenu) {
+
+    console.error(
+      "Mobile navigation elements not found."
+    );
+
+    return;
+
+  }
+
+
+  /* OPEN / CLOSE MENU */
+
+  menuToggle.addEventListener(
+    "click",
+    function (event) {
+
+      event.preventDefault();
+
+      event.stopPropagation();
+
+      const isOpen =
+        navMenu.classList.contains("active");
+
+
+      if (isOpen) {
+
+        closeMenu();
+
+      } else {
+
+        openMenu();
+
+      }
+
+    }
+  );
+
+
+  /* OPEN MENU */
+
+  function openMenu() {
+
+    navMenu.classList.add("active");
+
+    menuToggle.classList.add("active");
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "true"
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      "Close navigation menu"
+    );
+
+  }
+
+
+  /* CLOSE MENU */
+
+  function closeMenu() {
+
+    navMenu.classList.remove("active");
+
+    menuToggle.classList.remove("active");
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      "Open navigation menu"
+    );
+
+  }
+
+
+  /* CLOSE AFTER CLICKING LINK */
+
+  const navLinks =
+    navMenu.querySelectorAll("a");
+
+
+  navLinks.forEach(function (link) {
+
+    link.addEventListener(
+      "click",
+      function () {
+
+        closeMenu();
+
+      }
+    );
+
+  });
+
+
+  /* CLOSE WHEN CLICKING OUTSIDE */
+
+  document.addEventListener(
+    "click",
+    function (event) {
+
+      const clickedInsideMenu =
+        navMenu.contains(event.target);
+
+      const clickedToggle =
+        menuToggle.contains(event.target);
+
+
+      if (
+        !clickedInsideMenu &&
+        !clickedToggle
+      ) {
+
+        closeMenu();
+
+      }
+
+    }
+  );
+
+
+  /* CLOSE WITH ESCAPE */
+
+  document.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (event.key === "Escape") {
+
+        closeMenu();
+
+      }
+
+    }
+  );
+
+
+  /* CLOSE WHEN RESIZING TO DESKTOP */
+
+  window.addEventListener(
+    "resize",
+    function () {
+
+      if (window.innerWidth > 900) {
+
+        closeMenu();
+
+      }
+
+    }
+  );
+
+});
+
+</script>
+
+
 </body>
 </html>
