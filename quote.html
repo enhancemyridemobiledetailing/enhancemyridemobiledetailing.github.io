@@ -273,15 +273,7 @@ padding:25px 20px;
 
 </head>
 
-
-
 <body>
-
-
-
-<!-- ===============================
-NAVIGATION
-================================ -->
 
 
 <header class="navbar">
@@ -452,7 +444,12 @@ Tell us about your vehicle and we'll create your personalized detailing recommen
 <section class="quote-section">
 
 
-<form class="quote-form" id="quoteForm">
+<form 
+class="quote-form" 
+id="quoteForm"
+action="https://formspree.io/f/mrenjdkv"
+method="POST"
+>
 
 
 <h2>
@@ -629,8 +626,6 @@ Enhance Showroom Elite — Starting $399
 </div>
 
 
-<!-- VEHICLE TYPE -->
-
 <div class="form-group">
 
 <label>
@@ -686,8 +681,6 @@ Luxury Vehicle
 
 
 
-<!-- SERVICE LOCATION -->
-
 <div class="form-group full">
 
 <label>
@@ -710,10 +703,7 @@ required
 
 
 
-<!-- DATE -->
-
 <div class="form-group">
-
 
 <label>
 Preferred Date
@@ -733,10 +723,7 @@ name="date"
 
 
 
-<!-- TIME -->
-
 <div class="form-group">
-
 
 <label>
 Preferred Time
@@ -771,16 +758,7 @@ Evening
 
 </div>
 
-
-
-
-
-
-<!-- CONDITION -->
-
-
 <div class="form-group">
-
 
 <label>
 Vehicle Condition
@@ -830,11 +808,7 @@ Extreme Condition
 
 
 
-<!-- EXTRA SERVICES -->
-
-
 <div class="form-group">
-
 
 <label>
 Additional Services
@@ -855,11 +829,7 @@ placeholder="Odor removal, pet hair, stains, etc."
 
 
 
-<!-- MESSAGE -->
-
-
 <div class="form-group full">
-
 
 <label>
 Tell Us About Your Vehicle
@@ -906,9 +876,7 @@ We come to you. You relax. We Enhance.
 </div>
 
 
-
-
-<form action="https://formspree.io/f/mrenjdkv" method="POST">
+</form>
 
 
 </section>
@@ -920,11 +888,6 @@ We come to you. You relax. We Enhance.
 
 
 
-
-
-<!-- ===============================
-FOOTER
-================================ -->
 
 
 <footer>
@@ -1034,11 +997,11 @@ CONTACT
 <p class="footer-text">
 
 
-<a href="mailto:Enhancemyridemobiledetailing@gmail.com">
+<a href="mailto:info@enhancemyride.com">
 
 <i class="fa-solid fa-envelope"></i>
 
-info@enahncemyride.com
+info@enhancemyride.com
 
 </a>
 
@@ -1108,11 +1071,6 @@ All Rights Reserved.
 <script>
 
 
-/* ===============================
-MOBILE MENU
-================================ */
-
-
 const menuToggle =
 document.getElementById("menuToggle");
 
@@ -1157,11 +1115,6 @@ open
 
 
 
-/* ===============================
-AUTO SELECT PACKAGE
-================================ */
-
-
 const params =
 new URLSearchParams(
 window.location.search
@@ -1190,48 +1143,35 @@ if(packageChoice && service){
 
 if(packageChoice === "gold"){
 
-
 service.value =
 "Enhance Gold";
-
 
 display.textContent =
 "Enhance Gold selected — Starting at $149";
 
-
 }
-
-
 
 
 if(packageChoice === "premium"){
 
-
 service.value =
 "Enhance Premium";
-
 
 display.textContent =
 "Enhance Premium selected — Starting at $249";
 
-
 }
-
-
 
 
 
 if(packageChoice === "elite"){
 
-
 service.value =
 "Enhance Showroom Elite";
-
 
 display.textContent =
 "Enhance Showroom Elite selected — Starting at $399";
 
-
 }
 
 
@@ -1241,7 +1181,7 @@ display.textContent =
 
 
 
-
+if(service){
 
 service.addEventListener(
 "change",
@@ -1249,7 +1189,6 @@ function(){
 
 
 if(service.value){
-
 
 display.textContent =
 service.value + " selected";
@@ -1259,7 +1198,6 @@ service.value + " selected";
 
 else{
 
-
 display.textContent = "";
 
 }
@@ -1268,24 +1206,17 @@ display.textContent = "";
 });
 
 
+}
 
 
 
-
-
-/* ===============================
-FORM TEMP RESPONSE
-================================ */
 
 
 document
 .getElementById("quoteForm")
 .addEventListener(
 "submit",
-function(e){
-
-
-e.preventDefault();
+function(){
 
 
 alert(
@@ -1297,7 +1228,6 @@ alert(
 
 
 </script>
-
 
 
 </body>
