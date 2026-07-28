@@ -270,11 +270,10 @@ padding:25px 20px;
 
 </style>
 
-
 </head>
 
-<body>
 
+<body>
 
 <header class="navbar">
 
@@ -459,6 +458,14 @@ value="https://enhancemyride.com/thank-you.html"
 >
 
 
+<input 
+type="hidden" 
+name="_replyto" 
+id="_replyto"
+>
+
+
+
 <h2>
 
 Let's Enhance Your Ride.
@@ -631,6 +638,7 @@ Enhance Showroom Elite — Starting $399
 
 
 </div>
+
 
 
 
@@ -1216,6 +1224,34 @@ display.textContent = "";
 
 
 }
+
+
+
+
+
+
+
+/* ===============================
+REPLY TO CUSTOMER EMAIL
+================================ */
+
+
+document
+.getElementById("quoteForm")
+.addEventListener(
+"submit",
+function(){
+
+
+document
+.getElementById("_replyto")
+.value =
+document
+.querySelector('input[name="email"]')
+.value;
+
+
+});
 
 
 </script>
