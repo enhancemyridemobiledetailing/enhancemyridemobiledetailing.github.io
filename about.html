@@ -9,1240 +9,46 @@
 
 <title>About Us | Enhance My Ride Auto Spa & Mobile Detailing</title>
 
-<meta name="description" content="Learn about Enhance My Ride Auto Spa & Mobile Detailing. Premium mobile detailing serving San Francisco and the entire Bay Area.">
+<meta name="description" content="Learn about Enhance My Ride Auto Spa & Mobile Detailing. Premium mobile detailing serving the Bay Area with convenient, professional vehicle care delivered directly to you.">
 
-
-<style>
-
-/* =========================================
-RESET
-========================================= */
-
-* {
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html {
-scroll-behavior:smooth;
-}
-
-body {
-background:#080808;
-color:#f5f5f5;
-font-family:Arial, Helvetica, sans-serif;
-line-height:1.6;
-overflow-x:hidden;
-}
-
-a {
-color:inherit;
-text-decoration:none;
-}
-
-
-/* =========================================
-COLORS
-========================================= */
-
-:root {
-
---black:#080808;
---dark:#111111;
---gold:#c9a227;
---gold-light:#e6c85c;
---white:#f5f5f5;
---gray:#a5a5a5;
---border:rgba(201,162,39,.3);
-
-}
-
-
-/* =========================================
-NAVBAR
-========================================= */
-
-.navbar {
-
-position:fixed;
-top:0;
-left:0;
-
-width:100%;
-height:78px;
-
-z-index:10000;
-
-display:flex;
-align-items:center;
-justify-content:space-between;
-
-padding:0 6%;
-
-background:rgba(8,8,8,.98);
-
-border-bottom:1px solid var(--border);
-
-}
-
-
-/* =========================================
-LOGO
-========================================= */
-
-.logo {
-
-display:flex;
-align-items:center;
-gap:12px;
-
-}
-
-
-.logo-mark {
-
-width:44px;
-height:44px;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-border:1px solid var(--gold);
-
-color:var(--gold);
-
-font-size:11px;
-font-weight:bold;
-
-letter-spacing:1px;
-
-}
-
-
-.logo-text {
-
-display:flex;
-flex-direction:column;
-
-}
-
-
-.logo-main {
-
-font-size:12px;
-
-font-weight:bold;
-
-letter-spacing:2px;
-
-color:white;
-
-white-space:nowrap;
-
-}
-
-
-.logo-sub {
-
-font-size:8px;
-
-letter-spacing:2px;
-
-color:var(--gold);
-
-white-space:nowrap;
-
-}
-
-
-/* =========================================
-DESKTOP MENU
-========================================= */
-
-.nav-menu {
-
-display:flex;
-
-align-items:center;
-
-gap:28px;
-
-list-style:none;
-
-}
-
-
-.nav-menu a {
-
-font-size:11px;
-
-font-weight:bold;
-
-letter-spacing:1.5px;
-
-text-transform:uppercase;
-
-color:#eee;
-
-}
-
-
-.nav-menu a:hover {
-
-color:var(--gold-light);
-
-}
-
-
-.nav-quote {
-
-border:1px solid var(--gold);
-
-padding:11px 18px;
-
-color:var(--gold-light)!important;
-
-}
-
-
-/* =========================================
-HAMBURGER
-========================================= */
-
-
-.menu-toggle {
-
-display:none;
-
-width:48px;
-height:48px;
-
-background:#080808;
-
-border:1px solid var(--gold);
-
-cursor:pointer;
-
-align-items:center;
-justify-content:center;
-
-flex-direction:column;
-
-gap:5px;
-
-}
-
-
-.menu-toggle span {
-
-display:block;
-
-width:23px;
-height:2px;
-
-background:var(--gold);
-
-transition:.25s;
-
-}
-
-
-.menu-toggle.active span:nth-child(1){
-
-transform:translateY(7px) rotate(45deg);
-
-}
-
-
-.menu-toggle.active span:nth-child(2){
-
-opacity:0;
-
-}
-
-
-.menu-toggle.active span:nth-child(3){
-
-transform:translateY(-7px) rotate(-45deg);
-
-}
-
-
-/* =========================================
-PAGE HERO
-========================================= */
-
-
-.page-hero {
-
-min-height:75vh;
-
-display:flex;
-
-align-items:center;
-
-padding:150px 8% 90px;
-
-background:
-
-linear-gradient(
-90deg,
-rgba(0,0,0,.95),
-rgba(0,0,0,.65)
-),
-
-url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=85")
-
-center/cover no-repeat;
-
-}
-
-
-.hero-content {
-
-max-width:750px;
-
-}
-
-
-.eyebrow {
-
-font-size:11px;
-
-font-weight:bold;
-
-letter-spacing:4px;
-
-color:var(--gold-light);
-
-margin-bottom:20px;
-
-}
-
-
-.page-hero h1 {
-
-font-family:Georgia,serif;
-
-font-size:clamp(55px,8vw,100px);
-
-line-height:.95;
-
-letter-spacing:-3px;
-
-margin-bottom:25px;
-
-}
-
-
-.page-hero h1 span {
-
-color:var(--gold-light);
-
-}
-
-
-.page-hero p {
-
-max-width:650px;
-
-font-size:17px;
-
-color:#ccc;
-
-line-height:1.8;
-
-}
-
-
-/* =========================================
-GENERAL SECTION
-========================================= */
-
-
-.section {
-
-padding:110px 8%;
-
-}
-
-
-.section-title {
-
-text-align:center;
-
-max-width:750px;
-
-margin:0 auto 60px;
-
-}
-
-
-.section-title h2 {
-
-font-family:Georgia,serif;
-
-font-size:clamp(40px,5vw,62px);
-
-line-height:1.1;
-
-margin-bottom:20px;
-
-}
-
-
-.section-title h2 span {
-
-color:var(--gold-light);
-
-}
-
-
-.section-title p {
-
-color:var(--gray);
-
-font-size:15px;
-
-}
-
-
-/* =========================================
-ABOUT STORY
-========================================= */
-
-
-.story-grid {
-
-max-width:1200px;
-
-margin:auto;
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:70px;
-
-align-items:center;
-
-}
-
-
-.story-image {
-
-height:550px;
-
-overflow:hidden;
-
-border:1px solid rgba(255,255,255,.08);
-
-}
-
-
-.story-image img {
-
-width:100%;
-height:100%;
-
-object-fit:cover;
-
-}
-
-
-.story-text h2 {
-
-font-family:Georgia,serif;
-
-font-size:clamp(38px,5vw,60px);
-
-line-height:1.1;
-
-margin-bottom:25px;
-
-}
-
-
-.story-text h2 span {
-
-color:var(--gold-light);
-
-}
-
-
-.story-text p {
-
-color:var(--gray);
-
-font-size:15px;
-
-margin-bottom:20px;
-
-line-height:1.9;
-
-}
-
-
-.story-signature {
-
-margin-top:30px;
-
-padding-top:20px;
-
-border-top:1px solid var(--border);
-
-color:var(--gold-light);
-
-font-size:11px;
-
-letter-spacing:2px;
-
-font-weight:bold;
-
-text-transform:uppercase;
-
-}
-
-
-/* =========================================
-MISSION
-========================================= */
-
-.mission {
-
-padding:100px 8%;
-
-background:#101010;
-
-text-align:center;
-
-border-top:1px solid var(--border);
-
-border-bottom:1px solid var(--border);
-
-}
-
-
-.mission-content {
-
-max-width:850px;
-
-margin:auto;
-
-}
-
-
-.mission h2 {
-
-font-family:Georgia,serif;
-
-font-size:clamp(40px,5vw,65px);
-
-line-height:1.1;
-
-margin-bottom:25px;
-
-}
-
-
-.mission h2 span {
-
-color:var(--gold-light);
-
-}
-
-
-.mission p {
-
-color:var(--gray);
-
-font-size:16px;
-
-line-height:1.9;
-
-}
-
-
-/* =========================================
-VALUES
-========================================= */
-
-
-.values-grid {
-
-max-width:1200px;
-
-margin:auto;
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:20px;
-
-}
-
-
-.value-card {
-
-background:#141414;
-
-padding:40px 30px;
-
-border:1px solid rgba(255,255,255,.08);
-
-transition:.25s;
-
-}
-
-
-.value-card:hover {
-
-transform:translateY(-5px);
-
-border-color:var(--gold);
-
-}
-
-
-.value-number {
-
-font-size:11px;
-
-letter-spacing:2px;
-
-font-weight:bold;
-
-color:var(--gold);
-
-}
-
-
-.value-card h3 {
-
-font-family:Georgia,serif;
-
-font-size:30px;
-
-margin:15px 0;
-
-}
-
-
-.value-card p {
-
-color:var(--gray);
-
-font-size:14px;
-
-line-height:1.8;
-
-}
-
-
-/* =========================================
-WHY ENHANCE
-========================================= */
-
-
-.why-section {
-
-background:#0c0c0c;
-
-}
-
-
-.why-grid {
-
-max-width:1200px;
-
-margin:auto;
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:70px;
-
-align-items:center;
-
-}
-
-
-.why-text h2 {
-
-font-family:Georgia,serif;
-
-font-size:clamp(40px,5vw,60px);
-
-line-height:1.1;
-
-margin-bottom:25px;
-
-}
-
-
-.why-text h2 span {
-
-color:var(--gold-light);
-
-}
-
-
-.why-text p {
-
-color:var(--gray);
-
-font-size:15px;
-
-line-height:1.9;
-
-margin-bottom:30px;
-
-}
-
-
-.check-list {
-
-list-style:none;
-
-}
-
-
-.check-list li {
-
-display:flex;
-
-gap:15px;
-
-padding:15px 0;
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
-color:#ddd;
-
-font-size:14px;
-
-}
-
-
-.check {
-
-color:var(--gold-light);
-
-font-weight:bold;
-
-}
-
-
-.why-image {
-
-height:550px;
-
-overflow:hidden;
-
-border:1px solid rgba(255,255,255,.08);
-
-}
-
-
-.why-image img {
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-}
-
-
-/* =========================================
-SERVICE AREA CTA
-========================================= */
-
-
-.area-cta {
-
-padding:100px 8%;
-
-background:#101010;
-
-text-align:center;
-
-}
-
-
-.area-cta h2 {
-
-font-family:Georgia,serif;
-
-font-size:clamp(40px,5vw,60px);
-
-line-height:1.1;
-
-margin-bottom:25px;
-
-}
-
-
-.area-cta h2 span {
-
-color:var(--gold-light);
-
-}
-
-
-.area-cta p {
-
-max-width:650px;
-
-margin:0 auto 30px;
-
-color:var(--gray);
-
-}
-
-
-/* =========================================
-BUTTON
-========================================= */
-
-
-.button {
-
-display:inline-block;
-
-padding:15px 25px;
-
-border:1px solid var(--gold);
-
-font-size:11px;
-
-font-weight:bold;
-
-letter-spacing:1.5px;
-
-text-transform:uppercase;
-
-}
-
-
-.button-gold {
-
-background:var(--gold);
-
-color:#080808;
-
-}
-
-
-.button-gold:hover {
-
-background:var(--gold-light);
-
-}
-
-
-/* =========================================
-FINAL CTA
-========================================= */
-
-
-.final-cta {
-
-padding:110px 8%;
-
-text-align:center;
-
-background:
-
-linear-gradient(
-rgba(8,8,8,.9),
-rgba(8,8,8,.9)
-),
-
-url("https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=2000&q=85")
-
-center/cover no-repeat;
-
-}
-
-
-.final-cta h2 {
-
-font-family:Georgia,serif;
-
-font-size:clamp(40px,6vw,70px);
-
-line-height:1.1;
-
-margin-bottom:25px;
-
-}
-
-
-.final-cta h2 span {
-
-color:var(--gold-light);
-
-}
-
-
-.final-cta p {
-
-color:#bbb;
-
-max-width:600px;
-
-margin:0 auto 30px;
-
-}
-
-
-/* =========================================
-FOOTER
-========================================= */
-
-
-footer {
-
-padding:60px 8% 30px;
-
-background:#050505;
-
-border-top:1px solid var(--border);
-
-text-align:center;
-
-}
-
-
-.footer-logo {
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-gap:12px;
-
-margin-bottom:20px;
-
-}
-
-
-.footer-logo-mark {
-
-width:44px;
-
-height:44px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-border:1px solid var(--gold);
-
-color:var(--gold);
-
-font-size:11px;
-
-font-weight:bold;
-
-}
-
-
-.footer-name {
-
-text-align:left;
-
-}
-
-
-.footer-name strong {
-
-display:block;
-
-font-size:12px;
-
-letter-spacing:2px;
-
-}
-
-
-.footer-name small {
-
-color:var(--gold);
-
-font-size:8px;
-
-letter-spacing:2px;
-
-}
-
-
-.footer-slogan {
-
-color:var(--gray);
-
-font-size:12px;
-
-margin-bottom:25px;
-
-}
-
-
-.footer-contact {
-
-display:flex;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-gap:25px;
-
-margin-bottom:30px;
-
-}
-
-
-.footer-contact a {
-
-color:var(--gold-light);
-
-font-size:11px;
-
-letter-spacing:1px;
-
-}
-
-
-.copyright {
-
-color:#555;
-
-font-size:10px;
-
-}
-
-
-/* =========================================
-MOBILE
-========================================= */
-
-
-@media(max-width:900px){
-
-
-.navbar {
-
-padding:0 5%;
-
-}
-
-
-.menu-toggle {
-
-display:flex;
-
-}
-
-
-.nav-menu {
-
-position:fixed;
-
-top:78px;
-
-left:0;
-
-width:100%;
-
-max-height:0;
-
-overflow:hidden;
-
-background:#080808;
-
-display:flex;
-
-flex-direction:column;
-
-padding:0 5%;
-
-opacity:0;
-
-visibility:hidden;
-
-transition:.3s;
-
-}
-
-
-.nav-menu.active {
-
-max-height:500px;
-
-padding-top:15px;
-
-padding-bottom:25px;
-
-opacity:1;
-
-visibility:visible;
-
-border-bottom:1px solid var(--gold);
-
-}
-
-
-.nav-menu li {
-
-width:100%;
-
-}
-
-
-.nav-menu a {
-
-display:block;
-
-padding:16px 5px;
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
-}
-
-
-.story-grid,
-.why-grid {
-
-grid-template-columns:1fr;
-
-}
-
-
-.values-grid {
-
-grid-template-columns:1fr;
-
-}
-
-
-}
-
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
+<header>
 
-<!-- =========================================
-NAVIGATION
-========================================= -->
+<nav class="navbar">
 
-
-<header class="navbar">
-
-
-<a href="index.html" class="logo">
-
-<div class="logo-mark">
-EMR
-</div>
-
-<div class="logo-text">
-
-<span class="logo-main">
-ENHANCE MY RIDE
-</span>
-
-<span class="logo-sub">
-AUTO SPA & MOBILE DETAILING
-</span>
-
-</div>
-
+<div class="logo">
+<a href="index.html">
+Enhance My Ride
 </a>
+</div>
 
 
-
-<button
-type="button"
-class="menu-toggle"
-id="menuToggle"
-aria-label="Open navigation menu"
-aria-expanded="false"
->
-
-<span></span>
-<span></span>
-<span></span>
-
+<button class="menu-toggle" aria-label="Open Menu">
+☰
 </button>
 
 
+<ul class="nav-links">
 
-<nav>
+<li><a href="index.html">Home</a></li>
 
-<ul class="nav-menu" id="navMenu">
+<li><a href="services.html">Services</a></li>
 
+<li><a href="about.html" class="active">About</a></li>
 
-<li>
-<a href="index.html">
-Home
-</a>
-</li>
+<li><a href="service-area.html">Service Area</a></li>
 
-
-<li>
-<a href="services.html">
-Services
-</a>
-</li>
-
-
-<li>
-<a href="service-area.html">
-Service Area
-</a>
-</li>
-
-
-<li>
-<a href="gallery.html">
-Gallery
-</a>
-</li>
-
-
-<li>
-<a href="about.html">
-About
-</a>
-</li>
-
-
-<li>
-<a href="quote.html" class="nav-quote">
-Get A Quote
-</a>
-</li>
-
+<li><a href="quote.html">Get A Quote</a></li>
 
 </ul>
 
 </nav>
-
 
 </header>
 
@@ -1251,32 +57,52 @@ Get A Quote
 <main>
 
 
-<!-- =========================================
-HERO
-========================================= -->
+<section class="about-hero">
 
-
-<section class="page-hero">
-
-<div class="hero-content">
-
-
-<p class="eyebrow">
-ABOUT ENHANCE MY RIDE
-</p>
-
+<div class="about-hero-content">
 
 <h1>
-More Than<br>
-<span>A Detail.</span>
+Enhancing Every Ride. One Vehicle At A Time.
 </h1>
 
 
 <p>
-Enhance My Ride brings a premium mobile auto spa
-experience directly to your driveway. Professional care,
-attention to detail, and convenience built around your
-schedule.
+At Enhance My Ride Auto Spa & Mobile Detailing, we believe your vehicle deserves more than a basic wash. We provide premium mobile detailing services designed to restore, protect, and enhance your vehicle while bringing the convenience directly to your driveway, workplace, or location of choice.
+</p>
+
+
+<a href="quote.html" class="cta-button">
+Book Your Enhancement
+</a>
+
+
+</div>
+
+</section>
+
+
+<section class="our-story">
+
+<div class="section-container">
+
+
+<h2>
+Our Story
+</h2>
+
+
+<p>
+Enhance My Ride Auto Spa & Mobile Detailing was created with one goal in mind: to provide a higher level of vehicle care with the convenience customers deserve.
+</p>
+
+
+<p>
+We understand that life gets busy. Between work, family, and everyday responsibilities, finding time to sit at a traditional detailing shop can be difficult. That’s why we bring professional detailing directly to you, saving you time while delivering results you can see and feel.
+</p>
+
+
+<p>
+From daily drivers to vehicles that deserve extra attention, every detail is performed with care, precision, and pride. We don’t believe in rushing through a vehicle — we believe in enhancing it.
 </p>
 
 
@@ -1287,533 +113,345 @@ schedule.
 
 
 
-<!-- =========================================
-STORY
-========================================= -->
+<section class="mission-section">
 
-
-<section class="section">
-
-
-<div class="story-grid">
-
-
-<div class="story-image">
-
-<img
-src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=85"
-alt="Premium vehicle"
-/>
-
-</div>
-
-
-
-<div class="story-text">
-
-
-<p class="eyebrow">
-OUR STORY
-</p>
+<div class="section-container">
 
 
 <h2>
-Built Around<br>
-<span>Your Ride.</span>
+Our Mission
 </h2>
 
 
-
 <p>
-Enhance My Ride Auto Spa & Mobile Detailing was created
-with one goal: delivering a premium vehicle care experience
-without the inconvenience of traditional detailing shops.
+Our mission is simple: deliver premium mobile detailing experiences that restore confidence and pride in every vehicle we service.
 </p>
 
 
 <p>
-Your vehicle is more than transportation. It's part of your
-daily life, your image, and your investment. Every detail
-should receive the attention it deserves.
+Through quality products, professional techniques, and attention to detail, we strive to provide an experience that goes beyond cleaning. We enhance the appearance, protection, and overall enjoyment of your vehicle.
 </p>
 
 
-<p>
-Instead of making you wait, we bring the auto spa directly
-to you. Whether you're home, working, or handling your day,
-we make keeping your vehicle clean simple and convenient.
-</p>
-
-
-
-<div class="story-signature">
-We come to you. Your relax. We Enhance.
 </div>
-
-
-
-</div>
-
-
-</div>
-
 
 </section>
 
 
 
 
+<section class="why-choose-us">
 
-<!-- =========================================
-MISSION
-========================================= -->
-
-
-<section class="mission">
-
-
-<div class="mission-content">
-
-
-<p class="eyebrow">
-OUR MISSION
-</p>
+<div class="section-container">
 
 
 <h2>
-Creating A Better<br>
-<span>Detailing Experience.</span>
+Why Choose Enhance My Ride?
 </h2>
 
 
-<p>
-Our mission is to provide professional mobile detailing
-services that combine quality workmanship, premium
-products, and outstanding customer service.
-</p>
+
+<div class="features-grid">
 
 
-</div>
+<div class="feature-card">
 
-
-</section>
-
-
-
-
-
-<!-- =========================================
-VALUES
-========================================= -->
-
-
-<section class="section">
-
-
-<div class="section-title">
-
-<p class="eyebrow">
-OUR VALUES
-</p>
-
-
-<h2>
-The Enhance
-<span>Standard.</span>
-</h2>
-
+<h3>
+Mobile Convenience
+</h3>
 
 <p>
-Everything we do is built around quality, convenience,
-and customer satisfaction.
+We come to your home, workplace, or preferred location so you can keep your day moving while your vehicle gets the care it deserves.
 </p>
-
 
 </div>
 
 
 
-
-<div class="values-grid">
-
-
-<div class="value-card">
-
-<span class="value-number">
-01 · QUALITY
-</span>
-
+<div class="feature-card">
 
 <h3>
 Attention To Detail
 </h3>
 
-
 <p>
-We focus on the small details that separate a basic wash
-from a true professional detail.
+Every vehicle receives careful attention from exterior enhancement to interior restoration, ensuring a quality finish every time.
 </p>
-
 
 </div>
 
 
 
-
-<div class="value-card">
-
-<span class="value-number">
-02 · CONVENIENCE
-</span>
-
+<div class="feature-card">
 
 <h3>
-We Come To You
+Premium Experience
 </h3>
 
-
 <p>
-Your time matters. Our mobile service works around your
-schedule.
+We focus on providing a professional detailing experience built around quality, reliability, and customer satisfaction.
 </p>
 
-
-</div>
-
-
-
-
-<div class="value-card">
-
-<span class="value-number">
-03 · EXPERIENCE
-</span>
-
-
-<h3>
-Premium Service
-</h3>
-
-
-<p>
-From booking to completion, we provide an experience
-designed to earn your trust.
-</p>
-
-
 </div>
 
 
 
 </div>
 
+
+</div>
 
 </section>
 
 
+<section class="services-overview">
 
-
-
-<!-- =========================================
-WHY ENHANCE
-========================================= -->
-
-
-<section class="section why-section">
-
-
-<div class="why-grid">
-
-
-
-<div class="why-text">
-
-
-<p class="eyebrow">
-WHY CHOOSE US
-</p>
+<div class="section-container">
 
 
 <h2>
-Your Vehicle.<br>
-<span>Our Standard.</span>
-</h2>
-
-
-
-<p>
-Choosing a detailer means trusting someone with your
-vehicle. We treat every ride with patience, care, and
-professional attention.
-</p>
-
-
-
-<ul class="check-list">
-
-
-<li>
-<span class="check">
-✓
-</span>
-Mobile service at your location.
-</li>
-
-
-<li>
-<span class="check">
-✓
-</span>
-Premium products and professional process.
-</li>
-
-
-<li>
-<span class="check">
-✓
-</span>
-Interior and exterior transformation packages.
-</li>
-
-
-<li>
-<span class="check">
-✓
-</span>
-Clear communication from start to finish.
-</li>
-
-
-</ul>
-
-
-</div>
-
-
-
-
-
-<div class="why-image">
-
-
-<img
-src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=85"
-alt="Luxury vehicle"
-/>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<!-- =========================================
-SERVICE AREA
-========================================= -->
-
-
-<section class="area-cta">
-
-
-<p class="eyebrow">
-MOBILE SERVICE
-</p>
-
-
-<h2>
-Serving San Francisco<br>
-<span>& The Entire Bay Area.</span>
+Our Detailing Services
 </h2>
 
 
 <p>
-We bring premium detailing directly to your location.
-Check our service area and see if we're available near you.
+Enhance My Ride Auto Spa & Mobile Detailing offers professional vehicle care designed to meet the needs of every customer. Whether your vehicle needs a maintenance detail, a deep interior refresh, or a complete transformation, we provide services that help restore and protect your investment.
 </p>
 
 
-<a href="service-area.html" class="button button-gold">
-View Service Area
+
+<div class="service-highlights">
+
+
+<div class="service-card">
+
+<h3>
+Exterior Enhancement
+</h3>
+
+<p>
+Premium hand washing, wheel and tire care, paint-safe cleaning, and finishing touches designed to bring back your vehicle’s shine.
+</p>
+
+</div>
+
+
+
+<div class="service-card">
+
+<h3>
+Interior Restoration
+</h3>
+
+<p>
+Deep interior cleaning focused on removing dirt, stains, odors, and buildup while refreshing the comfort of your vehicle.
+</p>
+
+</div>
+
+
+
+<div class="service-card">
+
+<h3>
+Complete Vehicle Packages
+</h3>
+
+<p>
+Our enhancement packages combine exterior and interior services for customers looking for a complete detailing experience.
+</p>
+
+</div>
+
+
+</div>
+
+
+<a href="services.html" class="cta-button">
+View Our Services
 </a>
 
 
+</div>
+
 </section>
 
 
 
 
 
-<!-- =========================================
-FINAL CTA
-========================================= -->
+<section class="our-promise">
 
 
-<section class="final-cta">
-
-
-<p class="eyebrow">
-READY WHEN YOU ARE
-</p>
+<div class="section-container">
 
 
 <h2>
-Let's
-<span>
-Enhance Your Ride.
-</span>
+Our Promise
 </h2>
 
 
 <p>
-Book your premium mobile detailing experience today.
+At Enhance My Ride Auto Spa & Mobile Detailing, every vehicle is treated with the same care and attention we would give our own. We focus on quality workmanship, honest service, and creating results that our customers are proud to drive.
 </p>
 
 
-<a href="quote.html" class="button button-gold">
-Request Quote
-</a>
+<p>
+We are committed to continuing to improve our techniques, products, and customer experience as we grow throughout the Bay Area.
+</p>
+
+
+
+</div>
 
 
 </section>
 
 
 
-</main>
+
+
+<section class="about-cta">
+
+
+<div class="section-container">
+
+
+<h2>
+Ready To Enhance Your Ride?
+</h2>
+
+
+<p>
+Experience the convenience of professional mobile detailing brought directly to you.
+</p>
+
+
+<a href="quote.html" class="cta-button">
+Request Your Quote
+</a>
+
+
+</div>
+
+
+</section>
 
 
 
-
-
-<!-- =========================================
-FOOTER
-========================================= -->
 
 
 <footer>
 
 
-<div class="footer-logo">
+<div class="footer-container">
 
 
-<div class="footer-logo-mark">
-EMR
-</div>
+<div class="footer-brand">
+
+<h3>
+Enhance My Ride Auto Spa & Mobile Detailing
+</h3>
 
 
-<div class="footer-name">
-
-
-<strong>
-ENHANCE MY RIDE
-</strong>
-
-
-<small>
-AUTO SPA & MOBILE DETAILING
-</small>
-
-
-</div>
-
-
-</div>
-
-
-
-<p class="footer-slogan">
-We come to you. Your relax. We Enhance.
+<p>
+We come to you. You relax. We Enhance.
 </p>
+
+
+</div>
+
+
+
+<div class="footer-links">
+
+<h4>
+Quick Links
+</h4>
+
+
+<a href="index.html">
+Home
+</a>
+
+<a href="services.html">
+Services
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="service-area.html">
+Service Area
+</a>
+
+<a href="quote.html">
+Get A Quote
+</a>
+
+
+</div>
+
 
 
 
 <div class="footer-contact">
 
+<h4>
+Contact
+</h4>
 
-<a href="tel:3233271806">
-(323) 327-1806
-</a>
+
+<p>
+Serving the Bay Area
+</p>
 
 
-<a href="mailto:Enhancemyridemobiledetailing@gmail.com">
-Enhancemyridemobiledetailing@gmail.com
-</a>
+<p>
+Mobile Detailing Services
+</p>
 
 
 </div>
 
 
 
-<p class="copyright">
-© 2026 Enhance My Ride Auto Spa & Mobile Detailing.
-All rights reserved.
+</div>
+
+
+
+<div class="copyright">
+
+<p>
+© 2026 Enhance My Ride Auto Spa & Mobile Detailing. All Rights Reserved.
 </p>
+
+</div>
 
 
 </footer>
 
 
 
-
-
-<!-- =========================================
-MENU JAVASCRIPT
-========================================= -->
-
-
 <script>
 
-
-const menuToggle =
-document.getElementById("menuToggle");
-
-
-const navMenu =
-document.getElementById("navMenu");
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
 
+menuToggle.addEventListener("click", () => {
 
-menuToggle.addEventListener("click", function(){
-
-
-menuToggle.classList.toggle("active");
-
-navMenu.classList.toggle("active");
-
+navLinks.classList.toggle("active");
 
 });
-
-
-
-
-document.querySelectorAll(".nav-menu a")
-.forEach(link=>{
-
-
-link.addEventListener("click",()=>{
-
-
-menuToggle.classList.remove("active");
-
-navMenu.classList.remove("active");
-
-
-});
-
-
-});
-
 
 
 </script>
 
+
+
+</main>
 
 
 </body>
