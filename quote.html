@@ -94,6 +94,7 @@ color:#bbb;
 
 padding:90px 6%;
 
+
 background:#0c0c0c;
 
 }
@@ -269,6 +270,7 @@ padding:25px 20px;
 
 
 </style>
+
 
 </head>
 
@@ -460,8 +462,7 @@ value="https://enhancemyride.com/thank-you.html"
 
 <input 
 type="hidden" 
-name="_replyto" 
-id="_replyto"
+name="_replyto"
 >
 
 
@@ -1232,7 +1233,7 @@ display.textContent = "";
 
 
 /* ===============================
-REPLY TO CUSTOMER EMAIL
+FORM REPLY TO CUSTOMER
 ================================ */
 
 
@@ -1243,12 +1244,8 @@ document
 function(){
 
 
-document
-.getElementById("_replyto")
-.value =
-document
-.querySelector('input[name="email"]')
-.value;
+this.elements["_replyto"].value =
+document.querySelector('input[name="email"]').value;
 
 
 });
