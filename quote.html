@@ -444,11 +444,18 @@ Tell us about your vehicle and we'll create your personalized detailing recommen
 <section class="quote-section">
 
 
-<form 
-class="quote-form" 
+<form
+class="quote-form"
 id="quoteForm"
 action="https://formspree.io/f/mrenjdkv"
 method="POST"
+>
+
+
+<input 
+type="hidden" 
+name="_next" 
+value="https://enhancemyride.com/thank-you.html"
 >
 
 
@@ -595,21 +602,21 @@ Choose Package
 </option>
 
 
-<option value="Enhance Gold">
+<option value="Enhance Gold — Starting $149">
 
 Enhance Gold — Starting $149
 
 </option>
 
 
-<option value="Enhance Premium">
+<option value="Enhance Premium — Starting $249">
 
 Enhance Premium — Starting $249
 
 </option>
 
 
-<option value="Enhance Showroom Elite">
+<option value="Enhance Showroom Elite — Starting $399">
 
 Enhance Showroom Elite — Starting $399
 
@@ -624,6 +631,7 @@ Enhance Showroom Elite — Starting $399
 
 
 </div>
+
 
 
 <div class="form-group">
@@ -1144,21 +1152,22 @@ if(packageChoice && service){
 if(packageChoice === "gold"){
 
 service.value =
-"Enhance Gold";
+"Enhance Gold — Starting $149";
 
 display.textContent =
-"Enhance Gold selected — Starting at $149";
+"Enhance Gold selected";
 
 }
+
 
 
 if(packageChoice === "premium"){
 
 service.value =
-"Enhance Premium";
+"Enhance Premium — Starting $249";
 
 display.textContent =
-"Enhance Premium selected — Starting at $249";
+"Enhance Premium selected";
 
 }
 
@@ -1167,10 +1176,10 @@ display.textContent =
 if(packageChoice === "elite"){
 
 service.value =
-"Enhance Showroom Elite";
+"Enhance Showroom Elite — Starting $399";
 
 display.textContent =
-"Enhance Showroom Elite selected — Starting at $399";
+"Enhance Showroom Elite selected";
 
 }
 
@@ -1191,7 +1200,7 @@ function(){
 if(service.value){
 
 display.textContent =
-service.value + " selected";
+service.value;
 
 
 }
@@ -1207,24 +1216,6 @@ display.textContent = "";
 
 
 }
-
-
-
-
-
-document
-.getElementById("quoteForm")
-.addEventListener(
-"submit",
-function(){
-
-
-alert(
-"Thank you! Your quote request has been received. We will contact you shortly."
-);
-
-
-});
 
 
 </script>
