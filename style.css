@@ -1152,3 +1152,24 @@ MOBILE
     color:white;
 
 }
+
+.service-includes {
+
+font-size:13px;
+line-height:1.8;
+color:#bbb;
+margin-top:15px;
+
+}
+
+
+.price-disclaimer {
+
+text-align:center;
+max-width:800px;
+margin:30px auto 0;
+font-size:13px;
+color:#999;
+line-height:1.6;
+
+}
