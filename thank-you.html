@@ -1,7 +1,9 @@
-```html
+<!-- =========================================================
+FILE: thank-you.html
+========================================================= -->
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="UTF-8">
@@ -11,43 +13,18 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>
-        Thank You | Enhance My Ride Auto Spa & Mobile Detailing
-    </title>
+    <title>Thank You | Enhance My Ride</title>
 
     <meta
         name="description"
-        content="Thank you for requesting a quote from Enhance My Ride Auto Spa & Mobile Detailing. We'll review your request and contact you shortly."
+        content="Thank you for contacting Enhance My Ride Auto Spa & Mobile Detailing."
     >
 
-    <meta
-        name="robots"
-        content="noindex, follow"
-    >
-
-    <meta
-        property="og:title"
-        content="Thank You | Enhance My Ride"
-    >
-
-    <meta
-        property="og:description"
-        content="Your mobile detailing quote request has been received."
-    >
-
-    <meta
-        property="og:type"
-        content="website"
-    >
-
-    <meta
-        property="og:url"
-        content="https://enhancemyride.com/thank-you.html"
-    >
+    <link rel="icon" href="favicon.png">
 
     <link
-        rel="canonical"
-        href="https://enhancemyride.com/thank-you.html"
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
     <link
@@ -55,953 +32,149 @@
         href="style.css"
     >
 
-    <link
-        rel="icon"
-        type="image/png"
-        href="favicon.png"
-    >
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
-
-
-    <style>
-
-        /* =====================================================
-           THANK YOU PAGE
-        ===================================================== */
-
-        .thank-you-page {
-            min-height: calc(100vh - 90px);
-            padding-top: 78px;
-            display: flex;
-            flex-direction: column;
-        }
-
-
-        /* =====================================================
-           HERO
-        ===================================================== */
-
-        .thank-you-hero {
-            flex: 1;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            padding: 100px 6%;
-
-            text-align: center;
-
-            background:
-                linear-gradient(
-                    rgba(8,8,8,.92),
-                    rgba(8,8,8,.94)
-                ),
-                url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=85")
-                center / cover no-repeat;
-        }
-
-
-        .thank-you-content {
-            width: min(850px, 100%);
-            margin: 0 auto;
-        }
-
-
-        /* =====================================================
-           SUCCESS ICON
-        ===================================================== */
-
-        .success-icon {
-            width: 78px;
-            height: 78px;
-
-            margin: 0 auto 28px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border: 1px solid var(--gold);
-
-            border-radius: 50%;
-
-            background:
-                rgba(201,162,39,.07);
-
-            box-shadow:
-                0 0 0 8px rgba(201,162,39,.025),
-                0 15px 40px rgba(0,0,0,.35);
-
-            color: var(--gold-light);
-
-            font-size: 30px;
-        }
-
-
-        /* =====================================================
-           HEADLINE
-        ===================================================== */
-
-        .thank-you-content h1 {
-            margin-bottom: 18px;
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-size:
-                clamp(42px, 7vw, 76px);
-
-            line-height: 1.08;
-        }
-
-
-        .thank-you-content h1 span {
-            color: var(--gold-light);
-        }
-
-
-        .thank-you-message {
-            max-width: 650px;
-
-            margin: 0 auto;
-
-            color: #bbb;
-
-            font-size: 15px;
-
-            line-height: 1.8;
-        }
-
-
-        /* =====================================================
-           CONFIRMATION CARD
-        ===================================================== */
-
-        .confirmation-card {
-            width: min(700px, 100%);
-
-            margin: 42px auto 0;
-
-            padding: 32px;
-
-            box-sizing: border-box;
-
-            background:
-                rgba(18,18,18,.94);
-
-            border:
-                1px solid
-                rgba(201,162,39,.28);
-
-            box-shadow:
-                0 25px 70px
-                rgba(0,0,0,.35);
-        }
-
-
-        .confirmation-card h2 {
-            margin: 0 0 10px;
-
-            color: #fff;
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-size: 25px;
-        }
-
-
-        .confirmation-card > p {
-            margin: 0;
-
-            color: #888;
-
-            font-size: 12px;
-
-            line-height: 1.7;
-        }
-
-
-        /* =====================================================
-           NEXT STEPS
-        ===================================================== */
-
-        .next-steps {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 12px;
-
-            margin-top: 25px;
-        }
-
-
-        .next-step {
-            padding: 20px 15px;
-
-            background:
-                rgba(255,255,255,.025);
-
-            border:
-                1px solid
-                rgba(255,255,255,.07);
-        }
-
-
-        .next-step i {
-            display: block;
-
-            margin-bottom: 10px;
-
-            color: var(--gold-light);
-
-            font-size: 19px;
-        }
-
-
-        .next-step strong {
-            display: block;
-
-            margin-bottom: 6px;
-
-            color: #ddd;
-
-            font-size: 11px;
-
-            letter-spacing: .8px;
-
-            text-transform: uppercase;
-        }
-
-
-        .next-step span {
-            display: block;
-
-            color: #777;
-
-            font-size: 10px;
-
-            line-height: 1.6;
-        }
-
-
-        /* =====================================================
-           BUTTONS
-        ===================================================== */
-
-        .thank-you-actions {
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            flex-wrap: wrap;
-
-            gap: 12px;
-
-            margin-top: 32px;
-        }
-
-
-        .thank-you-actions .button {
-            min-width: 190px;
-        }
-
-
-        /* =====================================================
-           PHONE CTA
-        ===================================================== */
-
-        .quick-contact {
-            margin-top: 25px;
-
-            color: #666;
-
-            font-size: 11px;
-
-            line-height: 1.7;
-        }
-
-
-        .quick-contact a {
-            color: var(--gold-light);
-
-            text-decoration: none;
-
-            font-weight: 700;
-        }
-
-
-        .quick-contact a:hover {
-            text-decoration: underline;
-        }
-
-
-        /* =====================================================
-           SLOGAN
-        ===================================================== */
-
-        .hero-slogan {
-            margin-top: 25px;
-
-            color: #666;
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-size: 13px;
-
-            font-style: italic;
-        }
-
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
-
-        @media(max-width: 700px) {
-
-            .thank-you-page {
-                padding-top: 70px;
-            }
-
-
-            .thank-you-hero {
-                padding:
-                    80px 6%;
-            }
-
-
-            .success-icon {
-                width: 68px;
-                height: 68px;
-
-                margin-bottom: 23px;
-
-                font-size: 26px;
-            }
-
-
-            .confirmation-card {
-                padding: 25px 18px;
-            }
-
-
-            .next-steps {
-                grid-template-columns: 1fr;
-            }
-
-
-            .thank-you-actions {
-                flex-direction: column;
-            }
-
-
-            .thank-you-actions .button {
-                width: 100%;
-                box-sizing: border-box;
-            }
-
-        }
-
-    </style>
-
 </head>
-
 
 <body>
 
+<header class="navbar">
 
-    <!-- =====================================================
-         NAVIGATION
-    ===================================================== -->
+    <a href="index.html" class="logo">
 
-    <header class="navbar">
+        <div class="logo-mark">EMR</div>
 
-        <a
-            href="index.html"
-            class="logo"
-            aria-label="Enhance My Ride Home"
+        <div class="logo-text">
+
+            <span class="logo-main">
+                ENHANCE MY RIDE
+            </span>
+
+            <span class="logo-sub">
+                AUTO SPA & MOBILE DETAILING
+            </span>
+
+        </div>
+
+    </a>
+
+</header>
+
+
+<main>
+
+<section
+    class="page-hero"
+    style="min-height:100vh;display:flex;align-items:center;"
+>
+
+    <div class="page-hero-content reveal">
+
+        <div
+            class="feature-icon"
+            style="
+                width:70px;
+                height:70px;
+                margin:0 auto 30px;
+                font-size:24px;
+            "
+        >
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+
+        <p class="eyebrow">
+            REQUEST RECEIVED
+        </p>
+
+
+        <h1>
+            Thank You.
+            <span>Your Ride Is Next.</span>
+        </h1>
+
+
+        <p>
+            We've received your request and will review
+            the information you provided.
+        </p>
+
+
+        <p style="margin-top:15px;">
+            If additional information is needed, we'll
+            reach out using the contact information
+            included with your request.
+        </p>
+
+
+        <div
+            style="
+                display:flex;
+                justify-content:center;
+                flex-wrap:wrap;
+                gap:14px;
+                margin-top:35px;
+            "
         >
 
-            <div class="logo-mark">
-                EMR
-            </div>
-
-            <div class="logo-text">
-
-                <span class="logo-main">
-                    ENHANCE MY RIDE
-                </span>
-
-                <span class="logo-sub">
-                    AUTO SPA & MOBILE DETAILING
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-
-        <nav>
-
-            <ul
-                class="nav-menu"
-                id="navMenu"
+            <a
+                href="index.html"
+                class="button button-gold"
             >
-
-                <li>
-                    <a href="index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="gallery.html">
-                        Gallery
-                    </a>
-                </li>
-
-                <li>
-                    <a href="services.html">
-                        Services
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        href="quote.html"
-                        class="nav-quote"
-                    >
-                        Get Free Quote
-                    </a>
-                </li>
-
-                <li>
-                    <a href="about.html">
-                        About
-                    </a>
-                </li>
-
-                <li>
-                    <a href="service-area.html">
-                        Service Area
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-
-    <!-- =====================================================
-         MAIN
-    ===================================================== -->
-
-    <main class="thank-you-page">
-
-
-        <!-- =================================================
-             THANK YOU HERO
-        ================================================= -->
-
-        <section class="thank-you-hero">
-
-            <div class="thank-you-content reveal">
-
-                <div
-                    class="success-icon"
-                    aria-hidden="true"
-                >
-
-                    <i class="fa-solid fa-check"></i>
-
-                </div>
-
-
-                <p class="eyebrow">
-                    REQUEST RECEIVED
-                </p>
-
-
-                <h1>
-
-                    Thank You.
-
-                    <span>
-                        You're All Set.
-                    </span>
-
-                </h1>
-
-
-                <p class="thank-you-message">
-
-                    Your quote request has been successfully
-                    submitted to Enhance My Ride. We'll review
-                    your vehicle details and get back to you
-                    with your personalized quote.
-
-                </p>
-
-
-                <!-- =========================================
-                     CONFIRMATION CARD
-                ========================================== -->
-
-                <div class="confirmation-card">
-
-                    <h2>
-                        What Happens Next?
-                    </h2>
-
-
-                    <p>
-                        We'll review the information you provided
-                        and contact you using the phone number or
-                        email address submitted with your request.
-                    </p>
-
-
-                    <div class="next-steps">
-
-
-                        <div class="next-step">
-
-                            <i class="fa-solid fa-clipboard-check"></i>
-
-                            <strong>
-                                01 — Review
-                            </strong>
-
-                            <span>
-                                We review your vehicle,
-                                service needs, and location.
-                            </span>
-
-                        </div>
-
-
-                        <div class="next-step">
-
-                            <i class="fa-solid fa-comments"></i>
-
-                            <strong>
-                                02 — Connect
-                            </strong>
-
-                            <span>
-                                We'll contact you to discuss
-                                your request and any details.
-                            </span>
-
-                        </div>
-
-
-                        <div class="next-step">
-
-                            <i class="fa-solid fa-car-side"></i>
-
-                            <strong>
-                                03 — Enhance
-                            </strong>
-
-                            <span>
-                                Once scheduled, we come to you
-                                and Enhance Your Ride.
-                            </span>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <!-- =====================================
-                         ACTIONS
-                    ====================================== -->
-
-                    <div class="thank-you-actions">
-
-                        <a
-                            href="index.html"
-                            class="button button-gold"
-                        >
-
-                            <i class="fa-solid fa-house"></i>
-
-                            Back To Home
-
-                        </a>
-
-
-                        <a
-                            href="services.html"
-                            class="button button-outline"
-                        >
-
-                            <i class="fa-solid fa-gem"></i>
-
-                            View Services
-
-                        </a>
-
-                    </div>
-
-
-                    <p class="quick-contact">
-
-                        Need to speak with us directly?
-
-                        <a href="tel:3233271806">
-                            Call (323) 327-1806
-                        </a>
-
-                    </p>
-
-                </div>
-
-
-                <p class="hero-slogan">
-                    We come to you. You relax. We Enhance.
-                </p>
-
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-    <!-- =====================================================
-         FOOTER
-    ===================================================== -->
-
-    <footer>
-
-        <div class="footer-grid">
-
-
-            <!-- BRAND -->
-
-            <div class="footer-brand">
-
-                <div class="footer-title">
-                    ENHANCE MY RIDE
-                </div>
-
-                <div class="footer-sub">
-                    AUTO SPA & MOBILE DETAILING
-                </div>
-
-
-                <p class="footer-text">
-
-                    We come to you. You relax. We Enhance.
-
-                    <br><br>
-
-                    Premium mobile detailing serving
-                    San Francisco and the entire Bay Area.
-
-                </p>
-
-
-                <div class="social-icons">
-
-
-                    <a
-                        href="https://instagram.com/enhancemyridemobiledetailing"
-                        target="_blank"
-                        rel="noopener"
-                        aria-label="Instagram"
-                    >
-
-                        <i class="fa-brands fa-instagram"></i>
-
-                    </a>
-
-
-                    <a
-                        href="https://www.facebook.com/Enhancemyridemobiledetailing"
-                        target="_blank"
-                        rel="noopener"
-                        aria-label="Facebook"
-                    >
-
-                        <i class="fa-brands fa-facebook-f"></i>
-
-                    </a>
-
-
-                    <a
-                        href="https://www.tiktok.com/@enhancemyride"
-                        target="_blank"
-                        rel="noopener"
-                        aria-label="TikTok"
-                    >
-
-                        <i class="fa-brands fa-tiktok"></i>
-
-                    </a>
-
-
-                    <a
-                        href="https://youtube.com/@enhancemyridemobiledetailing"
-                        target="_blank"
-                        rel="noopener"
-                        aria-label="YouTube"
-                    >
-
-                        <i class="fa-brands fa-youtube"></i>
-
-                    </a>
-
-
-                </div>
-
-            </div>
-
-
-            <!-- CONTACT -->
-
-            <div class="footer-contact">
-
-                <div class="footer-title">
-                    CONTACT
-                </div>
-
-
-                <p class="footer-text">
-
-
-                    <a href="mailto:info@enhancemyride.com">
-
-                        <i class="fa-solid fa-envelope"></i>
-
-                        info@enhancemyride.com
-
-                    </a>
-
-
-                    <br><br>
-
-
-                    <a href="tel:3233271806">
-
-                        <i class="fa-solid fa-phone"></i>
-
-                        (323) 327-1806
-
-                    </a>
-
-
-                </p>
-
-
-                <a
-                    href="https://g.page/r/CRy_PYJmq6NYEBM/review"
-                    target="_blank"
-                    rel="noopener"
-                    class="button button-outline"
-                >
-
-                    <i class="fa-brands fa-google"></i>
-
-                    Leave A Google Review
-
-                </a>
-
-
-            </div>
-
+                Return Home
+            </a>
+
+
+            <a
+                href="gallery.html"
+                class="button button-outline"
+            >
+                View Our Work
+            </a>
 
         </div>
 
 
-        <div class="copyright">
+        <div
+            style="
+                margin-top:45px;
+                padding-top:25px;
+                border-top:1px solid rgba(255,255,255,0.10);
+            "
+        >
 
-            © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
-            All Rights Reserved.
+            <p
+                style="
+                    color:#777;
+                    font-size:11px;
+                    letter-spacing:1.5px;
+                    text-transform:uppercase;
+                "
+            >
+                We come to you. You relax. We Enhance.
+            </p>
 
         </div>
 
+    </div>
 
-    </footer>
+</section>
 
-
-    <!-- =====================================================
-         JAVASCRIPT
-    ===================================================== -->
-
-    <script>
-
-        /* =====================================================
-           MOBILE NAVIGATION
-        ===================================================== */
-
-        const menuToggle =
-            document.getElementById("menuToggle");
-
-        const navMenu =
-            document.getElementById("navMenu");
+</main>
 
 
-        if (menuToggle && navMenu) {
+<footer>
 
-            menuToggle.addEventListener(
-                "click",
-                function () {
+    <div class="copyright">
 
-                    const open =
-                        navMenu.classList.toggle("active");
+        © <span id="year">2026</span>
+        Enhance My Ride Auto Spa & Mobile Detailing.
+        All Rights Reserved.
 
-                    menuToggle.classList.toggle(
-                        "active",
-                        open
-                    );
+    </div>
 
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        open
-                    );
-
-                }
-            );
+</footer>
 
 
-            navMenu
-                .querySelectorAll("a")
-                .forEach(
-                    function (link) {
-
-                        link.addEventListener(
-                            "click",
-                            function () {
-
-                                navMenu.classList.remove(
-                                    "active"
-                                );
-
-                                menuToggle.classList.remove(
-                                    "active"
-                                );
-
-                                menuToggle.setAttribute(
-                                    "aria-expanded",
-                                    "false"
-                                );
-
-                            }
-                        );
-
-                    }
-                );
-
-        }
-
-
-        /* =====================================================
-           SCROLL REVEAL
-        ===================================================== */
-
-        const revealElements =
-            document.querySelectorAll(".reveal");
-
-
-        if ("IntersectionObserver" in window) {
-
-            const revealObserver =
-                new IntersectionObserver(
-                    function (entries) {
-
-                        entries.forEach(
-                            function (entry) {
-
-                                if (
-                                    entry.isIntersecting
-                                ) {
-
-                                    entry.target.classList.add(
-                                        "visible"
-                                    );
-
-                                    revealObserver.unobserve(
-                                        entry.target
-                                    );
-
-                                }
-
-                            }
-                        );
-
-                    },
-                    {
-                        threshold: 0.12
-                    }
-                );
-
-
-            revealElements.forEach(
-                function (element) {
-
-                    revealObserver.observe(
-                        element
-                    );
-
-                }
-            );
-
-        } else {
-
-            revealElements.forEach(
-                function (element) {
-
-                    element.classList.add(
-                        "visible"
-                    );
-
-                }
-            );
-
-        }
-
-    </script>
-
+<script src="script.js"></script>
 
 </body>
-
 </html>
-```
