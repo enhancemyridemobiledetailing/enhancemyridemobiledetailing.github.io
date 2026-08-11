@@ -1,6 +1,43 @@
-images/hero-car.jpg
-images/mercedes-before.jpg
-images/mercedes-after.jpg    href="favicon.png"
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Enhance My Ride Auto Spa & Mobile Detailing — premium mobile car detailing in Alameda, Oakland, and the San Francisco Bay Area. We come to you. You relax. We Enhance."
+>
+
+<meta
+    name="keywords"
+    content="mobile detailing Alameda, mobile car detailing Oakland, auto detailing Bay Area, car detailing near me, premium mobile detailing"
+>
+
+<meta
+    name="theme-color"
+    content="#050505"
+>
+
+<title>
+    Enhance My Ride | Premium Mobile Auto Spa & Detailing
+</title>
+
+<link
+    rel="icon"
+    href="favicon.png"
+>
+
+<link
+    rel="stylesheet"
+    href="style.css"
 >
 
 <link
@@ -14,7 +51,7 @@ images/mercedes-after.jpg    href="favicon.png"
 <body>
 
 <!-- =========================================================
-NAVIGATION
+     NAVIGATION
 ========================================================= -->
 
 <header class="navbar">
@@ -117,21 +154,15 @@ NAVIGATION
 <main>
 
 <!-- =========================================================
-HERO
+     HERO
 ========================================================= -->
 
 <section class="hero">
 
 ```
-<!--
-    Replace this URL with your final hero image.
-    Recommended image:
-    Luxury vehicle / professional mobile detailing scene.
--->
-
 <div
     class="hero-image"
-    style="background-image: url('images/hero.jpg');"
+    style="background-image: url('images/hero-car.jpg');"
     aria-hidden="true"
 ></div>
 
@@ -139,7 +170,7 @@ HERO
 <div class="hero-content reveal">
 
     <p class="eyebrow">
-        LUXURY MOBILE AUTO SPA
+        PREMIUM MOBILE AUTO SPA
     </p>
 
 
@@ -156,12 +187,11 @@ HERO
 
     <p>
 
-        Premium vehicle care designed around
-        your time, your vehicle, and your
-        standards.
+        Premium mobile detailing brought directly
+        to your home, workplace, or approved location.
 
-        We bring the luxury detailing experience
-        directly to you.
+        Professional vehicle care without the shop
+        experience, the waiting room, or the hassle.
 
     </p>
 
@@ -174,6 +204,8 @@ HERO
         >
 
             Request A Free Quote
+
+            <i class="fa-solid fa-arrow-right"></i>
 
         </a>
 
@@ -190,18 +222,48 @@ HERO
     </div>
 
 
-    <p
-        style="
-            margin-top:25px;
-            margin-bottom:0;
-            color:#8d8d8d;
-            font-size:10px;
-            letter-spacing:2px;
-            text-transform:uppercase;
-        "
-    >
+    <div class="hero-trust">
 
-        We come to you. You relax. We Enhance.
+        <div class="hero-trust-item">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <span>
+                Mobile Service
+            </span>
+
+        </div>
+
+
+        <div class="hero-trust-item">
+
+            <i class="fa-solid fa-gem"></i>
+
+            <span>
+                Premium Care
+            </span>
+
+        </div>
+
+
+        <div class="hero-trust-item">
+
+            <i class="fa-solid fa-star"></i>
+
+            <span>
+                Detail Focused
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <p class="hero-tagline">
+
+        WE COME TO YOU.
+        YOU RELAX.
+        WE ENHANCE.
 
     </p>
 
@@ -211,7 +273,77 @@ HERO
 </section>
 
 <!-- =========================================================
-INTRODUCTION
+     QUICK VALUE BAR
+========================================================= -->
+
+<section class="value-bar">
+
+```
+<div class="value-bar-inner">
+
+    <div class="value-item">
+
+        <i class="fa-solid fa-house"></i>
+
+        <div>
+
+            <strong>
+                We Come To You
+            </strong>
+
+            <span>
+                Home, work & approved locations
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="value-item">
+
+        <i class="fa-solid fa-sparkles"></i>
+
+        <div>
+
+            <strong>
+                Premium Finish
+            </strong>
+
+            <span>
+                Attention to the details that matter
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="value-item">
+
+        <i class="fa-solid fa-clock"></i>
+
+        <div>
+
+            <strong>
+                Your Time Matters
+            </strong>
+
+            <span>
+                No unnecessary trips or waiting rooms
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =========================================================
+     INTRODUCTION
 ========================================================= -->
 
 <section class="section section-light-dark">
@@ -219,14 +351,25 @@ INTRODUCTION
 ```
 <div class="two-column">
 
-
     <div class="premium-image reveal">
 
         <img
-            src="images/home-detail.jpg"
-            alt="Luxury vehicle receiving professional detailing"
+            src="images/hero-car.jpg"
+            alt="Premium vehicle receiving mobile detailing"
             loading="lazy"
         >
+
+        <div class="image-badge">
+
+            <span>
+                ENHANCE MY RIDE
+            </span>
+
+            <strong>
+                PREMIUM MOBILE DETAILING
+            </strong>
+
+        </div>
 
     </div>
 
@@ -249,15 +392,7 @@ INTRODUCTION
         </h2>
 
 
-        <p
-            style="
-                margin-top:22px;
-                margin-bottom:18px;
-                color:#999;
-                font-size:15px;
-                line-height:1.9;
-            "
-        >
+        <p class="lead-copy">
 
             Your vehicle deserves more than a quick
             wash and a rushed finish.
@@ -265,34 +400,22 @@ INTRODUCTION
         </p>
 
 
-        <p
-            style="
-                margin-bottom:18px;
-                color:#999;
-                font-size:15px;
-                line-height:1.9;
-            "
-        >
+        <p class="body-copy">
 
-            Enhance My Ride was created for customers
-            who value presentation, convenience, and
-            attention to detail.
+            Enhance My Ride was built for customers
+            who care about how their vehicle looks,
+            feels, and presents — but don't want to
+            spend their day sitting at a detailing shop.
 
         </p>
 
 
-        <p
-            style="
-                margin-bottom:30px;
-                color:#999;
-                font-size:15px;
-                line-height:1.9;
-            "
-        >
+        <p class="body-copy">
 
-            Instead of rearranging your day around
-            a detailing shop, we bring professional
-            vehicle care directly to you.
+            We bring the detailing experience directly
+            to you, with carefully structured services,
+            professional equipment, and attention to
+            the areas that make the difference.
 
         </p>
 
@@ -304,10 +427,11 @@ INTRODUCTION
 
             Discover Our Story
 
+            <i class="fa-solid fa-arrow-right"></i>
+
         </a>
 
     </div>
-
 
 </div>
 ```
@@ -315,7 +439,7 @@ INTRODUCTION
 </section>
 
 <!-- =========================================================
-LUXURY POSITIONING
+     WHY ENHANCE
 ========================================================= -->
 
 <section class="section">
@@ -341,15 +465,15 @@ LUXURY POSITIONING
 
     <p>
 
-        A premium detailing experience built around
-        the way you actually live.
+        A premium mobile detailing experience
+        designed around your vehicle and your time.
 
     </p>
 
 </div>
 
 
-<div class="package-grid">
+<div class="feature-card-grid">
 
 
     <article class="card reveal">
@@ -361,6 +485,11 @@ LUXURY POSITIONING
             </div>
 
 
+            <span class="card-number">
+                01
+            </span>
+
+
             <h3>
                 We Come To You
             </h3>
@@ -368,9 +497,9 @@ LUXURY POSITIONING
 
             <p>
 
-                Your home, workplace, or another
-                approved location becomes your
-                private detailing location.
+                Your driveway, workplace, or another
+                approved location becomes your private
+                detailing location.
 
             </p>
 
@@ -389,6 +518,11 @@ LUXURY POSITIONING
             </div>
 
 
+            <span class="card-number">
+                02
+            </span>
+
+
             <h3>
                 Premium Standards
             </h3>
@@ -396,9 +530,9 @@ LUXURY POSITIONING
 
             <p>
 
-                Thoughtful processes, professional
-                products, and an approach focused
-                on the details that matter.
+                Professional products, deliberate
+                processes, and attention to the small
+                details that separate clean from enhanced.
 
             </p>
 
@@ -417,6 +551,11 @@ LUXURY POSITIONING
             </div>
 
 
+            <span class="card-number">
+                03
+            </span>
+
+
             <h3>
                 Your Time Matters
             </h3>
@@ -424,8 +563,8 @@ LUXURY POSITIONING
 
             <p>
 
-                No waiting rooms. No unnecessary
-                trips. Your vehicle receives care
+                No waiting room. No unnecessary trip.
+                Your vehicle gets the attention it needs
                 while you continue your day.
 
             </p>
@@ -441,7 +580,7 @@ LUXURY POSITIONING
 </section>
 
 <!-- =========================================================
-SERVICES
+     PACKAGES
 ========================================================= -->
 
 <section class="section section-dark">
@@ -467,9 +606,8 @@ SERVICES
 
     <p>
 
-        From maintenance-level care to a complete
-        vehicle transformation, every package is
-        designed to deliver a premium experience.
+        Three premium service levels designed
+        around different levels of vehicle care.
 
     </p>
 
@@ -506,9 +644,9 @@ SERVICES
 
         <p class="package-description">
 
-            A premium maintenance detail for
-            customers who want their vehicle
-            refreshed, protected, and looking sharp.
+            A premium maintenance detail for vehicles
+            that need a thorough refresh and a sharp,
+            clean finish.
 
         </p>
 
@@ -566,7 +704,7 @@ SERVICES
     >
 
         <div class="package-badge">
-            Most Popular
+            MOST POPULAR
         </div>
 
 
@@ -593,9 +731,9 @@ SERVICES
 
         <p class="package-description">
 
-            A deeper interior and exterior
-            enhancement designed for customers
-            who expect a noticeably elevated finish.
+            A deeper interior and exterior enhancement
+            for customers who want a noticeably higher
+            level of presentation.
 
         </p>
 
@@ -673,9 +811,9 @@ SERVICES
 
         <p class="package-description">
 
-            Our highest-level enhancement for
-            customers who want their vehicle
-            presented at its absolute best.
+            Our highest-level enhancement for customers
+            who want their vehicle presented at its
+            absolute best.
 
         </p>
 
@@ -728,13 +866,20 @@ SERVICES
 </div>
 
 
-<div
-    style="
-        text-align:center;
-        margin-top:35px;
-    "
-    class="reveal"
->
+<div class="package-note reveal">
+
+    <i class="fa-solid fa-circle-info"></i>
+
+    <span>
+        Final pricing may vary based on vehicle size,
+        condition, pet hair, excessive buildup, and
+        requested services.
+    </span>
+
+</div>
+
+
+<div class="center-button reveal">
 
     <a
         href="services.html"
@@ -742,6 +887,8 @@ SERVICES
     >
 
         Compare All Services
+
+        <i class="fa-solid fa-arrow-right"></i>
 
     </a>
 
@@ -751,7 +898,7 @@ SERVICES
 </section>
 
 <!-- =========================================================
-PROCESS
+     PROCESS
 ========================================================= -->
 
 <section class="section section-light-dark">
@@ -777,65 +924,108 @@ PROCESS
 
     <p>
 
-        Getting your vehicle enhanced shouldn't
-        require rearranging your entire day.
+        Getting your vehicle professionally detailed
+        shouldn't require rearranging your entire day.
 
     </p>
 
 </div>
 
 
-<div class="stats-grid reveal">
+<div class="process-grid">
 
 
-    <div class="stat">
+    <div class="process-step reveal">
 
-        <div class="stat-number">
+        <div class="process-number">
             01
         </div>
 
-        <div class="stat-label">
-            Request Your Quote
-        </div>
+        <i class="fa-solid fa-file-signature"></i>
+
+        <h3>
+            Request
+        </h3>
+
+        <p>
+            Tell us about your vehicle,
+            location, and desired service.
+        </p>
 
     </div>
 
 
-    <div class="stat">
 
-        <div class="stat-number">
+    <div class="process-line"></div>
+
+
+
+    <div class="process-step reveal">
+
+        <div class="process-number">
             02
         </div>
 
-        <div class="stat-label">
-            Choose Your Service
-        </div>
+        <i class="fa-solid fa-calendar-check"></i>
+
+        <h3>
+            Schedule
+        </h3>
+
+        <p>
+            Choose a convenient date and
+            time for your mobile service.
+        </p>
 
     </div>
 
 
-    <div class="stat">
 
-        <div class="stat-number">
+    <div class="process-line"></div>
+
+
+
+    <div class="process-step reveal">
+
+        <div class="process-number">
             03
         </div>
 
-        <div class="stat-label">
-            We Come To You
-        </div>
+        <i class="fa-solid fa-car-side"></i>
+
+        <h3>
+            We Arrive
+        </h3>
+
+        <p>
+            We bring the professional detailing
+            experience directly to you.
+        </p>
 
     </div>
 
 
-    <div class="stat">
 
-        <div class="stat-number">
+    <div class="process-line"></div>
+
+
+
+    <div class="process-step reveal">
+
+        <div class="process-number">
             04
         </div>
 
-        <div class="stat-label">
-            You Enjoy The Result
-        </div>
+        <i class="fa-solid fa-sparkles"></i>
+
+        <h3>
+            You Relax
+        </h3>
+
+        <p>
+            Enjoy the finished vehicle while
+            we handle the details.
+        </p>
 
     </div>
 
@@ -846,14 +1036,123 @@ PROCESS
 </section>
 
 <!-- =========================================================
-DETAILING PHILOSOPHY
+     REAL DETAIL / MERCEDES CASE STUDY
 ========================================================= -->
 
 <section class="section">
 
 ```
-<div class="two-column">
+<div class="section-heading reveal">
 
+    <p class="eyebrow">
+        RECENT ENHANCEMENT
+    </p>
+
+
+    <h2>
+
+        See The
+
+        <span>
+            Difference.
+        </span>
+
+    </h2>
+
+
+    <p>
+
+        A real-world example of the transformation
+        created through the Enhance My Ride process.
+
+    </p>
+
+</div>
+
+
+<div class="before-after">
+
+    <div class="before-after-item reveal">
+
+        <img
+            src="images/mercedes-before.jpg"
+            alt="Mercedes vehicle before professional detailing"
+            loading="lazy"
+        >
+
+        <div class="before-after-label">
+            BEFORE
+        </div>
+
+    </div>
+
+
+    <div class="before-after-item after reveal">
+
+        <img
+            src="images/mercedes-after.jpg"
+            alt="Mercedes vehicle after professional detailing"
+            loading="lazy"
+        >
+
+        <div class="before-after-label">
+            AFTER
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="case-study">
+
+    <div>
+
+        <span class="case-study-label">
+            RECENT SERVICE
+        </span>
+
+        <h3>
+            Mercedes-Benz Enhancement
+        </h3>
+
+    </div>
+
+
+    <p>
+
+        Wheels, tires, exterior surfaces, interior
+        surfaces, glass, and finishing details were
+        addressed to create a cleaner and more refined
+        overall presentation.
+
+    </p>
+
+
+    <a
+        href="gallery.html"
+        class="button button-outline"
+    >
+
+        View More Results
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</div>
+```
+
+</section>
+
+<!-- =========================================================
+     STANDARD
+========================================================= -->
+
+<section class="section section-dark">
+
+```
+<div class="two-column">
 
     <div class="reveal">
 
@@ -873,25 +1172,18 @@ DETAILING PHILOSOPHY
         </h2>
 
 
-        <p
-            style="
-                margin-top:25px;
-                margin-bottom:18px;
-                color:#999;
-                font-size:15px;
-                line-height:1.9;
-            "
-        >
+        <p class="lead-copy">
 
-            The difference between a basic wash
-            and a true detail is often found in
-            the places most people overlook.
+            The difference between a basic wash and
+            a true detail is often found in the places
+            most people overlook.
 
         </p>
 
 
         <ul class="feature-list">
 
+
             <li>
 
                 <span class="feature-icon">
@@ -899,9 +1191,10 @@ DETAILING PHILOSOPHY
                 </span>
 
                 <span>
-                    Careful attention to wheels,
-                    tires, trim, glass, and exterior
-                    surfaces.
+
+                    Careful attention to wheels, tires,
+                    trim, glass, and exterior surfaces.
+
                 </span>
 
             </li>
@@ -914,9 +1207,11 @@ DETAILING PHILOSOPHY
                 </span>
 
                 <span>
-                    Interior cleaning focused on
-                    the areas that experience the
-                    most daily wear.
+
+                    Interior cleaning focused on the
+                    areas that experience the most
+                    daily wear.
+
                 </span>
 
             </li>
@@ -929,8 +1224,26 @@ DETAILING PHILOSOPHY
                 </span>
 
                 <span>
-                    A final inspection before we
-                    consider the vehicle complete.
+
+                    Professional products and processes
+                    selected for the job at hand.
+
+                </span>
+
+            </li>
+
+
+            <li>
+
+                <span class="feature-icon">
+                    <i class="fa-solid fa-check"></i>
+                </span>
+
+                <span>
+
+                    A final inspection before the
+                    vehicle is considered complete.
+
                 </span>
 
             </li>
@@ -944,13 +1257,24 @@ DETAILING PHILOSOPHY
     <div class="premium-image reveal">
 
         <img
-            src="images/detailing-process.jpg"
-            alt="Professional mobile vehicle detailing"
+            src="images/mercedes-after.jpg"
+            alt="Mercedes-Benz after Enhance My Ride detailing"
             loading="lazy"
         >
 
-    </div>
+        <div class="image-caption">
 
+            <span>
+                THE ENHANCE STANDARD
+            </span>
+
+            <strong>
+                Attention To The Details
+            </strong>
+
+        </div>
+
+    </div>
 
 </div>
 ```
@@ -958,25 +1282,25 @@ DETAILING PHILOSOPHY
 </section>
 
 <!-- =========================================================
-NATIONWIDE BRAND POSITIONING
+     SERVICE AREA
 ========================================================= -->
 
-<section class="section section-dark">
+<section class="section section-light-dark">
 
 ```
 <div class="section-heading reveal">
 
     <p class="eyebrow">
-        THE ENHANCE MY RIDE STANDARD
+        MOBILE SERVICE
     </p>
 
 
     <h2>
 
-        Luxury Vehicle Care.
+        Premium Detailing.
 
         <span>
-            Wherever The Experience Takes You.
+            Brought To You.
         </span>
 
     </h2>
@@ -984,9 +1308,8 @@ NATIONWIDE BRAND POSITIONING
 
     <p>
 
-        Enhance My Ride is built around a luxury
-        mobile detailing philosophy designed to
-        bring premium vehicle care closer to you.
+        Proudly serving Alameda, Oakland, and
+        surrounding Bay Area communities.
 
     </p>
 
@@ -997,44 +1320,60 @@ NATIONWIDE BRAND POSITIONING
 
 
     <div class="service-area-card reveal">
-        Mobile Convenience
+        Alameda
     </div>
 
 
     <div class="service-area-card reveal">
-        Premium Vehicle Care
+        Oakland
     </div>
 
 
     <div class="service-area-card reveal">
-        Professional Presentation
+        San Leandro
     </div>
 
 
     <div class="service-area-card reveal">
-        Customer-Focused Service
+        Hayward
     </div>
 
 
     <div class="service-area-card reveal">
-        Interior Enhancement
+        Berkeley
     </div>
 
 
     <div class="service-area-card reveal">
-        Exterior Enhancement
+        San Francisco
     </div>
 
 
     <div class="service-area-card reveal">
-        Luxury Vehicle Care
+        East Bay
     </div>
 
 
     <div class="service-area-card reveal">
-        Detail-Focused Results
+        Bay Area
     </div>
 
+
+</div>
+
+
+<div class="center-button reveal">
+
+    <a
+        href="service-area.html"
+        class="button button-outline"
+    >
+
+        View Service Area
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
 
 </div>
 ```
@@ -1042,10 +1381,10 @@ NATIONWIDE BRAND POSITIONING
 </section>
 
 <!-- =========================================================
-GALLERY PREVIEW
+     GALLERY PREVIEW
 ========================================================= -->
 
-<section class="section section-light-dark">
+<section class="section">
 
 ```
 <div class="section-heading reveal">
@@ -1057,10 +1396,10 @@ GALLERY PREVIEW
 
     <h2>
 
-        See The
+        Your Vehicle.
 
         <span>
-            Enhancement.
+            Our Canvas.
         </span>
 
     </h2>
@@ -1068,8 +1407,8 @@ GALLERY PREVIEW
 
     <p>
 
-        Every vehicle has a story.
-        Here's where the transformation begins.
+        Follow the transformation and see the
+        Enhance My Ride standard for yourself.
 
     </p>
 
@@ -1085,14 +1424,18 @@ GALLERY PREVIEW
             class="gallery-image"
             style="
                 background-image:
-                url('images/gallery-1.jpg');
+                url('images/mercedes-after.jpg');
             "
             role="img"
-            aria-label="Enhanced vehicle exterior"
+            aria-label="Mercedes-Benz after detailing"
         ></div>
 
 
         <div class="gallery-card-content">
+
+            <span class="gallery-label">
+                EXTERIOR
+            </span>
 
             <h3>
                 Exterior Enhancement
@@ -1115,22 +1458,26 @@ GALLERY PREVIEW
             class="gallery-image"
             style="
                 background-image:
-                url('images/gallery-2.jpg');
+                url('images/hero-car.jpg');
             "
             role="img"
-            aria-label="Professionally detailed vehicle interior"
+            aria-label="Premium vehicle"
         ></div>
 
 
         <div class="gallery-card-content">
 
+            <span class="gallery-label">
+                MOBILE DETAILING
+            </span>
+
             <h3>
-                Interior Restoration
+                Premium Vehicle Care
             </h3>
 
             <p>
-                Bringing comfort, cleanliness,
-                and refinement back to the cabin.
+                Professional detailing designed
+                around your vehicle and your time.
             </p>
 
         </div>
@@ -1145,22 +1492,26 @@ GALLERY PREVIEW
             class="gallery-image"
             style="
                 background-image:
-                url('images/gallery-3.jpg');
+                url('images/mercedes-before.jpg');
             "
             role="img"
-            aria-label="Luxury vehicle after detailing"
+            aria-label="Mercedes-Benz before detailing"
         ></div>
 
 
         <div class="gallery-card-content">
 
+            <span class="gallery-label">
+                TRANSFORMATION
+            </span>
+
             <h3>
-                Complete Enhancement
+                Before & After
             </h3>
 
             <p>
-                The finished result when interior
-                and exterior receive the full treatment.
+                See the difference professional
+                attention can make.
             </p>
 
         </div>
@@ -1171,13 +1522,7 @@ GALLERY PREVIEW
 </div>
 
 
-<div
-    style="
-        text-align:center;
-        margin-top:35px;
-    "
-    class="reveal"
->
+<div class="center-button reveal">
 
     <a
         href="gallery.html"
@@ -1185,6 +1530,8 @@ GALLERY PREVIEW
     >
 
         View Full Gallery
+
+        <i class="fa-solid fa-arrow-right"></i>
 
     </a>
 
@@ -1194,7 +1541,7 @@ GALLERY PREVIEW
 </section>
 
 <!-- =========================================================
-FINAL CTA
+     FINAL CTA
 ========================================================= -->
 
 <section class="cta">
@@ -1229,14 +1576,41 @@ FINAL CTA
     </p>
 
 
-    <a
-        href="quote.html"
-        class="button button-gold"
-    >
+    <div class="cta-buttons">
 
-        Request A Free Quote
+        <a
+            href="quote.html"
+            class="button button-gold"
+        >
 
-    </a>
+            Request A Free Quote
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+
+        <a
+            href="tel:3233271806"
+            class="button button-outline"
+        >
+
+            <i class="fa-solid fa-phone"></i>
+
+            Call (323) 327-1806
+
+        </a>
+
+    </div>
+
+
+    <div class="cta-tagline">
+
+        WE COME TO YOU.
+        YOU RELAX.
+        WE ENHANCE.
+
+    </div>
 
 </div>
 ```
@@ -1246,7 +1620,7 @@ FINAL CTA
 </main>
 
 <!-- =========================================================
-FOOTER
+     FOOTER
 ========================================================= -->
 
 <footer>
@@ -1260,6 +1634,7 @@ FOOTER
         <div class="footer-title">
             ENHANCE MY RIDE
         </div>
+
 
         <div class="footer-sub">
             AUTO SPA & MOBILE DETAILING
@@ -1336,9 +1711,7 @@ FOOTER
 
         <p class="footer-text">
 
-            <a
-                href="mailto:info@enhancemyride.com"
-            >
+            <a href="mailto:info@enhancemyride.com">
 
                 <i class="fa-solid fa-envelope"></i>
 
@@ -1350,9 +1723,7 @@ FOOTER
             <br><br>
 
 
-            <a
-                href="tel:3233271806"
-            >
+            <a href="tel:3233271806">
 
                 <i class="fa-solid fa-phone"></i>
 
@@ -1397,8 +1768,13 @@ FOOTER
 
 <div class="copyright">
 
-    © <span id="year">2026</span>
+    ©
+    <span id="year">
+        2026
+    </span>
+
     Enhance My Ride Auto Spa & Mobile Detailing.
+
     All Rights Reserved.
 
 </div>
@@ -1406,8 +1782,157 @@ FOOTER
 
 </footer>
 
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
 <script src="script.js"></script>
 
-</body>
+<script>
 
+    /* Dynamic copyright year */
+
+    const yearElement =
+        document.getElementById("year");
+
+    if (yearElement) {
+
+        yearElement.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+    /* Mobile navigation */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+
+    if (menuToggle && navMenu) {
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                const isOpen =
+                    menuToggle.classList.toggle("active");
+
+                navMenu.classList.toggle(
+                    "active"
+                );
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                );
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    isOpen
+                        ? "Close navigation menu"
+                        : "Open navigation menu"
+                );
+
+            }
+        );
+
+
+        navMenu
+            .querySelectorAll("a")
+            .forEach(function(link) {
+
+                link.addEventListener(
+                    "click",
+                    function() {
+
+                        menuToggle.classList.remove(
+                            "active"
+                        );
+
+                        navMenu.classList.remove(
+                            "active"
+                        );
+
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                        menuToggle.setAttribute(
+                            "aria-label",
+                            "Open navigation menu"
+                        );
+
+                    }
+                );
+
+            });
+
+    }
+
+
+    /* Scroll reveal */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+
+    if ("IntersectionObserver" in window) {
+
+        const revealObserver =
+            new IntersectionObserver(
+                function(entries, observer) {
+
+                    entries.forEach(function(entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add(
+                                "visible"
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+        revealElements.forEach(
+            function(element) {
+
+                revealObserver.observe(element);
+
+            }
+        );
+
+    } else {
+
+        revealElements.forEach(
+            function(element) {
+
+                element.classList.add(
+                    "visible"
+                );
+
+            }
+        );
+
+    }
+
+</script>
+
+</body>
 </html>
