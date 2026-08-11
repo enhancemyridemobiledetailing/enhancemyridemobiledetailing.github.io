@@ -1,180 +1,646 @@
-<!-- =========================================================
-FILE: thank-you.html
-========================================================= -->
-
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
 
-    <title>Thank You | Enhance My Ride</title>
+<title>
+Thank You | Enhance My Ride Auto Spa & Mobile Detailing
+</title>
 
-    <meta
-        name="description"
-        content="Thank you for contacting Enhance My Ride Auto Spa & Mobile Detailing."
-    >
+<meta
+name="description"
+content="Thank you for requesting a detailing quote from Enhance My Ride Auto Spa & Mobile Detailing."
+>
 
-    <link rel="icon" href="favicon.png">
+<meta
+name="robots"
+content="noindex, nofollow"
+>
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
+<link
+rel="stylesheet"
+href="style.css"
+>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+<link
+rel="icon"
+type="image/png"
+href="favicon.png"
+>
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+
+<style>
+
+/* =====================================================
+THANK YOU PAGE
+===================================================== */
+
+.thank-you-page {
+
+    min-height:
+        100vh;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    box-sizing:
+        border-box;
+
+    padding:
+        100px 6%;
+
+    background:
+        linear-gradient(
+            rgba(8,8,8,.94),
+            rgba(8,8,8,.94)
+        ),
+
+        url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=2000&q=85")
+
+        center/cover no-repeat;
+
+}
+
+
+/* =====================================================
+THANK YOU BOX
+===================================================== */
+
+.thank-you-box {
+
+    width:
+        min(
+            700px,
+            100%
+        );
+
+    box-sizing:
+        border-box;
+
+    padding:
+        60px 45px;
+
+    text-align:
+        center;
+
+    background:
+        rgba(18,18,18,.97);
+
+    border:
+        1px solid
+        rgba(201,162,39,.35);
+
+    box-shadow:
+        0 30px 90px
+        rgba(0,0,0,.50);
+
+}
+
+
+/* =====================================================
+ICON
+===================================================== */
+
+.thank-you-icon {
+
+    width:
+        70px;
+
+    height:
+        70px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin:
+        0 auto 25px;
+
+    border:
+        1px solid
+        rgba(201,162,39,.45);
+
+    border-radius:
+        50%;
+
+    color:
+        var(--gold-light);
+
+    font-size:
+        25px;
+
+}
+
+
+/* =====================================================
+EYEBROW
+===================================================== */
+
+.thank-you-box .eyebrow {
+
+    margin-bottom:
+        15px;
+}
+
+
+/* =====================================================
+HEADING
+===================================================== */
+
+.thank-you-box h1 {
+
+    margin:
+        0 0 20px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            42px,
+            7vw,
+            64px
+        );
+
+    line-height:
+        1.1;
+
+}
+
+
+.thank-you-box h1 span {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+/* =====================================================
+MAIN MESSAGE
+===================================================== */
+
+.thank-you-message {
+
+    max-width:
+        570px;
+
+    margin:
+        0 auto 30px;
+
+    color:
+        #bbb;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =====================================================
+NEXT STEPS
+===================================================== */
+
+.next-steps {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        12px;
+
+    margin:
+        35px 0;
+
+}
+
+
+.next-step {
+
+    padding:
+        20px 12px;
+
+    background:
+        #0b0b0b;
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+}
+
+
+.next-step i {
+
+    display:
+        block;
+
+    margin-bottom:
+        10px;
+
+    color:
+        var(--gold-light);
+
+    font-size:
+        19px;
+
+}
+
+
+.next-step strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        6px;
+
+    color:
+        #ddd;
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        .5px;
+
+}
+
+
+.next-step span {
+
+    display:
+        block;
+
+    color:
+        #666;
+
+    font-size:
+        10px;
+
+    line-height:
+        1.5;
+
+}
+
+
+/* =====================================================
+SLOGAN
+===================================================== */
+
+.thank-you-slogan {
+
+    margin:
+        30px 0;
+
+    color:
+        var(--gold-light);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        15px;
+
+    font-style:
+        italic;
+
+}
+
+
+/* =====================================================
+BUTTONS
+===================================================== */
+
+.thank-you-buttons {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+
+}
+
+
+.thank-you-buttons .button {
+
+    min-width:
+        170px;
+
+}
+
+
+/* =====================================================
+PHONE
+===================================================== */
+
+.thank-you-phone {
+
+    margin-top:
+        25px;
+
+    color:
+        #777;
+
+    font-size:
+        11px;
+
+}
+
+
+.thank-you-phone a {
+
+    color:
+        #bbb;
+
+    text-decoration:
+        none;
+
+}
+
+
+.thank-you-phone a:hover {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+/* =====================================================
+MOBILE
+===================================================== */
+
+@media(max-width:650px) {
+
+    .thank-you-page {
+
+        padding:
+            80px 20px;
+
+    }
+
+
+    .thank-you-box {
+
+        padding:
+            45px 22px;
+
+    }
+
+
+    .next-steps {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .thank-you-buttons {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .thank-you-buttons .button {
+
+        width:
+            100%;
+
+        box-sizing:
+            border-box;
+
+    }
+
+}
+
+</style>
 
 </head>
 
+
 <body>
 
-<header class="navbar">
 
-    <a href="index.html" class="logo">
-
-        <div class="logo-mark">EMR</div>
-
-        <div class="logo-text">
-
-            <span class="logo-main">
-                ENHANCE MY RIDE
-            </span>
-
-            <span class="logo-sub">
-                AUTO SPA & MOBILE DETAILING
-            </span>
-
-        </div>
-
-    </a>
-
-</header>
+<main class="thank-you-page">
 
 
-<main>
+<div class="thank-you-box">
 
-<section
-    class="page-hero"
-    style="min-height:100vh;display:flex;align-items:center;"
+
+<!-- =====================================================
+SUCCESS ICON
+===================================================== -->
+
+<div class="thank-you-icon">
+
+<i class="fa-solid fa-check"></i>
+
+</div>
+
+
+<!-- =====================================================
+HEADER
+===================================================== -->
+
+<p class="eyebrow">
+
+REQUEST RECEIVED
+
+</p>
+
+
+<h1>
+
+Thank You<span>.</span>
+
+</h1>
+
+
+<p class="thank-you-message">
+
+Your quote request has been successfully received.
+
+We'll review the information you provided and
+contact you shortly with your personalized
+detailing recommendation.
+
+</p>
+
+
+
+<!-- =====================================================
+NEXT STEPS
+===================================================== -->
+
+<div class="next-steps">
+
+
+<div class="next-step">
+
+<i class="fa-solid fa-clipboard-check"></i>
+
+<strong>
+WE REVIEW
+</strong>
+
+<span>
+We review your vehicle,
+service package, and location.
+</span>
+
+</div>
+
+
+<div class="next-step">
+
+<i class="fa-solid fa-phone"></i>
+
+<strong>
+WE CONTACT YOU
+</strong>
+
+<span>
+We'll reach out by phone,
+text, or email.
+</span>
+
+</div>
+
+
+<div class="next-step">
+
+<i class="fa-solid fa-car"></i>
+
+<strong>
+WE ENHANCE
+</strong>
+
+<span>
+We schedule your service
+and come to you.
+</span>
+
+</div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+SLOGAN
+===================================================== -->
+
+<p class="thank-you-slogan">
+
+We come to you. You relax. We Enhance.
+
+</p>
+
+
+
+<!-- =====================================================
+BUTTONS
+===================================================== -->
+
+<div class="thank-you-buttons">
+
+
+<a
+href="index.html"
+class="button button-gold"
 >
 
-    <div class="page-hero-content reveal">
+Return Home
 
-        <div
-            class="feature-icon"
-            style="
-                width:70px;
-                height:70px;
-                margin:0 auto 30px;
-                font-size:24px;
-            "
-        >
-            <i class="fa-solid fa-check"></i>
-        </div>
+</a>
 
 
-        <p class="eyebrow">
-            REQUEST RECEIVED
-        </p>
+<a
+href="gallery.html"
+class="button button-outline"
+>
+
+View Our Gallery
+
+</a>
 
 
-        <h1>
-            Thank You.
-            <span>Your Ride Is Next.</span>
-        </h1>
+</div>
 
 
-        <p>
-            We've received your request and will review
-            the information you provided.
-        </p>
+
+<!-- =====================================================
+PHONE
+===================================================== -->
+
+<p class="thank-you-phone">
+
+Need immediate assistance?
+
+<br>
+
+<a href="tel:3233271806">
+
+(323) 327-1806
+
+</a>
+
+</p>
 
 
-        <p style="margin-top:15px;">
-            If additional information is needed, we'll
-            reach out using the contact information
-            included with your request.
-        </p>
+</div>
 
-
-        <div
-            style="
-                display:flex;
-                justify-content:center;
-                flex-wrap:wrap;
-                gap:14px;
-                margin-top:35px;
-            "
-        >
-
-            <a
-                href="index.html"
-                class="button button-gold"
-            >
-                Return Home
-            </a>
-
-
-            <a
-                href="gallery.html"
-                class="button button-outline"
-            >
-                View Our Work
-            </a>
-
-        </div>
-
-
-        <div
-            style="
-                margin-top:45px;
-                padding-top:25px;
-                border-top:1px solid rgba(255,255,255,0.10);
-            "
-        >
-
-            <p
-                style="
-                    color:#777;
-                    font-size:11px;
-                    letter-spacing:1.5px;
-                    text-transform:uppercase;
-                "
-            >
-                We come to you. You relax. We Enhance.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
 
 </main>
 
 
-<footer>
-
-    <div class="copyright">
-
-        © <span id="year">2026</span>
-        Enhance My Ride Auto Spa & Mobile Detailing.
-        All Rights Reserved.
-
-    </div>
-
-</footer>
-
-
-<script src="script.js"></script>
-
 </body>
+
 </html>
+```
