@@ -1,398 +1,1525 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
 
-    <title>Service Area | Enhance My Ride Auto Spa</title>
+<title>
+Service Area | Enhance My Ride Mobile Detailing
+</title>
 
-    <meta
-        name="description"
-        content="Explore the Enhance My Ride mobile detailing service area. Premium mobile vehicle care throughout the Bay Area with a nationwide luxury detailing vision."
-    >
+<meta
+name="description"
+content="Enhance My Ride provides premium mobile detailing throughout Alameda, Oakland, San Francisco and surrounding Bay Area communities. We come to you."
+>
 
-    <link rel="icon" href="favicon.png">
+<meta
+name="keywords"
+content="Alameda mobile detailing, Oakland mobile detailing, San Francisco mobile detailing, Bay Area mobile detailing, mobile car detailing near me, East Bay auto detailing"
+>
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
+<meta
+name="author"
+content="Enhance My Ride Auto Spa & Mobile Detailing"
+>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+<meta
+name="robots"
+content="index, follow"
+>
+
+<meta
+property="og:title"
+content="Mobile Detailing Service Area | Enhance My Ride"
+>
+
+<meta
+property="og:description"
+content="Premium mobile detailing delivered throughout Alameda, Oakland, San Francisco and the Bay Area."
+>
+
+<meta
+property="og:type"
+content="website"
+>
+
+<meta
+property="og:url"
+content="https://enhancemyride.com/service-area.html"
+>
+
+<link
+rel="canonical"
+href="https://enhancemyride.com/service-area.html"
+>
+
+<link
+rel="stylesheet"
+href="style.css"
+>
+
+<link
+rel="icon"
+type="image/png"
+href="favicon.png"
+>
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+
+<style>
+
+/* =====================================================
+SERVICE AREA PAGE
+===================================================== */
+
+.service-area-page {
+    padding-top: 78px;
+}
+
+
+/* =====================================================
+HERO
+===================================================== */
+
+.service-area-hero {
+    padding:
+        130px 6% 100px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(201,162,39,0.08),
+            transparent 48%
+        ),
+
+        linear-gradient(
+            145deg,
+            #111111,
+            #050505
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.08);
+}
+
+.service-area-hero-content {
+    width: min(
+        850px,
+        100%
+    );
+
+    margin: 0 auto;
+}
+
+.service-area-hero h1 {
+    margin-bottom: 20px;
+}
+
+.service-area-hero h1 span {
+    color: var(--gold-light);
+}
+
+.service-area-hero p:not(.eyebrow) {
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    color: var(--gray);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+PRIMARY SERVICE AREA
+===================================================== */
+
+.primary-area {
+    width: min(
+        1150px,
+        100%
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 25px;
+}
+
+.area-feature {
+    position: relative;
+
+    min-height: 310px;
+
+    padding:
+        45px 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #161616,
+            #090909
+        );
+
+    border:
+        1px solid
+        rgba(201,162,39,0.20);
+
+    overflow: hidden;
+}
+
+.area-feature::after {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    right: -100px;
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(201,162,39,0.10);
+}
+
+.area-feature i {
+    margin-bottom: 18px;
+
+    color: var(--gold-light);
+
+    font-size: 28px;
+}
+
+.area-feature h2 {
+    margin-bottom: 12px;
+
+    font-size: 34px;
+}
+
+.area-feature p {
+    max-width: 500px;
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+.area-label {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--gold-light);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+CITIES GRID
+===================================================== */
+
+.city-grid {
+    width: min(
+        1150px,
+        100%
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.city-card {
+    position: relative;
+
+    padding:
+        30px 24px;
+
+    background:
+        #101010;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    transition:
+        all .3s ease;
+}
+
+.city-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(201,162,39,0.35);
+}
+
+.city-card i {
+    margin-bottom: 15px;
+
+    color: var(--gold-light);
+
+    font-size: 20px;
+}
+
+.city-card h3 {
+    margin-bottom: 7px;
+
+    font-size: 19px;
+}
+
+.city-card p {
+    color: #888;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+.city-tag {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    color: #555;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+SERVICE AREA LIST
+===================================================== */
+
+.area-list-wrapper {
+    width: min(
+        1000px,
+        100%
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.area-list-card {
+    padding:
+        28px 25px;
+
+    background:
+        rgba(255,255,255,0.02);
+
+    border:
+        1px solid
+        var(--border);
+}
+
+.area-list-card h3 {
+    margin-bottom: 15px;
+
+    color: var(--gold-light);
+
+    font-size: 17px;
+}
+
+.area-list {
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 8px;
+}
+
+.area-list li {
+    color: #999;
+
+    font-size: 11px;
+}
+
+.area-list li::before {
+    content: "•";
+
+    margin-right: 8px;
+
+    color: var(--gold-light);
+}
+
+
+/* =====================================================
+TRAVEL / QUOTE
+===================================================== */
+
+.travel-box {
+    width: min(
+        850px,
+        100%
+    );
+
+    margin: 0 auto;
+
+    padding:
+        40px 35px;
+
+    text-align: center;
+
+    background:
+        rgba(201,162,39,0.035);
+
+    border:
+        1px solid
+        rgba(201,162,39,0.18);
+}
+
+.travel-box i {
+    margin-bottom: 15px;
+
+    color: var(--gold-light);
+
+    font-size: 25px;
+}
+
+.travel-box h2 {
+    margin-bottom: 15px;
+}
+
+.travel-box h2 span {
+    color: var(--gold-light);
+}
+
+.travel-box p {
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+LOCAL SEO CONTENT
+===================================================== */
+
+.local-content {
+    width: min(
+        900px,
+        100%
+    );
+
+    margin: 0 auto;
+}
+
+.local-content h2 {
+    margin-bottom: 18px;
+}
+
+.local-content h2 span {
+    color: var(--gold-light);
+}
+
+.local-content p {
+    margin-bottom: 18px;
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+MOBILE
+===================================================== */
+
+@media(max-width: 850px) {
+
+    .primary-area {
+        grid-template-columns:
+            1fr;
+    }
+
+    .city-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .area-list-wrapper {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media(max-width: 600px) {
+
+    .service-area-page {
+        padding-top: 70px;
+    }
+
+    .service-area-hero {
+        padding:
+            100px 6% 75px;
+    }
+
+    .city-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .area-list {
+        grid-template-columns:
+            1fr;
+    }
+
+    .area-feature {
+        padding:
+            35px 25px;
+
+        min-height:
+            270px;
+    }
+
+    .travel-box {
+        padding:
+            32px 22px;
+    }
+
+}
+
+</style>
 
 </head>
 
+
 <body>
+
+
+<!-- =====================================================
+NAVIGATION
+===================================================== -->
 
 <header class="navbar">
 
-    <a href="index.html" class="logo">
+<a
+href="index.html"
+class="logo"
+aria-label="Enhance My Ride Home"
+>
 
-        <div class="logo-mark">EMR</div>
+<div class="logo-mark">
+EMR
+</div>
 
-        <div class="logo-text">
+<div class="logo-text">
 
-            <span class="logo-main">
-                ENHANCE MY RIDE
-            </span>
+<span class="logo-main">
+ENHANCE MY RIDE
+</span>
 
-            <span class="logo-sub">
-                AUTO SPA & MOBILE DETAILING
-            </span>
+<span class="logo-sub">
+AUTO SPA & MOBILE DETAILING
+</span>
 
-        </div>
+</div>
 
-    </a>
+</a>
 
-    <button
-        class="menu-toggle"
-        id="menuToggle"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="navMenu"
-    >
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
 
-    <nav aria-label="Main navigation">
+<button
+class="menu-toggle"
+id="menuToggle"
+type="button"
+aria-label="Open navigation menu"
+aria-expanded="false"
+>
 
-        <ul class="nav-menu" id="navMenu">
+<span></span>
+<span></span>
+<span></span>
 
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="services.html">Services</a></li>
+</button>
 
-            <li>
-                <a href="quote.html" class="nav-quote">
-                    Get Free Quote
-                </a>
-            </li>
 
-            <li><a href="about.html">About</a></li>
-            <li><a href="service-area.html">Service Area</a></li>
+<nav>
 
-        </ul>
+<ul
+class="nav-menu"
+id="navMenu"
+>
 
-    </nav>
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+<li>
+<a href="gallery.html">
+Gallery
+</a>
+</li>
+
+<li>
+<a href="services.html">
+Services
+</a>
+</li>
+
+<li>
+<a
+href="quote.html"
+class="nav-quote"
+>
+Get Free Quote
+</a>
+</li>
+
+<li>
+<a href="about.html">
+About
+</a>
+</li>
+
+<li>
+<a href="service-area.html">
+Service Area
+</a>
+</li>
+
+</ul>
+
+</nav>
 
 </header>
 
 
-<main>
 
-<section class="page-hero">
+<main class="service-area-page">
 
-    <div class="page-hero-content reveal">
 
-        <p class="eyebrow">
-            MOBILE DETAILING SERVICE AREA
-        </p>
+<!-- =====================================================
+HERO
+===================================================== -->
 
-        <h1>
-            We Come To
-            <span>You.</span>
-        </h1>
+<section class="service-area-hero">
 
-        <p>
-            Premium mobile vehicle care delivered directly
-            to your home, workplace, or approved location.
-        </p>
+<div class="service-area-hero-content reveal">
 
-    </div>
+<p class="eyebrow">
+WE COME TO YOU
+</p>
+
+<h1>
+
+Premium Detailing
+
+<span>
+Where You Are.
+</span>
+
+</h1>
+
+<p>
+
+Enhance My Ride provides mobile detailing
+throughout Alameda, Oakland, San Francisco,
+and surrounding Bay Area communities.
+
+You don't have to rearrange your day around
+your detail. We bring the service to you.
+
+</p>
+
+</div>
 
 </section>
 
+
+
+<!-- =====================================================
+PRIMARY AREA
+===================================================== -->
 
 <section class="section section-light-dark">
 
-    <div class="section-heading reveal">
 
-        <p class="eyebrow">
-            BAY AREA SERVICE
-        </p>
+<div class="section-heading reveal">
 
-        <h2>
-            Premium Detailing
-            <span>Where You Are.</span>
-        </h2>
+<p class="eyebrow">
+OUR CORE SERVICE AREA
+</p>
 
-        <p>
-            Enhance My Ride proudly serves customers throughout
-            the San Francisco Bay Area and surrounding communities.
-        </p>
+<h2>
 
-    </div>
+Serving The
 
+<span>
+East Bay & Beyond.
+</span>
 
-    <div class="service-area-grid">
+</h2>
 
-        <div class="service-area-card reveal">
-            Alameda
-        </div>
+<p>
 
-        <div class="service-area-card reveal">
-            Oakland
-        </div>
+Our primary service area includes Alameda,
+Oakland, and nearby communities, with
+additional Bay Area locations available
+depending on scheduling and travel distance.
 
-        <div class="service-area-card reveal">
-            San Francisco
-        </div>
+</p>
 
-        <div class="service-area-card reveal">
-            Berkeley
-        </div>
-
-        <div class="service-area-card reveal">
-            San Leandro
-        </div>
-
-        <div class="service-area-card reveal">
-            Hayward
-        </div>
-
-        <div class="service-area-card reveal">
-            Emeryville
-        </div>
-
-        <div class="service-area-card reveal">
-            Pleasanton
-        </div>
-
-    </div>
-
-</section>
+</div>
 
 
-<section class="section">
-
-    <div class="two-column">
-
-        <div class="reveal">
-
-            <p class="eyebrow">
-                MOBILE MEANS MOBILE
-            </p>
-
-            <h2>
-                Your Location.
-                <span class="gold-text">
-                    Your Convenience.
-                </span>
-            </h2>
-
-            <p style="margin-top:25px;margin-bottom:25px;color:#999;font-size:15px;line-height:1.9;">
-                You don't need to spend your day sitting in a
-                waiting room. We bring the service to you.
-            </p>
-
-            <ul class="feature-list">
-
-                <li>
-                    <span class="feature-icon">
-                        <i class="fa-solid fa-house"></i>
-                    </span>
-                    <span>
-                        Home detailing
-                    </span>
-                </li>
-
-                <li>
-                    <span class="feature-icon">
-                        <i class="fa-solid fa-building"></i>
-                    </span>
-                    <span>
-                        Workplace detailing
-                    </span>
-                </li>
-
-                <li>
-                    <span class="feature-icon">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </span>
-                    <span>
-                        Approved private locations
-                    </span>
-                </li>
-
-                <li>
-                    <span class="feature-icon">
-                        <i class="fa-solid fa-car"></i>
-                    </span>
-                    <span>
-                        Luxury and everyday vehicles
-                    </span>
-                </li>
-
-            </ul>
-
-        </div>
+<div class="primary-area">
 
 
-        <div class="premium-image reveal">
+<article class="area-feature reveal">
 
-            <img
-                src="images/hero-car.jpg"
-                alt="Luxury vehicle receiving mobile detailing service"
-                loading="lazy"
-            >
+<span class="area-label">
+Primary Location
+</span>
 
-        </div>
+<i class="fa-solid fa-location-dot"></i>
 
-    </div>
+<h2>
+Alameda
+</h2>
+
+<p>
+
+Alameda is one of our primary service areas.
+If you're located in Alameda, request a quote
+and tell us where your vehicle will be located.
+
+</p>
+
+</article>
+
+
+<article class="area-feature reveal">
+
+<span class="area-label">
+East Bay
+</span>
+
+<i class="fa-solid fa-car-side"></i>
+
+<h2>
+Oakland & Nearby
+</h2>
+
+<p>
+
+We also serve customers throughout Oakland
+and surrounding East Bay communities.
+Availability may vary by location and schedule.
+
+</p>
+
+</article>
+
+
+</div>
 
 </section>
 
+
+
+<!-- =====================================================
+CORE CITIES
+===================================================== -->
 
 <section class="section section-dark">
 
-    <div class="section-heading reveal">
 
-        <p class="eyebrow">
-            OUTSIDE OUR CORE AREA
-        </p>
+<div class="section-heading reveal">
 
-        <h2>
-            Not Sure If We
-            <span>Reach You?</span>
-        </h2>
+<p class="eyebrow">
+BAY AREA MOBILE DETAILING
+</p>
 
-        <p>
-            If your location isn't listed, don't assume we're
-            unavailable. Send us your location and vehicle
-            information and we'll determine availability.
-        </p>
+<h2>
 
-    </div>
+Where We
+
+<span>
+Service.
+</span>
+
+</h2>
+
+<p>
+
+Our service area continues to grow.
+If your city isn't listed, contact us anyway —
+we may still be able to accommodate you.
+
+</p>
+
+</div>
 
 
-    <div style="text-align:center;" class="reveal">
+<div class="city-grid">
 
-        <a
-            href="quote.html"
-            class="button button-gold"
-        >
-            Check Availability
-        </a>
 
-    </div>
+<article class="city-card reveal">
+
+<span class="city-tag">
+Core Area
+</span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h3>
+Alameda
+</h3>
+
+<p>
+Premium mobile detailing brought directly
+to homes, workplaces, and approved locations.
+</p>
+
+</article>
+
+
+<article class="city-card reveal">
+
+<span class="city-tag">
+Core Area
+</span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h3>
+Oakland
+</h3>
+
+<p>
+Mobile exterior and interior vehicle care
+throughout Oakland.
+</p>
+
+</article>
+
+
+<article class="city-card reveal">
+
+<span class="city-tag">
+Bay Area
+</span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h3>
+San Francisco
+</h3>
+
+<p>
+Premium mobile detailing for customers
+throughout San Francisco.
+</p>
+
+</article>
+
+
+<article class="city-card reveal">
+
+<span class="city-tag">
+East Bay
+</span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h3>
+San Leandro
+</h3>
+
+<p>
+Mobile detailing availability based on
+schedule and exact location.
+</p>
+
+</article>
+
+
+<article class="city-card reveal">
+
+<span class="city-tag">
+East Bay
+</span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h3>
+Berkeley
+</h3>
+
+<p>
+Ask about mobile detailing availability
+in Berkeley and nearby areas.
+</p>
+
+</article>
+
+
+<article class="city-card reveal">
+
+<span class="city-tag">
+Bay Area
+</span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h3>
+Surrounding Areas
+</h3>
+
+<p>
+Additional Bay Area locations may be
+available by request.
+</p>
+
+</article>
+
+
+</div>
 
 </section>
 
+
+
+<!-- =====================================================
+AREA GROUPS
+===================================================== -->
+
+<section class="section section-light-dark">
+
+
+<div class="section-heading reveal">
+
+<p class="eyebrow">
+EXPANDING OUR REACH
+</p>
+
+<h2>
+
+More Areas.
+
+<span>
+Same Standard.
+</span>
+
+</h2>
+
+<p>
+
+We are building Enhance My Ride around
+customers throughout the Bay Area.
+Travel availability depends on the location
+and appointment schedule.
+
+</p>
+
+</div>
+
+
+<div class="area-list-wrapper">
+
+
+<article class="area-list-card reveal">
+
+<h3>
+East Bay
+</h3>
+
+<ul class="area-list">
+
+<li>
+Alameda
+</li>
+
+<li>
+Oakland
+</li>
+
+<li>
+San Leandro
+</li>
+
+<li>
+Berkeley
+</li>
+
+<li>
+Emeryville
+</li>
+
+<li>
+Hayward
+</li>
+
+</ul>
+
+</article>
+
+
+<article class="area-list-card reveal">
+
+<h3>
+San Francisco & Beyond
+</h3>
+
+<ul class="area-list">
+
+<li>
+San Francisco
+</li>
+
+<li>
+South San Francisco
+</li>
+
+<li>
+Daly City
+</li>
+
+<li>
+Other Bay Area locations
+</li>
+
+<li>
+By request
+</li>
+
+<li>
+Subject to availability
+</li>
+
+</ul>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+TRAVEL
+===================================================== -->
+
+<section class="section section-dark">
+
+
+<div class="travel-box reveal">
+
+<i class="fa-solid fa-route"></i>
+
+<h2>
+
+Not Sure If We
+
+<span>
+Come To You?
+</span>
+
+</h2>
+
+<p>
+
+Don't assume you're outside our service area.
+Send us your location through the quote form
+and we'll confirm availability.
+
+Travel charges may apply for locations
+outside our core service area.
+
+</p>
+
+
+<a
+href="quote.html"
+class="button button-gold"
+>
+
+Check My Area
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+LOCAL SEO CONTENT
+===================================================== -->
+
+<section class="section section-light-dark">
+
+
+<div class="local-content reveal">
+
+<p class="eyebrow">
+MOBILE DETAILING IN THE BAY AREA
+</p>
+
+<h2>
+
+Professional Vehicle Care
+
+<span>
+Delivered To You.
+</span>
+
+</h2>
+
+
+<p>
+
+Enhance My Ride Auto Spa & Mobile Detailing
+provides premium mobile vehicle care throughout
+Alameda, Oakland, San Francisco and surrounding
+Bay Area communities.
+
+</p>
+
+
+<p>
+
+Our mobile detailing approach is designed for
+customers who value convenience without wanting
+to sacrifice the quality or attention to detail
+they expect from a professional service.
+
+</p>
+
+
+<p>
+
+Whether you're maintaining a daily driver,
+preparing for a special occasion, refreshing
+a family vehicle, or simply ready to give your
+ride the attention it deserves, our goal is to
+make the process straightforward.
+
+</p>
+
+
+<p>
+
+We come to you. You relax. We Enhance.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+CTA
+===================================================== -->
 
 <section class="cta">
 
-    <div class="container reveal">
+<p class="eyebrow">
+YOUR LOCATION. YOUR VEHICLE. YOUR TIME.
+</p>
 
-        <p class="eyebrow">
-            READY WHEN YOU ARE
-        </p>
+<h2>
 
-        <h2>
-            Your Drive.
-            <span>Enhanced.</span>
-        </h2>
+Let's Bring The
 
-        <p>
-            Tell us where the vehicle is located and
-            what you'd like enhanced.
-        </p>
+<span>
+Enhance Experience
+</span>
 
-        <a
-            href="quote.html"
-            class="button button-gold"
-        >
-            Request A Free Quote
-        </a>
+To You.
 
-    </div>
+</h2>
+
+<p>
+
+Tell us where your vehicle is located
+and what you would like done.
+
+</p>
+
+<a
+href="quote.html"
+class="button button-gold"
+>
+
+Get Your Free Quote
+
+</a>
 
 </section>
+
 
 </main>
 
 
+
+<!-- =====================================================
+FOOTER
+===================================================== -->
+
 <footer>
 
-    <div class="footer-grid">
-
-        <div>
-
-            <div class="footer-title">
-                ENHANCE MY RIDE
-            </div>
-
-            <div class="footer-sub">
-                AUTO SPA & MOBILE DETAILING
-            </div>
-
-            <p class="footer-text">
-                We come to you. You relax. We Enhance.
-                <br><br>
-                Premium mobile detailing built around
-                luxury, convenience, and attention to detail.
-            </p>
-
-        </div>
+<div class="footer-grid">
 
 
-        <div class="footer-contact">
+<div class="footer-brand">
 
-            <div class="footer-title">
-                CONTACT
-            </div>
+<div class="footer-title">
+ENHANCE MY RIDE
+</div>
 
-            <p class="footer-text">
-
-                <a href="mailto:info@enhancemyride.com">
-                    <i class="fa-solid fa-envelope"></i>
-                    info@enhancemyride.com
-                </a>
-
-                <br><br>
-
-                <a href="tel:3233271806">
-                    <i class="fa-solid fa-phone"></i>
-                    (323) 327-1806
-                </a>
-
-            </p>
-
-            <a
-                href="quote.html"
-                class="button button-outline"
-            >
-                Request A Quote
-            </a>
-
-        </div>
-
-    </div>
+<div class="footer-sub">
+AUTO SPA & MOBILE DETAILING
+</div>
 
 
-    <div class="copyright">
+<p class="footer-text">
 
-        © <span id="year">2026</span>
-        Enhance My Ride Auto Spa & Mobile Detailing.
-        All Rights Reserved.
+We come to you. You relax. We Enhance.
 
-    </div>
+<br><br>
+
+Premium mobile detailing serving
+San Francisco and the entire Bay Area.
+
+</p>
+
+
+<div class="social-icons">
+
+
+<a
+href="https://instagram.com/enhancemyridemobiledetailing"
+target="_blank"
+rel="noopener"
+aria-label="Instagram"
+>
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+
+<a
+href="https://www.facebook.com/Enhancemyridemobiledetailing"
+target="_blank"
+rel="noopener"
+aria-label="Facebook"
+>
+
+<i class="fa-brands fa-facebook-f"></i>
+
+</a>
+
+
+<a
+href="https://www.tiktok.com/@enhancemyride"
+target="_blank"
+rel="noopener"
+aria-label="TikTok"
+>
+
+<i class="fa-brands fa-tiktok"></i>
+
+</a>
+
+
+<a
+href="https://youtube.com/@enhancemyridemobiledetailing"
+target="_blank"
+rel="noopener"
+aria-label="YouTube"
+>
+
+<i class="fa-brands fa-youtube"></i>
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+<div class="footer-contact">
+
+<div class="footer-title">
+CONTACT
+</div>
+
+
+<p class="footer-text">
+
+
+<a
+href="mailto:info@enhancemyride.com"
+>
+
+<i class="fa-solid fa-envelope"></i>
+
+info@enhancemyride.com
+
+</a>
+
+
+<br><br>
+
+
+<a
+href="tel:3233271806"
+>
+
+<i class="fa-solid fa-phone"></i>
+
+(323) 327-1806
+
+</a>
+
+
+</p>
+
+
+<a
+href="quote.html"
+class="button button-outline"
+>
+
+Request A Quote
+
+</a>
+
+
+<br><br>
+
+
+<a
+href="https://g.page/r/CRy_PYJmq6NYEBM/review"
+target="_blank"
+rel="noopener"
+class="button button-outline"
+>
+
+<i class="fa-brands fa-google"></i>
+
+Leave A Google Review
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Enhance My Ride Auto Spa & Mobile Detailing.
+All Rights Reserved.
+
+</div>
 
 </footer>
 
-<script src="script.js"></script>
+
+
+<!-- =====================================================
+JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+MOBILE NAVIGATION
+===================================================== */
+
+const menuToggle =
+document.getElementById("menuToggle");
+
+const navMenu =
+document.getElementById("navMenu");
+
+
+if(menuToggle && navMenu){
+
+menuToggle.addEventListener(
+"click",
+function(){
+
+const open =
+navMenu.classList.toggle("active");
+
+menuToggle.classList.toggle(
+"active",
+open
+);
+
+menuToggle.setAttribute(
+"aria-expanded",
+open
+);
+
+}
+);
+
+
+navMenu
+.querySelectorAll("a")
+.forEach(
+function(link){
+
+link.addEventListener(
+"click",
+function(){
+
+navMenu.classList.remove("active");
+
+menuToggle.classList.remove("active");
+
+menuToggle.setAttribute(
+"aria-expanded",
+"false"
+);
+
+}
+);
+
+}
+);
+
+}
+
+
+
+/* =====================================================
+SCROLL REVEAL
+===================================================== */
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+
+const revealObserver =
+new IntersectionObserver(
+function(entries){
+
+entries.forEach(
+function(entry){
+
+if(entry.isIntersecting){
+
+entry.target.classList.add(
+"visible"
+);
+
+revealObserver.unobserve(
+entry.target
+);
+
+}
+
+}
+);
+
+},
+{
+threshold: 0.12
+}
+);
+
+
+revealElements.forEach(
+function(element){
+
+revealObserver.observe(
+element
+);
+
+}
+);
+
+
+</script>
+
 
 </body>
+
 </html>
-```
