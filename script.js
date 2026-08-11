@@ -1,4 +1,3 @@
-```javascript
 /* =========================================================
    ENHANCE MY RIDE
    AUTO SPA & MOBILE DETAILING
@@ -12,27 +11,31 @@ document.addEventListener("DOMContentLoaded", () => {
        ===================================================== */
 
     const menuToggle = document.getElementById("menuToggle");
+    const nav = document.querySelector("nav");
     const navMenu = document.getElementById("navMenu");
-    const navLinks = document.querySelectorAll(".nav-menu a");
+
+    const yearElement = document.getElementById("year");
 
     const revealElements = document.querySelectorAll(".reveal");
+
+    const faqQuestions = document.querySelectorAll(".faq-question");
 
     const lightbox = document.querySelector(".lightbox");
     const lightboxImage = document.querySelector(".lightbox-image");
     const lightboxClose = document.querySelector(".lightbox-close");
 
-    const faqQuestions = document.querySelectorAll(".faq-question");
-
-    const yearElement = document.getElementById("year");
+    const galleryImages = document.querySelectorAll(
+        ".gallery-image, .premium-image img, .before-after-item img"
+    );
 
 
     /* =====================================================
-       REDUCED MOTION
+       CURRENT YEAR
        ===================================================== */
 
-    const prefersReducedMotion =
-        window.matchMedia &&
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
 
 
     /* =====================================================
@@ -44,35 +47,34 @@ document.addEventListener("DOMContentLoaded", () => {
         menuToggle.addEventListener("click", () => {
 
             const isOpen =
-                menuToggle.classList.toggle("active");
+                menuToggle.classList.contains("active");
+
+            menuToggle.classList.toggle("active");
 
             navMenu.classList.toggle("active");
 
+            if (nav) {
+                nav.classList.toggle("mobile-open");
+            }
+
             menuToggle.setAttribute(
                 "aria-expanded",
-                isOpen ? "true" : "false"
+                String(!isOpen)
             );
 
             menuToggle.setAttribute(
                 "aria-label",
-                isOpen
+                !isOpen
                     ? "Close navigation menu"
                     : "Open navigation menu"
             );
-
-            /*
-             * Prevent background scrolling while
-             * the mobile navigation is open.
-             */
-            if (window.innerWidth <= 800) {
-                document.body.style.overflow =
-                    isOpen ? "hidden" : "";
-            }
-
         });
 
 
-        /* Close menu after selecting a page */
+        /* Close menu when clicking a navigation link */
+
+        const navLinks =
+            navMenu.querySelectorAll("a");
 
         navLinks.forEach(link => {
 
@@ -82,6 +84,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 navMenu.classList.remove("active");
 
+                if (nav) {
+                    nav.classList.remove("mobile-open");
+                }
+
                 menuToggle.setAttribute(
                     "aria-expanded",
                     "false"
@@ -91,9 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     "aria-label",
                     "Open navigation menu"
                 );
-
-                document.body.style.overflow = "";
-
             });
 
         });
@@ -103,25 +106,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.addEventListener("click", event => {
 
-            if (window.innerWidth > 800) {
-                return;
-            }
-
-            const clickedInsideNav =
-                navMenu.contains(event.target);
-
-            const clickedMenuButton =
-                menuToggle.contains(event.target);
-
             if (
-                !clickedInsideNav &&
-                !clickedMenuButton &&
-                navMenu.classList.contains("active")
+                !navMenu.contains(event.target) &&
+                !menuToggle.contains(event.target)
             ) {
 
                 menuToggle.classList.remove("active");
 
                 navMenu.classList.remove("active");
+
+                if (nav) {
+                    nav.classList.remove("mobile-open");
+                }
 
                 menuToggle.setAttribute(
                     "aria-expanded",
@@ -132,9 +128,34 @@ document.addEventListener("DOMContentLoaded", () => {
                     "aria-label",
                     "Open navigation menu"
                 );
+            }
 
-                document.body.style.overflow = "";
+        });
 
+
+        /* Close menu with Escape */
+
+        document.addEventListener("keydown", event => {
+
+            if (event.key === "Escape") {
+
+                menuToggle.classList.remove("active");
+
+                navMenu.classList.remove("active");
+
+                if (nav) {
+                    nav.classList.remove("mobile-open");
+                }
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
             }
 
         });
@@ -143,36 +164,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       RESET MOBILE MENU ON RESIZE
+       NAVBAR SCROLL EFFECT
        ===================================================== */
 
-    window.addEventListener("resize", () => {
+    const navbar =
+        document.querySelector(".navbar");
 
-        if (window.innerWidth > 800) {
+    const handleNavbarScroll = () => {
 
-            if (menuToggle) {
-                menuToggle.classList.remove("active");
+        if (!navbar) return;
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+        if (window.scrollY > 30) {
 
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-            }
+            navbar.classList.add("scrolled");
 
-            if (navMenu) {
-                navMenu.classList.remove("active");
-            }
+        } else {
 
-            document.body.style.overflow = "";
+            navbar.classList.remove("scrolled");
 
         }
 
-    });
+    };
+
+    window.addEventListener(
+        "scroll",
+        handleNavbarScroll,
+        { passive: true }
+    );
+
+    handleNavbarScroll();
 
 
     /* =====================================================
@@ -181,130 +201,79 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (revealElements.length) {
 
-        if (prefersReducedMotion) {
+        const revealObserver =
+            new IntersectionObserver(
+                entries => {
 
-            revealElements.forEach(element => {
-                element.classList.add("visible");
-            });
+                    entries.forEach(entry => {
 
-        } else {
+                        if (entry.isIntersecting) {
 
-            const revealObserver =
-                new IntersectionObserver(
-                    (entries, observer) => {
+                            entry.target.classList.add(
+                                "visible"
+                            );
 
-                        entries.forEach(entry => {
+                            revealObserver.unobserve(
+                                entry.target
+                            );
 
-                            if (!entry.isIntersecting) {
-                                return;
-                            }
+                        }
 
-                            entry.target.classList.add("visible");
+                    });
 
-                            observer.unobserve(entry.target);
-
-                        });
-
-                    },
-                    {
-                        threshold: 0.12,
-                        rootMargin: "0px 0px -40px 0px"
-                    }
-                );
+                },
+                {
+                    threshold: 0.12,
+                    rootMargin: "0px 0px -50px 0px"
+                }
+            );
 
 
-            revealElements.forEach(element => {
+        revealElements.forEach(element => {
 
-                revealObserver.observe(element);
+            revealObserver.observe(element);
 
-            });
-
-        }
+        });
 
     }
 
 
     /* =====================================================
-       ACTIVE NAVIGATION LINK
+       STAGGERED CARD REVEALS
        ===================================================== */
 
-    const currentPage =
-        window.location.pathname
-            .split("/")
-            .pop()
-            .toLowerCase();
+    const revealGroups = [
+        ".package-grid",
+        ".gallery-grid",
+        ".testimonial-grid",
+        ".service-area-grid",
+        ".stats-grid"
+    ];
 
+    revealGroups.forEach(selector => {
 
-    navLinks.forEach(link => {
+        const groups =
+            document.querySelectorAll(selector);
 
-        const href =
-            link.getAttribute("href");
+        groups.forEach(group => {
 
-        if (!href) {
-            return;
-        }
+            const children =
+                group.querySelectorAll(".reveal");
 
-        /*
-         * Ignore quote query strings and anchors
-         * when determining the current page.
-         */
+            children.forEach((child, index) => {
 
-        const linkPage =
-            href
-                .split("?")[0]
-                .split("#")[0]
-                .split("/")
-                .pop()
-                .toLowerCase();
+                child.style.transitionDelay =
+                    `${index * 90}ms`;
 
+            });
 
-        if (
-            linkPage === currentPage &&
-            linkPage !== ""
-        ) {
-
-            link.classList.add("active");
-
-            link.setAttribute(
-                "aria-current",
-                "page"
-            );
-
-        }
+        });
 
     });
 
 
     /* =====================================================
-       HOME PAGE DETECTION
-       ===================================================== */
-
-    if (
-        currentPage === "" ||
-        currentPage === "index.html"
-    ) {
-
-        const homeLink =
-            document.querySelector(
-                '.nav-menu a[href="index.html"]'
-            );
-
-        if (homeLink) {
-
-            homeLink.classList.add("active");
-
-            homeLink.setAttribute(
-                "aria-current",
-                "page"
-            );
-
-        }
-
-    }
-
-
-    /* =====================================================
-       SMOOTH INTERNAL ANCHOR LINKS
+       SMOOTH ANCHOR SCROLL
        ===================================================== */
 
     document.querySelectorAll(
@@ -326,18 +295,24 @@ document.addEventListener("DOMContentLoaded", () => {
             const target =
                 document.querySelector(targetId);
 
-            if (!target) {
-                return;
-            }
+            if (!target) return;
 
             event.preventDefault();
 
-            target.scrollIntoView({
-                behavior:
-                    prefersReducedMotion
-                        ? "auto"
-                        : "smooth",
-                block: "start"
+            const navbarHeight =
+                navbar
+                    ? navbar.offsetHeight
+                    : 0;
+
+            const targetPosition =
+                target.getBoundingClientRect().top +
+                window.scrollY -
+                navbarHeight -
+                20;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth"
             });
 
         });
@@ -346,15 +321,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       AUTOMATIC COPYRIGHT YEAR
+       ACTIVE NAVIGATION LINK
        ===================================================== */
 
-    if (yearElement) {
+    const currentPage =
+        window.location.pathname
+            .split("/")
+            .pop() || "index.html";
 
-        yearElement.textContent =
-            new Date().getFullYear();
+    document.querySelectorAll(
+        ".nav-menu a"
+    ).forEach(link => {
 
-    }
+        const href =
+            link.getAttribute("href");
+
+        if (!href) return;
+
+        const cleanHref =
+            href.split("?")[0]
+                .split("#")[0];
+
+        if (
+            cleanHref === currentPage ||
+            (
+                currentPage === "" &&
+                cleanHref === "index.html"
+            )
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+    });
 
 
     /* =====================================================
@@ -363,97 +363,79 @@ document.addEventListener("DOMContentLoaded", () => {
 
     faqQuestions.forEach(question => {
 
-        const answer =
-            question.nextElementSibling;
-
-        if (!answer) {
-            return;
-        }
-
-
-        /*
-         * Start closed unless the HTML specifically
-         * marks the question as expanded.
-         */
-
-        const initiallyExpanded =
-            question.getAttribute(
-                "aria-expanded"
-            ) === "true";
-
-
-        answer.style.overflow = "hidden";
-
-        if (!initiallyExpanded) {
-
-            answer.style.maxHeight = "0";
-            answer.style.paddingBottom = "0";
-
-        }
-
+        question.setAttribute(
+            "aria-expanded",
+            "false"
+        );
 
         question.addEventListener("click", () => {
 
+            const answer =
+                question.nextElementSibling;
+
+            if (!answer) return;
+
             const isOpen =
-                question.getAttribute(
-                    "aria-expanded"
-                ) === "true";
+                question.classList.contains("active");
 
 
-            /*
-             * Close all other FAQ items.
-             */
+            /* Close all other FAQs */
 
             faqQuestions.forEach(otherQuestion => {
 
-                if (otherQuestion === question) {
-                    return;
-                }
+                if (
+                    otherQuestion !== question
+                ) {
 
-                const otherAnswer =
-                    otherQuestion.nextElementSibling;
-
-                otherQuestion.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                if (otherAnswer) {
-
-                    otherAnswer.style.maxHeight = "0";
-
-                    otherAnswer.style.paddingBottom = "0";
-
-                }
-
-                const otherIcon =
-                    otherQuestion.querySelector(
-                        "span:last-child"
+                    otherQuestion.classList.remove(
+                        "active"
                     );
 
-                if (otherIcon) {
-                    otherIcon.textContent = "+";
+                    otherQuestion.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    const otherAnswer =
+                        otherQuestion.nextElementSibling;
+
+                    if (otherAnswer) {
+
+                        otherAnswer.style.maxHeight =
+                            null;
+
+                        otherAnswer.style.opacity =
+                            "0";
+
+                    }
+
                 }
 
             });
 
 
-            /*
-             * Toggle selected FAQ.
-             */
+            /* Toggle selected FAQ */
 
             if (isOpen) {
+
+                question.classList.remove(
+                    "active"
+                );
 
                 question.setAttribute(
                     "aria-expanded",
                     "false"
                 );
 
-                answer.style.maxHeight = "0";
+                answer.style.maxHeight = null;
 
-                answer.style.paddingBottom = "0";
+                answer.style.opacity = "0";
 
             } else {
+
+                question.classList.add(
+                    "active"
+                );
 
                 question.setAttribute(
                     "aria-expanded",
@@ -463,20 +445,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 answer.style.maxHeight =
                     answer.scrollHeight + "px";
 
-                answer.style.paddingBottom = "22px";
-
-            }
-
-
-            const icon =
-                question.querySelector(
-                    "span:last-child"
-                );
-
-            if (icon) {
-
-                icon.textContent =
-                    isOpen ? "+" : "−";
+                answer.style.opacity = "1";
 
             }
 
@@ -486,102 +455,132 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       GALLERY LIGHTBOX
+       LIGHTBOX
        ===================================================== */
 
-    const galleryImages =
-        document.querySelectorAll(
-            "[data-lightbox]"
-        );
+    if (
+        lightbox &&
+        lightboxImage
+    ) {
+
+        const openLightbox = imageSrc => {
+
+            lightboxImage.src = imageSrc;
+
+            lightbox.classList.add("active");
+
+            document.body.classList.add(
+                "lightbox-open"
+            );
+
+            lightbox.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+        };
 
 
-    function openLightbox(imageSource, altText = "") {
+        const closeLightbox = () => {
 
-        if (
-            !lightbox ||
-            !lightboxImage
-        ) {
-            return;
-        }
+            lightbox.classList.remove(
+                "active"
+            );
 
-        lightboxImage.src =
-            imageSource;
+            document.body.classList.remove(
+                "lightbox-open"
+            );
 
-        lightboxImage.alt =
-            altText || "Enhanced vehicle detail";
+            lightbox.setAttribute(
+                "aria-hidden",
+                "true"
+            );
 
-        lightbox.classList.add("active");
+            setTimeout(() => {
 
-        lightbox.setAttribute(
-            "aria-hidden",
-            "false"
-        );
+                lightboxImage.src = "";
 
-        document.body.style.overflow = "hidden";
+            }, 250);
 
-        if (lightboxClose) {
-            lightboxClose.focus();
-        }
-
-    }
+        };
 
 
-    function closeLightbox() {
+        galleryImages.forEach(element => {
 
-        if (!lightbox) {
-            return;
-        }
+            element.style.cursor = "zoom-in";
 
-        lightbox.classList.remove("active");
+            element.addEventListener(
+                "click",
+                () => {
 
-        lightbox.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-        document.body.style.overflow = "";
-
-        if (lightboxImage) {
-            lightboxImage.src = "";
-        }
-
-    }
+                    let imageSrc = "";
 
 
-    galleryImages.forEach(item => {
+                    /* Normal image */
 
-        item.addEventListener("click", event => {
+                    if (
+                        element.tagName === "IMG"
+                    ) {
 
-            event.preventDefault();
+                        imageSrc =
+                            element.getAttribute(
+                                "src"
+                            );
 
-            const source =
-                item.getAttribute("data-lightbox");
+                    }
 
-            const alt =
-                item.getAttribute("data-alt") ||
-                item.getAttribute("aria-label") ||
-                "";
 
-            if (source) {
-                openLightbox(source, alt);
-            }
+                    /* Background image */
+
+                    if (
+                        element.classList.contains(
+                            "gallery-image"
+                        )
+                    ) {
+
+                        const background =
+                            getComputedStyle(
+                                element
+                            ).backgroundImage;
+
+                        const match =
+                            background.match(
+                                /url\(["']?(.*?)["']?\)/
+                            );
+
+                        if (match) {
+
+                            imageSrc =
+                                match[1];
+
+                        }
+
+                    }
+
+
+                    if (imageSrc) {
+
+                        openLightbox(
+                            imageSrc
+                        );
+
+                    }
+
+                }
+            );
 
         });
 
-    });
 
+        if (lightboxClose) {
 
-    if (lightboxClose) {
+            lightboxClose.addEventListener(
+                "click",
+                closeLightbox
+            );
 
-        lightboxClose.addEventListener(
-            "click",
-            closeLightbox
-        );
+        }
 
-    }
-
-
-    if (lightbox) {
 
         lightbox.addEventListener(
             "click",
@@ -590,7 +589,28 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (
                     event.target === lightbox
                 ) {
+
                     closeLightbox();
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (
+                    event.key === "Escape" &&
+                    lightbox.classList.contains(
+                        "active"
+                    )
+                ) {
+
+                    closeLightbox();
+
                 }
 
             }
@@ -600,67 +620,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       ESCAPE KEY
-       ===================================================== */
-
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            if (
-                event.key === "Escape"
-            ) {
-
-                if (
-                    lightbox &&
-                    lightbox.classList.contains("active")
-                ) {
-
-                    closeLightbox();
-
-                }
-
-
-                if (
-                    navMenu &&
-                    navMenu.classList.contains("active")
-                ) {
-
-                    if (menuToggle) {
-
-                        menuToggle.classList.remove(
-                            "active"
-                        );
-
-                        menuToggle.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                        menuToggle.setAttribute(
-                            "aria-label",
-                            "Open navigation menu"
-                        );
-
-                    }
-
-                    navMenu.classList.remove("active");
-
-                    document.body.style.overflow = "";
-
-                }
-
-            }
-
-        }
-    );
-
-
-    /* =====================================================
-       PACKAGE SELECTION
-       quote.html?package=gold
-       quote.html?package=black-label
-       quote.html?package=showroom
+       PACKAGE URL SELECTION
        ===================================================== */
 
     const urlParams =
@@ -671,74 +631,75 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedPackage =
         urlParams.get("package");
 
+    const packageSelect =
+        document.querySelector(
+            'select[name="package"], #package'
+        );
 
-    if (selectedPackage) {
 
-        const packageSelect =
-            document.querySelector(
-                'select[name="package"], #package'
+    if (
+        selectedPackage &&
+        packageSelect
+    ) {
+
+        const packageMap = {
+
+            gold: [
+                "gold",
+                "Gold",
+                "Enhance Gold",
+                "Gold Package"
+            ],
+
+            "black-label": [
+                "black-label",
+                "Black Label",
+                "Enhance Black Label"
+            ],
+
+            showroom: [
+                "showroom",
+                "Showroom",
+                "Enhance Showroom Edition",
+                "Showroom Edition"
+            ]
+
+        };
+
+
+        const possibleValues =
+            packageMap[selectedPackage] || [];
+
+
+        const option =
+            Array.from(
+                packageSelect.options
+            ).find(option =>
+                possibleValues.some(value =>
+                    option.value
+                        .toLowerCase()
+                        .includes(
+                            value.toLowerCase()
+                        ) ||
+                    option.textContent
+                        .toLowerCase()
+                        .includes(
+                            value.toLowerCase()
+                        )
+                )
             );
 
 
-        if (packageSelect) {
+        if (option) {
 
-            const packageMap = {
+            packageSelect.value =
+                option.value;
 
-                "gold":
-                    "Enhance Gold Package",
-
-                "black-label":
-                    "Enhance Black Label Package",
-
-                "black":
-                    "Enhance Black Label Package",
-
-                "showroom":
-                    "Enhance Showroom Edition"
-
-            };
-
-
-            const desiredValue =
-                packageMap[
-                    selectedPackage.toLowerCase()
-                ];
-
-
-            if (desiredValue) {
-
-                const matchingOption =
-                    Array.from(
-                        packageSelect.options
-                    ).find(option => {
-
-                        return (
-                            option.value
-                                .toLowerCase()
-                                .includes(
-                                    selectedPackage
-                                        .toLowerCase()
-                                ) ||
-
-                            option.text
-                                .toLowerCase()
-                                .includes(
-                                    desiredValue
-                                        .toLowerCase()
-                                )
-                        );
-
-                    });
-
-
-                if (matchingOption) {
-
-                    packageSelect.value =
-                        matchingOption.value;
-
-                }
-
-            }
+            packageSelect.dispatchEvent(
+                new Event("change", {
+                    bubbles: true
+                })
+            );
 
         }
 
@@ -746,41 +707,280 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       FORM INPUT ENHANCEMENTS
+       BUTTON PRESS FEEDBACK
        ===================================================== */
 
-    const formInputs =
-        document.querySelectorAll(
-            "input, textarea, select"
-        );
+    document.querySelectorAll(
+        ".button"
+    ).forEach(button => {
 
-
-    formInputs.forEach(input => {
-
-        input.addEventListener(
-            "focus",
+        button.addEventListener(
+            "pointerdown",
             () => {
 
-                const group =
-                    input.closest(".form-group");
-
-                if (group) {
-                    group.classList.add("focused");
-                }
+                button.classList.add(
+                    "button-pressed"
+                );
 
             }
         );
 
-
-        input.addEventListener(
-            "blur",
+        button.addEventListener(
+            "pointerup",
             () => {
 
-                const group =
-                    input.closest(".form-group");
+                button.classList.remove(
+                    "button-pressed"
+                );
 
-                if (group) {
-                    group.classList.remove("focused");
+            }
+        );
+
+        button.addEventListener(
+            "pointerleave",
+            () => {
+
+                button.classList.remove(
+                    "button-pressed"
+                );
+
+            }
+        );
+
+    });
+
+
+    /* =====================================================
+       IMAGE LOAD EFFECT
+       ===================================================== */
+
+    document.querySelectorAll(
+        "img"
+    ).forEach(image => {
+
+        if (image.complete) {
+
+            image.classList.add(
+                "image-loaded"
+            );
+
+        } else {
+
+            image.addEventListener(
+                "load",
+                () => {
+
+                    image.classList.add(
+                        "image-loaded"
+                    );
+
+                },
+                {
+                    once: true
+                }
+            );
+
+        }
+
+    });
+
+
+    /* =====================================================
+       HERO PARALLAX
+       ===================================================== */
+
+    const hero =
+        document.querySelector(".hero");
+
+    const heroImage =
+        document.querySelector(".hero-image");
+
+
+    if (
+        hero &&
+        heroImage &&
+        !window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches
+    ) {
+
+        let ticking = false;
+
+
+        const updateHeroParallax = () => {
+
+            const scrollY =
+                window.scrollY;
+
+            const heroHeight =
+                hero.offsetHeight;
+
+
+            if (
+                scrollY <= heroHeight
+            ) {
+
+                const movement =
+                    scrollY * 0.16;
+
+                heroImage.style.transform =
+                    `translateY(${movement}px)`;
+
+            }
+
+            ticking = false;
+
+        };
+
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                if (!ticking) {
+
+                    window.requestAnimationFrame(
+                        updateHeroParallax
+                    );
+
+                    ticking = true;
+
+                }
+
+            },
+            {
+                passive: true
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       MAGNETIC GOLD BUTTON EFFECT
+       ===================================================== */
+
+    const magneticButtons =
+        document.querySelectorAll(
+            ".button-gold"
+        );
+
+
+    if (
+        !window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches
+    ) {
+
+        magneticButtons.forEach(button => {
+
+            button.addEventListener(
+                "mousemove",
+                event => {
+
+                    const rect =
+                        button.getBoundingClientRect();
+
+                    const x =
+                        event.clientX -
+                        rect.left -
+                        rect.width / 2;
+
+                    const y =
+                        event.clientY -
+                        rect.top -
+                        rect.height / 2;
+
+
+                    button.style.transform =
+                        `translate(${x * 0.08}px, ${y * 0.08}px)`;
+
+                }
+            );
+
+
+            button.addEventListener(
+                "mouseleave",
+                () => {
+
+                    button.style.transform =
+                        "";
+
+                }
+            );
+
+        });
+
+    }
+
+
+    /* =====================================================
+       PREVENT FORM DOUBLE SUBMISSION
+       ===================================================== */
+
+    document.querySelectorAll(
+        "form"
+    ).forEach(form => {
+
+        form.addEventListener(
+            "submit",
+            () => {
+
+                const submitButton =
+                    form.querySelector(
+                        'button[type="submit"], input[type="submit"]'
+                    );
+
+                if (!submitButton) return;
+
+                submitButton.classList.add(
+                    "is-submitting"
+                );
+
+                submitButton.dataset.originalText =
+                    submitButton.textContent;
+
+                if (
+                    submitButton.tagName ===
+                    "BUTTON"
+                ) {
+
+                    submitButton.textContent =
+                        "Processing...";
+
+                }
+
+                submitButton.disabled =
+                    true;
+
+            }
+        );
+
+    });
+
+
+    /* =====================================================
+       EXTERNAL LINKS
+       ===================================================== */
+
+    document.querySelectorAll(
+        'a[target="_blank"]'
+    ).forEach(link => {
+
+        link.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    !link.rel.includes(
+                        "noopener"
+                    )
+                ) {
+
+                    link.rel =
+                        `${link.rel} noopener noreferrer`
+                            .trim();
+
                 }
 
             }
@@ -793,7 +993,9 @@ document.addEventListener("DOMContentLoaded", () => {
        IMAGE ERROR HANDLING
        ===================================================== */
 
-    document.querySelectorAll("img").forEach(image => {
+    document.querySelectorAll(
+        "img"
+    ).forEach(image => {
 
         image.addEventListener(
             "error",
@@ -803,162 +1005,60 @@ document.addEventListener("DOMContentLoaded", () => {
                     "image-error"
                 );
 
-            }
-        );
-
-    });
-
-
-    /* =====================================================
-       PREVENT DOUBLE FORM SUBMISSIONS
-       ===================================================== */
-
-    document.querySelectorAll("form").forEach(form => {
-
-        form.addEventListener("submit", event => {
-
-            const submitButton =
-                form.querySelector(
-                    'button[type="submit"], input[type="submit"]'
+                console.warn(
+                    "Enhance My Ride: Image could not be loaded:",
+                    image.src
                 );
 
-
-            if (!submitButton) {
-                return;
             }
-
-
-            /*
-             * Only lock the button after the browser
-             * has accepted the submission.
-             */
-
-            if (
-                form.dataset.submitted === "true"
-            ) {
-
-                event.preventDefault();
-
-                return;
-
-            }
-
-
-            form.dataset.submitted = "true";
-
-
-            setTimeout(() => {
-
-                submitButton.disabled = true;
-
-                if (
-                    submitButton.tagName ===
-                    "BUTTON"
-                ) {
-
-                    submitButton.dataset.originalText =
-                        submitButton.textContent;
-
-                    submitButton.textContent =
-                        "Submitting...";
-
-                }
-
-            }, 0);
-
-        });
+        );
 
     });
 
 
     /* =====================================================
-       BACK-TO-TOP BEHAVIOR
-       Supports optional #backToTop button
+       TOUCH DEVICE DETECTION
        ===================================================== */
 
-    const backToTop =
-        document.getElementById("backToTop");
+    const isTouchDevice =
+        window.matchMedia(
+            "(hover: none)"
+        ).matches;
 
+    if (isTouchDevice) {
 
-    if (backToTop) {
-
-        const updateBackToTop =
-            () => {
-
-                if (
-                    window.scrollY > 500
-                ) {
-
-                    backToTop.classList.add(
-                        "visible"
-                    );
-
-                } else {
-
-                    backToTop.classList.remove(
-                        "visible"
-                    );
-
-                }
-
-            };
-
-
-        window.addEventListener(
-            "scroll",
-            updateBackToTop,
-            {
-                passive: true
-            }
-        );
-
-
-        updateBackToTop();
-
-
-        backToTop.addEventListener(
-            "click",
-            () => {
-
-                window.scrollTo({
-
-                    top: 0,
-
-                    behavior:
-                        prefersReducedMotion
-                            ? "auto"
-                            : "smooth"
-
-                });
-
-            }
+        document.body.classList.add(
+            "touch-device"
         );
 
     }
 
 
     /* =====================================================
-       PAGE LOADED
+       PAGE READY
        ===================================================== */
 
-    document.documentElement.classList.add(
-        "js-ready"
-    );
+    requestAnimationFrame(() => {
+
+        document.body.classList.add(
+            "page-ready"
+        );
+
+    });
 
 
     /* =====================================================
-       DEBUG-FRIENDLY CONSOLE MESSAGE
+       CONSOLE BRAND MESSAGE
        ===================================================== */
 
     console.log(
-        "%cEnhance My Ride",
-        "color:#e5c65a;font-size:20px;font-weight:bold;"
+        "%c ENHANCE MY RIDE ",
+        "background:#050505;color:#e5c65a;font-size:18px;font-weight:bold;padding:8px 12px;"
     );
 
     console.log(
-        "%cPremium Mobile Detailing",
-        "color:#999;font-size:12px;"
+        "%c Premium Mobile Auto Spa ",
+        "color:#c9a227;font-size:12px;"
     );
 
 });
-```
