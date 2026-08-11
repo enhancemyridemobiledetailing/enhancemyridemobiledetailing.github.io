@@ -1,546 +1,1057 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-<meta charset="UTF-8">
-
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
->
-
-<title>
-Gallery | Enhance My Ride Auto Spa & Mobile Detailing
-</title>
-
-<meta
-name="description"
-content="Explore real vehicle transformations, exterior details, interior enhancements, and premium mobile detailing results from Enhance My Ride Auto Spa & Mobile Detailing."
->
-
-<meta
-name="keywords"
-content="car detailing gallery, mobile detailing before and after, auto detailing transformations, Alameda detailing, Oakland detailing, Bay Area detailing"
->
-
-<meta
-name="author"
-content="Enhance My Ride Auto Spa & Mobile Detailing"
->
-
-<meta
-name="robots"
-content="index, follow"
->
-
-<meta
-property="og:title"
-content="Gallery | Enhance My Ride Auto Spa & Mobile Detailing"
->
-
-<meta
-property="og:description"
-content="Explore vehicle transformations from Enhance My Ride."
->
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Gallery | Enhance My Ride Auto Spa & Mobile Detailing
+    </title>
+
+    <meta
+        name="description"
+        content="Explore vehicle transformations, exterior details, interior enhancements, and premium mobile detailing results from Enhance My Ride Auto Spa & Mobile Detailing."
+    >
+
+    <meta
+        name="keywords"
+        content="car detailing gallery, mobile detailing before and after, auto detailing transformations, Alameda detailing, Oakland detailing, Bay Area detailing"
+    >
+
+    <meta
+        name="author"
+        content="Enhance My Ride Auto Spa & Mobile Detailing"
+    >
 
-<meta
-property="og:type"
-content="website"
->
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        property="og:title"
+        content="Gallery | Enhance My Ride Auto Spa & Mobile Detailing"
+    >
 
-<meta
-property="og:url"
-content="https://enhancemyride.com/gallery.html"
->
+    <meta
+        property="og:description"
+        content="Explore real vehicle transformations and premium detailing results from Enhance My Ride."
+    >
 
-<link
-rel="canonical"
-href="https://enhancemyride.com/gallery.html"
->
+    <meta
+        property="og:type"
+        content="website"
+    >
 
-<link
-rel="stylesheet"
-href="style.css"
->
+    <meta
+        property="og:url"
+        content="https://enhancemyride.com/gallery.html"
+    >
 
-<link
-rel="icon"
-type="image/png"
-href="favicon.png"
->
+    <link
+        rel="canonical"
+        href="https://enhancemyride.com/gallery.html"
+    >
 
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
-<style>
+    <link
+        rel="icon"
+        type="image/png"
+        href="favicon.png"
+    >
 
-/* =====================================================
-GALLERY-SPECIFIC STYLES
-===================================================== */
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
-.gallery-page {
-    padding-top: 78px;
-}
+    <style>
 
+        /* =====================================================
+           GALLERY PAGE
+        ===================================================== */
 
-/* =====================================================
-GALLERY HERO
-===================================================== */
+        .gallery-page {
+            padding-top: 78px;
+        }
 
-.gallery-hero {
-    position: relative;
 
-    padding:
-        130px 6% 100px;
+        /* =====================================================
+           HERO
+        ===================================================== */
 
-    text-align: center;
+        .gallery-hero {
+            position: relative;
 
-    overflow: hidden;
+            padding: 135px 6% 105px;
 
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(201,162,39,0.08),
-            transparent 45%
-        ),
+            text-align: center;
 
-        linear-gradient(
-            145deg,
-            #111111,
-            #050505
-        );
+            overflow: hidden;
 
-    border-bottom:
-        1px solid
-        rgba(255,255,255,0.08);
-}
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(201,162,39,0.10),
+                    transparent 45%
+                ),
+                linear-gradient(
+                    145deg,
+                    #111111,
+                    #050505
+                );
 
-.gallery-hero-content {
-    position: relative;
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.08);
+        }
 
-    z-index: 2;
 
-    max-width: 850px;
+        .gallery-hero-content {
+            position: relative;
 
-    margin: 0 auto;
-}
+            z-index: 2;
 
-.gallery-hero h1 {
-    margin-bottom: 20px;
-}
+            max-width: 900px;
 
-.gallery-hero h1 span {
-    color: var(--gold-light);
-}
+            margin: 0 auto;
+        }
 
-.gallery-hero p:not(.eyebrow) {
-    max-width: 700px;
 
-    margin: 0 auto;
+        .gallery-hero h1 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
-    color: var(--gray);
+            font-size:
+                clamp(45px, 7vw, 80px);
 
-    font-size: 16px;
-}
+            line-height: 1.08;
 
+            margin-bottom: 22px;
+        }
 
-/* =====================================================
-FEATURED TRANSFORMATION
-===================================================== */
 
-.featured-job {
-    width: min(
-        1200px,
-        100%
-    );
+        .gallery-hero h1 span {
+            color: var(--gold-light);
+        }
 
-    margin: 0 auto;
-}
 
-.featured-job-header {
-    margin-bottom: 30px;
+        .gallery-hero p:not(.eyebrow) {
+            max-width: 720px;
 
-    text-align: center;
-}
+            margin: 0 auto;
 
-.featured-job-header h2 {
-    margin-bottom: 12px;
-}
+            color: #b5b5b5;
 
-.featured-job-header h2 span {
-    color: var(--gold-light);
-}
+            font-size: 16px;
 
-.featured-job-header p {
-    max-width: 650px;
+            line-height: 1.8;
+        }
 
-    margin: 0 auto;
 
-    color: var(--gray);
-}
+        /* =====================================================
+           FEATURED DETAIL
+        ===================================================== */
 
+        .featured-section {
+            padding:
+                100px 6%;
 
-/* =====================================================
-PHOTO PLACEHOLDER
-===================================================== */
+            background: #080808;
+        }
 
-.photo-placeholder {
-    position: relative;
 
-    width: 100%;
-    height: 100%;
+        .featured-job {
+            width:
+                min(1200px, 100%);
 
-    min-height: 350px;
+            margin: 0 auto;
+        }
 
-    display: flex;
 
-    align-items: center;
-    justify-content: center;
+        .featured-header {
+            margin-bottom: 40px;
 
-    text-align: center;
+            text-align: center;
+        }
 
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(201,162,39,0.08),
-            transparent 50%
-        ),
 
-        linear-gradient(
-            145deg,
-            #181818,
-            #090909
-        );
+        .featured-header h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
-    border:
-        1px solid
-        rgba(255,255,255,0.08);
-}
+            font-size:
+                clamp(32px, 5vw, 48px);
 
-.photo-placeholder-content {
-    padding: 30px;
+            margin-bottom: 14px;
+        }
 
-    color: var(--gray);
-}
 
-.photo-placeholder i {
-    margin-bottom: 15px;
+        .featured-header h2 span {
+            color: var(--gold-light);
+        }
 
-    color: var(--gold-light);
 
-    font-size: 32px;
-}
+        .featured-header p:not(.eyebrow) {
+            max-width: 700px;
 
-.photo-placeholder strong {
-    display: block;
+            margin: 0 auto;
 
-    margin-bottom: 7px;
+            color: #999;
 
-    color: #ddd;
+            line-height: 1.7;
+        }
 
-    font-size: 14px;
 
-    letter-spacing: 1px;
+        /* =====================================================
+           BEFORE / AFTER
+        ===================================================== */
 
-    text-transform: uppercase;
-}
+        .before-after {
+            display: grid;
 
-.photo-placeholder small {
-    display: block;
+            grid-template-columns:
+                repeat(2, 1fr);
 
-    color: #666;
+            gap: 20px;
+        }
 
-    font-size: 11px;
-}
 
+        .before-after-item {
+            position: relative;
 
-/* =====================================================
-JOB INFORMATION
-===================================================== */
+            overflow: hidden;
 
-.job-info {
-    display: grid;
+            background: #111;
 
-    grid-template-columns:
-        1fr 1fr;
+            border:
+                1px solid
+                rgba(255,255,255,0.10);
+        }
 
-    gap: 25px;
 
-    margin-top: 25px;
-}
+        .before-after-image {
+            position: relative;
 
-.job-info-card {
-    padding: 25px;
+            width: 100%;
 
-    background:
-        #101010;
+            aspect-ratio: 16 / 10;
 
-    border:
-        1px solid var(--border);
-}
+            overflow: hidden;
 
-.job-info-card h3 {
-    margin-bottom: 8px;
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(201,162,39,0.08),
+                    transparent 55%
+                ),
+                linear-gradient(
+                    145deg,
+                    #181818,
+                    #090909
+                );
+        }
 
-    color: var(--gold-light);
 
-    font-size: 20px;
-}
+        .before-after-image img {
+            display: block;
 
-.job-info-card p {
-    color: var(--gray);
+            width: 100%;
+            height: 100%;
 
-    font-size: 13px;
-}
+            object-fit: cover;
+        }
 
 
-/* =====================================================
-GALLERY SECTION
-===================================================== */
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
 
-.gallery-section {
-    padding:
-        100px 6%;
-}
+            min-height: 350px;
 
-.gallery-section:nth-of-type(even) {
-    background:
-        #080808;
-}
+            display: flex;
 
+            align-items: center;
+            justify-content: center;
 
-/* =====================================================
-CATEGORY HEADER
-===================================================== */
+            text-align: center;
+        }
 
-.gallery-category {
-    width: min(
-        1200px,
-        100%
-    );
 
-    margin:
-        0 auto 45px;
-}
+        .photo-placeholder-content {
+            padding: 30px;
 
-.gallery-category h2 {
-    margin-bottom: 12px;
-}
+            color: #777;
+        }
 
-.gallery-category h2 span {
-    color: var(--gold-light);
-}
 
-.gallery-category p {
-    max-width: 700px;
+        .photo-placeholder i {
+            display: block;
 
-    color: var(--gray);
-}
+            margin-bottom: 15px;
 
+            color: var(--gold-light);
 
-/* =====================================================
-GALLERY CARD IMAGE
-===================================================== */
+            font-size: 34px;
+        }
 
-.gallery-card .gallery-image {
-    cursor: pointer;
 
-    min-height: 300px;
+        .photo-placeholder strong {
+            display: block;
 
-    display: flex;
+            margin-bottom: 8px;
 
-    align-items: center;
-    justify-content: center;
+            color: #ddd;
 
-    background:
-        #111;
-}
+            font-size: 14px;
 
-.gallery-image-placeholder {
-    text-align: center;
+            letter-spacing: 1px;
 
-    padding: 25px;
+            text-transform: uppercase;
+        }
 
-    color: #666;
-}
 
-.gallery-image-placeholder i {
-    display: block;
+        .photo-placeholder small {
+            display: block;
 
-    margin-bottom: 12px;
+            color: #666;
 
-    color: var(--gold-light);
+            font-size: 11px;
+        }
 
-    font-size: 28px;
-}
 
-.gallery-image-placeholder span {
-    display: block;
+        .before-after-label {
+            position: absolute;
 
-    color: #777;
+            top: 15px;
+            left: 15px;
 
-    font-size: 10px;
+            padding:
+                8px 14px;
 
-    font-weight: 700;
+            background:
+                rgba(0,0,0,0.85);
 
-    letter-spacing: 1.5px;
+            border:
+                1px solid
+                rgba(201,162,39,0.45);
 
-    text-transform: uppercase;
-}
+            color:
+                var(--gold-light);
 
+            font-size: 11px;
 
-/* =====================================================
-IMAGE INSTRUCTIONS
-===================================================== */
+            font-weight: 700;
 
-.image-note {
-    width: min(
-        900px,
-        100%
-    );
+            letter-spacing: 1.5px;
+        }
 
-    margin:
-        35px auto 0;
 
-    padding:
-        18px 20px;
+        /* =====================================================
+           JOB INFORMATION
+        ===================================================== */
 
-    background:
-        rgba(201,162,39,0.04);
+        .job-info {
+            display: grid;
 
-    border:
-        1px solid
-        rgba(201,162,39,0.15);
+            grid-template-columns:
+                repeat(2, 1fr);
 
-    color: #888;
+            gap: 20px;
 
-    font-size: 12px;
+            margin-top: 25px;
+        }
 
-    text-align: center;
-}
 
-.image-note strong {
-    color: var(--gold-light);
-}
+        .job-info-card {
+            padding: 28px;
 
+            background: #101010;
 
-/* =====================================================
-LIGHTBOX
-===================================================== */
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+        }
 
-.lightbox {
-    display: none;
 
-    position: fixed;
+        .job-info-card h3 {
+            margin-bottom: 10px;
 
-    inset: 0;
+            color: var(--gold-light);
 
-    z-index: 3000;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
-    align-items: center;
-    justify-content: center;
+            font-size: 22px;
+        }
 
-    padding: 25px;
 
-    background:
-        rgba(0,0,0,0.96);
-}
+        .job-info-card p {
+            margin: 0;
 
-.lightbox.active {
-    display: flex;
-}
+            color: #999;
 
-.lightbox-content {
-    position: relative;
+            font-size: 13px;
 
-    max-width: 1100px;
-    width: 100%;
-}
+            line-height: 1.7;
+        }
 
-.lightbox img {
-    display: block;
 
-    width: 100%;
-    max-height: 85vh;
+        /* =====================================================
+           PACKAGE SHOWCASE
+        ===================================================== */
 
-    object-fit: contain;
+        .package-section {
+            padding:
+                90px 6%;
 
-    margin: auto;
+            background:
+                linear-gradient(
+                    145deg,
+                    #0c0c0c,
+                    #070707
+                );
+        }
 
-    border:
-        1px solid
-        rgba(201,162,39,0.35);
-}
 
-.lightbox-close {
-    position: fixed;
+        .package-heading {
+            max-width: 750px;
 
-    top: 25px;
-    right: 25px;
+            margin:
+                0 auto 45px;
 
-    width: 45px;
-    height: 45px;
+            text-align: center;
+        }
 
-    display: grid;
-    place-items: center;
 
-    background:
-        rgba(255,255,255,0.08);
+        .package-heading h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
-    border:
-        1px solid
-        rgba(255,255,255,0.15);
+            font-size:
+                clamp(32px, 5vw, 46px);
 
-    color: white;
+            margin-bottom: 15px;
+        }
 
-    font-size: 22px;
 
-    cursor: pointer;
-}
+        .package-heading h2 span {
+            color: var(--gold-light);
+        }
 
-.lightbox-close:hover {
-    background: var(--gold);
 
-    color: #000;
-}
+        .package-heading p:not(.eyebrow) {
+            color: #999;
 
+            line-height: 1.7;
+        }
 
-/* =====================================================
-MOBILE
-===================================================== */
 
-@media(max-width: 700px) {
+        .package-grid {
+            width:
+                min(1100px, 100%);
 
-    .gallery-page {
-        padding-top: 70px;
-    }
+            margin: 0 auto;
 
-    .gallery-hero {
-        padding:
-            100px 6% 75px;
-    }
+            display: grid;
 
-    .job-info {
-        grid-template-columns:
-            1fr;
-    }
+            grid-template-columns:
+                repeat(3, 1fr);
 
-    .gallery-section {
-        padding:
-            75px 6%;
-    }
+            gap: 20px;
+        }
 
-    .gallery-card .gallery-image {
-        min-height:
-            260px;
-    }
 
-}
+        .package-card {
+            position: relative;
 
-</style>
+            padding: 35px 28px;
+
+            background: #111;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.09);
+
+            text-align: center;
+
+            transition:
+                transform .3s ease,
+                border-color .3s ease;
+        }
+
+
+        .package-card:hover {
+            transform:
+                translateY(-6px);
+
+            border-color:
+                rgba(201,162,39,0.55);
+        }
+
+
+        .package-card.featured {
+            border-color:
+                rgba(201,162,39,0.55);
+
+            box-shadow:
+                0 0 35px
+                rgba(201,162,39,0.07);
+        }
+
+
+        .package-badge {
+            display: inline-block;
+
+            margin-bottom: 18px;
+
+            padding:
+                6px 12px;
+
+            background:
+                rgba(201,162,39,0.10);
+
+            border:
+                1px solid
+                rgba(201,162,39,0.25);
+
+            color:
+                var(--gold-light);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+        }
+
+
+        .package-card h3 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 27px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .package-price {
+            margin-bottom: 15px;
+
+            color:
+                var(--gold-light);
+
+            font-size: 25px;
+
+            font-weight: 700;
+        }
+
+
+        .package-card p {
+            color: #999;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           GALLERY SECTIONS
+        ===================================================== */
+
+        .gallery-section {
+            padding:
+                100px 6%;
+
+            background: #0c0c0c;
+        }
+
+
+        .gallery-section:nth-of-type(even) {
+            background: #080808;
+        }
+
+
+        .gallery-category {
+            width:
+                min(1200px, 100%);
+
+            margin:
+                0 auto 45px;
+        }
+
+
+        .gallery-category h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(32px, 5vw, 46px);
+
+            margin-bottom: 12px;
+        }
+
+
+        .gallery-category h2 span {
+            color: var(--gold-light);
+        }
+
+
+        .gallery-category p:not(.eyebrow) {
+            max-width: 700px;
+
+            color: #999;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           GALLERY GRID
+        ===================================================== */
+
+        .gallery-grid {
+            width:
+                min(1200px, 100%);
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .gallery-card {
+            overflow: hidden;
+
+            background: #121212;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.09);
+
+            transition:
+                transform .3s ease,
+                border-color .3s ease;
+        }
+
+
+        .gallery-card:hover {
+            transform:
+                translateY(-7px);
+
+            border-color:
+                rgba(201,162,39,0.45);
+        }
+
+
+        .gallery-image {
+            position: relative;
+
+            width: 100%;
+
+            height: 280px;
+
+            overflow: hidden;
+
+            background: #111;
+
+            cursor: pointer;
+        }
+
+
+        .gallery-image img {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform .5s ease;
+        }
+
+
+        .gallery-card:hover
+        .gallery-image img {
+            transform:
+                scale(1.04);
+        }
+
+
+        .gallery-image-placeholder {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(201,162,39,0.08),
+                    transparent 55%
+                ),
+                linear-gradient(
+                    145deg,
+                    #181818,
+                    #090909
+                );
+
+            color: #666;
+        }
+
+
+        .gallery-image-placeholder-content {
+            padding: 25px;
+        }
+
+
+        .gallery-image-placeholder i {
+            display: block;
+
+            margin-bottom: 13px;
+
+            color: var(--gold-light);
+
+            font-size: 30px;
+        }
+
+
+        .gallery-image-placeholder span {
+            display: block;
+
+            color: #777;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+        }
+
+
+        .gallery-card-content {
+            padding: 25px;
+        }
+
+
+        .gallery-card h3 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .gallery-card p {
+            margin: 0;
+
+            color: #999;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           PORTFOLIO NOTE
+        ===================================================== */
+
+        .image-note {
+            width:
+                min(900px, 100%);
+
+            margin:
+                40px auto 0;
+
+            padding:
+                18px 20px;
+
+            background:
+                rgba(201,162,39,0.04);
+
+            border:
+                1px solid
+                rgba(201,162,39,0.15);
+
+            color: #777;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+            text-align: center;
+        }
+
+
+        .image-note strong {
+            color:
+                var(--gold-light);
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .gallery-cta {
+            padding:
+                110px 6%;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(201,162,39,0.09),
+                    transparent 50%
+                ),
+                #070707;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.06);
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.06);
+        }
+
+
+        .gallery-cta h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(38px, 6vw, 58px);
+
+            margin-bottom: 15px;
+        }
+
+
+        .gallery-cta h2 span {
+            color:
+                var(--gold-light);
+        }
+
+
+        .gallery-cta p:not(.eyebrow) {
+            max-width: 650px;
+
+            margin:
+                0 auto 30px;
+
+            color: #999;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           LIGHTBOX
+        ===================================================== */
+
+        .lightbox {
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 3000;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 25px;
+
+            background:
+                rgba(0,0,0,0.96);
+        }
+
+
+        .lightbox.active {
+            display: flex;
+        }
+
+
+        .lightbox-content {
+            position: relative;
+
+            width: 100%;
+
+            max-width: 1100px;
+        }
+
+
+        .lightbox img {
+            display: block;
+
+            width: 100%;
+
+            max-height: 85vh;
+
+            object-fit: contain;
+
+            margin: auto;
+
+            border:
+                1px solid
+                rgba(201,162,39,0.35);
+        }
+
+
+        .lightbox-close {
+            position: fixed;
+
+            top: 25px;
+            right: 25px;
+
+            width: 45px;
+            height: 45px;
+
+            display: grid;
+
+            place-items: center;
+
+            background:
+                rgba(255,255,255,0.08);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.15);
+
+            color: white;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            z-index: 3001;
+        }
+
+
+        .lightbox-close:hover {
+            background:
+                var(--gold);
+
+            color: #000;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media(max-width: 900px) {
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .package-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+
+
+            .job-info {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media(max-width: 700px) {
+
+            .gallery-page {
+                padding-top: 70px;
+            }
+
+
+            .gallery-hero {
+                padding:
+                    100px 6% 75px;
+            }
+
+
+            .gallery-section,
+            .featured-section,
+            .package-section {
+                padding:
+                    75px 6%;
+            }
+
+
+            .gallery-image {
+                height: 260px;
+            }
+
+
+            .photo-placeholder {
+                min-height: 280px;
+            }
+
+
+            .gallery-cta {
+                padding:
+                    85px 6%;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -548,1263 +1059,1314 @@ MOBILE
 <body>
 
 
-<!-- =====================================================
-NAVIGATION
-===================================================== -->
+    <!-- =====================================================
+         NAVIGATION
+    ===================================================== -->
 
-<header class="navbar">
+    <header class="navbar">
 
-<a
-href="index.html"
-class="logo"
-aria-label="Enhance My Ride Home"
->
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="Enhance My Ride Home"
+        >
 
-<div class="logo-mark">
-EMR
-</div>
+            <div class="logo-mark">
+                EMR
+            </div>
 
-<div class="logo-text">
+            <div class="logo-text">
 
-<span class="logo-main">
-ENHANCE MY RIDE
-</span>
+                <span class="logo-main">
+                    ENHANCE MY RIDE
+                </span>
 
-<span class="logo-sub">
-AUTO SPA & MOBILE DETAILING
-</span>
+                <span class="logo-sub">
+                    AUTO SPA & MOBILE DETAILING
+                </span>
 
-</div>
+            </div>
 
-</a>
+        </a>
 
 
-<button
-class="menu-toggle"
-id="menuToggle"
-type="button"
-aria-label="Open navigation menu"
-aria-expanded="false"
->
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
 
-<span></span>
-<span></span>
-<span></span>
+            <span></span>
+            <span></span>
+            <span></span>
 
-</button>
+        </button>
 
 
-<nav>
+        <nav>
 
-<ul
-class="nav-menu"
-id="navMenu"
->
+            <ul
+                class="nav-menu"
+                id="navMenu"
+            >
 
-<li>
-<a href="index.html">
-Home
-</a>
-</li>
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
 
-<li>
-<a href="gallery.html">
-Gallery
-</a>
-</li>
+                <li>
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+                </li>
 
-<li>
-<a href="services.html">
-Services
-</a>
-</li>
+                <li>
+                    <a href="services.html">
+                        Services
+                    </a>
+                </li>
 
-<li>
-<a
-href="quote.html"
-class="nav-quote"
->
-Get Free Quote
-</a>
-</li>
+                <li>
+                    <a
+                        href="quote.html"
+                        class="nav-quote"
+                    >
+                        Get Free Quote
+                    </a>
+                </li>
 
-<li>
-<a href="about.html">
-About
-</a>
-</li>
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
 
-<li>
-<a href="service-area.html">
-Service Area
-</a>
-</li>
+                <li>
+                    <a href="service-area.html">
+                        Service Area
+                    </a>
+                </li>
 
-</ul>
+            </ul>
 
-</nav>
+        </nav>
 
-</header>
+    </header>
 
 
+    <main class="gallery-page">
 
-<main class="gallery-page">
 
+        <!-- =================================================
+             HERO
+        ================================================== -->
 
-<!-- =====================================================
-GALLERY HERO
-===================================================== -->
+        <section class="gallery-hero">
 
-<section class="gallery-hero">
+            <div class="gallery-hero-content reveal">
 
-<div class="gallery-hero-content reveal">
+                <p class="eyebrow">
+                    THE ENHANCE EXPERIENCE
+                </p>
 
-<p class="eyebrow">
-THE ENHANCE EXPERIENCE
-</p>
+                <h1>
+                    Enhancements That
+                    <span>
+                        Speak For Themselves.
+                    </span>
+                </h1>
 
-<h1>
+                <p>
+                    Real vehicles. Real transformations.
+                    Premium mobile detailing designed to restore,
+                    refresh, protect, and elevate your vehicle.
+                </p>
 
-Enhancements That
+            </div>
 
-<span>
-Speak For Themselves.
-</span>
+        </section>
 
-</h1>
 
-<p>
+        <!-- =================================================
+             FEATURED MERCEDES DETAIL
+        ================================================== -->
 
-Real vehicles. Real transformations.
-A growing portfolio of premium detailing
-work performed by Enhance My Ride.
+        <section class="featured-section">
 
-</p>
+            <div class="featured-job">
 
-</div>
+                <div class="featured-header reveal">
 
-</section>
+                    <p class="eyebrow">
+                        FEATURED DETAIL
+                    </p>
 
+                    <h2>
+                        Mercedes-Benz
+                        <span>
+                            Gold Package.
+                        </span>
+                    </h2>
 
+                    <p>
+                        One of our latest enhancements.
+                        This featured transformation will showcase
+                        the real results of Enhance My Ride as our
+                        portfolio continues to grow.
+                    </p>
 
-<!-- =====================================================
-FEATURED TRANSFORMATION
-===================================================== -->
+                </div>
 
-<section class="gallery-section">
 
-<div class="featured-job">
+                <div class="before-after reveal">
 
 
-<div class="featured-job-header reveal">
+                    <!-- BEFORE -->
 
-<p class="eyebrow">
-FEATURED DETAIL
-</p>
+                    <div class="before-after-item">
 
-<h2>
+                        <div class="before-after-image">
 
-Mercedes-Benz
+                            <div class="photo-placeholder">
 
-<span>
-Gold Package.
-</span>
+                                <div class="photo-placeholder-content">
 
-</h2>
+                                    <i class="fa-solid fa-camera"></i>
 
-<p>
+                                    <strong>
+                                        Mercedes-Benz Before
+                                    </strong>
 
-One of our latest enhancements.
-This section will showcase your best
-customer transformations as the portfolio grows.
+                                    <small>
+                                        Replace with your actual before photo
+                                    </small>
 
-</p>
+                                </div>
 
-</div>
+                            </div>
 
+                        </div>
 
-<div class="before-after reveal">
+                        <div class="before-after-label">
+                            BEFORE
+                        </div>
 
+                    </div>
 
-<div class="before-after-item">
 
-<div class="photo-placeholder">
+                    <!-- AFTER -->
 
-<div class="photo-placeholder-content">
+                    <div class="before-after-item">
 
-<i class="fa-solid fa-camera"></i>
+                        <div class="before-after-image">
 
-<strong>
-Mercedes-Benz Before
-</strong>
+                            <div class="photo-placeholder">
 
-<small>
-Replace with your actual before photo
-</small>
+                                <div class="photo-placeholder-content">
 
-</div>
+                                    <i class="fa-solid fa-camera"></i>
 
-</div>
+                                    <strong>
+                                        Mercedes-Benz After
+                                    </strong>
 
-<div class="before-after-label">
-BEFORE
-</div>
+                                    <small>
+                                        Replace with your actual after photo
+                                    </small>
 
-</div>
+                                </div>
 
+                            </div>
 
-<div class="before-after-item after">
+                        </div>
 
-<div class="photo-placeholder">
+                        <div class="before-after-label">
+                            AFTER
+                        </div>
 
-<div class="photo-placeholder-content">
+                    </div>
 
-<i class="fa-solid fa-camera"></i>
 
-<strong>
-Mercedes-Benz After
-</strong>
+                </div>
 
-<small>
-Replace with your actual after photo
-</small>
 
-</div>
+                <div class="job-info reveal">
 
-</div>
 
-<div class="before-after-label">
-AFTER
-</div>
+                    <div class="job-info-card">
 
-</div>
+                        <h3>
+                            The Enhancement
+                        </h3>
 
+                        <p>
+                            Exterior wash, wheel and tire cleaning,
+                            deep brake dust removal, paint cleaning,
+                            finishing treatment, and final inspection.
+                        </p>
 
-</div>
+                    </div>
 
 
-<div class="job-info reveal">
+                    <div class="job-info-card">
 
+                        <h3>
+                            Service Package
+                        </h3>
 
-<div class="job-info-card">
+                        <p>
+                            Enhance Gold Package — $149 starting price.
+                            Final pricing may vary based on vehicle size,
+                            condition, location, and requested services.
+                        </p>
 
-<h3>
-The Enhancement
-</h3>
+                    </div>
 
-<p>
 
-Exterior wash, wheel and tire cleaning,
-deep brake dust removal, paint cleaning,
-finishing treatment, and final inspection.
+                </div>
 
-</p>
+            </div>
 
-</div>
+        </section>
 
 
-<div class="job-info-card">
+        <!-- =================================================
+             PACKAGE SHOWCASE
+        ================================================== -->
 
-<h3>
-Service Package
-</h3>
+        <section class="package-section">
 
-<p>
+            <div class="package-heading reveal">
 
-Enhance Gold Package — $149 starting price.
-Final pricing varies according to vehicle
-condition, size, location, and requested work.
+                <p class="eyebrow">
+                    THE ENHANCE COLLECTION
+                </p>
 
-</p>
+                <h2>
+                    Choose Your
+                    <span>
+                        Enhancement.
+                    </span>
+                </h2>
 
-</div>
+                <p>
+                    From a premium maintenance detail to a complete
+                    showroom-level transformation, every package is
+                    designed around presentation, care, and results.
+                </p>
 
+            </div>
 
-</div>
 
+            <div class="package-grid">
 
-</div>
 
-</section>
+                <!-- GOLD -->
 
+                <article class="package-card reveal">
 
+                    <div class="package-badge">
+                        Essential Premium
+                    </div>
 
-<!-- =====================================================
-EXTERIOR
-===================================================== -->
+                    <h3>
+                        Gold
+                    </h3>
 
-<section class="gallery-section">
+                    <div class="package-price">
+                        $149
+                    </div>
 
+                    <p>
+                        A premium detail for maintaining a clean,
+                        refreshed, and polished vehicle without
+                        overcomplicating the experience.
+                    </p>
 
-<div class="gallery-category reveal">
+                </article>
 
-<p class="eyebrow">
-EXTERIOR
-</p>
 
-<h2>
+                <!-- PREMIUM -->
 
-Exterior
+                <article class="package-card featured reveal">
 
-<span>
-Enhancements.
-</span>
+                    <div class="package-badge">
+                        Most Popular
+                    </div>
 
-</h2>
+                    <h3>
+                        Premium
+                    </h3>
 
-<p>
+                    <div class="package-price">
+                        $249
+                    </div>
 
-Precision cleaning and finishing designed
-to restore the appearance and presence
-of your vehicle.
+                    <p>
+                        A more comprehensive enhancement focused on
+                        deeper cleaning, refined presentation, and
+                        giving your vehicle that noticeably elevated look.
+                    </p>
 
-</p>
+                </article>
 
-</div>
 
+                <!-- SHOWROOM ELITE -->
 
-<div class="gallery-grid">
+                <article class="package-card reveal">
 
+                    <div class="package-badge">
+                        Ultimate Enhancement
+                    </div>
 
-<!-- CARD 1 -->
+                    <h3>
+                        Showroom Elite
+                    </h3>
 
-<article
-class="gallery-card reveal"
->
+                    <div class="package-price">
+                        $399
+                    </div>
 
-<div
-class="gallery-image"
-data-image=""
->
+                    <p>
+                        Our highest-level package for customers who want
+                        the most complete, meticulous, and presentation-ready
+                        detailing experience.
+                    </p>
 
-<div class="gallery-image-placeholder">
+                </article>
 
-<i class="fa-solid fa-camera"></i>
 
-<span>
-Exterior Transformation Photo
-</span>
+            </div>
 
-</div>
+        </section>
 
-</div>
 
+        <!-- =================================================
+             EXTERIOR
+        ================================================== -->
 
-<div class="gallery-card-content">
+        <section class="gallery-section">
 
-<h3>
-Paint Revival
-</h3>
+            <div class="gallery-category reveal">
 
-<p>
+                <p class="eyebrow">
+                    EXTERIOR
+                </p>
 
-A clean, glossy exterior finish that
-brings depth and clarity back to the vehicle.
+                <h2>
+                    Exterior
+                    <span>
+                        Enhancements.
+                    </span>
+                </h2>
 
-</p>
+                <p>
+                    Precision cleaning and finishing designed to restore
+                    the appearance, presence, and shine of your vehicle.
+                </p>
 
-</div>
+            </div>
 
-</article>
 
+            <div class="gallery-grid">
 
-<!-- CARD 2 -->
 
-<article
-class="gallery-card reveal"
->
+                <!-- CARD 1 -->
 
-<div
-class="gallery-image"
-data-image=""
->
+                <article class="gallery-card reveal">
 
-<div class="gallery-image-placeholder">
+                    <div
+                        class="gallery-image"
+                        data-image="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85"
+                    >
 
-<i class="fa-solid fa-camera"></i>
+                        <img
+                            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85"
+                            alt="Premium vehicle exterior"
+                            loading="lazy"
+                        >
 
-<span>
-Wheel Transformation Photo
-</span>
+                    </div>
 
-</div>
 
-</div>
+                    <div class="gallery-card-content">
 
+                        <h3>
+                            Paint Revival
+                        </h3>
 
-<div class="gallery-card-content">
+                        <p>
+                            Restoring depth, shine, and a clean finish
+                            that brings the vehicle back to life.
+                        </p>
 
-<h3>
-Wheel & Tire Detail
-</h3>
+                    </div>
 
-<p>
+                </article>
 
-Deep wheel cleaning, tire finishing,
-and the final details that complete
-the exterior presentation.
 
-</p>
+                <!-- CARD 2 -->
 
-</div>
+                <article class="gallery-card reveal">
 
-</article>
+                    <div
+                        class="gallery-image"
+                        data-image="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=85"
+                    >
 
+                        <img
+                            src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=85"
+                            alt="Clean vehicle wheels and exterior"
+                            loading="lazy"
+                        >
 
-<!-- CARD 3 -->
+                    </div>
 
-<article
-class="gallery-card reveal"
->
 
-<div
-class="gallery-image"
-data-image=""
->
+                    <div class="gallery-card-content">
 
-<div class="gallery-image-placeholder">
+                        <h3>
+                            Wheel & Tire Detail
+                        </h3>
 
-<i class="fa-solid fa-camera"></i>
+                        <p>
+                            Deep wheel cleaning, tire finishing,
+                            and the final details that complete
+                            the exterior presentation.
+                        </p>
 
-<span>
-Exterior Finish Photo
-</span>
+                    </div>
 
-</div>
+                </article>
 
-</div>
 
+                <!-- CARD 3 -->
 
-<div class="gallery-card-content">
+                <article class="gallery-card reveal">
 
-<h3>
-Protection Finish
-</h3>
+                    <div
+                        class="gallery-image"
+                        data-image="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c6?auto=format&fit=crop&w=1200&q=85"
+                    >
 
-<p>
+                        <img
+                            src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c6?auto=format&fit=crop&w=1200&q=85"
+                            alt="Detailed vehicle exterior finish"
+                            loading="lazy"
+                        >
 
-A refined finishing treatment designed
-to leave the vehicle looking clean,
-glossy, and refreshed.
+                    </div>
 
-</p>
 
-</div>
+                    <div class="gallery-card-content">
 
-</article>
+                        <h3>
+                            Protection Finish
+                        </h3>
 
+                        <p>
+                            Premium finishing touches designed to leave
+                            your vehicle looking clean, glossy, and refined.
+                        </p>
 
-</div>
+                    </div>
 
+                </article>
 
-<div class="image-note">
 
-<strong>Building The Portfolio:</strong>
-These placeholders are ready for your
-real customer photos. We'll replace them
-as you complete more vehicles.
+            </div>
 
-</div>
 
+            <div class="image-note">
 
-</section>
+                <strong>
+                    Portfolio Note:
+                </strong>
 
+                These images are temporary presentation images.
+                Replace them with your actual customer transformations
+                as your portfolio grows.
 
+            </div>
 
-<!-- =====================================================
-INTERIOR
-===================================================== -->
+        </section>
 
-<section class="gallery-section">
 
+        <!-- =================================================
+             INTERIOR
+        ================================================== -->
 
-<div class="gallery-category reveal">
+        <section class="gallery-section">
 
-<p class="eyebrow">
-INTERIOR
-</p>
+            <div class="gallery-category reveal">
 
-<h2>
+                <p class="eyebrow">
+                    INTERIOR
+                </p>
 
-Interior
+                <h2>
+                    Interior
+                    <span>
+                        Enhancements.
+                    </span>
+                </h2>
 
-<span>
-Enhancements.
-</span>
+                <p>
+                    A clean interior changes the entire driving experience —
+                    from the seats and surfaces to the smallest details.
+                </p>
 
-</h2>
+            </div>
 
-<p>
 
-A clean interior changes the entire
-driving experience — from the seats
-to the smallest details.
+            <div class="gallery-grid">
 
-</p>
 
-</div>
+                <!-- CARD 1 -->
 
+                <article class="gallery-card reveal">
 
-<div class="gallery-grid">
+                    <div
+                        class="gallery-image"
+                        data-image="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=85"
+                    >
 
+                        <img
+                            src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=85"
+                            alt="Vehicle interior detail"
+                            loading="lazy"
+                        >
 
-<!-- CARD 1 -->
+                    </div>
 
-<article
-class="gallery-card reveal"
->
 
-<div
-class="gallery-image"
->
+                    <div class="gallery-card-content">
 
-<div class="gallery-image-placeholder">
+                        <h3>
+                            Interior Restoration
+                        </h3>
 
-<i class="fa-solid fa-camera"></i>
+                        <p>
+                            Detailed vacuuming, surface cleaning,
+                            crevice cleaning, and finishing touches
+                            throughout the cabin.
+                        </p>
 
-<span>
-Interior Detail Photo
-</span>
+                    </div>
 
-</div>
+                </article>
 
-</div>
 
+                <!-- CARD 2 -->
 
-<div class="gallery-card-content">
+                <article class="gallery-card reveal">
 
-<h3>
-Interior Restoration
-</h3>
+                    <div
+                        class="gallery-image"
+                        data-image="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85"
+                    >
 
-<p>
+                        <img
+                            src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85"
+                            alt="Premium vehicle cabin"
+                            loading="lazy"
+                        >
 
-Detailed vacuuming, surface cleaning,
-crevice cleaning, and finishing touches
-throughout the cabin.
+                    </div>
 
-</p>
 
-</div>
+                    <div class="gallery-card-content">
 
-</article>
+                        <h3>
+                            Premium Cabin Care
+                        </h3>
 
+                        <p>
+                            A refreshed interior with attention to dashboards,
+                            consoles, doors, seats, glass, and hard-to-reach areas.
+                        </p>
 
-<!-- CARD 2 -->
+                    </div>
 
-<article
-class="gallery-card reveal"
->
+                </article>
 
-<div
-class="gallery-image"
->
 
-<div class="gallery-image-placeholder">
+                <!-- CARD 3 -->
 
-<i class="fa-solid fa-camera"></i>
+                <article class="gallery-card reveal">
 
-<span>
-Cabin Detail Photo
-</span>
+                    <div
+                        class="gallery-image"
+                        data-image="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=85"
+                    >
 
-</div>
+                        <img
+                            src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=85"
+                            alt="Complete vehicle enhancement"
+                            loading="lazy"
+                        >
 
-</div>
+                    </div>
 
 
-<div class="gallery-card-content">
+                    <div class="gallery-card-content">
 
-<h3>
-Premium Cabin Care
-</h3>
+                        <h3>
+                            Complete Vehicle Enhancement
+                        </h3>
 
-<p>
+                        <p>
+                            Interior and exterior detailing combined into
+                            one complete vehicle transformation.
+                        </p>
 
-A refreshed interior with attention
-to dashboards, consoles, doors,
-seats, glass, and hard-to-reach areas.
+                    </div>
 
-</p>
+                </article>
 
-</div>
 
-</article>
+            </div>
 
+        </section>
 
-<!-- CARD 3 -->
 
-<article
-class="gallery-card reveal"
->
+        <!-- =================================================
+             RECENTLY DETAILED
+        ================================================== -->
 
-<div
-class="gallery-image"
->
+        <section class="gallery-section">
 
-<div class="gallery-image-placeholder">
+            <div class="gallery-category reveal">
 
-<i class="fa-solid fa-camera"></i>
+                <p class="eyebrow">
+                    RECENTLY DETAILED
+                </p>
 
-<span>
-Complete Detail Photo
-</span>
+                <h2>
+                    The Portfolio
+                    <span>
+                        Grows.
+                    </span>
+                </h2>
 
-</div>
+                <p>
+                    Every vehicle we detail gives us another opportunity
+                    to show what Enhance My Ride is capable of.
+                </p>
 
-</div>
+            </div>
 
 
-<div class="gallery-card-content">
+            <div class="gallery-grid">
 
-<h3>
-Complete Vehicle Enhancement
-</h3>
 
-<p>
+                <article class="gallery-card reveal">
 
-Interior and exterior detailing combined
-into one complete vehicle transformation.
+                    <div class="gallery-image">
 
-</p>
+                        <div class="gallery-image-placeholder">
 
-</div>
+                            <div class="gallery-image-placeholder-content">
 
-</article>
+                                <i class="fa-solid fa-camera"></i>
 
+                                <span>
+                                    Your Next Customer Detail
+                                </span>
 
-</div>
+                            </div>
 
+                        </div>
 
-</section>
+                    </div>
 
 
+                    <div class="gallery-card-content">
 
-<!-- =====================================================
-RECENTLY DETAILED
-===================================================== -->
+                        <h3>
+                            Your Vehicle Could Be Here
+                        </h3>
 
-<section class="gallery-section">
+                        <p>
+                            We are building a portfolio of real customer
+                            transformations throughout the Bay Area.
+                        </p>
 
+                    </div>
 
-<div class="gallery-category reveal">
+                </article>
 
-<p class="eyebrow">
-RECENTLY DETAILED
-</p>
 
-<h2>
+                <article class="gallery-card reveal">
 
-The Portfolio
+                    <div class="gallery-image">
 
-<span>
-Grows.
-</span>
+                        <div class="gallery-image-placeholder">
 
-</h2>
+                            <div class="gallery-image-placeholder-content">
 
-<p>
+                                <i class="fa-solid fa-camera"></i>
 
-Every vehicle we detail gives us another
-opportunity to show what Enhance My Ride
-is capable of.
+                                <span>
+                                    Future Transformation
+                                </span>
 
-</p>
+                            </div>
 
-</div>
+                        </div>
 
+                    </div>
 
-<div class="gallery-grid">
 
+                    <div class="gallery-card-content">
 
-<article class="gallery-card reveal">
+                        <h3>
+                            Next Enhancement
+                        </h3>
 
-<div class="gallery-image">
+                        <p>
+                            Every completed detail becomes part of
+                            the Enhance My Ride story.
+                        </p>
 
-<div class="gallery-image-placeholder">
+                    </div>
 
-<i class="fa-solid fa-plus"></i>
+                </article>
 
-<span>
-Future Customer Detail
-</span>
 
-</div>
+                <article class="gallery-card reveal">
 
-</div>
+                    <div class="gallery-image">
 
+                        <div class="gallery-image-placeholder">
 
-<div class="gallery-card-content">
+                            <div class="gallery-image-placeholder-content">
 
-<h3>
-Your Vehicle Could Be Here
-</h3>
+                                <i class="fa-solid fa-plus"></i>
 
-<p>
+                                <span>
+                                    Coming Soon
+                                </span>
 
-We are building a portfolio of real
-customer transformations throughout
-the Bay Area.
+                            </div>
 
-</p>
+                        </div>
 
-</div>
+                    </div>
 
-</article>
 
+                    <div class="gallery-card-content">
 
-<article class="gallery-card reveal">
+                        <h3>
+                            More Transformations
+                        </h3>
 
-<div class="gallery-image">
+                        <p>
+                            More vehicles. More transformations.
+                            More reasons to Enhance.
+                        </p>
 
-<div class="gallery-image-placeholder">
+                    </div>
 
-<i class="fa-solid fa-plus"></i>
+                </article>
 
-<span>
-Future Customer Detail
-</span>
 
-</div>
+            </div>
 
-</div>
+        </section>
 
 
-<div class="gallery-card-content">
+        <!-- =================================================
+             CTA
+        ================================================== -->
 
-<h3>
-Next Enhancement
-</h3>
+        <section class="gallery-cta">
 
-<p>
+            <p class="eyebrow">
+                YOUR VEHICLE COULD BE NEXT
+            </p>
 
-Every completed detail becomes part
-of the Enhance My Ride story.
 
-</p>
+            <h2>
+                Ready For Your
+                <span>
+                    Enhancement?
+                </span>
+            </h2>
 
-</div>
 
-</article>
+            <p>
+                Experience premium mobile detailing delivered directly
+                to your location throughout the Bay Area.
+            </p>
 
 
-<article class="gallery-card reveal">
+            <a
+                href="quote.html"
+                class="button button-gold"
+            >
+                Get Your Free Quote
+            </a>
 
-<div class="gallery-image">
+        </section>
 
-<div class="gallery-image-placeholder">
 
-<i class="fa-solid fa-plus"></i>
+    </main>
 
-<span>
-Future Customer Detail
-</span>
 
-</div>
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
-</div>
+    <footer>
 
+        <div class="footer-grid">
 
-<div class="gallery-card-content">
 
-<h3>
-Coming Soon
-</h3>
+            <!-- BRAND -->
 
-<p>
+            <div class="footer-brand">
 
-More vehicles. More transformations.
-More reasons to Enhance.
+                <div class="footer-title">
+                    ENHANCE MY RIDE
+                </div>
 
-</p>
+                <div class="footer-sub">
+                    AUTO SPA & MOBILE DETAILING
+                </div>
 
-</div>
 
-</article>
+                <p class="footer-text">
 
+                    We come to you. You relax. We Enhance.
 
-</div>
+                    <br><br>
 
-</section>
+                    Premium mobile detailing serving
+                    San Francisco and the Bay Area.
 
+                </p>
 
 
-<!-- =====================================================
-CTA
-===================================================== -->
+                <div class="social-icons">
 
-<section class="cta">
 
-<p class="eyebrow">
-YOUR VEHICLE COULD BE NEXT
-</p>
+                    <a
+                        href="https://instagram.com/enhancemyridemobiledetailing"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
 
-<h2>
+                    <a
+                        href="https://www.facebook.com/Enhancemyridemobiledetailing"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Facebook"
+                    >
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
 
-Ready For Your
 
-<span>
-Enhancement?
-</span>
+                    <a
+                        href="https://www.tiktok.com/@enhancemyride"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="TikTok"
+                    >
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
 
-</h2>
 
+                    <a
+                        href="https://youtube.com/@enhancemyridemobiledetailing"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="YouTube"
+                    >
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
 
-<p>
 
-Let's turn your vehicle into the next
-transformation featured here.
+                </div>
 
-</p>
+            </div>
 
 
-<a
-href="quote.html"
-class="button button-gold"
->
+            <!-- CONTACT -->
 
-Get Your Free Quote
+            <div class="footer-contact">
 
-</a>
+                <div class="footer-title">
+                    CONTACT
+                </div>
 
-</section>
 
+                <p class="footer-text">
 
-</main>
+                    <a
+                        href="mailto:info@enhancemyride.com"
+                    >
+                        <i class="fa-solid fa-envelope"></i>
+                        info@enhancemyride.com
+                    </a>
 
+                    <br><br>
 
+                    <a
+                        href="tel:3233271806"
+                    >
+                        <i class="fa-solid fa-phone"></i>
+                        (323) 327-1806
+                    </a>
 
-<!-- =====================================================
-FOOTER
-===================================================== -->
+                </p>
 
-<footer>
 
-<div class="footer-grid">
+                <a
+                    href="quote.html"
+                    class="button button-outline"
+                >
+                    Request A Quote
+                </a>
 
+                <br><br>
 
-<div class="footer-brand">
 
-<div class="footer-title">
-ENHANCE MY RIDE
-</div>
+                <a
+                    href="https://g.page/r/CRy_PYJmq6NYEBM/review"
+                    target="_blank"
+                    rel="noopener"
+                    class="button button-outline"
+                >
 
-<div class="footer-sub">
-AUTO SPA & MOBILE DETAILING
-</div>
+                    <i class="fa-brands fa-google"></i>
 
+                    Leave A Google Review
 
-<p class="footer-text">
+                </a>
 
-We come to you. You relax. We Enhance.
 
-<br><br>
+            </div>
 
-Premium mobile detailing serving
-San Francisco and the Bay Area.
 
-</p>
+        </div>
 
 
-<div class="social-icons">
+        <div class="copyright">
 
+            © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
+            All Rights Reserved.
 
-<a
-href="https://instagram.com/enhancemyridemobiledetailing"
-target="_blank"
-rel="noopener"
-aria-label="Instagram"
->
+        </div>
 
-<i class="fa-brands fa-instagram"></i>
+    </footer>
 
-</a>
 
+    <!-- =====================================================
+         LIGHTBOX
+    ====================================================== -->
 
-<a
-href="https://www.facebook.com/Enhancemyridemobiledetailing"
-target="_blank"
-rel="noopener"
-aria-label="Facebook"
->
+    <div
+        class="lightbox"
+        id="lightbox"
+    >
 
-<i class="fa-brands fa-facebook-f"></i>
+        <button
+            class="lightbox-close"
+            id="lightboxClose"
+            type="button"
+            aria-label="Close image"
+        >
 
-</a>
+            <i class="fa-solid fa-xmark"></i>
 
+        </button>
 
-<a
-href="https://www.tiktok.com/@enhancemyride"
-target="_blank"
-rel="noopener"
-aria-label="TikTok"
->
 
-<i class="fa-brands fa-tiktok"></i>
+        <div class="lightbox-content">
 
-</a>
+            <img
+                id="lightboxImage"
+                src=""
+                alt=""
+            >
 
+        </div>
 
-<a
-href="https://youtube.com/@enhancemyridemobiledetailing"
-target="_blank"
-rel="noopener"
-aria-label="YouTube"
->
+    </div>
 
-<i class="fa-brands fa-youtube"></i>
 
-</a>
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
+    <script>
 
-</div>
+        /* =================================================
+           MOBILE NAVIGATION
+        ================================================== */
 
-</div>
+        const menuToggle =
+            document.getElementById("menuToggle");
 
+        const navMenu =
+            document.getElementById("navMenu");
 
 
-<div class="footer-contact">
+        if (menuToggle && navMenu) {
 
-<div class="footer-title">
-CONTACT
-</div>
+            menuToggle.addEventListener(
+                "click",
+                function () {
 
+                    const open =
+                        navMenu.classList.toggle("active");
 
-<p class="footer-text">
+                    menuToggle.classList.toggle(
+                        "active",
+                        open
+                    );
 
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        open
+                    );
 
-<a
-href="mailto:info@enhancemyride.com"
->
+                }
+            );
 
-<i class="fa-solid fa-envelope"></i>
 
-info@enhancemyride.com
+            navMenu
+                .querySelectorAll("a")
+                .forEach(
+                    function (link) {
 
-</a>
+                        link.addEventListener(
+                            "click",
+                            function () {
 
+                                navMenu.classList.remove(
+                                    "active"
+                                );
 
-<br><br>
+                                menuToggle.classList.remove(
+                                    "active"
+                                );
 
+                                menuToggle.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
 
-<a
-href="tel:3233271806"
->
+                            }
+                        );
 
-<i class="fa-solid fa-phone"></i>
+                    }
+                );
 
-(323) 327-1806
+        }
 
-</a>
 
+        /* =================================================
+           SCROLL REVEAL
+        ================================================== */
 
-</p>
+        const revealElements =
+            document.querySelectorAll(".reveal");
 
 
-<a
-href="quote.html"
-class="button button-outline"
->
+        if ("IntersectionObserver" in window) {
 
-Request A Quote
+            const revealObserver =
+                new IntersectionObserver(
+                    function (entries) {
 
-</a>
+                        entries.forEach(
+                            function (entry) {
 
+                                if (
+                                    entry.isIntersecting
+                                ) {
 
-<br><br>
+                                    entry.target.classList.add(
+                                        "visible"
+                                    );
 
+                                    revealObserver.unobserve(
+                                        entry.target
+                                    );
 
-<a
-href="https://g.page/r/CRy_PYJmq6NYEBM/review"
-target="_blank"
-rel="noopener"
-class="button button-outline"
->
+                                }
 
-<i class="fa-brands fa-google"></i>
+                            }
+                        );
 
-Leave A Google Review
+                    },
+                    {
+                        threshold: 0.12
+                    }
+                );
 
-</a>
 
+            revealElements.forEach(
+                function (element) {
 
-</div>
+                    revealObserver.observe(
+                        element
+                    );
 
+                }
+            );
 
-</div>
+        }
+        else {
 
+            revealElements.forEach(
+                function (element) {
 
-<div class="copyright">
+                    element.classList.add(
+                        "visible"
+                    );
 
-© 2026 Enhance My Ride Auto Spa & Mobile Detailing.
-All Rights Reserved.
+                }
+            );
 
-</div>
+        }
 
-</footer>
 
+        /* =================================================
+           LIGHTBOX
+        ================================================== */
 
+        const lightbox =
+            document.getElementById("lightbox");
 
-<!-- =====================================================
-LIGHTBOX
-===================================================== -->
+        const lightboxImage =
+            document.getElementById("lightboxImage");
 
-<div
-class="lightbox"
-id="lightbox"
->
+        const lightboxClose =
+            document.getElementById("lightboxClose");
 
-<button
-class="lightbox-close"
-id="lightboxClose"
-type="button"
-aria-label="Close image"
->
 
-<i class="fa-solid fa-xmark"></i>
+        document
+            .querySelectorAll(
+                ".gallery-image[data-image]"
+            )
+            .forEach(
+                function (image) {
 
-</button>
+                    image.addEventListener(
+                        "click",
+                        function () {
 
+                            const source =
+                                image.getAttribute(
+                                    "data-image"
+                                );
 
-<div class="lightbox-content">
 
-<img
-id="lightboxImage"
-src=""
-alt=""
->
+                            if (!source) {
+                                return;
+                            }
 
-</div>
 
-</div>
+                            lightboxImage.src =
+                                source;
 
 
+                            lightboxImage.alt =
+                                image.querySelector("img")
+                                    ?.alt ||
+                                "Enhance My Ride vehicle transformation";
 
-<!-- =====================================================
-JAVASCRIPT
-===================================================== -->
 
-<script>
+                            lightbox.classList.add(
+                                "active"
+                            );
 
 
-/* =====================================================
-MOBILE NAVIGATION
-===================================================== */
+                            document.body.style.overflow =
+                                "hidden";
 
-const menuToggle =
-document.getElementById("menuToggle");
+                        }
+                    );
 
-const navMenu =
-document.getElementById("navMenu");
+                }
+            );
 
 
-if(menuToggle && navMenu){
+        function closeLightbox() {
 
-menuToggle.addEventListener(
-"click",
-function(){
+            lightbox.classList.remove(
+                "active"
+            );
 
-const open =
-navMenu.classList.toggle("active");
+            lightboxImage.src =
+                "";
 
-menuToggle.classList.toggle(
-"active",
-open
-);
+            document.body.style.overflow =
+                "";
 
-menuToggle.setAttribute(
-"aria-expanded",
-open
-);
+        }
 
-}
-);
 
+        if (lightboxClose) {
 
-navMenu
-.querySelectorAll("a")
-.forEach(
-function(link){
+            lightboxClose.addEventListener(
+                "click",
+                closeLightbox
+            );
 
-link.addEventListener(
-"click",
-function(){
+        }
 
-navMenu.classList.remove("active");
 
-menuToggle.classList.remove("active");
+        if (lightbox) {
 
-menuToggle.setAttribute(
-"aria-expanded",
-"false"
-);
+            lightbox.addEventListener(
+                "click",
+                function (event) {
 
-}
-);
+                    if (
+                        event.target === lightbox
+                    ) {
 
-}
-);
+                        closeLightbox();
 
-}
+                    }
 
+                }
+            );
 
+        }
 
-/* =====================================================
-SCROLL REVEAL
-===================================================== */
 
-const revealElements =
-document.querySelectorAll(".reveal");
+        document.addEventListener(
+            "keydown",
+            function (event) {
 
+                if (
+                    event.key === "Escape"
+                ) {
 
-const revealObserver =
-new IntersectionObserver(
-function(entries){
+                    closeLightbox();
 
-entries.forEach(
-function(entry){
+                }
 
-if(entry.isIntersecting){
+            }
+        );
 
-entry.target.classList.add(
-"visible"
-);
-
-revealObserver.unobserve(
-entry.target
-);
-
-}
-
-}
-);
-
-},
-{
-threshold: 0.12
-}
-);
-
-
-revealElements.forEach(
-function(element){
-
-revealObserver.observe(
-element
-);
-
-}
-);
-
-
-
-/* =====================================================
-LIGHTBOX
-===================================================== */
-
-const lightbox =
-document.getElementById("lightbox");
-
-const lightboxImage =
-document.getElementById("lightboxImage");
-
-const lightboxClose =
-document.getElementById("lightboxClose");
-
-
-document
-.querySelectorAll(".gallery-image[data-image]")
-.forEach(
-function(image){
-
-image.addEventListener(
-"click",
-function(){
-
-const source =
-image.getAttribute("data-image");
-
-
-if(!source){
-
-return;
-
-}
-
-
-lightboxImage.src =
-source;
-
-
-lightboxImage.alt =
-"Enhance My Ride vehicle transformation";
-
-
-lightbox.classList.add(
-"active"
-);
-
-}
-);
-
-}
-);
-
-
-function closeLightbox(){
-
-lightbox.classList.remove(
-"active"
-);
-
-lightboxImage.src =
-"";
-
-}
-
-
-lightboxClose.addEventListener(
-"click",
-closeLightbox
-);
-
-
-lightbox.addEventListener(
-"click",
-function(event){
-
-if(
-event.target === lightbox
-){
-
-closeLightbox();
-
-}
-
-}
-);
-
-
-document.addEventListener(
-"keydown",
-function(event){
-
-if(
-event.key === "Escape"
-){
-
-closeLightbox();
-
-}
-
-}
-);
-
-
-</script>
+    </script>
 
 
 </body>
 
 </html>
+```
