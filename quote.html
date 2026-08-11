@@ -1,3769 +1,2477 @@
-```html
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
 
-<meta charset="UTF-8">
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
->
-
-<title>
-Get A Quote | Enhance My Ride Auto Spa & Mobile Detailing
-</title>
+<title>Get A Quote | Enhance My Ride Auto Spa & Mobile Detailing</title>
 
 <meta
-name="description"
-content="Request a free mobile detailing quote from Enhance My Ride Auto Spa & Mobile Detailing. Choose your package, tell us about your vehicle, and let us bring premium detailing directly to you throughout Alameda, Oakland, San Francisco and the Bay Area."
+    name="description"
+    content="Request a free mobile detailing quote from Enhance My Ride Auto Spa & Mobile Detailing. Choose your package, tell us about your vehicle, and let us bring premium detailing directly to you throughout Alameda, Oakland, San Francisco and the Bay Area."
 >
 
 <meta
-name="keywords"
-content="mobile detailing quote, Alameda car detailing quote, Oakland mobile detailing, San Francisco mobile detailing, Bay Area auto detailing, mobile car detailing estimate"
+    name="keywords"
+    content="mobile detailing quote, Alameda car detailing quote, Oakland mobile detailing, San Francisco mobile detailing, Bay Area auto detailing, mobile car detailing estimate"
 >
 
-<meta
-name="author"
-content="Enhance My Ride Auto Spa & Mobile Detailing"
->
+<meta name="author" content="Enhance My Ride Auto Spa & Mobile Detailing">
+<meta name="robots" content="index, follow">
 
+<meta property="og:title" content="Get A Free Quote | Enhance My Ride">
 <meta
-name="robots"
-content="index, follow"
+    property="og:description"
+    content="Tell us about your vehicle and request a personalized mobile detailing quote."
 >
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://enhancemyride.com/quote.html">
 
-<meta
-property="og:title"
-content="Get A Free Quote | Enhance My Ride"
->
+<link rel="canonical" href="https://enhancemyride.com/quote.html">
 
-<meta
-property="og:description"
-content="Tell us about your vehicle and request a personalized mobile detailing quote."
->
+<link rel="stylesheet" href="style.css">
 
-<meta
-property="og:type"
-content="website"
->
-
-<meta
-property="og:url"
-content="https://enhancemyride.com/quote.html"
->
+<link rel="icon" type="image/png" href="favicon.png">
 
 <link
-rel="canonical"
-href="https://enhancemyride.com/quote.html"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 >
-
-<link
-rel="stylesheet"
-href="style.css"
->
-
-<link
-rel="icon"
-type="image/png"
-href="favicon.png"
->
-
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
->
-
 
 <style>
 
-/* =====================================================
-QUOTE PAGE
-===================================================== */
-
-.quote-page {
-    padding-top: 78px;
-}
-
-
-/* =====================================================
-QUOTE HERO
-===================================================== */
-
-.quote-hero {
-    padding:
-        125px 6% 95px;
-
-    text-align: center;
-
-    background:
-        linear-gradient(
-            rgba(8,8,8,.91),
-            rgba(8,8,8,.91)
-        ),
-
-        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=85")
-
-        center/cover no-repeat;
-
-    border-bottom:
-        1px solid
-        rgba(255,255,255,0.08);
-}
-
-.quote-hero-content {
-    width: min(
-        850px,
-        100%
-    );
-
-    margin: 0 auto;
-}
-
-.quote-hero h1 {
-    margin-bottom: 20px;
-}
-
-.quote-hero h1 span {
-    color: var(--gold-light);
-}
-
-.quote-hero p:not(.eyebrow) {
-    max-width: 700px;
-
-    margin:
-        0 auto;
-
-    color: #bbb;
-
-    font-size: 15px;
-
-    line-height: 1.8;
-}
-
-
-/* =====================================================
-QUOTE SECTION
-===================================================== */
-
-.quote-section {
-    padding:
-        90px 6%;
-
-    background:
-        #0c0c0c;
-}
-
-
-/* =====================================================
-FORM
-===================================================== */
-
-.quote-form {
-    width: min(
-        1000px,
-        100%
-    );
-
-    margin:
-        0 auto;
-
-    padding:
-        50px;
-
-    background:
-        #121212;
-
-    border:
-        1px solid
-        rgba(201,162,39,.30);
-
-    box-shadow:
-        0 25px 70px
-        rgba(0,0,0,.30);
-}
-
-
-/* =====================================================
-FORM HEADER
-===================================================== */
-
-.form-header {
-    margin-bottom: 40px;
-
-    text-align: center;
-}
-
-.form-header h2 {
-    margin-bottom: 12px;
-}
-
-.form-header h2 span {
-    color: var(--gold-light);
-}
-
-.form-intro {
-    max-width: 650px;
-
-    margin:
-        0 auto;
-
-    color: #999;
-
-    font-size: 13px;
-
-    line-height: 1.8;
-}
-
-
-/* =====================================================
-SECTION HEADERS
-===================================================== */
-
-.form-section {
-    margin-bottom: 40px;
-
-    padding-bottom: 35px;
-
-    border-bottom:
-        1px solid
-        rgba(255,255,255,.08);
-}
-
-.form-section:last-of-type {
-    border-bottom:
-        none;
-
-    margin-bottom:
-        0;
-}
-
-.form-section-title {
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    margin-bottom: 22px;
-}
-
-.form-section-title i {
-    color: var(--gold-light);
-
-    font-size: 16px;
-}
-
-.form-section-title h3 {
-    margin: 0;
-
-    font-size: 18px;
-
-    letter-spacing: .2px;
-}
-
-
-/* =====================================================
-FORM GRID
-===================================================== */
-
-.form-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 20px;
-}
-
-.form-group {
-    display: flex;
-
-    flex-direction: column;
-}
-
-.form-group.full {
-    grid-column:
-        1 / -1;
-}
-
-
-/* =====================================================
-LABELS
-===================================================== */
-
-.form-group label {
-    margin-bottom: 8px;
-
-    color: #ddd;
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 1.3px;
-
-    text-transform: uppercase;
-}
-
-.required {
-    color: var(--gold-light);
-}
-
-
-/* =====================================================
-INPUTS
-===================================================== */
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-
-    box-sizing: border-box;
-
-    padding:
-        15px;
-
-    background:
-        #080808;
-
-    border:
-        1px solid
-        rgba(255,255,255,.13);
-
-    border-radius:
-        0;
-
-    color:
-        #fff;
-
-    font-family:
-        inherit;
-
-    font-size:
-        14px;
-
-    outline:
-        none;
-
-    transition:
-        border-color .2s ease,
-        box-shadow .2s ease;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color:
-        #555;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color:
-        var(--gold);
-
-    box-shadow:
-        0 0 0 2px
-        rgba(201,162,39,.08);
-}
-
-.form-group select {
-    cursor:
-        pointer;
-}
-
-.form-group textarea {
-    min-height:
-        145px;
-
-    resize:
-        vertical;
-}
-
-
-/* =====================================================
-PACKAGE DISPLAY
-===================================================== */
-
-.package-display {
-    min-height:
-        18px;
-
-    margin:
-        8px 0 0;
-
-    color:
-        var(--gold-light);
-
-    font-size:
-        11px;
-
-    font-weight:
-        600;
-}
-
-
-/* =====================================================
-PACKAGE CARDS
-===================================================== */
-
-.package-options {
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap:
-        12px;
-
-    margin-bottom:
-        5px;
-}
-
-.package-option {
-    position:
-        relative;
-}
-
-.package-option input {
-    position:
-        absolute;
-
-    opacity:
-        0;
-
-    pointer-events:
-        none;
-}
-
-.package-option label {
-    display:
-        block;
-
-    height:
-        100%;
-
-    box-sizing:
-        border-box;
-
-    padding:
-        20px 16px;
-
-    background:
-        #090909;
-
-    border:
-        1px solid
-        rgba(255,255,255,.10);
-
-    cursor:
-        pointer;
-
-    transition:
-        all .25s ease;
-}
-
-.package-option label:hover {
-    border-color:
-        rgba(201,162,39,.35);
-}
-
-.package-option input:checked + label {
-    border-color:
-        var(--gold);
-
-    background:
-        rgba(201,162,39,.06);
-
-    box-shadow:
-        inset 0 0 0 1px
-        rgba(201,162,39,.15);
-}
-
-.package-name {
-    display:
-        block;
-
-    margin-bottom:
-        6px;
-
-    color:
-        #fff;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        17px;
-}
-
-.package-price {
-    display:
-        block;
-
-    margin-bottom:
-        10px;
-
-    color:
-        var(--gold-light);
-
-    font-size:
-        14px;
-
-    font-weight:
-        700;
-}
-
-.package-description {
-    display:
-        block;
-
-    color:
-        #777;
-
-    font-size:
-        10px;
-
-    line-height:
-        1.6;
-}
-
-
-/* =====================================================
-CHECKBOXES
-===================================================== */
-
-.checkbox-grid {
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap:
-        10px;
-}
-
-.checkbox-label {
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        10px;
-
-    padding:
-        13px 14px;
-
-    background:
-        #090909;
-
-    border:
-        1px solid
-        rgba(255,255,255,.09);
-
-    color:
-        #aaa;
-
-    font-size:
-        12px;
-
-    cursor:
-        pointer;
-}
-
-.checkbox-label input {
-    width:
-        15px;
-
-    height:
-        15px;
-
-    accent-color:
-        var(--gold);
-}
-
-
-/* =====================================================
-WATER / POWER NOTICE
-===================================================== */
-
-.access-notice {
-    margin-top:
-        15px;
-
-    padding:
-        14px 16px;
-
-    background:
-        rgba(201,162,39,.035);
-
-    border-left:
-        2px solid
-        var(--gold);
-
-    color:
-        #888;
-
-    font-size:
-        11px;
-
-    line-height:
-        1.7;
-}
-
-
-/* =====================================================
-PHOTO UPLOAD
-===================================================== */
-
-.upload-box {
-    padding:
-        25px;
-
-    text-align:
-        center;
-
-    background:
-        #090909;
-
-    border:
-        1px dashed
-        rgba(201,162,39,.30);
-}
-
-.upload-box i {
-    margin-bottom:
-        12px;
-
-    color:
-        var(--gold-light);
-
-    font-size:
-        25px;
-}
-
-.upload-box strong {
-    display:
-        block;
-
-    margin-bottom:
-        6px;
-
-    color:
-        #ddd;
-
-    font-size:
-        13px;
-}
-
-.upload-box p {
-    margin-bottom:
-        16px;
-
-    color:
-        #666;
-
-    font-size:
-        10px;
-}
-
-.upload-box input {
-    padding:
-        10px;
-
-    background:
-        #111;
-
-    border:
-        none;
-
-    color:
-        #aaa;
-
-    font-size:
-        11px;
-}
-
-
-/* =====================================================
-FORM NOTE
-===================================================== */
-
-.form-note {
-    margin-top:
-        15px;
-
-    color:
-        #666;
-
-    font-size:
-        10px;
-
-    line-height:
-        1.6;
-
-    text-align:
-        center;
-}
-
-
-/* =====================================================
-SUBMIT
-===================================================== */
-
-.submit-area {
-    margin-top:
-        35px;
-
-    padding-top:
-        30px;
-
-    border-top:
-        1px solid
-        rgba(255,255,255,.08);
-
-    text-align:
-        center;
-}
-
-.submit-area .button {
-    min-width:
-        230px;
-
-    cursor:
-        pointer;
-}
-
-.hero-slogan {
-    margin-top:
-        18px;
-
-    color:
-        #666;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        13px;
-
-    font-style:
-        italic;
-}
-
-
-/* =====================================================
-TRUST STRIP
-===================================================== */
-
-.quote-trust {
-    width:
-        min(
-            900px,
-            100%
-        );
-
-    margin:
-        45px auto 0;
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:
-        15px;
-}
-
-.trust-item {
-    padding:
-        20px;
-
-    text-align:
-        center;
-
-    background:
-        rgba(255,255,255,.02);
-
-    border:
-        1px solid
-        rgba(255,255,255,.07);
-}
-
-.trust-item i {
-    display:
-        block;
-
-    margin-bottom:
-        8px;
-
-    color:
-        var(--gold-light);
-
-    font-size:
-        18px;
-}
-
-.trust-item span {
-    color:
-        #888;
-
-    font-size:
-        10px;
-
-    line-height:
-        1.5;
-}
-
-
-/* =====================================================
-MOBILE
-===================================================== */
-
-@media(max-width:850px) {
-
-    .package-options {
-        grid-template-columns:
-            1fr;
-    }
-
-    .quote-trust {
-        grid-template-columns:
-            1fr;
-    }
-
-}
-
-
-@media(max-width:700px) {
+    /* =====================================================
+       QUOTE PAGE
+    ===================================================== */
 
     .quote-page {
-        padding-top:
-            70px;
+        padding-top: 78px;
     }
+
+
+    /* =====================================================
+       QUOTE HERO
+    ===================================================== */
 
     .quote-hero {
-        padding:
-            100px 6% 75px;
+        padding: 125px 6% 95px;
+
+        text-align: center;
+
+        background:
+            linear-gradient(
+                rgba(8, 8, 8, 0.91),
+                rgba(8, 8, 8, 0.91)
+            ),
+            url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=85")
+            center / cover no-repeat;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
+
+
+    .quote-hero-content {
+        width: min(850px, 100%);
+        margin: 0 auto;
+    }
+
+
+    .quote-hero h1 {
+        margin-bottom: 20px;
+
+        font-family:
+            Georgia,
+            "Times New Roman",
+            serif;
+
+        font-size: clamp(45px, 7vw, 80px);
+
+        line-height: 1.1;
+    }
+
+
+    .quote-hero h1 span {
+        color: var(--gold-light);
+    }
+
+
+    .quote-hero p:not(.eyebrow) {
+        max-width: 700px;
+
+        margin: 0 auto;
+
+        color: #bbb;
+
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+
+    /* =====================================================
+       QUOTE SECTION
+    ===================================================== */
+
+    .quote-section {
+        padding: 90px 6%;
+
+        background: #0c0c0c;
+    }
+
+
+    /* =====================================================
+       FORM
+    ===================================================== */
 
     .quote-form {
-        padding:
-            30px 20px;
+        width: min(1000px, 100%);
+
+        margin: 0 auto;
+
+        padding: 50px;
+
+        background: #121212;
+
+        border: 1px solid rgba(201, 162, 39, 0.30);
+
+        box-shadow:
+            0 25px 70px
+            rgba(0, 0, 0, 0.30);
     }
+
+
+    /* =====================================================
+       FORM HEADER
+    ===================================================== */
+
+    .form-header {
+        margin-bottom: 40px;
+
+        text-align: center;
+    }
+
+
+    .form-header h2 {
+        margin-bottom: 12px;
+
+        font-family:
+            Georgia,
+            "Times New Roman",
+            serif;
+
+        font-size: 38px;
+    }
+
+
+    .form-header h2 span {
+        color: var(--gold-light);
+    }
+
+
+    .form-intro {
+        max-width: 650px;
+
+        margin: 0 auto;
+
+        color: #999;
+
+        font-size: 13px;
+
+        line-height: 1.8;
+    }
+
+
+    /* =====================================================
+       SECTION HEADERS
+    ===================================================== */
+
+    .form-section {
+        margin-bottom: 40px;
+
+        padding-bottom: 35px;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+
+    .form-section:last-of-type {
+        border-bottom: none;
+
+        margin-bottom: 0;
+    }
+
+
+    .form-section-title {
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .form-section-title i {
+        color: var(--gold-light);
+
+        font-size: 16px;
+    }
+
+
+    .form-section-title h3 {
+        margin: 0;
+
+        font-size: 18px;
+
+        letter-spacing: 0.2px;
+    }
+
+
+    /* =====================================================
+       FORM GRID
+    ===================================================== */
 
     .form-grid {
-        grid-template-columns:
-            1fr;
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
     }
+
+
+    .form-group {
+        display: flex;
+
+        flex-direction: column;
+    }
+
 
     .form-group.full {
-        grid-column:
-            auto;
+        grid-column: 1 / -1;
     }
+
+
+    /* =====================================================
+       LABELS
+    ===================================================== */
+
+    .form-group label {
+        margin-bottom: 8px;
+
+        color: #ddd;
+
+        font-size: 10px;
+
+        font-weight: 700;
+
+        letter-spacing: 1.3px;
+
+        text-transform: uppercase;
+    }
+
+
+    .required {
+        color: var(--gold-light);
+    }
+
+
+    /* =====================================================
+       INPUTS
+    ===================================================== */
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 15px;
+
+        background: #080808;
+
+        border: 1px solid rgba(255, 255, 255, 0.13);
+
+        border-radius: 0;
+
+        color: #fff;
+
+        font-family: inherit;
+
+        font-size: 14px;
+
+        outline: none;
+
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: #555;
+    }
+
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: var(--gold);
+
+        box-shadow:
+            0 0 0 2px
+            rgba(201, 162, 39, 0.08);
+    }
+
+
+    .form-group select {
+        cursor: pointer;
+    }
+
+
+    .form-group textarea {
+        min-height: 145px;
+
+        resize: vertical;
+    }
+
+
+    /* =====================================================
+       PACKAGE OPTIONS
+    ===================================================== */
+
+    .package-options {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 12px;
+
+        margin-bottom: 5px;
+    }
+
+
+    .package-option {
+        position: relative;
+    }
+
+
+    .package-option input {
+        position: absolute;
+
+        opacity: 0;
+
+        pointer-events: none;
+    }
+
+
+    .package-option label {
+        display: block;
+
+        height: 100%;
+
+        box-sizing: border-box;
+
+        padding: 20px 16px;
+
+        background: #090909;
+
+        border: 1px solid rgba(255, 255, 255, 0.10);
+
+        cursor: pointer;
+
+        transition: all 0.25s ease;
+    }
+
+
+    .package-option label:hover {
+        border-color: rgba(201, 162, 39, 0.35);
+    }
+
+
+    .package-option input:checked + label {
+        border-color: var(--gold);
+
+        background: rgba(201, 162, 39, 0.06);
+
+        box-shadow:
+            inset 0 0 0 1px
+            rgba(201, 162, 39, 0.15);
+    }
+
+
+    .package-name {
+        display: block;
+
+        margin-bottom: 6px;
+
+        color: #fff;
+
+        font-family:
+            Georgia,
+            "Times New Roman",
+            serif;
+
+        font-size: 17px;
+    }
+
+
+    .package-price {
+        display: block;
+
+        margin-bottom: 10px;
+
+        color: var(--gold-light);
+
+        font-size: 14px;
+
+        font-weight: 700;
+    }
+
+
+    .package-description {
+        display: block;
+
+        color: #777;
+
+        font-size: 10px;
+
+        line-height: 1.6;
+    }
+
+
+    .package-display {
+        min-height: 18px;
+
+        margin: 8px 0 0;
+
+        color: var(--gold-light);
+
+        font-size: 11px;
+
+        font-weight: 600;
+    }
+
+
+    /* =====================================================
+       CHECKBOXES
+    ===================================================== */
 
     .checkbox-grid {
-        grid-template-columns:
-            1fr;
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
     }
 
-}
+
+    .checkbox-label {
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+        padding: 13px 14px;
+
+        background: #090909;
+
+        border: 1px solid rgba(255, 255, 255, 0.09);
+
+        color: #aaa;
+
+        font-size: 12px;
+
+        cursor: pointer;
+
+        transition:
+            border-color 0.2s ease,
+            background 0.2s ease;
+    }
+
+
+    .checkbox-label:hover {
+        border-color: rgba(201, 162, 39, 0.30);
+
+        background: rgba(201, 162, 39, 0.025);
+    }
+
+
+    .checkbox-label input {
+        width: 15px;
+
+        height: 15px;
+
+        accent-color: var(--gold);
+    }
+
+
+    /* =====================================================
+       WATER / POWER NOTICE
+    ===================================================== */
+
+    .access-notice {
+        margin-top: 15px;
+
+        padding: 14px 16px;
+
+        background: rgba(201, 162, 39, 0.035);
+
+        border-left: 2px solid var(--gold);
+
+        color: #888;
+
+        font-size: 11px;
+
+        line-height: 1.7;
+    }
+
+
+    .access-notice i {
+        margin-right: 6px;
+
+        color: var(--gold-light);
+    }
+
+
+    /* =====================================================
+       PHOTO UPLOAD
+    ===================================================== */
+
+    .upload-box {
+        padding: 25px;
+
+        text-align: center;
+
+        background: #090909;
+
+        border: 1px dashed rgba(201, 162, 39, 0.30);
+    }
+
+
+    .upload-box i {
+        display: block;
+
+        margin-bottom: 12px;
+
+        color: var(--gold-light);
+
+        font-size: 25px;
+    }
+
+
+    .upload-box strong {
+        display: block;
+
+        margin-bottom: 6px;
+
+        color: #ddd;
+
+        font-size: 13px;
+    }
+
+
+    .upload-box p {
+        margin-bottom: 16px;
+
+        color: #666;
+
+        font-size: 10px;
+
+        line-height: 1.6;
+    }
+
+
+    .upload-box input {
+        max-width: 100%;
+
+        padding: 10px;
+
+        background: #111;
+
+        border: none;
+
+        color: #aaa;
+
+        font-size: 11px;
+    }
+
+
+    .form-note {
+        margin-top: 15px;
+
+        color: #666;
+
+        font-size: 10px;
+
+        line-height: 1.6;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       SUBMIT
+    ===================================================== */
+
+    .submit-area {
+        margin-top: 35px;
+
+        padding-top: 30px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+        text-align: center;
+    }
+
+
+    .submit-area .button {
+        min-width: 230px;
+
+        cursor: pointer;
+    }
+
+
+    .hero-slogan {
+        margin-top: 18px;
+
+        color: #666;
+
+        font-family:
+            Georgia,
+            "Times New Roman",
+            serif;
+
+        font-size: 13px;
+
+        font-style: italic;
+    }
+
+
+    /* =====================================================
+       TRUST STRIP
+    ===================================================== */
+
+    .quote-trust {
+        width: min(900px, 100%);
+
+        margin: 45px auto 0;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 15px;
+    }
+
+
+    .trust-item {
+        padding: 20px;
+
+        text-align: center;
+
+        background: rgba(255, 255, 255, 0.02);
+
+        border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+
+    .trust-item i {
+        display: block;
+
+        margin-bottom: 8px;
+
+        color: var(--gold-light);
+
+        font-size: 18px;
+    }
+
+
+    .trust-item span {
+        color: #888;
+
+        font-size: 10px;
+
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       SUCCESS / STATUS MESSAGE
+    ===================================================== */
+
+    .form-status {
+        display: none;
+
+        margin-bottom: 25px;
+
+        padding: 14px 16px;
+
+        background: rgba(201, 162, 39, 0.06);
+
+        border: 1px solid rgba(201, 162, 39, 0.25);
+
+        color: #ccc;
+
+        font-size: 12px;
+
+        line-height: 1.6;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 850px) {
+
+        .package-options {
+            grid-template-columns: 1fr;
+        }
+
+        .quote-trust {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+        .quote-page {
+            padding-top: 70px;
+        }
+
+
+        .quote-hero {
+            padding: 100px 6% 75px;
+        }
+
+
+        .quote-form {
+            padding: 30px 20px;
+        }
+
+
+        .form-header h2 {
+            font-size: 32px;
+        }
+
+
+        .form-grid {
+            grid-template-columns: 1fr;
+        }
+
+
+        .form-group.full {
+            grid-column: auto;
+        }
+
+
+        .checkbox-grid {
+            grid-template-columns: 1fr;
+        }
+
+
+        .submit-area .button {
+            width: 100%;
+
+            min-width: 0;
+        }
+
+    }
 
 </style>
-
-</head>
-
-
-<body>
-
-
-<!-- =====================================================
-NAVIGATION
-===================================================== -->
-
-<header class="navbar">
-
-<a
-href="index.html"
-class="logo"
-aria-label="Enhance My Ride Home"
->
-
-<div class="logo-mark">
-EMR
-</div>
-
-<div class="logo-text">
-
-<span class="logo-main">
-ENHANCE MY RIDE
-</span>
-
-<span class="logo-sub">
-AUTO SPA & MOBILE DETAILING
-</span>
-
-</div>
-
-</a>
-
-
-<button
-class="menu-toggle"
-id="menuToggle"
-type="button"
-aria-label="Open navigation menu"
-aria-expanded="false"
->
-
-<span></span>
-<span></span>
-<span></span>
-
-</button>
-
-
-<nav>
-
-<ul
-class="nav-menu"
-id="navMenu"
->
-
-<li>
-<a href="index.html">
-Home
-</a>
-</li>
-
-<li>
-<a href="gallery.html">
-Gallery
-</a>
-</li>
-
-<li>
-<a href="services.html">
-Services
-</a>
-</li>
-
-<li>
-<a
-href="quote.html"
-class="nav-quote"
->
-Get Free Quote
-</a>
-</li>
-
-<li>
-<a href="about.html">
-About
-</a>
-</li>
-
-<li>
-<a href="service-area.html">
-Service Area
-</a>
-</li>
-
-</ul>
-
-</nav>
-
-</header>
-
-
-
-<main class="quote-page">
-
-
-<!-- =====================================================
-HERO
-===================================================== -->
-
-<section class="quote-hero">
-
-<div class="quote-hero-content reveal">
-
-<p class="eyebrow">
-REQUEST YOUR DETAIL
-</p>
-
-<h1>
-
-Get Your
-
-<span>
-Free Quote.
-</span>
-
-</h1>
-
-<p>
-
-Tell us about your vehicle, where it's located,
-and what you'd like us to accomplish.
-We'll review the details and get back to you
-with a personalized quote.
-
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-FORM
-===================================================== -->
-
-<section class="quote-section">
-
-
-<form
-class="quote-form"
-id="quoteForm"
-action="https://formspree.io/f/mrenjdkv"
-method="POST"
-enctype="multipart/form-data"
->
-
-
-<input
-type="hidden"
-name="_next"
-value="https://enhancemyride.com/thank-you.html"
->
-
-<input
-type="hidden"
-name="_subject"
-value="New Enhance My Ride Detail Quote Request"
->
-
-<input
-type="hidden"
-name="_replyto"
-id="replyTo"
->
-
-
-<!-- =====================================================
-CUSTOMER INFORMATION
-===================================================== -->
-
-<div class="form-section">
-
-
-<div class="form-section-title">
-
-<i class="fa-solid fa-user"></i>
-
-<h3>
-Your Information
-</h3>
-
-</div>
-
-
-<div class="form-grid">
-
-
-<div class="form-group">
-
-<label>
-Full Name <span class="required">*</span>
-</label>
-
-<input
-type="text"
-name="name"
-placeholder="Your full name"
-autocomplete="name"
-required
->
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-Phone <span class="required">*</span>
-</label>
-
-<input
-type="tel"
-name="phone"
-placeholder="(323) 327-1806"
-autocomplete="tel"
-required
->
-
-</div>
-
-
-<div class="form-group full">
-
-<label>
-Email <span class="required">*</span>
-</label>
-
-<input
-type="email"
-name="email"
-placeholder="you@example.com"
-autocomplete="email"
-required
->
-
-</div>
-
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-VEHICLE INFORMATION
-===================================================== -->
-
-<div class="form-section">
-
-
-<div class="form-section-title">
-
-<i class="fa-solid fa-car"></i>
-
-<h3>
-Your Vehicle
-</h3>
-
-</div>
-
-
-<div class="form-grid">
-
-
-<div class="form-group">
-
-<label>
-Vehicle Year <span class="required">*</span>
-</label>
-
-<input
-type="number"
-name="vehicle_year"
-placeholder="2025"
-min="1900"
-max="2035"
-required
->
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-Vehicle Make <span class="required">*</span>
-</label>
-
-<input
-type="text"
-name="vehicle_make"
-placeholder="Honda"
-required
->
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-Vehicle Model <span class="required">*</span>
-</label>
-
-<input
-type="text"
-name="vehicle_model"
-placeholder="CR-V"
-required
->
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-Vehicle Type <span class="required">*</span>
-</label>
-
-<select
-name="vehicle_type"
-required
->
-
-<option value="">
-Select Vehicle Type
-</option>
-
-<option>
-Sedan
-</option>
-
-<option>
-SUV / Crossover
-</option>
-
-<option>
-Truck
-</option>
-
-<option>
-Coupe
-</option>
-
-<option>
-Convertible
-</option>
-
-<option>
-Van / Minivan
-</option>
-
-<option>
-Luxury Vehicle
-</option>
-
-<option>
-Sports Car
-</option>
-
-<option>
-Motorcycle
-</option>
-
-<option>
-Boat
-</option>
-
-</select>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-PACKAGE
-===================================================== -->
-
-<div class="form-section">
-
-
-<div class="form-section-title">
-
-<i class="fa-solid fa-gem"></i>
-
-<h3>
-Choose Your Package
-</h3>
-
-</div>
-
-
-<div class="package-options">
-
-
-<div class="package-option">
-
-<input
-type="radio"
-id="gold"
-name="service_package"
-value="Enhance Gold — Starting $149"
-required
->
-
-<label for="gold">
-
-<span class="package-name">
-Enhance Gold
-</span>
-
-<span class="package-price">
-Starting at $149
-</span>
-
-<span class="package-description">
-Essential interior & exterior enhancement for maintaining a clean, refreshed vehicle.
-</span>
-
-</label>
-
-</div>
-
-
-
-<div class="package-option">
-
-<input
-type="radio"
-id="black-label"
-name="service_package"
-value="Enhance Black Label — Starting $249"
->
-
-<label for="black-label">
-
-<span class="package-name">
-Enhance Black Label
-</span>
-
-<span class="package-price">
-Starting at $249
-</span>
-
-<span class="package-description">
-A deeper level of interior and exterior care for customers wanting a more complete enhancement.
-</span>
-
-</label>
-
-</div>
-
-
-
-<div class="package-option">
-
-<input
-type="radio"
-id="showroom"
-name="service_package"
-value="Enhance Showroom Edition — Starting $399"
->
-
-<label for="showroom">
-
-<span class="package-name">
-Enhance Showroom Edition
-</span>
-
-<span class="package-price">
-Starting at $399
-</span>
-
-<span class="package-description">
-Our highest-level enhancement for customers seeking an exceptional, showroom-ready finish.
-</span>
-
-</label>
-
-</div>
-
-
-</div>
-
-
-<p
-class="package-display"
-id="packageDisplay"
-></p>
-
-
-</div>
-
-
-
-<!-- =====================================================
-VEHICLE CONDITION
-===================================================== -->
-
-<div class="form-section">
-
-
-<div class="form-section-title">
-
-<i class="fa-solid fa-sparkles"></i>
-
-<h3>
-Vehicle Condition
-</h3>
-
-</div>
-
-
-<div class="form-grid">
-
-
-<div class="form-group">
-
-<label>
-Overall Condition
-</label>
-
-<select
-name="vehicle_condition"
->
-
-<option value="">
-Select Condition
-</option>
-
-<option>
-Light / Well Maintained
-</option>
-
-<option>
-Moderately Dirty
-</option>
-
-<option>
-Heavy Dirt / Grime
-</option>
-
-<option>
-Very Dirty
-</option>
-
-<option>
-Extreme Condition
-</option>
-
-<option>
-Not Sure
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-Interior Condition
-</label>
-
-<select
-name="interior_condition"
->
-
-<option value="">
-Select Condition
-</option>
-
-<option>
-Lightly Used
-</option>
-
-<option>
-Moderately Dirty
-</option>
-
-<option>
-Heavy Dirt
-</option>
-
-<option>
-Stains / Spills
-</option>
-
-<option>
-Pet Hair
-</option>
-
-<option>
-Very Dirty
-</option>
-
-<option>
-Not Sure
-</option>
-
-</select>
-
-</div>
-
-
-</div>
-
-
-<div class="checkbox-grid">
-
-
-<label class="checkbox-label">
-
-<input
-type="checkbox"
-name="condition_features[]"
-value="Pet Hair"
->
-
-Pet Hair
-
-</label>
-
-
-<label class="checkbox-label">
-
-<input
-type="checkbox"
-name="condition_features[]"
-value="Stains"
->
-
-Interior Stains
-
-</label>
-
-
-<label class="checkbox-label">
-
-<input
-type="checkbox"
-name="condition_features[]"
-value="Odor"
->
-
-Odor
-
-</label>
-
-
-<label class="checkbox-label">
-
-<input
-type="checkbox"
-name="condition_features[]"
-value="Heavy Brake Dust"
->
-
-Heavy Brake Dust
-
-</label>
-
-
-<label class="checkbox-label">
-
-<input
-type="checkbox"
-name="condition_features[]"
-value="Mud / Heavy Dirt"
->
-
-Mud / Heavy Dirt
-
-</label>
-
-
-<label class="checkbox-label">
-
-<input
-type="checkbox"
-name="condition_features[]"
-value="Sand"
->
-
-Sand / Debris
-
-</label>
-
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-LOCATION
-===================================================== -->
-
-<div class="form-section">
-
-
-<div class="form-section-title">
-
-<i class="fa-solid fa-location-dot"></i>
-
-<h3>
-Where Will We Detail?
-</h3>
-
-</div>
-
-
-<div class="form-grid">
-
-
-<div class="form-group full">
-
-<label>
-Service Address <span class="required">*</span>
-</label>
-
-<input
-type="text"
-name="service_address"
-placeholder="Street address, city, ZIP"
-autocomplete="street-address"
-required
->
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-Water Access <span class="required">*</span>
-</label>
-
-<select
-name="water_access"
-required
->
-
-<option value="">
-Select One
-</option>
-
-<option>
-Yes — Customer water available
-</option>
-
-<option>
-No — No customer water
-</option>
-
-<option>
-Not Sure
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-Power Access <span class="required">*</span>
-</label>
-
-<select
-name="power_access"
-required
->
-
-<option value="">
-Select One
-</option>
-
-<option>
-Yes — Customer power available
-</option>
-
-<option>
-No — No customer power
-</option>
-
-<option>
-Not Sure
-</option>
-
-</select>
-
-</div>
-
-
-</div>
-
-
-<div class="access-notice">
-
-<i class="fa-solid fa-circle-info"></i>
-
-Please let us know whether water and power
-are available at the service location.
-This helps us plan the proper mobile setup
-for your appointment.
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-DATE / TIME
-===================================================== -->
-
-<div class="form-section">
-
-
-<div class="form-section-title">
-
-<i class="fa-solid fa-calendar-days"></i>
-
-<h3>
-Appointment Preference
-</h3>
-
-</div>
-
-
-<div class="form-grid">
-
-
-<div class="form-group">
-
-<label>
-Preferred Date
-</label>
-
-<input
-type="date"
-name="preferred_date"
->
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-Preferred Time
-</label>
-
-<select
-name="preferred_time"
->
-
-<option value="">
-Select Time
-</option>
-
-<option>
-Morning
-</option>
-
-<option>
-Late Morning
-</option>
-
-<option>
-Afternoon
-</option>
-
-<option>
-Evening
-</option>
-
-</select>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-ADDITIONAL SERVICES
-===================================================== -->
-
-<div class="form-section">
-
-
-<div class="form-section-title">
-
-<i class="fa-solid fa-plus"></i>
-
-<h3>
-Additional Services
-</h3>
-
-</div>
-
-
-<div class="checkbox-grid">
-
-
-<label class="checkbox-label">
-
-<input
-type="checkbox"
-name="additional_services[]"
-value="Pet Hair Removal"
->
-
-Pet Hair Removal
-
-</label>
-
-
-<label class="checkbox-label">
-
-<input
-type="checkbox"
-name="additional_services[]"
-value="Odor Treatment"
->
-
-Odor Treatment
-
-</label>
-
-
-<label class="checkbox-label">
-
-<input
-type="checkbox"
-name="additional_services[]"
-value="Stain Treatment"
->
-
-Stain Treatment
-
-</label>
-
-
-<label class="checkbox-label">
-
-<input
-type="checkbox"
-name="additional_services[]"
-value="Heavy Wheel Cleaning"
->
-
-Heavy Wheel Cleaning
-
-</label>
-
-
-<label class="checkbox-label">
-
-<input
-type="checkbox"
-name="additional_services[]"
-value="Engine Bay"
->
-
-Engine Bay
-
-</label>
-
-
-<label class="checkbox-label">
-
-<input
-type="checkbox"
-name="additional_services[]"
-value="Other"
->
-
-Other / Not Sure
-
-</label>
-
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-PHOTOS
-===================================================== -->
-
-<div class="form-section">
-
-
-<div class="form-section-title">
-
-<i class="fa-solid fa-camera"></i>
-
-<h3>
-Vehicle Photos
-</h3>
-
-</div>
-
-
-<div class="upload-box">
-
-<i class="fa-solid fa-images"></i>
-
-<strong>
-Help Us See The Vehicle
-</strong>
-
-<p>
-
-Photos help us understand the vehicle's
-condition and provide a more accurate quote.
-
-</p>
-
-<input
-type="file"
-name="vehicle_photos"
-accept="image/jpeg,image/png,image/webp"
-multiple
->
-
-</div>
-
-
-<p class="form-note">
-
-You can upload multiple photos.
-If your photos are too large to submit,
-you can send them separately after we contact you.
-
-</p>
-
-</div>
-
-
-
-<!-- =====================================================
-ADDITIONAL INFORMATION
-===================================================== -->
-
-<div class="form-section">
-
-
-<div class="form-section-title">
-
-<i class="fa-solid fa-message"></i>
-
-<h3>
-Anything Else?
-</h3>
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-Tell Us About Your Vehicle
-</label>
-
-<textarea
-name="additional_notes"
-placeholder="Tell us anything we should know about your vehicle, what you want improved, or any specific concerns you have."
-></textarea>
-
-</div>
-
-
-</div>
-
-
-
-<!-- =====================================================
-SUBMIT
-===================================================== -->
-
-<div class="submit-area">
-
-<button
-type="submit"
-class="button button-gold"
->
-
-Request My Free Quote
-
-</button>
-
-
-<p class="hero-slogan">
-
-We come to you. You relax. We Enhance.
-
-</p>
-
-</div>
-
-
-</form>
-
-
-
-<!-- =====================================================
-TRUST STRIP
-===================================================== -->
-
-<div class="quote-trust">
-
-
-<div class="trust-item">
-
-<i class="fa-solid fa-mobile-screen-button"></i>
-
-<span>
-Mobile service delivered
-to your location
-</span>
-
-</div>
-
-
-<div class="trust-item">
-
-<i class="fa-solid fa-file-invoice-dollar"></i>
-
-<span>
-Personalized quotes based
-on your vehicle
-</span>
-
-</div>
-
-
-<div class="trust-item">
-
-<i class="fa-solid fa-shield-heart"></i>
-
-<span>
-Professional care with
-attention to detail
-</span>
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-<!-- =====================================================
-CTA
-===================================================== -->
-
-<section class="cta">
-
-<p class="eyebrow">
-YOUR VEHICLE COULD BE NEXT
-</p>
-
-<h2>
-
-Let's
-
-<span>
-Enhance Your Ride.
-</span>
-
-</h2>
-
-<p>
-
-Submit your information and we'll
-review your vehicle details.
-
-</p>
-
-<a
-href="tel:3233271806"
-class="button button-outline"
->
-
-<i class="fa-solid fa-phone"></i>
-
-Call (323) 327-1806
-
-</a>
-
-</section>
-
-
-</main>
-
-
-
-<!-- =====================================================
-FOOTER
-===================================================== -->
-
-<footer>
-
-<div class="footer-grid">
-
-
-<div class="footer-brand">
-
-<div class="footer-title">
-ENHANCE MY RIDE
-</div>
-
-<div class="footer-sub">
-AUTO SPA & MOBILE DETAILING
-</div>
-
-
-<p class="footer-text">
-
-We come to you. You relax. We Enhance.
-
-<br><br>
-
-Premium mobile detailing serving
-San Francisco and the entire Bay Area.
-
-</p>
-
-
-<div class="social-icons">
-
-
-<a
-href="https://instagram.com/enhancemyridemobiledetailing"
-target="_blank"
-rel="noopener"
-aria-label="Instagram"
->
-
-<i class="fa-brands fa-instagram"></i>
-
-</a>
-
-
-<a
-href="https://www.facebook.com/Enhancemyridemobiledetailing"
-target="_blank"
-rel="noopener"
-aria-label="Facebook"
->
-
-<i class="fa-brands fa-facebook-f"></i>
-
-</a>
-
-
-<a
-href="https://www.tiktok.com/@enhancemyride"
-target="_blank"
-rel="noopener"
-aria-label="TikTok"
->
-
-<i class="fa-brands fa-tiktok"></i>
-
-</a>
-
-
-<a
-href="https://youtube.com/@enhancemyridemobiledetailing"
-target="_blank"
-rel="noopener"
-aria-label="YouTube"
->
-
-<i class="fa-brands fa-youtube"></i>
-
-</a>
-
-
-</div>
-
-</div>
-
-
-
-<div class="footer-contact">
-
-<div class="footer-title">
-CONTACT
-</div>
-
-
-<p class="footer-text">
-
-
-<a
-href="mailto:info@enhancemyride.com"
->
-
-<i class="fa-solid fa-envelope"></i>
-
-info@enhancemyride.com
-
-</a>
-
-
-<br><br>
-
-
-<a
-href="tel:3233271806"
->
-
-<i class="fa-solid fa-phone"></i>
-
-(323) 327-1806
-
-</a>
-
-
-</p>
-
-
-<a
-href="https://g.page/r/CRy_PYJmq6NYEBM/review"
-target="_blank"
-rel="noopener"
-class="button button-outline"
->
-
-<i class="fa-brands fa-google"></i>
-
-Leave A Google Review
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-<div class="copyright">
-
-© 2026 Enhance My Ride Auto Spa & Mobile Detailing.
-All Rights Reserved.
-
-</div>
-
-</footer>
-
-
-
-<!-- =====================================================
-JAVASCRIPT
-===================================================== -->
-
-<script>
-
-
-/* =====================================================
-MOBILE NAVIGATION
-===================================================== */
-
-const menuToggle =
-document.getElementById("menuToggle");
-
-const navMenu =
-document.getElementById("navMenu");
-
-
-if(menuToggle && navMenu){
-
-menuToggle.addEventListener(
-"click",
-function(){
-
-const open =
-navMenu.classList.toggle("active");
-
-menuToggle.classList.toggle(
-"active",
-open
-);
-
-menuToggle.setAttribute(
-"aria-expanded",
-open
-);
-
-}
-);
-
-
-navMenu
-.querySelectorAll("a")
-.forEach(
-function(link){
-
-link.addEventListener(
-"click",
-function(){
-
-navMenu.classList.remove("active");
-
-menuToggle.classList.remove("active");
-
-menuToggle.setAttribute(
-"aria-expanded",
-"false"
-);
-
-}
-);
-
-}
-);
-
-}
-
-
-
-/* =====================================================
-PACKAGE PRESELECTION
-===================================================== */
-
-const params =
-new URLSearchParams(
-window.location.search
-);
-
-const packageChoice =
-params.get("package");
-
-
-const packageInputs = {
-
-gold:
-document.getElementById("gold"),
-
-black:
-document.getElementById("black-label"),
-
-premium:
-document.getElementById("black-label"),
-
-elite:
-document.getElementById("showroom"),
-
-showroom:
-document.getElementById("showroom")
-
-};
-
-
-if(
-packageChoice &&
-packageInputs[packageChoice]
-){
-
-packageInputs[packageChoice].checked =
-true;
-
-}
-
-
-
-/* =====================================================
-PACKAGE DISPLAY
-===================================================== */
-
-const packageDisplay =
-document.getElementById(
-"packageDisplay"
-);
-
-
-const packageRadios =
-document.querySelectorAll(
-'input[name="service_package"]'
-);
-
-
-packageRadios.forEach(
-function(radio){
-
-radio.addEventListener(
-"change",
-function(){
-
-packageDisplay.textContent =
-this.value;
-
-}
-);
-
-}
-);
-
-
-const selectedPackage =
-document.querySelector(
-'input[name="service_package"]:checked'
-);
-
-
-if(selectedPackage){
-
-packageDisplay.textContent =
-selectedPackage.value;
-
-}
-
-
-
-/* =====================================================
-FORM EMAIL
-===================================================== */
-
-const quoteForm =
-document.getElementById(
-"quoteForm"
-);
-
-const emailInput =
-document.querySelector(
-'input[name="email"]'
-);
-
-const replyTo =
-document.getElementById(
-"replyTo"
-);
-
-
-if(quoteForm){
-
-quoteForm.addEventListener(
-"submit",
-function(){
-
-if(
-emailInput &&
-replyTo
-){
-
-replyTo.value =
-emailInput.value;
-
-}
-
-}
-);
-
-}
-
-
-
-/* =====================================================
-DATE — PREVENT PAST DATES
-===================================================== */
-
-const dateInput =
-document.querySelector(
-'input[name="preferred_date"]'
-);
-
-
-if(dateInput){
-
-const today =
-new Date();
-
-const year =
-today.getFullYear();
-
-const month =
-String(
-today.getMonth() + 1
-).padStart(
-2,
-"0"
-);
-
-const day =
-String(
-today.getDate()
-).padStart(
-2,
-"0"
-);
-
-dateInput.min =
-`${year}-${month}-${day}`;
-
-}
-
-
-
-/* =====================================================
-SCROLL REVEAL
-===================================================== */
-
-const revealElements =
-document.querySelectorAll(
-".reveal"
-);
-
-
-if(
-"IntersectionObserver"
-in window
-){
-
-const revealObserver =
-new IntersectionObserver(
-function(entries){
-
-entries.forEach(
-function(entry){
-
-if(
-entry.isIntersecting
-){
-
-entry.target.classList.add(
-"visible"
-);
-
-revealObserver.unobserve(
-entry.target
-);
-
-}
-
-}
-);
-
-},
-{
-threshold:
-0.12
-}
-);
-
-
-revealElements.forEach(
-function(element){
-
-revealObserver.observe(
-element
-);
-
-}
-);
-
-}
-else{
-
-revealElements.forEach(
-function(element){
-
-element.classList.add(
-"visible"
-);
-
-}
-);
-
-
-}
-
-
-</script>
-
-
-</body>
-
-</html>
 ```
 
-font-family:Georgia,"Times New Roman",serif;
-
-font-size:clamp(45px,7vw,80px);
-
-line-height:1.1;
-
-}
-
-
-
-.quote-hero h1 span {
-
-color:var(--gold-light);
-
-}
-
-
-
-.quote-hero p {
-
-max-width:650px;
-
-margin:20px auto 0;
-
-color:#bbb;
-
-}
-
-
-
-.quote-section {
-
-padding:90px 6%;
-
-
-background:#0c0c0c;
-
-}
-
-
-
-.quote-form {
-
-max-width:950px;
-
-margin:auto;
-
-background:#121212;
-
-border:1px solid rgba(201,162,39,.35);
-
-padding:45px;
-
-}
-
-
-
-.quote-form h2 {
-
-font-family:Georgia,"Times New Roman",serif;
-
-font-size:38px;
-
-margin-bottom:10px;
-
-}
-
-
-
-.form-intro {
-
-color:#999;
-
-margin-bottom:35px;
-
-}
-
-
-
-.form-grid {
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:20px;
-
-}
-
-
-
-.form-group {
-
-display:flex;
-
-flex-direction:column;
-
-}
-
-
-
-.form-group.full {
-
-grid-column:1/-1;
-
-}
-
-
-
-.form-group label {
-
-font-size:11px;
-
-font-weight:bold;
-
-letter-spacing:1px;
-
-text-transform:uppercase;
-
-color:#ddd;
-
-margin-bottom:8px;
-
-}
-
-
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-
-background:#080808;
-
-border:1px solid rgba(255,255,255,.15);
-
-padding:15px;
-
-color:white;
-
-font-size:14px;
-
-outline:none;
-
-}
-
-
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-
-border-color:var(--gold);
-
-}
-
-
-
-.form-group textarea {
-
-min-height:140px;
-
-resize:vertical;
-
-}
-
-
-
-.package-display {
-
-margin-top:10px;
-
-color:var(--gold-light);
-
-font-size:12px;
-
-}
-
-
-
-.submit-area {
-
-text-align:center;
-
-margin-top:35px;
-
-}
-
-
-
-@media(max-width:700px){
-
-
-.form-grid {
-
-grid-template-columns:1fr;
-
-}
-
-
-.quote-form {
-
-padding:25px 20px;
-
-}
-
-
-}
-
-
-</style>
-
-
 </head>
-
 
 <body>
 
+```
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
 <header class="navbar">
 
+    <a
+        href="index.html"
+        class="logo"
+        aria-label="Enhance My Ride Home"
+    >
 
-<a href="index.html" class="logo">
+        <div class="logo-mark">
+            EMR
+        </div>
 
+        <div class="logo-text">
 
-<div class="logo-mark">
+            <span class="logo-main">
+                ENHANCE MY RIDE
+            </span>
 
-EMR
+            <span class="logo-sub">
+                AUTO SPA & MOBILE DETAILING
+            </span>
 
-</div>
+        </div>
 
-
-<div class="logo-text">
-
-
-<span class="logo-main">
-
-ENHANCE MY RIDE
-
-</span>
-
-
-<span class="logo-sub">
-
-AUTO SPA & MOBILE DETAILING
-
-</span>
+    </a>
 
 
-</div>
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+    >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
 
 
-</a>
+    <nav>
 
+        <ul
+            class="nav-menu"
+            id="navMenu"
+        >
 
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
 
+            <li>
+                <a href="gallery.html">
+                    Gallery
+                </a>
+            </li>
 
+            <li>
+                <a href="services.html">
+                    Services
+                </a>
+            </li>
 
-<button
-class="menu-toggle"
-id="menuToggle"
-type="button"
-aria-label="Open navigation menu"
-aria-expanded="false"
->
+            <li>
+                <a
+                    href="quote.html"
+                    class="nav-quote"
+                >
+                    Get Free Quote
+                </a>
+            </li>
 
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
 
-<span></span>
+            <li>
+                <a href="service-area.html">
+                    Service Area
+                </a>
+            </li>
 
-<span></span>
+        </ul>
 
-<span></span>
-
-
-</button>
-
-
-
-
-
-<nav>
-
-
-<ul class="nav-menu" id="navMenu">
-
-<li>
-<a href="index.html">
-Home
-</a>
-</li>
-
-
-<li>
-<a href="gallery.html">
-Gallery
-</a>
-</li>
-
-
-<li>
-<a href="services.html">
-Services
-</a>
-</li>
-
-
-<li>
-<a href="quote.html" class="nav-quote">
-Get Your Free Quote
-</a>
-</li>
-
-
-<li>
-<a href="about.html">
-About
-</a>
-</li>
-
-
-<li>
-<a href="service-area.html">
-Service Area
-</a>
-</li>
-
-
-</ul>
-
-
-</nav>
-
+    </nav>
 
 </header>
-
-
-
 
 
 <main class="quote-page">
 
 
-<section class="quote-hero">
+    <!-- =================================================
+         HERO
+    ================================================== -->
 
+    <section class="quote-hero">
 
-<p class="eyebrow">
+        <div class="quote-hero-content reveal">
 
-REQUEST YOUR DETAIL
+            <p class="eyebrow">
+                REQUEST YOUR DETAIL
+            </p>
 
-</p>
+            <h1>
+                Get Your
+                <span>
+                    Free Quote.
+                </span>
+            </h1>
 
+            <p>
+                Tell us about your vehicle, where it's located,
+                and what you'd like us to accomplish. We'll review
+                the details and get back to you with a personalized quote.
+            </p>
 
-<h1>
+        </div>
 
-Get Your
+    </section>
 
-<span>
 
-Quote.
+    <!-- =================================================
+         FORM
+    ================================================== -->
 
-</span>
+    <section class="quote-section">
 
+        <form
+            class="quote-form"
+            id="quoteForm"
+            action="https://formspree.io/f/mrenjdkv"
+            method="POST"
+            enctype="multipart/form-data"
+        >
 
-</h1>
+            <input
+                type="hidden"
+                name="_next"
+                value="https://enhancemyride.com/thank-you.html"
+            >
 
+            <input
+                type="hidden"
+                name="_subject"
+                value="New Enhance My Ride Detail Quote Request"
+            >
 
+            <input
+                type="hidden"
+                name="_replyto"
+                id="replyTo"
+            >
 
-<p>
 
-Tell us about your vehicle and we'll provide a free, personalized detailing quote based on your vehicle's condition and your goals.
+            <div
+                class="form-status"
+                id="formStatus"
+            >
+                Please review the required fields before submitting your request.
+            </div>
 
-</p>
 
+            <!-- =========================================
+                 CUSTOMER INFORMATION
+            ========================================== -->
 
+            <div class="form-section">
 
-</section>
+                <div class="form-section-title">
 
+                    <i class="fa-solid fa-user"></i>
 
+                    <h3>
+                        Your Information
+                    </h3>
 
+                </div>
 
 
+                <div class="form-grid">
 
+                    <div class="form-group">
 
-<section class="quote-section">
+                        <label for="name">
+                            Full Name <span class="required">*</span>
+                        </label>
 
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your full name"
+                            autocomplete="name"
+                            required
+                        >
 
-<form
-class="quote-form"
-id="quoteForm"
-action="https://formspree.io/f/mrenjdkv"
-method="POST"
->
+                    </div>
 
 
-<input 
-type="hidden" 
-name="_next" 
-value="https://enhancemyride.com/thank-you.html"
->
+                    <div class="form-group">
 
+                        <label for="phone">
+                            Phone <span class="required">*</span>
+                        </label>
 
-<input 
-type="hidden" 
-name="_replyto"
->
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="(323) 327-1806"
+                            autocomplete="tel"
+                            required
+                        >
 
+                    </div>
 
 
-<h2>
+                    <div class="form-group full">
 
-Request Your Free Quote.
+                        <label for="email">
+                            Email <span class="required">*</span>
+                        </label>
 
-</h2>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
 
+                    </div>
 
-<p class="form-intro">
+                </div>
 
-Complete the information below and we'll contact you with your quote.
+            </div>
 
-</p>
 
+            <!-- =========================================
+                 VEHICLE INFORMATION
+            ========================================== -->
 
+            <div class="form-section">
 
+                <div class="form-section-title">
 
+                    <i class="fa-solid fa-car"></i>
 
-<div class="form-grid">
+                    <h3>
+                        Your Vehicle
+                    </h3>
 
+                </div>
 
 
-<div class="form-group">
+                <div class="form-grid">
 
-<label>
-Full Name *
-</label>
+                    <div class="form-group">
 
-<input
-type="text"
-name="name"
-placeholder="Your name"
-required
->
+                        <label for="vehicle_year">
+                            Vehicle Year <span class="required">*</span>
+                        </label>
 
-</div>
+                        <input
+                            type="number"
+                            id="vehicle_year"
+                            name="vehicle_year"
+                            placeholder="2025"
+                            min="1900"
+                            max="2035"
+                            required
+                        >
 
+                    </div>
 
 
+                    <div class="form-group">
 
-<div class="form-group">
+                        <label for="vehicle_make">
+                            Vehicle Make <span class="required">*</span>
+                        </label>
 
-<label>
-Phone *
-</label>
+                        <input
+                            type="text"
+                            id="vehicle_make"
+                            name="vehicle_make"
+                            placeholder="Honda"
+                            required
+                        >
 
-<input
-type="tel"
-name="phone"
-placeholder="(323) 327-1806"
-required
->
+                    </div>
 
-</div>
 
+                    <div class="form-group">
 
+                        <label for="vehicle_model">
+                            Vehicle Model <span class="required">*</span>
+                        </label>
 
+                        <input
+                            type="text"
+                            id="vehicle_model"
+                            name="vehicle_model"
+                            placeholder="CR-V"
+                            required
+                        >
 
-<div class="form-group">
+                    </div>
 
-<label>
-Email *
-</label>
 
-<input
-type="email"
-name="email"
-placeholder="Email address"
-required
->
+                    <div class="form-group">
 
-</div>
+                        <label for="vehicle_type">
+                            Vehicle Type <span class="required">*</span>
+                        </label>
 
+                        <select
+                            id="vehicle_type"
+                            name="vehicle_type"
+                            required
+                        >
 
+                            <option value="">
+                                Select Vehicle Type
+                            </option>
 
+                            <option>
+                                Sedan
+                            </option>
 
-<div class="form-group">
+                            <option>
+                                SUV / Crossover
+                            </option>
 
-<label>
-Vehicle Year
-</label>
+                            <option>
+                                Truck
+                            </option>
 
-<input
-type="text"
-name="year"
-placeholder="2025"
->
+                            <option>
+                                Coupe
+                            </option>
 
-</div>
+                            <option>
+                                Convertible
+                            </option>
 
+                            <option>
+                                Van / Minivan
+                            </option>
 
+                            <option>
+                                Luxury Vehicle
+                            </option>
 
-<div class="form-group">
+                            <option>
+                                Sports Car
+                            </option>
 
-<label>
-Vehicle Make
-</label>
+                            <option>
+                                Motorcycle
+                            </option>
 
-<input
-type="text"
-name="make"
-placeholder="Honda"
->
+                            <option>
+                                Boat
+                            </option>
 
-</div>
+                        </select>
 
+                    </div>
 
+                </div>
 
+            </div>
 
-<div class="form-group">
 
-<label>
-Vehicle Model
-</label>
+            <!-- =========================================
+                 PACKAGE
+            ========================================== -->
 
-<input
-type="text"
-name="model"
-placeholder="CR-V"
->
+            <div class="form-section">
 
-</div>
+                <div class="form-section-title">
 
+                    <i class="fa-solid fa-gem"></i>
 
+                    <h3>
+                        Choose Your Package
+                    </h3>
 
-<div class="form-group">
+                </div>
 
-<label>
-Service Package *
-</label>
 
+                <div class="package-options">
 
-<select
-id="service"
-name="service"
-required
->
 
+                    <div class="package-option">
 
-<option value="">
-Choose Package
-</option>
+                        <input
+                            type="radio"
+                            id="gold"
+                            name="service_package"
+                            value="Enhance Gold — Starting $149"
+                            required
+                        >
 
+                        <label for="gold">
 
-<option value="Enhance Gold — Starting $149">
+                            <span class="package-name">
+                                Enhance Gold
+                            </span>
 
-Enhance Gold — Starting $149
+                            <span class="package-price">
+                                Starting at $149
+                            </span>
 
-</option>
+                            <span class="package-description">
+                                Essential interior & exterior enhancement
+                                for maintaining a clean, refreshed vehicle.
+                            </span>
 
+                        </label>
 
-<option value="Enhance Premium — Starting $249">
+                    </div>
 
-Enhance Premium — Starting $249
 
-</option>
+                    <div class="package-option">
 
+                        <input
+                            type="radio"
+                            id="black-label"
+                            name="service_package"
+                            value="Enhance Black Label — Starting $249"
+                        >
 
-<option value="Enhance Showroom Elite — Starting $399">
+                        <label for="black-label">
 
-Enhance Showroom Elite — Starting $399
+                            <span class="package-name">
+                                Enhance Black Label
+                            </span>
 
-</option>
+                            <span class="package-price">
+                                Starting at $249
+                            </span>
 
+                            <span class="package-description">
+                                A deeper level of interior and exterior care
+                                for customers wanting a more complete enhancement.
+                            </span>
 
-</select>
+                        </label>
 
+                    </div>
 
 
-<p class="package-display" id="packageDisplay"></p>
+                    <div class="package-option">
 
+                        <input
+                            type="radio"
+                            id="showroom"
+                            name="service_package"
+                            value="Enhance Showroom Edition — Starting $399"
+                        >
 
-</div>
+                        <label for="showroom">
 
+                            <span class="package-name">
+                                Enhance Showroom Edition
+                            </span>
 
+                            <span class="package-price">
+                                Starting at $399
+                            </span>
 
+                            <span class="package-description">
+                                Our highest-level enhancement for customers
+                                seeking an exceptional, showroom-ready finish.
+                            </span>
 
-<div class="form-group">
+                        </label>
 
-<label>
-Vehicle Type
-</label>
+                    </div>
 
+                </div>
 
-<select name="vehicle_type">
 
+                <p
+                    class="package-display"
+                    id="packageDisplay"
+                ></p>
 
-<option value="">
-Select Vehicle Type
-</option>
+            </div>
 
 
-<option>
-Sedan
-</option>
+            <!-- =========================================
+                 VEHICLE CONDITION
+            ========================================== -->
 
+            <div class="form-section">
 
-<option>
-SUV
-</option>
+                <div class="form-section-title">
 
+                    <i class="fa-solid fa-sparkles"></i>
 
-<option>
-Truck
-</option>
+                    <h3>
+                        Vehicle Condition
+                    </h3>
 
+                </div>
 
-<option>
-Coupe
-</option>
 
+                <div class="form-grid">
 
-<option>
-Van
-</option>
+                    <div class="form-group">
 
+                        <label for="vehicle_condition">
+                            Overall Condition
+                        </label>
 
-<option>
-Luxury Vehicle
-</option>
+                        <select
+                            id="vehicle_condition"
+                            name="vehicle_condition"
+                        >
 
+                            <option value="">
+                                Select Condition
+                            </option>
 
-</select>
+                            <option>
+                                Light / Well Maintained
+                            </option>
 
+                            <option>
+                                Moderately Dirty
+                            </option>
 
-</div>
+                            <option>
+                                Heavy Dirt / Grime
+                            </option>
 
+                            <option>
+                                Very Dirty
+                            </option>
 
+                            <option>
+                                Extreme Condition
+                            </option>
 
+                            <option>
+                                Not Sure
+                            </option>
 
+                        </select>
 
+                    </div>
 
-<div class="form-group full">
 
-<label>
-Service Address *
-</label>
+                    <div class="form-group">
 
+                        <label for="interior_condition">
+                            Interior Condition
+                        </label>
 
-<input
-type="text"
-name="address"
-placeholder="Where should we service your vehicle?"
-required
->
+                        <select
+                            id="interior_condition"
+                            name="interior_condition"
+                        >
 
+                            <option value="">
+                                Select Condition
+                            </option>
 
-</div>
+                            <option>
+                                Lightly Used
+                            </option>
 
+                            <option>
+                                Moderately Dirty
+                            </option>
 
+                            <option>
+                                Heavy Dirt
+                            </option>
 
+                            <option>
+                                Stains / Spills
+                            </option>
 
+                            <option>
+                                Pet Hair
+                            </option>
 
+                            <option>
+                                Very Dirty
+                            </option>
 
-<div class="form-group">
+                            <option>
+                                Not Sure
+                            </option>
 
-<label>
-Preferred Date
-</label>
+                        </select>
 
+                    </div>
 
-<input
-type="date"
-name="date"
->
+                </div>
 
 
-</div>
+                <div class="checkbox-grid">
 
+                    <label class="checkbox-label">
 
+                        <input
+                            type="checkbox"
+                            name="condition_features[]"
+                            value="Pet Hair"
+                        >
 
+                        Pet Hair
 
+                    </label>
 
 
-<div class="form-group">
+                    <label class="checkbox-label">
 
-<label>
-Preferred Time
-</label>
+                        <input
+                            type="checkbox"
+                            name="condition_features[]"
+                            value="Interior Stains"
+                        >
 
+                        Interior Stains
 
-<select name="time">
+                    </label>
 
 
-<option>
-Select Time
-</option>
+                    <label class="checkbox-label">
 
+                        <input
+                            type="checkbox"
+                            name="condition_features[]"
+                            value="Odor"
+                        >
 
-<option>
-Morning
-</option>
+                        Odor
 
+                    </label>
 
-<option>
-Afternoon
-</option>
 
+                    <label class="checkbox-label">
 
-<option>
-Evening
-</option>
+                        <input
+                            type="checkbox"
+                            name="condition_features[]"
+                            value="Heavy Brake Dust"
+                        >
 
+                        Heavy Brake Dust
 
-</select>
+                    </label>
 
 
-</div>
+                    <label class="checkbox-label">
 
-<div class="form-group">
+                        <input
+                            type="checkbox"
+                            name="condition_features[]"
+                            value="Mud / Heavy Dirt"
+                        >
 
-<label>
-Vehicle Condition
-</label>
+                        Mud / Heavy Dirt
 
+                    </label>
 
-<select name="condition">
 
+                    <label class="checkbox-label">
 
-<option>
-Select Condition
-</option>
+                        <input
+                            type="checkbox"
+                            name="condition_features[]"
+                            value="Sand / Debris"
+                        >
 
+                        Sand / Debris
 
-<option>
-Light Dirt
-</option>
+                    </label>
 
+                </div>
 
-<option>
-Moderate Dirt
-</option>
+            </div>
 
 
-<option>
-Heavy Dirt
-</option>
+            <!-- =========================================
+                 LOCATION
+            ========================================== -->
 
+            <div class="form-section">
 
-<option>
-Pet Hair / Stains
-</option>
+                <div class="form-section-title">
 
+                    <i class="fa-solid fa-location-dot"></i>
 
-<option>
-Extreme Condition
-</option>
+                    <h3>
+                        Where Will We Detail?
+                    </h3>
 
+                </div>
 
-</select>
 
+                <div class="form-grid">
 
-</div>
+                    <div class="form-group full">
 
+                        <label for="service_address">
+                            Service Address <span class="required">*</span>
+                        </label>
 
+                        <input
+                            type="text"
+                            id="service_address"
+                            name="service_address"
+                            placeholder="Street address, city, ZIP"
+                            autocomplete="street-address"
+                            required
+                        >
 
+                    </div>
 
 
+                    <div class="form-group">
 
-<div class="form-group">
+                        <label for="water_access">
+                            Water Access <span class="required">*</span>
+                        </label>
 
-<label>
-Additional Services
-</label>
+                        <select
+                            id="water_access"
+                            name="water_access"
+                            required
+                        >
 
+                            <option value="">
+                                Select One
+                            </option>
 
-<input
-type="text"
-name="addons"
-placeholder="Odor removal, pet hair, stains, etc."
->
+                            <option>
+                                Yes — Customer water available
+                            </option>
 
+                            <option>
+                                No — No customer water
+                            </option>
 
-</div>
+                            <option>
+                                Not Sure
+                            </option>
 
+                        </select>
 
+                    </div>
 
 
+                    <div class="form-group">
 
+                        <label for="power_access">
+                            Power Access <span class="required">*</span>
+                        </label>
 
-<div class="form-group full">
+                        <select
+                            id="power_access"
+                            name="power_access"
+                            required
+                        >
 
-<label>
-Tell Us About Your Vehicle
-</label>
+                            <option value="">
+                                Select One
+                            </option>
 
+                            <option>
+                                Yes — Customer power available
+                            </option>
 
-<textarea
-name="message"
-placeholder="Anything we should know about your vehicle?"
-></textarea>
+                            <option>
+                                No — No customer power
+                            </option>
 
+                            <option>
+                                Not Sure
+                            </option>
 
-</div>
+                        </select>
 
+                    </div>
 
+                </div>
 
 
-</div>
+                <div class="access-notice">
 
+                    <i class="fa-solid fa-circle-info"></i>
 
+                    Please let us know whether water and power
+                    are available at the service location.
+                    This helps us plan the proper mobile setup
+                    for your appointment.
 
+                </div>
 
+            </div>
 
-<div class="submit-area">
 
+            <!-- =========================================
+                 APPOINTMENT
+            ========================================== -->
 
-<button
-type="submit"
-class="button button-gold"
->
+            <div class="form-section">
 
-Request My Quote
+                <div class="form-section-title">
 
-</button>
+                    <i class="fa-solid fa-calendar-days"></i>
 
+                    <h3>
+                        Appointment Preference
+                    </h3>
 
-<p class="hero-slogan">
+                </div>
 
-We come to you. You relax. We Enhance.
 
-</p>
+                <div class="form-grid">
 
+                    <div class="form-group">
 
-</div>
+                        <label for="preferred_date">
+                            Preferred Date
+                        </label>
 
+                        <input
+                            type="date"
+                            id="preferred_date"
+                            name="preferred_date"
+                        >
 
-</form>
+                    </div>
 
 
-</section>
+                    <div class="form-group">
 
+                        <label for="preferred_time">
+                            Preferred Time
+                        </label>
+
+                        <select
+                            id="preferred_time"
+                            name="preferred_time"
+                        >
+
+                            <option value="">
+                                Select Time
+                            </option>
+
+                            <option>
+                                Morning
+                            </option>
+
+                            <option>
+                                Late Morning
+                            </option>
+
+                            <option>
+                                Afternoon
+                            </option>
+
+                            <option>
+                                Evening
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 ADDITIONAL SERVICES
+            ========================================== -->
+
+            <div class="form-section">
+
+                <div class="form-section-title">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <h3>
+                        Additional Services
+                    </h3>
+
+                </div>
+
+
+                <div class="checkbox-grid">
+
+                    <label class="checkbox-label">
+
+                        <input
+                            type="checkbox"
+                            name="additional_services[]"
+                            value="Pet Hair Removal"
+                        >
+
+                        Pet Hair Removal
+
+                    </label>
+
+
+                    <label class="checkbox-label">
+
+                        <input
+                            type="checkbox"
+                            name="additional_services[]"
+                            value="Odor Treatment"
+                        >
+
+                        Odor Treatment
+
+                    </label>
+
+
+                    <label class="checkbox-label">
+
+                        <input
+                            type="checkbox"
+                            name="additional_services[]"
+                            value="Stain Treatment"
+                        >
+
+                        Stain Treatment
+
+                    </label>
+
+
+                    <label class="checkbox-label">
+
+                        <input
+                            type="checkbox"
+                            name="additional_services[]"
+                            value="Heavy Wheel Cleaning"
+                        >
+
+                        Heavy Wheel Cleaning
+
+                    </label>
+
+
+                    <label class="checkbox-label">
+
+                        <input
+                            type="checkbox"
+                            name="additional_services[]"
+                            value="Engine Bay"
+                        >
+
+                        Engine Bay
+
+                    </label>
+
+
+                    <label class="checkbox-label">
+
+                        <input
+                            type="checkbox"
+                            name="additional_services[]"
+                            value="Other / Not Sure"
+                        >
+
+                        Other / Not Sure
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 VEHICLE PHOTOS
+            ========================================== -->
+
+            <div class="form-section">
+
+                <div class="form-section-title">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                    <h3>
+                        Vehicle Photos
+                    </h3>
+
+                </div>
+
+
+                <div class="upload-box">
+
+                    <i class="fa-solid fa-images"></i>
+
+                    <strong>
+                        Help Us See The Vehicle
+                    </strong>
+
+                    <p>
+                        Photos help us understand the vehicle's
+                        condition and provide a more accurate quote.
+                    </p>
+
+                    <input
+                        type="file"
+                        name="vehicle_photos"
+                        accept="image/jpeg,image/png,image/webp"
+                        multiple
+                    >
+
+                </div>
+
+
+                <p class="form-note">
+                    You can upload multiple photos.
+                    If your photos are too large to submit,
+                    you can send them separately after we contact you.
+                </p>
+
+            </div>
+
+
+            <!-- =========================================
+                 ADDITIONAL INFORMATION
+            ========================================== -->
+
+            <div class="form-section">
+
+                <div class="form-section-title">
+
+                    <i class="fa-solid fa-message"></i>
+
+                    <h3>
+                        Anything Else?
+                    </h3>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="additional_notes">
+                        Tell Us About Your Vehicle
+                    </label>
+
+                    <textarea
+                        id="additional_notes"
+                        name="additional_notes"
+                        placeholder="Tell us anything we should know about your vehicle, what you want improved, or any specific concerns you have."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 SUBMIT
+            ========================================== -->
+
+            <div class="submit-area">
+
+                <button
+                    type="submit"
+                    class="button button-gold"
+                    id="submitButton"
+                >
+                    Request My Free Quote
+                </button>
+
+
+                <p class="hero-slogan">
+                    We come to you. You relax. We Enhance.
+                </p>
+
+            </div>
+
+        </form>
+
+
+        <!-- =============================================
+             TRUST STRIP
+        ============================================== -->
+
+        <div class="quote-trust">
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-mobile-screen-button"></i>
+
+                <span>
+                    Mobile service delivered
+                    to your location
+                </span>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                <span>
+                    Personalized quotes based
+                    on your vehicle
+                </span>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <i class="fa-solid fa-shield-heart"></i>
+
+                <span>
+                    Professional care with
+                    attention to detail
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         CTA
+    ================================================== -->
+
+    <section class="cta">
+
+        <p class="eyebrow">
+            YOUR VEHICLE COULD BE NEXT
+        </p>
+
+        <h2>
+            Let's
+            <span>
+                Enhance Your Ride.
+            </span>
+        </h2>
+
+        <p>
+            Submit your information and we'll
+            review your vehicle details.
+        </p>
+
+        <a
+            href="tel:3233271806"
+            class="button button-outline"
+        >
+
+            <i class="fa-solid fa-phone"></i>
+
+            Call (323) 327-1806
+
+        </a>
+
+    </section>
 
 </main>
 
 
-
-
-
-
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
-<div class="footer-grid">
+    <div class="footer-grid">
 
 
-<!-- BRAND -->
+        <div class="footer-brand">
 
-<div class="footer-brand">
+            <div class="footer-title">
+                ENHANCE MY RIDE
+            </div>
 
-<div class="footer-title">
-ENHANCE MY RIDE
-</div>
+            <div class="footer-sub">
+                AUTO SPA & MOBILE DETAILING
+            </div>
 
 
-<div class="footer-sub">
-AUTO SPA & MOBILE DETAILING
-</div>
+            <p class="footer-text">
 
+                We come to you. You relax. We Enhance.
 
+                <br><br>
 
-<p class="footer-text">
+                Premium mobile detailing serving
+                San Francisco and the entire Bay Area.
 
-We come to you. You relax. We Enhance.
+            </p>
 
-<br><br>
 
-Premium mobile detailing serving
-San Francisco and the entire Bay Area.
+            <div class="social-icons">
 
-</p>
+                <a
+                    href="https://instagram.com/enhancemyridemobiledetailing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
 
 
+                <a
+                    href="https://www.facebook.com/Enhancemyridemobiledetailing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
 
-<div class="social-icons">
 
+                <a
+                    href="https://www.tiktok.com/@enhancemyride"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok"
+                >
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
 
-<a href="https://instagram.com/enhancemyridemobiledetailing" target="_blank">
-<i class="fa-brands fa-instagram"></i>
-</a>
 
+                <a
+                    href="https://youtube.com/@enhancemyridemobiledetailing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                >
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
 
-<a href="https://www.facebook.com/Enhancemyridemobiledetailing" target="_blank">
-<i class="fa-brands fa-facebook-f"></i>
-</a>
+            </div>
 
+        </div>
 
-<a href="https://www.tiktok.com/@enhancemyride" target="_blank">
-<i class="fa-brands fa-tiktok"></i>
-</a>
 
+        <div class="footer-contact">
 
-<a href="https://youtube.com/@enhancemyridemobiledetailing" target="_blank">
-<i class="fa-brands fa-youtube"></i>
-</a>
+            <div class="footer-title">
+                CONTACT
+            </div>
 
 
-</div>
+            <p class="footer-text">
 
+                <a href="mailto:info@enhancemyride.com">
 
-</div>
+                    <i class="fa-solid fa-envelope"></i>
 
+                    info@enhancemyride.com
 
+                </a>
 
 
+                <br><br>
 
-<!-- CONTACT -->
 
-<div class="footer-contact">
+                <a href="tel:3233271806">
 
+                    <i class="fa-solid fa-phone"></i>
 
-<div class="footer-title">
-CONTACT
-</div>
+                    (323) 327-1806
 
+                </a>
 
+            </p>
 
-<p class="footer-text">
 
+            <a
+                href="https://g.page/r/CRy_PYJmq6NYEBM/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-outline"
+            >
 
-<a href="mailto:info@enhancemyride.com">
+                <i class="fa-brands fa-google"></i>
 
-<i class="fa-solid fa-envelope"></i>
+                Leave A Google Review
 
-info@enhancemyride.com
+            </a>
 
-</a>
+        </div>
 
+    </div>
 
 
-<br><br>
+    <div class="copyright">
 
+        © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
+        All Rights Reserved.
 
-
-<a href="tel:3233271806">
-
-<i class="fa-solid fa-phone"></i>
-
-(323) 327-1806
-
-</a>
-
-
-</p>
-
-
-
-
-<a
-href="https://g.page/r/CRy_PYJmq6NYEBM/review"
-target="_blank"
-class="button button-outline"
->
-
-<i class="fa-brands fa-google"></i>
-
-Leave A Google Review
-
-</a>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-<div class="copyright">
-
-© 2026 Enhance My Ride Auto Spa & Mobile Detailing.
-All Rights Reserved.
-
-</div>
-
+    </div>
 
 </footer>
 
 
-
-
-
-
-
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script>
 
+    /* =====================================================
+       MOBILE NAVIGATION
+    ===================================================== */
 
-const menuToggle =
-document.getElementById("menuToggle");
+    const menuToggle =
+        document.getElementById("menuToggle");
 
+    const navMenu =
+        document.getElementById("navMenu");
 
-const navMenu =
-document.getElementById("navMenu");
 
+    if (menuToggle && navMenu) {
 
+        menuToggle.addEventListener(
+            "click",
+            function () {
 
-if(menuToggle && navMenu){
+                const open =
+                    navMenu.classList.toggle("active");
 
+                menuToggle.classList.toggle(
+                    "active",
+                    open
+                );
 
-menuToggle.addEventListener(
-"click",
-()=>{
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    String(open)
+                );
 
+            }
+        );
 
-const open =
-navMenu.classList.toggle("active");
 
+        navMenu
+            .querySelectorAll("a")
+            .forEach(
+                function (link) {
 
-menuToggle.classList.toggle(
-"active",
-open
-);
+                    link.addEventListener(
+                        "click",
+                        function () {
 
+                            navMenu.classList.remove("active");
 
-menuToggle.setAttribute(
-"aria-expanded",
-open
-);
+                            menuToggle.classList.remove("active");
 
+                            menuToggle.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
 
-});
+                        }
+                    );
 
+                }
+            );
 
-}
+    }
 
 
+    /* =====================================================
+       PACKAGE PRESELECTION
+       
+       Allows links such as:
+       quote.html?package=gold
+       quote.html?package=black
+       quote.html?package=showroom
+    ===================================================== */
 
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
 
 
+    const packageChoice =
+        params.get("package");
 
 
-const params =
-new URLSearchParams(
-window.location.search
-);
+    const packageInputs = {
 
+        gold:
+            document.getElementById("gold"),
 
+        black:
+            document.getElementById("black-label"),
 
-const packageChoice =
-params.get("package");
+        "black-label":
+            document.getElementById("black-label"),
 
+        premium:
+            document.getElementById("black-label"),
 
+        elite:
+            document.getElementById("showroom"),
 
-const service =
-document.getElementById("service");
+        showroom:
+            document.getElementById("showroom")
 
+    };
 
-const display =
-document.getElementById("packageDisplay");
 
+    if (
+        packageChoice &&
+        packageInputs[packageChoice]
+    ) {
 
+        packageInputs[packageChoice].checked = true;
 
+    }
 
 
-if(packageChoice && service){
+    /* =====================================================
+       PACKAGE DISPLAY
+    ===================================================== */
 
+    const packageDisplay =
+        document.getElementById(
+            "packageDisplay"
+        );
 
-if(packageChoice === "gold"){
 
-service.value =
-"Enhance Gold — Starting $149";
+    const packageRadios =
+        document.querySelectorAll(
+            'input[name="service_package"]'
+        );
 
-display.textContent =
-"Enhance Gold selected";
 
-}
+    function updatePackageDisplay() {
 
+        const selectedPackage =
+            document.querySelector(
+                'input[name="service_package"]:checked'
+            );
 
 
-if(packageChoice === "premium"){
+        if (selectedPackage) {
 
-service.value =
-"Enhance Premium — Starting $249";
+            packageDisplay.textContent =
+                selectedPackage.value;
 
-display.textContent =
-"Enhance Premium selected";
+        } else {
 
-}
+            packageDisplay.textContent = "";
 
+        }
 
+    }
 
-if(packageChoice === "elite"){
 
-service.value =
-"Enhance Showroom Elite — Starting $399";
+    packageRadios.forEach(
+        function (radio) {
 
-display.textContent =
-"Enhance Showroom Elite selected";
+            radio.addEventListener(
+                "change",
+                updatePackageDisplay
+            );
 
-}
+        }
+    );
 
 
-}
+    updatePackageDisplay();
 
 
+    /* =====================================================
+       FORM EMAIL / REPLY-TO
+    ===================================================== */
 
+    const quoteForm =
+        document.getElementById(
+            "quoteForm"
+        );
 
 
-if(service){
+    const emailInput =
+        document.getElementById(
+            "email"
+        );
 
-service.addEventListener(
-"change",
-function(){
 
+    const replyTo =
+        document.getElementById(
+            "replyTo"
+        );
 
-if(service.value){
 
-display.textContent =
-service.value;
+    const submitButton =
+        document.getElementById(
+            "submitButton"
+        );
 
 
-}
+    if (quoteForm) {
 
-else{
+        quoteForm.addEventListener(
+            "submit",
+            function () {
 
-display.textContent = "";
+                if (
+                    emailInput &&
+                    replyTo
+                ) {
 
-}
+                    replyTo.value =
+                        emailInput.value;
 
+                }
 
-});
 
+                if (submitButton) {
 
-}
+                    submitButton.disabled = true;
 
+                    submitButton.textContent =
+                        "Sending Request...";
 
+                }
 
+            }
+        );
 
+    }
 
 
+    /* =====================================================
+       DATE — PREVENT PAST DATES
+    ===================================================== */
 
-/* ===============================
-FORM REPLY TO CUSTOMER
-================================ */
+    const dateInput =
+        document.getElementById(
+            "preferred_date"
+        );
 
 
-document
-.getElementById("quoteForm")
-.addEventListener(
-"submit",
-function(){
+    if (dateInput) {
 
+        const today =
+            new Date();
 
-this.elements["_replyto"].value =
-document.querySelector('input[name="email"]').value;
 
+        const year =
+            today.getFullYear();
 
-});
 
+        const month =
+            String(
+                today.getMonth() + 1
+            ).padStart(
+                2,
+                "0"
+            );
+
+
+        const day =
+            String(
+                today.getDate()
+            ).padStart(
+                2,
+                "0"
+            );
+
+
+        dateInput.min =
+            `${year}-${month}-${day}`;
+
+    }
+
+
+    /* =====================================================
+       SCROLL REVEAL
+    ===================================================== */
+
+    const revealElements =
+        document.querySelectorAll(
+            ".reveal"
+        );
+
+
+    if (
+        "IntersectionObserver"
+        in window
+    ) {
+
+        const revealObserver =
+            new IntersectionObserver(
+                function (entries) {
+
+                    entries.forEach(
+                        function (entry) {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target.classList.add(
+                                    "visible"
+                                );
+
+                                revealObserver.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+        revealElements.forEach(
+            function (element) {
+
+                revealObserver.observe(
+                    element
+                );
+
+            }
+        );
+
+    } else {
+
+        revealElements.forEach(
+            function (element) {
+
+                element.classList.add(
+                    "visible"
+                );
+
+            }
+        );
+
+    }
 
 </script>
-
+```
 
 </body>
 
