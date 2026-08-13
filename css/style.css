@@ -8257,3 +8257,451 @@ p {
     }
 
 }
+/* =========================================================
+   ENHANCE MY RIDE — CINEMATIC HERO
+========================================================= */
+
+.home-hero {
+    position: relative;
+    min-height: 92vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #050505;
+}
+
+
+/* HERO SLIDESHOW */
+
+.hero-slideshow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    background: #050505;
+}
+
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+
+    transform: scale(1.08);
+
+    transition:
+        opacity 1.5s ease,
+        transform 7s ease;
+}
+
+
+.hero-slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* LUXURY CINEMATIC OVERLAY */
+
+.hero-cinematic-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.94) 0%,
+            rgba(0,0,0,0.78) 28%,
+            rgba(0,0,0,0.48) 58%,
+            rgba(0,0,0,0.35) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* SUBTLE BOTTOM FADE */
+
+.hero-cinematic-overlay::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 35%;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.72),
+            transparent
+        );
+}
+
+
+/* HERO CONTENT */
+
+.home-hero-content {
+    position: relative;
+    z-index: 5;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+.hero-copy {
+    max-width: 760px;
+}
+
+
+/* BRAND LABEL */
+
+.hero-owner-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,0.72);
+}
+
+
+.hero-owner-label::before {
+    content: "";
+
+    width: 34px;
+    height: 1px;
+
+    background: #d4af37;
+}
+
+
+/* HERO HEADLINE */
+
+.home-hero h1 {
+    margin: 0;
+
+    max-width: 850px;
+
+    font-size: clamp(3.5rem, 7vw, 7.5rem);
+
+    line-height: 0.92;
+
+    letter-spacing: -0.045em;
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+.home-hero h1 span {
+    display: block;
+
+    color: #ffffff;
+}
+
+
+.home-hero h1 strong {
+    display: block;
+
+    font-weight: 700;
+
+    color: #d4af37;
+}
+
+
+/* DESCRIPTION */
+
+.home-hero .hero-description {
+    max-width: 620px;
+
+    margin-top: 30px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.82);
+}
+
+
+/* BUTTONS */
+
+.home-hero .hero-actions {
+    margin-top: 34px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+
+/* TRUST ROW */
+
+.home-hero .hero-trust {
+    margin-top: 38px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0;
+}
+
+
+.home-hero .hero-trust span {
+    position: relative;
+
+    padding: 0 18px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    color: rgba(255,255,255,0.72);
+}
+
+
+.home-hero .hero-trust span:first-child {
+    padding-left: 0;
+}
+
+
+.home-hero .hero-trust span:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    top: 50%;
+
+    width: 1px;
+    height: 12px;
+
+    transform: translateY(-50%);
+
+    background: rgba(255,255,255,0.3);
+}
+
+
+/* SLIDESHOW DOTS */
+
+.hero-slide-controls {
+    position: absolute;
+
+    left: 50%;
+    bottom: 42px;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.hero-slide-dot {
+    width: 7px;
+    height: 7px;
+
+    padding: 0;
+
+    border: 1px solid rgba(255,255,255,0.7);
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.hero-slide-dot.active {
+    width: 30px;
+
+    border-radius: 20px;
+
+    background: #d4af37;
+
+    border-color: #d4af37;
+}
+
+
+/* SCROLL INDICATOR */
+
+.hero-scroll {
+    position: absolute;
+
+    right: 40px;
+    bottom: 38px;
+
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.hero-scroll span {
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.22em;
+
+    writing-mode: vertical-rl;
+
+    color: rgba(255,255,255,0.6);
+}
+
+
+.hero-scroll div {
+    width: 1px;
+    height: 42px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #d4af37,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .home-hero {
+        min-height: 88vh;
+    }
+
+
+    .hero-slide {
+        background-position: center center;
+    }
+
+
+    .hero-cinematic-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0,0,0,0.58) 0%,
+                rgba(0,0,0,0.60) 40%,
+                rgba(0,0,0,0.90) 100%
+            );
+    }
+
+
+    .home-hero-content {
+        padding-top: 90px;
+        padding-bottom: 110px;
+    }
+
+
+    .home-hero h1 {
+        font-size: clamp(3.1rem, 14vw, 5rem);
+
+        line-height: 0.94;
+    }
+
+
+    .home-hero .hero-description {
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+
+    .home-hero .hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .home-hero .hero-actions .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .home-hero .hero-trust {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .home-hero .hero-trust span {
+        padding: 0;
+    }
+
+
+    .home-hero .hero-trust span:not(:last-child)::after {
+        display: none;
+    }
+
+
+    .hero-scroll {
+        display: none;
+    }
+
+
+    .hero-slide-controls {
+        bottom: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-slide {
+        transition: opacity 0.5s ease;
+        transform: none;
+    }
+
+    .hero-slide.active {
+        transform: none;
+    }
+
+}
