@@ -8946,20 +8946,47 @@ p {
 }
 
 
-/* Mobile adjustment */
+/* =========================================================
+   MOBILE GALLERY LABEL FIX
+========================================================= */
 
 @media (max-width: 768px) {
 
+    .gallery-photo,
+    .gallery-wheel-image {
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+
     .gallery-photo .photo-label,
     .gallery-wheel-image .photo-label {
+        position: absolute !important;
 
-        left: 10px;
-        bottom: 10px;
+        left: 10px !important;
+        bottom: 10px !important;
 
-        padding: 7px 9px;
+        top: auto !important;
+        right: auto !important;
 
-        font-size: 9px;
+        z-index: 20 !important;
 
+        display: block !important;
+
+        width: max-content !important;
+
+        padding: 7px 10px !important;
+
+        margin: 0 !important;
+
+        font-size: 9px !important;
+        line-height: 1 !important;
+
+        letter-spacing: 0.12em !important;
+
+        transform: none !important;
+
+        pointer-events: none !important;
     }
 
 }
