@@ -2194,3 +2194,429 @@ p {
     }
 
 }
+```css id="2x7x9v"
+/* =========================================================
+   SERVICE AREA PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   SERVICE AREA HERO
+   ========================================================= */
+
+.service-area-hero {
+    background:
+        radial-gradient(
+            circle at 72% 45%,
+            rgba(201, 162, 39, 0.12),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #050505 0%,
+            #111111 50%,
+            #050505 100%
+        );
+}
+
+
+/* =========================================================
+   SERVICE AREA INTRO
+   ========================================================= */
+
+.service-area-intro {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+.service-area-intro > div:last-child {
+    padding-top: 8px;
+}
+
+
+.service-area-intro > div:last-child p {
+    margin-bottom: 22px;
+
+    font-size: 0.98rem;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   AREA GRID
+   ========================================================= */
+
+.area-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+.area-card {
+    position: relative;
+
+    min-height: 285px;
+
+    padding: 32px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.008)
+        );
+
+    transition: var(--transition);
+}
+
+
+.area-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(201, 162, 39, 0.45);
+}
+
+
+.area-number {
+    color: var(--gold);
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    margin-bottom: 45px;
+}
+
+
+.area-card h3 {
+    font-size: 1.45rem;
+
+    margin-bottom: 14px;
+}
+
+
+.area-card p {
+    font-size: 0.82rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+.area-label {
+    margin-top: auto;
+
+    color: var(--gray-dark);
+
+    font-size: 0.57rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+}
+
+
+.area-card-cta {
+    border-color: rgba(201, 162, 39, 0.3);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(201, 162, 39, 0.07),
+            rgba(255, 255, 255, 0.01)
+        );
+}
+
+
+.area-card-cta .text-link {
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   MOBILE PROCESS
+   ========================================================= */
+
+.mobile-process {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        45px
+        1fr
+        45px
+        1fr
+        45px
+        1fr;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.process-step {
+    text-align: center;
+}
+
+
+.process-step > span {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid var(--gold);
+
+    color: var(--gold-light);
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+
+.process-step h3 {
+    font-size: 1rem;
+
+    margin-bottom: 12px;
+}
+
+
+.process-step p {
+    font-size: 0.78rem;
+
+    line-height: 1.8;
+}
+
+
+.process-line {
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(201, 162, 39, 0.5),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   REQUIREMENTS
+   ========================================================= */
+
+.requirements-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.8fr)
+        minmax(0, 1.2fr);
+
+    gap: 90px;
+
+    align-items: start;
+}
+
+
+.requirements-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+.requirement {
+    display: grid;
+
+    grid-template-columns: 45px 1fr;
+
+    gap: 20px;
+
+    padding-bottom: 30px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.requirement:last-child {
+    padding-bottom: 0;
+
+    border-bottom: 0;
+}
+
+
+.requirement > span {
+    color: var(--gold);
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+
+.requirement h3 {
+    font-size: 1rem;
+
+    margin-bottom: 10px;
+}
+
+
+.requirement p {
+    font-size: 0.8rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SERVICE AREA RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .area-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .mobile-process {
+        grid-template-columns:
+            1fr 40px 1fr;
+
+        row-gap: 45px;
+    }
+
+
+    .mobile-process .process-step:nth-of-type(3) {
+        grid-column: 1;
+    }
+
+
+    .mobile-process .process-step:nth-of-type(5) {
+        grid-column: 3;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .service-area-intro {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .requirements-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .area-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .area-card {
+        min-height: 250px;
+    }
+
+
+    .mobile-process {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+
+    .process-step {
+        max-width: 450px;
+
+        margin-inline: auto;
+    }
+
+
+    .process-line {
+        width: 1px;
+
+        height: 45px;
+
+        background:
+            linear-gradient(
+                to bottom,
+                transparent,
+                rgba(201, 162, 39, 0.5),
+                transparent
+            );
+    }
+
+
+    .requirements-grid {
+        gap: 45px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .area-card {
+        padding: 27px 23px;
+    }
+
+
+    .requirement {
+        grid-template-columns:
+            35px 1fr;
+
+        gap: 15px;
+    }
+
+}
