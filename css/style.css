@@ -8998,3 +8998,51 @@ p {
 .gallery-wheel-image .photo-label {
     display: none !important;
 }
+/* =========================================================
+   GALLERY PHOTO CAPTIONS
+========================================================= */
+
+.gallery-photo-caption {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    padding: 14px 2px 4px;
+
+    text-align: left;
+}
+
+
+.gallery-photo-caption strong {
+    font-size: 11px;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+
+    color: #d4af37;
+}
+
+
+.gallery-photo-caption span {
+    font-size: 12px;
+
+    color: rgba(255,255,255,0.5);
+}
+
+
+@media (max-width: 768px) {
+
+    .gallery-photo-caption {
+        padding-top: 12px;
+    }
+
+    .gallery-photo-caption strong {
+        font-size: 10px;
+    }
+
+    .gallery-photo-caption span {
+        font-size: 11px;
+    }
+
+}
