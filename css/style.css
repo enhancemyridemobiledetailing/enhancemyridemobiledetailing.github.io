@@ -3614,3 +3614,97 @@ p {
         display: none;
     }
 }
+/* =========================================================
+   FLOATING MOBILE CALL BUTTON
+   ========================================================= */
+
+.mobile-call-button {
+    position: fixed;
+
+    right: 18px;
+    bottom: 18px;
+
+    z-index: 900;
+
+    width: 62px;
+    height: 62px;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    background: var(--gold);
+
+    color: #050505;
+
+    text-decoration: none;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.mobile-call-button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.55);
+}
+
+
+.mobile-call-button .call-icon {
+    font-size: 1.15rem;
+
+    line-height: 1;
+}
+
+
+.mobile-call-button > span:last-child {
+    font-size: 0.5rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   SHOW ON MOBILE ONLY
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .mobile-call-button {
+        display: flex;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .mobile-call-button {
+        right: 14px;
+        bottom: 14px;
+
+        width: 56px;
+        height: 56px;
+    }
+}
