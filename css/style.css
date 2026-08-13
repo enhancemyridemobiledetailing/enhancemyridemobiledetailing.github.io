@@ -3437,3 +3437,180 @@ p {
         padding: 10px;
     }
 }
+/* =========================================================
+   GLOBAL NAVIGATION FUNCTIONALITY
+   ========================================================= */
+
+
+/* =========================================================
+   HEADER SCROLL STATE
+   ========================================================= */
+
+.site-header.scrolled {
+    background:
+        rgba(5, 5, 5, 0.96);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .main-nav {
+        position: fixed;
+
+        top: 0;
+        right: 0;
+
+        width: min(360px, 88vw);
+
+        height: 100vh;
+
+        padding:
+            110px
+            30px
+            40px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 24px;
+
+        background:
+            rgba(5, 5, 5, 0.98);
+
+        border-left:
+            1px solid rgba(201, 162, 39, 0.2);
+
+        box-shadow:
+            -20px 0 60px rgba(0, 0, 0, 0.45);
+
+        transform:
+            translateX(100%);
+
+        visibility: hidden;
+
+        transition:
+            transform 0.35s ease,
+            visibility 0.35s ease;
+
+        z-index: 1000;
+    }
+
+
+    .main-nav.is-open {
+        transform:
+            translateX(0);
+
+        visibility: visible;
+    }
+
+
+    .main-nav a {
+        width: 100%;
+
+        padding:
+            8px
+            0;
+
+        font-size: 0.85rem;
+    }
+
+
+    .main-nav .nav-cta {
+        width: auto;
+
+        margin-top: 10px;
+    }
+
+
+    /* =============================================
+       MENU BUTTON
+       ============================================= */
+
+    .menu-toggle {
+        position: relative;
+
+        z-index: 1100;
+
+        width: 45px;
+        height: 45px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        flex-direction: column;
+
+        gap: 6px;
+
+        border: 1px solid
+            rgba(201, 162, 39, 0.25);
+
+        background: transparent;
+
+        cursor: pointer;
+    }
+
+
+    .menu-toggle span {
+        display: block;
+
+        width: 19px;
+        height: 1px;
+
+        background:
+            var(--white);
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+    }
+
+
+    .menu-toggle.is-open span:nth-child(1) {
+        transform:
+            translateY(7px)
+            rotate(45deg);
+    }
+
+
+    .menu-toggle.is-open span:nth-child(2) {
+        opacity: 0;
+    }
+
+
+    .menu-toggle.is-open span:nth-child(3) {
+        transform:
+            translateY(-7px)
+            rotate(-45deg);
+    }
+
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP MENU BUTTON
+   ========================================================= */
+
+@media (min-width: 801px) {
+
+    .menu-toggle {
+        display: none;
+    }
+}
