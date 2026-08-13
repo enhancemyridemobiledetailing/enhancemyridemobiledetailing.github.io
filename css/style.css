@@ -4990,3 +4990,722 @@ p {
     }
 
 }
+/* =========================================================
+   SERVICES PAGE
+   ========================================================= */
+
+.page-hero {
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(201, 162, 39, 0.13),
+            transparent 32%
+        ),
+        #050505;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.page-hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.13;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.04) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.04) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+}
+
+
+.page-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+    padding-top: 80px;
+
+    padding-bottom: 80px;
+}
+
+
+.page-hero h1 {
+    margin:
+        15px 0 25px;
+
+    font-size:
+        clamp(
+            4rem,
+            9vw,
+            8rem
+        );
+
+    line-height: 0.9;
+
+    letter-spacing: -0.055em;
+}
+
+
+.page-hero h1 span {
+    display: block;
+
+    color: var(--gold-light);
+}
+
+
+.page-hero-content > p:last-child {
+    max-width: 600px;
+
+    color: var(--gray);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SERVICE PACKAGE GRID
+   ========================================================= */
+
+.service-package-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    align-items: stretch;
+}
+
+
+.service-package-card {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 38px;
+
+    min-height: 720px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.008)
+        );
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+
+.service-package-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(201, 162, 39, 0.4);
+}
+
+
+.featured-service {
+    border-color:
+        rgba(201, 162, 39, 0.38);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(201, 162, 39, 0.09),
+            rgba(255, 255, 255, 0.01)
+        );
+}
+
+
+.featured-badge {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    padding:
+        9px 15px;
+
+    color: #050505;
+
+    background: var(--gold);
+
+    font-size: 0.5rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.14em;
+}
+
+
+.service-package-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}
+
+
+.service-package-top span {
+    color: var(--gold);
+
+    font-size: 0.65rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.12em;
+}
+
+
+.service-package-top small {
+    color: var(--gray-dark);
+
+    font-size: 0.52rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.14em;
+}
+
+
+.featured-service .service-package-top small {
+    color: var(--gold-light);
+}
+
+
+.service-package-card h3 {
+    margin-bottom: 15px;
+
+    font-size: 1.7rem;
+}
+
+
+.service-price {
+    color: var(--gold-light);
+
+    font-family: var(--font-heading);
+
+    font-size: 4.2rem;
+
+    line-height: 1;
+
+    margin-bottom: 22px;
+}
+
+
+.service-price sup {
+    position: relative;
+
+    top: 10px;
+
+    font-family: var(--font-body);
+
+    font-size: 1.1rem;
+
+    vertical-align: top;
+}
+
+
+.service-package-description {
+    min-height: 105px;
+
+    color: var(--gray);
+
+    font-size: 0.76rem;
+
+    line-height: 1.8;
+}
+
+
+.service-divider {
+    width: 100%;
+
+    height: 1px;
+
+    margin:
+        10px 0 28px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+}
+
+
+.service-package-card h4 {
+    margin-bottom: 20px;
+
+    color: var(--gray-dark);
+
+    font-size: 0.55rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.16em;
+}
+
+
+.service-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+    margin: 0 0 30px;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.service-list li {
+    position: relative;
+
+    padding-left: 21px;
+
+    color: var(--gray);
+
+    font-size: 0.72rem;
+
+    line-height: 1.45;
+}
+
+
+.service-list li::before {
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    color: var(--gold);
+
+    font-weight: 900;
+}
+
+
+.service-package-button {
+    width: 100%;
+
+    margin-top: auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   PRICING NOTE
+   ========================================================= */
+
+.service-pricing-note {
+    display: grid;
+
+    grid-template-columns:
+        auto 1fr;
+
+    gap: 20px;
+
+    align-items: start;
+
+    max-width: 900px;
+
+    margin:
+        30px auto 0;
+
+    padding: 22px 25px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    background:
+        rgba(255, 255, 255, 0.02);
+}
+
+
+.service-pricing-note span {
+    color: var(--gold);
+
+    font-size: 0.55rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.14em;
+}
+
+
+.service-pricing-note p {
+    color: var(--gray-dark);
+
+    font-size: 0.65rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ADD-ON SERVICE GRID
+   ========================================================= */
+
+.addon-service-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+.addon-service-card {
+    padding: 30px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    background:
+        rgba(255, 255, 255, 0.015);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.addon-service-card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(201, 162, 39, 0.35);
+}
+
+
+.addon-service-card > span {
+    color: var(--gold);
+
+    font-size: 0.52rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.14em;
+}
+
+
+.addon-service-card h3 {
+    margin:
+        25px 0 12px;
+
+    font-size: 1.15rem;
+}
+
+
+.addon-service-card strong {
+    display: block;
+
+    color: var(--gold-light);
+
+    font-family: var(--font-heading);
+
+    font-size: 2.2rem;
+
+    line-height: 1;
+
+    margin-bottom: 6px;
+}
+
+
+.addon-service-card > p {
+    color: var(--gray);
+
+    font-size: 0.68rem;
+
+    line-height: 1.75;
+}
+
+
+.addon-service-card > div {
+    width: 100%;
+
+    height: 1px;
+
+    margin:
+        24px 0;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+}
+
+
+/* =========================================================
+   VEHICLE TYPES
+   ========================================================= */
+
+.vehicle-types {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.vehicle-type {
+    min-height: 190px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 30px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.vehicle-type:hover {
+    background:
+        rgba(201, 162, 39, 0.045);
+
+    border-color:
+        rgba(201, 162, 39, 0.25);
+}
+
+
+.vehicle-type span {
+    color: var(--gold);
+
+    font-size: 0.55rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.12em;
+}
+
+
+.vehicle-type h3 {
+    font-size: 1.15rem;
+}
+
+
+/* =========================================================
+   SERVICES CTA
+   ========================================================= */
+
+.cta-section {
+    position: relative;
+
+    padding:
+        130px 0;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(201, 162, 39, 0.14),
+            transparent 42%
+        ),
+        #050505;
+
+    border-top:
+        1px solid rgba(201, 162, 39, 0.15);
+}
+
+
+.cta-content {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+.cta-content h2 {
+    margin:
+        15px 0 25px;
+
+    font-size:
+        clamp(
+            3rem,
+            7vw,
+            7rem
+        );
+
+    line-height: 0.92;
+
+    letter-spacing: -0.055em;
+}
+
+
+.cta-content > p:not(.eyebrow) {
+    max-width: 550px;
+
+    margin:
+        0 auto 30px;
+
+    color: var(--gray);
+
+    font-size: 0.9rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SERVICES RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .service-package-card {
+        padding: 30px;
+    }
+
+
+    .addon-service-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .service-package-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .service-package-card {
+        min-height: auto;
+    }
+
+
+    .service-package-description {
+        min-height: auto;
+    }
+
+
+    .vehicle-types {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .page-hero {
+        min-height: 430px;
+    }
+
+
+    .page-hero-content {
+        padding-top: 60px;
+
+        padding-bottom: 60px;
+    }
+
+
+    .page-hero h1 {
+        font-size:
+            clamp(
+                3.8rem,
+                18vw,
+                6rem
+            );
+    }
+
+
+    .service-package-card {
+        padding: 27px;
+    }
+
+
+    .service-price {
+        font-size: 3.6rem;
+    }
+
+
+    .addon-service-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .vehicle-types {
+        grid-template-columns: 1fr;
+    }
+
+
+    .vehicle-type {
+        min-height: 145px;
+    }
+
+
+    .service-pricing-note {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+
+    .cta-section {
+        padding:
+            100px 0;
+    }
+
+}
