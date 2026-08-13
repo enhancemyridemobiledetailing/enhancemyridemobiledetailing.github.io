@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Enhance My Ride | Premium Mobile Detailing in the Bay Area</title>
+    <title>
+        Enhance My Ride | Premium Mobile Detailing in the Bay Area
+    </title>
 
     <meta
         name="description"
-        content="Enhance My Ride Auto Spa & Mobile Detailing delivers premium mobile detailing throughout Alameda, Oakland, San Francisco and the Bay Area. We come to you. You relax. We Enhance."
+        content="Enhance My Ride Auto Spa & Mobile Detailing delivers premium mobile car detailing throughout Alameda, Oakland, San Francisco and the Bay Area. We come to you. You relax. We Enhance."
+    >
+
+    <meta
+        name="keywords"
+        content="mobile detailing Alameda, car detailing Oakland, mobile car detailing San Francisco, Bay Area auto detailing, premium car detailing"
     >
 
     <meta
@@ -48,6 +56,11 @@
     >
 
     <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
         rel="icon"
         type="image/png"
         href="favicon.png"
@@ -55,21 +68,17 @@
 
     <link
         rel="stylesheet"
-        href="style.css"
-    >
-
-    <link
-        rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
-
 </head>
+
 
 <body>
 
-<!-- =====================================================
-NAVIGATION
-===================================================== -->
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
 <header class="navbar">
 
@@ -106,11 +115,9 @@ NAVIGATION
         aria-expanded="false"
         aria-controls="mainNav"
     >
-
         <span></span>
         <span></span>
         <span></span>
-
     </button>
 
 
@@ -133,23 +140,93 @@ NAVIGATION
                 </a>
             </li>
 
-            <li>
-                <a href="services.html">
-                    Services
-                </a>
+
+            <!-- SERVICES DROPDOWN -->
+
+            <li class="nav-dropdown">
+
+                <button
+                    class="nav-dropdown-toggle"
+                    id="servicesToggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="servicesDropdown"
+                >
+
+                    <span>
+                        Services
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+
+                <ul
+                    class="services-dropdown"
+                    id="servicesDropdown"
+                >
+
+                    <li>
+
+                        <a href="services.html">
+
+                            <i class="fa-solid fa-sparkles"></i>
+
+                            <span>
+                                Packages
+
+                                <small>
+                                    View our premium detailing packages
+                                </small>
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="services.html#addons">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            <span>
+                                Premium Add-Ons
+
+                                <small>
+                                    Upgrade your detail
+                                </small>
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="gallery.html">
+
+                            <i class="fa-solid fa-images"></i>
+
+                            <span>
+                                Transformations
+
+                                <small>
+                                    See our latest work
+                                </small>
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
             </li>
 
-            <li>
-                <a href="about.html">
-                    About
-                </a>
-            </li>
-
-            <li>
-                <a href="service-area.html">
-                    Service Area
-                </a>
-            </li>
 
             <li>
                 <a
@@ -160,6 +237,20 @@ NAVIGATION
                 </a>
             </li>
 
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+
+            <li>
+                <a href="service-area.html">
+                    Service Area
+                </a>
+            </li>
+
         </ul>
 
     </nav>
@@ -167,23 +258,23 @@ NAVIGATION
 </header>
 
 
-<!-- =====================================================
-MAIN
-===================================================== -->
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
 
 <main>
 
 
-<!-- =====================================================
-HERO
-===================================================== -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="hero">
 
     <div
         class="hero-image"
         style="background-image: url('images/hero-car.jpg');"
-        aria-hidden="true"
     ></div>
 
 
@@ -195,20 +286,24 @@ HERO
 
 
         <h1>
+
             Your Vehicle.
+
             <span>
                 Enhanced.
             </span>
+
         </h1>
 
 
         <p>
-            Premium mobile detailing designed for people
-            who expect more from their vehicle.
 
+            Premium mobile detailing designed for
+            people who expect more from their vehicle.
             We bring the experience directly to you —
             at home, at work, or wherever your vehicle
             needs attention.
+
         </p>
 
 
@@ -236,9 +331,10 @@ HERO
 </section>
 
 
-<!-- =====================================================
-BRAND STATEMENT
-===================================================== -->
+
+<!-- =========================================================
+     BRAND STATEMENT
+========================================================= -->
 
 <section class="section section-dark">
 
@@ -250,26 +346,32 @@ BRAND STATEMENT
 
 
         <h2>
+
             We Come To You.
 
             <span>
                 You Relax. We Enhance.
             </span>
+
         </h2>
 
 
         <p>
-            Professional vehicle care without the waiting room,
-            dealership drop-off, or weekend lost at the car wash.
+
+            Professional vehicle care without the
+            waiting room, dealership drop-off, or
+            weekend lost at the car wash.
 
             Your vehicle stays where it is.
             We bring the detail to you.
+
         </p>
 
     </div>
 
 
     <div class="stats-grid reveal">
+
 
         <div class="stat">
 
@@ -327,9 +429,10 @@ BRAND STATEMENT
 </section>
 
 
-<!-- =====================================================
-PACKAGES
-===================================================== -->
+
+<!-- =========================================================
+     PACKAGES
+========================================================= -->
 
 <section class="section section-light-dark">
 
@@ -341,17 +444,22 @@ PACKAGES
 
 
         <h2>
+
             Choose Your
+
             <span>
                 Enhancement.
             </span>
+
         </h2>
 
 
         <p>
-            Every package is designed around professional
-            preparation, attention to detail, and a finish
-            you can see and feel.
+
+            Every package is designed around
+            professional preparation, attention to detail,
+            and a finish you can see and feel.
+
         </p>
 
     </div>
@@ -375,16 +483,22 @@ PACKAGES
 
 
             <div class="package-price">
+
                 $149
+
                 <span>
                     starting
                 </span>
+
             </div>
 
 
             <p class="package-description">
-                Our essential premium detail for maintaining
-                a clean, refreshed, and protected vehicle.
+
+                Our essential premium detail for
+                maintaining a clean, refreshed,
+                and protected vehicle.
+
             </p>
 
 
@@ -435,11 +549,10 @@ PACKAGES
         </article>
 
 
+
         <!-- BLACK LABEL -->
 
-        <article
-            class="package-card featured reveal"
-        >
+        <article class="package-card featured reveal">
 
             <div class="package-badge">
                 MOST POPULAR
@@ -457,16 +570,22 @@ PACKAGES
 
 
             <div class="package-price">
+
                 $249
+
                 <span>
                     starting
                 </span>
+
             </div>
 
 
             <p class="package-description">
-                A deeper interior and exterior transformation
-                for vehicles that need more than a maintenance wash.
+
+                A deeper interior and exterior
+                transformation for vehicles that
+                need more than a maintenance wash.
+
             </p>
 
 
@@ -517,6 +636,7 @@ PACKAGES
         </article>
 
 
+
         <!-- SHOWROOM -->
 
         <article class="package-card reveal">
@@ -532,16 +652,22 @@ PACKAGES
 
 
             <div class="package-price">
+
                 $399
+
                 <span>
                     starting
                 </span>
+
             </div>
 
 
             <p class="package-description">
-                Our highest-level enhancement for owners
-                who want their vehicle to look its absolute best.
+
+                Our highest-level enhancement for
+                owners who want their vehicle to
+                look its absolute best.
+
             </p>
 
 
@@ -576,7 +702,7 @@ PACKAGES
                 </li>
 
                 <li>
-                    Showroom-level inspection
+                    Showroom-level final inspection
                 </li>
 
             </ul>
@@ -596,9 +722,10 @@ PACKAGES
 </section>
 
 
-<!-- =====================================================
-WHY ENHANCE
-===================================================== -->
+
+<!-- =========================================================
+     WHY ENHANCE
+========================================================= -->
 
 <section class="section section-dark">
 
@@ -616,6 +743,7 @@ WHY ENHANCE
         </div>
 
 
+
         <div class="reveal">
 
             <p class="eyebrow">
@@ -624,21 +752,25 @@ WHY ENHANCE
 
 
             <h2>
+
                 Detailing With A
+
                 <span class="gold-text">
                     Different Standard.
                 </span>
+
             </h2>
 
 
             <p style="margin:20px 0 30px;">
 
-                We're not trying to be the cheapest detailer
-                in the Bay Area.
+                We’re not trying to be the cheapest
+                detailer in the Bay Area.
 
-                We're focused on delivering a professional
-                experience, meticulous work, and a finished
-                vehicle you're proud to drive.
+                We’re focused on delivering a
+                professional experience, meticulous
+                work, and a finished vehicle you’re
+                proud to drive.
 
             </p>
 
@@ -682,8 +814,8 @@ WHY ENHANCE
 
                         <br>
 
-                        Every detail is approached with care,
-                        precision, and consistency.
+                        Every detail is approached with
+                        care, precision, and consistency.
 
                     </div>
 
@@ -726,8 +858,8 @@ WHY ENHANCE
 
                         <br>
 
-                        Our goal isn't simply to make your
-                        vehicle clean. It's to make it feel enhanced.
+                        Our goal isn’t simply to make your
+                        vehicle clean. It’s to make it feel enhanced.
 
                     </div>
 
@@ -740,6 +872,7 @@ WHY ENHANCE
             <a
                 href="about.html"
                 class="button button-outline"
+                style="margin-top:30px;"
             >
                 Learn More About Us
             </a>
@@ -751,9 +884,10 @@ WHY ENHANCE
 </section>
 
 
-<!-- =====================================================
-BEFORE & AFTER
-===================================================== -->
+
+<!-- =========================================================
+     BEFORE & AFTER
+========================================================= -->
 
 <section class="section section-light-dark">
 
@@ -765,16 +899,22 @@ BEFORE & AFTER
 
 
         <h2>
+
             See The
+
             <span>
                 Enhancement.
             </span>
+
         </h2>
 
 
         <p>
-            Real vehicles. Real transformations.
-            See what professional detailing can do.
+
+            Real vehicles. Real work.
+            Real transformations completed
+            by Enhance My Ride.
+
         </p>
 
     </div>
@@ -834,9 +974,10 @@ BEFORE & AFTER
 </section>
 
 
-<!-- =====================================================
-PROCESS
-===================================================== -->
+
+<!-- =========================================================
+     PROCESS
+========================================================= -->
 
 <section class="section section-dark">
 
@@ -848,16 +989,21 @@ PROCESS
 
 
         <h2>
+
             Simple.
+
             <span>
                 Professional.
             </span>
+
         </h2>
 
 
         <p>
+
             From booking to final inspection,
             we keep the experience straightforward.
+
         </p>
 
     </div>
@@ -874,18 +1020,24 @@ PROCESS
                     01
                 </p>
 
+
                 <h3>
                     Request Your Quote
                 </h3>
 
+
                 <p>
-                    Tell us about your vehicle, its condition,
-                    location, and the service you're interested in.
+
+                    Tell us about your vehicle,
+                    its condition, and the service
+                    you’re interested in.
+
                 </p>
 
             </div>
 
         </article>
+
 
 
         <article class="card reveal">
@@ -896,18 +1048,24 @@ PROCESS
                     02
                 </p>
 
+
                 <h3>
                     We Come To You
                 </h3>
 
+
                 <p>
-                    We arrive at your approved location with
-                    the equipment and products needed for your detail.
+
+                    We arrive at your approved
+                    location with the equipment
+                    needed to perform your enhancement.
+
                 </p>
 
             </div>
 
         </article>
+
 
 
         <article class="card reveal">
@@ -918,13 +1076,19 @@ PROCESS
                     03
                 </p>
 
+
                 <h3>
                     You Relax. We Enhance.
                 </h3>
 
+
                 <p>
-                    We handle the detail while you continue
-                    with your day. Your vehicle receives a final inspection.
+
+                    We handle the detail while you
+                    continue with your day. When
+                    we’re finished, your vehicle gets
+                    its final inspection.
+
                 </p>
 
             </div>
@@ -936,9 +1100,10 @@ PROCESS
 </section>
 
 
-<!-- =====================================================
-SERVICE AREA
-===================================================== -->
+
+<!-- =========================================================
+     SERVICE AREA
+========================================================= -->
 
 <section class="section section-light-dark">
 
@@ -950,16 +1115,21 @@ SERVICE AREA
 
 
         <h2>
+
             Serving The
+
             <span>
                 Bay Area.
             </span>
+
         </h2>
 
 
         <p>
-            Premium mobile detailing delivered directly
-            to your location.
+
+            Premium mobile detailing delivered
+            directly to your location.
+
         </p>
 
     </div>
@@ -1021,9 +1191,10 @@ SERVICE AREA
 </section>
 
 
-<!-- =====================================================
-CUSTOMER EXPERIENCE
-===================================================== -->
+
+<!-- =========================================================
+     CUSTOMER EXPERIENCE
+========================================================= -->
 
 <section class="section section-dark">
 
@@ -1035,16 +1206,22 @@ CUSTOMER EXPERIENCE
 
 
         <h2>
+
             Your Vehicle.
+
             <span>
                 Our Reputation.
             </span>
+
         </h2>
 
 
         <p>
-            We're building Enhance My Ride one vehicle
-            and one satisfied customer at a time.
+
+            As Enhance My Ride grows, this section
+            will feature verified customer reviews
+            from our Google Business Profile.
+
         </p>
 
     </div>
@@ -1059,11 +1236,15 @@ CUSTOMER EXPERIENCE
                 ★★★★★
             </div>
 
+
             <p>
+
                 Your review could be featured here.
-                After your detail, we'd love to hear
+                After your detail, we’d love to hear
                 about your Enhance My Ride experience.
+
             </p>
+
 
             <div class="testimonial-name">
                 ENHANCE MY RIDE CUSTOMER
@@ -1072,16 +1253,22 @@ CUSTOMER EXPERIENCE
         </article>
 
 
+
         <article class="testimonial reveal">
 
             <div class="stars">
                 ★★★★★
             </div>
 
+
             <p>
-                Professional service, attention to detail,
-                and a vehicle that looks and feels refreshed.
+
+                Professional service, attention to
+                detail, and a vehicle that looks and
+                feels refreshed.
+
             </p>
+
 
             <div class="testimonial-name">
                 ENHANCE MY RIDE CUSTOMER
@@ -1090,16 +1277,21 @@ CUSTOMER EXPERIENCE
         </article>
 
 
+
         <article class="testimonial reveal">
 
             <div class="stars">
                 ★★★★★
             </div>
 
+
             <p>
-                We're building a premium detailing experience
-                one vehicle at a time.
+
+                We’re building a premium detailing
+                experience one vehicle at a time.
+
             </p>
+
 
             <div class="testimonial-name">
                 ENHANCE MY RIDE CUSTOMER
@@ -1109,12 +1301,32 @@ CUSTOMER EXPERIENCE
 
     </div>
 
+
+    <div
+        style="
+            text-align:center;
+            margin-top:35px;
+        "
+    >
+
+        <a
+            href="https://g.page/r/CRy_PYJmq6NYEBM/review"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-gold"
+        >
+            Leave A Google Review
+        </a>
+
+    </div>
+
 </section>
 
 
-<!-- =====================================================
-FAQ
-===================================================== -->
+
+<!-- =========================================================
+     FAQ
+========================================================= -->
 
 <section class="section section-light-dark">
 
@@ -1126,10 +1338,13 @@ FAQ
 
 
         <h2>
+
             Before You
+
             <span>
                 Book.
             </span>
+
         </h2>
 
     </div>
@@ -1143,6 +1358,7 @@ FAQ
             <button
                 class="faq-question"
                 type="button"
+                aria-expanded="false"
             >
 
                 <span>
@@ -1156,16 +1372,20 @@ FAQ
             </button>
 
 
-            <div class="faq-answer">
+            <div
+                class="faq-answer"
+                style="display:none;"
+            >
 
-                Yes. Enhance My Ride is a mobile detailing
-                service. We come to your home, workplace,
-                or another approved location within our
-                service area.
+                Yes. Enhance My Ride is a mobile
+                detailing service. We come to your
+                home, workplace, or another approved
+                location within our service area.
 
             </div>
 
         </div>
+
 
 
         <div class="faq-item">
@@ -1173,6 +1393,7 @@ FAQ
             <button
                 class="faq-question"
                 type="button"
+                aria-expanded="false"
             >
 
                 <span>
@@ -1186,16 +1407,21 @@ FAQ
             </button>
 
 
-            <div class="faq-answer">
+            <div
+                class="faq-answer"
+                style="display:none;"
+            >
 
-                Requirements can vary depending on the
-                service and location. Let us know what
-                resources are available when requesting
-                your quote so we can recommend the best setup.
+                Requirements can vary depending on
+                the service and location. Let us know
+                what resources are available when
+                requesting your quote so we can
+                recommend the best setup for your vehicle.
 
             </div>
 
         </div>
+
 
 
         <div class="faq-item">
@@ -1203,6 +1429,7 @@ FAQ
             <button
                 class="faq-question"
                 type="button"
+                aria-expanded="false"
             >
 
                 <span>
@@ -1216,15 +1443,20 @@ FAQ
             </button>
 
 
-            <div class="faq-answer">
+            <div
+                class="faq-answer"
+                style="display:none;"
+            >
 
-                Start with our free quote form. Vehicle
-                size, condition, location, package, and
-                requested add-ons can affect the final price.
+                Start with our free quote form.
+                Vehicle size, condition, location,
+                and requested services can affect
+                the final price.
 
             </div>
 
         </div>
+
 
 
         <div class="faq-item">
@@ -1232,6 +1464,7 @@ FAQ
             <button
                 class="faq-question"
                 type="button"
+                aria-expanded="false"
             >
 
                 <span>
@@ -1245,11 +1478,14 @@ FAQ
             </button>
 
 
-            <div class="faq-answer">
+            <div
+                class="faq-answer"
+                style="display:none;"
+            >
 
                 Service time depends on the vehicle,
                 condition, package, and add-ons selected.
-                We'll provide an estimated service time
+                We’ll give you an estimated service time
                 when your appointment is confirmed.
 
             </div>
@@ -1261,9 +1497,10 @@ FAQ
 </section>
 
 
-<!-- =====================================================
-FINAL CTA
-===================================================== -->
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
 
 <section class="cta">
 
@@ -1273,16 +1510,22 @@ FINAL CTA
 
 
     <h2>
+
         Ready For Your
+
         <span>
             Enhancement?
         </span>
+
     </h2>
 
 
     <p>
-        Premium mobile detailing delivered directly
-        to your location throughout the Bay Area.
+
+        Premium mobile detailing delivered
+        directly to your location throughout
+        the Bay Area.
+
     </p>
 
 
@@ -1295,12 +1538,14 @@ FINAL CTA
 
 </section>
 
+
 </main>
 
 
-<!-- =====================================================
-FOOTER
-===================================================== -->
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
@@ -1313,25 +1558,31 @@ FOOTER
                 ENHANCE MY RIDE
             </div>
 
+
             <div class="footer-sub">
                 AUTO SPA & MOBILE DETAILING
             </div>
 
 
             <p class="footer-text">
+
                 We come to you. You relax. We Enhance.
+
                 <br><br>
+
                 Premium mobile detailing serving
                 San Francisco and the Bay Area.
+
             </p>
 
 
             <div class="social-icons">
 
+
                 <a
                     href="https://instagram.com/enhancemyridemobiledetailing"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     aria-label="Instagram"
                 >
                     <i class="fa-brands fa-instagram"></i>
@@ -1341,7 +1592,7 @@ FOOTER
                 <a
                     href="https://www.facebook.com/Enhancemyridemobiledetailing"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     aria-label="Facebook"
                 >
                     <i class="fa-brands fa-facebook-f"></i>
@@ -1351,7 +1602,7 @@ FOOTER
                 <a
                     href="https://www.tiktok.com/@enhancemyride"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     aria-label="TikTok"
                 >
                     <i class="fa-brands fa-tiktok"></i>
@@ -1361,7 +1612,7 @@ FOOTER
                 <a
                     href="https://youtube.com/@enhancemyridemobiledetailing"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     aria-label="YouTube"
                 >
                     <i class="fa-brands fa-youtube"></i>
@@ -1370,6 +1621,7 @@ FOOTER
             </div>
 
         </div>
+
 
 
         <div class="footer-contact">
@@ -1397,8 +1649,20 @@ FOOTER
             <a
                 href="quote.html"
                 class="button button-outline"
+                style="margin-top:20px;"
             >
                 Request A Quote
+            </a>
+
+
+            <a
+                href="https://g.page/r/CRy_PYJmq6NYEBM/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-outline"
+                style="margin-top:10px;"
+            >
+                Leave A Google Review
             </a>
 
         </div>
@@ -1416,40 +1680,412 @@ FOOTER
 </footer>
 
 
-<!-- =====================================================
-LIGHTBOX
-===================================================== -->
 
-<div
-    class="lightbox"
-    id="lightbox"
-    aria-hidden="true"
->
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
 
-    <button
-        class="lightbox-close"
-        id="lightboxClose"
-        type="button"
-        aria-label="Close image"
-    >
-        ×
-    </button>
+<script>
 
-    <img
-        class="lightbox-image"
-        id="lightboxImage"
-        src=""
-        alt=""
-    >
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
 
-</div>
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const navMenu =
+    document.getElementById("navMenu");
+
+const mainNav =
+    document.getElementById("mainNav");
+
+const servicesToggle =
+    document.getElementById("servicesToggle");
+
+const servicesDropdown =
+    document.getElementById("servicesDropdown");
 
 
-<!-- =====================================================
-JAVASCRIPT
-===================================================== -->
+/* =========================================================
+   OPEN / CLOSE MOBILE MENU
+========================================================= */
 
-<script src="script.js"></script>
+if (menuToggle && navMenu) {
+
+    menuToggle.addEventListener(
+        "click",
+        function(event) {
+
+            event.stopPropagation();
+
+            const isOpen =
+                menuToggle.classList.toggle("active");
+
+            navMenu.classList.toggle(
+                "active",
+                isOpen
+            );
+
+            mainNav.classList.toggle(
+                "active",
+                isOpen
+            );
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   SERVICES DROPDOWN
+========================================================= */
+
+if (servicesToggle && servicesDropdown) {
+
+    servicesToggle.addEventListener(
+        "click",
+        function(event) {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            const isOpen =
+                servicesToggle.classList.toggle("active");
+
+            servicesDropdown.classList.toggle(
+                "active",
+                isOpen
+            );
+
+            servicesToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   CLOSE NAVIGATION
+========================================================= */
+
+function closeNavigation() {
+
+    if (!menuToggle || !navMenu) {
+        return;
+    }
+
+    menuToggle.classList.remove("active");
+
+    navMenu.classList.remove("active");
+
+    if (mainNav) {
+        mainNav.classList.remove("active");
+    }
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    menuToggle.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+    );
+
+
+    if (servicesToggle) {
+
+        servicesToggle.classList.remove("active");
+
+        servicesToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
+
+
+    if (servicesDropdown) {
+
+        servicesDropdown.classList.remove("active");
+
+    }
+
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+if (navMenu) {
+
+    const navLinks =
+        navMenu.querySelectorAll(
+            "a:not(.nav-dropdown a)"
+        );
+
+
+    navLinks.forEach(
+        function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    closeNavigation();
+
+                }
+            );
+
+        }
+    );
+
+
+    if (servicesDropdown) {
+
+        const dropdownLinks =
+            servicesDropdown.querySelectorAll("a");
+
+
+        dropdownLinks.forEach(
+            function(link) {
+
+                link.addEventListener(
+                    "click",
+                    function() {
+
+                        closeNavigation();
+
+                    }
+                );
+
+            }
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   CLOSE WHEN CLICKING OUTSIDE
+========================================================= */
+
+document.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            mainNav &&
+            menuToggle &&
+            !mainNav.contains(event.target) &&
+            !menuToggle.contains(event.target)
+        ) {
+
+            closeNavigation();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   CLOSE MOBILE MENU ON RESIZE
+========================================================= */
+
+window.addEventListener(
+    "resize",
+    function() {
+
+        if (window.innerWidth > 800) {
+
+            closeNavigation();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+if ("IntersectionObserver" in window) {
+
+    const revealObserver =
+        new IntersectionObserver(
+            function(entries) {
+
+                entries.forEach(
+                    function(entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add(
+                                "visible"
+                            );
+
+                            revealObserver.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+    revealElements.forEach(
+        function(element) {
+
+            revealObserver.observe(
+                element
+            );
+
+        }
+    );
+
+} else {
+
+    revealElements.forEach(
+        function(element) {
+
+            element.classList.add(
+                "visible"
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   FAQ ACCORDION
+========================================================= */
+
+const faqQuestions =
+    document.querySelectorAll(
+        ".faq-question"
+    );
+
+
+faqQuestions.forEach(
+    function(question) {
+
+        question.addEventListener(
+            "click",
+            function() {
+
+                const answer =
+                    question.nextElementSibling;
+
+                const icon =
+                    question.querySelector(
+                        "span:last-child"
+                    );
+
+
+                const isOpen =
+                    answer.style.display === "block";
+
+
+                document
+                    .querySelectorAll(".faq-answer")
+                    .forEach(
+                        function(item) {
+
+                            item.style.display =
+                                "none";
+
+                        }
+                    );
+
+
+                document
+                    .querySelectorAll(
+                        ".faq-question"
+                    )
+                    .forEach(
+                        function(item) {
+
+                            item.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+                        }
+                    );
+
+
+                document
+                    .querySelectorAll(
+                        ".faq-question span:last-child"
+                    )
+                    .forEach(
+                        function(item) {
+
+                            item.textContent =
+                                "+";
+
+                        }
+                    );
+
+
+                if (!isOpen) {
+
+                    answer.style.display =
+                        "block";
+
+                    icon.textContent =
+                        "−";
+
+                    question.setAttribute(
+                        "aria-expanded",
+                        "true"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+);
+
+</script>
+
 
 </body>
 </html>
