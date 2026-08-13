@@ -8990,3 +8990,11 @@ p {
     }
 
 }
+/* =========================================================
+   REMOVE GALLERY PHOTO LABELS
+========================================================= */
+
+.gallery-photo .photo-label,
+.gallery-wheel-image .photo-label {
+    display: none !important;
+}
