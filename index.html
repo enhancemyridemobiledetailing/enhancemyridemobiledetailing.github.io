@@ -29,6 +29,227 @@
         href="css/style.css"
     >
 
+
+    <!-- =========================================
+         HOMEPAGE HERO SLIDESHOW
+    ========================================== -->
+
+    <style>
+
+        .home-hero {
+            position: relative;
+            overflow: hidden;
+            min-height: 90vh;
+        }
+
+
+        .hero-slideshow {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+            background: #050505;
+        }
+
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            opacity: 0;
+
+            transform: scale(1.04);
+
+            transition:
+                opacity 1.4s ease,
+                transform 7s ease;
+        }
+
+
+        .hero-slide.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+
+        /*
+        Dark cinematic overlay.
+        Keeps your CR-V visible while making
+        the white/gold text easy to read.
+        */
+
+        .hero-slideshow::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.88) 0%,
+                    rgba(0,0,0,0.68) 38%,
+                    rgba(0,0,0,0.38) 70%,
+                    rgba(0,0,0,0.55) 100%
+                );
+
+            z-index: 2;
+        }
+
+
+        .home-hero-content {
+            position: relative;
+            z-index: 5;
+        }
+
+
+        .hero-background {
+            position: absolute;
+            inset: 0;
+
+            z-index: 1;
+
+            pointer-events: none;
+        }
+
+
+        .hero-background .hero-glow {
+            z-index: 3;
+        }
+
+
+        .hero-background .hero-grid {
+            z-index: 4;
+        }
+
+
+        /*
+        Slideshow navigation dots
+        */
+
+        .hero-slide-controls {
+            position: absolute;
+
+            left: 50%;
+            bottom: 52px;
+
+            transform: translateX(-50%);
+
+            display: flex;
+            align-items: center;
+            gap: 9px;
+
+            z-index: 10;
+        }
+
+
+        .hero-slide-dot {
+            width: 7px;
+            height: 7px;
+
+            border: 1px solid rgba(255,255,255,0.65);
+
+            border-radius: 50%;
+
+            background: transparent;
+
+            padding: 0;
+
+            cursor: pointer;
+
+            transition:
+                width 0.3s ease,
+                background 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+
+        .hero-slide-dot.active {
+            width: 28px;
+
+            border-radius: 20px;
+
+            background: #ffffff;
+
+            border-color: #ffffff;
+        }
+
+
+        /*
+        Small "MY RIDE" label
+        */
+
+        .hero-owner-label {
+            display: inline-flex;
+
+            align-items: center;
+            gap: 10px;
+
+            margin-bottom: 18px;
+
+            font-size: 11px;
+            font-weight: 600;
+
+            letter-spacing: 0.22em;
+
+            text-transform: uppercase;
+
+            color: rgba(255,255,255,0.72);
+        }
+
+
+        .hero-owner-label::before {
+            content: "";
+
+            width: 30px;
+            height: 1px;
+
+            background: currentColor;
+        }
+
+
+        /*
+        Mobile adjustments
+        */
+
+        @media (max-width: 768px) {
+
+            .home-hero {
+                min-height: 82vh;
+            }
+
+
+            .hero-slide {
+                background-position: center center;
+            }
+
+
+            .hero-slideshow::after {
+                background:
+                    linear-gradient(
+                        180deg,
+                        rgba(0,0,0,0.62) 0%,
+                        rgba(0,0,0,0.62) 45%,
+                        rgba(0,0,0,0.84) 100%
+                    );
+            }
+
+
+            .hero-slide-controls {
+                bottom: 28px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
@@ -130,6 +351,36 @@
 
         <section class="home-hero">
 
+
+            <!-- CR-V SLIDESHOW -->
+
+            <div class="hero-slideshow">
+
+
+                <div
+                    class="hero-slide active"
+                    style="background-image: url('images/hero/crv-hero-1.jpg');"
+                ></div>
+
+
+                <div
+                    class="hero-slide"
+                    style="background-image: url('images/hero/crv-hero-2.jpg');"
+                ></div>
+
+
+                <div
+                    class="hero-slide"
+                    style="background-image: url('images/hero/crv-hero-3.jpg');"
+                ></div>
+
+
+            </div>
+
+
+
+            <!-- Existing hero visual effects -->
+
             <div class="hero-background">
 
                 <div class="hero-glow"></div>
@@ -139,10 +390,19 @@
             </div>
 
 
+
+            <!-- HERO CONTENT -->
+
             <div class="container home-hero-content">
 
 
                 <div class="hero-copy">
+
+
+                    <div class="hero-owner-label">
+                        THE ENHANCE MY RIDE EXPERIENCE
+                    </div>
+
 
                     <p class="eyebrow">
                         PREMIUM MOBILE DETAILING
@@ -151,10 +411,9 @@
 
                     <h1>
 
-                        We Come To You.
-
+                        We Come
                         <span>
-                            You Relax.
+                            To You.
                         </span>
 
                     </h1>
@@ -205,10 +464,41 @@
 
                     </div>
 
+
                 </div>
 
 
             </div>
+
+
+
+            <!-- SLIDESHOW DOTS -->
+
+            <div
+                class="hero-slide-controls"
+                aria-label="Hero slideshow controls"
+            >
+
+                <button
+                    class="hero-slide-dot active"
+                    type="button"
+                    aria-label="Show slide 1"
+                ></button>
+
+                <button
+                    class="hero-slide-dot"
+                    type="button"
+                    aria-label="Show slide 2"
+                ></button>
+
+                <button
+                    class="hero-slide-dot"
+                    type="button"
+                    aria-label="Show slide 3"
+                ></button>
+
+            </div>
+
 
 
             <div class="hero-scroll">
@@ -221,18 +511,18 @@
 
             </div>
 
+
         </section>
 
 
 
         <!-- =====================================
-             BRAND INTRO
+             INTRO
         ====================================== -->
 
         <section class="section home-intro">
 
             <div class="container">
-
 
                 <div class="home-intro-grid">
 
@@ -266,19 +556,19 @@
 
                         <p>
 
-                            Enhance My Ride brings the detail
-                            directly to you, combining premium
-                            vehicle care with the convenience
-                            of a mobile service.
+                            Enhance My Ride delivers a premium mobile
+                            detailing experience built around convenience,
+                            attention to detail, and a finish you can see
+                            and feel.
 
                         </p>
 
 
                         <p>
 
-                            Whether your vehicle needs a complete
-                            detail or just one specific area restored,
-                            we're here to enhance it.
+                            Whether your vehicle needs a complete detail
+                            or just one specific area restored, we're here
+                            to enhance it.
 
                         </p>
 
@@ -336,8 +626,6 @@
                 <div class="home-package-grid">
 
 
-                    <!-- GOLD -->
-
                     <article class="home-package">
 
                         <div class="package-top">
@@ -360,11 +648,7 @@
 
                         <div class="package-price">
 
-                            <sup>
-                                $
-                            </sup>
-
-                            149
+                            <sup>$</sup>149
 
                         </div>
 
@@ -378,29 +662,17 @@
 
                         <ul>
 
-                            <li>
-                                Exterior hand wash
-                            </li>
+                            <li>Exterior hand wash</li>
 
-                            <li>
-                                Wheels & tires cleaned
-                            </li>
+                            <li>Wheels & tires cleaned</li>
 
-                            <li>
-                                Tire dressing
-                            </li>
+                            <li>Tire dressing</li>
 
-                            <li>
-                                Interior vacuum
-                            </li>
+                            <li>Interior vacuum</li>
 
-                            <li>
-                                Interior surface cleaning
-                            </li>
+                            <li>Interior surface cleaning</li>
 
-                            <li>
-                                Glass cleaned
-                            </li>
+                            <li>Glass cleaned</li>
 
                         </ul>
 
@@ -415,8 +687,6 @@
                     </article>
 
 
-
-                    <!-- BLACK LABEL -->
 
                     <article
                         class="home-package featured-package"
@@ -442,11 +712,7 @@
 
                         <div class="package-price">
 
-                            <sup>
-                                $
-                            </sup>
-
-                            249
+                            <sup>$</sup>249
 
                         </div>
 
@@ -460,29 +726,17 @@
 
                         <ul>
 
-                            <li>
-                                Everything in Gold
-                            </li>
+                            <li>Everything in Gold</li>
 
-                            <li>
-                                Deep interior cleaning
-                            </li>
+                            <li>Deep interior cleaning</li>
 
-                            <li>
-                                Detailed wheels & tires
-                            </li>
+                            <li>Detailed wheels & tires</li>
 
-                            <li>
-                                Interior trim treatment
-                            </li>
+                            <li>Interior trim treatment</li>
 
-                            <li>
-                                Exterior protection
-                            </li>
+                            <li>Exterior protection</li>
 
-                            <li>
-                                Enhanced finishing process
-                            </li>
+                            <li>Enhanced finishing process</li>
 
                         </ul>
 
@@ -497,8 +751,6 @@
                     </article>
 
 
-
-                    <!-- SHOWROOM -->
 
                     <article class="home-package">
 
@@ -522,11 +774,7 @@
 
                         <div class="package-price">
 
-                            <sup>
-                                $
-                            </sup>
-
-                            399
+                            <sup>$</sup>399
 
                         </div>
 
@@ -540,29 +788,17 @@
 
                         <ul>
 
-                            <li>
-                                Everything in Black Label
-                            </li>
+                            <li>Everything in Black Label</li>
 
-                            <li>
-                                Intensive interior detailing
-                            </li>
+                            <li>Intensive interior detailing</li>
 
-                            <li>
-                                Premium exterior treatment
-                            </li>
+                            <li>Premium exterior treatment</li>
 
-                            <li>
-                                Paint enhancement
-                            </li>
+                            <li>Paint enhancement</li>
 
-                            <li>
-                                Premium protection
-                            </li>
+                            <li>Premium protection</li>
 
-                            <li>
-                                Final showroom inspection
-                            </li>
+                            <li>Final showroom inspection</li>
 
                         </ul>
 
@@ -603,7 +839,7 @@
 
 
         <!-- =====================================
-             REAL RESULTS
+             TRANSFORMATIONS
         ====================================== -->
 
         <section class="section home-transformations">
@@ -634,8 +870,6 @@
 
                 <div class="transformation-preview-grid">
 
-
-                    <!-- LEXUS -->
 
                     <article class="transformation-preview">
 
@@ -677,8 +911,6 @@
 
 
 
-                    <!-- MERCEDES -->
-
                     <article class="transformation-preview">
 
                         <a
@@ -718,8 +950,6 @@
                     </article>
 
 
-
-                    <!-- MERCEDES WHEEL -->
 
                     <article class="transformation-preview">
 
@@ -782,12 +1012,10 @@
 
 
         <!-- =====================================
-             INDIVIDUAL ENHANCEMENTS
+             INDIVIDUAL SERVICES
         ====================================== -->
 
-        <section
-            class="section section-dark home-enhancements"
-        >
+        <section class="section section-dark">
 
             <div class="container">
 
@@ -1101,12 +1329,10 @@
 
 
                 <h2>
-
                     Your Ride Deserves
                     <span>
                         The Enhance.
                     </span>
-
                 </h2>
 
 
@@ -1283,7 +1509,7 @@
 
 
     <!-- =========================================
-         FLOATING CALL BUTTON
+         FLOATING MOBILE CALL BUTTON
     ========================================== -->
 
     <a
@@ -1304,7 +1530,125 @@
 
 
 
+    <!-- =========================================
+         EXISTING SITE JAVASCRIPT
+    ========================================== -->
+
     <script src="js/script.js"></script>
+
+
+
+    <!-- =========================================
+         HERO SLIDESHOW JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const slides =
+                    document.querySelectorAll(
+                        ".hero-slide"
+                    );
+
+                const dots =
+                    document.querySelectorAll(
+                        ".hero-slide-dot"
+                    );
+
+                if (!slides.length) {
+                    return;
+                }
+
+
+                let currentSlide = 0;
+
+                let slideshowTimer;
+
+
+                function showSlide(index) {
+
+                    slides.forEach(
+                        function (slide, i) {
+
+                            slide.classList.toggle(
+                                "active",
+                                i === index
+                            );
+
+                        }
+                    );
+
+
+                    dots.forEach(
+                        function (dot, i) {
+
+                            dot.classList.toggle(
+                                "active",
+                                i === index
+                            );
+
+                        }
+                    );
+
+
+                    currentSlide = index;
+
+                }
+
+
+                function nextSlide() {
+
+                    const next =
+                        (currentSlide + 1) % slides.length;
+
+                    showSlide(next);
+
+                }
+
+
+                function startSlideshow() {
+
+                    clearInterval(slideshowTimer);
+
+                    slideshowTimer =
+                        setInterval(
+                            nextSlide,
+                            6000
+                        );
+
+                }
+
+
+                dots.forEach(
+                    function (dot, index) {
+
+                        dot.addEventListener(
+                            "click",
+                            function () {
+
+                                showSlide(index);
+
+                                startSlideshow();
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                showSlide(0);
+
+                startSlideshow();
+
+            }
+        );
+
+    </script>
+
 
 </body>
 
