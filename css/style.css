@@ -2620,3 +2620,429 @@ p {
     }
 
 }
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   ABOUT HERO
+   ========================================================= */
+
+.about-hero {
+    background:
+        radial-gradient(
+            circle at 70% 42%,
+            rgba(201, 162, 39, 0.12),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #050505 0%,
+            #111111 50%,
+            #050505 100%
+        );
+}
+
+
+/* =========================================================
+   ABOUT STORY
+   ========================================================= */
+
+.about-story {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.8fr)
+        minmax(0, 1.2fr);
+
+    gap: 90px;
+
+    align-items: start;
+}
+
+
+.about-story-content {
+    padding-top: 8px;
+}
+
+
+.about-story-content p {
+    margin-bottom: 24px;
+
+    font-size: 0.98rem;
+
+    line-height: 1.95;
+}
+
+
+.about-story-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   VALUES
+   ========================================================= */
+
+.values-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+.value-card {
+    min-height: 300px;
+
+    padding: 32px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.008)
+        );
+
+    transition: var(--transition);
+}
+
+
+.value-card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(201, 162, 39, 0.45);
+}
+
+
+.value-number {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    margin-bottom: 55px;
+}
+
+
+.value-card h3 {
+    font-size: 1.3rem;
+
+    margin-bottom: 15px;
+}
+
+
+.value-card p {
+    font-size: 0.8rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   WHY MOBILE
+   ========================================================= */
+
+.why-mobile-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 80px;
+
+    align-items: stretch;
+}
+
+
+.why-mobile-content {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.why-mobile-content > p:not(.eyebrow) {
+    max-width: 620px;
+
+    margin-bottom: 22px;
+
+    font-size: 0.95rem;
+
+    line-height: 1.9;
+}
+
+
+.why-mobile-content .text-link {
+    margin-top: 10px;
+}
+
+
+.why-mobile-feature {
+    min-height: 480px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 35px;
+
+    border: 1px solid rgba(201, 162, 39, 0.25);
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(201, 162, 39, 0.12),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #0b0b0b,
+            #151515
+        );
+}
+
+
+.why-mobile-box {
+    width: 100%;
+
+    padding: 65px 35px;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    text-align: center;
+
+    background:
+        rgba(5, 5, 5, 0.6);
+}
+
+
+.why-mobile-box span {
+    display: block;
+
+    color: var(--gold-light);
+
+    font-size: 0.62rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.17em;
+
+    margin-bottom: 25px;
+}
+
+
+.why-mobile-box strong {
+    display: block;
+
+    color: var(--white);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        3.2rem
+    );
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+
+.why-mobile-box p {
+    color: var(--gold-light);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   VEHICLE TYPES
+   ========================================================= */
+
+.vehicle-types {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+
+.vehicle-type {
+    min-height: 170px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 27px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background:
+        rgba(255, 255, 255, 0.015);
+
+    transition: var(--transition);
+}
+
+
+.vehicle-type:hover {
+    border-color:
+        rgba(201, 162, 39, 0.4);
+
+    transform: translateY(-4px);
+}
+
+
+.vehicle-type span {
+    color: var(--gold);
+
+    font-size: 0.65rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+}
+
+
+.vehicle-type h3 {
+    margin: 0;
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   ABOUT RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .values-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .about-story,
+    .why-mobile-grid {
+        gap: 55px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .about-story {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .why-mobile-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .why-mobile-feature {
+        min-height: 400px;
+    }
+
+
+    .vehicle-types {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .value-card {
+        min-height: 250px;
+    }
+
+
+    .value-number {
+        margin-bottom: 40px;
+    }
+
+
+    .vehicle-types {
+        grid-template-columns: 1fr;
+    }
+
+
+    .vehicle-type {
+        min-height: 145px;
+    }
+
+
+    .why-mobile-feature {
+        min-height: 350px;
+
+        padding: 20px;
+    }
+
+
+    .why-mobile-box {
+        padding: 50px 25px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .about-story-content p,
+    .why-mobile-content > p:not(.eyebrow) {
+        font-size: 0.88rem;
+    }
+
+
+    .why-mobile-box {
+        padding: 45px 20px;
+    }
+}
