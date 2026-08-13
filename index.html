@@ -1,154 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>
 Enhance My Ride | Premium Mobile Detailing in the Bay Area
 </title>
 
 <meta
-name="description"
-content="Enhance My Ride Auto Spa & Mobile Detailing delivers premium mobile car detailing throughout Alameda, Oakland, San Francisco and the Bay Area. We come to you. You relax. We Enhance."
->
+name=“description”
+content=“Enhance My Ride Auto Spa & Mobile Detailing delivers premium mobile car detailing throughout Alameda, Oakland, San Francisco and the Bay Area. We come to you. You relax. We Enhance.”
 
 <meta
-name="keywords"
-content="mobile detailing Alameda, car detailing Oakland, mobile car detailing San Francisco, Bay Area auto detailing, premium car detailing"
->
+name=“keywords”
+content=“mobile detailing Alameda, car detailing Oakland, mobile car detailing San Francisco, Bay Area auto detailing, premium car detailing”
 
 <meta
-name="author"
-content="Enhance My Ride Auto Spa & Mobile Detailing"
->
+name=“author”
+content=“Enhance My Ride Auto Spa & Mobile Detailing”
 
 <meta
-name="robots"
-content="index, follow"
->
+name=“robots”
+content=“index, follow”
 
 <meta
-property="og:title"
-content="Enhance My Ride | Premium Mobile Detailing"
->
+property=“og:title”
+content=“Enhance My Ride | Premium Mobile Detailing”
 
 <meta
-property="og:description"
-content="Premium mobile detailing delivered directly to your location throughout the Bay Area."
->
+property=“og:description”
+content=“Premium mobile detailing delivered directly to your location throughout the Bay Area.”
 
 <meta
-property="og:type"
-content="website"
->
+property=“og:type”
+content=“website”
 
 <meta
-property="og:url"
-content="https://enhancemyride.com/"
->
+property=“og:url”
+content=“https://enhancemyride.com/”
 
 <link
 rel="canonical"
 href="https://enhancemyride.com/"
 >
-
 <link
 rel="stylesheet"
 href="style.css"
 >
-
 <link
 rel="icon"
 type="image/png"
 href="favicon.png"
 >
-
 <link
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 >
-
 </head>
-
-
 <body>
-
-
 <!-- =====================================================
 NAVIGATION
 ===================================================== -->
-
 <header class="navbar">
 
 <a
-href="index.html"
-class="logo"
-aria-label="Enhance My Ride Home"
->
+href=“index.html”
+class=“logo”
+aria-label=“Enhance My Ride Home”
 
 <div class="logo-mark">
 EMR
 </div>
-
 <div class="logo-text">
-
 <span class="logo-main">
 ENHANCE MY RIDE
 </span>
-
 <span class="logo-sub">
 AUTO SPA & MOBILE DETAILING
 </span>
-
 </div>
-
 </a>
 
-
 <button
-class="menu-toggle"
-id="menuToggle"
-type="button"
-aria-label="Open navigation menu"
-aria-expanded="false"
->
-
-<span></span>
-<span></span>
-<span></span>
+class=“menu-toggle”
+id=“menuToggle”
+type=“button”
+aria-label=“Open navigation menu”
+aria-expanded=“false”
+aria-controls=“navMenu”
 
 </button>
-
-
-<nav>
-
+<nav id="mainNav">
 <ul
 class="nav-menu"
 id="navMenu"
 >
-
 <li>
 <a href="index.html">
 Home
 </a>
 </li>
-
 <li>
 <a href="gallery.html">
 Gallery
 </a>
 </li>
+<!-- SERVICES DROPDOWN -->
+<li class="nav-dropdown">
 
+<button
+class=“nav-dropdown-toggle”
+id=“servicesToggle”
+type=“button”
+aria-expanded=“false”
+aria-controls=“servicesDropdown”
+
+<span>
+Services
+</span>
+</button>
+<ul
+class="services-dropdown"
+id="servicesDropdown"
+>
 <li>
 <a href="services.html">
-Services
+<i class="fa-solid fa-sparkles"></i>
+<span>
+Packages
+<small>
+View our premium detailing packages
+</small>
+</span>
 </a>
 </li>
-
+<li>
+<a href="services.html#addons">
+<i class="fa-solid fa-plus"></i>
+<span>
+Premium Add-Ons
+<small>
+Upgrade your detail
+</small>
+</span>
+</a>
+</li>
+<li>
+<a href="gallery.html">
+<i class="fa-solid fa-images"></i>
+<span>
+Transformations
+<small>
+See our latest work
+</small>
+</span>
+</a>
+</li>
+</ul>
+</li>
 <li>
 <a
 href="quote.html"
@@ -157,36 +166,24 @@ class="nav-quote"
 Get Free Quote
 </a>
 </li>
-
 <li>
 <a href="about.html">
 About
 </a>
 </li>
-
 <li>
 <a href="service-area.html">
 Service Area
 </a>
 </li>
-
 </ul>
-
 </nav>
-
 </header>
-
-
-
 <!-- =====================================================
 HERO
 ===================================================== -->
-
 <main>
-
-
 <section class="hero">
-
 <div
 class="hero-image"
 style="
@@ -195,15 +192,10 @@ url('images/hero-car.jpg');
 "
 >
 </div>
-
-
 <div class="hero-content reveal">
-
 <p class="eyebrow">
 PREMIUM MOBILE AUTO SPA
 </p>
-
-
 <h1>
 
 Your Vehicle.
@@ -211,10 +203,7 @@ Your Vehicle.
 <span>
 Enhanced.
 </span>
-
 </h1>
-
-
 <p>
 
 Premium mobile detailing designed for
@@ -224,51 +213,34 @@ at home, at work, or wherever your vehicle
 needs attention.
 
 </p>
-
-
 <div class="hero-buttons">
 
 <a
-href="quote.html"
-class="button button-gold"
->
-
-<i class="fa-solid fa-calendar-check"></i>
+href=“quote.html”
+class=“button button-gold”
 
 Get Your Free Quote
 
 </a>
 
-
 <a
-href="gallery.html"
-class="button button-outline"
->
+href=“gallery.html”
+class=“button button-outline”
 
 View Our Work
 
 </a>
-
 </div>
-
 </div>
-
 </section>
-
-
-
 <!-- =====================================================
 BRAND STATEMENT
 ===================================================== -->
-
 <section class="section section-dark">
-
 <div class="section-heading reveal">
-
 <p class="eyebrow">
 THE ENHANCE EXPERIENCE
 </p>
-
 <h2>
 
 We Come To You.
@@ -276,9 +248,7 @@ We Come To You.
 <span>
 You Relax. We Enhance.
 </span>
-
 </h2>
-
 <p>
 
 Professional vehicle care without the
@@ -289,81 +259,50 @@ Your vehicle stays where it is.
 We bring the detail to you.
 
 </p>
-
 </div>
-
-
 <div class="stats-grid reveal">
-
 <div class="stat">
-
 <div class="stat-number">
 $149
 </div>
-
 <div class="stat-label">
 Starting Price
 </div>
-
 </div>
-
-
 <div class="stat">
-
 <div class="stat-number">
 3
 </div>
-
 <div class="stat-label">
 Premium Packages
 </div>
-
 </div>
-
-
 <div class="stat">
-
 <div class="stat-number">
 100%
 </div>
-
 <div class="stat-label">
 Mobile Service
 </div>
-
 </div>
-
-
 <div class="stat">
-
 <div class="stat-number">
 Bay
 </div>
-
 <div class="stat-label">
 Area Service
 </div>
-
 </div>
-
 </div>
-
 </section>
-
-
-
 <!-- =====================================================
 PACKAGES
 ===================================================== -->
-
 <section class="section section-light-dark">
-
 <div class="section-heading reveal">
-
 <p class="eyebrow">
 OUR SIGNATURE SERVICES
 </p>
-
 <h2>
 
 Choose Your
@@ -371,9 +310,7 @@ Choose Your
 <span>
 Enhancement.
 </span>
-
 </h2>
-
 <p>
 
 Every package is designed around
@@ -381,32 +318,22 @@ professional preparation, attention to detail,
 and a finish you can see and feel.
 
 </p>
-
 </div>
-
-
 <div class="package-grid">
-
-
 <!-- GOLD -->
-
 <article class="package-card reveal">
-
 <div class="package-name">
 ENHANCE
 </div>
-
 <h3>
 Gold Package
 </h3>
-
 <div class="package-price">
 $149
 <span>
 starting
 </span>
 </div>
-
 <p class="package-description">
 
 Our essential premium detail for
@@ -414,83 +341,60 @@ maintaining a clean, refreshed,
 and protected vehicle.
 
 </p>
-
-
 <ul class="package-list">
-
 <li>
 Exterior hand wash
 </li>
-
 <li>
 Wheel & tire cleaning
 </li>
-
 <li>
 Tire dressing
 </li>
-
 <li>
 Exterior surface cleaning
 </li>
-
 <li>
 Interior vacuum
 </li>
-
 <li>
 Dash & console cleaning
 </li>
-
 <li>
 Interior glass cleaning
 </li>
-
 <li>
 Final quality inspection
 </li>
-
 </ul>
 
-
 <a
-href="quote.html"
-class="button button-outline"
->
+href=“quote.html”
+class=“button button-outline”
 
 Choose Gold
 
 </a>
-
 </article>
-
-
-
 <!-- BLACK LABEL -->
-
 <article
 class="package-card featured reveal"
 >
-
 <div class="package-badge">
 MOST POPULAR
 </div>
-
 <div class="package-name">
 ENHANCE
 </div>
-
 <h3>
 Black Label
 </h3>
-
 <div class="package-price">
 $249
 <span>
 starting
 </span>
 </div>
-
 <p class="package-description">
 
 A deeper interior and exterior
@@ -498,77 +402,55 @@ transformation for vehicles that
 need more than a maintenance wash.
 
 </p>
-
-
 <ul class="package-list">
-
 <li>
 Everything in Gold
 </li>
-
 <li>
 Deep wheel cleaning
 </li>
-
 <li>
 Foam pre-wash
 </li>
-
 <li>
 Paint decontamination
 </li>
-
 <li>
 Interior deep cleaning
 </li>
-
 <li>
 Detailed crevice cleaning
 </li>
-
 <li>
 Interior protection
 </li>
-
 <li>
 Premium finishing treatment
 </li>
-
 </ul>
 
-
 <a
-href="quote.html"
-class="button button-gold"
->
+href=“quote.html”
+class=“button button-gold”
 
 Choose Black Label
 
 </a>
-
 </article>
-
-
-
 <!-- SHOWROOM -->
-
 <article class="package-card reveal">
-
 <div class="package-name">
 ENHANCE
 </div>
-
 <h3>
 Showroom Edition
 </h3>
-
 <div class="package-price">
 $399
 <span>
 starting
 </span>
 </div>
-
 <p class="package-description">
 
 Our highest-level enhancement for
@@ -576,90 +458,60 @@ owners who want their vehicle to
 look its absolute best.
 
 </p>
-
-
 <ul class="package-list">
-
 <li>
 Everything in Black Label
 </li>
-
 <li>
 Advanced exterior preparation
 </li>
-
 <li>
 Complete interior restoration
 </li>
-
 <li>
 Paint enhancement
 </li>
-
 <li>
 Premium protection
 </li>
-
 <li>
 Detailed trim treatment
 </li>
-
 <li>
 Complete wheel & tire finish
 </li>
-
 <li>
 Showroom-level final inspection
 </li>
-
 </ul>
 
-
 <a
-href="quote.html"
-class="button button-outline"
->
+href=“quote.html”
+class=“button button-outline”
 
 Choose Showroom
 
 </a>
-
 </article>
-
-
 </div>
-
-
 </section>
-
-
-
 <!-- =====================================================
 WHY ENHANCE
 ===================================================== -->
-
 <section class="section section-dark">
-
 <div class="two-column">
-
-
 <div class="premium-image reveal">
 
 <img
-src="images/mercedes-after.jpg"
-alt="Mercedes-Benz professionally detailed by Enhance My Ride"
-loading="lazy"
->
+src=“images/mercedes-after.jpg”
+alt=“Mercedes-Benz professionally detailed by Enhance My Ride”
+loading=“lazy”
 
 </div>
-
-
 <div class="reveal">
-
 <p class="eyebrow">
 WHY ENHANCE MY RIDE
 </p>
-
 <h2>
 
 Detailing With A
@@ -667,150 +519,99 @@ Detailing With A
 <span class="gold-text">
 Different Standard.
 </span>
-
 </h2>
-
-
 <p style="margin:20px 0 30px;">
 
-We're not trying to be the cheapest
+We’re not trying to be the cheapest
 detailer in the Bay Area.
 
-We're focused on delivering a
+We’re focused on delivering a
 professional experience, meticulous
-work, and a finished vehicle you're
+work, and a finished vehicle you’re
 proud to drive.
 
 </p>
-
-
 <ul class="feature-list">
-
-
 <li>
-
 <span class="feature-icon">
 <i class="fa-solid fa-location-dot"></i>
 </span>
-
 <div>
-
 <strong>
 We Come To You
 </strong>
-
 <br>
 
 Professional mobile service at your
 home, workplace, or approved location.
 
 </div>
-
 </li>
-
-
 <li>
-
 <span class="feature-icon">
 <i class="fa-solid fa-gem"></i>
 </span>
-
 <div>
-
 <strong>
 Premium Experience
 </strong>
-
 <br>
 
 Every detail is approached with
 care, precision, and consistency.
 
 </div>
-
 </li>
-
-
 <li>
-
 <span class="feature-icon">
 <i class="fa-solid fa-car"></i>
 </span>
-
 <div>
-
 <strong>
 Your Vehicle Comes First
 </strong>
-
 <br>
 
 We treat every vehicle according to
 its condition and the finish it deserves.
 
 </div>
-
 </li>
-
-
 <li>
-
 <span class="feature-icon">
 <i class="fa-solid fa-shield-halved"></i>
 </span>
-
 <div>
-
 <strong>
 Professional Finish
 </strong>
-
 <br>
 
-Our goal isn't simply to make your
-vehicle clean. It's to make it feel enhanced.
+Our goal isn’t simply to make your
+vehicle clean. It’s to make it feel enhanced.
 
 </div>
-
 </li>
-
-
 </ul>
 
-
-<br><br>
-
-
 <a
-href="about.html"
-class="button button-outline"
->
+href=“about.html”
+class=“button button-outline”
 
 Learn More About Us
 
 </a>
-
 </div>
-
-
 </div>
-
 </section>
-
-
-
 <!-- =====================================================
 BEFORE & AFTER
 ===================================================== -->
-
 <section class="section section-light-dark">
-
 <div class="section-heading reveal">
-
 <p class="eyebrow">
 REAL RESULTS
 </p>
-
 <h2>
 
 See The
@@ -818,9 +619,7 @@ See The
 <span>
 Enhancement.
 </span>
-
 </h2>
-
 <p>
 
 Our gallery will continue growing with
@@ -828,46 +627,31 @@ real vehicles and real transformations
 completed by Enhance My Ride.
 
 </p>
-
 </div>
-
-
 <div class="before-after reveal">
-
-
 <div class="before-after-item">
 
 <img
-src="images/mercedes-before.jpg"
-alt="Mercedes-Benz before professional detailing"
-loading="lazy"
->
+src=“images/mercedes-before.jpg”
+alt=“Mercedes-Benz before professional detailing”
+loading=“lazy”
 
 <div class="before-after-label">
 BEFORE
 </div>
-
 </div>
-
-
 <div class="before-after-item after">
 
 <img
-src="images/mercedes-after.jpg"
-alt="Mercedes-Benz after professional detailing"
-loading="lazy"
->
+src=“images/mercedes-after.jpg”
+alt=“Mercedes-Benz after professional detailing”
+loading=“lazy”
 
 <div class="before-after-label">
 AFTER
 </div>
-
 </div>
-
-
 </div>
-
-
 <div
 style="
 text-align:center;
@@ -876,32 +660,22 @@ margin-top:35px;
 >
 
 <a
-href="gallery.html"
-class="button button-gold"
->
+href=“gallery.html”
+class=“button button-gold”
 
 View Full Gallery
 
 </a>
-
 </div>
-
 </section>
-
-
-
 <!-- =====================================================
 PROCESS
 ===================================================== -->
-
 <section class="section section-dark">
-
 <div class="section-heading reveal">
-
 <p class="eyebrow">
 THE PROCESS
 </p>
-
 <h2>
 
 Simple.
@@ -909,58 +683,39 @@ Simple.
 <span>
 Professional.
 </span>
-
 </h2>
-
 <p>
 
 From booking to final inspection,
 we keep the experience straightforward.
 
 </p>
-
 </div>
-
-
 <div class="package-grid">
-
-
 <article class="card reveal">
-
 <div class="card-content">
-
 <p class="eyebrow">
 01
 </p>
-
 <h3>
 Request Your Quote
 </h3>
-
 <p>
 
 Tell us about your vehicle, its condition,
-and the service you're interested in.
+and the service you’re interested in.
 
 </p>
-
 </div>
-
 </article>
-
-
 <article class="card reveal">
-
 <div class="card-content">
-
 <p class="eyebrow">
 02
 </p>
-
 <h3>
 We Come To You
 </h3>
-
 <p>
 
 We arrive at your approved location
@@ -968,55 +723,35 @@ with the equipment needed to perform
 your enhancement.
 
 </p>
-
 </div>
-
 </article>
-
-
 <article class="card reveal">
-
 <div class="card-content">
-
 <p class="eyebrow">
 03
 </p>
-
 <h3>
 You Relax. We Enhance.
 </h3>
-
 <p>
 
 We handle the detail while you continue
-with your day. When we're finished,
+with your day. When we’re finished,
 your vehicle gets its final inspection.
 
 </p>
-
 </div>
-
 </article>
-
-
 </div>
-
 </section>
-
-
-
 <!-- =====================================================
 SERVICE AREA
 ===================================================== -->
-
 <section class="section section-light-dark">
-
 <div class="section-heading reveal">
-
 <p class="eyebrow">
 MOBILE SERVICE
 </p>
-
 <h2>
 
 Serving The
@@ -1024,56 +759,40 @@ Serving The
 <span>
 Bay Area.
 </span>
-
 </h2>
-
 <p>
 
 Premium mobile detailing delivered
 directly to your location.
 
 </p>
-
 </div>
-
-
 <div class="service-area-grid reveal">
-
 <div class="service-area-card">
 Alameda
 </div>
-
 <div class="service-area-card">
 Oakland
 </div>
-
 <div class="service-area-card">
 San Francisco
 </div>
-
 <div class="service-area-card">
 Berkeley
 </div>
-
 <div class="service-area-card">
 San Leandro
 </div>
-
 <div class="service-area-card">
 Hayward
 </div>
-
 <div class="service-area-card">
 Emeryville
 </div>
-
 <div class="service-area-card">
 Walnut Creek
 </div>
-
 </div>
-
-
 <div
 style="
 text-align:center;
@@ -1082,32 +801,22 @@ margin-top:35px;
 >
 
 <a
-href="service-area.html"
-class="button button-outline"
->
+href=“service-area.html”
+class=“button button-outline”
 
 View Service Area
 
 </a>
-
 </div>
-
 </section>
-
-
-
 <!-- =====================================================
 REVIEWS
 ===================================================== -->
-
 <section class="section section-dark">
-
 <div class="section-heading reveal">
-
 <p class="eyebrow">
 CUSTOMER EXPERIENCE
 </p>
-
 <h2>
 
 Your Vehicle.
@@ -1115,9 +824,7 @@ Your Vehicle.
 <span>
 Our Reputation.
 </span>
-
 </h2>
-
 <p>
 
 As Enhance My Ride grows, this section
@@ -1125,77 +832,52 @@ will feature verified customer reviews
 from our Google Business Profile.
 
 </p>
-
 </div>
-
-
 <div class="testimonial-grid">
-
-
 <article class="testimonial reveal">
-
 <div class="stars">
 ★★★★★
 </div>
-
 <p>
 
 Your review could be featured here.
-After your detail, we'd love to hear
+After your detail, we’d love to hear
 about your Enhance My Ride experience.
 
 </p>
-
 <div class="testimonial-name">
 ENHANCE MY RIDE CUSTOMER
 </div>
-
 </article>
-
-
 <article class="testimonial reveal">
-
 <div class="stars">
 ★★★★★
 </div>
-
 <p>
 
 Professional service, attention to detail,
 and a vehicle that looks and feels refreshed.
 
 </p>
-
 <div class="testimonial-name">
 ENHANCE MY RIDE CUSTOMER
 </div>
-
 </article>
-
-
 <article class="testimonial reveal">
-
 <div class="stars">
 ★★★★★
 </div>
-
 <p>
 
-We're building a premium detailing
+We’re building a premium detailing
 experience one vehicle at a time.
 
 </p>
-
 <div class="testimonial-name">
 ENHANCE MY RIDE CUSTOMER
 </div>
-
 </article>
-
-
 </div>
-
-
 <div
 style="
 text-align:center;
@@ -1204,36 +886,24 @@ margin-top:35px;
 >
 
 <a
-href="https://g.page/r/CRy_PYJmq6NYEBM/review"
-target="_blank"
-rel="noopener"
-class="button button-gold"
->
-
-<i class="fa-brands fa-google"></i>
+href=“https://g.page/r/CRy_PYJmq6NYEBM/review”
+target=”_blank”
+rel=“noopener”
+class=“button button-gold”
 
 Leave A Google Review
 
 </a>
-
 </div>
-
 </section>
-
-
-
 <!-- =====================================================
 FAQ
 ===================================================== -->
-
 <section class="section section-light-dark">
-
 <div class="section-heading reveal">
-
 <p class="eyebrow">
 QUESTIONS
 </p>
-
 <h2>
 
 Before You
@@ -1241,32 +911,22 @@ Before You
 <span>
 Book.
 </span>
-
 </h2>
-
 </div>
-
-
 <div class="faq reveal">
-
-
 <div class="faq-item">
 
 <button
-class="faq-question"
-type="button"
->
+class=“faq-question”
+type=“button”
 
 <span>
 Do you come to my home?
 </span>
-
 <span>
 +
 </span>
-
 </button>
-
 <div class="faq-answer">
 
 Yes. Enhance My Ride is a mobile detailing
@@ -1275,28 +935,20 @@ or another approved location within our
 service area.
 
 </div>
-
 </div>
-
-
-
 <div class="faq-item">
 
 <button
-class="faq-question"
-type="button"
->
+class=“faq-question”
+type=“button”
 
 <span>
 Do I need water and power?
 </span>
-
 <span>
 +
 </span>
-
 </button>
-
 <div class="faq-answer">
 
 Requirements can vary depending on the
@@ -1306,28 +958,20 @@ your quote so we can recommend the best
 setup for your vehicle.
 
 </div>
-
 </div>
-
-
-
 <div class="faq-item">
 
 <button
-class="faq-question"
-type="button"
->
+class=“faq-question”
+type=“button”
 
 <span>
 How do I get a price?
 </span>
-
 <span>
 +
 </span>
-
 </button>
-
 <div class="faq-answer">
 
 Start with our free quote form. Vehicle
@@ -1335,57 +979,38 @@ size, condition, location, and requested
 services can affect the final price.
 
 </div>
-
 </div>
-
-
-
 <div class="faq-item">
 
 <button
-class="faq-question"
-type="button"
->
+class=“faq-question”
+type=“button”
 
 <span>
 How long does detailing take?
 </span>
-
 <span>
 +
 </span>
-
 </button>
-
 <div class="faq-answer">
 
 Service time depends on the vehicle,
 condition, package, and add-ons selected.
-We'll give you an estimated service time
+We’ll give you an estimated service time
 when your appointment is confirmed.
 
 </div>
-
 </div>
-
-
 </div>
-
 </section>
-
-
-
 <!-- =====================================================
 FINAL CTA
 ===================================================== -->
-
 <section class="cta">
-
 <p class="eyebrow">
 YOUR VEHICLE COULD BE NEXT
 </p>
-
-
 <h2>
 
 Ready For Your
@@ -1393,10 +1018,7 @@ Ready For Your
 <span>
 Enhancement?
 </span>
-
 </h2>
-
-
 <p>
 
 Premium mobile detailing delivered
@@ -1405,388 +1027,381 @@ the Bay Area.
 
 </p>
 
-
 <a
-href="quote.html"
-class="button button-gold"
->
+href=“quote.html”
+class=“button button-gold”
 
 Get Your Free Quote
 
 </a>
-
 </section>
-
-
 </main>
-
-
-
 <!-- =====================================================
 FOOTER
 ===================================================== -->
-
 <footer>
-
 <div class="footer-grid">
-
-
 <div class="footer-brand">
-
 <div class="footer-title">
 ENHANCE MY RIDE
 </div>
-
 <div class="footer-sub">
 AUTO SPA & MOBILE DETAILING
 </div>
-
-
 <p class="footer-text">
 
 We come to you. You relax. We Enhance.
-
-<br><br>
 
 Premium mobile detailing serving
 San Francisco and the Bay Area.
 
 </p>
-
-
 <div class="social-icons">
 
-
 <a
-href="https://instagram.com/enhancemyridemobiledetailing"
-target="_blank"
-rel="noopener"
-aria-label="Instagram"
->
-
-<i class="fa-brands fa-instagram"></i>
+href=“https://instagram.com/enhancemyridemobiledetailing”
+target=”_blank”
+rel=“noopener”
+aria-label=“Instagram”
 
 </a>
 
-
 <a
-href="https://www.facebook.com/Enhancemyridemobiledetailing"
-target="_blank"
-rel="noopener"
-aria-label="Facebook"
->
-
-<i class="fa-brands fa-facebook-f"></i>
+href=“https://www.facebook.com/Enhancemyridemobiledetailing”
+target=”_blank”
+rel=“noopener”
+aria-label=“Facebook”
 
 </a>
 
-
 <a
-href="https://www.tiktok.com/@enhancemyride"
-target="_blank"
-rel="noopener"
-aria-label="TikTok"
->
-
-<i class="fa-brands fa-tiktok"></i>
+href=“https://www.tiktok.com/@enhancemyride”
+target=”_blank”
+rel=“noopener”
+aria-label=“TikTok”
 
 </a>
 
-
 <a
-href="https://youtube.com/@enhancemyridemobiledetailing"
-target="_blank"
-rel="noopener"
-aria-label="YouTube"
->
-
-<i class="fa-brands fa-youtube"></i>
+href=“https://youtube.com/@enhancemyridemobiledetailing”
+target=”_blank”
+rel=“noopener”
+aria-label=“YouTube”
 
 </a>
-
-
 </div>
-
 </div>
-
-
-
 <div class="footer-contact">
-
 <div class="footer-title">
 CONTACT
 </div>
-
-
 <p class="footer-text">
 
-
 <a
-href="mailto:info@enhancemyride.com"
->
-
-<i class="fa-solid fa-envelope"></i>
+href=“mailto:info@enhancemyride.com”
 
 info@enhancemyride.com
 
 </a>
 
-
-<br><br>
-
-
 <a
-href="tel:3233271806"
->
-
-<i class="fa-solid fa-phone"></i>
+href=“tel:3233271806”
 
 (323) 327-1806
 
 </a>
-
-
 </p>
 
-
 <a
-href="quote.html"
-class="button button-outline"
->
+href=“quote.html”
+class=“button button-outline”
 
 Request A Quote
 
 </a>
 
-
-<br><br>
-
-
 <a
-href="https://g.page/r/CRy_PYJmq6NYEBM/review"
-target="_blank"
-rel="noopener"
-class="button button-outline"
->
-
-<i class="fa-brands fa-google"></i>
+href=“https://g.page/r/CRy_PYJmq6NYEBM/review”
+target=”_blank”
+rel=“noopener”
+class=“button button-outline”
 
 Leave A Google Review
 
 </a>
-
-
 </div>
-
-
 </div>
-
-
 <div class="copyright">
 
 © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
 All Rights Reserved.
 
 </div>
-
 </footer>
-
-
-
 <!-- =====================================================
 JAVASCRIPT
 ===================================================== -->
-
 <script>
-
-
 /* =====================================================
 MOBILE NAVIGATION
 ===================================================== */
-
 const menuToggle =
 document.getElementById("menuToggle");
-
 const navMenu =
 document.getElementById("navMenu");
-
-
-if(menuToggle && navMenu){
-
-menuToggle.addEventListener(
-"click",
-function(){
-
-const open =
-navMenu.classList.toggle("active");
-
-menuToggle.classList.toggle(
-"active",
-open
-);
-
-menuToggle.setAttribute(
-"aria-expanded",
-open
-);
-
+const mainNav =
+document.getElementById("mainNav");
+const servicesToggle =
+document.getElementById("servicesToggle");
+const servicesDropdown =
+document.getElementById("servicesDropdown");
+/* =====================================================
+OPEN / CLOSE MOBILE MENU
+===================================================== */
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener(
+        "click",
+        function(event) {
+            event.stopPropagation();
+            const isOpen =
+                menuToggle.classList.toggle("active");
+            navMenu.classList.toggle(
+                "active",
+                isOpen
+            );
+            mainNav.classList.toggle(
+                "active",
+                isOpen
+            );
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
+        }
+    );
 }
-);
-
-
-const navLinks =
-navMenu.querySelectorAll("a");
-
-
-navLinks.forEach(
-function(link){
-
-link.addEventListener(
-"click",
-function(){
-
-navMenu.classList.remove("active");
-
-menuToggle.classList.remove("active");
-
-menuToggle.setAttribute(
-"aria-expanded",
-"false"
-);
-
+/* =====================================================
+SERVICES DROPDOWN
+===================================================== */
+if (servicesToggle && servicesDropdown) {
+    servicesToggle.addEventListener(
+        "click",
+        function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            const isOpen =
+                servicesToggle.classList.toggle("active");
+            servicesDropdown.classList.toggle(
+                "active",
+                isOpen
+            );
+            servicesToggle.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+        }
+    );
 }
-);
-
+/* =====================================================
+NAVIGATION LINKS
+===================================================== */
+if (navMenu) {
+    const navLinks =
+        navMenu.querySelectorAll(
+            "a:not(.nav-dropdown a)"
+        );
+    navLinks.forEach(
+        function(link) {
+            link.addEventListener(
+                "click",
+                function() {
+                    closeNavigation();
+                }
+            );
+        }
+    );
+    const dropdownLinks =
+        servicesDropdown
+            ? servicesDropdown.querySelectorAll("a")
+            : [];
+    dropdownLinks.forEach(
+        function(link) {
+            link.addEventListener(
+                "click",
+                function() {
+                    closeNavigation();
+                }
+            );
+        }
+    );
 }
-);
-
+/* =====================================================
+CLOSE NAVIGATION FUNCTION
+===================================================== */
+function closeNavigation() {
+    if (!menuToggle || !navMenu) {
+        return;
+    }
+    menuToggle.classList.remove("active");
+    navMenu.classList.remove("active");
+    if (mainNav) {
+        mainNav.classList.remove("active");
+    }
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+    menuToggle.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+    );
+    if (servicesToggle) {
+        servicesToggle.classList.remove(
+            "active"
+        );
+        servicesToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+    }
+    if (servicesDropdown) {
+        servicesDropdown.classList.remove(
+            "active"
+        );
+    }
 }
-
-
-
+/* =====================================================
+CLOSE WHEN CLICKING OUTSIDE
+===================================================== */
+document.addEventListener(
+    "click",
+    function(event) {
+        if (
+            mainNav &&
+            menuToggle &&
+            !mainNav.contains(event.target) &&
+            !menuToggle.contains(event.target)
+        ) {
+            closeNavigation();
+        }
+    }
+);
+/* =====================================================
+CLOSE MOBILE MENU WHEN RESIZING TO DESKTOP
+===================================================== */
+window.addEventListener(
+    "resize",
+    function() {
+        if (
+            window.innerWidth > 800
+        ) {
+            closeNavigation();
+        }
+    }
+);
 /* =====================================================
 SCROLL REVEAL
 ===================================================== */
-
 const revealElements =
 document.querySelectorAll(".reveal");
-
-
-const revealObserver =
-new IntersectionObserver(
-function(entries){
-
-entries.forEach(
-function(entry){
-
-if(entry.isIntersecting){
-
-entry.target.classList.add(
-"visible"
-);
-
-revealObserver.unobserve(
-entry.target
-);
-
+if (
+    "IntersectionObserver"
+    in window
+) {
+    const revealObserver =
+        new IntersectionObserver(
+            function(entries) {
+                entries.forEach(
+                    function(entry) {
+                        if (
+                            entry.isIntersecting
+                        ) {
+                            entry.target.classList.add(
+                                "visible"
+                            );
+                            revealObserver.unobserve(
+                                entry.target
+                            );
+                        }
+                    }
+                );
+            },
+            {
+                threshold: 0.12
+            }
+        );
+    revealElements.forEach(
+        function(element) {
+            revealObserver.observe(
+                element
+            );
+        }
+    );
+} else {
+    revealElements.forEach(
+        function(element) {
+            element.classList.add(
+                "visible"
+            );
+        }
+    );
 }
-
-}
-);
-
-},
-{
-threshold: 0.12
-}
-);
-
-
-revealElements.forEach(
-function(element){
-
-revealObserver.observe(
-element
-);
-
-}
-);
-
-
-
 /* =====================================================
 FAQ ACCORDION
 ===================================================== */
-
 const faqQuestions =
 document.querySelectorAll(
-".faq-question"
+    ".faq-question"
 );
-
-
 faqQuestions.forEach(
-function(question){
-
-question.addEventListener(
-"click",
-function(){
-
-const answer =
-question.nextElementSibling;
-
-const icon =
-question.querySelector(
-"span:last-child"
+    function(question) {
+        question.addEventListener(
+            "click",
+            function() {
+                const answer =
+                    question.nextElementSibling;
+                const icon =
+                    question.querySelector(
+                        "span:last-child"
+                    );
+                const isOpen =
+                    answer.style.display === "block";
+                document
+                    .querySelectorAll(
+                        ".faq-answer"
+                    )
+                    .forEach(
+                        function(item) {
+                            item.style.display =
+                                "none";
+                        }
+                    );
+                document
+                    .querySelectorAll(
+                        ".faq-question span:last-child"
+                    )
+                    .forEach(
+                        function(item) {
+                            item.textContent =
+                                "+";
+                        }
+                    );
+                if (!isOpen) {
+                    answer.style.display =
+                        "block";
+                    icon.textContent =
+                        "−";
+                }
+            }
+        );
+    }
 );
-
-
-const isOpen =
-answer.style.display === "block";
-
-
-document
-.querySelectorAll(".faq-answer")
-.forEach(
-function(item){
-
-item.style.display = "none";
-
-}
-);
-
-
-document
-.querySelectorAll(
-".faq-question span:last-child"
-)
-.forEach(
-function(item){
-
-item.textContent = "+";
-
-}
-);
-
-
-if(!isOpen){
-
-answer.style.display =
-"block";
-
-icon.textContent =
-"−";
-
-}
-
-}
-);
-
-}
-);
-
-
 </script>
-
-
 </body>
-
 </html>
