@@ -5709,3 +5709,44 @@ p {
     }
 
 }
+/* =========================================================
+   SPECIALTY SERVICE LINKS
+   ========================================================= */
+
+.addon-service-card {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.addon-service-card .addon-link {
+    display: inline-block;
+
+    margin-top: auto;
+
+    padding-top: 22px;
+
+    color: var(--gold-light);
+
+    font-size: 0.58rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.addon-service-card .addon-link:hover {
+    color: #ffffff;
+
+    transform: translateX(4px);
+}
