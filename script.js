@@ -1,72 +1,68 @@
 /* =========================================================
    ENHANCE MY RIDE
-   MAIN JAVASCRIPT
-   MENU / DROPDOWN / FAQ / LIGHTBOX / REVEAL
+   MAIN WEBSITE JAVASCRIPT
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
        MOBILE MENU
-       ===================================================== */
+    ===================================================== */
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const mainNav = document.querySelector("nav");
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
 
     if (menuToggle && mainNav) {
 
         menuToggle.addEventListener("click", function () {
 
-            menuToggle.classList.toggle("active");
-            mainNav.classList.toggle("active");
+            const isOpen = menuToggle.classList.toggle("active");
+
+            mainNav.classList.toggle("active", isOpen);
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
 
         });
 
     }
-
-
-    /* =====================================================
-       CLOSE MOBILE MENU WHEN NAV LINK IS CLICKED
-       ===================================================== */
-
-    const navLinks = document.querySelectorAll(
-        ".nav-menu a:not(.nav-dropdown-toggle)"
-    );
-
-    navLinks.forEach(function (link) {
-
-        link.addEventListener("click", function () {
-
-            if (menuToggle && mainNav) {
-
-                menuToggle.classList.remove("active");
-                mainNav.classList.remove("active");
-
-            }
-
-        });
-
-    });
 
 
     /* =====================================================
        SERVICES DROPDOWN
-       ===================================================== */
+    ===================================================== */
 
-    const dropdownToggle =
-        document.querySelector(".nav-dropdown-toggle");
+    const servicesToggle =
+        document.getElementById("servicesToggle");
 
     const servicesDropdown =
-        document.querySelector(".services-dropdown");
+        document.getElementById("servicesDropdown");
 
-    if (dropdownToggle && servicesDropdown) {
+    if (servicesToggle && servicesDropdown) {
 
-        dropdownToggle.addEventListener("click", function (event) {
+        servicesToggle.addEventListener("click", function (event) {
 
             event.preventDefault();
+            event.stopPropagation();
 
-            dropdownToggle.classList.toggle("active");
-            servicesDropdown.classList.toggle("active");
+            const isOpen =
+                servicesDropdown.classList.toggle("active");
+
+            servicesToggle.classList.toggle("active", isOpen);
+
+            servicesToggle.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
 
         });
 
@@ -74,19 +70,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       CLOSE DROPDOWN WHEN CLICKING OUTSIDE
-       ===================================================== */
+       CLOSE MENU WHEN CLICKING OUTSIDE
+    ===================================================== */
 
     document.addEventListener("click", function (event) {
 
         if (
-            dropdownToggle &&
-            servicesDropdown &&
-            !event.target.closest(".nav-dropdown")
+            mainNav &&
+            menuToggle &&
+            !mainNav.contains(event.target) &&
+            !menuToggle.contains(event.target)
         ) {
 
-            dropdownToggle.classList.remove("active");
+            mainNav.classList.remove("active");
+
+            menuToggle.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+        }
+
+
+        if (
+            servicesDropdown &&
+            servicesToggle &&
+            !servicesDropdown.contains(event.target) &&
+            !servicesToggle.contains(event.target)
+        ) {
+
             servicesDropdown.classList.remove("active");
+
+            servicesToggle.classList.remove("active");
+
+            servicesToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
         }
 
@@ -94,8 +121,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       FAQ
-       ===================================================== */
+       CLOSE MOBILE MENU AFTER CLICKING A LINK
+    ===================================================== */
+
+    if (mainNav) {
+
+        const navLinks =
+            mainNav.querySelectorAll("a");
+
+        navLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                mainNav.classList.remove("active");
+
+                if (menuToggle) {
+
+                    menuToggle.classList.remove("active");
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        "Open navigation menu"
+                    );
+
+                }
+
+            });
+
+        });
+
+    }
+
+
+    /* =====================================================
+       FAQ ACCORDION
+    ===================================================== */
 
     const faqQuestions =
         document.querySelectorAll(".faq-question");
@@ -124,14 +189,35 @@ document.addEventListener("DOMContentLoaded", function () {
                 .querySelectorAll(".faq-question")
                 .forEach(function (item) {
 
-                    item.classList.remove("active");
+                    item.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    const icon =
+                        item.querySelector("span:last-child");
+
+                    if (icon) {
+                        icon.textContent = "+";
+                    }
 
                 });
 
             if (!isOpen) {
 
                 answer.style.display = "block";
-                question.classList.add("active");
+
+                question.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+                const icon =
+                    question.querySelector("span:last-child");
+
+                if (icon) {
+                    icon.textContent = "−";
+                }
 
             }
 
@@ -142,7 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
        SCROLL REVEAL
-       ===================================================== */
+    ===================================================== */
 
     const revealElements =
         document.querySelectorAll(".reveal");
@@ -159,7 +245,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                             entry.target.classList.add("visible");
 
-                            observer.unobserve(entry.target);
+                            observer.unobserve(
+                                entry.target
+                            );
 
                         }
 
@@ -189,94 +277,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       LIGHTBOX
-       ===================================================== */
+       ESC KEY
+    ===================================================== */
 
-    const lightbox =
-        document.querySelector(".lightbox");
+    document.addEventListener("keydown", function (event) {
 
-    const lightboxImage =
-        document.querySelector(".lightbox-image");
+        if (event.key === "Escape") {
 
-    const lightboxClose =
-        document.querySelector(".lightbox-close");
+            if (mainNav) {
+                mainNav.classList.remove("active");
+            }
 
-    const galleryImages =
-        document.querySelectorAll(
-            "[data-lightbox]"
-        );
+            if (menuToggle) {
 
-    galleryImages.forEach(function (image) {
+                menuToggle.classList.remove("active");
 
-        image.addEventListener("click", function () {
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-            if (!lightbox || !lightboxImage) return;
-
-            const imageSource =
-                image.getAttribute("data-lightbox");
-
-            lightboxImage.src = imageSource;
-
-            lightbox.classList.add("active");
-
-            document.body.style.overflow = "hidden";
-
-        });
-
-    });
-
-
-    function closeLightbox() {
-
-        if (!lightbox) return;
-
-        lightbox.classList.remove("active");
-
-        document.body.style.overflow = "";
-
-    }
-
-
-    if (lightboxClose) {
-
-        lightboxClose.addEventListener(
-            "click",
-            closeLightbox
-        );
-
-    }
-
-
-    if (lightbox) {
-
-        lightbox.addEventListener(
-            "click",
-            function (event) {
-
-                if (event.target === lightbox) {
-
-                    closeLightbox();
-
-                }
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
 
             }
-        );
 
-    }
+            if (servicesDropdown) {
+                servicesDropdown.classList.remove("active");
+            }
 
+            if (servicesToggle) {
 
-    document.addEventListener(
-        "keydown",
-        function (event) {
+                servicesToggle.classList.remove("active");
 
-            if (event.key === "Escape") {
-
-                closeLightbox();
+                servicesToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
             }
 
         }
-    );
 
+    });
 
 });
