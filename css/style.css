@@ -7155,3 +7155,529 @@ p {
             65px 20px;
     }
 }
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+.about-hero {
+    min-height: 520px;
+}
+
+
+/* =========================================================
+   BRAND STORY
+   ========================================================= */
+
+.about-story {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 90px;
+
+    align-items: start;
+
+    margin-bottom: 130px;
+}
+
+
+.about-story-heading h2 {
+    max-width: 650px;
+
+    margin-top: 15px;
+
+    font-size:
+        clamp(
+            2.8rem,
+            5.5vw,
+            5.5rem
+        );
+
+    line-height: 0.94;
+
+    letter-spacing: -0.05em;
+}
+
+
+.about-story-copy {
+    max-width: 620px;
+}
+
+
+.about-story-copy p {
+    color: var(--gray);
+
+    font-size: 0.82rem;
+
+    line-height: 1.9;
+}
+
+
+.about-story-copy p + p {
+    margin-top: 22px;
+}
+
+
+.about-story-copy .about-lead {
+    color: #ffffff;
+
+    font-size: 1.15rem;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+   ========================================================= */
+
+.about-philosophy {
+    margin-bottom: 130px;
+}
+
+
+.about-philosophy-heading {
+    max-width: 800px;
+
+    margin-bottom: 60px;
+}
+
+
+.about-philosophy-heading h2 {
+    margin-top: 15px;
+
+    font-size:
+        clamp(
+            2.8rem,
+            5vw,
+            5rem
+        );
+
+    line-height: 0.95;
+
+    letter-spacing: -0.05em;
+}
+
+
+.about-principles {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+
+.about-principles article {
+    min-height: 300px;
+
+    padding:
+        35px 28px;
+
+    border-top:
+        1px solid rgba(201, 162, 39, 0.35);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.025),
+            transparent
+        );
+}
+
+
+.about-principles article > span {
+    display: block;
+
+    margin-bottom: 55px;
+
+    color: var(--gold);
+
+    font-size: 0.5rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.15em;
+}
+
+
+.about-principles h3 {
+    margin-bottom: 16px;
+
+    font-size: 1.25rem;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.03em;
+}
+
+
+.about-principles p {
+    margin: 0;
+
+    color: var(--gray-dark);
+
+    font-size: 0.67rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BRAND STATEMENT
+   ========================================================= */
+
+.about-statement {
+    max-width: 1100px;
+
+    margin:
+        0 auto 130px;
+
+    padding:
+        100px 40px;
+
+    text-align: center;
+
+    border-top:
+        1px solid rgba(201, 162, 39, 0.3);
+
+    border-bottom:
+        1px solid rgba(201, 162, 39, 0.3);
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(201, 162, 39, 0.07),
+            transparent 65%
+        );
+}
+
+
+.about-statement blockquote {
+    max-width: 950px;
+
+    margin:
+        20px auto 30px;
+
+    font-family: var(--font-heading);
+
+    font-size:
+        clamp(
+            2.5rem,
+            5.5vw,
+            5.5rem
+        );
+
+    line-height: 0.98;
+
+    letter-spacing: -0.05em;
+}
+
+
+.about-statement blockquote span {
+    color: var(--gold);
+}
+
+
+.about-statement > p:last-child {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: var(--gray);
+
+    font-size: 0.75rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.about-experience {
+    display: grid;
+
+    grid-template-columns:
+        1fr 0.8fr;
+
+    gap: 100px;
+
+    align-items: center;
+
+    margin-bottom: 130px;
+}
+
+
+.about-experience-copy {
+    max-width: 650px;
+}
+
+
+.about-experience-copy h2 {
+    margin:
+        15px 0 25px;
+
+    font-size:
+        clamp(
+            2.8rem,
+            5vw,
+            5rem
+        );
+
+    line-height: 0.95;
+
+    letter-spacing: -0.05em;
+}
+
+
+.about-experience-copy > p:not(.eyebrow) {
+    margin-bottom: 28px;
+
+    color: var(--gray);
+
+    font-size: 0.8rem;
+
+    line-height: 1.85;
+}
+
+
+/* BRAND CARD */
+
+.about-experience-card {
+    position: relative;
+
+    min-height: 430px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #161616,
+            #070707
+        );
+
+    border:
+        1px solid rgba(201, 162, 39, 0.25);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.35);
+}
+
+
+.about-experience-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 18px;
+
+    border:
+        1px solid rgba(255,255,255,0.05);
+}
+
+
+.about-experience-card span {
+    position: relative;
+
+    color: var(--gold);
+
+    font-size: 0.55rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.2em;
+}
+
+
+.about-experience-card strong {
+    position: relative;
+
+    margin:
+        20px 0 10px;
+
+    font-family: var(--font-heading);
+
+    font-size:
+        clamp(
+            3rem,
+            6vw,
+            5.5rem
+        );
+
+    line-height: 0.9;
+
+    letter-spacing: -0.05em;
+}
+
+
+.about-experience-card small {
+    position: relative;
+
+    color: var(--gray-dark);
+
+    font-size: 0.5rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.18em;
+}
+
+
+/* =========================================================
+   ABOUT CTA
+   ========================================================= */
+
+.about-cta {
+    max-width: 1000px;
+
+    margin:
+        0 auto;
+
+    padding:
+        100px 40px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(201,162,39,0.09),
+            transparent 65%
+        );
+
+    border:
+        1px solid rgba(201,162,39,0.2);
+}
+
+
+.about-cta h2 {
+    margin:
+        15px 0 22px;
+
+    font-size:
+        clamp(
+            2.8rem,
+            6vw,
+            6rem
+        );
+
+    line-height: 0.93;
+
+    letter-spacing: -0.05em;
+}
+
+
+.about-cta > p:not(.eyebrow) {
+    max-width: 580px;
+
+    margin:
+        0 auto 32px;
+
+    color: var(--gray);
+
+    font-size: 0.8rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   ABOUT RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .about-story {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .about-principles {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .about-experience {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+
+    .about-experience-card {
+        max-width: 600px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .about-story {
+        margin-bottom: 90px;
+    }
+
+
+    .about-philosophy {
+        margin-bottom: 90px;
+    }
+
+
+    .about-principles {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-principles article {
+        min-height: auto;
+
+        padding:
+            30px 0;
+    }
+
+
+    .about-principles article > span {
+        margin-bottom: 30px;
+    }
+
+
+    .about-statement {
+        margin-bottom: 90px;
+
+        padding:
+            70px 20px;
+    }
+
+
+    .about-experience {
+        margin-bottom: 90px;
+    }
+
+
+    .about-experience-card {
+        min-height: 340px;
+    }
+
+
+    .about-cta {
+        padding:
+            70px 20px;
+    }
+
+}
