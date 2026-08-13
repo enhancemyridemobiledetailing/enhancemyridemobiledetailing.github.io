@@ -9046,3 +9046,30 @@ p {
     }
 
 }
+/* =========================================================
+   MOBILE GALLERY PROJECT SPACING FIX
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .gallery-project-footer {
+        position: relative !important;
+        z-index: 5 !important;
+
+        clear: both !important;
+
+        margin-top: 35px !important;
+        padding-top: 10px !important;
+    }
+
+
+    .gallery-project {
+        overflow: visible !important;
+    }
+
+
+    .gallery-photo-grid {
+        margin-bottom: 10px !important;
+    }
+
+}
