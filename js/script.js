@@ -1,4 +1,3 @@
-```javascript
 /* =========================================================
    ENHANCE MY RIDE
    MAIN JAVASCRIPT
