@@ -699,9 +699,307 @@
 
 
 
-    <!-- JAVASCRIPT -->
+   <!-- =========================================
+     PHOTO LIGHTBOX
+========================================== -->
 
-    <script src="js/script.js"></script>
+<div
+    class="lightbox"
+    id="galleryLightbox"
+    aria-hidden="true"
+>
+
+    <button
+        class="lightbox-close"
+        id="lightboxClose"
+        aria-label="Close image"
+    >
+        ×
+    </button>
+
+
+    <button
+        class="lightbox-arrow lightbox-prev"
+        id="lightboxPrev"
+        aria-label="Previous image"
+    >
+        ‹
+    </button>
+
+
+    <img
+        src=""
+        alt=""
+        class="lightbox-image"
+        id="lightboxImage"
+    >
+
+
+    <button
+        class="lightbox-arrow lightbox-next"
+        id="lightboxNext"
+        aria-label="Next image"
+    >
+        ›
+    </button>
+
+
+    <div
+        class="lightbox-counter"
+        id="lightboxCounter"
+    >
+        1 / 7
+    </div>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="js/script.js"></script>
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const lightbox =
+            document.getElementById(
+                "galleryLightbox"
+            );
+
+        const lightboxImage =
+            document.getElementById(
+                "lightboxImage"
+            );
+
+        const lightboxClose =
+            document.getElementById(
+                "lightboxClose"
+            );
+
+        const lightboxPrev =
+            document.getElementById(
+                "lightboxPrev"
+            );
+
+        const lightboxNext =
+            document.getElementById(
+                "lightboxNext"
+            );
+
+        const lightboxCounter =
+            document.getElementById(
+                "lightboxCounter"
+            );
+
+
+        const galleryImages =
+            Array.from(
+                document.querySelectorAll(
+                    ".gallery-photo img, .gallery-wheel-image img"
+                )
+            );
+
+
+        let currentIndex = 0;
+
+
+        function openLightbox(index) {
+
+            currentIndex = index;
+
+            updateLightbox();
+
+            lightbox.classList.add(
+                "active"
+            );
+
+            lightbox.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+        function closeLightbox() {
+
+            lightbox.classList.remove(
+                "active"
+            );
+
+            lightbox.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        function updateLightbox() {
+
+            const image =
+                galleryImages[currentIndex];
+
+
+            lightboxImage.src =
+                image.src;
+
+
+            lightboxImage.alt =
+                image.alt;
+
+
+            lightboxCounter.textContent =
+                `${currentIndex + 1} / ${galleryImages.length}`;
+
+        }
+
+
+        function showPrevious() {
+
+            currentIndex--;
+
+            if (
+                currentIndex < 0
+            ) {
+
+                currentIndex =
+                    galleryImages.length - 1;
+
+            }
+
+            updateLightbox();
+
+        }
+
+
+        function showNext() {
+
+            currentIndex++;
+
+            if (
+                currentIndex >=
+                galleryImages.length
+            ) {
+
+                currentIndex = 0;
+
+            }
+
+            updateLightbox();
+
+        }
+
+
+        galleryImages.forEach(
+            function (image, index) {
+
+                image.parentElement.addEventListener(
+                    "click",
+                    function () {
+
+                        openLightbox(index);
+
+                    }
+                );
+
+            }
+        );
+
+
+        lightboxClose.addEventListener(
+            "click",
+            closeLightbox
+        );
+
+
+        lightboxPrev.addEventListener(
+            "click",
+            showPrevious
+        );
+
+
+        lightboxNext.addEventListener(
+            "click",
+            showNext
+        );
+
+
+        lightbox.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target === lightbox
+                ) {
+
+                    closeLightbox();
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    !lightbox.classList.contains(
+                        "active"
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeLightbox();
+
+                }
+
+
+                if (
+                    event.key === "ArrowLeft"
+                ) {
+
+                    showPrevious();
+
+                }
+
+
+                if (
+                    event.key === "ArrowRight"
+                ) {
+
+                    showNext();
+
+                }
+
+            }
+        );
+
+    }
+
+);
+
+</script>
 
 </body>
 
