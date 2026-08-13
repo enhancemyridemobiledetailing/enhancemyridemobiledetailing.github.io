@@ -8882,3 +8882,84 @@ p {
     }
 
 }
+/* =========================================================
+   GALLERY PHOTO LABEL FIX
+========================================================= */
+
+.gallery-photo,
+.gallery-wheel-image {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Make every label stay attached
+   to its own image */
+
+.gallery-photo .photo-label,
+.gallery-wheel-image .photo-label {
+    position: absolute;
+
+    left: 16px;
+    bottom: 16px;
+
+    z-index: 5;
+
+    display: inline-block;
+
+    padding: 8px 12px;
+
+    font-size: 10px;
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    background: rgba(0, 0, 0, 0.78);
+
+    border: 1px solid rgba(212, 175, 55, 0.45);
+
+    backdrop-filter: blur(6px);
+
+    -webkit-backdrop-filter: blur(6px);
+
+    pointer-events: none;
+}
+
+
+/* Make sure the image itself fills
+   the photo container */
+
+.gallery-photo img,
+.gallery-wheel-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* Mobile adjustment */
+
+@media (max-width: 768px) {
+
+    .gallery-photo .photo-label,
+    .gallery-wheel-image .photo-label {
+
+        left: 10px;
+        bottom: 10px;
+
+        padding: 7px 9px;
+
+        font-size: 9px;
+
+    }
+
+}
