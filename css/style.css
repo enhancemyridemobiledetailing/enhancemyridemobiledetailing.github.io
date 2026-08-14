@@ -9501,3 +9501,128 @@ p {
     }
 
 }
+/* =========================================================
+   LEXUS PROJECT — MOBILE LAYOUT FIX
+========================================================= */
+
+.gallery-project-lexus {
+    position: relative !important;
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+}
+
+.gallery-project-lexus .gallery-photo-grid {
+    position: relative !important;
+    display: grid !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+}
+
+.gallery-project-lexus .gallery-photo {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+}
+
+.gallery-project-lexus .gallery-photo img {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    object-fit: contain !important;
+}
+
+.gallery-project-lexus .gallery-photo-caption {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+}
+
+.gallery-project-lexus .gallery-project-footer {
+    position: relative !important;
+    display: block !important;
+    clear: both !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin-top: 40px !important;
+    padding-top: 25px !important;
+    transform: none !important;
+    overflow: visible !important;
+    z-index: 100 !important;
+}
+
+.gallery-project-lexus .gallery-project-footer p {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .gallery-project-lexus {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .gallery-project-lexus .gallery-photo-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        height: auto !important;
+        gap: 20px !important;
+    }
+
+    .gallery-project-lexus .gallery-photo {
+        flex: none !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+    }
+
+    .gallery-project-lexus .gallery-photo img {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: auto !important;
+        object-fit: contain !important;
+    }
+
+    .gallery-project-lexus .gallery-photo-caption {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    .gallery-project-lexus .gallery-project-footer {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 40px !important;
+        padding-top: 25px !important;
+        clear: both !important;
+    }
+
+}
