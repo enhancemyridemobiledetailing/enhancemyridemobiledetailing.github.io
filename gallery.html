@@ -162,6 +162,8 @@
             <div class="container">
 
 
+                <!-- INTRO -->
+
                 <div class="gallery-intro">
 
                     <p class="eyebrow">
@@ -234,7 +236,7 @@
                     <div class="gallery-photo-grid">
 
 
-                        <!-- MAIN -->
+                        <!-- MERCEDES MAIN -->
 
                         <div class="gallery-photo gallery-photo-large">
 
@@ -260,7 +262,7 @@
 
 
 
-                        <!-- BEFORE -->
+                        <!-- MERCEDES BEFORE -->
 
                         <div class="gallery-photo">
 
@@ -286,7 +288,7 @@
 
 
 
-                        <!-- AFTER -->
+                        <!-- MERCEDES AFTER -->
 
                         <div class="gallery-photo">
 
@@ -315,7 +317,9 @@
 
 
 
-                    <!-- MERCEDES WHEEL -->
+                    <!-- =================================
+                         MERCEDES WHEEL FEATURE
+                    ================================== -->
 
                     <div class="gallery-wheel-feature">
 
@@ -371,7 +375,7 @@
 
 
 
-                    <!-- PROJECT FOOTER -->
+                    <!-- MERCEDES FOOTER -->
 
                     <div class="gallery-project-footer">
 
@@ -444,7 +448,7 @@
                     <div class="gallery-photo-grid">
 
 
-                        <!-- MAIN -->
+                        <!-- LEXUS MAIN -->
 
                         <div class="gallery-photo gallery-photo-large">
 
@@ -470,7 +474,7 @@
 
 
 
-                        <!-- BEFORE -->
+                        <!-- LEXUS BEFORE -->
 
                         <div class="gallery-photo">
 
@@ -496,7 +500,7 @@
 
 
 
-                        <!-- AFTER -->
+                        <!-- LEXUS AFTER -->
 
                         <div class="gallery-photo">
 
@@ -525,7 +529,7 @@
 
 
 
-                    <!-- PROJECT FOOTER -->
+                    <!-- LEXUS FOOTER -->
 
                     <div class="gallery-project-footer">
 
@@ -602,6 +606,8 @@
         <div class="container footer-grid">
 
 
+            <!-- BRAND -->
+
             <div class="footer-brand">
 
                 <a
@@ -628,6 +634,8 @@
             </div>
 
 
+
+            <!-- EXPLORE -->
 
             <div class="footer-links">
 
@@ -658,6 +666,8 @@
             </div>
 
 
+
+            <!-- CONNECT -->
 
             <div class="footer-links">
 
@@ -707,6 +717,8 @@
         </div>
 
 
+
+        <!-- FOOTER BOTTOM -->
 
         <div class="container footer-bottom">
 
@@ -900,6 +912,11 @@
 
                     const image =
                         galleryImages[currentIndex];
+
+
+                    if (!image) {
+                        return;
+                    }
 
 
                     lightboxImage.src =
