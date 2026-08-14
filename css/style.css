@@ -9073,3 +9073,359 @@ p {
     }
 
 }
+/* =========================================================
+   GALLERY PHOTO CAPTION FIX
+   FINAL DESKTOP + MOBILE VERSION
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   PHOTO CONTAINER
+--------------------------------------------------------- */
+
+.gallery-photo,
+.gallery-wheel-image {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   IMAGE
+--------------------------------------------------------- */
+
+.gallery-photo img,
+.gallery-wheel-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* ---------------------------------------------------------
+   CAPTION
+   IMPORTANT:
+   Captions are now BELOW the image instead of sitting
+   over the image.
+--------------------------------------------------------- */
+
+.gallery-photo-caption {
+    position: static !important;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    background: #111111;
+
+    border-top: 1px solid rgba(212, 175, 55, 0.25);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    text-align: left;
+}
+
+
+/* ---------------------------------------------------------
+   CAPTION TITLE
+--------------------------------------------------------- */
+
+.gallery-photo-caption strong {
+    display: block;
+
+    font-size: 0.75rem;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.14em;
+
+    font-weight: 700;
+
+    color: #d4af37;
+}
+
+
+/* ---------------------------------------------------------
+   CAPTION SUBTITLE
+--------------------------------------------------------- */
+
+.gallery-photo-caption span {
+    display: block;
+
+    font-size: 0.72rem;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.04em;
+
+    color: #aaaaaa;
+}
+
+
+/* ---------------------------------------------------------
+   PHOTO GRID SPACING
+--------------------------------------------------------- */
+
+.gallery-photo-grid {
+    gap: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   MAKE SURE THE PHOTO CARDS DON'T COLLAPSE
+--------------------------------------------------------- */
+
+.gallery-photo {
+    display: flex;
+
+    flex-direction: column;
+
+    align-self: start;
+}
+
+
+/* ---------------------------------------------------------
+   WHEEL IMAGE
+--------------------------------------------------------- */
+
+.gallery-wheel-image {
+    display: flex;
+
+    flex-direction: column;
+
+    align-self: start;
+}
+
+
+/* ---------------------------------------------------------
+   WHEEL FEATURE SPACING
+--------------------------------------------------------- */
+
+.gallery-wheel-feature {
+    margin-top: 22px;
+
+    gap: 28px;
+}
+
+
+/* ---------------------------------------------------------
+   PROJECT FOOTER
+   Gives the Lexus description room on mobile.
+--------------------------------------------------------- */
+
+.gallery-project-footer {
+    position: relative;
+
+    z-index: 2;
+
+    clear: both;
+
+    margin-top: 28px;
+
+    padding-top: 24px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE GALLERY FIX
+--------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+
+    /* Photo grid becomes one clean column */
+
+    .gallery-photo-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        width: 100%;
+    }
+
+
+    /* Every photo gets its own complete card */
+
+    .gallery-photo {
+        width: 100%;
+
+        height: auto;
+
+        margin: 0;
+
+        overflow: hidden;
+    }
+
+
+    /* Keep images inside their cards */
+
+    .gallery-photo img {
+        width: 100%;
+
+        height: auto;
+
+        display: block;
+
+        object-fit: cover;
+    }
+
+
+    /* Caption stays underneath image */
+
+    .gallery-photo-caption {
+        position: static !important;
+
+        width: 100%;
+
+        padding: 11px 13px;
+
+        box-sizing: border-box;
+
+        background: #111111;
+
+        text-align: left;
+    }
+
+
+    /* Wheel section stacks properly */
+
+    .gallery-wheel-feature {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 22px;
+
+        margin-top: 24px;
+
+        width: 100%;
+    }
+
+
+    .gallery-wheel-image {
+        width: 100%;
+
+        height: auto;
+    }
+
+
+    .gallery-wheel-image img {
+        width: 100%;
+
+        height: auto;
+
+        display: block;
+    }
+
+
+    /* Wheel caption */
+
+    .gallery-wheel-image .gallery-photo-caption {
+        position: static !important;
+    }
+
+
+    /* Wheel description */
+
+    .gallery-wheel-copy {
+        width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+    }
+
+
+    /* Project footer cannot get covered */
+
+    .gallery-project-footer {
+        display: block;
+
+        width: 100%;
+
+        clear: both;
+
+        position: relative;
+
+        margin-top: 30px;
+
+        padding-top: 24px;
+
+        z-index: 5;
+    }
+
+
+    .gallery-project-footer p {
+        margin-bottom: 20px;
+    }
+
+
+    /* Extra separation between Mercedes and Lexus */
+
+    .gallery-project + .gallery-project {
+        margin-top: 60px;
+    }
+
+
+    /* Make sure the coming-soon section has room */
+
+    .gallery-coming-soon {
+        margin-top: 60px;
+
+        position: relative;
+
+        z-index: 2;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   VERY SMALL PHONES
+--------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+
+    .gallery-photo-grid {
+        gap: 18px;
+    }
+
+
+    .gallery-photo-caption {
+        padding: 10px 12px;
+    }
+
+
+    .gallery-photo-caption strong {
+        font-size: 0.7rem;
+    }
+
+
+    .gallery-photo-caption span {
+        font-size: 0.68rem;
+    }
+
+
+    .gallery-project-footer {
+        margin-top: 26px;
+
+        padding-top: 22px;
+    }
+
+
+    .gallery-project + .gallery-project {
+        margin-top: 50px;
+    }
+
+}
