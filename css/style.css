@@ -9429,3 +9429,75 @@ p {
     }
 
 }
+/* =========================================================
+   LEXUS GALLERY MOBILE DESCRIPTION FIX
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Keep the Lexus photo grid completely separate
+       from the description below it */
+
+    .gallery-project:nth-of-type(2) {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .gallery-project:nth-of-type(2) .gallery-photo-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+    }
+
+    .gallery-project:nth-of-type(2) .gallery-photo {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: hidden !important;
+        margin: 0 0 20px 0 !important;
+    }
+
+    .gallery-project:nth-of-type(2) .gallery-photo img {
+        position: relative !important;
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+    }
+
+    .gallery-project:nth-of-type(2) .gallery-photo-caption {
+        position: static !important;
+        display: flex !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+    }
+
+    .gallery-project:nth-of-type(2) .gallery-project-footer {
+        display: block !important;
+        position: relative !important;
+        clear: both !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin-top: 35px !important;
+        padding-top: 25px !important;
+        overflow: visible !important;
+        z-index: 20 !important;
+    }
+
+    .gallery-project:nth-of-type(2) .gallery-project-footer p {
+        display: block !important;
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 0 20px 0 !important;
+        padding: 0 !important;
+    }
+
+}
