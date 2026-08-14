@@ -9702,52 +9702,115 @@ p {
 
 /* MOBILE */
 
-@media (max-width: 768px) {
+/* =========================================================
+   FINAL MOBILE GALLERY LAYOUT FIX
+========================================================= */
 
-    .gallery-project-lexus {
+@media screen and (max-width: 768px) {
+
+    /* Keep each project in normal document flow */
+    .gallery-project {
         display: block !important;
-        width: 100% !important;
+        position: relative !important;
         height: auto !important;
+        min-height: 0 !important;
         overflow: visible !important;
     }
 
-    .gallery-project-lexus .gallery-photo-grid {
-        display: flex !important;
-        flex-direction: column !important;
+    /* Stack gallery photos vertically */
+    .gallery-photo-grid {
+        display: block !important;
+        position: relative !important;
         width: 100% !important;
         height: auto !important;
-        gap: 20px !important;
+        min-height: 0 !important;
+        overflow: visible !important;
     }
 
-    .gallery-project-lexus .gallery-photo {
-        flex: none !important;
+    /* Each photo gets its own space */
+    .gallery-photo-grid .gallery-photo {
+        display: block !important;
+        position: relative !important;
         width: 100% !important;
         height: auto !important;
-        margin: 0 !important;
+        min-height: 0 !important;
+        margin: 0 0 18px 0 !important;
+        overflow: hidden !important;
     }
 
-    .gallery-project-lexus .gallery-photo img {
+    /* Images stay inside their photo */
+    .gallery-photo-grid .gallery-photo img {
+        display: block !important;
+        position: relative !important;
         width: 100% !important;
         height: auto !important;
-        aspect-ratio: auto !important;
-        object-fit: contain !important;
+        max-width: 100% !important;
     }
 
-    .gallery-project-lexus .gallery-photo-caption {
-        position: static !important;
+    /* FORCE project description below photos */
+    .gallery-project > .gallery-project-footer {
+        display: block !important;
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
         width: 100% !important;
         height: auto !important;
-        margin: 0 !important;
+        min-height: 0 !important;
+        margin-top: 35px !important;
+        margin-bottom: 40px !important;
+        padding-top: 25px !important;
+        clear: both !important;
+        float: none !important;
         transform: none !important;
+        z-index: 10 !important;
+        overflow: visible !important;
     }
 
-    .gallery-project-lexus .gallery-project-footer {
+    /* Description itself */
+    .gallery-project > .gallery-project-footer p {
+        display: block !important;
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 0 20px 0 !important;
+        padding: 0 !important;
+        clear: both !important;
+    }
+
+    /* Quote link */
+    .gallery-project > .gallery-project-footer .text-link {
+        display: inline-block !important;
+        position: relative !important;
+        width: auto !important;
+        height: auto !important;
+        clear: both !important;
+    }
+
+    /* Mercedes wheel section */
+    .gallery-wheel-feature {
+        display: block !important;
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin-top: 25px !important;
+        overflow: visible !important;
+    }
+
+    .gallery-wheel-image {
+        display: block !important;
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: hidden !important;
+    }
+
+    .gallery-wheel-image img {
         display: block !important;
         width: 100% !important;
         height: auto !important;
-        margin-top: 40px !important;
-        padding-top: 25px !important;
-        clear: both !important;
     }
 
 }
