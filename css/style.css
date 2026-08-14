@@ -10133,3 +10133,115 @@ p {
     }
 
 }
+/* =========================================================
+   SERVICES — PREMIUM PACKAGE PRESENTATION
+========================================================= */
+
+.service-package-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-package-description {
+    min-height: 90px;
+}
+
+.service-list {
+    flex: 1;
+}
+
+.service-package-button {
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   FEATURED BLACK LABEL
+========================================================= */
+
+.featured-service {
+    transform: translateY(-8px);
+}
+
+.featured-service .featured-badge {
+    z-index: 5;
+}
+
+
+/* =========================================================
+   SPECIALTY SERVICES
+========================================================= */
+
+.addon-service-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.addon-service-card p:last-of-type {
+    flex: 1;
+}
+
+.addon-link {
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   HEADLIGHT RESTORATION — FEATURED SPECIALTY
+========================================================= */
+
+.addon-service-card.headlight-specialty {
+    border-color: rgba(201, 162, 39, 0.7);
+    box-shadow: 0 0 0 1px rgba(201, 162, 39, 0.15);
+}
+
+.addon-service-card.headlight-specialty::before {
+    content: "FEATURED SPECIALTY";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 7px 12px;
+
+    background: #c9a227;
+    color: #050505;
+
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+
+    border-radius: 0 0 0 8px;
+}
+
+
+/* =========================================================
+   PRICING NOTE
+========================================================= */
+
+.service-pricing-note {
+    margin-top: 35px;
+}
+
+
+/* =========================================================
+   MOBILE SERVICES
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .featured-service {
+        transform: none;
+    }
+
+    .service-package-description {
+        min-height: auto;
+    }
+
+    .addon-service-card.headlight-specialty {
+        margin-top: 5px;
+    }
+
+}
