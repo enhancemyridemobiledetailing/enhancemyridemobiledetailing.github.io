@@ -16,7 +16,7 @@
 
     <meta
         name="description"
-        content="See real vehicle transformations from Enhance My Ride Auto Spa & Mobile Detailing."
+        content="See real vehicle transformations from Enhance My Ride Auto Spa & Mobile Detailing, including Mercedes-Benz and Lexus detailing projects throughout the Bay Area."
     >
 
     <meta
@@ -24,10 +24,653 @@
         content="#050505"
     >
 
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
     <link
         rel="stylesheet"
         href="css/style.css"
     >
+
+
+    <style>
+
+        /* =====================================================
+           GALLERY HERO
+        ===================================================== */
+
+        .gallery-hero {
+            min-height: 58vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(
+                    circle at 75% 50%,
+                    rgba(212,175,55,.11),
+                    transparent 38%
+                ),
+                #050505;
+        }
+
+        .gallery-hero .page-hero-content {
+            max-width: 900px;
+        }
+
+        .gallery-hero h1 {
+            max-width: 850px;
+            font-size: clamp(3.5rem, 7vw, 6.5rem);
+            line-height: .92;
+        }
+
+        .gallery-hero h1 span {
+            display: block;
+            color: #d4af37;
+        }
+
+        .gallery-hero .page-hero-content > p:last-child {
+            max-width: 650px;
+            margin-top: 25px;
+            color: rgba(255,255,255,.65);
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           GALLERY INTRO
+        ===================================================== */
+
+        .gallery-main-section {
+            padding-top: 105px;
+            padding-bottom: 110px;
+        }
+
+        .gallery-intro {
+            max-width: 760px;
+            margin-bottom: 80px;
+        }
+
+        .gallery-intro h2 {
+            max-width: 700px;
+            margin-bottom: 20px;
+            font-size: clamp(2.6rem, 5vw, 5rem);
+            line-height: .98;
+        }
+
+        .gallery-intro > p:last-child {
+            max-width: 650px;
+            color: rgba(255,255,255,.55);
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           PROJECT
+        ===================================================== */
+
+        .gallery-project {
+            margin-bottom: 115px;
+        }
+
+        .gallery-project:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .gallery-project-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 35px;
+            margin-bottom: 30px;
+        }
+
+        .project-number {
+            display: block;
+            margin-bottom: 13px;
+            color: rgba(255,255,255,.3);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .18em;
+        }
+
+        .gallery-project-heading .eyebrow {
+            margin-bottom: 9px;
+        }
+
+        .gallery-project-heading h3 {
+            margin: 0;
+            color: #fff;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            line-height: 1;
+        }
+
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .project-meta span {
+            padding: 9px 12px;
+            border: 1px solid rgba(255,255,255,.1);
+            color: rgba(255,255,255,.5);
+            font-size: 8px;
+            font-weight: 800;
+            letter-spacing: .13em;
+        }
+
+
+        /* =====================================================
+           PHOTO GRID
+        ===================================================== */
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1.45fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .gallery-card {
+            position: relative;
+            min-height: 300px;
+            margin: 0;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,.08);
+            background: #090909;
+            cursor: pointer;
+        }
+
+        .gallery-card-main {
+            grid-row: span 2;
+            min-height: 620px;
+        }
+
+        .gallery-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,.75) 0%,
+                    rgba(0,0,0,.12) 45%,
+                    transparent 75%
+                );
+            pointer-events: none;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition:
+                transform .65s ease,
+                filter .4s ease;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.045);
+            filter: brightness(1.05);
+        }
+
+        .gallery-card figcaption {
+            position: absolute;
+            left: 22px;
+            right: 22px;
+            bottom: 20px;
+            z-index: 4;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .gallery-card figcaption strong {
+            display: block;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: .15em;
+        }
+
+        .gallery-card figcaption span {
+            color: rgba(255,255,255,.58);
+            font-size: 10px;
+        }
+
+
+        /* =====================================================
+           IMAGE VIEW INDICATOR
+        ===================================================== */
+
+        .gallery-view-icon {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            z-index: 5;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            background: rgba(0,0,0,.42);
+            backdrop-filter: blur(8px);
+            color: #fff;
+            font-size: 15px;
+            opacity: .8;
+            transition: .3s ease;
+        }
+
+        .gallery-card:hover .gallery-view-icon {
+            opacity: 1;
+            border-color: #d4af37;
+            color: #d4af37;
+        }
+
+
+        /* =====================================================
+           BEFORE / AFTER LABELS
+        ===================================================== */
+
+        .gallery-before-label,
+        .gallery-after-label {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            z-index: 5;
+            padding: 7px 11px;
+            background: rgba(0,0,0,.7);
+            color: #fff;
+            font-size: 8px;
+            font-weight: 800;
+            letter-spacing: .15em;
+        }
+
+        .gallery-after-label {
+            background: #d4af37;
+            color: #050505;
+        }
+
+
+        /* =====================================================
+           WHEEL FEATURE
+        ===================================================== */
+
+        .gallery-wheel-feature {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 45px;
+            align-items: center;
+            margin-top: 35px;
+            padding: 35px;
+            border: 1px solid rgba(212,175,55,.18);
+            background:
+                radial-gradient(
+                    circle at left,
+                    rgba(212,175,55,.08),
+                    transparent 45%
+                ),
+                rgba(255,255,255,.02);
+        }
+
+        .gallery-wheel-card {
+            position: relative;
+            aspect-ratio: 4 / 3;
+            margin: 0;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .gallery-wheel-card img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform .6s ease;
+        }
+
+        .gallery-wheel-card:hover img {
+            transform: scale(1.045);
+        }
+
+        .gallery-wheel-card figcaption {
+            position: absolute;
+            left: 18px;
+            bottom: 18px;
+            z-index: 3;
+        }
+
+        .gallery-wheel-card figcaption strong {
+            display: block;
+            color: #fff;
+            font-size: 9px;
+            letter-spacing: .15em;
+        }
+
+        .gallery-wheel-card figcaption span {
+            color: rgba(255,255,255,.55);
+            font-size: 10px;
+        }
+
+        .gallery-wheel-copy h4 {
+            margin-bottom: 15px;
+            color: #fff;
+            font-size: clamp(1.7rem, 3vw, 2.6rem);
+        }
+
+        .gallery-wheel-copy > p:not(.eyebrow) {
+            color: rgba(255,255,255,.55);
+            line-height: 1.75;
+        }
+
+        .gallery-wheel-note {
+            padding-top: 14px;
+            border-top: 1px solid rgba(255,255,255,.08);
+            color: rgba(255,255,255,.38) !important;
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           PROJECT DESCRIPTION
+        ===================================================== */
+
+        .gallery-description {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+            padding: 27px 0 0;
+        }
+
+        .gallery-description p {
+            max-width: 720px;
+            margin: 0;
+            color: rgba(255,255,255,.48);
+            font-size: .9rem;
+            line-height: 1.75;
+        }
+
+        .gallery-description .text-link {
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           PROJECT DIVIDER
+        ===================================================== */
+
+        .gallery-project + .gallery-project {
+            padding-top: 100px;
+            border-top: 1px solid rgba(255,255,255,.08);
+        }
+
+
+        /* =====================================================
+           COMING SOON / CTA
+        ===================================================== */
+
+        .gallery-coming-soon {
+            position: relative;
+            overflow: hidden;
+            margin-top: 110px;
+            padding: 90px 40px;
+            border: 1px solid rgba(212,175,55,.22);
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(212,175,55,.12),
+                    transparent 48%
+                ),
+                #080808;
+            text-align: center;
+        }
+
+        .gallery-coming-soon h2 {
+            max-width: 750px;
+            margin: 0 auto 20px;
+            font-size: clamp(2.6rem, 5vw, 4.8rem);
+            line-height: .98;
+        }
+
+        .gallery-coming-soon > p:not(.eyebrow) {
+            max-width: 550px;
+            margin: 0 auto 30px;
+            color: rgba(255,255,255,.55);
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           LIGHTBOX
+        ===================================================== */
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+            background: rgba(0,0,0,.96);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity .3s ease;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .lightbox-image {
+            max-width: min(1100px, 90vw);
+            max-height: 82vh;
+            width: auto;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            box-shadow: 0 30px 100px rgba(0,0,0,.7);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            z-index: 3;
+            width: 48px;
+            height: 48px;
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 50%;
+            background: rgba(0,0,0,.5);
+            color: #fff;
+            font-size: 30px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .lightbox-close:hover {
+            border-color: #d4af37;
+            color: #d4af37;
+        }
+
+        .lightbox-arrow {
+            position: absolute;
+            top: 50%;
+            z-index: 3;
+            width: 52px;
+            height: 52px;
+            border: 1px solid rgba(255,255,255,.18);
+            border-radius: 50%;
+            background: rgba(0,0,0,.5);
+            color: #fff;
+            font-size: 35px;
+            line-height: 1;
+            cursor: pointer;
+            transform: translateY(-50%);
+        }
+
+        .lightbox-arrow:hover {
+            border-color: #d4af37;
+            color: #d4af37;
+        }
+
+        .lightbox-prev {
+            left: 25px;
+        }
+
+        .lightbox-next {
+            right: 25px;
+        }
+
+        .lightbox-counter {
+            position: absolute;
+            left: 50%;
+            bottom: 22px;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,.55);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: .15em;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+            }
+
+            .gallery-card-main {
+                grid-column: span 2;
+                grid-row: auto;
+                min-height: 500px;
+            }
+
+            .gallery-wheel-feature {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .gallery-hero {
+                min-height: 48vh;
+            }
+
+            .gallery-hero h1 {
+                font-size: clamp(3rem, 15vw, 4.6rem);
+            }
+
+            .gallery-main-section {
+                padding-top: 75px;
+                padding-bottom: 75px;
+            }
+
+            .gallery-intro {
+                margin-bottom: 55px;
+            }
+
+            .gallery-project {
+                margin-bottom: 75px;
+            }
+
+            .gallery-project-heading {
+                display: block;
+            }
+
+            .project-meta {
+                justify-content: flex-start;
+                margin-top: 18px;
+            }
+
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .gallery-card-main {
+                grid-column: auto;
+                min-height: 420px;
+            }
+
+            .gallery-card {
+                min-height: 300px;
+            }
+
+            .gallery-wheel-feature {
+                margin-top: 15px;
+                padding: 20px;
+                gap: 25px;
+            }
+
+            .gallery-description {
+                display: block;
+            }
+
+            .gallery-description .text-link {
+                display: inline-block;
+                margin-top: 18px;
+            }
+
+            .gallery-project + .gallery-project {
+                padding-top: 70px;
+            }
+
+            .gallery-coming-soon {
+                margin-top: 75px;
+                padding: 70px 22px;
+            }
+
+            .lightbox {
+                padding: 50px 10px;
+            }
+
+            .lightbox-image {
+                max-width: 96vw;
+                max-height: 78vh;
+            }
+
+            .lightbox-arrow {
+                top: auto;
+                bottom: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 28px;
+                transform: none;
+            }
+
+            .lightbox-prev {
+                left: 20px;
+            }
+
+            .lightbox-next {
+                right: 20px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -35,13 +678,682 @@
 <body>
 
 
-    <!-- =========================================
-         HEADER
-    ========================================== -->
+<!-- =====================================================
+     HEADER
+====================================================== -->
 
-    <header class="site-header">
+<header class="site-header">
 
-        <div class="container nav-container">
+    <div class="container nav-container">
+
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="Enhance My Ride home"
+        >
+
+            <span class="logo-main">
+                ENHANCE MY RIDE
+            </span>
+
+            <span class="logo-sub">
+                AUTO SPA & MOBILE DETAILING
+            </span>
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            type="button"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <nav
+            class="main-nav"
+            id="mainNav"
+            aria-label="Main navigation"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a
+                href="gallery.html"
+                class="active"
+            >
+                Gallery
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="quote.html">
+                Get A Quote
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="service-area.html">
+                Service Area
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="page-hero gallery-hero">
+
+    <div class="container page-hero-content">
+
+        <p class="eyebrow">
+            REAL VEHICLES. REAL RESULTS.
+        </p>
+
+        <h1>
+
+            The
+
+            <span>
+                Gallery.
+            </span>
+
+        </h1>
+
+        <p>
+
+            See the difference professional detailing makes.
+            Every vehicle below represents real work completed
+            by Enhance My Ride.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GALLERY
+====================================================== -->
+
+<section class="section gallery-main-section">
+
+    <div class="container">
+
+
+        <!-- INTRO -->
+
+        <div class="gallery-intro">
+
+            <p class="eyebrow">
+                RECENT WORK
+            </p>
+
+            <h2>
+
+                Every Detail
+
+                <span class="gold-text">
+                    Matters.
+                </span>
+
+            </h2>
+
+            <p>
+
+                We believe the difference is in the details.
+                Explore recent vehicles we've serviced and
+                see the Enhance My Ride finish for yourself.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             MERCEDES PROJECT
+        ================================================== -->
+
+        <article class="gallery-project">
+
+
+            <div class="gallery-project-heading">
+
+                <div>
+
+                    <span class="project-number">
+                        01
+                    </span>
+
+                    <p class="eyebrow">
+                        ENHANCE GOLD
+                    </p>
+
+                    <h3>
+                        Mercedes-Benz
+                    </h3>
+
+                </div>
+
+
+                <div class="project-meta">
+
+                    <span>
+                        EXTERIOR + INTERIOR
+                    </span>
+
+                    <span>
+                        BAY AREA
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-grid">
+
+
+                <!-- MAIN -->
+
+                <figure
+                    class="gallery-card gallery-card-main"
+                    data-gallery-image
+                >
+
+                    <img
+                        src="images/gallery/mercedes-main.jpg"
+                        alt="Mercedes-Benz after professional mobile detailing by Enhance My Ride"
+                        loading="eager"
+                        decoding="async"
+                    >
+
+                    <span class="gallery-view-icon">
+                        ↗
+                    </span>
+
+                    <figcaption>
+
+                        <div>
+
+                            <strong>
+                                AFTER
+                            </strong>
+
+                            <span>
+                                Featured Detail
+                            </span>
+
+                        </div>
+
+                    </figcaption>
+
+                </figure>
+
+
+
+                <!-- BEFORE -->
+
+                <figure
+                    class="gallery-card"
+                    data-gallery-image
+                >
+
+                    <img
+                        src="images/gallery/mercedes-before.jpg"
+                        alt="Mercedes-Benz before professional detailing"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <span class="gallery-before-label">
+                        BEFORE
+                    </span>
+
+                    <span class="gallery-view-icon">
+                        ↗
+                    </span>
+
+                    <figcaption>
+
+                        <div>
+
+                            <strong>
+                                BEFORE
+                            </strong>
+
+                            <span>
+                                Mercedes-Benz
+                            </span>
+
+                        </div>
+
+                    </figcaption>
+
+                </figure>
+
+
+
+                <!-- AFTER -->
+
+                <figure
+                    class="gallery-card"
+                    data-gallery-image
+                >
+
+                    <img
+                        src="images/gallery/mercedes-after.jpg"
+                        alt="Mercedes-Benz after professional detailing"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <span class="gallery-after-label">
+                        AFTER
+                    </span>
+
+                    <span class="gallery-view-icon">
+                        ↗
+                    </span>
+
+                    <figcaption>
+
+                        <div>
+
+                            <strong>
+                                AFTER
+                            </strong>
+
+                            <span>
+                                Mercedes-Benz
+                            </span>
+
+                        </div>
+
+                    </figcaption>
+
+                </figure>
+
+
+            </div>
+
+
+
+            <!-- WHEEL FEATURE -->
+
+            <div class="gallery-wheel-feature">
+
+
+                <figure
+                    class="gallery-wheel-card"
+                    data-gallery-image
+                >
+
+                    <img
+                        src="images/gallery/mercedes-wheel-cleaned.jpg"
+                        alt="Mercedes-Benz wheel after professional cleaning by Enhance My Ride"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <figcaption>
+
+                        <strong>
+                            WHEEL DETAIL
+                        </strong>
+
+                        <span>
+                            Cleaning Result
+                        </span>
+
+                    </figcaption>
+
+                </figure>
+
+
+                <div class="gallery-wheel-copy">
+
+                    <p class="eyebrow">
+                        DETAILING FOCUS
+                    </p>
+
+                    <h4>
+                        Wheels Matter.
+                    </h4>
+
+                    <p>
+
+                        This Mercedes-Benz arrived with significant
+                        brake dust and buildup. The wheels were
+                        thoroughly cleaned as part of the Gold Package.
+
+                    </p>
+
+                    <p class="gallery-wheel-note">
+
+                        This is a cleaning result — not a wheel
+                        polishing or repair service.
+
+                    </p>
+
+                    <a
+                        href="quote.html"
+                        class="text-link"
+                    >
+                        Ask About Wheel Polishing →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="gallery-description">
+
+                <p>
+
+                    Mercedes-Benz completed with the Enhance Gold
+                    Package, including exterior hand wash, wheel
+                    and tire cleaning, interior cleaning, glass
+                    cleaning, and final presentation inspection.
+
+                </p>
+
+                <a
+                    href="quote.html"
+                    class="text-link"
+                >
+                    Get Your Vehicle Enhanced →
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             LEXUS PROJECT
+        ================================================== -->
+
+        <article class="gallery-project">
+
+
+            <div class="gallery-project-heading">
+
+                <div>
+
+                    <span class="project-number">
+                        02
+                    </span>
+
+                    <p class="eyebrow">
+                        ENHANCE GOLD
+                    </p>
+
+                    <h3>
+                        Lexus IS 250
+                    </h3>
+
+                </div>
+
+
+                <div class="project-meta">
+
+                    <span>
+                        EXTERIOR + INTERIOR
+                    </span>
+
+                    <span>
+                        BAY AREA
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-grid">
+
+
+                <!-- MAIN -->
+
+                <figure
+                    class="gallery-card gallery-card-main"
+                    data-gallery-image
+                >
+
+                    <img
+                        src="images/gallery/lexus-main.jpg"
+                        alt="Lexus IS 250 after professional mobile detailing by Enhance My Ride"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <span class="gallery-view-icon">
+                        ↗
+                    </span>
+
+                    <figcaption>
+
+                        <div>
+
+                            <strong>
+                                AFTER
+                            </strong>
+
+                            <span>
+                                Featured Detail
+                            </span>
+
+                        </div>
+
+                    </figcaption>
+
+                </figure>
+
+
+
+                <!-- BEFORE -->
+
+                <figure
+                    class="gallery-card"
+                    data-gallery-image
+                >
+
+                    <img
+                        src="images/gallery/lexus-before.jpg"
+                        alt="Lexus IS 250 before professional detailing"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <span class="gallery-before-label">
+                        BEFORE
+                    </span>
+
+                    <span class="gallery-view-icon">
+                        ↗
+                    </span>
+
+                    <figcaption>
+
+                        <div>
+
+                            <strong>
+                                BEFORE
+                            </strong>
+
+                            <span>
+                                Lexus IS 250
+                            </span>
+
+                        </div>
+
+                    </figcaption>
+
+                </figure>
+
+
+
+                <!-- AFTER -->
+
+                <figure
+                    class="gallery-card"
+                    data-gallery-image
+                >
+
+                    <img
+                        src="images/gallery/lexus-after.jpg"
+                        alt="Lexus IS 250 after professional detailing"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <span class="gallery-after-label">
+                        AFTER
+                    </span>
+
+                    <span class="gallery-view-icon">
+                        ↗
+                    </span>
+
+                    <figcaption>
+
+                        <div>
+
+                            <strong>
+                                AFTER
+                            </strong>
+
+                            <span>
+                                Lexus IS 250
+                            </span>
+
+                        </div>
+
+                    </figcaption>
+
+                </figure>
+
+
+            </div>
+
+
+
+            <div class="gallery-description">
+
+                <p>
+
+                    Lexus IS 250 completed with the Enhance Gold
+                    Package. The vehicle received a complete
+                    interior and exterior refresh, including
+                    detailed wheel and tire cleaning.
+
+                </p>
+
+                <a
+                    href="quote.html"
+                    class="text-link"
+                >
+                    Get Your Vehicle Enhanced →
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             MORE WORK CTA
+        ================================================== -->
+
+        <section class="gallery-coming-soon">
+
+            <p class="eyebrow">
+                MORE TRANSFORMATIONS COMING
+            </p>
+
+            <h2>
+
+                Your Vehicle
+
+                <span class="gold-text">
+                    Could Be Next.
+                </span>
+
+            </h2>
+
+            <p>
+
+                We're constantly adding new projects to the gallery.
+                If you're ready to see what we can do with your vehicle,
+                let's talk.
+
+            </p>
+
+            <a
+                href="quote.html"
+                class="btn btn-primary"
+            >
+                Request A Quote
+            </a>
+
+        </section>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-brand">
 
             <a
                 href="index.html"
@@ -58,1025 +1370,443 @@
 
             </a>
 
-
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-            >
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-
-            <nav
-                class="main-nav"
-                id="mainNav"
-            >
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a
-                    href="gallery.html"
-                    class="active"
-                >
-                    Gallery
-                </a>
-
-                <a href="service-area.html">
-                    Service Area
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a
-                    href="quote.html"
-                    class="nav-cta"
-                >
-                    Get a Quote
-                </a>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-
-    <!-- =========================================
-         MAIN
-    ========================================== -->
-
-    <main>
-
-
-        <!-- =====================================
-             GALLERY HERO
-        ====================================== -->
-
-        <section class="page-hero gallery-hero">
-
-            <div class="container page-hero-content">
-
-                <p class="eyebrow">
-                    REAL VEHICLES. REAL RESULTS.
-                </p>
-
-                <h1>
-                    The
-                    <span>
-                        Gallery.
-                    </span>
-                </h1>
-
-                <p>
-                    A look at real vehicles serviced by
-                    Enhance My Ride.
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================
-             GALLERY
-        ====================================== -->
-
-        <section class="section">
-
-            <div class="container">
-
-
-                <!-- INTRO -->
-
-                <div class="gallery-intro">
-
-                    <p class="eyebrow">
-                        RECENT WORK
-                    </p>
-
-                    <h2>
-                        Every Detail
-                        <span class="gold-text">
-                            Tells A Story.
-                        </span>
-                    </h2>
-
-                    <p>
-                        Real vehicles. Real transformations.
-                        Every detail is completed with care,
-                        attention to detail, and a final
-                        presentation check.
-                    </p>
-
-                </div>
-
-
-
-                <!-- =================================
-                     MERCEDES PROJECT
-                ================================== -->
-
-                <article class="gallery-project">
-
-                    <!-- PROJECT HEADER -->
-
-                    <div class="gallery-project-heading">
-
-                        <div>
-
-                            <span class="project-number">
-                                01
-                            </span>
-
-                            <p class="eyebrow">
-                                GOLD PACKAGE
-                            </p>
-
-                            <h3>
-                                Mercedes-Benz
-                            </h3>
-
-                        </div>
-
-
-                        <div class="project-meta">
-
-                            <span>
-                                EXTERIOR + INTERIOR
-                            </span>
-
-                            <span>
-                                OAKLAND, CA
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- PHOTO GRID -->
-
-                    <div class="gallery-grid">
-
-
-                        <!-- MAIN PHOTO -->
-
-                        <figure class="gallery-card gallery-card-main">
-
-                            <img
-                                src="images/gallery/mercedes-main.jpg"
-                                alt="Mercedes-Benz after detailing by Enhance My Ride"
-                                loading="lazy"
-                            >
-
-                            <figcaption>
-
-                                <strong>
-                                    GOLD PACKAGE
-                                </strong>
-
-                                <span>
-                                    Featured Detail
-                                </span>
-
-                            </figcaption>
-
-                        </figure>
-
-
-
-                        <!-- BEFORE -->
-
-                        <figure class="gallery-card">
-
-                            <img
-                                src="images/gallery/mercedes-before.jpg"
-                                alt="Mercedes-Benz before detailing"
-                                loading="lazy"
-                            >
-
-                            <figcaption>
-
-                                <strong>
-                                    BEFORE
-                                </strong>
-
-                                <span>
-                                    Mercedes-Benz
-                                </span>
-
-                            </figcaption>
-
-                        </figure>
-
-
-
-                        <!-- AFTER -->
-
-                        <figure class="gallery-card">
-
-                            <img
-                                src="images/gallery/mercedes-after.jpg"
-                                alt="Mercedes-Benz after detailing"
-                                loading="lazy"
-                            >
-
-                            <figcaption>
-
-                                <strong>
-                                    AFTER
-                                </strong>
-
-                                <span>
-                                    Mercedes-Benz
-                                </span>
-
-                            </figcaption>
-
-                        </figure>
-
-
-                    </div>
-
-
-
-                    <!-- =================================
-                         MERCEDES WHEEL
-                    ================================== -->
-
-                    <div class="gallery-wheel-feature">
-
-
-                        <figure class="gallery-wheel-card">
-
-                            <img
-                                src="images/gallery/mercedes-wheel-cleaned.jpg"
-                                alt="Mercedes-Benz wheel cleaned by Enhance My Ride"
-                                loading="lazy"
-                            >
-
-                            <figcaption>
-
-                                <strong>
-                                    WHEEL DETAIL
-                                </strong>
-
-                                <span>
-                                    Cleaning Result
-                                </span>
-
-                            </figcaption>
-
-                        </figure>
-
-
-                        <div class="gallery-wheel-copy">
-
-                            <p class="eyebrow">
-                                DETAILING FOCUS
-                            </p>
-
-                            <h4>
-                                Wheels Matter.
-                            </h4>
-
-                            <p>
-                                This Mercedes-Benz arrived with
-                                significant brake dust and buildup.
-                                The wheels were thoroughly cleaned
-                                as part of the Gold Package.
-                            </p>
-
-                            <p>
-                                This is a cleaning result — not a
-                                wheel polishing or repair service.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- MERCEDES DESCRIPTION -->
-
-                    <div class="gallery-description">
-
-                        <p>
-                            Mercedes-Benz completed with the
-                            Enhance Gold Package, including a
-                            thorough exterior wash, wheel cleaning,
-                            interior cleaning, and final presentation
-                            inspection.
-                        </p>
-
-                        <a
-                            href="quote.html"
-                            class="text-link"
-                        >
-                            Get Your Vehicle Enhanced →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- =================================
-                     LEXUS PROJECT
-                ================================== -->
-
-                <article class="gallery-project">
-
-                    <!-- PROJECT HEADER -->
-
-                    <div class="gallery-project-heading">
-
-                        <div>
-
-                            <span class="project-number">
-                                02
-                            </span>
-
-                            <p class="eyebrow">
-                                GOLD PACKAGE
-                            </p>
-
-                            <h3>
-                                Lexus IS 250
-                            </h3>
-
-                        </div>
-
-
-                        <div class="project-meta">
-
-                            <span>
-                                EXTERIOR + INTERIOR
-                            </span>
-
-                            <span>
-                                BAY AREA
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- PHOTO GRID -->
-
-                    <div class="gallery-grid">
-
-
-                        <!-- MAIN PHOTO -->
-
-                        <figure class="gallery-card gallery-card-main">
-
-                            <img
-                                src="images/gallery/lexus-main.jpg"
-                                alt="Lexus IS 250 after detailing by Enhance My Ride"
-                                loading="lazy"
-                            >
-
-                            <figcaption>
-
-                                <strong>
-                                    GOLD PACKAGE
-                                </strong>
-
-                                <span>
-                                    Featured Detail
-                                </span>
-
-                            </figcaption>
-
-                        </figure>
-
-
-
-                        <!-- BEFORE -->
-
-                        <figure class="gallery-card">
-
-                            <img
-                                src="images/gallery/lexus-before.jpg"
-                                alt="Lexus IS 250 before detailing"
-                                loading="lazy"
-                            >
-
-                            <figcaption>
-
-                                <strong>
-                                    BEFORE
-                                </strong>
-
-                                <span>
-                                    Lexus IS 250
-                                </span>
-
-                            </figcaption>
-
-                        </figure>
-
-
-
-                        <!-- AFTER -->
-
-                        <figure class="gallery-card">
-
-                            <img
-                                src="images/gallery/lexus-after.jpg"
-                                alt="Lexus IS 250 after detailing"
-                                loading="lazy"
-                            >
-
-                            <figcaption>
-
-                                <strong>
-                                    AFTER
-                                </strong>
-
-                                <span>
-                                    Lexus IS 250
-                                </span>
-
-                            </figcaption>
-
-                        </figure>
-
-
-                    </div>
-
-
-
-                    <!-- LEXUS DESCRIPTION -->
-
-                    <div class="gallery-description">
-
-                        <p>
-                            Lexus IS 250 completed with the
-                            Enhance Gold Package. The wheels were
-                            thoroughly cleaned and the vehicle
-                            received a complete interior and
-                            exterior refresh.
-                        </p>
-
-                        <a
-                            href="quote.html"
-                            class="text-link"
-                        >
-                            Get Your Vehicle Enhanced →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- =================================
-                     COMING SOON
-                ================================== -->
-
-                <section class="gallery-coming-soon">
-
-                    <p class="eyebrow">
-                        MORE TRANSFORMATIONS COMING
-                    </p>
-
-                    <h2>
-                        Your Vehicle
-                        <span class="gold-text">
-                            Could Be Next.
-                        </span>
-                    </h2>
-
-                    <p>
-                        Every new detail gives us another
-                        opportunity to showcase the Enhance
-                        difference.
-                    </p>
-
-                    <a
-                        href="quote.html"
-                        class="btn btn-primary"
-                    >
-                        Request A Quote
-                    </a>
-
-                </section>
-
-
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
-
-    <footer class="site-footer">
-
-        <div class="container footer-grid">
-
-
-            <!-- BRAND -->
-
-            <div class="footer-brand">
-
-                <a
-                    href="index.html"
-                    class="logo"
-                >
-
-                    <span class="logo-main">
-                        ENHANCE MY RIDE
-                    </span>
-
-                    <span class="logo-sub">
-                        AUTO SPA & MOBILE DETAILING
-                    </span>
-
-                </a>
-
-                <p>
-                    Premium mobile detailing delivered
-                    throughout Alameda, Oakland, San Francisco,
-                    and the Bay Area.
-                </p>
-
-            </div>
-
-
-
-            <!-- EXPLORE -->
-
-            <div class="footer-links">
-
-                <h4>
-                    Explore
-                </h4>
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a href="gallery.html">
-                    Gallery
-                </a>
-
-                <a href="service-area.html">
-                    Service Area
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-            </div>
-
-
-
-            <!-- CONNECT -->
-
-            <div class="footer-links">
-
-                <h4>
-                    Connect
-                </h4>
-
-                <a href="quote.html">
-                    Get a Quote
-                </a>
-
-                <a href="tel:+13233271806">
-                    (323) 327-1806
-                </a>
-
-                <a href="mailto:info@enhancemyride.com">
-                    info@enhancemyride.com
-                </a>
-
-                <a
-                    href="https://www.instagram.com/enhancemyridemobiledetailing/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Instagram
-                </a>
-
-                <a
-                    href="https://www.tiktok.com/@enhancemyride"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    TikTok
-                </a>
-
-                <a
-                    href="https://www.youtube.com/@enhancemyridemobiledetailing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    YouTube
-                </a>
-
-            </div>
-
-
-        </div>
-
-
-
-        <!-- FOOTER BOTTOM -->
-
-        <div class="container footer-bottom">
-
             <p>
-                © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
-                All rights reserved.
-            </p>
 
-            <p>
-                We come to you. You relax. We Enhance.
+                Premium mobile detailing delivered throughout
+                Alameda, Oakland, San Francisco and the Bay Area.
+
             </p>
 
         </div>
 
-    </footer>
 
 
+        <div class="footer-links">
 
-    <!-- =========================================
-         FLOATING MOBILE CALL BUTTON
-    ========================================== -->
+            <h4>
+                Explore
+            </h4>
 
-    <a
-        href="tel:+13233271806"
-        class="mobile-call-button"
-        aria-label="Call Enhance My Ride"
-    >
+            <a href="index.html">
+                Home
+            </a>
 
-        <span class="call-icon">
-            ☎
-        </span>
+            <a href="gallery.html">
+                Gallery
+            </a>
 
-        <span>
-            CALL
-        </span>
+            <a href="services.html">
+                Services
+            </a>
 
-    </a>
+            <a href="quote.html">
+                Get A Quote
+            </a>
 
+            <a href="about.html">
+                About
+            </a>
 
+            <a href="service-area.html">
+                Service Area
+            </a>
 
-    <!-- =========================================
-         PHOTO LIGHTBOX
-    ========================================== -->
-
-    <div
-        class="lightbox"
-        id="galleryLightbox"
-        aria-hidden="true"
-    >
-
-        <button
-            class="lightbox-close"
-            id="lightboxClose"
-            aria-label="Close image"
-        >
-            ×
-        </button>
-
-
-        <button
-            class="lightbox-arrow lightbox-prev"
-            id="lightboxPrev"
-            aria-label="Previous image"
-        >
-            ‹
-        </button>
-
-
-        <img
-            src=""
-            alt=""
-            class="lightbox-image"
-            id="lightboxImage"
-        >
-
-
-        <button
-            class="lightbox-arrow lightbox-next"
-            id="lightboxNext"
-            aria-label="Next image"
-        >
-            ›
-        </button>
-
-
-        <div
-            class="lightbox-counter"
-            id="lightboxCounter"
-        >
-            1 / 7
         </div>
+
+
+
+        <div class="footer-links">
+
+            <h4>
+                Connect
+            </h4>
+
+            <a href="quote.html">
+                Get A Quote
+            </a>
+
+            <a href="tel:+13233271806">
+                (323) 327-1806
+            </a>
+
+            <a href="mailto:info@enhancemyride.com">
+                info@enhancemyride.com
+            </a>
+
+            <a
+                href="https://www.instagram.com/enhancemyridemobiledetailing/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram
+            </a>
+
+            <a
+                href="https://www.tiktok.com/@enhancemyride"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                TikTok
+            </a>
+
+            <a
+                href="https://www.youtube.com/@enhancemyridemobiledetailing"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                YouTube
+            </a>
+
+        </div>
+
 
     </div>
 
 
 
-    <!-- =========================================
-         JAVASCRIPT
-    ========================================== -->
+    <div class="container footer-bottom">
 
-    <script src="js/script.js"></script>
+        <p>
+            © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
+            All rights reserved.
+        </p>
 
+        <p>
+            We come to you. You relax. We Enhance.
+        </p>
 
-    <script>
+    </div>
 
-        document.addEventListener(
-            "DOMContentLoaded",
-            function () {
+</footer>
 
-                const lightbox =
-                    document.getElementById(
-                        "galleryLightbox"
-                    );
 
-                const lightboxImage =
-                    document.getElementById(
-                        "lightboxImage"
-                    );
 
-                const lightboxClose =
-                    document.getElementById(
-                        "lightboxClose"
-                    );
+<!-- =====================================================
+     FLOATING CALL BUTTON
+====================================================== -->
 
-                const lightboxPrev =
-                    document.getElementById(
-                        "lightboxPrev"
-                    );
+<a
+    href="tel:+13233271806"
+    class="mobile-call-button"
+    aria-label="Call Enhance My Ride"
+>
 
-                const lightboxNext =
-                    document.getElementById(
-                        "lightboxNext"
-                    );
+    <span class="call-icon">
+        ☎
+    </span>
 
-                const lightboxCounter =
-                    document.getElementById(
-                        "lightboxCounter"
-                    );
+    <span>
+        CALL
+    </span>
 
+</a>
 
-                const galleryImages =
-                    Array.from(
-                        document.querySelectorAll(
-                            ".gallery-card img, .gallery-wheel-card img"
-                        )
-                    );
 
 
-                let currentIndex = 0;
+<!-- =====================================================
+     LIGHTBOX
+====================================================== -->
 
+<div
+    class="lightbox"
+    id="galleryLightbox"
+    aria-hidden="true"
+>
 
-                function updateLightbox() {
+    <button
+        class="lightbox-close"
+        id="lightboxClose"
+        type="button"
+        aria-label="Close image"
+    >
+        ×
+    </button>
 
-                    if (!galleryImages.length) {
-                        return;
-                    }
 
+    <button
+        class="lightbox-arrow lightbox-prev"
+        id="lightboxPrev"
+        type="button"
+        aria-label="Previous image"
+    >
+        ‹
+    </button>
 
-                    const image =
-                        galleryImages[currentIndex];
 
+    <img
+        src=""
+        alt=""
+        class="lightbox-image"
+        id="lightboxImage"
+    >
 
-                    lightboxImage.src =
-                        image.src;
 
+    <button
+        class="lightbox-arrow lightbox-next"
+        id="lightboxNext"
+        type="button"
+        aria-label="Next image"
+    >
+        ›
+    </button>
 
-                    lightboxImage.alt =
-                        image.alt;
 
+    <div
+        class="lightbox-counter"
+        id="lightboxCounter"
+    >
+        1 / 7
+    </div>
 
-                    lightboxCounter.textContent =
-                        `${currentIndex + 1} / ${galleryImages.length}`;
+</div>
 
-                }
 
 
-                function openLightbox(index) {
+<!-- =====================================================
+     EXISTING SITE JAVASCRIPT
+====================================================== -->
 
-                    currentIndex = index;
+<script src="js/script.js"></script>
 
-                    updateLightbox();
 
-                    lightbox.classList.add(
-                        "active"
-                    );
 
-                    lightbox.setAttribute(
-                        "aria-hidden",
-                        "false"
-                    );
+<!-- =====================================================
+     GALLERY LIGHTBOX JAVASCRIPT
+====================================================== -->
 
-                    document.body.style.overflow =
-                        "hidden";
+<script>
 
-                }
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
+        const lightbox =
+            document.getElementById(
+                "galleryLightbox"
+            );
 
-                function closeLightbox() {
+        const lightboxImage =
+            document.getElementById(
+                "lightboxImage"
+            );
 
-                    lightbox.classList.remove(
-                        "active"
-                    );
+        const lightboxClose =
+            document.getElementById(
+                "lightboxClose"
+            );
 
-                    lightbox.setAttribute(
-                        "aria-hidden",
-                        "true"
-                    );
+        const lightboxPrev =
+            document.getElementById(
+                "lightboxPrev"
+            );
 
-                    document.body.style.overflow =
-                        "";
+        const lightboxNext =
+            document.getElementById(
+                "lightboxNext"
+            );
 
-                }
+        const lightboxCounter =
+            document.getElementById(
+                "lightboxCounter"
+            );
 
 
-                function showPrevious() {
+        const galleryImages =
+            Array.from(
+                document.querySelectorAll(
+                    "[data-gallery-image] img"
+                )
+            );
 
-                    if (!galleryImages.length) {
-                        return;
-                    }
 
+        if (!galleryImages.length) {
+            return;
+        }
 
-                    currentIndex--;
 
-                    if (currentIndex < 0) {
+        let currentIndex = 0;
 
-                        currentIndex =
-                            galleryImages.length - 1;
 
-                    }
+        function updateLightbox() {
 
+            const image =
+                galleryImages[currentIndex];
 
-                    updateLightbox();
 
-                }
+            lightboxImage.src =
+                image.currentSrc ||
+                image.src;
 
 
-                function showNext() {
+            lightboxImage.alt =
+                image.alt;
 
-                    if (!galleryImages.length) {
-                        return;
-                    }
 
+            lightboxCounter.textContent =
+                `${currentIndex + 1} / ${galleryImages.length}`;
 
-                    currentIndex++;
+        }
 
-                    if (
-                        currentIndex >=
-                        galleryImages.length
-                    ) {
 
-                        currentIndex = 0;
+        function openLightbox(index) {
 
-                    }
+            currentIndex = index;
 
+            updateLightbox();
 
-                    updateLightbox();
+            lightbox.classList.add(
+                "active"
+            );
 
-                }
+            lightbox.setAttribute(
+                "aria-hidden",
+                "false"
+            );
 
+            document.body.style.overflow =
+                "hidden";
 
-                galleryImages.forEach(
-                    function (image, index) {
+        }
 
-                        image.addEventListener(
-                            "click",
-                            function () {
 
-                                openLightbox(index);
+        function closeLightbox() {
 
-                            }
-                        );
+            lightbox.classList.remove(
+                "active"
+            );
 
-                    }
-                );
+            lightbox.setAttribute(
+                "aria-hidden",
+                "true"
+            );
 
+            lightboxImage.src = "";
 
-                lightboxClose.addEventListener(
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        function showPrevious() {
+
+            currentIndex--;
+
+            if (currentIndex < 0) {
+                currentIndex =
+                    galleryImages.length - 1;
+            }
+
+            updateLightbox();
+
+        }
+
+
+        function showNext() {
+
+            currentIndex++;
+
+            if (
+                currentIndex >=
+                galleryImages.length
+            ) {
+                currentIndex = 0;
+            }
+
+            updateLightbox();
+
+        }
+
+
+        galleryImages.forEach(
+            function (image, index) {
+
+                image.parentElement.addEventListener(
                     "click",
-                    closeLightbox
-                );
+                    function () {
 
-
-                lightboxPrev.addEventListener(
-                    "click",
-                    showPrevious
-                );
-
-
-                lightboxNext.addEventListener(
-                    "click",
-                    showNext
-                );
-
-
-                lightbox.addEventListener(
-                    "click",
-                    function (event) {
-
-                        if (
-                            event.target === lightbox
-                        ) {
-
-                            closeLightbox();
-
-                        }
-
-                    }
-                );
-
-
-                document.addEventListener(
-                    "keydown",
-                    function (event) {
-
-                        if (
-                            !lightbox.classList.contains(
-                                "active"
-                            )
-                        ) {
-
-                            return;
-
-                        }
-
-
-                        if (
-                            event.key === "Escape"
-                        ) {
-
-                            closeLightbox();
-
-                        }
-
-
-                        if (
-                            event.key === "ArrowLeft"
-                        ) {
-
-                            showPrevious();
-
-                        }
-
-
-                        if (
-                            event.key === "ArrowRight"
-                        ) {
-
-                            showNext();
-
-                        }
+                        openLightbox(index);
 
                     }
                 );
 
             }
-
         );
 
-    </script>
+
+        lightboxClose.addEventListener(
+            "click",
+            closeLightbox
+        );
+
+
+        lightboxPrev.addEventListener(
+            "click",
+            showPrevious
+        );
+
+
+        lightboxNext.addEventListener(
+            "click",
+            showNext
+        );
+
+
+        lightbox.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target === lightbox
+                ) {
+                    closeLightbox();
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    !lightbox.classList.contains(
+                        "active"
+                    )
+                ) {
+                    return;
+                }
+
+
+                if (
+                    event.key === "Escape"
+                ) {
+                    closeLightbox();
+                }
+
+
+                if (
+                    event.key === "ArrowLeft"
+                ) {
+                    showPrevious();
+                }
+
+
+                if (
+                    event.key === "ArrowRight"
+                ) {
+                    showNext();
+                }
+
+            }
+        );
+
+
+    }
+);
+
+</script>
 
 
 </body>
