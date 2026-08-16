@@ -16,7 +16,7 @@
 
     <meta
         name="description"
-        content="Request a premium mobile detailing quote from Enhance My Ride. Tell us about your vehicle, location, and the service you need."
+        content="Request a personalized mobile detailing quote from Enhance My Ride. Tell us about your vehicle, location, condition, and the services you're interested in."
     >
 
     <meta
@@ -24,10 +24,473 @@
         content="#050505"
     >
 
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
     <link
         rel="stylesheet"
         href="css/style.css"
     >
+
+
+    <style>
+
+        /* =====================================================
+           QUOTE HERO
+        ===================================================== */
+
+        .quote-hero {
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+
+            background:
+                radial-gradient(
+                    circle at 75% 50%,
+                    rgba(212,175,55,.12),
+                    transparent 38%
+                ),
+                #050505;
+        }
+
+        .quote-hero .page-hero-content {
+            max-width: 900px;
+        }
+
+        .quote-hero h1 {
+            max-width: 850px;
+            font-size: clamp(3.4rem, 7vw, 6.3rem);
+            line-height: .92;
+        }
+
+        .quote-hero h1 span {
+            display: block;
+            color: #d4af37;
+        }
+
+        .quote-hero .page-hero-content > p:last-child {
+            max-width: 620px;
+            margin-top: 25px;
+            color: rgba(255,255,255,.62);
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           QUOTE SECTION
+        ===================================================== */
+
+        .quote-section {
+            padding-top: 105px;
+            padding-bottom: 110px;
+        }
+
+        .quote-layout {
+            display: grid;
+            grid-template-columns: .72fr 1.28fr;
+            gap: 75px;
+            align-items: start;
+        }
+
+
+        /* =====================================================
+           LEFT INTRO
+        ===================================================== */
+
+        .quote-intro {
+            position: sticky;
+            top: 120px;
+        }
+
+        .quote-intro h2 {
+            max-width: 500px;
+            margin-bottom: 25px;
+            font-size: clamp(2.5rem, 4vw, 4.2rem);
+            line-height: .98;
+        }
+
+        .quote-intro > p:not(.eyebrow) {
+            max-width: 500px;
+            color: rgba(255,255,255,.53);
+            line-height: 1.8;
+        }
+
+        .quote-contact {
+            display: grid;
+            gap: 1px;
+            margin-top: 35px;
+            border: 1px solid rgba(255,255,255,.08);
+            background: rgba(255,255,255,.08);
+        }
+
+        .quote-contact > div {
+            padding: 22px;
+            background: #090909;
+        }
+
+        .quote-contact span {
+            display: block;
+            margin-bottom: 8px;
+            color: #d4af37;
+            font-size: 8px;
+            font-weight: 800;
+            letter-spacing: .17em;
+        }
+
+        .quote-contact a {
+            color: #fff;
+            font-size: .92rem;
+            transition: color .25s ease;
+        }
+
+        .quote-contact a:hover {
+            color: #d4af37;
+        }
+
+
+        /* =====================================================
+           QUOTE NOTE
+        ===================================================== */
+
+        .quote-note {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            padding: 20px;
+            border-left: 2px solid #d4af37;
+            background: rgba(212,175,55,.045);
+        }
+
+        .quote-note > span {
+            flex-shrink: 0;
+            color: #d4af37;
+            font-weight: 800;
+        }
+
+        .quote-note p {
+            margin: 0;
+            color: rgba(255,255,255,.45);
+            font-size: .78rem;
+            line-height: 1.65;
+        }
+
+
+        /* =====================================================
+           FORM CARD
+        ===================================================== */
+
+        .quote-form-card {
+            overflow: hidden;
+            border: 1px solid rgba(212,175,55,.22);
+
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(212,175,55,.07),
+                    transparent 38%
+                ),
+                #090909;
+
+            box-shadow:
+                0 30px 90px rgba(0,0,0,.25);
+        }
+
+        .quote-form-heading {
+            padding: 35px 38px 25px;
+            border-bottom: 1px solid rgba(255,255,255,.07);
+        }
+
+        .quote-form-heading h3 {
+            margin: 0 0 8px;
+            color: #fff;
+            font-size: 1.8rem;
+        }
+
+        .quote-form-heading p:last-child {
+            margin: 0;
+            color: rgba(255,255,255,.4);
+            font-size: .82rem;
+        }
+
+        .quote-form-frame {
+            width: 100%;
+            min-height: 900px;
+            background: #fff;
+        }
+
+        .quote-form-frame iframe {
+            display: block;
+            width: 100%;
+            min-height: 900px;
+            border: 0;
+        }
+
+
+        /* =====================================================
+           FORM TRUST BAR
+        ===================================================== */
+
+        .quote-trust-bar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid rgba(255,255,255,.08);
+        }
+
+        .quote-trust-item {
+            padding: 20px;
+            border-right: 1px solid rgba(255,255,255,.08);
+            background: #080808;
+            text-align: center;
+        }
+
+        .quote-trust-item:last-child {
+            border-right: 0;
+        }
+
+        .quote-trust-item strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+            font-size: .75rem;
+        }
+
+        .quote-trust-item span {
+            color: rgba(255,255,255,.35);
+            font-size: .65rem;
+        }
+
+
+        /* =====================================================
+           PROCESS
+        ===================================================== */
+
+        .quote-process {
+            margin-top: 115px;
+            padding-top: 100px;
+            border-top: 1px solid rgba(255,255,255,.08);
+        }
+
+        .quote-process-heading {
+            max-width: 650px;
+            margin-bottom: 45px;
+        }
+
+        .quote-process-heading h2 {
+            margin: 0;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: .98;
+        }
+
+        .quote-process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            border: 1px solid rgba(255,255,255,.08);
+            background: rgba(255,255,255,.08);
+        }
+
+        .quote-process-grid article {
+            min-height: 235px;
+            padding: 30px;
+            background: #090909;
+        }
+
+        .quote-process-grid article > span {
+            display: block;
+            margin-bottom: 45px;
+            color: #d4af37;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .15em;
+        }
+
+        .quote-process-grid h3 {
+            margin-bottom: 10px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .quote-process-grid p {
+            margin: 0;
+            color: rgba(255,255,255,.42);
+            font-size: .78rem;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           ADD-ON CTA
+        ===================================================== */
+
+        .quote-addon {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+
+            margin-top: 100px;
+            padding: 55px;
+
+            border: 1px solid rgba(212,175,55,.18);
+
+            background:
+                radial-gradient(
+                    circle at left,
+                    rgba(212,175,55,.08),
+                    transparent 45%
+                ),
+                #090909;
+        }
+
+        .quote-addon h2 {
+            max-width: 500px;
+            margin: 0;
+            font-size: clamp(2.4rem, 4vw, 4rem);
+            line-height: .98;
+        }
+
+        .quote-addon > div:last-child p {
+            color: rgba(255,255,255,.5);
+            line-height: 1.75;
+        }
+
+        .quote-addon .btn {
+            margin-top: 15px;
+        }
+
+
+        /* =====================================================
+           FINAL CTA
+        ===================================================== */
+
+        .quote-final-cta {
+            margin-top: 100px;
+            padding: 110px 30px;
+
+            border-top: 1px solid rgba(212,175,55,.15);
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(212,175,55,.1),
+                    transparent 50%
+                );
+
+            text-align: center;
+        }
+
+        .quote-final-cta h2 {
+            max-width: 850px;
+            margin: 0 auto 20px;
+            font-size: clamp(2.8rem, 5vw, 5rem);
+            line-height: .98;
+        }
+
+        .quote-final-cta p:last-child {
+            margin: 0;
+            color: rgba(255,255,255,.5);
+            font-size: 1rem;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 950px) {
+
+            .quote-layout {
+                grid-template-columns: 1fr;
+                gap: 55px;
+            }
+
+            .quote-intro {
+                position: static;
+            }
+
+            .quote-intro h2 {
+                max-width: 700px;
+            }
+
+            .quote-process-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .quote-hero {
+                min-height: 48vh;
+            }
+
+            .quote-hero h1 {
+                font-size: clamp(3rem, 14vw, 4.6rem);
+            }
+
+            .quote-section {
+                padding-top: 75px;
+                padding-bottom: 75px;
+            }
+
+            .quote-form-heading {
+                padding: 28px 22px 20px;
+            }
+
+            .quote-form-frame,
+            .quote-form-frame iframe {
+                min-height: 900px;
+            }
+
+            .quote-trust-bar {
+                grid-template-columns: 1fr;
+            }
+
+            .quote-trust-item {
+                border-right: 0;
+                border-bottom: 1px solid rgba(255,255,255,.08);
+            }
+
+            .quote-trust-item:last-child {
+                border-bottom: 0;
+            }
+
+            .quote-process {
+                margin-top: 75px;
+                padding-top: 75px;
+            }
+
+            .quote-process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quote-process-grid article {
+                min-height: auto;
+            }
+
+            .quote-process-grid article > span {
+                margin-bottom: 25px;
+            }
+
+            .quote-addon {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin-top: 75px;
+                padding: 32px 25px;
+            }
+
+            .quote-final-cta {
+                margin-top: 75px;
+                padding: 80px 20px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -35,14 +498,541 @@
 <body>
 
 
-    <!-- =========================================
-         HEADER
-    ========================================== -->
+<!-- =====================================================
+     HEADER
+====================================================== -->
 
-    <header class="site-header">
+<header class="site-header">
 
-        <div class="container nav-container">
+    <div class="container nav-container">
 
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="Enhance My Ride home"
+        >
+
+            <span class="logo-main">
+                ENHANCE MY RIDE
+            </span>
+
+            <span class="logo-sub">
+                AUTO SPA & MOBILE DETAILING
+            </span>
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <nav
+            class="main-nav"
+            id="mainNav"
+            aria-label="Main navigation"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a
+                href="quote.html"
+                class="active"
+            >
+                Get A Quote
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="service-area.html">
+                Service Area
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="page-hero quote-hero">
+
+    <div class="container page-hero-content">
+
+        <p class="eyebrow">
+            START YOUR ENHANCE EXPERIENCE
+        </p>
+
+        <h1>
+
+            Let's Enhance
+
+            <span>
+                Your Ride.
+            </span>
+
+        </h1>
+
+        <p>
+
+            Tell us about your vehicle, what it needs,
+            and where you'd like us to meet you.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUOTE FORM
+====================================================== -->
+
+<section class="section quote-section">
+
+    <div class="container">
+
+
+        <div class="quote-layout">
+
+
+            <!-- =================================================
+                 INTRO
+            ================================================== -->
+
+            <div class="quote-intro">
+
+                <p class="eyebrow">
+                    REQUEST A PERSONALIZED QUOTE
+                </p>
+
+                <h2>
+
+                    Your Vehicle.
+
+                    <span class="gold-text">
+                        Your Location.
+                    </span>
+
+                </h2>
+
+                <p>
+
+                    Every vehicle is different. Your quote should
+                    be too.
+
+                </p>
+
+                <p>
+
+                    Tell us what you're driving, where you're located,
+                    and what you'd like enhanced. We'll review your
+                    request and determine the right service for you.
+
+                </p>
+
+
+                <div class="quote-contact">
+
+
+                    <div>
+
+                        <span>
+                            CALL OR TEXT
+                        </span>
+
+                        <a href="tel:+13233271806">
+                            (323) 327-1806
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            EMAIL
+                        </span>
+
+                        <a href="mailto:info@enhancemyride.com">
+                            info@enhancemyride.com
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="quote-note">
+
+                    <span>
+                        ✓
+                    </span>
+
+                    <p>
+
+                        Have photos of your vehicle?
+                        Include them with your request when
+                        available. They can help us understand
+                        the vehicle's condition and provide a
+                        more accurate quote.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FORM
+            ================================================== -->
+
+            <div class="quote-form-card">
+
+
+                <div class="quote-form-heading">
+
+                    <p class="eyebrow">
+                        ENHANCE MY RIDE
+                    </p>
+
+                    <h3>
+                        Request Your Quote
+                    </h3>
+
+                    <p>
+                        Tell us about your vehicle. We'll take it from here.
+                    </p>
+
+                </div>
+
+
+                <!--
+                    KEEPING YOUR EXISTING TALLY FORM
+                    AND EMBED URL INTACT
+                -->
+
+                <div class="quote-form-frame">
+
+                    <iframe
+                        src="https://tally.so/r/81VEaP"
+                        width="100%"
+                        height="900"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0"
+                        title="Enhance My Ride personalized quote form"
+                        loading="lazy"
+                    ></iframe>
+
+                </div>
+
+
+                <div class="quote-trust-bar">
+
+                    <div class="quote-trust-item">
+
+                        <strong>
+                            PERSONALIZED
+                        </strong>
+
+                        <span>
+                            Every vehicle is different.
+                        </span>
+
+                    </div>
+
+
+                    <div class="quote-trust-item">
+
+                        <strong>
+                            MOBILE
+                        </strong>
+
+                        <span>
+                            We come to you.
+                        </span>
+
+                    </div>
+
+
+                    <div class="quote-trust-item">
+
+                        <strong>
+                            PROFESSIONAL
+                        </strong>
+
+                        <span>
+                            We inspect before we begin.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROCESS
+        ================================================== -->
+
+        <section class="quote-process">
+
+
+            <div class="quote-process-heading">
+
+                <p class="eyebrow">
+                    WHAT HAPPENS NEXT
+                </p>
+
+                <h2>
+
+                    Simple.
+
+                    <span class="gold-text">
+                        Straightforward.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="quote-process-grid">
+
+
+                <article>
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Tell Us About Your Ride
+                    </h3>
+
+                    <p>
+
+                        Send us your vehicle information,
+                        location, condition, and the services
+                        you're interested in.
+
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        We Review Your Request
+                    </h3>
+
+                    <p>
+
+                        We'll review the information you provide
+                        and determine what your vehicle may need.
+
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        We Connect With You
+                    </h3>
+
+                    <p>
+
+                        We'll follow up to discuss the service,
+                        location, timing, and pricing.
+
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        04
+                    </span>
+
+                    <h3>
+                        We Come To You
+                    </h3>
+
+                    <p>
+
+                        Once everything is confirmed,
+                        we bring the Enhance experience to you.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ADD-ON CTA
+        ================================================== -->
+
+        <section class="quote-addon">
+
+
+            <div>
+
+                <p class="eyebrow">
+                    DON'T NEED A FULL DETAIL?
+                </p>
+
+                <h2>
+
+                    Need Just One
+
+                    <span class="gold-text">
+                        Thing?
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <p>
+
+                    You don't have to book a full detail to
+                    contact Enhance My Ride.
+
+                </p>
+
+                <p>
+
+                    Ask about specialty services such as
+                    wheel polishing, headlight restoration,
+                    trim restoration, pet hair removal,
+                    engine bay detailing, and more.
+
+                </p>
+
+                <a
+                    href="tel:+13233271806"
+                    class="btn btn-secondary"
+                >
+                    Call (323) 327-1806
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FINAL CTA
+        ================================================== -->
+
+        <section class="quote-final-cta">
+
+            <p class="eyebrow">
+                ENHANCE MY RIDE
+            </p>
+
+            <h2>
+
+                We Come To You.
+
+                <span class="gold-text">
+                    You Relax.
+                </span>
+
+            </h2>
+
+            <p>
+                Let's get your vehicle looking its best.
+            </p>
+
+        </section>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-brand">
 
             <a
                 href="index.html"
@@ -59,583 +1049,143 @@
 
             </a>
 
-
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-            >
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-
-            <nav
-                class="main-nav"
-                id="mainNav"
-            >
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a href="gallery.html">
-                    Gallery
-                </a>
-
-                <a href="service-area.html">
-                    Service Area
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a
-                    href="quote.html"
-                    class="nav-cta active"
-                >
-                    Get a Quote
-                </a>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-
-    <!-- =========================================
-         MAIN
-    ========================================== -->
-
-    <main>
-
-
-        <!-- =====================================
-             QUOTE HERO
-        ====================================== -->
-
-        <section class="page-hero quote-hero">
-
-            <div class="container page-hero-content">
-
-                <p class="eyebrow">
-                    START YOUR ENHANCE EXPERIENCE
-                </p>
-
-                <h1>
-                    Let's Enhance
-                    <span>
-                        Your Ride.
-                    </span>
-                </h1>
-
-                <p>
-                    Tell us about your vehicle, what it needs,
-                    and where you'd like us to meet you.
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================
-             QUOTE SECTION
-        ====================================== -->
-
-        <section class="section quote-section">
-
-            <div class="container">
-
-
-                <div class="quote-layout">
-
-
-                    <!-- =================================
-                         LEFT SIDE
-                    ================================== -->
-
-                    <div class="quote-intro">
-
-                        <p class="eyebrow">
-                            REQUEST A QUOTE
-                        </p>
-
-                        <h2>
-                            Your Vehicle.
-                            <span class="gold-text">
-                                Your Location.
-                            </span>
-                        </h2>
-
-                        <p>
-                            Every vehicle is different. That's why
-                            we like to learn a little about yours
-                            before recommending the right service.
-                        </p>
-
-                        <p>
-                            Complete the quick quote form and we'll
-                            review your request and get back to you
-                            with the next steps.
-                        </p>
-
-
-                        <div class="quote-contact">
-
-
-                            <div>
-
-                                <span>
-                                    CALL
-                                </span>
-
-                                <a href="tel:+13233271806">
-                                    (323) 327-1806
-                                </a>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    EMAIL
-                                </span>
-
-                                <a
-                                    href="mailto:info@enhancemyride.com"
-                                >
-                                    info@enhancemyride.com
-                                </a>
-
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="quote-note">
-
-                            <span>
-                                ✓
-                            </span>
-
-                            <p>
-                                Prefer to talk? Give us a call
-                                and we'll be happy to discuss
-                                your vehicle and service needs.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- =================================
-                         FORM CARD
-                    ================================== -->
-
-                    <div class="quote-form-card">
-
-
-                        <div class="quote-form-heading">
-
-                            <p class="eyebrow">
-                                ENHANCE MY RIDE
-                            </p>
-
-                            <h3>
-                                Request Your Quote
-                            </h3>
-
-                            <p>
-                                It only takes a few minutes.
-                            </p>
-
-                        </div>
-
-
-                        <div class="quote-form-frame">
-
-                            <iframe
-                                src="https://tally.so/r/81VEaP"
-                                width="100%"
-                                height="900"
-                                frameborder="0"
-                                marginheight="0"
-                                marginwidth="0"
-                                title="Enhance My Ride Quote Form"
-                            ></iframe>
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- =================================
-                     HOW IT WORKS
-                ================================== -->
-
-                <section class="quote-process">
-
-                    <div class="quote-process-heading">
-
-                        <p class="eyebrow">
-                            WHAT HAPPENS NEXT
-                        </p>
-
-                        <h2>
-                            Simple.
-                            <span class="gold-text">
-                                Straightforward.
-                            </span>
-                        </h2>
-
-                    </div>
-
-
-                    <div class="quote-process-grid">
-
-
-                        <article>
-
-                            <span>
-                                01
-                            </span>
-
-                            <h3>
-                                Tell Us About Your Ride
-                            </h3>
-
-                            <p>
-                                Send us your vehicle information,
-                                location, and what you'd like
-                                enhanced.
-                            </p>
-
-                        </article>
-
-
-
-                        <article>
-
-                            <span>
-                                02
-                            </span>
-
-                            <h3>
-                                We Review Your Request
-                            </h3>
-
-                            <p>
-                                We'll look over the details and
-                                determine the right service for
-                                your vehicle.
-                            </p>
-
-                        </article>
-
-
-
-                        <article>
-
-                            <span>
-                                03
-                            </span>
-
-                            <h3>
-                                We Connect With You
-                            </h3>
-
-                            <p>
-                                We'll follow up to confirm the
-                                service, location, timing, and
-                                pricing.
-                            </p>
-
-                        </article>
-
-
-
-                        <article>
-
-                            <span>
-                                04
-                            </span>
-
-                            <h3>
-                                We Come To You
-                            </h3>
-
-                            <p>
-                                You relax while we get to work
-                                enhancing your ride.
-                            </p>
-
-                        </article>
-
-
-                    </div>
-
-                </section>
-
-
-
-                <!-- =================================
-                     ADD-ON CTA
-                ================================== -->
-
-                <section class="quote-addon">
-
-                    <div>
-
-                        <p class="eyebrow">
-                            DON'T NEED A FULL DETAIL?
-                        </p>
-
-                        <h2>
-                            Need Just One
-                            <span class="gold-text">
-                                Thing?
-                            </span>
-                        </h2>
-
-                    </div>
-
-
-                    <div>
-
-                        <p>
-                            That's okay. You don't have to book
-                            a full detail to call Enhance My Ride.
-                        </p>
-
-                        <p>
-                            Ask us about individual services such
-                            as headlight restoration, trim restoration,
-                            and other vehicle enhancement services.
-                        </p>
-
-                        <a
-                            href="tel:+13233271806"
-                            class="btn btn-secondary"
-                        >
-                            Call (323) 327-1806
-                        </a>
-
-                    </div>
-
-                </section>
-
-
-
-                <!-- =================================
-                     FINAL CTA
-                ================================== -->
-
-                <section class="quote-final-cta">
-
-                    <p class="eyebrow">
-                        ENHANCE MY RIDE
-                    </p>
-
-                    <h2>
-                        We Come To You.
-                        <span class="gold-text">
-                            You Relax.
-                        </span>
-                    </h2>
-
-                    <p>
-                        Let's get your vehicle looking its best.
-                    </p>
-
-                </section>
-
-
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
-
-    <footer class="site-footer">
-
-        <div class="container footer-grid">
-
-
-            <div class="footer-brand">
-
-                <a
-                    href="index.html"
-                    class="logo"
-                >
-
-                    <span class="logo-main">
-                        ENHANCE MY RIDE
-                    </span>
-
-                    <span class="logo-sub">
-                        AUTO SPA & MOBILE DETAILING
-                    </span>
-
-                </a>
-
-                <p>
-                    Premium mobile detailing delivered
-                    throughout Alameda, Oakland, San Francisco,
-                    and the Bay Area.
-                </p>
-
-            </div>
-
-
-
-            <div class="footer-links">
-
-                <h4>
-                    Explore
-                </h4>
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a href="gallery.html">
-                    Gallery
-                </a>
-
-                <a href="service-area.html">
-                    Service Area
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-            </div>
-
-
-
-            <div class="footer-links">
-
-                <h4>
-                    Connect
-                </h4>
-
-                <a href="quote.html">
-                    Get a Quote
-                </a>
-
-                <a href="tel:+13233271806">
-                    (323) 327-1806
-                </a>
-
-                <a href="mailto:info@enhancemyride.com">
-                    info@enhancemyride.com
-                </a>
-
-                <a
-                    href="https://www.instagram.com/enhancemyridemobiledetailing/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Instagram
-                </a>
-
-                <a
-                    href="https://www.tiktok.com/@enhancemyride"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    TikTok
-                </a>
-
-                <a
-                    href="https://www.youtube.com/@enhancemyridemobiledetailing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    YouTube
-                </a>
-
-            </div>
-
-
-        </div>
-
-
-
-        <div class="container footer-bottom">
-
             <p>
-                © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
-                All rights reserved.
-            </p>
 
-            <p>
-                We come to you. You relax. We Enhance.
+                Premium mobile detailing delivered throughout
+                Alameda, Oakland, San Francisco and the Bay Area.
+
             </p>
 
         </div>
 
-    </footer>
+
+
+        <div class="footer-links">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="quote.html">
+                Get A Quote
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="service-area.html">
+                Service Area
+            </a>
+
+        </div>
 
 
 
-    <!-- =========================================
-         FLOATING CALL BUTTON
-    ========================================== -->
+        <div class="footer-links">
 
-    <a
-        href="tel:+13233271806"
-        class="mobile-call-button"
-        aria-label="Call Enhance My Ride"
-    >
+            <h4>
+                Connect
+            </h4>
 
-        <span class="call-icon">
-            ☎
-        </span>
+            <a href="quote.html">
+                Get A Quote
+            </a>
 
-        <span>
-            CALL
-        </span>
+            <a href="tel:+13233271806">
+                (323) 327-1806
+            </a>
 
-    </a>
+            <a href="mailto:info@enhancemyride.com">
+                info@enhancemyride.com
+            </a>
+
+            <a
+                href="https://www.instagram.com/enhancemyridemobiledetailing/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram
+            </a>
+
+            <a
+                href="https://www.tiktok.com/@enhancemyride"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                TikTok
+            </a>
+
+            <a
+                href="https://www.youtube.com/@enhancemyridemobiledetailing"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                YouTube
+            </a>
+
+        </div>
+
+
+    </div>
 
 
 
-    <script src="js/script.js"></script>
+    <div class="container footer-bottom">
+
+        <p>
+
+            © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
+            All rights reserved.
+
+        </p>
+
+        <p>
+            We come to you. You relax. We Enhance.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     FLOATING CALL BUTTON
+====================================================== -->
+
+<a
+    href="tel:+13233271806"
+    class="mobile-call-button"
+    aria-label="Call Enhance My Ride"
+>
+
+    <span class="call-icon">
+        ☎
+    </span>
+
+    <span>
+        CALL
+    </span>
+
+</a>
+
+
+
+<script src="js/script.js"></script>
+
 
 </body>
 
