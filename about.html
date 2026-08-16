@@ -11,12 +11,12 @@
     >
 
     <title>
-        About | Enhance My Ride Auto Spa & Mobile Detailing
+        About Enhance My Ride | Premium Mobile Detailing
     </title>
 
     <meta
         name="description"
-        content="Learn about Enhance My Ride Auto Spa & Mobile Detailing and our premium mobile detailing experience throughout the Bay Area."
+        content="Learn about Enhance My Ride Auto Spa & Mobile Detailing, our approach to premium vehicle care, and why we bring the detailing experience directly to you throughout the Bay Area."
     >
 
     <meta
@@ -24,10 +24,536 @@
         content="#050505"
     >
 
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
     <link
         rel="stylesheet"
         href="css/style.css"
     >
+
+
+    <style>
+
+        /* =====================================================
+           ABOUT HERO
+        ===================================================== */
+
+        .about-hero {
+            min-height: 58vh;
+            display: flex;
+            align-items: center;
+
+            background:
+                radial-gradient(
+                    circle at 75% 45%,
+                    rgba(212,175,55,.13),
+                    transparent 38%
+                ),
+                #050505;
+        }
+
+        .about-hero .page-hero-content {
+            max-width: 950px;
+        }
+
+        .about-hero h1 {
+            max-width: 850px;
+            font-size: clamp(3.5rem, 7vw, 6.5rem);
+            line-height: .9;
+        }
+
+        .about-hero h1 span {
+            display: block;
+            color: #d4af37;
+        }
+
+        .about-hero .page-hero-content > p:last-child {
+            max-width: 650px;
+            margin-top: 28px;
+            color: rgba(255,255,255,.62);
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           BRAND STORY
+        ===================================================== */
+
+        .about-story {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 90px;
+            align-items: start;
+        }
+
+        .about-story-heading {
+            position: sticky;
+            top: 120px;
+        }
+
+        .about-story-heading h2 {
+            max-width: 600px;
+            margin: 0;
+            font-size: clamp(2.7rem, 5vw, 5rem);
+            line-height: .95;
+        }
+
+        .about-story-copy {
+            max-width: 650px;
+        }
+
+        .about-story-copy p {
+            color: rgba(255,255,255,.5);
+            line-height: 1.85;
+        }
+
+        .about-story-copy .about-lead {
+            margin-top: 0;
+            margin-bottom: 30px;
+            color: #fff;
+            font-size: clamp(1.2rem, 2vw, 1.55rem);
+            line-height: 1.55;
+        }
+
+
+        /* =====================================================
+           STORY STATEMENT
+        ===================================================== */
+
+        .about-story-statement {
+            margin-top: 90px;
+            padding: 45px;
+
+            border-left: 2px solid #d4af37;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(212,175,55,.07),
+                    rgba(212,175,55,.015)
+                );
+        }
+
+        .about-story-statement p {
+            max-width: 850px;
+            margin: 0;
+            color: rgba(255,255,255,.65);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           PHILOSOPHY
+        ===================================================== */
+
+        .about-philosophy {
+            margin-top: 120px;
+            padding-top: 100px;
+            border-top: 1px solid rgba(255,255,255,.08);
+        }
+
+        .about-philosophy-heading {
+            max-width: 750px;
+            margin-bottom: 55px;
+        }
+
+        .about-philosophy-heading h2 {
+            margin: 0;
+            font-size: clamp(2.7rem, 5vw, 5rem);
+            line-height: .95;
+        }
+
+        .about-principles {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+
+            border: 1px solid rgba(255,255,255,.08);
+            background: rgba(255,255,255,.08);
+        }
+
+        .about-principles article {
+            min-height: 285px;
+            padding: 35px;
+            background: #090909;
+        }
+
+        .about-principles article > span {
+            display: block;
+            margin-bottom: 65px;
+
+            color: #d4af37;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .16em;
+        }
+
+        .about-principles h3 {
+            margin-bottom: 12px;
+            color: #fff;
+            font-size: 1.15rem;
+        }
+
+        .about-principles p {
+            max-width: 500px;
+            margin: 0;
+            color: rgba(255,255,255,.42);
+            font-size: .8rem;
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           PROMISE
+        ===================================================== */
+
+        .about-statement {
+            margin-top: 110px;
+            padding: 100px 30px;
+
+            border-top: 1px solid rgba(212,175,55,.15);
+            border-bottom: 1px solid rgba(212,175,55,.15);
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(212,175,55,.1),
+                    transparent 52%
+                );
+
+            text-align: center;
+        }
+
+        .about-statement blockquote {
+            max-width: 1000px;
+            margin: 25px auto;
+
+            color: #fff;
+
+            font-size: clamp(2.7rem, 6vw, 6rem);
+            font-weight: 600;
+            line-height: .98;
+            letter-spacing: -.035em;
+        }
+
+        .about-statement blockquote span {
+            color: #d4af37;
+        }
+
+        .about-statement > p:last-child {
+            max-width: 650px;
+            margin: 0 auto;
+
+            color: rgba(255,255,255,.45);
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           EXPERIENCE
+        ===================================================== */
+
+        .about-experience {
+            display: grid;
+            grid-template-columns: 1fr .8fr;
+            gap: 80px;
+            align-items: center;
+
+            margin-top: 120px;
+        }
+
+        .about-experience-copy {
+            max-width: 650px;
+        }
+
+        .about-experience-copy h2 {
+            margin: 0 0 25px;
+            font-size: clamp(2.7rem, 5vw, 5rem);
+            line-height: .95;
+        }
+
+        .about-experience-copy > p:not(.eyebrow) {
+            color: rgba(255,255,255,.5);
+            line-height: 1.8;
+        }
+
+        .about-experience-card {
+            position: relative;
+
+            min-height: 420px;
+            padding: 45px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            overflow: hidden;
+
+            border: 1px solid rgba(212,175,55,.2);
+
+            background:
+                radial-gradient(
+                    circle at 50% 25%,
+                    rgba(212,175,55,.14),
+                    transparent 42%
+                ),
+                #090909;
+        }
+
+        .about-experience-card::before {
+            content: "";
+
+            position: absolute;
+            inset: 25px;
+
+            border: 1px solid rgba(212,175,55,.12);
+
+            pointer-events: none;
+        }
+
+        .about-experience-card span {
+            position: relative;
+            z-index: 1;
+
+            color: rgba(255,255,255,.45);
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .2em;
+        }
+
+        .about-experience-card strong {
+            position: relative;
+            z-index: 1;
+
+            margin-top: 12px;
+
+            color: #fff;
+
+            font-size: clamp(3rem, 7vw, 6rem);
+            line-height: .8;
+            letter-spacing: -.04em;
+        }
+
+        .about-experience-card small {
+            position: relative;
+            z-index: 1;
+
+            margin-top: 18px;
+
+            color: #d4af37;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .16em;
+        }
+
+
+        /* =====================================================
+           WHAT CUSTOMERS CAN EXPECT
+        ===================================================== */
+
+        .about-expectations {
+            margin-top: 120px;
+            padding-top: 100px;
+
+            border-top: 1px solid rgba(255,255,255,.08);
+        }
+
+        .about-expectations-heading {
+            max-width: 700px;
+            margin-bottom: 50px;
+        }
+
+        .about-expectations-heading h2 {
+            margin: 0;
+            font-size: clamp(2.7rem, 5vw, 5rem);
+            line-height: .95;
+        }
+
+        .expectation-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+
+            border: 1px solid rgba(255,255,255,.08);
+            background: rgba(255,255,255,.08);
+        }
+
+        .expectation-card {
+            min-height: 255px;
+            padding: 35px;
+            background: #090909;
+        }
+
+        .expectation-card span {
+            display: block;
+            margin-bottom: 55px;
+
+            color: #d4af37;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .16em;
+        }
+
+        .expectation-card h3 {
+            margin-bottom: 12px;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .expectation-card p {
+            margin: 0;
+            color: rgba(255,255,255,.42);
+            font-size: .8rem;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .about-cta {
+            margin-top: 110px;
+            padding: 110px 30px;
+
+            border-top: 1px solid rgba(212,175,55,.15);
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(212,175,55,.1),
+                    transparent 50%
+                );
+
+            text-align: center;
+        }
+
+        .about-cta h2 {
+            max-width: 850px;
+            margin: 0 auto 22px;
+
+            font-size: clamp(2.8rem, 5vw, 5rem);
+            line-height: .95;
+        }
+
+        .about-cta > p:not(.eyebrow) {
+            max-width: 600px;
+            margin: 0 auto 30px;
+
+            color: rgba(255,255,255,.5);
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 950px) {
+
+            .about-story {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-story-heading {
+                position: static;
+            }
+
+            .about-experience {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .expectation-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .about-hero {
+                min-height: 50vh;
+            }
+
+            .about-hero h1 {
+                font-size: clamp(3.2rem, 14vw, 5rem);
+            }
+
+            .about-story-statement {
+                margin-top: 60px;
+                padding: 30px 25px;
+            }
+
+            .about-philosophy {
+                margin-top: 75px;
+                padding-top: 75px;
+            }
+
+            .about-principles {
+                grid-template-columns: 1fr;
+            }
+
+            .about-principles article {
+                min-height: auto;
+                padding: 30px;
+            }
+
+            .about-principles article > span {
+                margin-bottom: 30px;
+            }
+
+            .about-statement {
+                margin-top: 75px;
+                padding: 80px 20px;
+            }
+
+            .about-statement blockquote {
+                font-size: clamp(2.5rem, 12vw, 4.5rem);
+            }
+
+            .about-experience {
+                margin-top: 75px;
+            }
+
+            .about-experience-card {
+                min-height: 320px;
+                padding: 30px;
+            }
+
+            .about-expectations {
+                margin-top: 75px;
+                padding-top: 75px;
+            }
+
+            .expectation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .expectation-card {
+                min-height: auto;
+                padding: 30px;
+            }
+
+            .expectation-card span {
+                margin-bottom: 30px;
+            }
+
+            .about-cta {
+                margin-top: 75px;
+                padding: 80px 20px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -35,14 +561,600 @@
 <body>
 
 
-    <!-- =========================================
-         HEADER
-    ========================================== -->
+<!-- =====================================================
+     HEADER
+====================================================== -->
 
-    <header class="site-header">
+<header class="site-header">
 
-        <div class="container nav-container">
+    <div class="container nav-container">
 
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="Enhance My Ride home"
+        >
+
+            <span class="logo-main">
+                ENHANCE MY RIDE
+            </span>
+
+            <span class="logo-sub">
+                AUTO SPA & MOBILE DETAILING
+            </span>
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <nav
+            class="main-nav"
+            id="mainNav"
+            aria-label="Main navigation"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a
+                href="quote.html"
+                class="nav-cta"
+            >
+                Get A Quote
+            </a>
+
+            <a
+                href="about.html"
+                class="active"
+            >
+                About
+            </a>
+
+            <a href="service-area.html">
+                Service Area
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="page-hero about-hero">
+
+    <div class="container page-hero-content">
+
+        <p class="eyebrow">
+            THE ENHANCE MY RIDE EXPERIENCE
+        </p>
+
+        <h1>
+
+            More Than
+
+            <span>
+                A Detail.
+            </span>
+
+        </h1>
+
+        <p>
+
+            A premium mobile detailing experience built
+            around your vehicle, your time, and the results
+            you expect.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BRAND STORY
+====================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <div class="about-story">
+
+
+            <div class="about-story-heading">
+
+                <p class="eyebrow">
+                    WHY ENHANCE MY RIDE
+                </p>
+
+                <h2>
+
+                    We Believe Your
+
+                    <span class="gold-text">
+                        Time Matters.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="about-story-copy">
+
+                <p class="about-lead">
+
+                    Your vehicle shouldn't require you to
+                    rearrange your entire day just to get it
+                    looking its best.
+
+                </p>
+
+                <p>
+
+                    Enhance My Ride was built around a simple
+                    idea: bring a premium detailing experience
+                    directly to the customer.
+
+                </p>
+
+                <p>
+
+                    Instead of waiting at a shop, arranging
+                    transportation, or spending your day without
+                    your vehicle, you can stay home, keep working,
+                    or continue with your day while we focus on
+                    your vehicle.
+
+                </p>
+
+                <p>
+
+                    We approach every vehicle with patience,
+                    attention to detail, and pride in the finished
+                    result.
+
+                </p>
+
+                <div class="about-story-statement">
+
+                    <p>
+
+                        The goal isn't simply to make a vehicle
+                        look cleaner. It's to create a noticeable
+                        difference you can see, feel, and appreciate
+                        every time you get back behind the wheel.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             PHILOSOPHY
+        ================================================== -->
+
+        <section class="about-philosophy">
+
+
+            <div class="about-philosophy-heading">
+
+                <p class="eyebrow">
+                    OUR APPROACH
+                </p>
+
+                <h2>
+
+                    Clean.
+
+                    <span class="gold-text">
+                        Refined.
+                    </span>
+
+                    Intentional.
+
+                </h2>
+
+            </div>
+
+
+            <div class="about-principles">
+
+
+                <article>
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Attention To Detail
+                    </h3>
+
+                    <p>
+
+                        We don't rush through a vehicle just
+                        to move on to the next one. Every service
+                        is approached with attention to the areas
+                        customers actually notice.
+
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        Premium Presentation
+                    </h3>
+
+                    <p>
+
+                        The goal isn't simply to make a vehicle
+                        "clean." It's to create a finished appearance
+                        that makes you want to look back at your
+                        vehicle.
+
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        Customer Convenience
+                    </h3>
+
+                    <p>
+
+                        Mobile detailing means the service works
+                        around your schedule and location — not
+                        the other way around.
+
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        04
+                    </span>
+
+                    <h3>
+                        Honest Service
+                    </h3>
+
+                    <p>
+
+                        We believe in clearly explaining what your
+                        vehicle needs and what each service can
+                        realistically accomplish.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             BRAND PROMISE
+        ================================================== -->
+
+        <section class="about-statement">
+
+            <p class="eyebrow">
+                THE PROMISE
+            </p>
+
+            <blockquote>
+
+                We come to you.
+
+                <span>
+                    You relax.
+                </span>
+
+                We Enhance.
+
+            </blockquote>
+
+            <p>
+
+                That's more than a tagline. It's the experience
+                we're building every time we arrive at a customer's
+                vehicle.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             BAY AREA EXPERIENCE
+        ================================================== -->
+
+        <section class="about-experience">
+
+
+            <div class="about-experience-copy">
+
+                <p class="eyebrow">
+                    BUILT FOR THE BAY AREA
+                </p>
+
+                <h2>
+
+                    Premium Care,
+
+                    <span class="gold-text">
+                        Wherever You Are.
+                    </span>
+
+                </h2>
+
+                <p>
+
+                    From daily drivers to weekend cars, family
+                    vehicles, luxury vehicles, motorcycles, and
+                    more — every vehicle deserves the same level
+                    of care.
+
+                </p>
+
+                <p>
+
+                    Whether you're at home, at work, or at another
+                    suitable location, our mobile approach is built
+                    to make professional vehicle care easier.
+
+                </p>
+
+                <a
+                    href="services.html"
+                    class="text-link"
+                >
+                    Explore Our Services →
+                </a>
+
+            </div>
+
+
+            <div class="about-experience-card">
+
+                <span>
+                    ENHANCE MY RIDE
+                </span>
+
+                <strong>
+                    MOBILE
+                </strong>
+
+                <small>
+                    AUTO SPA & DETAILING
+                </small>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             WHAT CUSTOMERS CAN EXPECT
+        ================================================== -->
+
+        <section class="about-expectations">
+
+
+            <div class="about-expectations-heading">
+
+                <p class="eyebrow">
+                    THE CUSTOMER EXPERIENCE
+                </p>
+
+                <h2>
+
+                    What You Can
+
+                    <span class="gold-text">
+                        Expect.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="expectation-grid">
+
+
+                <article class="expectation-card">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Clear Communication
+                    </h3>
+
+                    <p>
+
+                        We'll discuss your vehicle, requested
+                        services, location, and expectations before
+                        the appointment.
+
+                    </p>
+
+                </article>
+
+
+                <article class="expectation-card">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        Careful Work
+                    </h3>
+
+                    <p>
+
+                        Your vehicle receives focused attention
+                        rather than being treated like another
+                        car on an assembly line.
+
+                    </p>
+
+                </article>
+
+
+                <article class="expectation-card">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        A Finished Presentation
+                    </h3>
+
+                    <p>
+
+                        Before we wrap up, we inspect the vehicle
+                        and make sure the finished result meets
+                        the Enhance standard.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FINAL CTA
+        ================================================== -->
+
+        <section class="about-cta">
+
+            <p class="eyebrow">
+                READY TO ENHANCE?
+            </p>
+
+            <h2>
+
+                Let's Make Your
+
+                <span class="gold-text">
+                    Ride Stand Out.
+                </span>
+
+            </h2>
+
+            <p>
+
+                Tell us what your vehicle needs and where
+                you'd like us to meet you.
+
+            </p>
+
+            <a
+                href="quote.html"
+                class="btn btn-primary"
+            >
+                Request A Quote
+            </a>
+
+        </section>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-brand">
 
             <a
                 href="index.html"
@@ -59,565 +1171,143 @@
 
             </a>
 
-
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-            >
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-
-            <nav
-                class="main-nav"
-                id="mainNav"
-            >
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a href="gallery.html">
-                    Gallery
-                </a>
-
-                <a href="service-area.html">
-                    Service Area
-                </a>
-
-                <a
-                    href="about.html"
-                    class="active"
-                >
-                    About
-                </a>
-
-                <a
-                    href="quote.html"
-                    class="nav-cta"
-                >
-                    Get a Quote
-                </a>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-
-    <!-- =========================================
-         MAIN
-    ========================================== -->
-
-    <main>
-
-
-        <!-- =====================================
-             HERO
-        ====================================== -->
-
-        <section class="page-hero about-hero">
-
-            <div class="container page-hero-content">
-
-                <p class="eyebrow">
-                    THE ENHANCE MY RIDE EXPERIENCE
-                </p>
-
-                <h1>
-                    More Than
-                    <span>
-                        A Detail.
-                    </span>
-                </h1>
-
-                <p>
-                    A premium mobile detailing experience
-                    built around your vehicle and your time.
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================
-             BRAND STORY
-        ====================================== -->
-
-        <section class="section">
-
-            <div class="container">
-
-
-                <div class="about-story">
-
-
-                    <div class="about-story-heading">
-
-                        <p class="eyebrow">
-                            WHY ENHANCE MY RIDE
-                        </p>
-
-                        <h2>
-                            We Believe Your
-                            <span class="gold-text">
-                                Time Matters.
-                            </span>
-                        </h2>
-
-                    </div>
-
-
-                    <div class="about-story-copy">
-
-                        <p class="about-lead">
-                            Your vehicle shouldn't require you
-                            to rearrange your entire day just to
-                            get it looking its best.
-                        </p>
-
-                        <p>
-                            Enhance My Ride was built around a
-                            simple idea: bring a premium detailing
-                            experience directly to the customer.
-                        </p>
-
-                        <p>
-                            Instead of waiting at a shop, arranging
-                            a ride, or spending your day without your
-                            vehicle, you can stay home, keep working,
-                            or continue with your day while we focus
-                            on the detail.
-                        </p>
-
-                        <p>
-                            We approach every vehicle with patience,
-                            attention to detail, and pride in the
-                            finished result.
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- =================================
-                     PHILOSOPHY
-                ================================== -->
-
-                <section class="about-philosophy">
-
-
-                    <div class="about-philosophy-heading">
-
-                        <p class="eyebrow">
-                            OUR APPROACH
-                        </p>
-
-                        <h2>
-                            Clean.
-                            <span class="gold-text">
-                                Refined.
-                            </span>
-                            Intentional.
-                        </h2>
-
-                    </div>
-
-
-
-                    <div class="about-principles">
-
-
-                        <article>
-
-                            <span>
-                                01
-                            </span>
-
-                            <h3>
-                                Attention To Detail
-                            </h3>
-
-                            <p>
-                                We don't rush through a vehicle
-                                just to move on to the next one.
-                                Every service is approached with
-                                attention to the areas customers
-                                actually notice.
-                            </p>
-
-                        </article>
-
-
-
-                        <article>
-
-                            <span>
-                                02
-                            </span>
-
-                            <h3>
-                                Premium Presentation
-                            </h3>
-
-                            <p>
-                                The goal isn't simply to make a
-                                vehicle "clean." It's to create a
-                                finished appearance that makes you
-                                want to look back at your vehicle.
-                            </p>
-
-                        </article>
-
-
-
-                        <article>
-
-                            <span>
-                                03
-                            </span>
-
-                            <h3>
-                                Customer Convenience
-                            </h3>
-
-                            <p>
-                                Mobile detailing means the service
-                                works around your schedule and
-                                location — not the other way around.
-                            </p>
-
-                        </article>
-
-
-
-                        <article>
-
-                            <span>
-                                04
-                            </span>
-
-                            <h3>
-                                Honest Service
-                            </h3>
-
-                            <p>
-                                We believe in clearly explaining
-                                what your vehicle needs and what
-                                each service can realistically
-                                accomplish.
-                            </p>
-
-                        </article>
-
-
-                    </div>
-
-
-                </section>
-
-
-
-                <!-- =================================
-                     BRAND STATEMENT
-                ================================== -->
-
-                <section class="about-statement">
-
-                    <p class="eyebrow">
-                        THE PROMISE
-                    </p>
-
-                    <blockquote>
-                        "We come to you.
-                        <span>
-                            You relax.
-                        </span>
-                        We Enhance."
-                    </blockquote>
-
-                    <p>
-                        That's more than a tagline.
-                        It's the experience we're building
-                        every time we pull up to a customer's
-                        vehicle.
-                    </p>
-
-                </section>
-
-
-
-                <!-- =================================
-                     EXPERIENCE
-                ================================== -->
-
-                <section class="about-experience">
-
-
-                    <div class="about-experience-copy">
-
-                        <p class="eyebrow">
-                            BUILT FOR THE BAY AREA
-                        </p>
-
-                        <h2>
-                            Premium Care,
-                            <span class="gold-text">
-                                Wherever You Are.
-                            </span>
-                        </h2>
-
-                        <p>
-                            From daily drivers to weekend cars,
-                            family vehicles, luxury vehicles,
-                            motorcycles, and more — every vehicle
-                            deserves the same level of care.
-                        </p>
-
-                        <a
-                            href="services.html"
-                            class="text-link"
-                        >
-                            Explore Our Services →
-                        </a>
-
-                    </div>
-
-
-                    <div class="about-experience-card">
-
-                        <span>
-                            ENHANCE MY RIDE
-                        </span>
-
-                        <strong>
-                            MOBILE
-                        </strong>
-
-                        <small>
-                            AUTO SPA & DETAILING
-                        </small>
-
-                    </div>
-
-
-                </section>
-
-
-
-                <!-- =================================
-                     CTA
-                ================================== -->
-
-                <section class="about-cta">
-
-                    <p class="eyebrow">
-                        READY TO ENHANCE?
-                    </p>
-
-                    <h2>
-                        Let's Make Your
-                        <span class="gold-text">
-                            Ride Stand Out.
-                        </span>
-                    </h2>
-
-                    <p>
-                        Tell us what your vehicle needs and
-                        where you'd like us to meet you.
-                    </p>
-
-                    <a
-                        href="quote.html"
-                        class="btn btn-primary"
-                    >
-                        Request A Quote
-                    </a>
-
-                </section>
-
-
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
-
-    <footer class="site-footer">
-
-        <div class="container footer-grid">
-
-
-            <div class="footer-brand">
-
-                <a
-                    href="index.html"
-                    class="logo"
-                >
-
-                    <span class="logo-main">
-                        ENHANCE MY RIDE
-                    </span>
-
-                    <span class="logo-sub">
-                        AUTO SPA & MOBILE DETAILING
-                    </span>
-
-                </a>
-
-                <p>
-                    Premium mobile detailing delivered
-                    throughout Alameda, Oakland, San Francisco,
-                    and the Bay Area.
-                </p>
-
-            </div>
-
-
-
-            <div class="footer-links">
-
-                <h4>
-                    Explore
-                </h4>
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a href="gallery.html">
-                    Gallery
-                </a>
-
-                <a href="service-area.html">
-                    Service Area
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-            </div>
-
-
-
-            <div class="footer-links">
-
-                <h4>
-                    Connect
-                </h4>
-
-                <a href="quote.html">
-                    Get a Quote
-                </a>
-
-                <a href="tel:+13233271806">
-                    (323) 327-1806
-                </a>
-
-                <a href="mailto:info@enhancemyride.com">
-                    info@enhancemyride.com
-                </a>
-
-                <a
-                    href="https://www.instagram.com/enhancemyridemobiledetailing/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Instagram
-                </a>
-
-                <a
-                    href="https://www.tiktok.com/@enhancemyridemobiledetailing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    TikTok
-                </a>
-
-                <a
-                    href="https://www.youtube.com/@enhancemyridemobiledetailing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    YouTube
-                </a>
-
-            </div>
-
-
-        </div>
-
-
-
-        <div class="container footer-bottom">
-
             <p>
-                © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
-                All rights reserved.
-            </p>
 
-            <p>
-                We come to you. You relax. We Enhance.
+                Premium mobile detailing delivered throughout
+                Alameda, Oakland, San Francisco and the Bay Area.
+
             </p>
 
         </div>
 
-    </footer>
+
+
+        <div class="footer-links">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="quote.html">
+                Get A Quote
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="service-area.html">
+                Service Area
+            </a>
+
+        </div>
 
 
 
-    <!-- =========================================
-         FLOATING CALL BUTTON
-    ========================================== -->
+        <div class="footer-links">
 
-    <a
-        href="tel:+13233271806"
-        class="mobile-call-button"
-        aria-label="Call Enhance My Ride"
-    >
+            <h4>
+                Connect
+            </h4>
 
-        <span class="call-icon">
-            ☎
-        </span>
+            <a href="quote.html">
+                Get A Quote
+            </a>
 
-        <span>
-            CALL
-        </span>
+            <a href="tel:+13233271806">
+                (323) 327-1806
+            </a>
 
-    </a>
+            <a href="mailto:info@enhancemyride.com">
+                info@enhancemyride.com
+            </a>
+
+            <a
+                href="https://www.instagram.com/enhancemyridemobiledetailing/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram
+            </a>
+
+            <a
+                href="https://www.tiktok.com/@enhancemyride"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                TikTok
+            </a>
+
+            <a
+                href="https://www.youtube.com/@enhancemyridemobiledetailing"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                YouTube
+            </a>
+
+        </div>
+
+
+    </div>
 
 
 
-    <script src="js/script.js"></script>
+    <div class="container footer-bottom">
+
+        <p>
+
+            © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
+            All rights reserved.
+
+        </p>
+
+        <p>
+            We come to you. You relax. We Enhance.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     FLOATING MOBILE CALL BUTTON
+====================================================== -->
+
+<a
+    href="tel:+13233271806"
+    class="mobile-call-button"
+    aria-label="Call Enhance My Ride"
+>
+
+    <span class="call-icon">
+        ☎
+    </span>
+
+    <span>
+        CALL
+    </span>
+
+</a>
+
+
+
+<script src="js/script.js"></script>
+
 
 </body>
 
