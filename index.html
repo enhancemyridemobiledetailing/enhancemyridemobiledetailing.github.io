@@ -41,69 +41,115 @@
         ===================================================== */
 
         .home-hero {
+
             position: relative;
+
             min-height: 90vh;
             min-height: 90svh;
+
             overflow: hidden;
+
             display: flex;
+
             align-items: center;
+
             background: #050505;
+
         }
+
 
         .hero-slideshow {
+
             position: absolute;
+
             inset: 0;
+
             overflow: hidden;
+
             background: #050505;
+
         }
 
+
         .hero-slide {
+
             position: absolute;
+
             inset: 0;
+
             width: 100%;
             height: 100%;
+
             object-fit: cover;
+
             object-position: center;
+
             opacity: 0;
-            transform: scale(1.03);
+
+            transform: scale(1.02);
+
             transition:
                 opacity 1s ease,
                 transform 7s ease;
+
         }
+
 
         .hero-slide.active {
+
             opacity: 1;
+
             transform: scale(1);
+
         }
 
+
         .hero-slideshow::after {
+
             content: "";
+
             position: absolute;
+
             inset: 0;
 
             background:
                 linear-gradient(
                     90deg,
-                    rgba(0,0,0,.93),
-                    rgba(0,0,0,.67) 42%,
-                    rgba(0,0,0,.25) 75%,
-                    rgba(0,0,0,.48)
+                    rgba(0,0,0,.92),
+                    rgba(0,0,0,.65) 42%,
+                    rgba(0,0,0,.28) 72%,
+                    rgba(0,0,0,.55)
                 );
+
         }
+
 
         .home-hero-content {
+
             position: relative;
+
             z-index: 3;
+
             width: 100%;
+
         }
+
 
         .hero-copy {
+
             max-width: 700px;
-            padding: 70px 0 120px;
+
+            padding:
+                70px 0
+                120px;
+
         }
 
+
         .hero-copy h1 {
-            margin: 0 0 22px;
+
+            margin:
+                0 0 22px;
 
             font-size:
                 clamp(
@@ -113,19 +159,29 @@
                 );
 
             line-height: .92;
+
             letter-spacing: -.045em;
+
         }
+
 
         .hero-copy h1 span,
         .hero-copy h1 strong {
+
             display: block;
+
         }
+
 
         .hero-copy h1 strong {
+
             color: #d4af37;
+
         }
 
+
         .hero-description {
+
             max-width: 610px;
 
             color:
@@ -137,23 +193,34 @@
                 );
 
             font-size: 1.06rem;
+
             line-height: 1.75;
+
         }
 
+
         .hero-slide-controls {
+
             position: absolute;
+
             left: 50%;
+
             bottom: 30px;
+
             z-index: 5;
 
             display: flex;
+
             gap: 8px;
 
             transform:
                 translateX(-50%);
+
         }
 
+
         .hero-slide-dot {
+
             width: 7px;
             height: 7px;
 
@@ -173,43 +240,50 @@
             background: transparent;
 
             cursor: pointer;
+
         }
 
+
         .hero-slide-dot.active {
+
             width: 28px;
 
             border-radius: 20px;
 
             background: #d4af37;
+
             border-color: #d4af37;
+
         }
 
 
         /* =====================================================
-           HOME TRANSFORMATIONS
+           TRANSFORMATIONS
         ===================================================== */
 
         .home-transformations {
+
             padding-top: 105px;
+
             padding-bottom: 105px;
+
         }
 
+
         .transformation-preview-grid {
+
             display: grid;
 
             grid-template-columns:
-                repeat(
-                    2,
-                    minmax(
-                        0,
-                        1fr
-                    )
-                );
+                repeat(2, 1fr);
 
             gap: 18px;
+
         }
 
+
         .transformation-preview {
+
             overflow: hidden;
 
             border:
@@ -222,9 +296,12 @@
                 );
 
             background: #0b0b0b;
+
         }
 
+
         .home-gallery-image {
+
             position: relative;
 
             display: block;
@@ -232,9 +309,12 @@
             aspect-ratio: 4 / 3;
 
             overflow: hidden;
+
         }
 
+
         .home-gallery-image img {
+
             width: 100%;
             height: 100%;
 
@@ -244,19 +324,28 @@
 
             transition:
                 transform .6s ease;
+
         }
+
 
         .transformation-preview:hover img {
-            transform: scale(1.045);
+
+            transform:
+                scale(1.045);
+
         }
 
+
         .image-view-label {
+
             position: absolute;
 
             right: 15px;
+
             bottom: 15px;
 
-            padding: 8px 11px;
+            padding:
+                8px 11px;
 
             border:
                 1px solid
@@ -278,32 +367,48 @@
             color: #fff;
 
             font-size: 8px;
+
             font-weight: 800;
 
             letter-spacing: .15em;
+
         }
+
 
         .transformation-preview-content {
-            padding: 22px 23px 25px;
+
+            padding:
+                22px 23px
+                25px;
+
         }
 
+
         .transformation-preview-content > span {
+
             color: #d4af37;
 
             font-size: 8px;
+
             font-weight: 800;
 
             letter-spacing: .15em;
+
         }
 
+
         .transformation-preview-content h3 {
+
             margin:
                 8px 0 5px;
 
             color: #fff;
+
         }
 
+
         .transformation-preview-content p {
+
             margin: 0;
 
             color:
@@ -315,124 +420,7 @@
                 );
 
             font-size: 12px;
-        }
 
-
-        /* =====================================================
-           CR-V FEATURED DETAIL
-        ===================================================== */
-
-        .crv-feature {
-            margin-top: 70px;
-        }
-
-        .crv-feature-heading {
-            max-width: 650px;
-            margin: 0 auto 35px;
-            text-align: center;
-        }
-
-        .crv-feature-heading h3 {
-            margin: 8px 0 12px;
-            font-size: clamp(1.8rem, 4vw, 3rem);
-        }
-
-        .crv-feature-heading p {
-            margin: 0 auto;
-            max-width: 600px;
-
-            color:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    .55
-                );
-
-            line-height: 1.7;
-        }
-
-        .crv-photo-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(
-                    3,
-                    minmax(
-                        0,
-                        1fr
-                    )
-                );
-
-            gap: 12px;
-        }
-
-        .crv-photo {
-            position: relative;
-
-            aspect-ratio: 4 / 3;
-
-            overflow: hidden;
-
-            background: #0b0b0b;
-
-            border:
-                1px solid
-                rgba(
-                    255,
-                    255,
-                    255,
-                    .08
-                );
-        }
-
-        .crv-photo img {
-            width: 100%;
-            height: 100%;
-
-            display: block;
-
-            object-fit: cover;
-
-            transition:
-                transform .6s ease;
-        }
-
-        .crv-photo:hover img {
-            transform: scale(1.04);
-        }
-
-        .crv-photo-label {
-            position: absolute;
-
-            left: 12px;
-            bottom: 12px;
-
-            padding: 7px 10px;
-
-            background:
-                rgba(
-                    0,
-                    0,
-                    0,
-                    .65
-                );
-
-            border:
-                1px solid
-                rgba(
-                    255,
-                    255,
-                    255,
-                    .18
-                );
-
-            color: #fff;
-
-            font-size: 8px;
-            font-weight: 800;
-
-            letter-spacing: .14em;
         }
 
 
@@ -441,18 +429,19 @@
         ===================================================== */
 
         .process-grid {
+
             display: grid;
 
             grid-template-columns:
-                repeat(
-                    4,
-                    1fr
-                );
+                repeat(4, 1fr);
 
             gap: 0;
+
         }
 
+
         .process-step {
+
             padding:
                 0 30px;
 
@@ -464,14 +453,21 @@
                     255,
                     .1
                 );
+
         }
+
 
         .process-step:first-child {
+
             border-left: 0;
+
             padding-left: 0;
+
         }
 
+
         .process-number {
+
             display: block !important;
 
             margin:
@@ -495,9 +491,12 @@
 
             letter-spacing:
                 .15em;
+
         }
 
+
         .process-step p {
+
             max-width: 230px;
 
             color:
@@ -509,104 +508,116 @@
                 );
 
             font-size: .88rem;
+
             line-height: 1.7;
+
         }
 
 
         /* =====================================================
-           RESPONSIVE
+           TABLET
         ===================================================== */
 
         @media (max-width: 900px) {
 
             .transformation-preview-grid {
+
                 grid-template-columns: 1fr;
+
             }
 
-            .crv-photo-grid {
-                grid-template-columns:
-                    repeat(
-                        2,
-                        minmax(
-                            0,
-                            1fr
-                        )
-                    );
-            }
 
             .process-grid {
-                grid-template-columns:
-                    repeat(
-                        2,
-                        1fr
-                    );
 
-                gap: 40px 0;
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap:
+                    40px 0;
+
             }
 
+
             .process-step:nth-child(3) {
+
                 border-left: 0;
+
                 padding-left: 0;
+
             }
 
         }
 
 
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
         @media (max-width: 700px) {
 
             body {
+
                 padding-bottom: 64px;
+
             }
 
+
             .home-hero {
+
                 min-height: 84svh;
+
             }
+
 
             .hero-slideshow::after {
 
                 background:
                     linear-gradient(
                         180deg,
-                        rgba(0,0,0,.40),
-                        rgba(0,0,0,.64) 45%,
-                        rgba(0,0,0,.95)
+                        rgba(0,0,0,.45),
+                        rgba(0,0,0,.62) 45%,
+                        rgba(0,0,0,.94)
                     );
+
             }
 
-            .hero-slide {
-                object-position: center;
-            }
 
             .hero-copy {
+
                 padding:
-                    55px 0 85px;
+                    55px 0
+                    85px;
+
             }
 
+
             .hero-copy h1 {
+
                 font-size:
                     clamp(
                         2.9rem,
                         14vw,
                         4.6rem
                     );
+
             }
+
 
             .hero-description {
+
                 font-size: .96rem;
+
             }
 
-            .crv-feature {
-                margin-top: 55px;
-            }
-
-            .crv-photo-grid {
-                grid-template-columns: 1fr;
-            }
 
             .process-grid {
+
                 grid-template-columns: 1fr;
+
                 gap: 0;
+
             }
+
 
             .process-step,
             .process-step:nth-child(3) {
@@ -624,19 +635,30 @@
                         255,
                         .1
                     );
+
             }
+
 
             .process-step:first-child {
+
                 padding-top: 0;
+
                 border-top: 0;
+
             }
+
 
             .process-step p {
+
                 max-width: none;
+
             }
 
+
             .hero-slide-controls {
+
                 bottom: 20px;
+
             }
 
         }
@@ -648,6 +670,10 @@
 
 <body>
 
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
 
 <header class="site-header">
 
@@ -739,8 +765,6 @@
         aria-hidden="true"
     >
 
-        <!-- ACTUAL CR-V EXTERIOR PHOTOS -->
-
         <img
             class="hero-slide active"
             src="images/gallery/crv-front.webp"
@@ -775,6 +799,7 @@
             <p class="eyebrow">
                 PREMIUM MOBILE DETAILING
             </p>
+
 
             <h1>
 
@@ -867,27 +892,22 @@
             <div>
 
                 <p class="intro-large">
-
-                    Your vehicle deserves more than
-                    a quick wash and a vacuum.
-
+                    Your vehicle deserves more than a
+                    quick wash and a vacuum.
                 </p>
 
                 <p>
-
                     Enhance My Ride delivers a premium
-                    mobile detailing experience built around
-                    convenience, attention to detail, and a
-                    finish you can see and feel.
-
+                    mobile detailing experience built
+                    around convenience, attention to
+                    detail, and a finish you can see
+                    and feel.
                 </p>
 
                 <p>
-
                     Whether your vehicle needs a complete
                     detail or one specific area restored,
                     we're here to enhance it.
-
                 </p>
 
                 <a
@@ -914,7 +934,6 @@
 
     <div class="container">
 
-
         <div class="center-heading">
 
             <p class="eyebrow">
@@ -924,7 +943,6 @@
             <h2>
 
                 See The
-
                 <span class="gold-text">
                     Difference.
                 </span>
@@ -932,11 +950,9 @@
             </h2>
 
             <p>
-
-                See the finished results —
-                then visit the gallery to explore
-                real vehicle transformations.
-
+                See the finished results — then visit
+                the gallery to see the Before → After
+                transformations.
             </p>
 
         </div>
@@ -955,7 +971,7 @@
                 >
 
                     <img
-                        src="images/gallery/mercedes-front-three-quarter.webp"
+                        src="images/gallery/mercedes-after.jpg"
                         alt="Mercedes-Benz CLS 550 after professional detailing"
                         loading="lazy"
                         decoding="async"
@@ -997,7 +1013,7 @@
                 >
 
                     <img
-                        src="images/gallery/lexus-is250-front.webp"
+                        src="images/gallery/lexus-after.jpg"
                         alt="Lexus IS 250 after professional detailing"
                         loading="lazy"
                         decoding="async"
@@ -1028,153 +1044,6 @@
 
             </article>
 
-
-        </div>
-
-
-        <!-- =================================================
-             CR-V FEATURE
-        ================================================== -->
-
-        <div class="crv-feature">
-
-
-            <div class="crv-feature-heading">
-
-                <p class="eyebrow">
-                    ENHANCE MY RIDE
-                </p>
-
-                <h3>
-                    Our Mobile Detailer.
-                    <span class="gold-text">
-                        Fully Enhanced.
-                    </span>
-                </h3>
-
-                <p>
-
-                    This Honda CR-V represents the mobile
-                    detailing setup and the level of finish
-                    we bring directly to our clients.
-
-                </p>
-
-            </div>
-
-
-            <div class="crv-photo-grid">
-
-
-                <!-- CR-V FRONT -->
-
-                <div class="crv-photo">
-
-                    <img
-                        src="images/gallery/crv-front.webp"
-                        alt="Black Honda CR-V after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="crv-photo-label">
-                        EXTERIOR
-                    </span>
-
-                </div>
-
-
-                <!-- CR-V SIDE -->
-
-                <div class="crv-photo">
-
-                    <img
-                        src="images/gallery/crv-side.webp"
-                        alt="Black Honda CR-V side profile"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="crv-photo-label">
-                        SIDE PROFILE
-                    </span>
-
-                </div>
-
-
-                <!-- CR-V REAR -->
-
-                <div class="crv-photo">
-
-                    <img
-                        src="images/gallery/crv-rear.webp"
-                        alt="Black Honda CR-V rear after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="crv-photo-label">
-                        REAR
-                    </span>
-
-                </div>
-
-
-                <!-- DRIVER INTERIOR -->
-
-                <div class="crv-photo">
-
-                    <img
-                        src="images/gallery/crv-driver-interior.webp"
-                        alt="Honda CR-V driver interior"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="crv-photo-label">
-                        INTERIOR
-                    </span>
-
-                </div>
-
-
-                <!-- PASSENGER INTERIOR -->
-
-                <div class="crv-photo">
-
-                    <img
-                        src="images/gallery/crv-passenger-interior.webp"
-                        alt="Honda CR-V passenger interior"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="crv-photo-label">
-                        INTERIOR
-                    </span>
-
-                </div>
-
-
-                <!-- REAR INTERIOR -->
-
-                <div class="crv-photo">
-
-                    <img
-                        src="images/gallery/crv-rear-interior.webp"
-                        alt="Honda CR-V rear interior"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="crv-photo-label">
-                        REAR INTERIOR
-                    </span>
-
-                </div>
-
-
-            </div>
 
         </div>
 
@@ -1220,11 +1089,8 @@
             </h2>
 
             <p>
-
                 Three levels of detailing designed
-                around your vehicle's condition
-                and needs.
-
+                around your vehicle's condition and needs.
             </p>
 
         </div>
@@ -1232,6 +1098,8 @@
 
         <div class="home-package-grid">
 
+
+            <!-- GOLD -->
 
             <article class="home-package">
 
@@ -1254,16 +1122,16 @@
 
 
                 <div class="package-price">
+
                     <sup>$</sup>149+
+
                 </div>
 
 
                 <p>
-
-                    A complete maintenance detail
-                    designed to bring back the clean,
-                    refreshed feel your vehicle deserves.
-
+                    A complete maintenance detail designed
+                    to bring back the clean, refreshed feel
+                    your vehicle deserves.
                 </p>
 
 
@@ -1306,6 +1174,8 @@
             </article>
 
 
+            <!-- BLACK LABEL -->
+
             <article class="home-package featured-package">
 
                 <div class="package-top">
@@ -1327,16 +1197,16 @@
 
 
                 <div class="package-price">
+
                     <sup>$</sup>249+
+
                 </div>
 
 
                 <p>
-
                     Our most popular option for vehicles
                     that need a deeper interior and
                     exterior transformation.
-
                 </p>
 
 
@@ -1379,6 +1249,8 @@
             </article>
 
 
+            <!-- SHOWROOM -->
+
             <article class="home-package">
 
                 <div class="package-top">
@@ -1400,16 +1272,16 @@
 
 
                 <div class="package-price">
+
                     <sup>$</sup>399+
+
                 </div>
 
 
                 <p>
-
-                    Our highest level of service for
-                    owners who want their vehicle
-                    looking its absolute best.
-
+                    Our highest level of service for owners
+                    who want their vehicle looking its
+                    absolute best.
                 </p>
 
 
@@ -1458,14 +1330,11 @@
         <div class="packages-bottom">
 
             <p>
-
                 Pricing starts at the amounts shown.
                 Final pricing may vary by vehicle size,
                 condition, buildup, pet hair, stains,
                 and requested services.
-
             </p>
-
 
             <a
                 href="quote.html"
@@ -1491,6 +1360,7 @@
 
         <div class="addon-grid">
 
+
             <div>
 
                 <p class="eyebrow">
@@ -1508,19 +1378,15 @@
                 </h2>
 
                 <p>
-
                     Not every vehicle needs a complete detail.
                     Sometimes one specific area can make a
                     dramatic difference.
-
                 </p>
 
                 <p>
-
                     Add specialized services to your package
                     or request a custom service based on your
                     vehicle's condition.
-
                 </p>
 
                 <a
@@ -1542,7 +1408,9 @@
 
                 <div class="enhancement-list">
 
+
                     <div>
+
                         <strong>
                             Wheel Polishing
                         </strong>
@@ -1550,10 +1418,12 @@
                         <span>
                             $50–$100 per set depending on condition
                         </span>
+
                     </div>
 
 
                     <div>
+
                         <strong>
                             Headlight Restoration
                         </strong>
@@ -1561,10 +1431,12 @@
                         <span>
                             Restore clarity and appearance
                         </span>
+
                     </div>
 
 
                     <div>
+
                         <strong>
                             Trim Restoration
                         </strong>
@@ -1572,10 +1444,12 @@
                         <span>
                             Refresh faded exterior trim
                         </span>
+
                     </div>
 
 
                     <div>
+
                         <strong>
                             Pet Hair Removal
                         </strong>
@@ -1583,10 +1457,12 @@
                         <span>
                             Custom pricing based on condition
                         </span>
+
                     </div>
 
 
                     <div>
+
                         <strong>
                             Engine Bay Detail
                         </strong>
@@ -1594,10 +1470,12 @@
                         <span>
                             Detailed engine compartment cleaning
                         </span>
+
                     </div>
 
 
                     <div>
+
                         <strong>
                             Odor Treatment
                         </strong>
@@ -1605,10 +1483,12 @@
                         <span>
                             Targeted interior odor treatment
                         </span>
+
                     </div>
 
 
                     <div>
+
                         <strong>
                             Heavy Soil Treatment
                         </strong>
@@ -1616,10 +1496,12 @@
                         <span>
                             For heavily soiled interiors and surfaces
                         </span>
+
                     </div>
 
 
                     <div>
+
                         <strong>
                             Custom Service
                         </strong>
@@ -1627,7 +1509,9 @@
                         <span>
                             Tell us exactly what your vehicle needs
                         </span>
+
                     </div>
+
 
                 </div>
 
@@ -1676,11 +1560,8 @@
             </h2>
 
             <p>
-
-                From your first message to the
-                final inspection, we make the
-                process simple.
-
+                From your first message to the final
+                inspection, we make the process simple.
             </p>
 
         </div>
@@ -1700,11 +1581,9 @@
                 </h3>
 
                 <p>
-
-                    Submit a quote request with your
-                    vehicle, location, service needs,
-                    and photos when helpful.
-
+                    Submit a quote request with your vehicle,
+                    location, service needs, and photos
+                    when helpful.
                 </p>
 
             </div>
@@ -1721,11 +1600,9 @@
                 </h3>
 
                 <p>
-
-                    We'll help determine the right
-                    service based on your vehicle's
-                    condition and needs.
-
+                    We'll help determine the right service
+                    based on your vehicle's condition
+                    and needs.
                 </p>
 
             </div>
@@ -1742,11 +1619,8 @@
                 </h3>
 
                 <p>
-
-                    Your home, workplace, or another
-                    convenient location becomes your
-                    detailing location.
-
+                    Your home, workplace, or another convenient
+                    location becomes your detailing location.
                 </p>
 
             </div>
@@ -1763,11 +1637,9 @@
                 </h3>
 
                 <p>
-
-                    We complete the service and perform
-                    a final presentation inspection
-                    before we leave.
-
+                    We complete the service and perform a
+                    final presentation inspection before
+                    we leave.
                 </p>
 
             </div>
@@ -1795,13 +1667,9 @@
             </p>
 
             <h2>
-
                 Premium Service.
-
                 <br>
-
                 Without The Hassle.
-
             </h2>
 
         </div>
@@ -1821,11 +1689,9 @@
                 </h3>
 
                 <p>
-
                     Your home, workplace, or convenient
                     location. No waiting room. No shop
                     drop-off.
-
                 </p>
 
             </div>
@@ -1842,11 +1708,9 @@
                 </h3>
 
                 <p>
-
                     We focus on the areas that create
                     the biggest visual and functional
                     difference.
-
                 </p>
 
             </div>
@@ -1863,12 +1727,9 @@
                 </h3>
 
                 <p>
-
-                    From your quote to the final
-                    inspection, every part of the
-                    experience should feel as good
-                    as the finished vehicle.
-
+                    From your quote to the final inspection,
+                    every part of the experience should feel
+                    as good as the finished vehicle.
                 </p>
 
             </div>
@@ -1889,7 +1750,6 @@
 
     <div class="container">
 
-
         <div class="center-heading">
 
             <p class="eyebrow">
@@ -1907,10 +1767,7 @@
             </h2>
 
             <p>
-
-                Real vehicles. Real customers.
-                Real results.
-
+                Real vehicles. Real customers. Real results.
             </p>
 
         </div>
@@ -1984,10 +1841,7 @@
 
         <div
             class="review-featured"
-            style="
-                margin-top:20px;
-                opacity:.92;
-            "
+            style="margin-top:20px;opacity:.92;"
         >
 
             <div class="review-stars">
@@ -1999,8 +1853,8 @@
 
                 “10 for 10! Restored my dusty CLS 550
                 to showroom beauty — Interior and Exterior.
-                Amazing work. Will be returning for additional
-                services. HIGHLY RECOMMEND!”
+                Amazing work. Will be returning for
+                additional services. HIGHLY RECOMMEND!”
 
             </blockquote>
 
@@ -2066,12 +1920,10 @@
                 </h2>
 
                 <p>
-
                     Serving Alameda, Oakland,
                     San Francisco, San Leandro,
                     Berkeley, Emeryville, Hayward,
                     and surrounding Bay Area communities.
-
                 </p>
 
                 <a
@@ -2144,11 +1996,9 @@
 
 
         <p>
-
             Tell us what you're driving and where
             you're located. We'll help you find
             the right service.
-
         </p>
 
 
@@ -2192,12 +2042,15 @@
 
 <!-- =====================================================
      FOOTER
+     NO SLOGAN HERE
 ====================================================== -->
 
 <footer class="site-footer">
 
     <div class="container footer-grid">
 
+
+        <!-- FOOTER BRAND -->
 
         <div class="footer-brand">
 
@@ -2218,15 +2071,15 @@
 
 
             <p>
-
                 Premium mobile detailing delivered
                 throughout Alameda, Oakland,
                 San Francisco and the Bay Area.
-
             </p>
 
         </div>
 
+
+        <!-- EXPLORE -->
 
         <div class="footer-links">
 
@@ -2260,6 +2113,8 @@
 
         </div>
 
+
+        <!-- CONNECT -->
 
         <div class="footer-links">
 
@@ -2305,22 +2160,30 @@
 
         </div>
 
+
     </div>
 
+
+    <!-- =================================================
+         COPYRIGHT
+         THIS MUST REMAIN THE LAST THING IN THE FOOTER
+    ================================================== -->
 
     <div class="container footer-bottom">
 
         <p>
-
             © 2026 Enhance My Ride Auto Spa &
             Mobile Detailing. All rights reserved.
-
         </p>
-        
+
     </div>
 
 </footer>
 
+
+<!-- =====================================================
+     MOBILE ACTION BAR
+====================================================== -->
 
 <div class="mobile-action-bar">
 
@@ -2335,8 +2198,16 @@
 </div>
 
 
+<!-- =====================================================
+     GLOBAL JAVASCRIPT
+====================================================== -->
+
 <script src="js/script.js"></script>
 
+
+<!-- =====================================================
+     HERO SLIDESHOW
+====================================================== -->
 
 <script>
 
@@ -2351,6 +2222,7 @@ document.addEventListener(
                 )
             ];
 
+
         const dots =
             [
                 ...document.querySelectorAll(
@@ -2358,11 +2230,13 @@ document.addEventListener(
                 )
             ];
 
+
         let current = 0;
+
         let timer;
 
 
-        function showSlide(index) {
+        function show(index) {
 
             slides.forEach(
                 function (slide, number) {
@@ -2397,11 +2271,12 @@ document.addEventListener(
 
             clearInterval(timer);
 
+
             timer =
                 setInterval(
                     function () {
 
-                        showSlide(
+                        show(
                             (current + 1)
                             % slides.length
                         );
@@ -2420,7 +2295,8 @@ document.addEventListener(
                     "click",
                     function () {
 
-                        showSlide(index);
+                        show(index);
+
                         startSlideshow();
 
                     }
@@ -2430,7 +2306,8 @@ document.addEventListener(
         );
 
 
-        showSlide(0);
+        show(0);
+
         startSlideshow();
 
     }
