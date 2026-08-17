@@ -34,6 +34,7 @@
         href="css/style.css"
     >
 
+
     <style>
 
         /* =====================================================
@@ -50,7 +51,6 @@
             overflow: hidden;
 
             display: flex;
-
             align-items: center;
 
             background: #050505;
@@ -140,8 +140,7 @@
             max-width: 700px;
 
             padding:
-                70px 0
-                120px;
+                70px 0 120px;
 
         }
 
@@ -199,6 +198,10 @@
         }
 
 
+        /* =====================================================
+           HERO SLIDE CONTROLS
+        ===================================================== */
+
         .hero-slide-controls {
 
             position: absolute;
@@ -241,6 +244,11 @@
 
             cursor: pointer;
 
+            transition:
+                width .3s ease,
+                background .3s ease,
+                border-color .3s ease;
+
         }
 
 
@@ -253,6 +261,86 @@
             background: #d4af37;
 
             border-color: #d4af37;
+
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .home-intro {
+
+            padding-top: 110px;
+
+            padding-bottom: 100px;
+
+        }
+
+
+        .home-intro-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                .8fr 1.2fr;
+
+            gap: 80px;
+
+            align-items: end;
+
+        }
+
+
+        .home-intro h2 {
+
+            margin-bottom: 0;
+
+            font-size:
+                clamp(
+                    2.6rem,
+                    5vw,
+                    5rem
+                );
+
+            line-height: .98;
+
+        }
+
+
+        .intro-large {
+
+            margin-bottom: 18px;
+
+            color: #fff;
+
+            font-size:
+                clamp(
+                    1.35rem,
+                    2vw,
+                    1.8rem
+                );
+
+            line-height: 1.35;
+
+        }
+
+
+        .home-intro-grid >
+        div:last-child
+        p:not(.intro-large) {
+
+            max-width: 680px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .62
+                );
+
+            line-height: 1.8;
 
         }
 
@@ -275,7 +363,13 @@
             display: grid;
 
             grid-template-columns:
-                repeat(2, 1fr);
+                repeat(
+                    2,
+                    minmax(
+                        0,
+                        1fr
+                    )
+                );
 
             gap: 18px;
 
@@ -316,6 +410,7 @@
         .home-gallery-image img {
 
             width: 100%;
+
             height: 100%;
 
             display: block;
@@ -328,10 +423,10 @@
         }
 
 
-        .transformation-preview:hover img {
+        .transformation-preview:hover
+        .home-gallery-image img {
 
-            transform:
-                scale(1.045);
+            transform: scale(1.045);
 
         }
 
@@ -344,8 +439,9 @@
 
             bottom: 15px;
 
-            padding:
-                8px 11px;
+            z-index: 2;
+
+            padding: 8px 11px;
 
             border:
                 1px solid
@@ -378,8 +474,7 @@
         .transformation-preview-content {
 
             padding:
-                22px 23px
-                25px;
+                22px 23px 25px;
 
         }
 
@@ -424,16 +519,506 @@
         }
 
 
+        .center-link {
+
+            margin-top: 42px;
+
+            text-align: center;
+
+        }
+
+
+        /* =====================================================
+           PACKAGES
+        ===================================================== */
+
+        .home-packages {
+
+            padding-top: 105px;
+
+            padding-bottom: 105px;
+
+        }
+
+
+        .home-package-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap: 20px;
+
+            align-items: stretch;
+
+        }
+
+
+        .home-package {
+
+            position: relative;
+
+            padding: 34px;
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .09
+                );
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,.045),
+                    rgba(255,255,255,.015)
+                );
+
+            transition:
+                transform .35s ease,
+                border-color .35s ease;
+
+        }
+
+
+        .home-package:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(
+                    212,
+                    175,
+                    55,
+                    .45
+                );
+
+        }
+
+
+        .home-package.featured-package {
+
+            border-color:
+                rgba(
+                    212,
+                    175,
+                    55,
+                    .62
+                );
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(212,175,55,.12),
+                    rgba(255,255,255,.025)
+                );
+
+            box-shadow:
+                0 20px 60px rgba(0,0,0,.3),
+                inset 0 1px 0
+                rgba(212,175,55,.08);
+
+        }
+
+
+        .package-top {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 32px;
+
+        }
+
+
+        .package-number {
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .35
+                );
+
+            font-size: 11px;
+
+            letter-spacing: .15em;
+
+        }
+
+
+        .package-label {
+
+            color: #d4af37;
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+            letter-spacing: .16em;
+
+        }
+
+
+        .home-package h3 {
+
+            margin-bottom: 12px;
+
+            color: #fff;
+
+            font-size: 1.65rem;
+
+        }
+
+
+        .package-price {
+
+            margin-bottom: 18px;
+
+            color: #d4af37;
+
+            font-size: 3.2rem;
+
+            font-weight: 700;
+
+            line-height: 1;
+
+        }
+
+
+        .package-price sup {
+
+            position: relative;
+
+            top: .35em;
+
+            font-size: 1.3rem;
+
+            vertical-align: top;
+
+        }
+
+
+        .home-package > p {
+
+            min-height: 78px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .58
+                );
+
+            font-size: .94rem;
+
+            line-height: 1.65;
+
+        }
+
+
+        .home-package ul {
+
+            margin:
+                25px 0 30px;
+
+            padding: 0;
+
+            list-style: none;
+
+        }
+
+
+        .home-package li {
+
+            position: relative;
+
+            padding:
+                9px 0 9px 20px;
+
+            border-top:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .07
+                );
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .72
+                );
+
+            font-size: .88rem;
+
+        }
+
+
+        .home-package li::before {
+
+            content: "✓";
+
+            position: absolute;
+
+            left: 0;
+
+            color: #d4af37;
+
+            font-weight: 700;
+
+        }
+
+
+        .package-link {
+
+            color: #d4af37;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: .12em;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .packages-bottom {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            margin-top: 28px;
+
+        }
+
+
+        .packages-bottom p {
+
+            margin: 0;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .42
+                );
+
+            font-size: 11px;
+
+        }
+
+
+        /* =====================================================
+           ADD-ONS
+        ===================================================== */
+
+        .home-enhancements {
+
+            padding-top: 110px;
+
+            padding-bottom: 110px;
+
+        }
+
+
+        .addon-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                .9fr 1.1fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+        }
+
+
+        .addon-grid h2 {
+
+            max-width: 550px;
+
+        }
+
+
+        .addon-grid >
+        div:first-child
+        p:not(.eyebrow) {
+
+            max-width: 550px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .58
+                );
+
+            line-height: 1.8;
+
+        }
+
+
+        .addon-card {
+
+            padding: 38px;
+
+            border:
+                1px solid
+                rgba(
+                    212,
+                    175,
+                    55,
+                    .22
+                );
+
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(212,175,55,.10),
+                    transparent 45%
+                ),
+                rgba(255,255,255,.025);
+
+        }
+
+
+        .addon-card > span {
+
+            color: #d4af37;
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+            letter-spacing: .18em;
+
+        }
+
+
+        .enhancement-list {
+
+            margin-top: 22px;
+
+        }
+
+
+        .enhancement-list > div {
+
+            padding: 17px 0;
+
+            border-top:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .08
+                );
+
+        }
+
+
+        .enhancement-list strong {
+
+            display: block;
+
+            color: #fff;
+
+            font-size: .95rem;
+
+        }
+
+
+        .enhancement-list span {
+
+            display: block;
+
+            margin-top: 4px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .43
+                );
+
+            font-size: .78rem;
+
+        }
+
+
+        .addon-divider {
+
+            height: 1px;
+
+            margin:
+                8px 0 25px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .08
+                );
+
+        }
+
+
         /* =====================================================
            PROCESS
         ===================================================== */
+
+        .home-process {
+
+            padding-top: 110px;
+
+            padding-bottom: 110px;
+
+        }
+
 
         .process-grid {
 
             display: grid;
 
             grid-template-columns:
-                repeat(4, 1fr);
+                repeat(
+                    4,
+                    1fr
+                );
 
             gap: 0;
 
@@ -495,9 +1080,20 @@
         }
 
 
+        .process-step h3 {
+
+            margin-bottom: 10px;
+
+            color: #fff;
+
+        }
+
+
         .process-step p {
 
             max-width: 230px;
+
+            margin: 0;
 
             color:
                 rgba(
@@ -515,8 +1111,662 @@
 
 
         /* =====================================================
-           TABLET
+           WHY ENHANCE
         ===================================================== */
+
+        .home-values {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap: 18px;
+
+        }
+
+
+        .home-value {
+
+            padding: 35px;
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .08
+                );
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .02
+                );
+
+        }
+
+
+        .home-value > span {
+
+            display: block;
+
+            margin-bottom: 35px;
+
+            color: #d4af37;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: .15em;
+
+        }
+
+
+        .home-value h3 {
+
+            margin-bottom: 12px;
+
+            color: #fff;
+
+        }
+
+
+        .home-value p {
+
+            margin: 0;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .5
+                );
+
+            font-size: .88rem;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           REVIEWS
+        ===================================================== */
+
+        .home-reviews {
+
+            padding-top: 110px;
+
+            padding-bottom: 110px;
+
+        }
+
+
+        .review-featured {
+
+            max-width: 920px;
+
+            margin: 0 auto;
+
+            padding: 55px;
+
+            border:
+                1px solid
+                rgba(
+                    212,
+                    175,
+                    55,
+                    .2
+                );
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    rgba(212,175,55,.08),
+                    transparent 45%
+                ),
+                #0b0b0b;
+
+            text-align: center;
+
+        }
+
+
+        .review-stars {
+
+            margin-bottom: 25px;
+
+            color: #d4af37;
+
+            font-size: 17px;
+
+            letter-spacing: .16em;
+
+        }
+
+
+        .review-featured blockquote {
+
+            max-width: 760px;
+
+            margin:
+                0 auto 28px;
+
+            color: #fff;
+
+            font-size:
+                clamp(
+                    1.25rem,
+                    2.5vw,
+                    2rem
+                );
+
+            line-height: 1.5;
+
+            font-weight: 400;
+
+        }
+
+
+        .review-author strong {
+
+            display: block;
+
+            color: #fff;
+
+        }
+
+
+        .review-author span {
+
+            display: block;
+
+            margin-top: 5px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .4
+                );
+
+            font-size: 11px;
+
+        }
+
+
+        .review-google-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-top: 35px;
+
+            padding:
+                12px 18px;
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .08
+                );
+
+            text-align: left;
+
+        }
+
+
+        .review-google-badge > span {
+
+            color: #d4af37;
+
+            font-size: 20px;
+
+        }
+
+
+        .review-google-badge strong {
+
+            display: block;
+
+            color: #fff;
+
+            font-size: 11px;
+
+        }
+
+
+        .review-google-badge small {
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .4
+                );
+
+            font-size: 9px;
+
+        }
+
+
+        /* =====================================================
+           SERVICE AREA
+        ===================================================== */
+
+        .home-service-area {
+
+            padding-top: 105px;
+
+            padding-bottom: 105px;
+
+        }
+
+
+        .service-area-home-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+
+        }
+
+
+        .service-area-home-grid h2 {
+
+            max-width: 650px;
+
+        }
+
+
+        .service-area-home-grid >
+        div:first-child
+        p:not(.eyebrow) {
+
+            max-width: 560px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .58
+                );
+
+            line-height: 1.8;
+
+        }
+
+
+        .area-highlight {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 1px;
+
+            border:
+                1px solid
+                rgba(
+                    212,
+                    175,
+                    55,
+                    .2
+                );
+
+            background:
+                rgba(
+                    212,
+                    175,
+                    55,
+                    .2
+                );
+
+        }
+
+
+        .area-highlight div {
+
+            min-height: 125px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+
+            background: #0b0b0b;
+
+            color: #fff;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: .12em;
+
+            text-align: center;
+
+        }
+
+
+        /* =====================================================
+           FINAL CTA
+        ===================================================== */
+
+        .home-final-cta {
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 130px 0;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(212,175,55,.12),
+                    transparent 48%
+                ),
+                #050505;
+
+            border-top:
+                1px solid
+                rgba(
+                    212,
+                    175,
+                    55,
+                    .15
+                );
+
+            border-bottom:
+                1px solid
+                rgba(
+                    212,
+                    175,
+                    55,
+                    .15
+                );
+
+            text-align: center;
+
+        }
+
+
+        .home-final-cta h2 {
+
+            max-width: 900px;
+
+            margin:
+                0 auto 22px;
+
+            font-size:
+                clamp(
+                    2.7rem,
+                    5vw,
+                    5.5rem
+                );
+
+            line-height: .98;
+
+        }
+
+
+        .home-final-cta h2 span {
+
+            color: #d4af37;
+
+        }
+
+
+        .home-final-cta >
+        .container >
+        p:not(.eyebrow) {
+
+            max-width: 580px;
+
+            margin:
+                0 auto 32px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .6
+                );
+
+            line-height: 1.7;
+
+        }
+
+
+        .home-final-cta .hero-actions {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 14px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .cta-tagline {
+
+            margin-top: 32px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .35
+                );
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+            letter-spacing: .2em;
+
+        }
+
+
+        /* =====================================================
+           FLOATING ACTION BUTTONS
+        ===================================================== */
+
+        .floating-action-buttons {
+
+            position: fixed;
+
+            right: 24px;
+
+            bottom: 24px;
+
+            z-index: 9999;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+
+        }
+
+
+        .floating-action-buttons a {
+
+            min-width: 150px;
+
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding:
+                0 18px;
+
+            border:
+                1px solid
+                rgba(
+                    212,
+                    175,
+                    55,
+                    .45
+                );
+
+            background:
+                rgba(
+                    5,
+                    5,
+                    5,
+                    .96
+                );
+
+            box-shadow:
+                0 12px 35px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    .4
+                );
+
+            backdrop-filter:
+                blur(12px);
+
+            color: #fff;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: .12em;
+
+            text-decoration: none;
+
+            transition:
+                transform .25s ease,
+                background .25s ease,
+                color .25s ease,
+                border-color .25s ease;
+
+        }
+
+
+        .floating-action-buttons a:hover {
+
+            transform:
+                translateY(-2px);
+
+            border-color:
+                #d4af37;
+
+        }
+
+
+        .floating-action-buttons
+        .floating-quote {
+
+            background: #d4af37;
+
+            border-color: #d4af37;
+
+            color: #050505;
+
+        }
+
+
+        .floating-action-buttons
+        .floating-quote:hover {
+
+            background: #e1c158;
+
+            color: #050505;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1100px) {
+
+            .home-package-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .home-package {
+
+                padding: 30px;
+
+            }
+
+
+            .home-package > p {
+
+                min-height: auto;
+
+            }
+
+
+            .home-intro-grid,
+            .addon-grid,
+            .service-area-home-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+
+            }
+
+
+            .home-values {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
 
         @media (max-width: 900px) {
 
@@ -530,10 +1780,12 @@
             .process-grid {
 
                 grid-template-columns:
-                    repeat(2, 1fr);
+                    repeat(
+                        2,
+                        1fr
+                    );
 
-                gap:
-                    40px 0;
+                gap: 40px 0;
 
             }
 
@@ -548,10 +1800,6 @@
 
         }
 
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
 
         @media (max-width: 700px) {
 
@@ -585,8 +1833,7 @@
             .hero-copy {
 
                 padding:
-                    55px 0
-                    85px;
+                    55px 0 85px;
 
             }
 
@@ -606,6 +1853,58 @@
             .hero-description {
 
                 font-size: .96rem;
+
+            }
+
+
+            .hero-slide-controls {
+
+                bottom: 20px;
+
+            }
+
+
+            .home-intro,
+            .home-packages,
+            .home-transformations,
+            .home-enhancements,
+            .home-process,
+            .home-reviews,
+            .home-service-area {
+
+                padding-top: 75px;
+
+                padding-bottom: 75px;
+
+            }
+
+
+            .center-heading {
+
+                margin-bottom: 38px;
+
+            }
+
+
+            .home-intro-grid {
+
+                gap: 35px;
+
+            }
+
+
+            .packages-bottom {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+
+            .addon-card {
+
+                padding: 27px;
 
             }
 
@@ -655,9 +1954,146 @@
             }
 
 
-            .hero-slide-controls {
+            .review-featured {
 
-                bottom: 20px;
+                padding:
+                    35px 22px;
+
+            }
+
+
+            .review-featured blockquote {
+
+                font-size: 1.15rem;
+
+            }
+
+
+            .service-area-home-grid {
+
+                gap: 35px;
+
+            }
+
+
+            .area-highlight div {
+
+                min-height: 90px;
+
+                font-size: 9px;
+
+            }
+
+
+            .home-final-cta {
+
+                padding: 90px 0;
+
+            }
+
+
+            .home-final-cta .hero-actions {
+
+                flex-direction: column;
+
+                width: 100%;
+
+            }
+
+
+            .home-final-cta .hero-actions .btn {
+
+                width: 100%;
+
+            }
+
+
+            /* MOBILE FLOATING ACTION BAR */
+
+            .floating-action-buttons {
+
+                position: fixed;
+
+                left: 0;
+
+                right: 0;
+
+                bottom: 0;
+
+                z-index: 9999;
+
+                display: grid;
+
+                grid-template-columns:
+                    1fr 1fr;
+
+                gap: 0;
+
+                height: 64px;
+
+                border-top:
+                    1px solid
+                    rgba(
+                        212,
+                        175,
+                        55,
+                        .35
+                    );
+
+                background:
+                    rgba(
+                        5,
+                        5,
+                        5,
+                        .97
+                    );
+
+                backdrop-filter:
+                    blur(15px);
+
+            }
+
+
+            .floating-action-buttons a {
+
+                min-width: 0;
+
+                height: 64px;
+
+                border: 0;
+
+                border-radius: 0;
+
+                box-shadow: none;
+
+                background: transparent;
+
+                font-size: 10px;
+
+            }
+
+
+            .floating-action-buttons
+            a + a {
+
+                border-left:
+                    1px solid
+                    rgba(
+                        255,
+                        255,
+                        255,
+                        .1
+                    );
+
+            }
+
+
+            .floating-action-buttons
+            .floating-quote {
+
+                background: #d4af37;
+
+                color: #050505;
 
             }
 
@@ -751,6 +2187,7 @@
 </header>
 
 
+
 <main>
 
 
@@ -800,7 +2237,6 @@
                 PREMIUM MOBILE DETAILING
             </p>
 
-
             <h1>
 
                 We Come To You.
@@ -814,7 +2250,6 @@
                 </strong>
 
             </h1>
-
 
             <p class="hero-description">
 
@@ -858,6 +2293,7 @@
 </section>
 
 
+
 <!-- =====================================================
      INTRO
 ====================================================== -->
@@ -892,22 +2328,27 @@
             <div>
 
                 <p class="intro-large">
-                    Your vehicle deserves more than a
-                    quick wash and a vacuum.
+
+                    Your vehicle deserves more than
+                    a quick wash and a vacuum.
+
                 </p>
 
                 <p>
+
                     Enhance My Ride delivers a premium
-                    mobile detailing experience built
-                    around convenience, attention to
-                    detail, and a finish you can see
-                    and feel.
+                    mobile detailing experience built around
+                    convenience, attention to detail, and a
+                    finish you can see and feel.
+
                 </p>
 
                 <p>
+
                     Whether your vehicle needs a complete
                     detail or one specific area restored,
                     we're here to enhance it.
+
                 </p>
 
                 <a
@@ -924,6 +2365,7 @@
     </div>
 
 </section>
+
 
 
 <!-- =====================================================
@@ -943,6 +2385,7 @@
             <h2>
 
                 See The
+
                 <span class="gold-text">
                     Difference.
                 </span>
@@ -950,9 +2393,12 @@
             </h2>
 
             <p>
-                See the finished results — then visit
-                the gallery to see the Before → After
+
+                See the finished results —
+                then visit the gallery to drag
+                through the real Before → After
                 transformations.
+
             </p>
 
         </div>
@@ -971,7 +2417,7 @@
                 >
 
                     <img
-                        src="images/gallery/mercedes-after.jpg"
+                        src="images/gallery/mercedes-front-three-quarter.webp"
                         alt="Mercedes-Benz CLS 550 after professional detailing"
                         loading="lazy"
                         decoding="async"
@@ -1003,6 +2449,7 @@
             </article>
 
 
+
             <!-- LEXUS -->
 
             <article class="transformation-preview">
@@ -1013,7 +2460,7 @@
                 >
 
                     <img
-                        src="images/gallery/lexus-after.jpg"
+                        src="images/gallery/lexus-is250-front.webp"
                         alt="Lexus IS 250 after professional detailing"
                         loading="lazy"
                         decoding="async"
@@ -1064,11 +2511,14 @@
 </section>
 
 
+
 <!-- =====================================================
      PACKAGES
 ====================================================== -->
 
-<section class="section section-dark home-packages">
+<section
+    class="section section-dark home-packages"
+>
 
     <div class="container">
 
@@ -1089,8 +2539,11 @@
             </h2>
 
             <p>
+
                 Three levels of detailing designed
-                around your vehicle's condition and needs.
+                around your vehicle's condition
+                and needs.
+
             </p>
 
         </div>
@@ -1115,25 +2568,21 @@
 
                 </div>
 
-
                 <h3>
                     Enhance Gold
                 </h3>
 
-
                 <div class="package-price">
-
                     <sup>$</sup>149+
-
                 </div>
 
-
                 <p>
-                    A complete maintenance detail designed
-                    to bring back the clean, refreshed feel
-                    your vehicle deserves.
-                </p>
 
+                    A complete maintenance detail
+                    designed to bring back the clean,
+                    refreshed feel your vehicle deserves.
+
+                </p>
 
                 <ul>
 
@@ -1163,7 +2612,6 @@
 
                 </ul>
 
-
                 <a
                     href="services.html"
                     class="package-link"
@@ -1172,6 +2620,7 @@
                 </a>
 
             </article>
+
 
 
             <!-- BLACK LABEL -->
@@ -1190,25 +2639,21 @@
 
                 </div>
 
-
                 <h3>
                     Enhance Black Label
                 </h3>
 
-
                 <div class="package-price">
-
                     <sup>$</sup>249+
-
                 </div>
 
-
                 <p>
+
                     Our most popular option for vehicles
                     that need a deeper interior and
                     exterior transformation.
-                </p>
 
+                </p>
 
                 <ul>
 
@@ -1238,7 +2683,6 @@
 
                 </ul>
 
-
                 <a
                     href="services.html"
                     class="package-link"
@@ -1247,6 +2691,7 @@
                 </a>
 
             </article>
+
 
 
             <!-- SHOWROOM -->
@@ -1265,25 +2710,21 @@
 
                 </div>
 
-
                 <h3>
                     Showroom Edition
                 </h3>
 
-
                 <div class="package-price">
-
                     <sup>$</sup>399+
-
                 </div>
 
-
                 <p>
-                    Our highest level of service for owners
-                    who want their vehicle looking its
-                    absolute best.
-                </p>
 
+                    Our highest level of service for
+                    owners who want their vehicle
+                    looking its absolute best.
+
+                </p>
 
                 <ul>
 
@@ -1313,7 +2754,6 @@
 
                 </ul>
 
-
                 <a
                     href="services.html"
                     class="package-link"
@@ -1330,10 +2770,12 @@
         <div class="packages-bottom">
 
             <p>
+
                 Pricing starts at the amounts shown.
                 Final pricing may vary by vehicle size,
                 condition, buildup, pet hair, stains,
                 and requested services.
+
             </p>
 
             <a
@@ -1350,11 +2792,14 @@
 </section>
 
 
+
 <!-- =====================================================
      ADD-ONS
 ====================================================== -->
 
-<section class="section section-dark home-enhancements">
+<section
+    class="section section-dark home-enhancements"
+>
 
     <div class="container">
 
@@ -1378,15 +2823,19 @@
                 </h2>
 
                 <p>
+
                     Not every vehicle needs a complete detail.
                     Sometimes one specific area can make a
                     dramatic difference.
+
                 </p>
 
                 <p>
+
                     Add specialized services to your package
                     or request a custom service based on your
                     vehicle's condition.
+
                 </p>
 
                 <a
@@ -1399,12 +2848,12 @@
             </div>
 
 
+
             <div class="addon-card">
 
                 <span>
                     VEHICLE ENHANCEMENTS
                 </span>
-
 
                 <div class="enhancement-list">
 
@@ -1535,6 +2984,7 @@
 </section>
 
 
+
 <!-- =====================================================
      PROCESS
 ====================================================== -->
@@ -1560,8 +3010,11 @@
             </h2>
 
             <p>
-                From your first message to the final
-                inspection, we make the process simple.
+
+                From your first message to the
+                final inspection, we make the
+                process simple.
+
             </p>
 
         </div>
@@ -1581,12 +3034,15 @@
                 </h3>
 
                 <p>
-                    Submit a quote request with your vehicle,
-                    location, service needs, and photos
-                    when helpful.
+
+                    Submit a quote request with your
+                    vehicle, location, service needs,
+                    and photos when helpful.
+
                 </p>
 
             </div>
+
 
 
             <div class="process-step">
@@ -1600,12 +3056,15 @@
                 </h3>
 
                 <p>
-                    We'll help determine the right service
-                    based on your vehicle's condition
-                    and needs.
+
+                    We'll help determine the right
+                    service based on your vehicle's
+                    condition and needs.
+
                 </p>
 
             </div>
+
 
 
             <div class="process-step">
@@ -1619,11 +3078,15 @@
                 </h3>
 
                 <p>
-                    Your home, workplace, or another convenient
-                    location becomes your detailing location.
+
+                    Your home, workplace, or another
+                    convenient location becomes your
+                    detailing location.
+
                 </p>
 
             </div>
+
 
 
             <div class="process-step">
@@ -1637,9 +3100,11 @@
                 </h3>
 
                 <p>
-                    We complete the service and perform a
-                    final presentation inspection before
-                    we leave.
+
+                    We complete the service and perform
+                    a final presentation inspection
+                    before we leave.
+
                 </p>
 
             </div>
@@ -1650,6 +3115,7 @@
     </div>
 
 </section>
+
 
 
 <!-- =====================================================
@@ -1667,9 +3133,13 @@
             </p>
 
             <h2>
+
                 Premium Service.
+
                 <br>
+
                 Without The Hassle.
+
             </h2>
 
         </div>
@@ -1689,12 +3159,15 @@
                 </h3>
 
                 <p>
+
                     Your home, workplace, or convenient
                     location. No waiting room. No shop
                     drop-off.
+
                 </p>
 
             </div>
+
 
 
             <div class="home-value">
@@ -1708,12 +3181,15 @@
                 </h3>
 
                 <p>
+
                     We focus on the areas that create
                     the biggest visual and functional
                     difference.
+
                 </p>
 
             </div>
+
 
 
             <div class="home-value">
@@ -1727,9 +3203,12 @@
                 </h3>
 
                 <p>
-                    From your quote to the final inspection,
-                    every part of the experience should feel
-                    as good as the finished vehicle.
+
+                    From your quote to the final
+                    inspection, every part of the
+                    experience should feel as good
+                    as the finished vehicle.
+
                 </p>
 
             </div>
@@ -1742,6 +3221,7 @@
 </section>
 
 
+
 <!-- =====================================================
      REVIEWS
 ====================================================== -->
@@ -1749,6 +3229,7 @@
 <section class="section home-reviews">
 
     <div class="container">
+
 
         <div class="center-heading">
 
@@ -1767,7 +3248,10 @@
             </h2>
 
             <p>
-                Real vehicles. Real customers. Real results.
+
+                Real vehicles. Real customers.
+                Real results.
+
             </p>
 
         </div>
@@ -1778,7 +3262,6 @@
             <div class="review-stars">
                 ★ ★ ★ ★ ★
             </div>
-
 
             <div
                 style="
@@ -1792,7 +3275,6 @@
                 LATEST GOOGLE REVIEW
             </div>
 
-
             <blockquote>
 
                 “He did his big one on my Lexus 😮‍💨
@@ -1801,7 +3283,6 @@
                 be adding this to my monthly expenses!”
 
             </blockquote>
-
 
             <div class="review-author">
 
@@ -1839,25 +3320,27 @@
         </div>
 
 
+
         <div
             class="review-featured"
-            style="margin-top:20px;opacity:.92;"
+            style="
+                margin-top:20px;
+                opacity:.92;
+            "
         >
 
             <div class="review-stars">
                 ★ ★ ★ ★ ★
             </div>
 
-
             <blockquote>
 
                 “10 for 10! Restored my dusty CLS 550
                 to showroom beauty — Interior and Exterior.
-                Amazing work. Will be returning for
-                additional services. HIGHLY RECOMMEND!”
+                Amazing work. Will be returning for additional
+                services. HIGHLY RECOMMEND!”
 
             </blockquote>
-
 
             <div class="review-author">
 
@@ -1872,6 +3355,7 @@
             </div>
 
         </div>
+
 
 
         <div class="center-link">
@@ -1892,11 +3376,14 @@
 </section>
 
 
+
 <!-- =====================================================
      SERVICE AREA
 ====================================================== -->
 
-<section class="section section-dark home-service-area">
+<section
+    class="section section-dark home-service-area"
+>
 
     <div class="container">
 
@@ -1920,10 +3407,12 @@
                 </h2>
 
                 <p>
+
                     Serving Alameda, Oakland,
                     San Francisco, San Leandro,
                     Berkeley, Emeryville, Hayward,
                     and surrounding Bay Area communities.
+
                 </p>
 
                 <a
@@ -1934,6 +3423,7 @@
                 </a>
 
             </div>
+
 
 
             <div class="area-highlight">
@@ -1971,6 +3461,7 @@
 </section>
 
 
+
 <!-- =====================================================
      FINAL CTA
 ====================================================== -->
@@ -1983,7 +3474,6 @@
             READY TO ENHANCE?
         </p>
 
-
         <h2>
 
             Your Ride Deserves
@@ -1994,21 +3484,16 @@
 
         </h2>
 
-
         <p>
+
             Tell us what you're driving and where
             you're located. We'll help you find
             the right service.
+
         </p>
 
 
-        <div
-            class="hero-actions"
-            style="
-                display:flex !important;
-                justify-content:center;
-            "
-        >
+        <div class="hero-actions">
 
             <a
                 href="quote.html"
@@ -2016,7 +3501,6 @@
             >
                 Get Your Free Quote
             </a>
-
 
             <a
                 href="tel:+13233271806"
@@ -2040,17 +3524,15 @@
 </main>
 
 
+
 <!-- =====================================================
      FOOTER
-     NO SLOGAN HERE
 ====================================================== -->
 
 <footer class="site-footer">
 
     <div class="container footer-grid">
 
-
-        <!-- FOOTER BRAND -->
 
         <div class="footer-brand">
 
@@ -2069,17 +3551,17 @@
 
             </a>
 
-
             <p>
+
                 Premium mobile detailing delivered
                 throughout Alameda, Oakland,
                 San Francisco and the Bay Area.
+
             </p>
 
         </div>
 
 
-        <!-- EXPLORE -->
 
         <div class="footer-links">
 
@@ -2114,7 +3596,6 @@
         </div>
 
 
-        <!-- CONNECT -->
 
         <div class="footer-links">
 
@@ -2164,16 +3645,14 @@
     </div>
 
 
-    <!-- =================================================
-         COPYRIGHT
-         THIS MUST REMAIN THE LAST THING IN THE FOOTER
-    ================================================== -->
 
     <div class="container footer-bottom">
 
         <p>
+
             © 2026 Enhance My Ride Auto Spa &
             Mobile Detailing. All rights reserved.
+
         </p>
 
     </div>
@@ -2181,28 +3660,38 @@
 </footer>
 
 
+
 <!-- =====================================================
-     MOBILE ACTION BAR
+     FLOATING ACTION BUTTONS
 ====================================================== -->
 
-<div class="mobile-action-bar">
+<div class="floating-action-buttons">
 
-    <a href="quote.html">
+    <a
+        href="quote.html"
+        class="floating-quote"
+        aria-label="Get a free quote"
+    >
         GET A QUOTE
     </a>
 
-    <a href="tel:+13233271806">
+    <a
+        href="tel:+13233271806"
+        aria-label="Call or text Enhance My Ride"
+    >
         CALL / TEXT
     </a>
 
 </div>
 
 
+
 <!-- =====================================================
-     GLOBAL JAVASCRIPT
+     EXISTING SITE JAVASCRIPT
 ====================================================== -->
 
 <script src="js/script.js"></script>
+
 
 
 <!-- =====================================================
@@ -2215,28 +3704,28 @@ document.addEventListener(
     "DOMContentLoaded",
     function () {
 
-        const slides =
-            [
-                ...document.querySelectorAll(
-                    ".hero-slide"
-                )
-            ];
+        const slides = [
+            ...document.querySelectorAll(
+                ".hero-slide"
+            )
+        ];
 
+        const dots = [
+            ...document.querySelectorAll(
+                ".hero-slide-dot"
+            )
+        ];
 
-        const dots =
-            [
-                ...document.querySelectorAll(
-                    ".hero-slide-dot"
-                )
-            ];
-
+        if (!slides.length) {
+            return;
+        }
 
         let current = 0;
 
         let timer;
 
 
-        function show(index) {
+        function showSlide(index) {
 
             slides.forEach(
                 function (slide, number) {
@@ -2271,19 +3760,17 @@ document.addEventListener(
 
             clearInterval(timer);
 
+            timer = setInterval(
+                function () {
 
-            timer =
-                setInterval(
-                    function () {
+                    showSlide(
+                        (current + 1)
+                        % slides.length
+                    );
 
-                        show(
-                            (current + 1)
-                            % slides.length
-                        );
-
-                    },
-                    6500
-                );
+                },
+                6500
+            );
 
         }
 
@@ -2295,7 +3782,7 @@ document.addEventListener(
                     "click",
                     function () {
 
-                        show(index);
+                        showSlide(index);
 
                         startSlideshow();
 
@@ -2306,7 +3793,7 @@ document.addEventListener(
         );
 
 
-        show(0);
+        showSlide(0);
 
         startSlideshow();
 
@@ -2318,4 +3805,4 @@ document.addEventListener(
 
 </body>
 
-</html> 
+</html>
