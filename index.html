@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -16,7 +15,7 @@
 
     <meta
         name="description"
-        content="See real vehicle transformations from Enhance My Ride Auto Spa & Mobile Detailing, including Mercedes-Benz and Lexus detailing projects throughout the Bay Area."
+        content="See real Before and After vehicle transformations from Enhance My Ride Auto Spa & Mobile Detailing."
     >
 
     <meta
@@ -42,25 +41,32 @@
 
         .gallery-hero {
             min-height: 58vh;
+            min-height: 58svh;
+
             display: flex;
             align-items: center;
+
             background:
                 radial-gradient(
-                    circle at 75% 50%,
-                    rgba(212,175,55,.11),
+                    circle at 80% 45%,
+                    rgba(212,175,55,.12),
                     transparent 38%
                 ),
                 #050505;
         }
 
-        .gallery-hero .page-hero-content {
-            max-width: 900px;
-        }
-
         .gallery-hero h1 {
-            max-width: 850px;
-            font-size: clamp(3.5rem, 7vw, 6.5rem);
+            margin: 0;
+
+            font-size:
+                clamp(
+                    3.3rem,
+                    7vw,
+                    6.5rem
+                );
+
             line-height: .92;
+            letter-spacing: -.045em;
         }
 
         .gallery-hero h1 span {
@@ -68,39 +74,67 @@
             color: #d4af37;
         }
 
-        .gallery-hero .page-hero-content > p:last-child {
-            max-width: 650px;
-            margin-top: 25px;
-            color: rgba(255,255,255,.65);
-            font-size: 1.05rem;
-            line-height: 1.75;
+        .gallery-hero-description {
+            max-width: 690px;
+
+            margin-top: 28px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .62
+                );
+
+            font-size: 1rem;
+            line-height: 1.8;
         }
 
 
         /* =====================================================
-           GALLERY INTRO
+           GALLERY MAIN
         ===================================================== */
 
         .gallery-main-section {
-            padding-top: 105px;
-            padding-bottom: 110px;
+            padding:
+                105px 0
+                120px;
         }
 
         .gallery-intro {
-            max-width: 760px;
-            margin-bottom: 80px;
+            max-width: 800px;
+            margin-bottom: 85px;
         }
 
         .gallery-intro h2 {
-            max-width: 700px;
-            margin-bottom: 20px;
-            font-size: clamp(2.6rem, 5vw, 5rem);
+            margin:
+                0 0 22px;
+
+            font-size:
+                clamp(
+                    2.7rem,
+                    5vw,
+                    5rem
+                );
+
             line-height: .98;
+            letter-spacing: -.04em;
         }
 
-        .gallery-intro > p:last-child {
-            max-width: 650px;
-            color: rgba(255,255,255,.55);
+        .gallery-intro p:last-child {
+            max-width: 720px;
+
+            margin: 0;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .52
+                );
+
             line-height: 1.8;
         }
 
@@ -110,52 +144,100 @@
         ===================================================== */
 
         .gallery-project {
-            margin-bottom: 115px;
+            margin-bottom: 120px;
         }
 
-        .gallery-project:last-of-type {
-            margin-bottom: 0;
+        .gallery-project + .gallery-project {
+            padding-top: 110px;
+
+            border-top:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .08
+                );
         }
 
         .gallery-project-heading {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            gap: 35px;
-            margin-bottom: 30px;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                flex-end;
+
+            gap: 30px;
+
+            margin-bottom: 38px;
         }
 
         .project-number {
             display: block;
-            margin-bottom: 13px;
-            color: rgba(255,255,255,.3);
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: .18em;
-        }
 
-        .gallery-project-heading .eyebrow {
-            margin-bottom: 9px;
+            margin-bottom: 12px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .28
+                );
+
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: .18em;
         }
 
         .gallery-project-heading h3 {
             margin: 0;
-            color: #fff;
-            font-size: clamp(2rem, 4vw, 3.5rem);
+
+            font-size:
+                clamp(
+                    2rem,
+                    4vw,
+                    3.7rem
+                );
+
             line-height: 1;
+            letter-spacing: -.035em;
         }
 
         .project-meta {
             display: flex;
+
+            gap: 9px;
+
             flex-wrap: wrap;
-            justify-content: flex-end;
-            gap: 10px;
+
+            justify-content:
+                flex-end;
         }
 
         .project-meta span {
-            padding: 9px 12px;
-            border: 1px solid rgba(255,255,255,.1);
-            color: rgba(255,255,255,.5);
+            padding:
+                9px 12px;
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .1
+                );
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .48
+                );
+
             font-size: 8px;
             font-weight: 800;
             letter-spacing: .13em;
@@ -163,154 +245,165 @@
 
 
         /* =====================================================
-           BEFORE / AFTER SLIDER
+           BEFORE / AFTER GRID
         ===================================================== */
 
-        .before-after-grid {
+        .comparison-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 14px;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    minmax(
+                        0,
+                        1fr
+                    )
+                );
+
+            gap: 18px;
         }
 
-        .before-after-card {
-            position: relative;
+        .comparison-card {
             overflow: hidden;
-            aspect-ratio: 3 / 4;
-            border: 1px solid rgba(255,255,255,.08);
-            background: #090909;
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .08
+                );
+
+            background:
+                #090909;
         }
 
-        .before-after-card img {
-            position: absolute;
-            inset: 0;
+        .comparison-card-image {
+            position: relative;
+
+            aspect-ratio:
+                4 / 3;
+
+            overflow: hidden;
+
+            background:
+                #050505;
+        }
+
+        .comparison-card-image img {
             width: 100%;
             height: 100%;
+
             display: block;
+
             object-fit: cover;
+
+            transition:
+                transform .6s ease;
         }
 
-        .before-after-before {
+        .comparison-card:hover
+        .comparison-card-image img {
+            transform:
+                scale(1.035);
+        }
+
+        .comparison-card-label {
             position: absolute;
-            inset: 0;
-            z-index: 1;
-            overflow: hidden;
-            width: 50%;
-        }
 
-        .before-after-before img {
-            width: 200%;
-            max-width: none;
-        }
+            top: 15px;
+            left: 15px;
 
-        .before-after-divider {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            z-index: 5;
-            width: 2px;
-            background: #d4af37;
-            transform: translateX(-50%);
-            pointer-events: none;
-        }
+            z-index: 2;
 
-        .before-after-handle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            z-index: 6;
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid #d4af37;
-            border-radius: 50%;
-            background: #050505;
-            color: #d4af37;
-            font-size: 22px;
-            transform: translate(-50%, -50%);
-            cursor: ew-resize;
-            touch-action: none;
-            user-select: none;
-            box-shadow: 0 8px 30px rgba(0,0,0,.5);
-        }
+            padding:
+                8px 11px;
 
-        .before-after-label {
-            position: absolute;
-            top: 16px;
-            z-index: 7;
-            padding: 7px 11px;
-            background: rgba(0,0,0,.72);
-            color: #fff;
+            background:
+                rgba(
+                    0,
+                    0,
+                    0,
+                    .72
+                );
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .18
+                );
+
+            color:
+                #fff;
+
             font-size: 8px;
             font-weight: 800;
             letter-spacing: .15em;
-            pointer-events: none;
         }
 
-        .before-after-label.before {
-            left: 16px;
+        .comparison-card.after
+        .comparison-card-label {
+            background:
+                #d4af37;
+
+            border-color:
+                #d4af37;
+
+            color:
+                #050505;
         }
 
-        .before-after-label.after {
-            right: 16px;
-            background: #d4af37;
-            color: #050505;
+        .comparison-card-content {
+            padding:
+                17px 19px;
         }
 
-        .before-after-caption {
-            position: absolute;
-            left: 18px;
-            right: 18px;
-            bottom: 17px;
-            z-index: 8;
-            pointer-events: none;
-        }
-
-        .before-after-caption strong {
+        .comparison-card-content strong {
             display: block;
-            color: #fff;
-            font-size: 9px;
+
+            color:
+                #fff;
+
+            font-size: 10px;
             font-weight: 800;
-            letter-spacing: .15em;
+            letter-spacing: .14em;
         }
 
-        .before-after-caption span {
-            color: rgba(255,255,255,.58);
-            font-size: 10px;
+        .comparison-card-content span {
+            display: block;
+
+            margin-top: 5px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .4
+                );
+
+            font-size: 11px;
         }
 
 
         /* =====================================================
-           IMAGE VIEW INDICATOR
+           STANDALONE AFTER
         ===================================================== */
 
-        .gallery-view-icon {
-            position: absolute;
-            top: 18px;
-            right: 18px;
-            z-index: 9;
-            width: 38px;
-            height: 38px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgba(255,255,255,.3);
-            border-radius: 50%;
-            background: rgba(0,0,0,.42);
-            backdrop-filter: blur(8px);
-            color: #fff;
-            font-size: 15px;
-            opacity: .8;
-            transition: .3s ease;
-            cursor: pointer;
+        .standalone-after {
+            margin-top: 18px;
+
+            max-width: 760px;
         }
 
-        .before-after-card:hover .gallery-view-icon {
-            opacity: 1;
-            border-color: #d4af37;
-            color: #d4af37;
+        .standalone-after
+        .comparison-card-image {
+            aspect-ratio:
+                4 / 3;
         }
 
 
@@ -320,33 +413,33 @@
 
         .gallery-description {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 35px;
-            padding: 27px 0 0;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap: 30px;
+
+            margin-top: 30px;
         }
 
         .gallery-description p {
-            max-width: 720px;
+            max-width: 760px;
+
             margin: 0;
-            color: rgba(255,255,255,.48);
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .47
+                );
+
             font-size: .9rem;
-            line-height: 1.75;
-        }
-
-        .gallery-description .text-link {
-            flex-shrink: 0;
-            white-space: nowrap;
-        }
-
-
-        /* =====================================================
-           PROJECT DIVIDER
-        ===================================================== */
-
-        .gallery-project + .gallery-project {
-            padding-top: 100px;
-            border-top: 1px solid rgba(255,255,255,.08);
+            line-height: 1.8;
         }
 
 
@@ -355,32 +448,70 @@
         ===================================================== */
 
         .gallery-coming-soon {
-            position: relative;
-            overflow: hidden;
-            margin-top: 110px;
-            padding: 90px 40px;
-            border: 1px solid rgba(212,175,55,.22);
+            margin-top: 35px;
+
+            padding:
+                90px 30px;
+
+            border:
+                1px solid
+                rgba(
+                    212,
+                    175,
+                    55,
+                    .2
+                );
+
             background:
                 radial-gradient(
-                    circle at center,
-                    rgba(212,175,55,.12),
-                    transparent 48%
+                    circle,
+                    rgba(
+                        212,
+                        175,
+                        55,
+                        .11
+                    ),
+                    transparent 50%
                 ),
                 #080808;
+
             text-align: center;
         }
 
         .gallery-coming-soon h2 {
-            max-width: 750px;
-            margin: 0 auto 20px;
-            font-size: clamp(2.6rem, 5vw, 4.8rem);
+            margin:
+                0 0 20px;
+
+            font-size:
+                clamp(
+                    2.6rem,
+                    5vw,
+                    4.8rem
+                );
+
             line-height: .98;
+            letter-spacing: -.04em;
         }
 
-        .gallery-coming-soon > p:not(.eyebrow) {
-            max-width: 550px;
-            margin: 0 auto 30px;
-            color: rgba(255,255,255,.55);
+        .gallery-coming-soon h2 span {
+            color: #d4af37;
+        }
+
+        .gallery-coming-soon p:not(.eyebrow) {
+            max-width: 560px;
+
+            margin:
+                0 auto
+                30px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .5
+                );
+
             line-height: 1.7;
         }
 
@@ -389,150 +520,133 @@
            LIGHTBOX
         ===================================================== */
 
-        .lightbox {
+        .gallery-lightbox {
             position: fixed;
+
             inset: 0;
+
             z-index: 10000;
-            display: flex;
+
+            display: none;
+
             align-items: center;
             justify-content: center;
-            padding: 60px;
-            background: rgba(0,0,0,.96);
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            transition: opacity .3s ease;
+
+            padding: 30px;
+
+            background:
+                rgba(
+                    0,
+                    0,
+                    0,
+                    .94
+                );
         }
 
-        .lightbox.active {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
+        .gallery-lightbox.active {
+            display: flex;
         }
 
-        .lightbox-image {
-            max-width: min(1100px, 90vw);
-            max-height: 82vh;
+        .gallery-lightbox img {
+            max-width: 92vw;
+            max-height: 88vh;
+
             width: auto;
             height: auto;
-            display: block;
+
             object-fit: contain;
-            box-shadow: 0 30px 100px rgba(0,0,0,.7);
+
+            box-shadow:
+                0 30px 100px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    .65
+                );
+        }
+
+        .lightbox-close,
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+
+            z-index: 2;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .18
+                );
+
+            background:
+                rgba(
+                    5,
+                    5,
+                    5,
+                    .9
+                );
+
+            color:
+                #fff;
+
+            cursor: pointer;
         }
 
         .lightbox-close {
-            position: absolute;
             top: 20px;
-            right: 25px;
-            z-index: 3;
+            right: 20px;
+
+            width: 46px;
+            height: 46px;
+
+            font-size: 22px;
+        }
+
+        .lightbox-prev,
+        .lightbox-next {
+            top: 50%;
+
             width: 48px;
             height: 48px;
-            border: 1px solid rgba(255,255,255,.2);
-            border-radius: 50%;
-            background: rgba(0,0,0,.5);
-            color: #fff;
-            font-size: 30px;
-            line-height: 1;
-            cursor: pointer;
-        }
 
-        .lightbox-close:hover {
-            border-color: #d4af37;
-            color: #d4af37;
-        }
+            transform:
+                translateY(-50%);
 
-        .lightbox-arrow {
-            position: absolute;
-            top: 50%;
-            z-index: 3;
-            width: 52px;
-            height: 52px;
-            border: 1px solid rgba(255,255,255,.18);
-            border-radius: 50%;
-            background: rgba(0,0,0,.5);
-            color: #fff;
-            font-size: 35px;
-            line-height: 1;
-            cursor: pointer;
-            transform: translateY(-50%);
-        }
-
-        .lightbox-arrow:hover {
-            border-color: #d4af37;
-            color: #d4af37;
+            font-size: 25px;
         }
 
         .lightbox-prev {
-            left: 25px;
+            left: 20px;
         }
 
         .lightbox-next {
-            right: 25px;
-        }
-
-        .lightbox-counter {
-            position: absolute;
-            left: 50%;
-            bottom: 22px;
-            transform: translateX(-50%);
-            color: rgba(255,255,255,.55);
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: .15em;
+            right: 20px;
         }
 
 
         /* =====================================================
-           RESPONSIVE
+           TABLET
         ===================================================== */
 
-        @media (max-width: 900px) {
-
-            .before-after-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-        }
-
-        @media (max-width: 650px) {
-
-            .gallery-hero {
-                min-height: 48vh;
-            }
-
-            .gallery-hero h1 {
-                font-size: clamp(3rem, 15vw, 4.6rem);
-            }
-
-            .gallery-main-section {
-                padding-top: 75px;
-                padding-bottom: 75px;
-            }
-
-            .gallery-intro {
-                margin-bottom: 55px;
-            }
-
-            .gallery-project {
-                margin-bottom: 75px;
-            }
+        @media (max-width: 800px) {
 
             .gallery-project-heading {
                 display: block;
             }
 
             .project-meta {
-                justify-content: flex-start;
-                margin-top: 18px;
-            }
+                justify-content:
+                    flex-start;
 
-            .before-after-grid {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .before-after-card {
-                aspect-ratio: 4 / 5;
+                margin-top: 20px;
             }
 
             .gallery-description {
@@ -541,44 +655,87 @@
 
             .gallery-description .text-link {
                 display: inline-block;
+
                 margin-top: 18px;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 650px) {
+
+            .gallery-hero {
+                min-height: 48svh;
+            }
+
+            .gallery-main-section {
+                padding:
+                    75px 0
+                    90px;
+            }
+
+            .gallery-intro {
+                margin-bottom: 65px;
+            }
+
+            .gallery-project {
+                margin-bottom: 80px;
             }
 
             .gallery-project + .gallery-project {
-                padding-top: 70px;
+                padding-top: 75px;
+            }
+
+            .comparison-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+            .comparison-card-image {
+                aspect-ratio:
+                    4 / 3;
+            }
+
+            .comparison-card-label {
+                top: 12px;
+                left: 12px;
+
+                padding:
+                    7px 9px;
+
+                font-size: 7px;
             }
 
             .gallery-coming-soon {
-                margin-top: 75px;
-                padding: 70px 22px;
+                padding:
+                    70px 20px;
             }
 
-            .lightbox {
-                padding: 50px 10px;
+            .gallery-lightbox {
+                padding: 15px;
             }
 
-            .lightbox-image {
+            .gallery-lightbox img {
                 max-width: 96vw;
-                max-height: 78vh;
+                max-height: 82vh;
             }
 
-            .lightbox-arrow {
-                top: auto;
-                bottom: 20px;
-                width: 45px;
-                height: 45px;
-                font-size: 28px;
-                transform: none;
+            .lightbox-prev,
+            .lightbox-next {
+                width: 42px;
+                height: 42px;
             }
 
             .lightbox-prev {
-                left: 20px;
+                left: 10px;
             }
 
             .lightbox-next {
-                right: 20px;
+                right: 10px;
             }
-
         }
 
     </style>
@@ -587,6 +744,11 @@
 
 
 <body>
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
 
 <header class="site-header">
 
@@ -612,13 +774,15 @@
         <button
             class="menu-toggle"
             id="menuToggle"
+            type="button"
             aria-label="Open navigation menu"
             aria-expanded="false"
-            type="button"
         >
+
             <span></span>
             <span></span>
             <span></span>
+
         </button>
 
 
@@ -664,6 +828,11 @@
 
 <main>
 
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
 <section class="page-hero gallery-hero">
 
     <div class="container page-hero-content">
@@ -673,781 +842,880 @@
         </p>
 
         <h1>
-            The
+            See The
             <span>
-                Gallery.
+                Transformation.
             </span>
         </h1>
 
-        <p>
-            See the difference professional detailing makes.
-            Every vehicle below represents real work completed
-            by Enhance My Ride — with clear before-and-after results.
+        <p class="gallery-hero-description">
+            See real Before → After results from
+            Enhance My Ride. Compare the work,
+            explore the finished vehicles, and see
+            what a professional detail can do.
         </p>
 
     </div>
 
 </section>
 
+
+<!-- =====================================================
+     MAIN GALLERY
+====================================================== -->
 
 <section class="section gallery-main-section">
 
-<div class="container">
-
-<div class="gallery-intro">
-
-    <p class="eyebrow">
-        RECENT WORK
-    </p>
-
-    <h2>
-        Every Detail
-        <span class="gold-text">
-            Matters.
-        </span>
-    </h2>
-
-    <p>
-        We believe the difference is in the details.
-        Explore recent vehicles we've serviced and
-        see the Enhance My Ride finish for yourself.
-    </p>
-
-</div>
+    <div class="container">
 
 
-<!-- =================================================
-     MERCEDES PROJECT
-================================================== -->
-
-<article
-    class="gallery-project"
-    id="mercedes"
->
-
-    <div class="gallery-project-heading">
-
-        <div>
-
-            <span class="project-number">
-                01
-            </span>
+        <div class="gallery-intro">
 
             <p class="eyebrow">
-                ENHANCE GOLD
+                BEFORE → AFTER
             </p>
 
-            <h3>
-                Mercedes-Benz CLS 550
-            </h3>
-
-        </div>
-
-        <div class="project-meta">
-
-            <span>
-                EXTERIOR + INTERIOR
-            </span>
-
-            <span>
-                BEFORE / AFTER
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="before-after-grid">
-
-
-        <!-- FRONT -->
-
-        <div
-            class="before-after-card"
-            data-before-after
-        >
-
-            <img
-                src="images/mercedes-after-front.webp"
-                alt="Mercedes-Benz CLS 550 after professional detailing"
-            >
-
-            <div class="before-after-before">
-
-                <img
-                    src="images/mercedes-before-front.webp"
-                    alt=""
-                >
-
-            </div>
-
-            <span class="before-after-label before">
-                BEFORE
-            </span>
-
-            <span class="before-after-label after">
-                AFTER
-            </span>
-
-            <div class="before-after-divider"></div>
-
-            <button
-                class="before-after-handle"
-                type="button"
-                aria-label="Drag to compare before and after"
-            >
-                ↔
-            </button>
-
-            <span
-                class="gallery-view-icon"
-                data-lightbox-image="images/mercedes-after-front.webp"
-                data-lightbox-alt="Mercedes-Benz CLS 550 after professional detailing"
-            >
-                ↗
-            </span>
-
-            <div class="before-after-caption">
-
-                <strong>
-                    EXTERIOR
-                </strong>
-
-                <span>
-                    Front transformation
+            <h2>
+                Judge The Work.
+                <br>
+                <span class="gold-text">
+                    Not Just The Shine.
                 </span>
+            </h2>
 
-            </div>
+            <p>
+                Real vehicles. Real transformations.
+                See the condition before service and
+                the finished result side by side.
+            </p>
 
         </div>
 
 
-        <!-- REAR -->
+        <!-- =================================================
+             MERCEDES
+        ================================================== -->
 
-        <div
-            class="before-after-card"
-            data-before-after
+        <article
+            class="gallery-project"
+            id="mercedes"
         >
 
-            <img
-                src="images/mercedes-after-rear.webp"
-                alt="Mercedes-Benz CLS 550 rear after detailing"
-            >
+            <div class="gallery-project-heading">
 
-            <div class="before-after-before">
+                <div>
 
-                <img
-                    src="images/mercedes-before-rear.webp"
-                    alt=""
+                    <span class="project-number">
+                        01
+                    </span>
+
+                    <p class="eyebrow">
+                        ENHANCE GOLD
+                    </p>
+
+                    <h3>
+                        Mercedes-Benz CLS 550
+                    </h3>
+
+                </div>
+
+
+                <div class="project-meta">
+
+                    <span>
+                        EXTERIOR
+                    </span>
+
+                    <span>
+                        INTERIOR
+                    </span>
+
+                    <span>
+                        BEFORE / AFTER
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="comparison-grid">
+
+
+                <!-- MERCEDES FRONT -->
+
+                <article class="comparison-card before">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/mercedes-before-front.webp"
+                            alt="Mercedes-Benz CLS 550 before detailing, front exterior"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            BEFORE
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            FRONT EXTERIOR
+                        </strong>
+
+                        <span>
+                            Before detailing
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="comparison-card after">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/mercedes-front-three-quarter.webp"
+                            alt="Mercedes-Benz CLS 550 after detailing, front exterior"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            AFTER
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            FRONT EXTERIOR
+                        </strong>
+
+                        <span>
+                            Finished result
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MERCEDES REAR -->
+
+                <article class="comparison-card before">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/mercedes-before-rear.webp"
+                            alt="Mercedes-Benz CLS 550 before detailing, rear exterior"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            BEFORE
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            REAR EXTERIOR
+                        </strong>
+
+                        <span>
+                            Before detailing
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="comparison-card after">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/mercedes-rear-exterior.webp"
+                            alt="Mercedes-Benz CLS 550 after detailing, rear exterior"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            AFTER
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            REAR EXTERIOR
+                        </strong>
+
+                        <span>
+                            Finished result
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MERCEDES CABIN -->
+
+                <article class="comparison-card before">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/mercedes-before-cabin.webp"
+                            alt="Mercedes-Benz CLS 550 interior before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            BEFORE
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            FRONT CABIN
+                        </strong>
+
+                        <span>
+                            Before detailing
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="comparison-card after">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/mercedes-driver-interior.webp"
+                            alt="Mercedes-Benz CLS 550 interior after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            AFTER
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            FRONT CABIN
+                        </strong>
+
+                        <span>
+                            Finished result
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MERCEDES TRUNK -->
+
+                <article class="comparison-card before">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/mercedes-before-trunk.webp"
+                            alt="Mercedes-Benz CLS 550 trunk before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            BEFORE
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            TRUNK
+                        </strong>
+
+                        <span>
+                            Before detailing
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="comparison-card after">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/mercedes-trunk.webp"
+                            alt="Mercedes-Benz CLS 550 trunk after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            AFTER
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            TRUNK
+                        </strong>
+
+                        <span>
+                            Finished result
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MERCEDES WHEEL -->
+
+                <article class="comparison-card before">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/mercedes-before-wheel.webp"
+                            alt="Mercedes-Benz CLS 550 wheel before cleaning"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            BEFORE
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            WHEEL
+                        </strong>
+
+                        <span>
+                            Before cleaning
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="comparison-card after">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/mercedes-wheel-01.webp"
+                            alt="Mercedes-Benz CLS 550 wheel after cleaning"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            AFTER
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            WHEEL
+                        </strong>
+
+                        <span>
+                            Finished result
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- MERCEDES STANDALONE AFTER -->
+
+            <div class="standalone-after">
+
+                <article class="comparison-card after">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/mercedes-driver-side-after.webp"
+                            alt="Mercedes-Benz CLS 550 finished driver side after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            FINISHED
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            DRIVER SIDE
+                        </strong>
+
+                        <span>
+                            Finished result — no before photo available
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="gallery-description">
+
+                <p>
+                    Mercedes-Benz CLS 550 completed with the
+                    Enhance Gold Package, including exterior
+                    hand wash, wheel and tire cleaning,
+                    interior cleaning, glass cleaning, and
+                    final presentation inspection.
+                </p>
+
+                <a
+                    href="quote.html"
+                    class="text-link"
                 >
+                    Get Your Vehicle Enhanced →
+                </a>
 
             </div>
 
-            <span class="before-after-label before">
-                BEFORE
-            </span>
-
-            <span class="before-after-label after">
-                AFTER
-            </span>
-
-            <div class="before-after-divider"></div>
-
-            <button
-                class="before-after-handle"
-                type="button"
-                aria-label="Drag to compare before and after"
-            >
-                ↔
-            </button>
-
-            <span
-                class="gallery-view-icon"
-                data-lightbox-image="images/mercedes-after-rear.webp"
-                data-lightbox-alt="Mercedes-Benz CLS 550 rear after detailing"
-            >
-                ↗
-            </span>
-
-            <div class="before-after-caption">
-
-                <strong>
-                    EXTERIOR
-                </strong>
-
-                <span>
-                    Rear transformation
-                </span>
-
-            </div>
-
-        </div>
+        </article>
 
 
-        <!-- WHEEL -->
+        <!-- =================================================
+             LEXUS
+        ================================================== -->
 
-        <div
-            class="before-after-card"
-            data-before-after
+        <article
+            class="gallery-project"
+            id="lexus"
         >
 
-            <img
-                src="images/mercedes-after-wheel.webp"
-                alt="Mercedes-Benz CLS 550 wheel after cleaning"
-            >
+            <div class="gallery-project-heading">
 
-            <div class="before-after-before">
+                <div>
 
-                <img
-                    src="images/mercedes-before-wheel.webp"
-                    alt=""
+                    <span class="project-number">
+                        02
+                    </span>
+
+                    <p class="eyebrow">
+                        ENHANCE GOLD
+                    </p>
+
+                    <h3>
+                        Lexus IS 250
+                    </h3>
+
+                </div>
+
+
+                <div class="project-meta">
+
+                    <span>
+                        EXTERIOR
+                    </span>
+
+                    <span>
+                        INTERIOR
+                    </span>
+
+                    <span>
+                        BEFORE / AFTER
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="comparison-grid">
+
+
+                <!-- LEXUS PAIR 1 -->
+
+                <article class="comparison-card before">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/lexus-before-01.webp"
+                            alt="Lexus IS 250 before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            BEFORE
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            EXTERIOR
+                        </strong>
+
+                        <span>
+                            Before detailing
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="comparison-card after">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/lexus-after-01.webp"
+                            alt="Lexus IS 250 after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            AFTER
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            EXTERIOR
+                        </strong>
+
+                        <span>
+                            Finished result
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LEXUS PAIR 2 -->
+
+                <article class="comparison-card before">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/lexus-before-02.webp"
+                            alt="Lexus IS 250 before detailing, second view"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            BEFORE
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            EXTERIOR
+                        </strong>
+
+                        <span>
+                            Before detailing
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="comparison-card after">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/lexus-after-02.webp"
+                            alt="Lexus IS 250 after detailing, second view"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            AFTER
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            EXTERIOR
+                        </strong>
+
+                        <span>
+                            Finished result
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LEXUS PAIR 3 -->
+
+                <article class="comparison-card before">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/lexus-before-03.webp"
+                            alt="Lexus IS 250 before detailing, third view"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            BEFORE
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            EXTERIOR
+                        </strong>
+
+                        <span>
+                            Before detailing
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="comparison-card after">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/lexus-after-03.webp"
+                            alt="Lexus IS 250 after detailing, third view"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            AFTER
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            EXTERIOR
+                        </strong>
+
+                        <span>
+                            Finished result
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LEXUS PAIR 4 -->
+
+                <article class="comparison-card before">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/lexus-before-04.webp"
+                            alt="Lexus IS 250 before detailing, fourth view"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            BEFORE
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            EXTERIOR
+                        </strong>
+
+                        <span>
+                            Before detailing
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="comparison-card after">
+
+                    <div class="comparison-card-image">
+
+                        <img
+                            src="images/lexus-after-04.webp"
+                            alt="Lexus IS 250 after detailing, fourth view"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="comparison-card-label">
+                            AFTER
+                        </span>
+
+                    </div>
+
+                    <div class="comparison-card-content">
+
+                        <strong>
+                            EXTERIOR
+                        </strong>
+
+                        <span>
+                            Finished result
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="gallery-description">
+
+                <p>
+                    Lexus IS 250 completed with the Enhance Gold
+                    Package. The vehicle received a complete
+                    interior and exterior refresh, including
+                    detailed wheel and tire cleaning.
+                </p>
+
+                <a
+                    href="quote.html"
+                    class="text-link"
                 >
+                    Get Your Vehicle Enhanced →
+                </a>
 
             </div>
 
-            <span class="before-after-label before">
-                BEFORE
-            </span>
+        </article>
 
-            <span class="before-after-label after">
-                AFTER
-            </span>
 
-            <div class="before-after-divider"></div>
+        <!-- =================================================
+             CTA
+        ================================================== -->
 
-            <button
-                class="before-after-handle"
-                type="button"
-                aria-label="Drag to compare before and after"
-            >
-                ↔
-            </button>
-
-            <span
-                class="gallery-view-icon"
-                data-lightbox-image="images/mercedes-after-wheel.webp"
-                data-lightbox-alt="Mercedes-Benz CLS 550 wheel after cleaning"
-            >
-                ↗
-            </span>
-
-            <div class="before-after-caption">
-
-                <strong>
-                    WHEEL DETAIL
-                </strong>
-
-                <span>
-                    Cleaning transformation
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <!-- PASSENGER FOOTWELL -->
-
-        <div
-            class="before-after-card"
-            data-before-after
-        >
-
-            <img
-                src="images/mercedes-after-passenger-footwell.webp"
-                alt="Mercedes-Benz CLS 550 passenger footwell after detailing"
-            >
-
-            <div class="before-after-before">
-
-                <img
-                    src="images/mercedes-before-passenger-footwell.webp"
-                    alt=""
-                >
-
-            </div>
-
-            <span class="before-after-label before">
-                BEFORE
-            </span>
-
-            <span class="before-after-label after">
-                AFTER
-            </span>
-
-            <div class="before-after-divider"></div>
-
-            <button
-                class="before-after-handle"
-                type="button"
-                aria-label="Drag to compare before and after"
-            >
-                ↔
-            </button>
-
-            <span
-                class="gallery-view-icon"
-                data-lightbox-image="images/mercedes-after-passenger-footwell.webp"
-                data-lightbox-alt="Mercedes-Benz CLS 550 passenger footwell after detailing"
-            >
-                ↗
-            </span>
-
-            <div class="before-after-caption">
-
-                <strong>
-                    INTERIOR
-                </strong>
-
-                <span>
-                    Passenger area
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <!-- INTERIOR -->
-
-        <div
-            class="before-after-card"
-            data-before-after
-        >
-
-            <img
-                src="images/mercedes-after-interior.webp"
-                alt="Mercedes-Benz CLS 550 interior after detailing"
-            >
-
-            <div class="before-after-before">
-
-                <img
-                    src="images/mercedes-before-interior.webp"
-                    alt=""
-                >
-
-            </div>
-
-            <span class="before-after-label before">
-                BEFORE
-            </span>
-
-            <span class="before-after-label after">
-                AFTER
-            </span>
-
-            <div class="before-after-divider"></div>
-
-            <button
-                class="before-after-handle"
-                type="button"
-                aria-label="Drag to compare before and after"
-            >
-                ↔
-            </button>
-
-            <span
-                class="gallery-view-icon"
-                data-lightbox-image="images/mercedes-after-interior.webp"
-                data-lightbox-alt="Mercedes-Benz CLS 550 interior after detailing"
-            >
-                ↗
-            </span>
-
-            <div class="before-after-caption">
-
-                <strong>
-                    INTERIOR
-                </strong>
-
-                <span>
-                    Cabin transformation
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <!-- TRUNK -->
-
-        <div
-            class="before-after-card"
-            data-before-after
-        >
-
-            <img
-                src="images/mercedes-after-trunk.webp"
-                alt="Mercedes-Benz CLS 550 trunk after detailing"
-            >
-
-            <div class="before-after-before">
-
-                <img
-                    src="images/mercedes-before-trunk.webp"
-                    alt=""
-                >
-
-            </div>
-
-            <span class="before-after-label before">
-                BEFORE
-            </span>
-
-            <span class="before-after-label after">
-                AFTER
-            </span>
-
-            <div class="before-after-divider"></div>
-
-            <button
-                class="before-after-handle"
-                type="button"
-                aria-label="Drag to compare before and after"
-            >
-                ↔
-            </button>
-
-            <span
-                class="gallery-view-icon"
-                data-lightbox-image="images/mercedes-after-trunk.webp"
-                data-lightbox-alt="Mercedes-Benz CLS 550 trunk after detailing"
-            >
-                ↗
-            </span>
-
-            <div class="before-after-caption">
-
-                <strong>
-                    INTERIOR
-                </strong>
-
-                <span>
-                    Trunk transformation
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="gallery-description">
-
-        <p>
-            Mercedes-Benz CLS 550 completed with the Enhance Gold Package,
-            including exterior hand wash, wheel and tire cleaning,
-            interior cleaning, glass cleaning, and final presentation inspection.
-            Compare each area before and after to see the transformation.
-        </p>
-
-        <a
-            href="quote.html"
-            class="text-link"
-        >
-            Get Your Vehicle Enhanced →
-        </a>
-
-    </div>
-
-</article>
-
-
-<!-- =================================================
-     LEXUS PROJECT
-================================================== -->
-
-<article
-    class="gallery-project"
-    id="lexus"
->
-
-    <div class="gallery-project-heading">
-
-        <div>
-
-            <span class="project-number">
-                02
-            </span>
+        <section class="gallery-coming-soon">
 
             <p class="eyebrow">
-                ENHANCE GOLD
+                MORE TRANSFORMATIONS COMING
             </p>
 
-            <h3>
-                Lexus IS 250
-            </h3>
-
-        </div>
-
-        <div class="project-meta">
-
-            <span>
-                EXTERIOR + INTERIOR
-            </span>
-
-            <span>
-                BEFORE / AFTER
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="before-after-grid">
-
-
-        <!-- FRONT -->
-
-        <div
-            class="before-after-card"
-            data-before-after
-        >
-
-            <img
-                src="images/lexus-is250-after-front.webp"
-                alt="Lexus IS 250 after detailing, front exterior"
-            >
-
-            <div class="before-after-before">
-
-                <img
-                    src="images/lexus-is250-before-front.webp"
-                    alt=""
-                >
-
-            </div>
-
-            <span class="before-after-label before">
-                BEFORE
-            </span>
-
-            <span class="before-after-label after">
-                AFTER
-            </span>
-
-            <div class="before-after-divider"></div>
-
-            <button
-                class="before-after-handle"
-                type="button"
-                aria-label="Drag to compare before and after"
-            >
-                ↔
-            </button>
-
-            <span
-                class="gallery-view-icon"
-                data-lightbox-image="images/lexus-is250-after-front.webp"
-                data-lightbox-alt="Lexus IS 250 after detailing, front exterior"
-            >
-                ↗
-            </span>
-
-            <div class="before-after-caption">
-
-                <strong>
-                    EXTERIOR
-                </strong>
-
+            <h2>
+                Your Vehicle
                 <span>
-                    Front transformation
+                    Could Be Next.
                 </span>
+            </h2>
 
-            </div>
+            <p>
+                We're constantly adding new projects.
+                If you're ready to see what we can do
+                with your vehicle, let's talk.
+            </p>
 
-        </div>
-
-
-        <!-- FRONT THREE QUARTER -->
-
-        <div
-            class="before-after-card"
-            data-before-after
-        >
-
-            <img
-                src="images/lexus-is250-after-front-three-quarter.webp"
-                alt="Lexus IS 250 after detailing, front three-quarter view"
+            <a
+                href="quote.html"
+                class="btn btn-primary"
             >
+                Request A Quote
+            </a>
 
-            <div class="before-after-before">
-
-                <img
-                    src="images/lexus-is250-before-front-three-quarter.webp"
-                    alt=""
-                >
-
-            </div>
-
-            <span class="before-after-label before">
-                BEFORE
-            </span>
-
-            <span class="before-after-label after">
-                AFTER
-            </span>
-
-            <div class="before-after-divider"></div>
-
-            <button
-                class="before-after-handle"
-                type="button"
-                aria-label="Drag to compare before and after"
-            >
-                ↔
-            </button>
-
-            <span
-                class="gallery-view-icon"
-                data-lightbox-image="images/lexus-is250-after-front-three-quarter.webp"
-                data-lightbox-alt="Lexus IS 250 after detailing, front three-quarter view"
-            >
-                ↗
-            </span>
-
-            <div class="before-after-caption">
-
-                <strong>
-                    EXTERIOR
-                </strong>
-
-                <span>
-                    Featured transformation
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <!-- REAR -->
-
-        <div
-            class="before-after-card"
-            data-before-after
-        >
-
-            <img
-                src="images/lexus-is250-after-rear.webp"
-                alt="Lexus IS 250 after detailing, rear exterior"
-            >
-
-            <div class="before-after-before">
-
-                <img
-                    src="images/lexus-is250-before-rear.webp"
-                    alt=""
-                >
-
-            </div>
-
-            <span class="before-after-label before">
-                BEFORE
-            </span>
-
-            <span class="before-after-label after">
-                AFTER
-            </span>
-
-            <div class="before-after-divider"></div>
-
-            <button
-                class="before-after-handle"
-                type="button"
-                aria-label="Drag to compare before and after"
-            >
-                ↔
-            </button>
-
-            <span
-                class="gallery-view-icon"
-                data-lightbox-image="images/lexus-is250-after-rear.webp"
-                data-lightbox-alt="Lexus IS 250 after detailing, rear exterior"
-            >
-                ↗
-            </span>
-
-            <div class="before-after-caption">
-
-                <strong>
-                    EXTERIOR
-                </strong>
-
-                <span>
-                    Rear transformation
-                </span>
-
-            </div>
-
-        </div>
+        </section>
 
 
     </div>
-
-
-    <div class="gallery-description">
-
-        <p>
-            Lexus IS 250 completed with the Enhance Gold Package.
-            The vehicle received a complete interior and exterior refresh,
-            including detailed wheel and tire cleaning.
-        </p>
-
-        <a
-            href="quote.html"
-            class="text-link"
-        >
-            Get Your Vehicle Enhanced →
-        </a>
-
-    </div>
-
-</article>
-
-
-<!-- =================================================
-     MORE WORK CTA
-================================================== -->
-
-<section class="gallery-coming-soon">
-
-    <p class="eyebrow">
-        MORE TRANSFORMATIONS COMING
-    </p>
-
-    <h2>
-        Your Vehicle
-        <span class="gold-text">
-            Could Be Next.
-        </span>
-    </h2>
-
-    <p>
-        We're constantly adding new projects to the gallery.
-        If you're ready to see what we can do with your vehicle,
-        let's talk.
-    </p>
-
-    <a
-        href="quote.html"
-        class="btn btn-primary"
-    >
-        Request A Quote
-    </a>
 
 </section>
 
-
-</div>
-
-</section>
 
 </main>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
 <footer class="site-footer">
 
     <div class="container footer-grid">
@@ -1470,8 +1738,9 @@
             </a>
 
             <p>
-                Premium mobile detailing delivered throughout
-                Alameda, Oakland, San Francisco and the Bay Area.
+                Premium mobile detailing delivered
+                throughout Alameda, Oakland,
+                San Francisco and the Bay Area.
             </p>
 
         </div>
@@ -1560,12 +1829,8 @@
     <div class="container footer-bottom">
 
         <p>
-            © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
-            All rights reserved.
-        </p>
-
-        <p>
-            We come to you. You relax. We Enhance.
+            © 2026 Enhance My Ride Auto Spa &
+            Mobile Detailing. All rights reserved.
         </p>
 
     </div>
@@ -1573,21 +1838,28 @@
 </footer>
 
 
-<a
-    href="tel:+13233271806"
-    class="mobile-call-button"
-    aria-label="Call Enhance My Ride"
->
+<!-- =====================================================
+     MOBILE FLOATING ACTION BAR
+====================================================== -->
 
-    <span class="call-icon">
-        ☎
-    </span>
+<div class="mobile-action-bar">
 
-    <span>
-        CALL
-    </span>
+    <a href="quote.html">
+        GET A QUOTE
+    </a>
 
-</a>
+    <a href="tel:+13233271806">
+        CALL / TEXT
+    </a>
+
+</div>
+
+
+<!-- =====================================================
+     GLOBAL JAVASCRIPT
+====================================================== -->
+
+<script src="js/script.js"></script>
 
 
 <!-- =====================================================
@@ -1595,7 +1867,7 @@
 ====================================================== -->
 
 <div
-    class="lightbox"
+    class="gallery-lightbox"
     id="galleryLightbox"
     aria-hidden="true"
 >
@@ -1610,7 +1882,7 @@
     </button>
 
     <button
-        class="lightbox-arrow lightbox-prev"
+        class="lightbox-prev"
         id="lightboxPrev"
         type="button"
         aria-label="Previous image"
@@ -1619,14 +1891,13 @@
     </button>
 
     <img
+        id="lightboxImage"
         src=""
         alt=""
-        class="lightbox-image"
-        id="lightboxImage"
     >
 
     <button
-        class="lightbox-arrow lightbox-next"
+        class="lightbox-next"
         id="lightboxNext"
         type="button"
         aria-label="Next image"
@@ -1634,196 +1905,14 @@
         ›
     </button>
 
-    <div
-        class="lightbox-counter"
-        id="lightboxCounter"
-    >
-        1 / 1
-    </div>
-
 </div>
 
-
-<script src="js/script.js"></script>
-
-
-<!-- =====================================================
-     BEFORE / AFTER + LIGHTBOX JAVASCRIPT
-====================================================== -->
 
 <script>
 
 document.addEventListener(
     "DOMContentLoaded",
     function () {
-
-
-        /* =================================================
-           BEFORE / AFTER SLIDERS
-        ================================================= */
-
-        const sliders =
-            document.querySelectorAll(
-                "[data-before-after]"
-            );
-
-
-        sliders.forEach(
-            function (slider) {
-
-                const before =
-                    slider.querySelector(
-                        ".before-after-before"
-                    );
-
-                const divider =
-                    slider.querySelector(
-                        ".before-after-divider"
-                    );
-
-                const handle =
-                    slider.querySelector(
-                        ".before-after-handle"
-                    );
-
-
-                let dragging = false;
-
-
-                function updateSlider(clientX) {
-
-                    const rect =
-                        slider.getBoundingClientRect();
-
-                    let percentage =
-                        ((clientX - rect.left) /
-                            rect.width) *
-                        100;
-
-
-                    percentage =
-                        Math.max(
-                            0,
-                            Math.min(
-                                100,
-                                percentage
-                            )
-                        );
-
-
-                    before.style.width =
-                        percentage + "%";
-
-                    divider.style.left =
-                        percentage + "%";
-
-                    handle.style.left =
-                        percentage + "%";
-
-                }
-
-
-                function startDrag(event) {
-
-                    dragging = true;
-
-                    document.body.style.userSelect =
-                        "none";
-
-                    if (
-                        event.type ===
-                        "pointerdown"
-                    ) {
-                        slider.setPointerCapture(
-                            event.pointerId
-                        );
-
-                        updateSlider(
-                            event.clientX
-                        );
-                    }
-
-                }
-
-
-                function moveDrag(event) {
-
-                    if (!dragging) {
-                        return;
-                    }
-
-                    updateSlider(
-                        event.clientX
-                    );
-
-                }
-
-
-                function stopDrag() {
-
-                    dragging = false;
-
-                    document.body.style.userSelect =
-                        "";
-
-                }
-
-
-                slider.addEventListener(
-                    "pointerdown",
-                    startDrag
-                );
-
-                slider.addEventListener(
-                    "pointermove",
-                    moveDrag
-                );
-
-                slider.addEventListener(
-                    "pointerup",
-                    stopDrag
-                );
-
-                slider.addEventListener(
-                    "pointercancel",
-                    stopDrag
-                );
-
-
-                slider.addEventListener(
-                    "click",
-                    function (event) {
-
-                        if (
-                            event.target.closest(
-                                ".gallery-view-icon"
-                            )
-                        ) {
-                            return;
-                        }
-
-                        if (
-                            event.target.closest(
-                                ".before-after-handle"
-                            )
-                        ) {
-                            return;
-                        }
-
-                        updateSlider(
-                            event.clientX
-                        );
-
-                    }
-                );
-
-            }
-        );
-
-
-        /* =================================================
-           LIGHTBOX
-        ================================================= */
 
         const lightbox =
             document.getElementById(
@@ -1835,66 +1924,66 @@ document.addEventListener(
                 "lightboxImage"
             );
 
-        const lightboxClose =
+        const closeButton =
             document.getElementById(
                 "lightboxClose"
             );
 
-        const lightboxPrev =
+        const prevButton =
             document.getElementById(
                 "lightboxPrev"
             );
 
-        const lightboxNext =
+        const nextButton =
             document.getElementById(
                 "lightboxNext"
             );
 
-        const lightboxCounter =
-            document.getElementById(
-                "lightboxCounter"
-            );
+        const images = [
+            ...document.querySelectorAll(
+                ".comparison-card-image img"
+            )
+        ];
 
-
-        const lightboxTriggers =
-            Array.from(
-                document.querySelectorAll(
-                    "[data-lightbox-image]"
-                )
-            );
-
+        if (
+            !lightbox ||
+            !lightboxImage ||
+            !images.length
+        ) {
+            return;
+        }
 
         let currentIndex = 0;
 
 
-        function updateLightbox() {
+        function showImage(index) {
 
-            const trigger =
-                lightboxTriggers[
-                    currentIndex
-                ];
+            if (index < 0) {
+                index =
+                    images.length - 1;
+            }
 
+            if (
+                index >=
+                images.length
+            ) {
+                index = 0;
+            }
+
+            currentIndex = index;
 
             lightboxImage.src =
-                trigger.dataset.lightboxImage;
-
+                images[index].src;
 
             lightboxImage.alt =
-                trigger.dataset.lightboxAlt || "";
-
-
-            lightboxCounter.textContent =
-                `${currentIndex + 1} / ${lightboxTriggers.length}`;
+                images[index].alt || "";
 
         }
 
 
         function openLightbox(index) {
 
-            currentIndex =
-                index;
-
-            updateLightbox();
+            showImage(index);
 
             lightbox.classList.add(
                 "active"
@@ -1922,69 +2011,23 @@ document.addEventListener(
                 "true"
             );
 
-            lightboxImage.src =
-                "";
-
             document.body.style.overflow =
                 "";
 
         }
 
 
-        function showPrevious() {
+        images.forEach(
+            function (image, index) {
 
-            currentIndex--;
+                image.style.cursor =
+                    "zoom-in";
 
-            if (
-                currentIndex < 0
-            ) {
-
-                currentIndex =
-                    lightboxTriggers.length - 1;
-
-            }
-
-            updateLightbox();
-
-        }
-
-
-        function showNext() {
-
-            currentIndex++;
-
-            if (
-                currentIndex >=
-                lightboxTriggers.length
-            ) {
-
-                currentIndex =
-                    0;
-
-            }
-
-            updateLightbox();
-
-        }
-
-
-        lightboxTriggers.forEach(
-            function (
-                trigger,
-                index
-            ) {
-
-                trigger.addEventListener(
+                image.addEventListener(
                     "click",
-                    function (
-                        event
-                    ) {
+                    function () {
 
-                        event.stopPropagation();
-
-                        openLightbox(
-                            index
-                        );
+                        openLightbox(index);
 
                     }
                 );
@@ -1993,37 +2036,45 @@ document.addEventListener(
         );
 
 
-        lightboxClose.addEventListener(
+        closeButton.addEventListener(
             "click",
             closeLightbox
         );
 
 
-        lightboxPrev.addEventListener(
+        prevButton.addEventListener(
             "click",
-            showPrevious
+            function () {
+
+                showImage(
+                    currentIndex - 1
+                );
+
+            }
         );
 
 
-        lightboxNext.addEventListener(
+        nextButton.addEventListener(
             "click",
-            showNext
+            function () {
+
+                showImage(
+                    currentIndex + 1
+                );
+
+            }
         );
 
 
         lightbox.addEventListener(
             "click",
-            function (
-                event
-            ) {
+            function (event) {
 
                 if (
                     event.target ===
                     lightbox
                 ) {
-
                     closeLightbox();
-
                 }
 
             }
@@ -2032,48 +2083,39 @@ document.addEventListener(
 
         document.addEventListener(
             "keydown",
-            function (
-                event
-            ) {
+            function (event) {
 
                 if (
                     !lightbox.classList.contains(
                         "active"
                     )
                 ) {
-
                     return;
-
                 }
-
 
                 if (
                     event.key ===
                     "Escape"
                 ) {
-
                     closeLightbox();
-
                 }
-
 
                 if (
                     event.key ===
                     "ArrowLeft"
                 ) {
-
-                    showPrevious();
-
+                    showImage(
+                        currentIndex - 1
+                    );
                 }
-
 
                 if (
                     event.key ===
                     "ArrowRight"
                 ) {
-
-                    showNext();
-
+                    showImage(
+                        currentIndex + 1
+                    );
                 }
 
             }
