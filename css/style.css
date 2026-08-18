@@ -10292,3 +10292,216 @@ p {
     }
 
 }
+/* =====================================================
+   MOBILE LAYOUT / OVERLAP FIXES
+   Enhance My Ride
+===================================================== */
+
+@media (max-width: 700px) {
+
+    /* -------------------------------------------------
+       GENERAL MOBILE FLOW
+    ------------------------------------------------- */
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    main {
+        overflow-x: hidden;
+    }
+
+
+    /* -------------------------------------------------
+       ADD-ON / SPECIALTY CARDS
+       Prevent badge + specialty label overlap
+    ------------------------------------------------- */
+
+    .addon-card,
+    .specialty-card,
+    .service-card,
+    .enhancement-card {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .addon-card .featured-badge,
+    .specialty-card .featured-badge,
+    .service-card .featured-badge,
+    .enhancement-card .featured-badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 5;
+    }
+
+    .addon-card .specialty-number,
+    .specialty-card .specialty-number,
+    .service-card .specialty-number,
+    .enhancement-card .specialty-number {
+        display: block;
+        margin-bottom: 42px;
+    }
+
+    .addon-card h2,
+    .addon-card h3,
+    .specialty-card h2,
+    .specialty-card h3,
+    .service-card h2,
+    .service-card h3,
+    .enhancement-card h2,
+    .enhancement-card h3 {
+        position: relative;
+        z-index: 2;
+    }
+
+
+    /* -------------------------------------------------
+       COMMON CARD LABEL → TITLE SPACING
+       Stops small gold labels from touching headings
+    ------------------------------------------------- */
+
+    .eyebrow {
+        position: relative;
+        z-index: 2;
+    }
+
+    .eyebrow + h1,
+    .eyebrow + h2,
+    .eyebrow + h3 {
+        margin-top: 18px;
+    }
+
+
+    /* -------------------------------------------------
+       SERVICE AREA CARDS
+       Fix:
+       "01 • PRIMARY"
+       overlapping
+       "Alameda"
+    ------------------------------------------------- */
+
+    .area-card,
+    .service-area-card,
+    .location-card,
+    .service-location-card {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .area-card .card-number,
+    .service-area-card .card-number,
+    .location-card .card-number,
+    .service-location-card .card-number {
+        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        margin-bottom: 14px;
+        line-height: 1.2;
+    }
+
+    .area-card h2,
+    .area-card h3,
+    .service-area-card h2,
+    .service-area-card h3,
+    .location-card h2,
+    .location-card h3,
+    .service-location-card h2,
+    .service-location-card h3 {
+        position: relative;
+        top: auto;
+        margin-top: 0;
+        line-height: 1.05;
+    }
+
+
+    /* -------------------------------------------------
+       LOCATION META LABELS
+       Covers classes commonly used for:
+       PRIMARY / EAST BAY / etc.
+    ------------------------------------------------- */
+
+    .location-meta,
+    .area-meta,
+    .service-area-meta,
+    .location-label,
+    .area-label {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        display: block !important;
+        margin-bottom: 12px !important;
+        line-height: 1.2 !important;
+    }
+
+
+    /* -------------------------------------------------
+       ABOUT / EXPERIENCE FEATURE BLOCK
+       Let the graphic/card flow naturally
+    ------------------------------------------------- */
+
+    .about-image,
+    .about-visual,
+    .experience-image,
+    .experience-visual,
+    .about-feature-image,
+    .experience-card {
+        position: relative;
+        height: auto;
+        min-height: 0;
+    }
+
+    .about-image img,
+    .about-visual img,
+    .experience-image img,
+    .experience-visual img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+
+
+    /* -------------------------------------------------
+       MOBILE SECTION HEADINGS
+    ------------------------------------------------- */
+
+    .center-heading {
+        position: relative;
+        z-index: 2;
+    }
+
+    .center-heading h1,
+    .center-heading h2 {
+        position: relative;
+        margin-top: 14px;
+    }
+
+
+    /* -------------------------------------------------
+       PREVENT LARGE DESKTOP SPACING FROM
+       CARRYING INTO MOBILE
+    ------------------------------------------------- */
+
+    .section {
+        overflow: hidden;
+    }
+
+
+    /* -------------------------------------------------
+       FLOATING CALL BUTTON
+       Keep it above page content but away from
+       text/card positioning
+    ------------------------------------------------- */
+
+    .floating-call-button,
+    .call-button,
+    .floating-action-button {
+        z-index: 9998;
+    }
+
+}
