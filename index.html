@@ -346,6 +346,210 @@
 
 
         /* =====================================================
+           HOMEPAGE FEATURE IMAGES
+        ===================================================== */
+
+        .home-image-feature {
+
+            margin-top: 70px;
+
+            display: grid;
+
+            grid-template-columns:
+                1.15fr .85fr;
+
+            gap: 45px;
+
+            align-items: center;
+
+        }
+
+
+        .home-image-feature.reverse {
+
+            grid-template-columns:
+                .85fr 1.15fr;
+
+        }
+
+
+        .home-image-feature-image {
+
+            position: relative;
+
+            overflow: hidden;
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .10
+                );
+
+            background: #0b0b0b;
+
+        }
+
+
+        .home-image-feature-image img {
+
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition:
+                transform .7s ease;
+
+        }
+
+
+        .home-image-feature-image:hover img {
+
+            transform:
+                scale(1.035);
+
+        }
+
+
+        .home-image-feature-content {
+
+            max-width: 570px;
+
+        }
+
+
+        .home-image-feature-content h3 {
+
+            margin:
+                12px 0 18px;
+
+            color: #fff;
+
+            font-size:
+                clamp(
+                    1.8rem,
+                    3vw,
+                    3rem
+                );
+
+            line-height: 1.05;
+
+        }
+
+
+        .home-image-feature-content p {
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    .58
+                );
+
+            line-height: 1.8;
+
+        }
+
+
+        .home-image-feature-label {
+
+            position: absolute;
+
+            left: 18px;
+
+            bottom: 18px;
+
+            padding:
+                9px 12px;
+
+            border:
+                1px solid
+                rgba(
+                    212,
+                    175,
+                    55,
+                    .45
+                );
+
+            background:
+                rgba(
+                    5,
+                    5,
+                    5,
+                    .78
+                );
+
+            color: #d4af37;
+
+            font-size: 8px;
+
+            font-weight: 800;
+
+            letter-spacing: .16em;
+
+        }
+
+
+        .home-visual-strip {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap: 14px;
+
+            margin-top: 55px;
+
+        }
+
+
+        .home-visual-strip a {
+
+            display: block;
+
+            overflow: hidden;
+
+            background: #0b0b0b;
+
+        }
+
+
+        .home-visual-strip img {
+
+            width: 100%;
+
+            aspect-ratio: 1 / 1;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition:
+                transform .6s ease;
+
+        }
+
+
+        .home-visual-strip a:hover img {
+
+            transform:
+                scale(1.05);
+
+        }
+
+
+        /* =====================================================
            TRANSFORMATIONS
         ===================================================== */
 
@@ -1489,12 +1693,14 @@
             padding: 130px 0;
 
             background:
-                radial-gradient(
-                    circle at center,
-                    rgba(212,175,55,.12),
-                    transparent 48%
+                linear-gradient(
+                    90deg,
+                    rgba(5,5,5,.96),
+                    rgba(5,5,5,.78),
+                    rgba(5,5,5,.92)
                 ),
-                #050505;
+                url("images/mercedes-after-front.webp")
+                center / cover no-repeat;
 
             border-top:
                 1px solid
@@ -1795,6 +2001,67 @@
                 border-left: 0;
 
                 padding-left: 0;
+
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            .home-image-feature,
+            .home-image-feature.reverse {
+
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+
+                margin-top: 50px;
+
+            }
+
+
+            .home-image-feature.reverse
+            .home-image-feature-content {
+
+                order: 1;
+
+            }
+
+
+            .home-image-feature.reverse
+            .home-image-feature-image {
+
+                order: 2;
+
+            }
+
+
+            .home-image-feature-content {
+
+                max-width: none;
+
+            }
+
+
+            .home-image-feature-image img {
+
+                aspect-ratio: 4 / 3;
+
+            }
+
+
+            .home-visual-strip {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .home-visual-strip a:last-child {
+
+                display: none;
 
             }
 
@@ -2362,6 +2629,63 @@
 
         </div>
 
+
+        <!-- MERCEDES INTERIOR FEATURE -->
+
+        <div class="home-image-feature">
+
+            <div class="home-image-feature-image">
+
+                <img
+                    src="images/mercedes-after-interior.webp"
+                    alt="Mercedes-Benz CLS 550 professionally detailed interior"
+                    loading="lazy"
+                    decoding="async"
+                >
+
+                <span class="home-image-feature-label">
+                    ENHANCED INTERIOR
+                </span>
+
+            </div>
+
+
+            <div class="home-image-feature-content">
+
+                <p class="eyebrow">
+                    THE DIFFERENCE IS IN THE DETAILS
+                </p>
+
+                <h3>
+
+                    A Cleaner Interior.
+
+                    <span class="gold-text">
+                        A Better Experience.
+                    </span>
+
+                </h3>
+
+                <p>
+
+                    From the seats and dashboard to the
+                    center console and hard-to-reach areas,
+                    we focus on the details that make your
+                    vehicle feel completely refreshed.
+
+                </p>
+
+                <a
+                    href="gallery.html#mercedes"
+                    class="text-link"
+                >
+                    See The Mercedes Transformation →
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
 
 </section>
@@ -2417,7 +2741,7 @@
                 >
 
                     <img
-                        src="images/gallery/mercedes-front-three-quarter.webp"
+                        src="images/mercedes-after-front.webp"
                         alt="Mercedes-Benz CLS 550 after professional detailing"
                         loading="lazy"
                         decoding="async"
@@ -2460,7 +2784,7 @@
                 >
 
                     <img
-                        src="images/gallery/lexus-is250-front.webp"
+                        src="images/lexus-is250-after-front-three-quarter.webp"
                         alt="Lexus IS 250 after professional detailing"
                         loading="lazy"
                         decoding="async"
@@ -2979,6 +3303,57 @@
 
         </div>
 
+
+        <!-- VISUAL DETAILING STRIP -->
+
+        <div class="home-visual-strip">
+
+            <a
+                href="gallery.html#mercedes"
+                aria-label="View Mercedes detailed wheel"
+            >
+
+                <img
+                    src="images/mercedes-after-wheel.webp"
+                    alt="Mercedes-Benz wheel after professional detailing"
+                    loading="lazy"
+                    decoding="async"
+                >
+
+            </a>
+
+
+            <a
+                href="gallery.html#mercedes"
+                aria-label="View Mercedes detailed exterior"
+            >
+
+                <img
+                    src="images/mercedes-after-front.webp"
+                    alt="Mercedes-Benz CLS 550 after exterior detailing"
+                    loading="lazy"
+                    decoding="async"
+                >
+
+            </a>
+
+
+            <a
+                href="gallery.html#lexus"
+                aria-label="View Lexus detailed exterior"
+            >
+
+                <img
+                    src="images/lexus-is250-after-front-three-quarter.webp"
+                    alt="Lexus IS 250 after professional detailing"
+                    loading="lazy"
+                    decoding="async"
+                >
+
+            </a>
+
+        </div>
+
     </div>
 
 </section>
@@ -3213,6 +3588,63 @@
 
             </div>
 
+
+        </div>
+
+
+        <!-- LEXUS INTERIOR FEATURE -->
+
+        <div class="home-image-feature reverse">
+
+            <div class="home-image-feature-content">
+
+                <p class="eyebrow">
+                    PREMIUM RESULTS
+                </p>
+
+                <h3>
+
+                    It's More Than Clean.
+
+                    <span class="gold-text">
+                        It's Enhanced.
+                    </span>
+
+                </h3>
+
+                <p>
+
+                    We combine professional products,
+                    careful technique, and attention to
+                    detail to create a finished vehicle
+                    that looks and feels refreshed.
+
+                </p>
+
+                <a
+                    href="gallery.html#lexus"
+                    class="text-link"
+                >
+                    Explore More Results →
+                </a>
+
+            </div>
+
+
+            <div class="home-image-feature-image">
+
+                <img
+                    src="images/lexus-is250-after-driver-interior.webp"
+                    alt="Lexus IS 250 professionally detailed interior"
+                    loading="lazy"
+                    decoding="async"
+                >
+
+                <span class="home-image-feature-label">
+                    LEXUS IS 250
+                </span>
+
+            </div>
 
         </div>
 
