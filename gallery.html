@@ -42,7 +42,6 @@
         ===================================================== */
 
         .gallery-hero {
-
             min-height: 58vh;
             min-height: 58svh;
 
@@ -51,45 +50,37 @@
 
             background:
                 radial-gradient(
-                    circle at 78% 45%,
+                    circle at 80% 45%,
                     rgba(212,175,55,.12),
                     transparent 38%
                 ),
                 #050505;
-
         }
 
 
         .gallery-hero h1 {
-
             margin: 0;
 
             font-size:
                 clamp(
-                    3.5rem,
+                    3.3rem,
                     7vw,
                     6.5rem
                 );
 
             line-height: .92;
-
             letter-spacing: -.045em;
-
         }
 
 
         .gallery-hero h1 span {
-
             display: block;
-
             color: #d4af37;
-
         }
 
 
         .gallery-hero-description {
-
-            max-width: 700px;
+            max-width: 690px;
 
             margin-top: 28px;
 
@@ -102,36 +93,28 @@
                 );
 
             font-size: 1rem;
-
             line-height: 1.8;
-
         }
 
 
         /* =====================================================
-           MAIN GALLERY
+           GALLERY MAIN
         ===================================================== */
 
         .gallery-main-section {
-
             padding:
                 105px 0
-                115px;
-
+                120px;
         }
 
 
         .gallery-intro {
-
             max-width: 800px;
-
-            margin-bottom: 80px;
-
+            margin-bottom: 85px;
         }
 
 
         .gallery-intro h2 {
-
             margin:
                 0 0 22px;
 
@@ -143,14 +126,11 @@
                 );
 
             line-height: .98;
-
             letter-spacing: -.04em;
-
         }
 
 
         .gallery-intro p:last-child {
-
             max-width: 720px;
 
             margin: 0;
@@ -164,7 +144,6 @@
                 );
 
             line-height: 1.8;
-
         }
 
 
@@ -173,14 +152,11 @@
         ===================================================== */
 
         .gallery-project {
-
-            margin-bottom: 115px;
-
+            margin-bottom: 120px;
         }
 
 
         .gallery-project + .gallery-project {
-
             padding-top: 110px;
 
             border-top:
@@ -191,12 +167,10 @@
                     255,
                     .08
                 );
-
         }
 
 
         .gallery-project-heading {
-
             display: flex;
 
             justify-content:
@@ -207,13 +181,11 @@
 
             gap: 30px;
 
-            margin-bottom: 34px;
-
+            margin-bottom: 38px;
         }
 
 
         .project-number {
-
             display: block;
 
             margin-bottom: 12px;
@@ -227,16 +199,12 @@
                 );
 
             font-size: 10px;
-
             font-weight: 800;
-
             letter-spacing: .18em;
-
         }
 
 
         .gallery-project-heading h3 {
-
             margin: 0;
 
             font-size:
@@ -247,14 +215,11 @@
                 );
 
             line-height: 1;
-
             letter-spacing: -.035em;
-
         }
 
 
         .project-meta {
-
             display: flex;
 
             gap: 9px;
@@ -263,12 +228,10 @@
 
             justify-content:
                 flex-end;
-
         }
 
 
         .project-meta span {
-
             padding:
                 9px 12px;
 
@@ -290,20 +253,16 @@
                 );
 
             font-size: 8px;
-
             font-weight: 800;
-
             letter-spacing: .13em;
-
         }
 
 
         /* =====================================================
-           COMPARISON HEADING
+           COMPARISON SECTION LABEL
         ===================================================== */
 
         .compare-heading {
-
             display: flex;
 
             align-items: center;
@@ -311,36 +270,28 @@
             gap: 16px;
 
             margin:
-                42px 0
+                48px 0
                 18px;
-
         }
 
 
-        .compare-heading:first-child {
-
+        .compare-heading:first-of-type {
             margin-top: 0;
-
         }
 
 
         .compare-heading span {
-
             color: #d4af37;
 
             font-size: 9px;
-
             font-weight: 800;
-
             letter-spacing: .17em;
 
             white-space: nowrap;
-
         }
 
 
         .compare-heading::after {
-
             content: "";
 
             height: 1px;
@@ -354,7 +305,6 @@
                     255,
                     .1
                 );
-
         }
 
 
@@ -363,7 +313,6 @@
         ===================================================== */
 
         .comparison-slider {
-
             position: relative;
 
             width: 100%;
@@ -384,16 +333,22 @@
                 );
 
             user-select: none;
-
             -webkit-user-select: none;
 
             touch-action: pan-y;
-
         }
 
 
-        .comparison-slider img {
+        /*
+         * BOTH IMAGES ARE NOW FULL SIZE AND
+         * PERFECTLY STACKED.
+         *
+         * The AFTER image is clipped with
+         * clip-path instead of changing its
+         * width. This keeps the image aligned.
+         */
 
+        .comparison-image {
             position: absolute;
 
             inset: 0;
@@ -401,43 +356,61 @@
             width: 100%;
             height: 100%;
 
-            display: block;
-
             object-fit: cover;
 
-            pointer-events: none;
+            display: block;
 
+            pointer-events: none;
         }
 
 
         .comparison-before {
-
             z-index: 1;
-
         }
 
 
         .comparison-after {
-
             z-index: 2;
 
-            width: 50%;
-
-            overflow: hidden;
-
-            border-right:
-                2px solid
-                #d4af37;
-
+            clip-path:
+                inset(
+                    0 50% 0 0
+                );
         }
 
 
-        .comparison-after img {
+        /* =====================================================
+           SLIDER DIVIDER
+        ===================================================== */
 
-            width: 100vw;
+        .comparison-divider {
+            position: absolute;
 
-            max-width: none;
+            top: 0;
+            bottom: 0;
 
+            left: 50%;
+
+            z-index: 6;
+
+            width: 2px;
+
+            background:
+                #d4af37;
+
+            transform:
+                translateX(-50%);
+
+            pointer-events: none;
+
+            box-shadow:
+                0 0 20px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    .55
+                );
         }
 
 
@@ -446,63 +419,19 @@
         ===================================================== */
 
         .comparison-handle {
-
-            position: absolute;
-
-            top: 0;
-            bottom: 0;
-
-            left: 50%;
-
-            z-index: 5;
-
-            width: 0;
-
-            pointer-events: none;
-
-        }
-
-
-        .comparison-handle-line {
-
-            position: absolute;
-
-            top: 0;
-            bottom: 0;
-
-            left: -1px;
-
-            width: 2px;
-
-            background:
-                #d4af37;
-
-            box-shadow:
-                0 0 18px
-                rgba(
-                    0,
-                    0,
-                    0,
-                    .45
-                );
-
-        }
-
-
-        .comparison-handle-button {
-
             position: absolute;
 
             top: 50%;
-            left: 0;
+            left: 50%;
 
-            width: 52px;
-            height: 52px;
+            z-index: 7;
+
+            width: 54px;
+            height: 54px;
 
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
             transform:
@@ -520,48 +449,42 @@
             background:
                 #050505;
 
-            color: #d4af37;
+            color:
+                #d4af37;
 
-            font-size: 20px;
-
+            font-size: 21px;
             font-weight: 700;
 
             box-shadow:
-                0 8px 30px
+                0 10px 35px
                 rgba(
                     0,
                     0,
                     0,
-                    .5
+                    .55
                 );
 
+            pointer-events: none;
         }
 
 
-        .comparison-handle-button::before {
-
+        .comparison-handle::before {
             content: "‹";
-
-            margin-right: 2px;
-
+            margin-right: 3px;
         }
 
 
-        .comparison-handle-button::after {
-
+        .comparison-handle::after {
             content: "›";
-
-            margin-left: 2px;
-
+            margin-left: 3px;
         }
 
 
         /* =====================================================
-           SLIDER RANGE CONTROL
+           RANGE INPUT
         ===================================================== */
 
         .comparison-range {
-
             position: absolute;
 
             inset: 0;
@@ -577,21 +500,19 @@
 
             cursor:
                 ew-resize;
-
         }
 
 
         /* =====================================================
-           LABELS
+           BEFORE / AFTER LABELS
         ===================================================== */
 
         .comparison-label {
-
             position: absolute;
 
             top: 18px;
 
-            z-index: 6;
+            z-index: 8;
 
             padding:
                 8px 12px;
@@ -616,25 +537,19 @@
             color: #fff;
 
             font-size: 8px;
-
             font-weight: 800;
-
             letter-spacing: .16em;
 
             pointer-events: none;
-
         }
 
 
         .comparison-label.before {
-
             left: 18px;
-
         }
 
 
         .comparison-label.after {
-
             right: 18px;
 
             background:
@@ -645,16 +560,14 @@
 
             color:
                 #050505;
-
         }
 
 
         /* =====================================================
-           CAPTION
+           COMPARISON CAPTION
         ===================================================== */
 
         .comparison-caption {
-
             display: flex;
 
             justify-content:
@@ -681,27 +594,21 @@
 
             background:
                 #090909;
-
         }
 
 
         .comparison-caption strong {
-
             display: block;
 
             color: #fff;
 
             font-size: 10px;
-
             font-weight: 800;
-
             letter-spacing: .15em;
-
         }
 
 
         .comparison-caption span {
-
             display: block;
 
             margin-top: 5px;
@@ -715,12 +622,10 @@
                 );
 
             font-size: 11px;
-
         }
 
 
         .comparison-caption small {
-
             color:
                 rgba(
                     255,
@@ -730,14 +635,13 @@
                 );
 
             font-size: 9px;
-
             font-weight: 700;
-
             letter-spacing: .12em;
 
             text-transform:
                 uppercase;
 
+            white-space: nowrap;
         }
 
 
@@ -746,7 +650,6 @@
         ===================================================== */
 
         .gallery-description {
-
             display: flex;
 
             justify-content:
@@ -757,13 +660,11 @@
 
             gap: 30px;
 
-            margin-top: 28px;
-
+            margin-top: 30px;
         }
 
 
         .gallery-description p {
-
             max-width: 760px;
 
             margin: 0;
@@ -777,18 +678,15 @@
                 );
 
             font-size: .9rem;
-
             line-height: 1.8;
-
         }
 
 
         /* =====================================================
-           MORE WORK CTA
+           COMING SOON / CTA
         ===================================================== */
 
         .gallery-coming-soon {
-
             margin-top: 35px;
 
             padding:
@@ -817,12 +715,10 @@
                 #080808;
 
             text-align: center;
-
         }
 
 
         .gallery-coming-soon h2 {
-
             margin:
                 0 0 20px;
 
@@ -834,21 +730,16 @@
                 );
 
             line-height: .98;
-
             letter-spacing: -.04em;
-
         }
 
 
         .gallery-coming-soon h2 span {
-
             color: #d4af37;
-
         }
 
 
         .gallery-coming-soon p:not(.eyebrow) {
-
             max-width: 560px;
 
             margin:
@@ -864,160 +755,6 @@
                 );
 
             line-height: 1.7;
-
-        }
-
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
-
-        @media (max-width: 800px) {
-
-            .gallery-project-heading {
-
-                display: block;
-
-            }
-
-
-            .project-meta {
-
-                justify-content:
-                    flex-start;
-
-                margin-top: 20px;
-
-            }
-
-
-            .gallery-description {
-
-                display: block;
-
-            }
-
-
-            .gallery-description .text-link {
-
-                display: inline-block;
-
-                margin-top: 18px;
-
-            }
-
-        }
-
-
-        @media (max-width: 650px) {
-
-            .gallery-hero {
-
-                min-height: 48svh;
-
-            }
-
-
-            .gallery-main-section {
-
-                padding:
-                    75px 0
-                    85px;
-
-            }
-
-
-            .gallery-intro {
-
-                margin-bottom: 60px;
-
-            }
-
-
-            .gallery-project {
-
-                margin-bottom: 75px;
-
-            }
-
-
-            .gallery-project + .gallery-project {
-
-                padding-top: 75px;
-
-            }
-
-
-            .comparison-slider {
-
-                aspect-ratio:
-                    4 / 3;
-
-            }
-
-
-            .comparison-handle-button {
-
-                width: 46px;
-                height: 46px;
-
-                font-size: 18px;
-
-            }
-
-
-            .comparison-label {
-
-                top: 12px;
-
-                padding:
-                    7px 9px;
-
-                font-size: 7px;
-
-            }
-
-
-            .comparison-label.before {
-
-                left: 12px;
-
-            }
-
-
-            .comparison-label.after {
-
-                right: 12px;
-
-            }
-
-
-            .comparison-caption {
-
-                display: block;
-
-                padding:
-                    16px;
-
-            }
-
-
-            .comparison-caption small {
-
-                display: block;
-
-                margin-top: 10px;
-
-            }
-
-
-            .gallery-coming-soon {
-
-                padding:
-                    70px 20px;
-
-            }
-
         }
 
 
@@ -1026,7 +763,6 @@
         ===================================================== */
 
         .comparison-range:focus-visible {
-
             opacity: .01;
 
             outline:
@@ -1034,6 +770,127 @@
                 #d4af37;
 
             outline-offset: -4px;
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .gallery-project-heading {
+                display: block;
+            }
+
+
+            .project-meta {
+                justify-content:
+                    flex-start;
+
+                margin-top: 20px;
+            }
+
+
+            .gallery-description {
+                display: block;
+            }
+
+
+            .gallery-description .text-link {
+                display: inline-block;
+
+                margin-top: 18px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 650px) {
+
+            .gallery-hero {
+                min-height: 48svh;
+            }
+
+
+            .gallery-main-section {
+                padding:
+                    75px 0
+                    90px;
+            }
+
+
+            .gallery-intro {
+                margin-bottom: 65px;
+            }
+
+
+            .gallery-project {
+                margin-bottom: 80px;
+            }
+
+
+            .gallery-project + .gallery-project {
+                padding-top: 75px;
+            }
+
+
+            .comparison-slider {
+                aspect-ratio:
+                    4 / 3;
+            }
+
+
+            .comparison-handle {
+                width: 46px;
+                height: 46px;
+
+                font-size: 18px;
+            }
+
+
+            .comparison-label {
+                top: 12px;
+
+                padding:
+                    7px 9px;
+
+                font-size: 7px;
+            }
+
+
+            .comparison-label.before {
+                left: 12px;
+            }
+
+
+            .comparison-label.after {
+                right: 12px;
+            }
+
+
+            .comparison-caption {
+                display: block;
+
+                padding: 16px;
+            }
+
+
+            .comparison-caption small {
+                display: block;
+
+                margin-top: 10px;
+            }
+
+
+            .gallery-coming-soon {
+                padding:
+                    70px 20px;
+            }
 
         }
 
@@ -1159,7 +1016,7 @@
 
 
 <!-- =====================================================
-     GALLERY
+     MAIN GALLERY
 ====================================================== -->
 
 <section class="section gallery-main-section">
@@ -1182,9 +1039,10 @@
             </h2>
 
             <p>
-                Every comparison below uses matching areas
-                whenever possible. Drag the gold slider across
-                the vehicle to reveal the transformation.
+                Drag the gold slider across each vehicle
+                to reveal the transformation. We show
+                multiple areas so you can see the actual
+                work — not just one finished photo.
             </p>
 
         </div>
@@ -1221,7 +1079,11 @@
                 <div class="project-meta">
 
                     <span>
-                        EXTERIOR + INTERIOR
+                        EXTERIOR
+                    </span>
+
+                    <span>
+                        INTERIOR
                     </span>
 
                     <span>
@@ -1233,7 +1095,7 @@
             </div>
 
 
-            <!-- EXTERIOR -->
+            <!-- FRONT EXTERIOR -->
 
             <div class="compare-heading">
 
@@ -1250,7 +1112,7 @@
             >
 
                 <img
-                    class="comparison-before"
+                    class="comparison-image comparison-before"
                     src="images/gallery/mercedes-before-front.webp"
                     alt="Mercedes-Benz CLS 550 before detailing, front exterior"
                     loading="lazy"
@@ -1258,19 +1120,18 @@
                 >
 
 
-                <div
-                    class="comparison-after"
-                    data-after
+                <img
+                    class="comparison-image comparison-after"
+                    src="images/gallery/mercedes-front-three-quarter.webp"
+                    alt="Mercedes-Benz CLS 550 after detailing, front exterior"
+                    loading="lazy"
+                    decoding="async"
                 >
 
-                    <img
-                        src="images/gallery/mercedes-front-three-quarter.webp"
-                        alt="Mercedes-Benz CLS 550 after detailing, front exterior"
-                        loading="lazy"
-                        decoding="async"
-                    >
 
-                </div>
+                <div class="comparison-divider"></div>
+
+                <div class="comparison-handle"></div>
 
 
                 <span class="comparison-label before">
@@ -1282,25 +1143,13 @@
                 </span>
 
 
-                <div
-                    class="comparison-handle"
-                    data-handle
-                >
-
-                    <span class="comparison-handle-line"></span>
-
-                    <span class="comparison-handle-button"></span>
-
-                </div>
-
-
                 <input
                     class="comparison-range"
                     type="range"
                     min="0"
                     max="100"
                     value="50"
-                    aria-label="Compare Mercedes-Benz CLS 550 before and after front exterior"
+                    aria-label="Compare Mercedes-Benz CLS 550 front exterior"
                 >
 
             </div>
@@ -1315,19 +1164,19 @@
                     </strong>
 
                     <span>
-                        Drag the slider to reveal the finished result.
+                        Drag the slider to reveal the transformation.
                     </span>
 
                 </div>
 
                 <small>
-                    Before ↔ After
+                    BEFORE ↔ AFTER
                 </small>
 
             </div>
 
 
-            <!-- REAR -->
+            <!-- REAR EXTERIOR -->
 
             <div class="compare-heading">
 
@@ -1344,27 +1193,26 @@
             >
 
                 <img
-                    class="comparison-before"
+                    class="comparison-image comparison-before"
                     src="images/gallery/mercedes-before-rear-side.webp"
-                    alt="Mercedes-Benz CLS 550 before detailing, rear side"
+                    alt="Mercedes-Benz CLS 550 before detailing, rear exterior"
                     loading="lazy"
                     decoding="async"
                 >
 
 
-                <div
-                    class="comparison-after"
-                    data-after
+                <img
+                    class="comparison-image comparison-after"
+                    src="images/gallery/mercedes-rear-exterior.webp"
+                    alt="Mercedes-Benz CLS 550 after detailing, rear exterior"
+                    loading="lazy"
+                    decoding="async"
                 >
 
-                    <img
-                        src="images/gallery/mercedes-rear-exterior.webp"
-                        alt="Mercedes-Benz CLS 550 after detailing, rear exterior"
-                        loading="lazy"
-                        decoding="async"
-                    >
 
-                </div>
+                <div class="comparison-divider"></div>
+
+                <div class="comparison-handle"></div>
 
 
                 <span class="comparison-label before">
@@ -1376,25 +1224,13 @@
                 </span>
 
 
-                <div
-                    class="comparison-handle"
-                    data-handle
-                >
-
-                    <span class="comparison-handle-line"></span>
-
-                    <span class="comparison-handle-button"></span>
-
-                </div>
-
-
                 <input
                     class="comparison-range"
                     type="range"
                     min="0"
                     max="100"
                     value="50"
-                    aria-label="Compare Mercedes-Benz CLS 550 before and after rear exterior"
+                    aria-label="Compare Mercedes-Benz CLS 550 rear exterior"
                 >
 
             </div>
@@ -1409,19 +1245,19 @@
                     </strong>
 
                     <span>
-                        Exterior condition compared with the finished presentation.
+                        Compare the vehicle condition before and after service.
                     </span>
 
                 </div>
 
                 <small>
-                    Before ↔ After
+                    BEFORE ↔ AFTER
                 </small>
 
             </div>
 
 
-            <!-- INTERIOR -->
+            <!-- FRONT CABIN -->
 
             <div class="compare-heading">
 
@@ -1438,7 +1274,7 @@
             >
 
                 <img
-                    class="comparison-before"
+                    class="comparison-image comparison-before"
                     src="images/gallery/mercedes-before-cabin.webp"
                     alt="Mercedes-Benz CLS 550 interior before detailing"
                     loading="lazy"
@@ -1446,19 +1282,18 @@
                 >
 
 
-                <div
-                    class="comparison-after"
-                    data-after
+                <img
+                    class="comparison-image comparison-after"
+                    src="images/gallery/mercedes-driver-interior.webp"
+                    alt="Mercedes-Benz CLS 550 interior after detailing"
+                    loading="lazy"
+                    decoding="async"
                 >
 
-                    <img
-                        src="images/gallery/mercedes-driver-interior.webp"
-                        alt="Mercedes-Benz CLS 550 driver interior after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
 
-                </div>
+                <div class="comparison-divider"></div>
+
+                <div class="comparison-handle"></div>
 
 
                 <span class="comparison-label before">
@@ -1470,25 +1305,13 @@
                 </span>
 
 
-                <div
-                    class="comparison-handle"
-                    data-handle
-                >
-
-                    <span class="comparison-handle-line"></span>
-
-                    <span class="comparison-handle-button"></span>
-
-                </div>
-
-
                 <input
                     class="comparison-range"
                     type="range"
                     min="0"
                     max="100"
                     value="50"
-                    aria-label="Compare Mercedes-Benz CLS 550 interior before and after"
+                    aria-label="Compare Mercedes-Benz CLS 550 interior"
                 >
 
             </div>
@@ -1503,13 +1326,13 @@
                     </strong>
 
                     <span>
-                        Interior condition compared with the finished cabin.
+                        See the interior transformation from dirty to finished.
                     </span>
 
                 </div>
 
                 <small>
-                    Before ↔ After
+                    BEFORE ↔ AFTER
                 </small>
 
             </div>
@@ -1532,7 +1355,7 @@
             >
 
                 <img
-                    class="comparison-before"
+                    class="comparison-image comparison-before"
                     src="images/gallery/mercedes-before-trunk.webp"
                     alt="Mercedes-Benz CLS 550 trunk before detailing"
                     loading="lazy"
@@ -1540,19 +1363,18 @@
                 >
 
 
-                <div
-                    class="comparison-after"
-                    data-after
+                <img
+                    class="comparison-image comparison-after"
+                    src="images/gallery/mercedes-trunk.webp"
+                    alt="Mercedes-Benz CLS 550 trunk after detailing"
+                    loading="lazy"
+                    decoding="async"
                 >
 
-                    <img
-                        src="images/gallery/mercedes-trunk.webp"
-                        alt="Mercedes-Benz CLS 550 trunk after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
 
-                </div>
+                <div class="comparison-divider"></div>
+
+                <div class="comparison-handle"></div>
 
 
                 <span class="comparison-label before">
@@ -1564,25 +1386,13 @@
                 </span>
 
 
-                <div
-                    class="comparison-handle"
-                    data-handle
-                >
-
-                    <span class="comparison-handle-line"></span>
-
-                    <span class="comparison-handle-button"></span>
-
-                </div>
-
-
                 <input
                     class="comparison-range"
                     type="range"
                     min="0"
                     max="100"
                     value="50"
-                    aria-label="Compare Mercedes-Benz CLS 550 trunk before and after"
+                    aria-label="Compare Mercedes-Benz CLS 550 trunk"
                 >
 
             </div>
@@ -1597,13 +1407,13 @@
                     </strong>
 
                     <span>
-                        A clean, finished cargo area after service.
+                        Cargo area transformation after cleaning.
                     </span>
 
                 </div>
 
                 <small>
-                    Before ↔ After
+                    BEFORE ↔ AFTER
                 </small>
 
             </div>
@@ -1626,7 +1436,7 @@
             >
 
                 <img
-                    class="comparison-before"
+                    class="comparison-image comparison-before"
                     src="images/gallery/mercedes-before-wheel.webp"
                     alt="Mercedes-Benz CLS 550 wheel before cleaning"
                     loading="lazy"
@@ -1634,19 +1444,18 @@
                 >
 
 
-                <div
-                    class="comparison-after"
-                    data-after
+                <img
+                    class="comparison-image comparison-after"
+                    src="images/gallery/mercedes-wheel-01.webp"
+                    alt="Mercedes-Benz CLS 550 wheel after cleaning"
+                    loading="lazy"
+                    decoding="async"
                 >
 
-                    <img
-                        src="images/gallery/mercedes-wheel-01.webp"
-                        alt="Mercedes-Benz CLS 550 wheel after cleaning"
-                        loading="lazy"
-                        decoding="async"
-                    >
 
-                </div>
+                <div class="comparison-divider"></div>
+
+                <div class="comparison-handle"></div>
 
 
                 <span class="comparison-label before">
@@ -1658,25 +1467,13 @@
                 </span>
 
 
-                <div
-                    class="comparison-handle"
-                    data-handle
-                >
-
-                    <span class="comparison-handle-line"></span>
-
-                    <span class="comparison-handle-button"></span>
-
-                </div>
-
-
                 <input
                     class="comparison-range"
                     type="range"
                     min="0"
                     max="100"
                     value="50"
-                    aria-label="Compare Mercedes-Benz CLS 550 wheel before and after"
+                    aria-label="Compare Mercedes-Benz CLS 550 wheel"
                 >
 
             </div>
@@ -1691,13 +1488,13 @@
                     </strong>
 
                     <span>
-                        Wheel cleaning result with the finished presentation.
+                        Wheel condition before and after cleaning.
                     </span>
 
                 </div>
 
                 <small>
-                    Before ↔ After
+                    BEFORE ↔ AFTER
                 </small>
 
             </div>
@@ -1760,6 +1557,10 @@
                     </span>
 
                     <span>
+                        INTERIOR
+                    </span>
+
+                    <span>
                         BEFORE / AFTER
                     </span>
 
@@ -1768,7 +1569,7 @@
             </div>
 
 
-            <!-- FRONT -->
+            <!-- FRONT EXTERIOR -->
 
             <div class="compare-heading">
 
@@ -1785,7 +1586,7 @@
             >
 
                 <img
-                    class="comparison-before"
+                    class="comparison-image comparison-before"
                     src="images/gallery/lexus-before-front.webp"
                     alt="Lexus IS 250 before detailing, front exterior"
                     loading="lazy"
@@ -1793,19 +1594,18 @@
                 >
 
 
-                <div
-                    class="comparison-after"
-                    data-after
+                <img
+                    class="comparison-image comparison-after"
+                    src="images/gallery/lexus-is250-front-three-quarter.webp"
+                    alt="Lexus IS 250 after detailing, front exterior"
+                    loading="lazy"
+                    decoding="async"
                 >
 
-                    <img
-                        src="images/gallery/lexus-is250-front-three-quarter.webp"
-                        alt="Lexus IS 250 after detailing, front exterior"
-                        loading="lazy"
-                        decoding="async"
-                    >
 
-                </div>
+                <div class="comparison-divider"></div>
+
+                <div class="comparison-handle"></div>
 
 
                 <span class="comparison-label before">
@@ -1817,25 +1617,13 @@
                 </span>
 
 
-                <div
-                    class="comparison-handle"
-                    data-handle
-                >
-
-                    <span class="comparison-handle-line"></span>
-
-                    <span class="comparison-handle-button"></span>
-
-                </div>
-
-
                 <input
                     class="comparison-range"
                     type="range"
                     min="0"
                     max="100"
                     value="50"
-                    aria-label="Compare Lexus IS 250 before and after front exterior"
+                    aria-label="Compare Lexus IS 250 front exterior"
                 >
 
             </div>
@@ -1856,13 +1644,13 @@
                 </div>
 
                 <small>
-                    Before ↔ After
+                    BEFORE ↔ AFTER
                 </small>
 
             </div>
 
 
-            <!-- REAR -->
+            <!-- REAR EXTERIOR -->
 
             <div class="compare-heading">
 
@@ -1879,7 +1667,7 @@
             >
 
                 <img
-                    class="comparison-before"
+                    class="comparison-image comparison-before"
                     src="images/gallery/lexus-before-rear.webp"
                     alt="Lexus IS 250 before detailing, rear exterior"
                     loading="lazy"
@@ -1887,19 +1675,18 @@
                 >
 
 
-                <div
-                    class="comparison-after"
-                    data-after
+                <img
+                    class="comparison-image comparison-after"
+                    src="images/gallery/lexus-is250-rear-exterior.webp"
+                    alt="Lexus IS 250 after detailing, rear exterior"
+                    loading="lazy"
+                    decoding="async"
                 >
 
-                    <img
-                        src="images/gallery/lexus-is250-rear-exterior.webp"
-                        alt="Lexus IS 250 after detailing, rear exterior"
-                        loading="lazy"
-                        decoding="async"
-                    >
 
-                </div>
+                <div class="comparison-divider"></div>
+
+                <div class="comparison-handle"></div>
 
 
                 <span class="comparison-label before">
@@ -1911,25 +1698,13 @@
                 </span>
 
 
-                <div
-                    class="comparison-handle"
-                    data-handle
-                >
-
-                    <span class="comparison-handle-line"></span>
-
-                    <span class="comparison-handle-button"></span>
-
-                </div>
-
-
                 <input
                     class="comparison-range"
                     type="range"
                     min="0"
                     max="100"
                     value="50"
-                    aria-label="Compare Lexus IS 250 before and after rear exterior"
+                    aria-label="Compare Lexus IS 250 rear exterior"
                 >
 
             </div>
@@ -1950,7 +1725,7 @@
                 </div>
 
                 <small>
-                    Before ↔ After
+                    BEFORE ↔ AFTER
                 </small>
 
             </div>
@@ -1973,7 +1748,7 @@
             >
 
                 <img
-                    class="comparison-before"
+                    class="comparison-image comparison-before"
                     src="images/gallery/lexus-before-front-angle.webp"
                     alt="Lexus IS 250 before detailing, front angle"
                     loading="lazy"
@@ -1981,19 +1756,18 @@
                 >
 
 
-                <div
-                    class="comparison-after"
-                    data-after
+                <img
+                    class="comparison-image comparison-after"
+                    src="images/gallery/lexus-after.jpg"
+                    alt="Lexus IS 250 after professional detailing"
+                    loading="lazy"
+                    decoding="async"
                 >
 
-                    <img
-                        src="images/gallery/lexus-after.jpg"
-                        alt="Lexus IS 250 after professional detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
 
-                </div>
+                <div class="comparison-divider"></div>
+
+                <div class="comparison-handle"></div>
 
 
                 <span class="comparison-label before">
@@ -2005,25 +1779,13 @@
                 </span>
 
 
-                <div
-                    class="comparison-handle"
-                    data-handle
-                >
-
-                    <span class="comparison-handle-line"></span>
-
-                    <span class="comparison-handle-button"></span>
-
-                </div>
-
-
                 <input
                     class="comparison-range"
                     type="range"
                     min="0"
                     max="100"
                     value="50"
-                    aria-label="Compare Lexus IS 250 before and after front angle"
+                    aria-label="Compare Lexus IS 250 front angle"
                 >
 
             </div>
@@ -2038,13 +1800,13 @@
                     </strong>
 
                     <span>
-                        A second exterior comparison showing the completed finish.
+                        Additional exterior comparison showing the completed finish.
                     </span>
 
                 </div>
 
                 <small>
-                    Before ↔ After
+                    BEFORE ↔ AFTER
                 </small>
 
             </div>
@@ -2119,6 +1881,7 @@
 <footer class="site-footer">
 
     <div class="container footer-grid">
+
 
         <div class="footer-brand">
 
@@ -2223,10 +1986,11 @@
 
         </div>
 
+
     </div>
 
 
-    <!-- COPYRIGHT IS INTENTIONALLY THE LAST THING -->
+    <!-- COPYRIGHT IS THE LAST FOOTER CONTENT -->
 
     <div class="container footer-bottom">
 
@@ -2241,7 +2005,7 @@
 
 
 <!-- =====================================================
-     MOBILE ACTION BAR
+     MOBILE FLOATING ACTION BAR
 ====================================================== -->
 
 <div class="mobile-action-bar">
@@ -2258,14 +2022,14 @@
 
 
 <!-- =====================================================
-     GLOBAL SCRIPT
+     GLOBAL JAVASCRIPT
 ====================================================== -->
 
 <script src="js/script.js"></script>
 
 
 <!-- =====================================================
-     BEFORE / AFTER SLIDER SCRIPT
+     BEFORE / AFTER SLIDER
 ====================================================== -->
 
 <script>
@@ -2290,13 +2054,28 @@ document.addEventListener(
 
                 const after =
                     slider.querySelector(
-                        "[data-after]"
+                        ".comparison-after"
+                    );
+
+                const divider =
+                    slider.querySelector(
+                        ".comparison-divider"
                     );
 
                 const handle =
                     slider.querySelector(
-                        "[data-handle]"
+                        ".comparison-handle"
                     );
+
+
+                if (
+                    !range ||
+                    !after ||
+                    !divider ||
+                    !handle
+                ) {
+                    return;
+                }
 
 
                 function updateSlider(value) {
@@ -2305,7 +2084,19 @@ document.addEventListener(
                         Number(value);
 
 
-                    after.style.width =
+                    /*
+                     * The AFTER image remains
+                     * full-size. Only its visible
+                     * portion changes.
+                     */
+
+                    after.style.clipPath =
+                        "inset(0 " +
+                        (100 - percentage) +
+                        "% 0 0)";
+
+
+                    divider.style.left =
                         percentage + "%";
 
 
@@ -2317,6 +2108,18 @@ document.addEventListener(
 
                 range.addEventListener(
                     "input",
+                    function () {
+
+                        updateSlider(
+                            this.value
+                        );
+
+                    }
+                );
+
+
+                range.addEventListener(
+                    "change",
                     function () {
 
                         updateSlider(
