@@ -10245,3 +10245,50 @@ p {
     }
 
 }
+/* =====================================================
+   MOBILE HEADER SPACING FIX
+   Prevent header from overlapping page content
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .site-header .nav-container {
+        min-height: 120px;
+    }
+
+    main {
+        position: relative;
+        padding-top: 0;
+    }
+
+    .home-transformations {
+        position: relative;
+        z-index: 1;
+    }
+
+}
+@media (max-width: 700px) {
+
+    .site-header {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin: 0 !important;
+    }
+
+    .site-header .nav-container {
+        height: auto !important;
+        min-height: 110px !important;
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+
+}
