@@ -31,7 +31,7 @@
 
 
     <!-- =====================================================
-         FONTS
+         GOOGLE FONTS
     ====================================================== -->
 
     <link
@@ -62,7 +62,7 @@
 
 
     <!-- =====================================================
-         LANGUAGE PAGE OVERRIDES
+         LANGUAGE PAGE STYLES
     ====================================================== -->
 
     <style>
@@ -106,8 +106,7 @@
             width: 100%;
 
             padding:
-                28px 22px
-                0;
+                28px 22px 0;
 
             display: flex;
 
@@ -185,8 +184,7 @@
             margin: 0 auto;
 
             padding:
-                65px 22px
-                45px;
+                65px 22px 45px;
 
             flex: 1;
 
@@ -286,8 +284,7 @@
             max-width: 440px;
 
             margin:
-                20px auto
-                0;
+                20px auto 0;
 
             color: var(--gray);
 
@@ -313,8 +310,7 @@
             gap: 10px;
 
             margin:
-                28px auto
-                35px;
+                28px auto 35px;
 
         }
 
@@ -459,14 +455,6 @@
         }
 
 
-        .language-option:nth-child(3) {
-
-            animation-delay:
-                .35s;
-
-        }
-
-
         @keyframes optionReveal {
 
             from {
@@ -496,10 +484,13 @@
 
             position: absolute;
 
-            inset:
-                0 auto 0 -100%;
+            top: 0;
+
+            left: -100%;
 
             width: 55%;
+
+            height: 100%;
 
             background:
 
@@ -575,6 +566,76 @@
 
             transform:
                 scale(.985);
+
+        }
+
+
+        /* =================================================
+           SELECTED LANGUAGE
+        ================================================= */
+
+        .language-option.selected-language {
+
+            border-color:
+                rgba(
+                    201,
+                    162,
+                    39,
+                    .65
+                );
+
+            box-shadow:
+                0 8px 35px
+                rgba(
+                    201,
+                    162,
+                    39,
+                    .07
+                );
+
+        }
+
+
+        /* =================================================
+           PRIMARY LANGUAGE
+        ================================================= */
+
+        .language-option.primary {
+
+            border-color:
+                rgba(
+                    201,
+                    162,
+                    39,
+                    .58
+                );
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(
+                        201,
+                        162,
+                        39,
+                        .14
+                    ),
+                    rgba(
+                        201,
+                        162,
+                        39,
+                        .035
+                    )
+                );
+
+            box-shadow:
+                0 8px 35px
+                rgba(
+                    201,
+                    162,
+                    39,
+                    .06
+                );
 
         }
 
@@ -701,50 +762,6 @@
 
 
         /* =================================================
-           PRIMARY LANGUAGE
-        ================================================= */
-
-        .language-option.primary {
-
-            border-color:
-                rgba(
-                    201,
-                    162,
-                    39,
-                    .58
-                );
-
-            background:
-
-                linear-gradient(
-                    135deg,
-                    rgba(
-                        201,
-                        162,
-                        39,
-                        .14
-                    ),
-                    rgba(
-                        201,
-                        162,
-                        39,
-                        .035
-                    )
-                );
-
-            box-shadow:
-                0 8px 35px
-                rgba(
-                    201,
-                    162,
-                    39,
-                    .06
-                );
-
-        }
-
-
-        /* =================================================
            HELPER TEXT
         ================================================= */
 
@@ -776,8 +793,7 @@
             width: 100%;
 
             padding:
-                24px 20px
-                30px;
+                24px 20px 30px;
 
             text-align: center;
 
@@ -913,8 +929,7 @@
             .language-main {
 
                 padding:
-                    50px 18px
-                    35px;
+                    50px 18px 35px;
 
             }
 
@@ -996,7 +1011,7 @@
 
 
     <!-- =====================================================
-         LOADER
+         PAGE LOADER
     ====================================================== -->
 
     <div
@@ -1015,7 +1030,7 @@
 
 
     <!-- =====================================================
-         PAGE
+         LANGUAGE PAGE
     ====================================================== -->
 
     <div class="language-page">
@@ -1047,14 +1062,14 @@
 
 
         <!-- =================================================
-             MAIN
+             MAIN CONTENT
         ================================================== -->
 
         <main class="language-main">
 
 
             <!-- =============================================
-                 INTRO
+                 INTRODUCTION
             ============================================== -->
 
             <section
@@ -1086,7 +1101,7 @@
 
 
             <!-- =============================================
-                 DIVIDER
+                 GOLD DIVIDER
             ============================================== -->
 
             <div
@@ -1110,7 +1125,7 @@
 
 
             <!-- =============================================
-                 LANGUAGE OPTIONS
+                 LANGUAGE SELECTION
             ============================================== -->
 
             <section
@@ -1249,73 +1264,12 @@
                 </a>
 
 
-                <!-- =========================================
-                     FUTURE LANGUAGE SLOT
-                ========================================== -->
-
-                <a
-                    href="#"
-                    class="language-option"
-                    aria-label="More languages coming soon"
-                >
-
-                    <span
-                        class="language-icon"
-                        aria-hidden="true"
-                    >
-
-                        <svg
-                            viewBox="0 0 24 24"
-                        >
-
-                            <circle
-                                cx="12"
-                                cy="12"
-                                r="9"
-                            ></circle>
-
-                            <path
-                                d="M8 12h8"
-                            ></path>
-
-                            <path
-                                d="M12 8v8"
-                            ></path>
-
-                        </svg>
-
-                    </span>
-
-
-                    <span class="language-option-text">
-
-                        <strong>
-                            More Languages
-                        </strong>
-
-                        <small>
-                            Additional languages coming soon
-                        </small>
-
-                    </span>
-
-
-                    <span
-                        class="language-arrow"
-                        aria-hidden="true"
-                    >
-                        →
-                    </span>
-
-                </a>
-
-
             </section>
 
 
-            <!-- =============================================
-                 HELPER
-            ============================================== -->
+            <!-- =================================================
+                 HELPER TEXT
+            ================================================== -->
 
             <p class="language-help">
 
@@ -1342,9 +1296,11 @@
             </div>
 
             <div class="language-footer-copy">
+
                 &copy;
                 <span id="currentYear"></span>
                 Enhance My Ride Auto Spa &amp; Mobile Detailing
+
             </div>
 
         </footer>
@@ -1354,7 +1310,7 @@
 
 
     <!-- =====================================================
-         EXISTING SCAN JAVASCRIPT
+         JAVASCRIPT
     ====================================================== -->
 
     <script
