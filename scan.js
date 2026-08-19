@@ -1,159 +1,71 @@
-document.addEventListener("DOMContentLoaded", function () {
+/* =========================================================
+   ENHANCE MY RIDE
+   QR / BUSINESS CARD LANDING PAGE
+   GLOBAL JAVASCRIPT
+========================================================= */
 
-    /* =====================================================
-       PAGE LOADER
-    ===================================================== */
-
-    const pageLoader = document.getElementById("pageLoader");
-
-    if (pageLoader) {
-        pageLoader.classList.add("loaded");
-
-        setTimeout(function () {
-            pageLoader.style.display = "none";
-        }, 700);
-    }
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
 
-    /* =====================================================
-       CURRENT YEAR
-    ===================================================== */
+        /* =====================================================
+           PAGE LOADER
+        ===================================================== */
 
-    const currentYear = document.getElementById("currentYear");
-
-    if (currentYear) {
-        currentYear.textContent = new Date().getFullYear();
-    }
+        const pageLoader =
+            document.getElementById("pageLoader");
 
 
-    /* =====================================================
-       IMPORTANT:
-       DO NOT HIDE PAGE SECTIONS
-    ===================================================== */
+        if (pageLoader) {
 
-    const pageSections = document.querySelectorAll(
-        "main section, " +
-        ".scan-section, " +
-        ".transformation-section, " +
-        ".actions-section, " +
-        ".trust-section, " +
-        ".scan-footer, " +
-        ".featured-image-wrapper"
-    );
+            pageLoader.classList.add("loaded");
 
-    pageSections.forEach(function (section) {
 
-        section.style.setProperty(
-            "opacity",
-            "1",
-            "important"
+            setTimeout(
+                function () {
+
+                    pageLoader.style.display = "none";
+
+                },
+                700
+            );
+
+        }
+
+
+        /* =====================================================
+           CURRENT YEAR
+        ===================================================== */
+
+        const currentYear =
+            document.getElementById("currentYear");
+
+
+        if (currentYear) {
+
+            currentYear.textContent =
+                new Date().getFullYear();
+
+        }
+
+
+        /* =====================================================
+           PAGE READY
+        ===================================================== */
+
+        document.body.classList.add(
+            "page-ready"
         );
 
-        section.style.setProperty(
-            "visibility",
-            "visible",
-            "important"
-        );
 
-        section.style.setProperty(
-            "transform",
-            "none",
-            "important"
-        );
+        /* =====================================================
+           CONSOLE MESSAGE
+        ===================================================== */
 
-    });
-
-
-    /* =====================================================
-       IMAGES
-    ===================================================== */
-
-    const images = document.querySelectorAll("img");
-
-    images.forEach(function (image) {
-
-        image.style.setProperty(
-            "opacity",
-            "1",
-            "important"
-        );
-
-        image.style.setProperty(
-            "visibility",
-            "visible",
-            "important"
-        );
-
-    });
-
-
-    /* =====================================================
-       FEATURED IMAGE
-    ===================================================== */
-
-    const featuredImage =
-        document.querySelector(".featured-image");
-
-    if (featuredImage) {
-
-        featuredImage.style.setProperty(
-            "opacity",
-            "1",
-            "important"
-        );
-
-        featuredImage.style.setProperty(
-            "visibility",
-            "visible",
-            "important"
-        );
-
-        featuredImage.style.setProperty(
-            "display",
-            "block",
-            "important"
+        console.log(
+            "Enhance My Ride — Landing Page Ready"
         );
 
     }
-
-
-    /* =====================================================
-       LINKS / BUTTONS
-    ===================================================== */
-
-    const links =
-        document.querySelectorAll("a");
-
-    links.forEach(function (link) {
-
-        link.style.setProperty(
-            "visibility",
-            "visible",
-            "important"
-        );
-
-        link.style.setProperty(
-            "opacity",
-            "1",
-            "important"
-        );
-
-    });
-
-
-    /* =====================================================
-       PAGE READY
-    ===================================================== */
-
-    document.body.classList.add("page-ready");
-
-
-    /* =====================================================
-       CONSOLE MESSAGE
-    ===================================================== */
-
-    console.log(
-        "Enhance My Ride — Landing Page Ready"
-    );
-
-});
+);
