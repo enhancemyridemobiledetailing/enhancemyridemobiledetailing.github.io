@@ -4,11 +4,6 @@
    PREMIUM BLACK & GOLD DESIGN
 ========================================================= */
 
-
-/* =========================================================
-   ROOT
-========================================================= */
-
 :root {
 
     --black: #050505;
@@ -173,7 +168,8 @@ a {
 
     transform-origin: left;
 
-    animation: loaderLine 1.2s ease-in-out infinite;
+    animation:
+        loaderLine 1.2s ease-in-out infinite;
 
 }
 
@@ -238,7 +234,7 @@ a {
 
     position: relative;
 
-    min-height: 78vh;
+    min-height: 64svh;
 
     display: flex;
 
@@ -246,7 +242,7 @@ a {
 
     justify-content: center;
 
-    padding: 90px 24px 75px;
+    padding: 90px 24px 70px;
 
     overflow: hidden;
 
@@ -267,9 +263,9 @@ a {
 }
 
 
-/*
-    Subtle luxury glow behind hero
-*/
+/* =========================================================
+   SUBTLE HERO GLOW
+========================================================= */
 
 .scan-hero::before {
 
@@ -301,9 +297,9 @@ a {
 }
 
 
-/*
-    Gold border accent
-*/
+/* =========================================================
+   GOLD HERO ACCENT
+========================================================= */
 
 .scan-hero::after {
 
@@ -332,6 +328,10 @@ a {
 }
 
 
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
+
 .hero-overlay {
 
     position: absolute;
@@ -342,6 +342,10 @@ a {
 
 }
 
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
 
 .hero-content {
 
@@ -355,7 +359,8 @@ a {
 
     text-align: center;
 
-    animation: heroReveal 1.2s ease both;
+    animation:
+        heroReveal 1.2s ease both;
 
 }
 
@@ -366,7 +371,8 @@ a {
 
         opacity: 0;
 
-        transform: translateY(24px);
+        transform:
+            translateY(24px);
 
     }
 
@@ -374,7 +380,8 @@ a {
 
         opacity: 1;
 
-        transform: translateY(0);
+        transform:
+            translateY(0);
 
     }
 
@@ -417,7 +424,12 @@ a {
 
     font-family: var(--serif);
 
-    font-size: clamp(43px, 11vw, 78px);
+    font-size:
+        clamp(
+            43px,
+            11vw,
+            78px
+        );
 
     line-height: 0.95;
 
@@ -498,9 +510,12 @@ a {
 
     height: 5px;
 
-    border: 1px solid var(--gold);
+    border:
+        1px solid
+        var(--gold);
 
-    transform: rotate(45deg);
+    transform:
+        rotate(45deg);
 
 }
 
@@ -528,7 +543,12 @@ a {
 
     font-family: var(--serif);
 
-    font-size: clamp(34px, 8vw, 62px);
+    font-size:
+        clamp(
+            34px,
+            8vw,
+            62px
+        );
 
     line-height: 1.08;
 
@@ -562,212 +582,6 @@ a {
 
 
 /* =========================================================
-   TRANSFORMATION SECTION
-========================================================= */
-
-.transformation-section {
-
-    width: 100%;
-
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    padding: 70px 22px 35px;
-
-}
-
-
-.section-heading {
-
-    text-align: center;
-
-    margin-bottom: 28px;
-
-}
-
-
-.section-label {
-
-    display: block;
-
-    color: var(--gold-light);
-
-    font-size: 9px;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 12px;
-
-}
-
-
-.section-heading h2 {
-
-    font-family: var(--serif);
-
-    font-size: clamp(27px, 6vw, 42px);
-
-    font-weight: 500;
-
-}
-
-
-.heading-line {
-
-    width: 45px;
-
-    height: 1px;
-
-    margin: 15px auto 0;
-
-    background: var(--gold);
-
-}
-
-
-/* =========================================================
-   FEATURED IMAGE
-========================================================= */
-
-.featured-detail {
-
-    width: 100%;
-
-}
-
-
-.featured-image-wrapper {
-
-    position: relative;
-
-    width: 100%;
-
-    max-width: 820px;
-
-    margin: 0 auto;
-
-    overflow: hidden;
-
-    border: 1px solid var(--border);
-
-    background: var(--black-light);
-
-    box-shadow: var(--shadow);
-
-}
-
-
-.featured-image-wrapper::before {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    z-index: 2;
-
-    pointer-events: none;
-
-    border: 1px solid rgba(255, 255, 255, 0.04);
-
-}
-
-
-.featured-image {
-
-    width: 100%;
-
-    aspect-ratio: 16 / 9;
-
-    object-fit: cover;
-
-    opacity: 0;
-
-    transform: scale(1.04);
-
-    transition:
-        opacity 1.2s ease,
-        transform 1.5s ease;
-
-}
-
-
-.featured-image.visible {
-
-    opacity: 1;
-
-    transform: scale(1);
-
-}
-
-
-.image-overlay {
-
-    position: absolute;
-
-    inset: 0;
-
-    z-index: 1;
-
-    background:
-        linear-gradient(
-            180deg,
-            transparent 50%,
-            rgba(0, 0, 0, 0.55)
-        );
-
-    pointer-events: none;
-
-}
-
-
-.image-caption {
-
-    position: absolute;
-
-    z-index: 3;
-
-    bottom: 15px;
-
-    left: 15px;
-
-    right: 15px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    pointer-events: none;
-
-}
-
-
-.image-caption span {
-
-    padding: 6px 10px;
-
-    border: 1px solid rgba(255, 255, 255, 0.22);
-
-    background: rgba(0, 0, 0, 0.6);
-
-    backdrop-filter: blur(8px);
-
-    color: var(--white);
-
-    font-size: 8px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-}
-
-
-/* =========================================================
    ACTION SECTION
 ========================================================= */
 
@@ -775,11 +589,12 @@ a {
 
     width: 100%;
 
-    max-width: 700px;
+    max-width: 760px;
 
     margin: 0 auto;
 
-    padding: 35px 20px 60px;
+    padding:
+        55px 20px 65px;
 
 }
 
@@ -811,18 +626,36 @@ a {
 
     align-items: center;
 
-    padding: 13px 17px;
+    padding:
+        13px 17px;
 
     gap: 15px;
 
-    border: 1px solid rgba(255, 255, 255, 0.09);
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.09
+        );
 
     background:
 
         linear-gradient(
             135deg,
-            rgba(255, 255, 255, 0.045),
-            rgba(255, 255, 255, 0.018)
+            rgba(
+                255,
+                255,
+                255,
+                0.045
+            ),
+            rgba(
+                255,
+                255,
+                255,
+                0.018
+            )
         );
 
     border-radius: 4px;
@@ -856,11 +689,17 @@ a {
         linear-gradient(
             90deg,
             transparent,
-            rgba(255, 255, 255, 0.05),
+            rgba(
+                255,
+                255,
+                255,
+                0.05
+            ),
             transparent
         );
 
-    transition: left 0.7s ease;
+    transition:
+        left 0.7s ease;
 
 }
 
@@ -874,20 +713,43 @@ a {
 
 .action-button:hover {
 
-    transform: translateY(-2px);
+    transform:
+        translateY(-2px);
 
-    border-color: rgba(201, 162, 39, 0.45);
+    border-color:
+        rgba(
+            201,
+            162,
+            39,
+            0.45
+        );
 
     background:
 
         linear-gradient(
             135deg,
-            rgba(201, 162, 39, 0.08),
-            rgba(255, 255, 255, 0.025)
+            rgba(
+                201,
+                162,
+                39,
+                0.08
+            ),
+            rgba(
+                255,
+                255,
+                255,
+                0.025
+            )
         );
 
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.35),
+        0 10px 30px
+        rgba(
+            0,
+            0,
+            0,
+            0.35
+        ),
         var(--gold-glow);
 
 }
@@ -895,41 +757,71 @@ a {
 
 .action-button:active {
 
-    transform: scale(0.985);
+    transform:
+        scale(0.985);
 
 }
 
 
 /* =========================================================
-   PRIMARY BUTTON
+   PRIMARY ACTION
 ========================================================= */
 
 .primary-action {
 
     min-height: 82px;
 
-    border-color: rgba(201, 162, 39, 0.6);
+    border-color:
+        rgba(
+            201,
+            162,
+            39,
+            0.6
+        );
 
     background:
 
         linear-gradient(
             135deg,
-            rgba(201, 162, 39, 0.16),
-            rgba(201, 162, 39, 0.045)
+            rgba(
+                201,
+                162,
+                39,
+                0.16
+            ),
+            rgba(
+                201,
+                162,
+                39,
+                0.045
+            )
         );
 
     box-shadow:
-        0 8px 35px rgba(201, 162, 39, 0.07);
+        0 8px 35px
+        rgba(
+            201,
+            162,
+            39,
+            0.07
+        );
 
 }
 
 
 .primary-action:hover {
 
-    border-color: var(--gold);
+    border-color:
+        var(--gold);
 
     box-shadow:
-        0 15px 45px rgba(201, 162, 39, 0.13);
+        0 15px 45px
+        rgba(
+            201,
+            162,
+            39,
+            0.13
+        );
 
 }
 
@@ -940,7 +832,8 @@ a {
 
 .button-icon {
 
-    flex: 0 0 42px;
+    flex:
+        0 0 42px;
 
     width: 42px;
 
@@ -952,11 +845,19 @@ a {
 
     justify-content: center;
 
-    border: 1px solid rgba(201, 162, 39, 0.3);
+    border:
+        1px solid
+        rgba(
+            201,
+            162,
+            39,
+            0.3
+        );
 
     border-radius: 50%;
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
 }
 
@@ -969,7 +870,8 @@ a {
 
     fill: none;
 
-    stroke: currentColor;
+    stroke:
+        currentColor;
 
     stroke-width: 1.4;
 
@@ -982,7 +884,8 @@ a {
 
 .button-icon svg .filled {
 
-    fill: currentColor;
+    fill:
+        currentColor;
 
     stroke: none;
 
@@ -1019,7 +922,8 @@ a {
 
 .button-text strong {
 
-    color: var(--white);
+    color:
+        var(--white);
 
     font-size: 13px;
 
@@ -1032,7 +936,8 @@ a {
 
 .button-text small {
 
-    color: var(--gray);
+    color:
+        var(--gray);
 
     font-size: 10px;
 
@@ -1043,9 +948,11 @@ a {
 
 .button-arrow {
 
-    flex: 0 0 auto;
+    flex:
+        0 0 auto;
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
     font-size: 18px;
 
@@ -1055,9 +962,11 @@ a {
 }
 
 
-.action-button:hover .button-arrow {
+.action-button:hover
+.button-arrow {
 
-    transform: translateX(4px);
+    transform:
+        translateX(4px);
 
 }
 
@@ -1072,7 +981,8 @@ a {
 
     margin: 0 auto;
 
-    padding: 25px 25px 70px;
+    padding:
+        25px 25px 70px;
 
     text-align: center;
 
@@ -1087,13 +997,20 @@ a {
 
     height: 1px;
 
-    margin: 0 auto 28px;
+    margin:
+        0 auto 28px;
 
     background:
+
         linear-gradient(
             90deg,
             transparent,
-            rgba(201, 162, 39, 0.5),
+            rgba(
+                201,
+                162,
+                39,
+                0.5
+            ),
             transparent
         );
 
@@ -1102,7 +1019,8 @@ a {
 
 .trust-section > p:first-of-type {
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
     font-size: 9px;
 
@@ -1117,9 +1035,15 @@ a {
 
 .trust-section h2 {
 
-    font-family: var(--serif);
+    font-family:
+        var(--serif);
 
-    font-size: clamp(31px, 7vw, 46px);
+    font-size:
+        clamp(
+            31px,
+            7vw,
+            46px
+        );
 
     line-height: 1.1;
 
@@ -1130,7 +1054,8 @@ a {
 
 .trust-section h2 span {
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
 }
 
@@ -1139,9 +1064,11 @@ a {
 
     max-width: 420px;
 
-    margin: 20px auto 28px;
+    margin:
+        20px auto 28px;
 
-    color: var(--gray);
+    color:
+        var(--gray);
 
     font-size: 12px;
 
@@ -1156,20 +1083,35 @@ a {
 
 .scan-footer {
 
-    padding: 35px 20px 40px;
+    padding:
+        35px 20px 40px;
 
     text-align: center;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.06
+        );
 
-    background: rgba(0, 0, 0, 0.3);
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0.3
+        );
 
 }
 
 
 .footer-logo {
 
-    color: var(--white);
+    color:
+        var(--white);
 
     font-size: 12px;
 
@@ -1184,7 +1126,8 @@ a {
 
     margin-top: 8px;
 
-    color: var(--gold);
+    color:
+        var(--gold);
 
     font-size: 7px;
 
@@ -1201,35 +1144,10 @@ a {
 
     margin-top: 20px;
 
-    color: var(--gray-dark);
+    color:
+        var(--gray-dark);
 
     font-size: 9px;
-
-}
-
-
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
-
-.reveal {
-
-    opacity: 0;
-
-    transform: translateY(25px);
-
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-
-}
-
-
-.reveal.visible {
-
-    opacity: 1;
-
-    transform: translateY(0);
 
 }
 
@@ -1242,11 +1160,11 @@ a {
 
     .scan-hero {
 
-        min-height: 72vh;
+        min-height: 68vh;
 
         padding-top: 110px;
 
-        padding-bottom: 100px;
+        padding-bottom: 95px;
 
     }
 
@@ -1254,6 +1172,15 @@ a {
     .hero-description {
 
         font-size: 15px;
+
+    }
+
+
+    .actions-section {
+
+        padding-top: 65px;
+
+        padding-bottom: 75px;
 
     }
 
@@ -1289,13 +1216,6 @@ a {
 
     }
 
-
-    .transformation-section {
-
-        padding-top: 90px;
-
-    }
-
 }
 
 
@@ -1307,7 +1227,7 @@ a {
 
     .scan-hero {
 
-        min-height: 76vh;
+        min-height: 70vh;
 
     }
 
@@ -1335,6 +1255,8 @@ a {
 @media (max-width: 380px) {
 
     .scan-hero {
+
+        min-height: 62svh;
 
         padding-left: 18px;
 
@@ -1375,11 +1297,20 @@ a {
     }
 
 
+    .actions-section {
+
+        padding:
+            45px 18px 55px;
+
+    }
+
+
     .action-button {
 
         min-height: 68px;
 
-        padding: 11px 13px;
+        padding:
+            11px 13px;
 
         gap: 12px;
 
@@ -1430,11 +1361,14 @@ a {
     *::before,
     *::after {
 
-        animation-duration: 0.01ms !important;
+        animation-duration:
+            0.01ms !important;
 
-        animation-iteration-count: 1 !important;
+        animation-iteration-count:
+            1 !important;
 
-        transition-duration: 0.01ms !important;
+        transition-duration:
+            0.01ms !important;
 
     }
 
