@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
        PAGE LOADER
@@ -6,26 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const pageLoader = document.getElementById("pageLoader");
 
-    const hideLoader = () => {
+    if (pageLoader) {
+        pageLoader.classList.add("loaded");
 
-        if (pageLoader) {
-            pageLoader.classList.add("loaded");
-        }
-
-    };
-
-    if (document.readyState === "complete") {
-
-        setTimeout(hideLoader, 500);
-
-    } else {
-
-        window.addEventListener("load", () => {
-
-            setTimeout(hideLoader, 500);
-
-        }, { once: true });
-
+        setTimeout(function () {
+            pageLoader.style.display = "none";
+        }, 700);
     }
 
 
@@ -33,15 +19,72 @@ document.addEventListener("DOMContentLoaded", () => {
        CURRENT YEAR
     ===================================================== */
 
-    const currentYear =
-        document.getElementById("currentYear");
+    const currentYear = document.getElementById("currentYear");
 
     if (currentYear) {
-
-        currentYear.textContent =
-            new Date().getFullYear();
-
+        currentYear.textContent = new Date().getFullYear();
     }
+
+
+    /* =====================================================
+       IMPORTANT:
+       DO NOT HIDE PAGE SECTIONS
+    ===================================================== */
+
+    const pageSections = document.querySelectorAll(
+        "main section, " +
+        ".scan-section, " +
+        ".transformation-section, " +
+        ".actions-section, " +
+        ".trust-section, " +
+        ".scan-footer, " +
+        ".featured-image-wrapper"
+    );
+
+    pageSections.forEach(function (section) {
+
+        section.style.setProperty(
+            "opacity",
+            "1",
+            "important"
+        );
+
+        section.style.setProperty(
+            "visibility",
+            "visible",
+            "important"
+        );
+
+        section.style.setProperty(
+            "transform",
+            "none",
+            "important"
+        );
+
+    });
+
+
+    /* =====================================================
+       IMAGES
+    ===================================================== */
+
+    const images = document.querySelectorAll("img");
+
+    images.forEach(function (image) {
+
+        image.style.setProperty(
+            "opacity",
+            "1",
+            "important"
+        );
+
+        image.style.setProperty(
+            "visibility",
+            "visible",
+            "important"
+        );
+
+    });
 
 
     /* =====================================================
@@ -51,304 +94,66 @@ document.addEventListener("DOMContentLoaded", () => {
     const featuredImage =
         document.querySelector(".featured-image");
 
-
     if (featuredImage) {
 
-        const revealImage = () => {
+        featuredImage.style.setProperty(
+            "opacity",
+            "1",
+            "important"
+        );
 
-            featuredImage.classList.add("visible");
+        featuredImage.style.setProperty(
+            "visibility",
+            "visible",
+            "important"
+        );
 
-        };
-
-
-        if (featuredImage.complete) {
-
-            setTimeout(revealImage, 150);
-
-        } else {
-
-            featuredImage.addEventListener(
-                "load",
-                revealImage,
-                { once: true }
-            );
-
-        }
-
-
-        featuredImage.addEventListener(
-            "error",
-            () => {
-
-                const wrapper =
-                    featuredImage.closest(
-                        ".featured-image-wrapper"
-                    );
-
-                if (wrapper) {
-
-                    wrapper.classList.add(
-                        "image-missing"
-                    );
-
-                }
-
-                /*
-                    Never leave the image permanently
-                    invisible if the file fails.
-                */
-
-                featuredImage.classList.add("visible");
-
-            },
-            { once: true }
+        featuredImage.style.setProperty(
+            "display",
+            "block",
+            "important"
         );
 
     }
 
 
     /* =====================================================
-       SCROLL REVEAL
+       LINKS / BUTTONS
     ===================================================== */
 
-    const revealElements =
-        document.querySelectorAll(
-            ".transformation-section, " +
-            ".actions-section, " +
-            ".trust-section, " +
-            ".scan-footer"
+    const links =
+        document.querySelectorAll("a");
+
+    links.forEach(function (link) {
+
+        link.style.setProperty(
+            "visibility",
+            "visible",
+            "important"
         );
 
-
-    revealElements.forEach((element) => {
-
-        element.classList.add("reveal");
-
-    });
-
-
-    /*
-        Use IntersectionObserver when available.
-    */
-
-    if ("IntersectionObserver" in window) {
-
-        const observer =
-            new IntersectionObserver(
-                (entries, observerInstance) => {
-
-                    entries.forEach((entry) => {
-
-                        if (entry.isIntersecting) {
-
-                            entry.target.classList.add(
-                                "visible"
-                            );
-
-                            observerInstance.unobserve(
-                                entry.target
-                            );
-
-                        }
-
-                    });
-
-                },
-                {
-                    threshold: 0.05,
-                    rootMargin: "0px 0px 80px 0px"
-                }
-            );
-
-
-        revealElements.forEach((element) => {
-
-            observer.observe(element);
-
-        });
-
-    } else {
-
-        revealElements.forEach((element) => {
-
-            element.classList.add("visible");
-
-        });
-
-    }
-
-
-    /* =====================================================
-       ACTION BUTTONS
-    ===================================================== */
-
-    const actionButtons =
-        document.querySelectorAll(
-            ".action-button"
-        );
-
-
-    actionButtons.forEach((button) => {
-
-
-        button.addEventListener(
-            "touchstart",
-            () => {
-
-                button.classList.add(
-                    "touch-active"
-                );
-
-            },
-            { passive: true }
-        );
-
-
-        button.addEventListener(
-            "touchend",
-            () => {
-
-                setTimeout(() => {
-
-                    button.classList.remove(
-                        "touch-active"
-                    );
-
-                }, 150);
-
-            },
-            { passive: true }
-        );
-
-
-        button.addEventListener(
-            "touchcancel",
-            () => {
-
-                button.classList.remove(
-                    "touch-active"
-                );
-
-            },
-            { passive: true }
+        link.style.setProperty(
+            "opacity",
+            "1",
+            "important"
         );
 
     });
 
 
     /* =====================================================
-       EXTERNAL LINKS
+       PAGE READY
     ===================================================== */
 
-    const externalLinks =
-        document.querySelectorAll(
-            'a[target="_blank"]'
-        );
-
-
-    externalLinks.forEach((link) => {
-
-        link.addEventListener(
-            "click",
-            () => {
-
-                link.classList.add("clicked");
-
-            }
-        );
-
-    });
+    document.body.classList.add("page-ready");
 
 
     /* =====================================================
-       PREVENT EMPTY LINKS
-    ===================================================== */
-
-    const unfinishedLinks =
-        document.querySelectorAll(
-            'a[href="#"]'
-        );
-
-
-    unfinishedLinks.forEach((link) => {
-
-        link.addEventListener(
-            "click",
-            (event) => {
-
-                event.preventDefault();
-
-            }
-        );
-
-    });
-
-
-    /* =====================================================
-       SMART PHONE LINKS
-    ===================================================== */
-
-    const callLink =
-        document.getElementById("callLink");
-
-    const textLink =
-        document.getElementById("textLink");
-
-
-    if (callLink) {
-
-        callLink.addEventListener(
-            "click",
-            () => {
-
-                console.log(
-                    "Calling Enhance My Ride."
-                );
-
-            }
-        );
-
-    }
-
-
-    if (textLink) {
-
-        textLink.addEventListener(
-            "click",
-            () => {
-
-                console.log(
-                    "Texting Enhance My Ride."
-                );
-
-            }
-        );
-
-    }
-
-
-    /* =====================================================
-       PAGE ENTRY
-    ===================================================== */
-
-    document.body.classList.add(
-        "page-ready"
-    );
-
-
-    /* =====================================================
-       CONSOLE BRAND MESSAGE
+       CONSOLE MESSAGE
     ===================================================== */
 
     console.log(
-        "%cEnhance My Ride",
-        "font-size:18px;font-weight:bold;color:#c9a227;"
-    );
-
-
-    console.log(
-        "%cPremium Mobile Detailing",
-        "font-size:12px;color:#ffffff;"
+        "Enhance My Ride — Landing Page Ready"
     );
 
 });
