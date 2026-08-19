@@ -5,65 +5,92 @@
 
 
 /* =========================================================
-   MOBILE NAVIGATION
+   DOM READY
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const menuToggle = document.getElementById("menuToggle");
-    const mainNav = document.getElementById("mainNav");
+
+    /* =====================================================
+       MOBILE NAVIGATION
+       ===================================================== */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const mainNav =
+        document.getElementById("mainNav");
 
 
     if (menuToggle && mainNav) {
 
-        menuToggle.addEventListener("click", function () {
+        menuToggle.addEventListener(
+            "click",
+            function () {
 
-            const isOpen =
-                mainNav.classList.toggle("is-open");
-
-            menuToggle.classList.toggle(
-                "is-open",
-                isOpen
-            );
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                isOpen ? "true" : "false"
-            );
-
-            document.body.classList.toggle(
-                "menu-open",
-                isOpen
-            );
-
-        });
+                const isOpen =
+                    mainNav.classList.toggle("is-open");
 
 
-        /* Close menu when a navigation link is clicked */
+                menuToggle.classList.toggle(
+                    "is-open",
+                    isOpen
+                );
+
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    isOpen ? "true" : "false"
+                );
+
+
+                document.body.classList.toggle(
+                    "menu-open",
+                    isOpen
+                );
+
+            }
+        );
+
+
+        /* Close menu when navigation link is clicked */
 
         const navLinks =
             mainNav.querySelectorAll("a");
 
-        navLinks.forEach(function (link) {
 
-            link.addEventListener("click", function () {
+        navLinks.forEach(
+            function (link) {
 
-                mainNav.classList.remove("is-open");
+                link.addEventListener(
+                    "click",
+                    function () {
 
-                menuToggle.classList.remove("is-open");
+                        mainNav.classList.remove(
+                            "is-open"
+                        );
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
+
+                        menuToggle.classList.remove(
+                            "is-open"
+                        );
+
+
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+
+                        document.body.classList.remove(
+                            "menu-open"
+                        );
+
+                    }
                 );
 
-                document.body.classList.remove(
-                    "menu-open"
-                );
-
-            });
-
-        });
+            }
+        );
 
 
         /* Close menu when clicking outside */
@@ -89,14 +116,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         "is-open"
                     );
 
+
                     menuToggle.classList.remove(
                         "is-open"
                     );
+
 
                     menuToggle.setAttribute(
                         "aria-expanded",
                         "false"
                     );
+
 
                     document.body.classList.remove(
                         "menu-open"
@@ -110,7 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-
     /* =====================================================
        CURRENT YEAR
        ===================================================== */
@@ -119,13 +148,14 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll("[data-year]");
 
 
-    yearElements.forEach(function (element) {
+    yearElements.forEach(
+        function (element) {
 
-        element.textContent =
-            new Date().getFullYear();
+            element.textContent =
+                new Date().getFullYear();
 
-    });
-
+        }
+    );
 
 
     /* =====================================================
@@ -138,47 +168,48 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
-    smoothLinks.forEach(function (link) {
+    smoothLinks.forEach(
+        function (link) {
 
-        link.addEventListener(
-            "click",
-            function (event) {
+            link.addEventListener(
+                "click",
+                function (event) {
 
-                const targetId =
-                    link.getAttribute("href");
+                    const targetId =
+                        link.getAttribute("href");
 
 
-                if (
-                    !targetId ||
-                    targetId === "#"
-                ) {
-                    return;
+                    if (
+                        !targetId ||
+                        targetId === "#"
+                    ) {
+                        return;
+                    }
+
+
+                    const target =
+                        document.querySelector(
+                            targetId
+                        );
+
+
+                    if (target) {
+
+                        event.preventDefault();
+
+
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+
+                    }
+
                 }
+            );
 
-
-                const target =
-                    document.querySelector(
-                        targetId
-                    );
-
-
-                if (target) {
-
-                    event.preventDefault();
-
-
-                    target.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
-
-                }
-
-            }
-        );
-
-    });
-
+        }
+    );
 
 
     /* =====================================================
@@ -216,11 +247,12 @@ document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener(
             "scroll",
             updateHeader,
-            { passive: true }
+            {
+                passive: true
+            }
         );
 
     }
-
 
 
     /* =====================================================
@@ -248,6 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         "is-open"
                     );
 
+
                     menuToggle.setAttribute(
                         "aria-expanded",
                         "false"
@@ -264,4 +297,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
     );
+
+
 });
