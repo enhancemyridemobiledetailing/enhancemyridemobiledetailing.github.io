@@ -1,32 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
-       ENHANCE MY RIDE
-       QR / BUSINESS CARD LANGUAGE ENGINE
-    ===================================================== */
-
-
-    /* =====================================================
        PAGE LOADER
     ===================================================== */
 
-    const pageLoader =
-        document.getElementById("pageLoader");
+    const pageLoader = document.getElementById("pageLoader");
 
+    const hideLoader = () => {
 
-    window.addEventListener("load", () => {
+        if (pageLoader) {
+            pageLoader.classList.add("loaded");
+        }
 
-        setTimeout(() => {
+    };
 
-            if (pageLoader) {
+    if (document.readyState === "complete") {
 
-                pageLoader.classList.add("loaded");
+        setTimeout(hideLoader, 500);
 
-            }
+    } else {
 
-        }, 500);
+        window.addEventListener("load", () => {
 
-    });
+            setTimeout(hideLoader, 500);
+
+        }, { once: true });
+
+    }
 
 
     /* =====================================================
@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const currentYear =
         document.getElementById("currentYear");
-
 
     if (currentYear) {
 
@@ -46,329 +45,64 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       LANGUAGE SYSTEM
-    ===================================================== */
-
-    const LANGUAGE_STORAGE_KEY =
-        "enhanceMyRideLanguage";
-
-
-    const supportedLanguages = [
-        "en",
-        "es"
-    ];
-
-
-    /*
-        Read language from URL.
-
-        Examples:
-
-        language.html?lang=en
-        language.html?lang=es
-    */
-
-    const urlParams =
-        new URLSearchParams(
-            window.location.search
-        );
-
-
-    const requestedLanguage =
-        urlParams.get("lang");
-
-
-    /*
-        Check saved language.
-    */
-
-    const savedLanguage =
-        localStorage.getItem(
-            LANGUAGE_STORAGE_KEY
-        );
-
-
-    /*
-        Determine the current language.
-
-        Priority:
-
-        1. URL language
-        2. Saved language
-        3. Browser language
-        4. English fallback
-    */
-
-    let currentLanguage = "en";
-
-
-    if (
-        requestedLanguage &&
-        supportedLanguages.includes(
-            requestedLanguage
-        )
-    ) {
-
-        currentLanguage =
-            requestedLanguage;
-
-    } else if (
-        savedLanguage &&
-        supportedLanguages.includes(
-            savedLanguage
-        )
-    ) {
-
-        currentLanguage =
-            savedLanguage;
-
-    } else {
-
-        const browserLanguage =
-            (
-                navigator.language ||
-                navigator.userLanguage ||
-                "en"
-            ).toLowerCase();
-
-
-        if (
-            browserLanguage.startsWith("es")
-        ) {
-
-            currentLanguage = "es";
-
-        }
-
-    }
-
-
-    /*
-        Save the selected language.
-    */
-
-    localStorage.setItem(
-        LANGUAGE_STORAGE_KEY,
-        currentLanguage
-    );
-
-
-    /*
-        Expose the language globally.
-
-        Future landing-page scripts can use:
-
-        window.enhanceMyRideLanguage
-    */
-
-    window.enhanceMyRideLanguage =
-        currentLanguage;
-
-
-    /* =====================================================
-       LANGUAGE PAGE DETECTION
-    ===================================================== */
-
-    const isLanguagePage =
-        document.body.classList.contains(
-            "language-page"
-        ) ||
-        document.querySelector(
-            ".language-page"
-        );
-
-
-    /* =====================================================
-       LANGUAGE SELECTION
-    ===================================================== */
-
-    const languageOptions =
-        document.querySelectorAll(
-            ".language-option"
-        );
-
-
-    languageOptions.forEach((option) => {
-
-        option.addEventListener(
-            "click",
-            (event) => {
-
-                const href =
-                    option.getAttribute(
-                        "href"
-                    );
-
-
-                /*
-                    Ignore unfinished
-                    language buttons.
-                */
-
-                if (
-                    !href ||
-                    href === "#"
-                ) {
-
-                    event.preventDefault();
-
-                    return;
-
-                }
-
-
-                /*
-                    Read language from
-                    the destination URL.
-                */
-
-                try {
-
-                    const destination =
-                        new URL(
-                            href,
-                            window.location.href
-                        );
-
-
-                    const destinationLanguage =
-                        destination.searchParams.get(
-                            "lang"
-                        );
-
-
-                    if (
-                        destinationLanguage &&
-                        supportedLanguages.includes(
-                            destinationLanguage
-                        )
-                    ) {
-
-                        localStorage.setItem(
-                            LANGUAGE_STORAGE_KEY,
-                            destinationLanguage
-                        );
-
-
-                        window.enhanceMyRideLanguage =
-                            destinationLanguage;
-
-                    }
-
-                } catch (error) {
-
-                    console.warn(
-                        "Enhance My Ride: Unable to read language selection.",
-                        error
-                    );
-
-                }
-
-            }
-        );
-
-    });
-
-
-    /* =====================================================
-       SMART LANDING-PAGE LANGUAGE ROUTING
-    ===================================================== */
-
-    /*
-        If the customer reaches the main landing
-        page without a language parameter, use the
-        saved language.
-
-        This will become active once index.html
-        is connected to the language system.
-    */
-
-    const isMainLandingPage =
-        (
-            window.location.pathname
-                .split("/")
-                .pop()
-                .toLowerCase()
-        ) === "index.html";
-
-
-    if (
-        isMainLandingPage &&
-        !requestedLanguage &&
-        savedLanguage &&
-        supportedLanguages.includes(
-            savedLanguage
-        )
-    ) {
-
-        /*
-            We do NOT redirect immediately.
-
-            Instead, keep the URL clean and expose
-            the selected language to the landing
-            page.
-
-            This prevents unnecessary redirects
-            and makes the QR experience faster.
-        */
-
-        window.enhanceMyRideLanguage =
-            savedLanguage;
-
-    }
-
-
-    /* =====================================================
-       FEATURED IMAGE REVEAL
+       FEATURED IMAGE
     ===================================================== */
 
     const featuredImage =
-        document.querySelector(
-            ".featured-image"
-        );
+        document.querySelector(".featured-image");
 
 
     if (featuredImage) {
 
         const revealImage = () => {
 
-            featuredImage.classList.add(
-                "visible"
-            );
+            featuredImage.classList.add("visible");
 
         };
 
 
-        /*
-            If the image is already cached,
-            reveal it immediately.
-        */
-
         if (featuredImage.complete) {
 
-            setTimeout(
-                revealImage,
-                400
-            );
+            setTimeout(revealImage, 150);
 
         } else {
 
             featuredImage.addEventListener(
                 "load",
-                () => {
-
-                    setTimeout(
-                        revealImage,
-                        300
-                    );
-
-                },
-                {
-                    once: true
-                }
+                revealImage,
+                { once: true }
             );
 
         }
+
+
+        featuredImage.addEventListener(
+            "error",
+            () => {
+
+                const wrapper =
+                    featuredImage.closest(
+                        ".featured-image-wrapper"
+                    );
+
+                if (wrapper) {
+
+                    wrapper.classList.add(
+                        "image-missing"
+                    );
+
+                }
+
+                /*
+                    Never leave the image permanently
+                    invisible if the file fails.
+                */
+
+                featuredImage.classList.add("visible");
+
+            },
+            { once: true }
+        );
 
     }
 
@@ -386,84 +120,66 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-    revealElements.forEach(
-        (element) => {
+    revealElements.forEach((element) => {
 
-            element.classList.add(
-                "reveal"
-            );
+        element.classList.add("reveal");
 
-        }
-    );
+    });
 
 
-    if (
-        "IntersectionObserver"
-        in window
-    ) {
+    /*
+        Use IntersectionObserver when available.
+    */
+
+    if ("IntersectionObserver" in window) {
 
         const observer =
             new IntersectionObserver(
-                (
-                    entries,
-                    observerInstance
-                ) => {
+                (entries, observerInstance) => {
 
-                    entries.forEach(
-                        (entry) => {
+                    entries.forEach((entry) => {
 
-                            if (
-                                entry.isIntersecting
-                            ) {
+                        if (entry.isIntersecting) {
 
-                                entry.target.classList.add(
-                                    "visible"
-                                );
+                            entry.target.classList.add(
+                                "visible"
+                            );
 
-
-                                observerInstance.unobserve(
-                                    entry.target
-                                );
-
-                            }
+                            observerInstance.unobserve(
+                                entry.target
+                            );
 
                         }
-                    );
+
+                    });
 
                 },
                 {
-                    threshold: 0.12
+                    threshold: 0.05,
+                    rootMargin: "0px 0px 80px 0px"
                 }
             );
 
 
-        revealElements.forEach(
-            (element) => {
+        revealElements.forEach((element) => {
 
-                observer.observe(
-                    element
-                );
+            observer.observe(element);
 
-            }
-        );
+        });
 
     } else {
 
-        revealElements.forEach(
-            (element) => {
+        revealElements.forEach((element) => {
 
-                element.classList.add(
-                    "visible"
-                );
+            element.classList.add("visible");
 
-            }
-        );
+        });
 
     }
 
 
     /* =====================================================
-       BUTTON TOUCH FEEDBACK
+       ACTION BUTTONS
     ===================================================== */
 
     const actionButtons =
@@ -472,51 +188,56 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-    actionButtons.forEach(
-        (button) => {
+    actionButtons.forEach((button) => {
 
-            button.addEventListener(
-                "touchstart",
-                () => {
 
-                    button.classList.add(
+        button.addEventListener(
+            "touchstart",
+            () => {
+
+                button.classList.add(
+                    "touch-active"
+                );
+
+            },
+            { passive: true }
+        );
+
+
+        button.addEventListener(
+            "touchend",
+            () => {
+
+                setTimeout(() => {
+
+                    button.classList.remove(
                         "touch-active"
                     );
 
-                },
-                {
-                    passive: true
-                }
-            );
+                }, 150);
+
+            },
+            { passive: true }
+        );
 
 
-            button.addEventListener(
-                "touchend",
-                () => {
+        button.addEventListener(
+            "touchcancel",
+            () => {
 
-                    setTimeout(
-                        () => {
+                button.classList.remove(
+                    "touch-active"
+                );
 
-                            button.classList.remove(
-                                "touch-active"
-                            );
+            },
+            { passive: true }
+        );
 
-                        },
-                        150
-                    );
-
-                },
-                {
-                    passive: true
-                }
-            );
-
-        }
-    );
+    });
 
 
     /* =====================================================
-       EXTERNAL LINK HANDLING
+       EXTERNAL LINKS
     ===================================================== */
 
     const externalLinks =
@@ -525,22 +246,18 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-    externalLinks.forEach(
-        (link) => {
+    externalLinks.forEach((link) => {
 
-            link.addEventListener(
-                "click",
-                () => {
+        link.addEventListener(
+            "click",
+            () => {
 
-                    link.classList.add(
-                        "clicked"
-                    );
+                link.classList.add("clicked");
 
-                }
-            );
+            }
+        );
 
-        }
-    );
+    });
 
 
     /* =====================================================
@@ -553,54 +270,18 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-    unfinishedLinks.forEach(
-        (link) => {
+    unfinishedLinks.forEach((link) => {
 
-            link.addEventListener(
-                "click",
-                (event) => {
+        link.addEventListener(
+            "click",
+            (event) => {
 
-                    event.preventDefault();
-
-                    console.log(
-                        "Enhance My Ride: This link has not been connected yet."
-                    );
-
-                }
-            );
-
-        }
-    );
-
-
-    /* =====================================================
-       IMAGE FALLBACK
-    ===================================================== */
-
-    if (featuredImage) {
-
-        featuredImage.addEventListener(
-            "error",
-            () => {
-
-                const imageWrapper =
-                    featuredImage.closest(
-                        ".featured-image-wrapper"
-                    );
-
-
-                if (imageWrapper) {
-
-                    imageWrapper.classList.add(
-                        "image-missing"
-                    );
-
-                }
+                event.preventDefault();
 
             }
         );
 
-    }
+    });
 
 
     /* =====================================================
@@ -608,15 +289,10 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================================== */
 
     const callLink =
-        document.getElementById(
-            "callLink"
-        );
-
+        document.getElementById("callLink");
 
     const textLink =
-        document.getElementById(
-            "textLink"
-        );
+        document.getElementById("textLink");
 
 
     if (callLink) {
@@ -626,7 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
             () => {
 
                 console.log(
-                    "Enhance My Ride: Call link activated."
+                    "Calling Enhance My Ride."
                 );
 
             }
@@ -642,7 +318,7 @@ document.addEventListener("DOMContentLoaded", () => {
             () => {
 
                 console.log(
-                    "Enhance My Ride: Text link activated."
+                    "Texting Enhance My Ride."
                 );
 
             }
@@ -652,76 +328,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       LANGUAGE PAGE STATE
-    ===================================================== */
-
-    if (isLanguagePage) {
-
-        /*
-            Highlight the language that is currently
-            selected without changing the customer's
-            choice automatically.
-        */
-
-        languageOptions.forEach(
-            (option) => {
-
-                const href =
-                    option.getAttribute(
-                        "href"
-                    );
-
-
-                if (!href) {
-
-                    return;
-
-                }
-
-
-                try {
-
-                    const destination =
-                        new URL(
-                            href,
-                            window.location.href
-                        );
-
-
-                    const optionLanguage =
-                        destination.searchParams.get(
-                            "lang"
-                        );
-
-
-                    if (
-                        optionLanguage ===
-                        currentLanguage
-                    ) {
-
-                        option.classList.add(
-                            "selected-language"
-                        );
-
-                    }
-
-                } catch (error) {
-
-                    /*
-                        Ignore malformed
-                        placeholder links.
-                    */
-
-                }
-
-            }
-        );
-
-    }
-
-
-    /* =====================================================
-       PAGE ENTRY ANIMATION
+       PAGE ENTRY
     ===================================================== */
 
     document.body.classList.add(
@@ -735,19 +342,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log(
         "%cEnhance My Ride",
-        "font-size:18px;font-weight:bold;"
+        "font-size:18px;font-weight:bold;color:#c9a227;"
     );
 
 
     console.log(
         "%cPremium Mobile Detailing",
-        "font-size:12px;"
-    );
-
-
-    console.log(
-        `%cLanguage: ${currentLanguage}`,
-        "font-size:11px;color:#c9a227;"
+        "font-size:12px;color:#ffffff;"
     );
 
 });
