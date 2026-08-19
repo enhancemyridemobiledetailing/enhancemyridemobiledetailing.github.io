@@ -5,7 +5,10 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
 <title>Enhance My Ride | Premium Mobile Detailing in the Bay Area</title>
 
@@ -52,7 +55,7 @@
     object-fit: cover;
     object-position: center;
     opacity: 0;
-    transform: scale(1.02);
+    transform: scale(1.08);
     transition:
         opacity 1s ease,
         transform 7s ease;
@@ -60,7 +63,7 @@
 
 .hero-slide.active {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1.02);
 }
 
 .hero-slideshow::after {
@@ -75,40 +78,6 @@
             rgba(0,0,0,.28) 72%,
             rgba(0,0,0,.55)
         );
-}
-
-.home-hero-content {
-    position: relative;
-    z-index: 3;
-    width: 100%;
-}
-
-.hero-copy {
-    max-width: 700px;
-    padding: 70px 0 120px;
-}
-
-.hero-copy h1 {
-    margin: 0 0 22px;
-    font-size: clamp(3.2rem, 6.5vw, 6.5rem);
-    line-height: .92;
-    letter-spacing: -.045em;
-}
-
-.hero-copy h1 span,
-.hero-copy h1 strong {
-    display: block;
-}
-
-.hero-copy h1 strong {
-    color: #d4af37;
-}
-
-.hero-description {
-    max-width: 610px;
-    color: rgba(255,255,255,.78);
-    font-size: 1.06rem;
-    line-height: 1.75;
 }
 
 
@@ -877,18 +846,6 @@
             );
     }
 
-    .hero-copy {
-        padding: 55px 0 85px;
-    }
-
-    .hero-copy h1 {
-        font-size: clamp(2.9rem,14vw,4.6rem);
-    }
-
-    .hero-description {
-        font-size: .96rem;
-    }
-
     .hero-slide-controls {
         bottom: 20px;
     }
@@ -1143,40 +1100,7 @@ Service Area
 </div>
 
 
-<div class="container home-hero-content">
-
-<div class="hero-copy">
-
-<p class="eyebrow">
-PREMIUM MOBILE DETAILING
-</p>
-
-<h1>
-
-We Come To You.
-
-<span>
-You Relax.
-</span>
-
-<strong>
-We Enhance.
-</strong>
-
-</h1>
-
-<p class="hero-description">
-
-Premium mobile detailing brought directly
-to your home, workplace, or convenient
-location throughout Alameda, Oakland,
-San Francisco, and the greater Bay Area.
-
-</p>
-
-</div>
-
-</div>
+<!-- HERO TEXT INTENTIONALLY REMOVED -->
 
 
 <!-- FOUR SLIDESHOW DOTS -->
@@ -1334,7 +1258,7 @@ transformations.
 >
 
 <img
-    src="images/mercedes-after-front.webp"
+    src="images/gallery/mercedes-front-three-quarter.webp"
     alt="Mercedes-Benz CLS 550 after professional detailing"
     loading="lazy"
     decoding="async"
@@ -1376,7 +1300,7 @@ Enhance Gold Package
 >
 
 <img
-    src="images/lexus-is250-after-front.webp"
+    src="images/gallery/lexus-is250-front.webp"
     alt="Lexus IS 250 after professional detailing"
     loading="lazy"
     decoding="async"
@@ -2469,5 +2393,3 @@ document.addEventListener(
 
 
 </body>
-
-</html>
