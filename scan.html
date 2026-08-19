@@ -3,61 +3,1240 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-    <title>
-        Enhance My Ride | Premium Mobile Detailing
-    </title>
+<meta
+    name="theme-color"
+    content="#050505"
+>
 
-    <meta
-        name="description"
-        content="Enhance My Ride Auto Spa & Mobile Detailing. Premium mobile detailing delivered to your door throughout the Bay Area."
-    >
+<meta
+    name="description"
+    content="Enhance My Ride Auto Spa & Mobile Detailing — Premium mobile detailing delivered to your door."
+>
 
-    <meta
-        name="theme-color"
-        content="#050505"
-    >
+<meta
+    name="robots"
+    content="noindex, nofollow"
+>
 
-    <meta
-        name="robots"
-        content="noindex, nofollow"
-    >
+<title>
+Enhance My Ride | Premium Mobile Detailing
+</title>
 
-    <!-- =====================================================
-         PREMIUM FONTS
-    ====================================================== -->
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+<!-- =====================================================
+     GOOGLE FONTS
+===================================================== -->
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600&display=swap"
-        rel="stylesheet"
-    >
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
 
-    <!-- =====================================================
-         SCAN PAGE CSS
-         scan.css is in the ROOT of the repository
-    ====================================================== -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet"
+>
 
-    <link
-        rel="stylesheet"
-        href="scan.css"
-    >
+
+<style>
+
+/* =========================================================
+   ENHANCE MY RIDE
+   QR / BUSINESS CARD LANDING PAGE
+   SELF-CONTAINED VERSION
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+    --black: #050505;
+    --black-soft: #090909;
+    --black-light: #111111;
+
+    --gold: #c9a227;
+    --gold-light: #e2c45b;
+    --gold-dark: #8e7116;
+
+    --white: #ffffff;
+    --gray: #9a9a9a;
+    --gray-dark: #666666;
+
+    --border: rgba(201,162,39,.28);
+
+    --serif:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    --sans:
+        "Inter",
+        Arial,
+        sans-serif;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    background: #050505;
+
+    color: #ffffff;
+
+    font-family: var(--sans);
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+button,
+a {
+
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.scan-page {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(201,162,39,.08),
+            transparent 35%
+        ),
+
+        #050505;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.scan-hero {
+
+    position: relative;
+
+    min-height: 78vh;
+
+    min-height: 78svh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        90px 24px 75px;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.20),
+            rgba(0,0,0,.85)
+        ),
+
+        radial-gradient(
+            circle at center,
+            rgba(201,162,39,.09),
+            transparent 45%
+        );
+
+}
+
+
+/* subtle luxury glow */
+
+.scan-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(201,162,39,.08),
+            transparent 70%
+        );
+
+    top: -250px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
+
+}
+
+
+/* gold bottom accent */
+
+.scan-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(180px,45vw);
+
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            transparent
+        );
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 760px;
+
+    text-align: center;
+
+    animation:
+        heroReveal
+        1.2s
+        ease
+        both;
+
+}
+
+
+@keyframes heroReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(24px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand-mark {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+
+    margin-bottom: 26px;
+
+}
+
+
+.brand-top {
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 7px;
+
+    color: var(--gold-light);
+
+}
+
+
+.brand-main {
+
+    font-family: var(--serif);
+
+    font-size:
+        clamp(
+            43px,
+            11vw,
+            78px
+        );
+
+    line-height: .95;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: var(--white);
+
+}
+
+
+.brand-bottom {
+
+    margin-top: 8px;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: var(--gray);
+
+}
+
+
+/* =========================================================
+   GOLD DIVIDER
+========================================================= */
+
+.gold-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin:
+        0 auto 26px;
+
+}
+
+
+.gold-divider span {
+
+    width: 42px;
+
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold)
+        );
+
+}
+
+
+.gold-divider span:last-child {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--gold),
+            transparent
+        );
+
+}
+
+
+.gold-divider i {
+
+    width: 5px;
+
+    height: 5px;
+
+    border:
+        1px solid
+        var(--gold);
+
+    transform:
+        rotate(45deg);
+
+}
+
+
+/* =========================================================
+   HERO MESSAGE
+========================================================= */
+
+.hero-eyebrow {
+
+    color: var(--gold-light);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 16px;
+
+}
+
+
+.hero-content h1 {
+
+    margin: 0;
+
+    font-family: var(--serif);
+
+    font-size:
+        clamp(
+            34px,
+            8vw,
+            62px
+        );
+
+    line-height: 1.08;
+
+    font-weight: 500;
+
+    letter-spacing: -.5px;
+
+}
+
+
+.hero-content h1 span {
+
+    color: var(--gold-light);
+
+}
+
+
+.hero-description {
+
+    max-width: 540px;
+
+    margin:
+        24px auto 0;
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   ACTION SECTION
+========================================================= */
+
+.actions-section {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding:
+        35px 20px 60px;
+
+}
+
+
+.actions-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+
+}
+
+
+/* =========================================================
+   ACTION BUTTON
+========================================================= */
+
+.action-button {
+
+    position: relative;
+
+    min-height: 72px;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        13px 17px;
+
+    gap: 15px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .09
+        );
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.018)
+        );
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.action-button::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 60%;
+
+    height: 100%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.05),
+            transparent
+        );
+
+    transition:
+        left .7s ease;
+
+}
+
+
+.action-button:hover::before {
+
+    left: 140%;
+
+}
+
+
+.action-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(
+            201,
+            162,
+            39,
+            .45
+        );
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(201,162,39,.08),
+            rgba(255,255,255,.025)
+        );
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.35),
+        0 0 35px rgba(201,162,39,.12);
+
+}
+
+
+.action-button:active {
+
+    transform:
+        scale(.985);
+
+}
+
+
+/* =========================================================
+   PRIMARY QUOTE BUTTON
+========================================================= */
+
+.primary-action {
+
+    min-height: 82px;
+
+    border-color:
+        rgba(
+            201,
+            162,
+            39,
+            .60
+        );
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(201,162,39,.16),
+            rgba(201,162,39,.045)
+        );
+
+    box-shadow:
+        0 8px 35px
+        rgba(
+            201,
+            162,
+            39,
+            .07
+        );
+
+}
+
+
+.primary-action:hover {
+
+    border-color:
+        var(--gold);
+
+    box-shadow:
+        0 15px 45px
+        rgba(
+            201,
+            162,
+            39,
+            .13
+        );
+
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.button-icon {
+
+    flex:
+        0 0 42px;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(
+            201,
+            162,
+            39,
+            .30
+        );
+
+    border-radius: 50%;
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.button-icon svg {
+
+    width: 19px;
+
+    height: 19px;
+
+    fill: none;
+
+    stroke:
+        currentColor;
+
+    stroke-width: 1.4;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+}
+
+
+.button-icon svg .filled {
+
+    fill:
+        currentColor;
+
+    stroke: none;
+
+}
+
+
+.star-icon {
+
+    font-size: 18px;
+
+    border: none;
+
+}
+
+
+/* =========================================================
+   BUTTON TEXT
+========================================================= */
+
+.button-text {
+
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.button-text strong {
+
+    color:
+        var(--white);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: .2px;
+
+}
+
+
+.button-text small {
+
+    color:
+        var(--gray);
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+}
+
+
+.button-arrow {
+
+    flex: 0 0 auto;
+
+    color:
+        var(--gold-light);
+
+    font-size: 18px;
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+.action-button:hover
+.button-arrow {
+
+    transform:
+        translateX(4px);
+
+}
+
+
+/* =========================================================
+   TRUST SECTION
+========================================================= */
+
+.trust-section {
+
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    padding:
+        25px 25px 70px;
+
+    text-align: center;
+
+}
+
+
+.trust-line {
+
+    width: 100%;
+
+    max-width: 250px;
+
+    height: 1px;
+
+    margin:
+        0 auto 28px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(201,162,39,.5),
+            transparent
+        );
+
+}
+
+
+.trust-section > p:first-of-type {
+
+    color:
+        var(--gold-light);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 14px;
+
+}
+
+
+.trust-section h2 {
+
+    margin: 0;
+
+    font-family:
+        var(--serif);
+
+    font-size:
+        clamp(
+            31px,
+            7vw,
+            46px
+        );
+
+    line-height: 1.1;
+
+    font-weight: 500;
+
+}
+
+
+.trust-section h2 span {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.trust-description {
+
+    max-width: 420px;
+
+    margin:
+        20px auto 28px;
+
+    color:
+        var(--gray);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.scan-footer {
+
+    padding:
+        35px 20px 40px;
+
+    text-align: center;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .06
+        );
+
+    background:
+        rgba(0,0,0,.3);
+
+}
+
+
+.footer-logo {
+
+    color:
+        var(--white);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+}
+
+
+.scan-footer p {
+
+    margin-top: 8px;
+
+    color:
+        var(--gold);
+
+    font-size: 7px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+}
+
+
+.scan-footer small {
+
+    display: block;
+
+    margin-top: 20px;
+
+    color:
+        var(--gray-dark);
+
+    font-size: 9px;
+
+}
+
+
+/* =========================================================
+   TABLET / DESKTOP
+========================================================= */
+
+@media (min-width:768px) {
+
+    .scan-hero {
+
+        min-height: 72vh;
+
+        padding-top: 110px;
+
+        padding-bottom: 100px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 15px;
+
+    }
+
+
+    .actions-container {
+
+        gap: 13px;
+
+    }
+
+
+    .action-button {
+
+        min-height: 76px;
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+
+    }
+
+
+    .button-text strong {
+
+        font-size: 14px;
+
+    }
+
+
+    .button-text small {
+
+        font-size: 11px;
+
+    }
+
+}
+
+
+@media (min-width:1100px) {
+
+    .scan-hero {
+
+        min-height: 76vh;
+
+    }
+
+
+    .actions-section {
+
+        max-width: 760px;
+
+    }
+
+
+    .action-button {
+
+        min-height: 80px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width:380px) {
+
+    .scan-hero {
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+    }
+
+
+    .brand-top {
+
+        font-size: 11px;
+
+        letter-spacing: 5px;
+
+    }
+
+
+    .brand-main {
+
+        font-size: 39px;
+
+    }
+
+
+    .brand-bottom {
+
+        font-size: 7px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 13px;
+
+    }
+
+
+    .action-button {
+
+        min-height: 68px;
+
+        padding:
+            11px 13px;
+
+        gap: 12px;
+
+    }
+
+
+    .button-icon {
+
+        flex-basis: 38px;
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+
+    .button-text strong {
+
+        font-size: 12px;
+
+    }
+
+
+    .button-text small {
+
+        font-size: 9px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+
+    *,
+    *::before {
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .01ms !important;
+
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -65,695 +1244,615 @@
 <body>
 
 
+<div class="scan-page">
+
+
 <!-- =====================================================
-     PAGE LOADER
+     HERO
 ===================================================== -->
 
-<div
-    class="page-loader"
-    id="pageLoader"
-    aria-hidden="true"
->
+<section class="scan-hero">
 
-    <div class="loader-logo">
-        ENHANCE MY RIDE
-    </div>
+<div class="hero-content">
 
-    <div class="loader-line"></div>
+
+<div class="brand-mark">
+
+<span class="brand-top">
+ENHANCE
+</span>
+
+<span class="brand-main">
+MY RIDE
+</span>
+
+<span class="brand-bottom">
+AUTO SPA &amp; MOBILE DETAILING
+</span>
 
 </div>
 
 
+<div
+    class="gold-divider"
+    aria-hidden="true"
+>
+
+<span></span>
+
+<i></i>
+
+<span></span>
+
+</div>
+
+
+<div class="hero-eyebrow">
+PREMIUM MOBILE DETAILING
+</div>
+
+
+<h1>
+
+Your Ride Deserves
+<span>to Be Enhanced.</span>
+
+</h1>
+
+
+<p class="hero-description">
+
+Premium mobile detailing delivered directly
+to your home, workplace, or convenient
+location throughout the Bay Area.
+
+</p>
+
+
+</div>
+
+</section>
+
+
 <!-- =====================================================
-     MAIN PAGE
+     ACTIONS
 ===================================================== -->
 
-<main class="scan-page">
+<section class="actions-section">
 
+<div class="actions-container">
 
-    <!-- =================================================
-         HERO
-    ================================================== -->
 
-    <section class="scan-hero">
+<!-- QUOTE -->
 
-        <div
-            class="hero-overlay"
-            aria-hidden="true"
-        ></div>
+<a
+    href="quote.html"
+    class="action-button primary-action"
+>
 
+<span
+    class="button-icon"
+    aria-hidden="true"
+>
 
-        <div class="hero-content">
+<svg viewBox="0 0 24 24">
 
+<rect
+    x="5"
+    y="3"
+    width="14"
+    height="18"
+    rx="1"
+></rect>
 
-            <!-- BRAND MARK -->
+<path d="M8 8h8"></path>
 
-            <div class="brand-mark">
+<path d="M8 12h8"></path>
 
-                <div class="brand-top">
-                    ENHANCE
-                </div>
+<path d="M8 16h5"></path>
 
-                <div class="brand-main">
-                    MY RIDE
-                </div>
+</svg>
 
-                <div class="brand-bottom">
-                    AUTO SPA & MOBILE DETAILING
-                </div>
+</span>
 
-            </div>
 
+<span class="button-text">
 
-            <!-- GOLD DIVIDER -->
+<strong>
+Get Your Free Quote
+</strong>
 
-            <div class="gold-divider">
+<small>
+Tell us about your vehicle
+</small>
 
-                <span></span>
+</span>
 
-                <i></i>
 
-                <span></span>
+<span class="button-arrow">
+→
+</span>
 
-            </div>
+</a>
 
 
-            <!-- HERO TEXT -->
+<!-- CALL -->
 
-            <p class="hero-eyebrow">
-                PREMIUM MOBILE DETAILING
-            </p>
+<a
+    href="tel:+13233271806"
+    class="action-button"
+>
 
+<span
+    class="button-icon"
+    aria-hidden="true"
+>
 
-            <h1>
-                Your Ride Deserves
-                <span>The Enhance.</span>
-            </h1>
+<svg viewBox="0 0 24 24">
 
+<path
+    d="M6.6 3.5
+       L9.2 3
+       C9.8 2.9 10.3 3.2 10.5 3.8
+       L11.7 7
+       C11.9 7.5 11.7 8 11.3 8.4
+       L9.7 9.7
+       C10.7 11.9 12.1 13.3 14.3 14.3
+       L15.6 12.7
+       C16 12.3 16.5 12.1 17 12.3
+       L20.2 13.5
+       C20.8 13.7 21.1 14.2 21 14.8
+       L20.5 17.4
+       C20.3 18.4 19.4 19 18.4 18.9
+       C10.6 18.2 5.8 13.4 5.1 5.6
+       C5 4.6 5.6 3.7 6.6 3.5Z"
+></path>
 
-            <p class="hero-description">
+</svg>
 
-                Premium mobile detailing delivered
-                directly to your home, workplace,
-                or convenient location throughout
-                the Bay Area.
+</span>
 
-            </p>
 
+<span class="button-text">
 
-        </div>
+<strong>
+Call Enhance My Ride
+</strong>
 
-    </section>
+<small>
+(323) 327-1806
+</small>
 
+</span>
 
-    <!-- =================================================
-         TRANSFORMATION
-    ================================================== -->
 
-    <section class="transformation-section">
+<span class="button-arrow">
+→
+</span>
 
+</a>
 
-        <div class="section-heading reveal">
 
-            <span class="section-label">
-                THE ENHANCE EXPERIENCE
-            </span>
+<!-- TEXT -->
 
-            <h2>
-                See The Difference.
-            </h2>
+<a
+    href="sms:+13233271806"
+    class="action-button"
+>
 
-            <div class="heading-line"></div>
+<span
+    class="button-icon"
+    aria-hidden="true"
+>
 
-        </div>
+<svg viewBox="0 0 24 24">
 
+<path
+    d="M5 5.5
+       C5 4.7 5.7 4 6.5 4
+       H17.5
+       C18.3 4 19 4.7 19 5.5
+       V13.5
+       C19 14.3 18.3 15 17.5 15
+       H11
+       L7 19
+       V15
+       H6.5
+       C5.7 15 5 14.3 5 13.5
+       Z"
+></path>
 
-        <div class="featured-detail reveal">
+</svg>
 
+</span>
 
-            <div class="featured-image-wrapper">
 
+<span class="button-text">
 
-                <img
-                    class="featured-image"
-                    src="images/crv-front.webp"
-                    alt="Enhance My Ride Honda CR-V"
-                    loading="eager"
-                    fetchpriority="high"
-                    decoding="async"
-                >
+<strong>
+Text Us
+</strong>
 
+<small>
+Send us a message
+</small>
 
-                <div
-                    class="image-overlay"
-                    aria-hidden="true"
-                ></div>
+</span>
 
 
-                <div class="image-caption">
+<span class="button-arrow">
+→
+</span>
 
-                    <span>
-                        ENHANCE MY RIDE
-                    </span>
+</a>
 
-                    <span>
-                        MOBILE DETAILING
-                    </span>
 
-                </div>
+<!-- WEBSITE -->
 
+<a
+    href="https://enhancemyride.com"
+    class="action-button"
+>
 
-            </div>
+<span
+    class="button-icon"
+    aria-hidden="true"
+>
 
+<svg viewBox="0 0 24 24">
 
-        </div>
+<circle
+    cx="12"
+    cy="12"
+    r="9"
+></circle>
 
+<path d="M3 12h18"></path>
 
-    </section>
+<path
+    d="M12 3
+       C14.4 5.4 15.6 8.4 15.6 12
+       C15.6 15.6 14.4 18.6 12 21"
+></path>
 
+<path
+    d="M12 3
+       C9.6 5.4 8.4 8.4 8.4 12
+       C8.4 15.6 9.6 18.6 12 21"
+></path>
 
-    <!-- =================================================
-         ACTIONS
-    ================================================== -->
+</svg>
 
-    <section class="actions-section">
+</span>
 
 
-        <div class="actions-container">
+<span class="button-text">
 
+<strong>
+Visit Our Website
+</strong>
 
-            <!-- GET A QUOTE -->
+<small>
+Explore services, pricing &amp; more
+</small>
 
-            <a
-                href="quote.html"
-                class="action-button primary-action reveal"
-            >
+</span>
 
-                <span class="button-icon">
 
-                    <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
+<span class="button-arrow">
+→
+</span>
 
-                        <path
-                            d="M4 4h16v16H4z"
-                        ></path>
+</a>
 
-                        <path
-                            d="M8 8h8M8 12h5M8 16h3"
-                        ></path>
 
-                    </svg>
+<!-- GALLERY -->
 
-                </span>
+<a
+    href="gallery.html"
+    class="action-button"
+>
 
+<span
+    class="button-icon"
+    aria-hidden="true"
+>
 
-                <span class="button-text">
+<svg viewBox="0 0 24 24">
 
-                    <strong>
-                        Get Your Free Quote
-                    </strong>
+<rect
+    x="4"
+    y="5"
+    width="16"
+    height="14"
+    rx="1"
+></rect>
 
-                    <small>
-                        Tell us about your vehicle
-                    </small>
+<circle
+    cx="9"
+    cy="10"
+    r="1.5"
+></circle>
 
-                </span>
+<path
+    d="M4 16
+       L8.5 12
+       L12 15
+       L14.5 12.5
+       L20 17"
+></path>
 
+</svg>
 
-                <span
-                    class="button-arrow"
-                    aria-hidden="true"
-                >
-                    →
-                </span>
+</span>
 
-            </a>
 
+<span class="button-text">
 
-            <!-- CALL -->
+<strong>
+View Our Work
+</strong>
 
-            <a
-                href="tel:+13233271806"
-                id="callLink"
-                class="action-button reveal"
-            >
+<small>
+See real vehicle transformations
+</small>
 
-                <span class="button-icon">
+</span>
 
-                    <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
 
-                        <path
-                            d="M22 16.92v3a2 2 0 0 1-2.18 2
-                            19.79 19.79 0 0 1-8.63-3.07
-                            19.5 19.5 0 0 1-6-6
-                            19.79 19.79 0 0 1-3.07-8.67
-                            A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2
-                            1.72c.12.9.33 1.78.62 2.63
-                            a2 2 0 0 1-.45 2.11L8 9.73
-                            a16 16 0 0 0 6 6l1.27-1.27
-                            a2 2 0 0 1 2.11-.45
-                            c.85.29 1.73.5 2.63.62
-                            A2 2 0 0 1 22 16.92z"
-                        ></path>
+<span class="button-arrow">
+→
+</span>
 
-                    </svg>
+</a>
 
-                </span>
 
+<!-- SERVICES -->
 
-                <span class="button-text">
+<a
+    href="services.html"
+    class="action-button"
+>
 
-                    <strong>
-                        Call Enhance My Ride
-                    </strong>
+<span
+    class="button-icon"
+    aria-hidden="true"
+>
 
-                    <small>
-                        (323) 327-1806
-                    </small>
+<svg viewBox="0 0 24 24">
 
-                </span>
+<path
+    d="M14.7 6.3
+       A4.5 4.5 0 0 0 8.4 12.6
+       L4 17
+       L7 20
+       L11.4 15.6
+       A4.5 4.5 0 0 0 17.7 9.3
+       L14.7 12.3
+       L11.7 9.3
+       Z"
+></path>
 
+</svg>
 
-                <span
-                    class="button-arrow"
-                    aria-hidden="true"
-                >
-                    →
-                </span>
+</span>
 
-            </a>
 
+<span class="button-text">
 
-            <!-- TEXT -->
+<strong>
+Explore Our Services
+</strong>
 
-            <a
-                href="sms:+13233271806"
-                id="textLink"
-                class="action-button reveal"
-            >
+<small>
+Gold, Black Label &amp; Showroom Edition
+</small>
 
-                <span class="button-icon">
+</span>
 
-                    <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
 
-                        <path
-                            d="M21 11.5a8.38 8.38 0 0 1-.9
-                            3.8 8.5 8.5 0 0 1-7.6 4.7
-                            8.38 8.38 0 0 1-3.8-.9
-                            L3 21l1.9-5.7
-                            A8.38 8.38 0 0 1 4
-                            11.5 8.5 8.5 0 1 1
-                            21 11.5z"
-                        ></path>
+<span class="button-arrow">
+→
+</span>
 
-                    </svg>
+</a>
 
-                </span>
 
+<!-- GOOGLE -->
 
-                <span class="button-text">
+<a
+    href="https://g.page/r/CRy_PYJmq6NYEBM/review"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="action-button"
+>
 
-                    <strong>
-                        Text Us
-                    </strong>
+<span
+    class="button-icon star-icon"
+    aria-hidden="true"
+>
+★
+</span>
 
-                    <small>
-                        Send us a message
-                    </small>
 
-                </span>
+<span class="button-text">
 
+<strong>
+Leave Us A Google Review
+</strong>
 
-                <span
-                    class="button-arrow"
-                    aria-hidden="true"
-                >
-                    →
-                </span>
+<small>
+Your feedback helps our small business
+</small>
 
-            </a>
+</span>
 
 
-            <!-- WEBSITE -->
+<span class="button-arrow">
+→
+</span>
 
-            <a
-                href="index.html"
-                class="action-button reveal"
-            >
+</a>
 
-                <span class="button-icon">
 
-                    <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
+<!-- INSTAGRAM -->
 
-                        <circle
-                            cx="12"
-                            cy="12"
-                            r="9"
-                        ></circle>
+<a
+    href="https://www.instagram.com/enhancemyridemobiledetailing/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="action-button"
+>
 
-                        <path
-                            d="M3 12h18M12 3a14 14 0 0 1
-                            0 18M12 3a14 14 0 0 0
-                            0 18"
-                        ></path>
+<span
+    class="button-icon"
+    aria-hidden="true"
+>
 
-                    </svg>
+<svg viewBox="0 0 24 24">
 
-                </span>
+<rect
+    x="4"
+    y="4"
+    width="16"
+    height="16"
+    rx="4"
+></rect>
 
+<circle
+    cx="12"
+    cy="12"
+    r="3.5"
+></circle>
 
-                <span class="button-text">
+<circle
+    cx="17.2"
+    cy="6.8"
+    r="1"
+    class="filled"
+></circle>
 
-                    <strong>
-                        Visit Our Website
-                    </strong>
+</svg>
 
-                    <small>
-                        Explore services, pricing & more
-                    </small>
+</span>
 
-                </span>
 
+<span class="button-text">
 
-                <span
-                    class="button-arrow"
-                    aria-hidden="true"
-                >
-                    →
-                </span>
+<strong>
+Follow Us On Instagram
+</strong>
 
-            </a>
+<small>
+@enhancemyridemobiledetailing
+</small>
 
+</span>
 
-            <!-- GALLERY -->
 
-            <a
-                href="gallery.html"
-                class="action-button reveal"
-            >
+<span class="button-arrow">
+→
+</span>
 
-                <span class="button-icon">
+</a>
 
-                    <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
 
-                        <rect
-                            x="3"
-                            y="4"
-                            width="18"
-                            height="16"
-                            rx="2"
-                        ></rect>
+</div>
 
-                        <circle
-                            cx="8.5"
-                            cy="9"
-                            r="1.5"
-                        ></circle>
-
-                        <path
-                            d="m21 15-5-5L5 20"
-                        ></path>
-
-                    </svg>
-
-                </span>
-
-
-                <span class="button-text">
-
-                    <strong>
-                        View Our Work
-                    </strong>
-
-                    <small>
-                        See real vehicle transformations
-                    </small>
-
-                </span>
-
-
-                <span
-                    class="button-arrow"
-                    aria-hidden="true"
-                >
-                    →
-                </span>
-
-            </a>
-
-
-            <!-- SERVICES -->
-
-            <a
-                href="services.html"
-                class="action-button reveal"
-            >
-
-                <span class="button-icon">
-
-                    <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
-
-                        <path
-                            d="M14.7 6.3a4 4 0 0 0-5.4
-                            5.4L4 17a2.1 2.1 0 1 0
-                            3 3l5.3-5.3a4 4 0 0 0
-                            5.4-5.4l-2.3 2.3-2.7-.6-.6-2.7
-                            2.6-2z"
-                        ></path>
-
-                    </svg>
-
-                </span>
-
-
-                <span class="button-text">
-
-                    <strong>
-                        Explore Our Services
-                    </strong>
-
-                    <small>
-                        Gold, Black Label & Showroom Edition
-                    </small>
-
-                </span>
-
-
-                <span
-                    class="button-arrow"
-                    aria-hidden="true"
-                >
-                    →
-                </span>
-
-            </a>
-
-
-            <!-- GOOGLE REVIEW -->
-
-            <a
-                href="https://g.page/r/CRy_PYJmq6NYEBM/review"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="action-button reveal"
-            >
-
-                <span
-                    class="button-icon star-icon"
-                    aria-hidden="true"
-                >
-                    ★
-                </span>
-
-
-                <span class="button-text">
-
-                    <strong>
-                        Leave Us A Google Review
-                    </strong>
-
-                    <small>
-                        Your feedback helps our small business
-                    </small>
-
-                </span>
-
-
-                <span
-                    class="button-arrow"
-                    aria-hidden="true"
-                >
-                    →
-                </span>
-
-            </a>
-
-
-            <!-- INSTAGRAM -->
-
-            <a
-                href="https://www.instagram.com/enhancemyridemobiledetailing/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="action-button reveal"
-            >
-
-                <span class="button-icon">
-
-                    <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
-
-                        <rect
-                            x="3"
-                            y="3"
-                            width="18"
-                            height="18"
-                            rx="5"
-                        ></rect>
-
-                        <circle
-                            cx="12"
-                            cy="12"
-                            r="4"
-                        ></circle>
-
-                        <circle
-                            cx="17.5"
-                            cy="6.5"
-                            r="1"
-                            class="filled"
-                        ></circle>
-
-                    </svg>
-
-                </span>
-
-
-                <span class="button-text">
-
-                    <strong>
-                        Follow Us On Instagram
-                    </strong>
-
-                    <small>
-                        @enhancemyridemobiledetailing
-                    </small>
-
-                </span>
-
-
-                <span
-                    class="button-arrow"
-                    aria-hidden="true"
-                >
-                    →
-                </span>
-
-            </a>
-
-
-        </div>
-
-
-    </section>
-
-
-    <!-- =================================================
-         TRUST SECTION
-    ================================================== -->
-
-    <section class="trust-section reveal">
-
-
-        <div class="trust-line"></div>
-
-
-        <p>
-            PREMIUM MOBILE DETAILING
-        </p>
-
-
-        <h2>
-
-            We Come To You.
-
-            <br>
-
-            <span>
-                You Relax. We Enhance.
-            </span>
-
-        </h2>
-
-
-        <p class="trust-description">
-
-            Serving Alameda, Oakland, San Francisco,
-            San Leandro, Berkeley, Emeryville, Hayward,
-            and surrounding Bay Area communities.
-
-        </p>
-
-
-    </section>
-
-
-    <!-- =================================================
-         FOOTER
-    ================================================== -->
-
-    <footer class="scan-footer">
-
-
-        <div class="footer-logo">
-            ENHANCE MY RIDE
-        </div>
-
-
-        <p>
-            AUTO SPA & MOBILE DETAILING
-        </p>
-
-
-        <small>
-
-            © <span id="currentYear">2026</span>
-            Enhance My Ride. All rights reserved.
-
-        </small>
-
-
-    </footer>
-
-
-</main>
+</section>
 
 
 <!-- =====================================================
-     SCAN PAGE JAVASCRIPT
-     scan.js is in the ROOT of the repository
-====================================================== -->
+     TRUST / SERVICE AREA
+===================================================== -->
 
-<script src="scan.js"></script>
+<section class="trust-section">
+
+<div class="trust-line"></div>
+
+
+<p>
+PREMIUM MOBILE DETAILING
+</p>
+
+
+<h2>
+
+We Come To You.
+
+<br>
+
+<span>
+You Relax. We Enhance.
+</span>
+
+</h2>
+
+
+<p class="trust-description">
+
+Serving Alameda, Oakland,
+San Francisco, San Leandro,
+Berkeley, Emeryville, Hayward,
+and surrounding Bay Area communities.
+
+</p>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="scan-footer">
+
+<div class="footer-logo">
+ENHANCE MY RIDE
+</div>
+
+
+<p>
+WE COME TO YOU. YOU RELAX. WE ENHANCE.
+</p>
+
+
+<small>
+
+&copy;
+<span id="currentYear"></span>
+Enhance My Ride Auto Spa &amp; Mobile Detailing
+
+</small>
+
+</footer>
+
+
+</div>
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const year =
+            document.getElementById(
+                "currentYear"
+            );
+
+        if (year) {
+
+            year.textContent =
+                new Date().getFullYear();
+
+        }
+
+    }
+);
+
+</script>
 
 
 </body>
