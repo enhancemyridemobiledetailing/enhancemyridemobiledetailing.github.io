@@ -2,38 +2,28 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Enhance My Ride | Premium Mobile Detailing in the Bay Area</title>
 
-<meta
-    name="description"
-    content="Enhance My Ride Auto Spa & Mobile Detailing delivers premium mobile detailing throughout Alameda, Oakland, San Francisco and the greater Bay Area."
->
-
+<meta name="description" content="Enhance My Ride Auto Spa & Mobile Detailing delivers premium mobile detailing throughout Alameda, Oakland, San Francisco and the greater Bay Area.">
 <meta name="theme-color" content="#050505">
-
 <meta name="robots" content="index, follow">
 
 <link rel="stylesheet" href="css/style.css">
 
-
 <style>
 
 /* =====================================================
-   HOME HERO
+   HOMEPAGE HERO — IMAGE ONLY
 ===================================================== */
 
 .home-hero {
     position: relative;
-    min-height: 90vh;
-    min-height: 90svh;
+    min-height: 92vh;
+    min-height: 92svh;
     overflow: hidden;
-    display: flex;
-    align-items: center;
     background: #050505;
 }
 
@@ -49,91 +39,77 @@
     inset: 0;
     width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover;
     object-position: center;
     opacity: 0;
-    transform: scale(1.02);
-    transition:
-        opacity 1s ease,
-        transform 7s ease;
+    transform: scale(1.03);
+    will-change: transform, opacity;
 }
 
 .hero-slide.active {
     opacity: 1;
-    transform: scale(1);
+    animation: heroCinematicZoom 7s ease-out forwards;
 }
 
+@keyframes heroCinematicZoom {
+    from {
+        transform: scale(1.03);
+    }
+
+    to {
+        transform: scale(1.12);
+    }
+}
+
+/* Subtle cinematic contrast */
 .hero-slideshow::after {
     content: "";
     position: absolute;
     inset: 0;
+    z-index: 2;
+    pointer-events: none;
+
     background:
         linear-gradient(
             90deg,
-            rgba(0,0,0,.92),
-            rgba(0,0,0,.65) 42%,
-            rgba(0,0,0,.28) 72%,
-            rgba(0,0,0,.55)
+            rgba(0,0,0,.28),
+            rgba(0,0,0,.08) 50%,
+            rgba(0,0,0,.25)
         );
 }
 
+/* Hero contains NO text */
 .home-hero-content {
-    position: relative;
-    z-index: 3;
-    width: 100%;
+    display: none;
 }
 
-.hero-copy {
-    max-width: 700px;
-    padding: 70px 0 120px;
-}
-
-.hero-copy h1 {
-    margin: 0 0 22px;
-    font-size: clamp(3.2rem, 6.5vw, 6.5rem);
-    line-height: .92;
-    letter-spacing: -.045em;
-}
-
-.hero-copy h1 span,
-.hero-copy h1 strong {
-    display: block;
-}
-
-.hero-copy h1 strong {
-    color: #d4af37;
-}
-
-.hero-description {
-    max-width: 610px;
-    color: rgba(255,255,255,.78);
-    font-size: 1.06rem;
-    line-height: 1.75;
-}
-
-
-/* =====================================================
-   HERO CONTROLS
-===================================================== */
-
+/* Slideshow dots */
 .hero-slide-controls {
     position: absolute;
     left: 50%;
-    bottom: 30px;
+    bottom: 28px;
     z-index: 5;
+
     display: flex;
     gap: 8px;
+
     transform: translateX(-50%);
 }
 
 .hero-slide-dot {
     width: 7px;
     height: 7px;
+
     padding: 0;
+
     border: 1px solid rgba(255,255,255,.65);
     border-radius: 50%;
+
     background: transparent;
+
     cursor: pointer;
+
     transition:
         width .3s ease,
         background .3s ease,
@@ -142,9 +118,51 @@
 
 .hero-slide-dot.active {
     width: 28px;
+
     border-radius: 20px;
+
     background: #d4af37;
     border-color: #d4af37;
+}
+
+
+/* =====================================================
+   PRICE FIX
+===================================================== */
+
+.package-price {
+    margin-bottom: 18px;
+
+    color: #d4af37;
+
+    font-size: 3.2rem;
+    font-weight: 700;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+.package-price sup {
+    position: static !important;
+
+    display: inline-block !important;
+
+    vertical-align: baseline !important;
+
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+
+    transform: none !important;
+
+    margin: 0 3px 0 0 !important;
+    padding: 0 !important;
+
+    font-size: .48em !important;
+
+    line-height: 1 !important;
 }
 
 
@@ -153,34 +171,64 @@
 ===================================================== */
 
 .home-intro {
-    padding-top: 110px;
-    padding-bottom: 100px;
+    padding: 110px 0 100px;
 }
 
 .home-intro-grid {
     display: grid;
+
     grid-template-columns: .8fr 1.2fr;
+
     gap: 80px;
+
     align-items: end;
 }
 
 .home-intro h2 {
     margin-bottom: 0;
+
     font-size: clamp(2.6rem,5vw,5rem);
     line-height: .98;
 }
 
 .intro-large {
     margin-bottom: 18px;
+
     color: #fff;
+
     font-size: clamp(1.35rem,2vw,1.8rem);
     line-height: 1.35;
 }
 
 .home-intro-grid > div:last-child p:not(.intro-large) {
     max-width: 680px;
+
     color: rgba(255,255,255,.62);
+
     line-height: 1.8;
+}
+
+
+/* =====================================================
+   CENTER HEADINGS
+===================================================== */
+
+.center-heading {
+    max-width: 720px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.center-heading h2 {
+    margin-bottom: 16px;
+}
+
+.center-heading p:last-child {
+    color: rgba(255,255,255,.58);
+
+    line-height: 1.7;
 }
 
 
@@ -189,34 +237,43 @@
 ===================================================== */
 
 .home-transformations {
-    padding-top: 105px;
-    padding-bottom: 105px;
+    padding: 110px 0;
 }
 
 .transformation-preview-grid {
     display: grid;
+
     grid-template-columns: repeat(2,minmax(0,1fr));
+
     gap: 18px;
 }
 
 .transformation-preview {
     overflow: hidden;
+
     border: 1px solid rgba(255,255,255,.08);
+
     background: #0b0b0b;
 }
 
 .home-gallery-image {
     position: relative;
+
     display: block;
+
     aspect-ratio: 4 / 3;
+
     overflow: hidden;
 }
 
 .home-gallery-image img {
     width: 100%;
     height: 100%;
+
     display: block;
+
     object-fit: cover;
+
     transition: transform .6s ease;
 }
 
@@ -226,15 +283,23 @@
 
 .image-view-label {
     position: absolute;
+
     right: 15px;
     bottom: 15px;
+
     z-index: 2;
+
     padding: 8px 11px;
+
     border: 1px solid rgba(255,255,255,.25);
+
     background: rgba(0,0,0,.55);
+
     color: #fff;
+
     font-size: 8px;
     font-weight: 800;
+
     letter-spacing: .15em;
 }
 
@@ -244,24 +309,30 @@
 
 .transformation-preview-content > span {
     color: #d4af37;
+
     font-size: 8px;
     font-weight: 800;
+
     letter-spacing: .15em;
 }
 
 .transformation-preview-content h3 {
     margin: 8px 0 5px;
+
     color: #fff;
 }
 
 .transformation-preview-content p {
     margin: 0;
+
     color: rgba(255,255,255,.45);
+
     font-size: 12px;
 }
 
 .center-link {
     margin-top: 42px;
+
     text-align: center;
 }
 
@@ -271,27 +342,33 @@
 ===================================================== */
 
 .home-packages {
-    padding-top: 105px;
-    padding-bottom: 105px;
+    padding: 105px 0;
 }
 
 .home-package-grid {
     display: grid;
+
     grid-template-columns: repeat(3,1fr);
+
     gap: 20px;
+
     align-items: stretch;
 }
 
 .home-package {
     position: relative;
+
     padding: 34px;
+
     border: 1px solid rgba(255,255,255,.09);
+
     background:
         linear-gradient(
             145deg,
             rgba(255,255,255,.045),
             rgba(255,255,255,.015)
         );
+
     transition:
         transform .35s ease,
         border-color .35s ease;
@@ -299,17 +376,20 @@
 
 .home-package:hover {
     transform: translateY(-5px);
+
     border-color: rgba(212,175,55,.45);
 }
 
 .home-package.featured-package {
     border-color: rgba(212,175,55,.62);
+
     background:
         linear-gradient(
             145deg,
             rgba(212,175,55,.12),
             rgba(255,255,255,.025)
         );
+
     box-shadow:
         0 20px 60px rgba(0,0,0,.3),
         inset 0 1px 0 rgba(212,175,55,.08);
@@ -317,95 +397,109 @@
 
 .package-top {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
+
     gap: 15px;
+
     margin-bottom: 32px;
 }
 
 .package-number {
     color: rgba(255,255,255,.35);
+
     font-size: 11px;
+
     letter-spacing: .15em;
 }
 
 .package-label {
     color: #d4af37;
+
     font-size: 9px;
     font-weight: 800;
+
     letter-spacing: .16em;
 }
 
 .home-package h3 {
     margin-bottom: 12px;
+
     color: #fff;
+
     font-size: 1.65rem;
-}
-
-.package-price {
-    margin-bottom: 18px;
-    color: #d4af37;
-    font-size: 3.2rem;
-    font-weight: 700;
-    line-height: 1;
-}
-
-.package-price sup {
-    position: static;
-    top: auto;
-    font-size: .48em;
-    vertical-align: baseline;
-    margin-right: 2px;
 }
 
 .home-package > p {
     min-height: 78px;
+
     color: rgba(255,255,255,.58);
+
     font-size: .94rem;
+
     line-height: 1.65;
 }
 
 .home-package ul {
     margin: 25px 0 30px;
+
     padding: 0;
+
     list-style: none;
 }
 
 .home-package li {
     position: relative;
+
     padding: 9px 0 9px 20px;
+
     border-top: 1px solid rgba(255,255,255,.07);
+
     color: rgba(255,255,255,.72);
+
     font-size: .88rem;
 }
 
 .home-package li::before {
     content: "✓";
+
     position: absolute;
+
     left: 0;
+
     color: #d4af37;
+
     font-weight: 700;
 }
 
 .package-link {
     color: #d4af37;
+
     font-size: 11px;
     font-weight: 800;
+
     letter-spacing: .12em;
+
     text-transform: uppercase;
 }
 
 .packages-bottom {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
+
     gap: 20px;
+
     margin-top: 28px;
 }
 
 .packages-bottom p {
     margin: 0;
+
     color: rgba(255,255,255,.42);
+
     font-size: 11px;
 }
 
@@ -415,14 +509,16 @@
 ===================================================== */
 
 .home-enhancements {
-    padding-top: 110px;
-    padding-bottom: 110px;
+    padding: 110px 0;
 }
 
 .addon-grid {
     display: grid;
+
     grid-template-columns: .9fr 1.1fr;
+
     gap: 70px;
+
     align-items: center;
 }
 
@@ -432,13 +528,17 @@
 
 .addon-grid > div:first-child p:not(.eyebrow) {
     max-width: 550px;
+
     color: rgba(255,255,255,.58);
+
     line-height: 1.8;
 }
 
 .addon-card {
     padding: 38px;
+
     border: 1px solid rgba(212,175,55,.22);
+
     background:
         radial-gradient(
             circle at top right,
@@ -450,8 +550,10 @@
 
 .addon-card > span {
     color: #d4af37;
+
     font-size: 9px;
     font-weight: 800;
+
     letter-spacing: .18em;
 }
 
@@ -461,25 +563,33 @@
 
 .enhancement-list > div {
     padding: 17px 0;
+
     border-top: 1px solid rgba(255,255,255,.08);
 }
 
 .enhancement-list strong {
     display: block;
+
     color: #fff;
+
     font-size: .95rem;
 }
 
 .enhancement-list span {
     display: block;
+
     margin-top: 4px;
+
     color: rgba(255,255,255,.43);
+
     font-size: .78rem;
 }
 
 .addon-divider {
     height: 1px;
+
     margin: 8px 0 25px;
+
     background: rgba(255,255,255,.08);
 }
 
@@ -489,48 +599,55 @@
 ===================================================== */
 
 .home-process {
-    padding-top: 110px;
-    padding-bottom: 110px;
+    padding: 110px 0;
 }
 
 .process-grid {
     display: grid;
+
     grid-template-columns: repeat(4,1fr);
-    gap: 0;
 }
 
 .process-step {
     padding: 0 30px;
+
     border-left: 1px solid rgba(255,255,255,.1);
 }
 
 .process-step:first-child {
     border-left: 0;
+
     padding-left: 0;
 }
 
 .process-number {
-    display: block !important;
-    margin: 0 0 22px !important;
-    padding: 0 !important;
-    border: 0 !important;
-    background: transparent !important;
-    color: #d4af37 !important;
-    font-size: 10px !important;
-    font-weight: 800 !important;
+    display: block;
+
+    margin-bottom: 22px;
+
+    color: #d4af37;
+
+    font-size: 10px;
+    font-weight: 800;
+
     letter-spacing: .15em;
 }
 
 .process-step h3 {
     margin-bottom: 10px;
+
     color: #fff;
 }
 
 .process-step p {
     max-width: 230px;
+
     margin: 0;
+
     color: rgba(255,255,255,.5);
+
     font-size: .88rem;
+
     line-height: 1.7;
 }
 
@@ -541,34 +658,46 @@
 
 .home-values {
     display: grid;
+
     grid-template-columns: repeat(3,1fr);
+
     gap: 18px;
 }
 
 .home-value {
     padding: 35px;
+
     border: 1px solid rgba(255,255,255,.08);
+
     background: rgba(255,255,255,.02);
 }
 
 .home-value > span {
     display: block;
+
     margin-bottom: 35px;
+
     color: #d4af37;
+
     font-size: 10px;
     font-weight: 800;
+
     letter-spacing: .15em;
 }
 
 .home-value h3 {
     margin-bottom: 12px;
+
     color: #fff;
 }
 
 .home-value p {
     margin: 0;
+
     color: rgba(255,255,255,.5);
+
     font-size: .88rem;
+
     line-height: 1.7;
 }
 
@@ -578,15 +707,18 @@
 ===================================================== */
 
 .home-reviews {
-    padding-top: 110px;
-    padding-bottom: 110px;
+    padding: 110px 0;
 }
 
 .review-featured {
     max-width: 920px;
+
     margin: 0 auto;
+
     padding: 55px;
+
     border: 1px solid rgba(212,175,55,.2);
+
     background:
         radial-gradient(
             circle at top left,
@@ -594,60 +726,81 @@
             transparent 45%
         ),
         #0b0b0b;
+
     text-align: center;
 }
 
 .review-stars {
     margin-bottom: 25px;
+
     color: #d4af37;
+
     font-size: 17px;
+
     letter-spacing: .16em;
 }
 
 .review-featured blockquote {
     max-width: 760px;
+
     margin: 0 auto 28px;
+
     color: #fff;
+
     font-size: clamp(1.25rem,2.5vw,2rem);
+
     line-height: 1.5;
-    font-weight: 400;
 }
 
 .review-author strong {
     display: block;
+
     color: #fff;
 }
 
 .review-author span {
     display: block;
+
     margin-top: 5px;
+
     color: rgba(255,255,255,.4);
+
     font-size: 11px;
 }
 
 .review-google-badge {
     display: inline-flex;
+
     align-items: center;
+
     gap: 12px;
+
     margin-top: 35px;
+
     padding: 12px 18px;
+
     border: 1px solid rgba(255,255,255,.08);
+
     text-align: left;
 }
 
 .review-google-badge > span {
     color: #d4af37;
+
     font-size: 20px;
 }
 
 .review-google-badge strong {
     display: block;
+
     color: #fff;
+
     font-size: 11px;
 }
 
 .review-google-badge small {
     color: rgba(255,255,255,.4);
+
     font-size: 9px;
 }
 
@@ -657,14 +810,16 @@
 ===================================================== */
 
 .home-service-area {
-    padding-top: 105px;
-    padding-bottom: 105px;
+    padding: 105px 0;
 }
 
 .service-area-home-grid {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 80px;
+
     align-items: center;
 }
 
@@ -674,29 +829,43 @@
 
 .service-area-home-grid > div:first-child p:not(.eyebrow) {
     max-width: 560px;
+
     color: rgba(255,255,255,.58);
+
     line-height: 1.8;
 }
 
 .area-highlight {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 1px;
+
     border: 1px solid rgba(212,175,55,.2);
+
     background: rgba(212,175,55,.2);
 }
 
 .area-highlight div {
     min-height: 125px;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     padding: 20px;
+
     background: #0b0b0b;
+
     color: #fff;
+
     font-size: 12px;
     font-weight: 700;
+
     letter-spacing: .12em;
+
     text-align: center;
 }
 
@@ -707,8 +876,11 @@
 
 .home-final-cta {
     position: relative;
+
     overflow: hidden;
+
     padding: 130px 0;
+
     background:
         radial-gradient(
             circle at center,
@@ -716,15 +888,20 @@
             transparent 48%
         ),
         #050505;
+
     border-top: 1px solid rgba(212,175,55,.15);
     border-bottom: 1px solid rgba(212,175,55,.15);
+
     text-align: center;
 }
 
 .home-final-cta h2 {
     max-width: 900px;
+
     margin: 0 auto 22px;
+
     font-size: clamp(2.7rem,5vw,5.5rem);
+
     line-height: .98;
 }
 
@@ -734,78 +911,33 @@
 
 .home-final-cta > .container > p:not(.eyebrow) {
     max-width: 580px;
+
     margin: 0 auto 32px;
+
     color: rgba(255,255,255,.6);
+
     line-height: 1.7;
 }
 
 .home-final-cta .hero-actions {
     display: flex;
+
     justify-content: center;
+
     gap: 14px;
+
     flex-wrap: wrap;
 }
 
 .cta-tagline {
     margin-top: 32px;
+
     color: rgba(255,255,255,.35);
+
     font-size: 9px;
     font-weight: 800;
+
     letter-spacing: .2em;
-}
-
-
-/* =====================================================
-   FLOATING ACTION BUTTONS
-===================================================== */
-
-.floating-action-buttons {
-    position: fixed;
-    right: 24px;
-    bottom: 24px;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.floating-action-buttons a {
-    min-width: 150px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 18px;
-    border: 1px solid rgba(212,175,55,.45);
-    background: rgba(5,5,5,.96);
-    box-shadow: 0 12px 35px rgba(0,0,0,.4);
-    backdrop-filter: blur(12px);
-    color: #fff;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: .12em;
-    text-decoration: none;
-    transition:
-        transform .25s ease,
-        background .25s ease,
-        color .25s ease,
-        border-color .25s ease;
-}
-
-.floating-action-buttons a:hover {
-    transform: translateY(-2px);
-    border-color: #d4af37;
-}
-
-.floating-action-buttons .floating-quote {
-    background: #d4af37;
-    border-color: #d4af37;
-    color: #050505;
-}
-
-.floating-action-buttons .floating-quote:hover {
-    background: #e1c158;
-    color: #050505;
 }
 
 
@@ -819,18 +951,11 @@
         grid-template-columns: 1fr;
     }
 
-    .home-package {
-        padding: 30px;
-    }
-
-    .home-package > p {
-        min-height: auto;
-    }
-
     .home-intro-grid,
     .addon-grid,
     .service-area-home-grid {
         grid-template-columns: 1fr;
+
         gap: 45px;
     }
 
@@ -838,7 +963,6 @@
         grid-template-columns: 1fr;
     }
 }
-
 
 @media (max-width:900px) {
 
@@ -848,15 +972,16 @@
 
     .process-grid {
         grid-template-columns: repeat(2,1fr);
+
         gap: 40px 0;
     }
 
     .process-step:nth-child(3) {
         border-left: 0;
+
         padding-left: 0;
     }
 }
-
 
 @media (max-width:700px) {
 
@@ -865,29 +990,17 @@
     }
 
     .home-hero {
-        min-height: 84svh;
+        min-height: 88svh;
     }
 
     .hero-slideshow::after {
         background:
             linear-gradient(
                 180deg,
-                rgba(0,0,0,.45),
-                rgba(0,0,0,.62) 45%,
-                rgba(0,0,0,.94)
+                rgba(0,0,0,.30),
+                rgba(0,0,0,.10) 50%,
+                rgba(0,0,0,.38)
             );
-    }
-
-    .hero-copy {
-        padding: 55px 0 85px;
-    }
-
-    .hero-copy h1 {
-        font-size: clamp(2.9rem,14vw,4.6rem);
-    }
-
-    .hero-description {
-        font-size: .96rem;
     }
 
     .hero-slide-controls {
@@ -905,16 +1018,9 @@
         padding-bottom: 75px;
     }
 
-    .center-heading {
-        margin-bottom: 38px;
-    }
-
-    .home-intro-grid {
-        gap: 35px;
-    }
-
     .packages-bottom {
         flex-direction: column;
+
         align-items: flex-start;
     }
 
@@ -924,18 +1030,22 @@
 
     .process-grid {
         grid-template-columns: 1fr;
+
         gap: 0;
     }
 
     .process-step,
     .process-step:nth-child(3) {
         padding: 28px 0;
+
         border-left: 0;
+
         border-top: 1px solid rgba(255,255,255,.1);
     }
 
     .process-step:first-child {
         padding-top: 0;
+
         border-top: 0;
     }
 
@@ -951,12 +1061,9 @@
         font-size: 1.15rem;
     }
 
-    .service-area-home-grid {
-        gap: 35px;
-    }
-
     .area-highlight div {
         min-height: 90px;
+
         font-size: 9px;
     }
 
@@ -966,45 +1073,12 @@
 
     .home-final-cta .hero-actions {
         flex-direction: column;
+
         width: 100%;
     }
 
     .home-final-cta .hero-actions .btn {
         width: 100%;
-    }
-
-    .floating-action-buttons {
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 9999;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0;
-        height: 64px;
-        border-top: 1px solid rgba(212,175,55,.35);
-        background: rgba(5,5,5,.97);
-        backdrop-filter: blur(15px);
-    }
-
-    .floating-action-buttons a {
-        min-width: 0;
-        height: 64px;
-        border: 0;
-        border-radius: 0;
-        box-shadow: none;
-        background: transparent;
-        font-size: 10px;
-    }
-
-    .floating-action-buttons a + a {
-        border-left: 1px solid rgba(255,255,255,.1);
-    }
-
-    .floating-action-buttons .floating-quote {
-        background: #d4af37;
-        color: #050505;
     }
 }
 
@@ -1036,7 +1110,6 @@ AUTO SPA & MOBILE DETAILING
 
 </a>
 
-
 <button
     class="menu-toggle"
     id="menuToggle"
@@ -1051,32 +1124,14 @@ AUTO SPA & MOBILE DETAILING
 
 </button>
 
-
 <nav class="main-nav" id="mainNav" aria-label="Main navigation">
 
-<a href="index.html" class="active">
-Home
-</a>
-
-<a href="gallery.html">
-Gallery
-</a>
-
-<a href="services.html">
-Services
-</a>
-
-<a href="quote.html">
-Get A Quote
-</a>
-
-<a href="about.html">
-About
-</a>
-
-<a href="service-area.html">
-Service Area
-</a>
+<a href="index.html" class="active">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="services.html">Services</a>
+<a href="quote.html">Get A Quote</a>
+<a href="about.html">About</a>
+<a href="service-area.html">Service Area</a>
 
 </nav>
 
@@ -1089,15 +1144,12 @@ Service Area
 
 
 <!-- =====================================================
-     HERO
+     HERO — IMAGE ONLY
 ===================================================== -->
 
 <section class="home-hero">
 
 <div class="hero-slideshow" aria-hidden="true">
-
-
-<!-- CR-V FRONT -->
 
 <img
     class="hero-slide active"
@@ -1107,9 +1159,6 @@ Service Area
     decoding="async"
 >
 
-
-<!-- CR-V DRIVER INTERIOR -->
-
 <img
     class="hero-slide"
     src="images/crv-driver-interior.webp"
@@ -1117,9 +1166,6 @@ Service Area
     loading="lazy"
     decoding="async"
 >
-
-
-<!-- CR-V SIDE -->
 
 <img
     class="hero-slide"
@@ -1129,9 +1175,6 @@ Service Area
     decoding="async"
 >
 
-
-<!-- CR-V REAR -->
-
 <img
     class="hero-slide"
     src="images/crv-rear.webp"
@@ -1140,13 +1183,8 @@ Service Area
     decoding="async"
 >
 
-
-
-
 </div>
 
-
-<!-- FOUR SLIDESHOW DOTS -->
 
 <div
     class="hero-slide-controls"
@@ -1199,44 +1237,33 @@ THE ENHANCE EXPERIENCE
 </p>
 
 <h2>
-
 Your Vehicle.
-
 <br>
-
 <span class="gold-text">
 Elevated.
 </span>
-
 </h2>
 
 </div>
 
-
 <div>
 
 <p class="intro-large">
-
 Your vehicle deserves more than
 a quick wash and a vacuum.
-
 </p>
 
 <p>
-
 Enhance My Ride delivers a premium
 mobile detailing experience built around
 convenience, attention to detail, and a
 finish you can see and feel.
-
 </p>
 
 <p>
-
 Whether your vehicle needs a complete
 detail or one specific area restored,
 we're here to enhance it.
-
 </p>
 
 <a href="about.html" class="text-link">
@@ -1267,22 +1294,17 @@ REAL VEHICLES. REAL RESULTS.
 </p>
 
 <h2>
-
 See The
-
 <span class="gold-text">
 Difference.
 </span>
-
 </h2>
 
 <p>
-
 See the finished results —
 then visit the gallery to drag
 through the real Before → After
 transformations.
-
 </p>
 
 </div>
@@ -1290,8 +1312,6 @@ transformations.
 
 <div class="transformation-preview-grid">
 
-
-<!-- MERCEDES -->
 
 <article class="transformation-preview">
 
@@ -1301,7 +1321,7 @@ transformations.
 >
 
 <img
-    src="images/mercedes-after-front.webp"
+    src="images/gallery/mercedes-front-three-quarter.webp"
     alt="Mercedes-Benz CLS 550 after professional detailing"
     loading="lazy"
     decoding="async"
@@ -1312,7 +1332,6 @@ VIEW TRANSFORMATION
 </span>
 
 </a>
-
 
 <div class="transformation-preview-content">
 
@@ -1333,8 +1352,6 @@ Enhance Gold Package
 </article>
 
 
-<!-- LEXUS -->
-
 <article class="transformation-preview">
 
 <a
@@ -1343,7 +1360,7 @@ Enhance Gold Package
 >
 
 <img
-    src="images/lexus-is250-after-front.webp"
+    src="images/gallery/lexus-is250-front.webp"
     alt="Lexus IS 250 after professional detailing"
     loading="lazy"
     decoding="async"
@@ -1354,7 +1371,6 @@ VIEW TRANSFORMATION
 </span>
 
 </a>
-
 
 <div class="transformation-preview-content">
 
@@ -1406,21 +1422,16 @@ PREMIUM DETAILING
 </p>
 
 <h2>
-
 Choose Your
-
 <span class="gold-text">
 Enhance.
 </span>
-
 </h2>
 
 <p>
-
 Three levels of detailing designed
 around your vehicle's condition
 and needs.
-
 </p>
 
 </div>
@@ -1428,8 +1439,6 @@ and needs.
 
 <div class="home-package-grid">
 
-
-<!-- GOLD -->
 
 <article class="home-package">
 
@@ -1454,11 +1463,9 @@ Enhance Gold
 </div>
 
 <p>
-
 A complete maintenance detail
 designed to bring back the clean,
 refreshed feel your vehicle deserves.
-
 </p>
 
 <ul>
@@ -1478,8 +1485,6 @@ View Package →
 
 </article>
 
-
-<!-- BLACK LABEL -->
 
 <article class="home-package featured-package">
 
@@ -1504,11 +1509,9 @@ Enhance Black Label
 </div>
 
 <p>
-
 Our most popular option for vehicles
 that need a deeper interior and
 exterior transformation.
-
 </p>
 
 <ul>
@@ -1528,8 +1531,6 @@ View Package →
 
 </article>
 
-
-<!-- SHOWROOM -->
 
 <article class="home-package">
 
@@ -1554,11 +1555,9 @@ Showroom Edition
 </div>
 
 <p>
-
 Our highest level of service for
 owners who want their vehicle
 looking its absolute best.
-
 </p>
 
 <ul>
@@ -1578,18 +1577,17 @@ View Package →
 
 </article>
 
+
 </div>
 
 
 <div class="packages-bottom">
 
 <p>
-
 Pricing starts at the amounts shown.
 Final pricing may vary by vehicle size,
 condition, buildup, pet hair, stains,
 and requested services.
-
 </p>
 
 <a href="quote.html" class="text-link">
@@ -1613,7 +1611,6 @@ Get Your Personalized Quote →
 
 <div class="addon-grid">
 
-
 <div>
 
 <p class="eyebrow">
@@ -1621,29 +1618,22 @@ PREMIUM ADD-ONS
 </p>
 
 <h2>
-
 Enhance Just
-
 <span class="gold-text">
 What You Need.
 </span>
-
 </h2>
 
 <p>
-
 Not every vehicle needs a complete detail.
 Sometimes one specific area can make a
 dramatic difference.
-
 </p>
 
 <p>
-
 Add specialized services to your package
 or request a custom service based on your
 vehicle's condition.
-
 </p>
 
 <a href="services.html" class="text-link">
@@ -1703,7 +1693,6 @@ VEHICLE ENHANCEMENTS
 
 </div>
 
-
 <div class="addon-divider"></div>
 
 <a href="quote.html" class="btn btn-primary">
@@ -1734,21 +1723,16 @@ SIMPLE. CONVENIENT. PREMIUM.
 </p>
 
 <h2>
-
 Detailing Without
-
 <span class="gold-text">
 The Hassle.
 </span>
-
 </h2>
 
 <p>
-
 From your first message to the
 final inspection, we make the
 process simple.
-
 </p>
 
 </div>
@@ -1767,11 +1751,9 @@ Tell Us About Your Ride
 </h3>
 
 <p>
-
 Submit a quote request with your
 vehicle, location, service needs,
 and photos when helpful.
-
 </p>
 
 </div>
@@ -1788,11 +1770,9 @@ We Review The Details
 </h3>
 
 <p>
-
 We'll help determine the right
 service based on your vehicle's
 condition and needs.
-
 </p>
 
 </div>
@@ -1809,11 +1789,9 @@ We Come To You
 </h3>
 
 <p>
-
 Your home, workplace, or another
 convenient location becomes your
 detailing location.
-
 </p>
 
 </div>
@@ -1830,11 +1808,9 @@ Enjoy The Result
 </h3>
 
 <p>
-
 We complete the service and perform
 a final presentation inspection
 before we leave.
-
 </p>
 
 </div>
@@ -1861,13 +1837,9 @@ WHY ENHANCE MY RIDE
 </p>
 
 <h2>
-
 Premium Service.
-
 <br>
-
 Without The Hassle.
-
 </h2>
 
 </div>
@@ -1884,11 +1856,9 @@ We Come To You
 </h3>
 
 <p>
-
 Your home, workplace, or convenient
 location. No waiting room. No shop
 drop-off.
-
 </p>
 
 </div>
@@ -1903,11 +1873,9 @@ Attention To Detail
 </h3>
 
 <p>
-
 We focus on the areas that create
 the biggest visual and functional
 difference.
-
 </p>
 
 </div>
@@ -1922,12 +1890,10 @@ Premium Experience
 </h3>
 
 <p>
-
 From your quote to the final
 inspection, every part of the
 experience should feel as good
 as the finished vehicle.
-
 </p>
 
 </div>
@@ -1947,7 +1913,6 @@ as the finished vehicle.
 
 <div class="container">
 
-
 <div class="center-heading">
 
 <p class="eyebrow">
@@ -1955,13 +1920,10 @@ CLIENT EXPERIENCE
 </p>
 
 <h2>
-
 Don't Just Take
-
 <span class="gold-text">
 Our Word For It.
 </span>
-
 </h2>
 
 <p>
@@ -1978,25 +1940,21 @@ Real results.
 ★ ★ ★ ★ ★
 </div>
 
-<div
-    style="
-        color:#d4af37;
-        font-size:10px;
-        font-weight:800;
-        letter-spacing:.18em;
-        margin-bottom:22px;
-    "
->
+<div style="
+color:#d4af37;
+font-size:10px;
+font-weight:800;
+letter-spacing:.18em;
+margin-bottom:22px;
+">
 LATEST GOOGLE REVIEW
 </div>
 
 <blockquote>
-
 “He did his big one on my Lexus 😮‍💨
 😮‍💨✅ !!! So thankful I took a chance
 on this small business, definitely will
 be adding this to my monthly expenses!”
-
 </blockquote>
 
 <div class="review-author">
@@ -2010,7 +1968,6 @@ Google Review · 5 Stars · Lexus
 </span>
 
 </div>
-
 
 <div class="review-google-badge">
 
@@ -2034,11 +1991,11 @@ Google Business Profile
 
 
 <div
-    class="review-featured"
-    style="
-        margin-top:20px;
-        opacity:.92;
-    "
+class="review-featured"
+style="
+margin-top:20px;
+opacity:.92;
+"
 >
 
 <div class="review-stars">
@@ -2046,12 +2003,10 @@ Google Business Profile
 </div>
 
 <blockquote>
-
 “10 for 10! Restored my dusty CLS 550
 to showroom beauty — Interior and Exterior.
 Amazing work. Will be returning for additional
 services. HIGHLY RECOMMEND!”
-
 </blockquote>
 
 <div class="review-author">
@@ -2072,10 +2027,10 @@ Google Review · 5 Stars
 <div class="center-link">
 
 <a
-    href="https://g.page/r/CRy_PYJmq6NYEBM/review"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="btn btn-outline"
+href="https://g.page/r/CRy_PYJmq6NYEBM/review"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-outline"
 >
 Leave Us A Google Review
 </a>
@@ -2097,7 +2052,6 @@ Leave Us A Google Review
 
 <div class="service-area-home-grid">
 
-
 <div>
 
 <p class="eyebrow">
@@ -2105,22 +2059,17 @@ MOBILE DETAILING • BAY AREA
 </p>
 
 <h2>
-
 Wherever You Park,
-
 <span class="gold-text">
 We Can Come To You.
 </span>
-
 </h2>
 
 <p>
-
 Serving Alameda, Oakland,
 San Francisco, San Leandro,
 Berkeley, Emeryville, Hayward,
 and surrounding Bay Area communities.
-
 </p>
 
 <a href="service-area.html" class="text-link">
@@ -2133,15 +2082,10 @@ Explore Our Service Area →
 <div class="area-highlight">
 
 <div>ALAMEDA</div>
-
 <div>OAKLAND</div>
-
 <div>SAN FRANCISCO</div>
-
 <div>SAN LEANDRO</div>
-
 <div>BERKELEY</div>
-
 <div>HAYWARD</div>
 
 </div>
@@ -2166,23 +2110,17 @@ READY TO ENHANCE?
 </p>
 
 <h2>
-
 Your Ride Deserves
-
 <span>
 The Enhance.
 </span>
-
 </h2>
 
 <p>
-
 Tell us what you're driving and where
 you're located. We'll help you find
 the right service.
-
 </p>
-
 
 <div class="hero-actions">
 
@@ -2195,7 +2133,6 @@ Call / Text (323) 327-1806
 </a>
 
 </div>
-
 
 <div class="cta-tagline">
 WE COME TO YOU. YOU RELAX. WE ENHANCE.
@@ -2217,7 +2154,6 @@ WE COME TO YOU. YOU RELAX. WE ENHANCE.
 
 <div class="container footer-grid">
 
-
 <div class="footer-brand">
 
 <a href="index.html" class="logo">
@@ -2233,11 +2169,9 @@ AUTO SPA & MOBILE DETAILING
 </a>
 
 <p>
-
 Premium mobile detailing delivered
 throughout Alameda, Oakland,
 San Francisco and the Bay Area.
-
 </p>
 
 </div>
@@ -2250,15 +2184,10 @@ Explore
 </h4>
 
 <a href="index.html">Home</a>
-
 <a href="gallery.html">Gallery</a>
-
 <a href="services.html">Services</a>
-
 <a href="quote.html">Get A Quote</a>
-
 <a href="about.html">About</a>
-
 <a href="service-area.html">Service Area</a>
 
 </div>
@@ -2283,25 +2212,25 @@ info@enhancemyride.com
 </a>
 
 <a
-    href="https://www.instagram.com/enhancemyridemobiledetailing/"
-    target="_blank"
-    rel="noopener noreferrer"
+href="https://www.instagram.com/enhancemyridemobiledetailing/"
+target="_blank"
+rel="noopener noreferrer"
 >
 Instagram
 </a>
 
 <a
-    href="https://www.tiktok.com/@enhancemyride"
-    target="_blank"
-    rel="noopener noreferrer"
+href="https://www.tiktok.com/@enhancemyride"
+target="_blank"
+rel="noopener noreferrer"
 >
 TikTok
 </a>
 
 <a
-    href="https://www.youtube.com/@enhancemyridemobiledetailing"
-    target="_blank"
-    rel="noopener noreferrer"
+href="https://www.youtube.com/@enhancemyridemobiledetailing"
+target="_blank"
+rel="noopener noreferrer"
 >
 YouTube
 </a>
@@ -2314,10 +2243,8 @@ YouTube
 <div class="container footer-bottom">
 
 <p>
-
 © 2026 Enhance My Ride Auto Spa &
 Mobile Detailing. All rights reserved.
-
 </p>
 
 </div>
@@ -2342,30 +2269,28 @@ document.addEventListener(
     "DOMContentLoaded",
     function () {
 
-        const slides = [
-            ...document.querySelectorAll(".hero-slide")
-        ];
+        const slides =
+            document.querySelectorAll(".hero-slide");
 
-        const dots = [
-            ...document.querySelectorAll(".hero-slide-dot")
-        ];
+        const dots =
+            document.querySelectorAll(".hero-slide-dot");
 
         if (!slides.length) {
             return;
         }
 
-        let current = 0;
-        let timer;
+        let currentSlide = 0;
+        let slideshowTimer;
 
 
         function showSlide(index) {
 
             slides.forEach(
-                function (slide, number) {
+                function (slide, i) {
 
                     slide.classList.toggle(
                         "active",
-                        number === index
+                        i === index
                     );
 
                 }
@@ -2373,36 +2298,41 @@ document.addEventListener(
 
 
             dots.forEach(
-                function (dot, number) {
+                function (dot, i) {
 
                     dot.classList.toggle(
                         "active",
-                        number === index
+                        i === index
                     );
 
                 }
             );
 
 
-            current = index;
+            currentSlide = index;
+
+        }
+
+
+        function nextSlide() {
+
+            showSlide(
+                (currentSlide + 1) %
+                slides.length
+            );
 
         }
 
 
         function startSlideshow() {
 
-            clearInterval(timer);
+            clearInterval(slideshowTimer);
 
-            timer = setInterval(
-                function () {
-
-                    showSlide(
-                        (current + 1) % slides.length
-                    );
-
-                },
-                6500
-            );
+            slideshowTimer =
+                setInterval(
+                    nextSlide,
+                    6500
+                );
 
         }
 
@@ -2436,5 +2366,4 @@ document.addEventListener(
 
 
 </body>
-
 </html>
