@@ -281,13 +281,16 @@
 
         .service-price sup {
             position:
-                relative;
+                static;
 
             top:
-                -.7em;
+                auto;
 
             font-size:
-                1.25rem;
+                inherit;
+
+            vertical-align:
+                baseline;
         }
 
 
@@ -911,12 +914,6 @@
 
         @media (max-width: 650px) {
 
-            /*
-             * Keep the specialty badge completely inside
-             * the card instead of centering it across the
-             * card's top border.
-             */
-
             .addon-service-card.headlight-specialty {
                 padding-top:
                     70px;
@@ -956,22 +953,11 @@
             }
 
 
-            /*
-             * Give the specialty section enough breathing
-             * room around the floating call button.
-             */
-
             .specialty-section {
                 padding-bottom:
                     115px;
             }
 
-
-            /*
-             * Move the floating call button above the
-             * bottom edge so it doesn't cover specialty
-             * card content while scrolling.
-             */
 
             .mobile-call-button {
                 bottom:
@@ -1661,7 +1647,7 @@
 
 
                         <div class="service-price">
-                            <sup>$</sup>149+
+                            $149+
                         </div>
 
 
@@ -1737,7 +1723,7 @@
 
 
                         <div class="service-price">
-                            <sup>$</sup>249+
+                            $249+
                         </div>
 
 
@@ -1807,7 +1793,7 @@
 
 
                         <div class="service-price">
-                            <sup>$</sup>399+
+                            $399+
                         </div>
 
 
@@ -2850,5 +2836,3 @@
 
 
 </body>
-
-</html>
