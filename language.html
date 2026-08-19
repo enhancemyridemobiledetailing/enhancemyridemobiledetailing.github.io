@@ -26,7 +26,7 @@
     >
 
     <title>
-        Enhance My Ride | Choose Your Language
+        Enhance My Ride | Premium Mobile Detailing
     </title>
 
 
@@ -62,16 +62,12 @@
 
 
     <!-- =====================================================
-         LANGUAGE PAGE STYLES
+         LANDING PAGE STYLES
     ====================================================== -->
 
     <style>
 
-        /* =================================================
-           LANGUAGE PAGE
-        ================================================= */
-
-        .language-page {
+        .landing-page {
 
             min-height: 100vh;
 
@@ -101,7 +97,7 @@
            HEADER
         ================================================= */
 
-        .language-header {
+        .landing-header {
 
             width: 100%;
 
@@ -117,7 +113,7 @@
         }
 
 
-        .language-brand {
+        .landing-brand {
 
             display: flex;
 
@@ -130,7 +126,7 @@
         }
 
 
-        .language-brand-top {
+        .landing-brand-top {
 
             color: var(--gold-light);
 
@@ -143,7 +139,7 @@
         }
 
 
-        .language-brand-main {
+        .landing-brand-main {
 
             font-family: var(--serif);
 
@@ -158,7 +154,7 @@
         }
 
 
-        .language-brand-bottom {
+        .landing-brand-bottom {
 
             color: var(--gray);
 
@@ -175,7 +171,7 @@
            MAIN
         ================================================= */
 
-        .language-main {
+        .landing-main {
 
             width: 100%;
 
@@ -201,12 +197,12 @@
            INTRO
         ================================================= */
 
-        .language-intro {
+        .landing-intro {
 
             text-align: center;
 
             animation:
-                languageReveal
+                landingReveal
                 1s
                 ease
                 both;
@@ -214,7 +210,7 @@
         }
 
 
-        @keyframes languageReveal {
+        @keyframes landingReveal {
 
             from {
 
@@ -237,7 +233,7 @@
         }
 
 
-        .language-eyebrow {
+        .landing-eyebrow {
 
             color: var(--gold-light);
 
@@ -252,7 +248,7 @@
         }
 
 
-        .language-intro h1 {
+        .landing-intro h1 {
 
             font-family: var(--serif);
 
@@ -272,14 +268,14 @@
         }
 
 
-        .language-intro h1 span {
+        .landing-intro h1 span {
 
             color: var(--gold-light);
 
         }
 
 
-        .language-description {
+        .landing-description {
 
             max-width: 440px;
 
@@ -299,7 +295,7 @@
            DIVIDER
         ================================================= */
 
-        .language-divider {
+        .landing-divider {
 
             display: flex;
 
@@ -315,7 +311,7 @@
         }
 
 
-        .language-divider-line {
+        .landing-divider-line {
 
             width: 48px;
 
@@ -331,7 +327,7 @@
         }
 
 
-        .language-divider-line:last-child {
+        .landing-divider-line:last-child {
 
             background:
                 linear-gradient(
@@ -343,7 +339,7 @@
         }
 
 
-        .language-divider-diamond {
+        .landing-divider-diamond {
 
             width: 5px;
 
@@ -363,7 +359,7 @@
            LANGUAGE OPTIONS
         ================================================= */
 
-        .language-options {
+        .landing-options {
 
             display: flex;
 
@@ -374,7 +370,7 @@
         }
 
 
-        .language-option {
+        .landing-option {
 
             position: relative;
 
@@ -439,7 +435,7 @@
         }
 
 
-        .language-option:nth-child(1) {
+        .landing-option:nth-child(1) {
 
             animation-delay:
                 .15s;
@@ -447,7 +443,7 @@
         }
 
 
-        .language-option:nth-child(2) {
+        .landing-option:nth-child(2) {
 
             animation-delay:
                 .25s;
@@ -478,7 +474,7 @@
         }
 
 
-        .language-option::before {
+        .landing-option::before {
 
             content: "";
 
@@ -512,14 +508,14 @@
         }
 
 
-        .language-option:hover::before {
+        .landing-option:hover::before {
 
             left: 140%;
 
         }
 
 
-        .language-option:hover {
+        .landing-option:hover {
 
             transform:
                 translateY(-2px);
@@ -562,7 +558,7 @@
         }
 
 
-        .language-option:active {
+        .landing-option:active {
 
             transform:
                 scale(.985);
@@ -571,36 +567,10 @@
 
 
         /* =================================================
-           SELECTED LANGUAGE
-        ================================================= */
-
-        .language-option.selected-language {
-
-            border-color:
-                rgba(
-                    201,
-                    162,
-                    39,
-                    .65
-                );
-
-            box-shadow:
-                0 8px 35px
-                rgba(
-                    201,
-                    162,
-                    39,
-                    .07
-                );
-
-        }
-
-
-        /* =================================================
            PRIMARY LANGUAGE
         ================================================= */
 
-        .language-option.primary {
+        .landing-option.primary {
 
             border-color:
                 rgba(
@@ -644,7 +614,7 @@
            LANGUAGE ICON
         ================================================= */
 
-        .language-icon {
+        .landing-icon {
 
             flex:
                 0 0 45px;
@@ -676,7 +646,7 @@
         }
 
 
-        .language-icon svg {
+        .landing-icon svg {
 
             width: 20px;
 
@@ -700,7 +670,7 @@
            LANGUAGE TEXT
         ================================================= */
 
-        .language-option-text {
+        .landing-option-text {
 
             min-width: 0;
 
@@ -715,7 +685,7 @@
         }
 
 
-        .language-option-text strong {
+        .landing-option-text strong {
 
             color:
                 var(--white);
@@ -727,7 +697,7 @@
         }
 
 
-        .language-option-text small {
+        .landing-option-text small {
 
             color:
                 var(--gray);
@@ -739,7 +709,7 @@
         }
 
 
-        .language-arrow {
+        .landing-arrow {
 
             color:
                 var(--gold-light);
@@ -752,8 +722,8 @@
         }
 
 
-        .language-option:hover
-        .language-arrow {
+        .landing-option:hover
+        .landing-arrow {
 
             transform:
                 translateX(4px);
@@ -765,7 +735,7 @@
            HELPER TEXT
         ================================================= */
 
-        .language-help {
+        .landing-help {
 
             text-align: center;
 
@@ -788,7 +758,7 @@
            FOOTER
         ================================================= */
 
-        .language-footer {
+        .landing-footer {
 
             width: 100%;
 
@@ -809,7 +779,7 @@
         }
 
 
-        .language-footer-brand {
+        .landing-footer-brand {
 
             color:
                 var(--white);
@@ -824,7 +794,7 @@
         }
 
 
-        .language-footer-tagline {
+        .landing-footer-tagline {
 
             margin-top: 7px;
 
@@ -841,7 +811,7 @@
         }
 
 
-        .language-footer-copy {
+        .landing-footer-copy {
 
             margin-top: 15px;
 
@@ -859,7 +829,7 @@
 
         @media (min-width: 768px) {
 
-            .language-header {
+            .landing-header {
 
                 padding-top:
                     40px;
@@ -867,7 +837,7 @@
             }
 
 
-            .language-main {
+            .landing-main {
 
                 padding-top:
                     80px;
@@ -878,7 +848,7 @@
             }
 
 
-            .language-option {
+            .landing-option {
 
                 min-height:
                     88px;
@@ -889,14 +859,14 @@
             }
 
 
-            .language-option-text strong {
+            .landing-option-text strong {
 
                 font-size: 15px;
 
             }
 
 
-            .language-option-text small {
+            .landing-option-text small {
 
                 font-size: 11px;
 
@@ -911,7 +881,7 @@
 
         @media (max-width: 380px) {
 
-            .language-header {
+            .landing-header {
 
                 padding-top:
                     22px;
@@ -919,14 +889,14 @@
             }
 
 
-            .language-brand-main {
+            .landing-brand-main {
 
                 font-size: 31px;
 
             }
 
 
-            .language-main {
+            .landing-main {
 
                 padding:
                     50px 18px 35px;
@@ -934,14 +904,14 @@
             }
 
 
-            .language-description {
+            .landing-description {
 
                 font-size: 12px;
 
             }
 
 
-            .language-option {
+            .landing-option {
 
                 min-height: 74px;
 
@@ -953,7 +923,7 @@
             }
 
 
-            .language-icon {
+            .landing-icon {
 
                 flex-basis: 39px;
 
@@ -964,14 +934,14 @@
             }
 
 
-            .language-option-text strong {
+            .landing-option-text strong {
 
                 font-size: 12px;
 
             }
 
 
-            .language-option-text small {
+            .landing-option-text small {
 
                 font-size: 9px;
 
@@ -986,15 +956,15 @@
 
         @media (prefers-reduced-motion: reduce) {
 
-            .language-intro,
-            .language-option {
+            .landing-intro,
+            .landing-option {
 
                 animation: none;
 
             }
 
 
-            .language-option {
+            .landing-option {
 
                 transition: none;
 
@@ -1030,29 +1000,29 @@
 
 
     <!-- =====================================================
-         LANGUAGE PAGE
+         LANDING PAGE
     ====================================================== -->
 
-    <div class="language-page">
+    <div class="landing-page">
 
 
         <!-- =================================================
              HEADER
         ================================================== -->
 
-        <header class="language-header">
+        <header class="landing-header">
 
-            <div class="language-brand">
+            <div class="landing-brand">
 
-                <div class="language-brand-top">
+                <div class="landing-brand-top">
                     ENHANCE
                 </div>
 
-                <div class="language-brand-main">
+                <div class="landing-brand-main">
                     My Ride
                 </div>
 
-                <div class="language-brand-bottom">
+                <div class="landing-brand-bottom">
                     AUTO SPA &amp; MOBILE DETAILING
                 </div>
 
@@ -1065,7 +1035,7 @@
              MAIN CONTENT
         ================================================== -->
 
-        <main class="language-main">
+        <main class="landing-main">
 
 
             <!-- =============================================
@@ -1073,27 +1043,27 @@
             ============================================== -->
 
             <section
-                class="language-intro"
-                aria-labelledby="languageTitle"
+                class="landing-intro"
+                aria-labelledby="landingTitle"
             >
 
-                <div class="language-eyebrow">
-                    WELCOME
+                <div class="landing-eyebrow">
+                    PREMIUM MOBILE DETAILING
                 </div>
 
-                <h1 id="languageTitle">
+                <h1 id="landingTitle">
 
-                    Choose Your
-                    <span>Language</span>
+                    Your Ride Deserves
+                    <span>to Be Enhanced.</span>
 
                 </h1>
 
-                <p class="language-description">
+                <p class="landing-description">
 
-                    Welcome to Enhance My Ride.
-                    Select your preferred language
-                    to continue and explore our
-                    premium mobile detailing services.
+                    Premium mobile detailing delivered
+                    directly to your home, workplace,
+                    or convenient location throughout
+                    the Bay Area.
 
                 </p>
 
@@ -1105,20 +1075,20 @@
             ============================================== -->
 
             <div
-                class="language-divider"
+                class="landing-divider"
                 aria-hidden="true"
             >
 
                 <span
-                    class="language-divider-line"
+                    class="landing-divider-line"
                 ></span>
 
                 <span
-                    class="language-divider-diamond"
+                    class="landing-divider-diamond"
                 ></span>
 
                 <span
-                    class="language-divider-line"
+                    class="landing-divider-line"
                 ></span>
 
             </div>
@@ -1129,7 +1099,7 @@
             ============================================== -->
 
             <section
-                class="language-options"
+                class="landing-options"
                 aria-label="Language selection"
             >
 
@@ -1140,12 +1110,12 @@
 
                 <a
                     href="index.html?lang=en"
-                    class="language-option primary"
+                    class="landing-option primary"
                     aria-label="Continue in English"
                 >
 
                     <span
-                        class="language-icon"
+                        class="landing-icon"
                         aria-hidden="true"
                     >
 
@@ -1176,7 +1146,7 @@
                     </span>
 
 
-                    <span class="language-option-text">
+                    <span class="landing-option-text">
 
                         <strong>
                             English
@@ -1190,7 +1160,7 @@
 
 
                     <span
-                        class="language-arrow"
+                        class="landing-arrow"
                         aria-hidden="true"
                     >
                         →
@@ -1205,12 +1175,12 @@
 
                 <a
                     href="index.html?lang=es"
-                    class="language-option"
+                    class="landing-option"
                     aria-label="Continuar en español"
                 >
 
                     <span
-                        class="language-icon"
+                        class="landing-icon"
                         aria-hidden="true"
                     >
 
@@ -1233,7 +1203,7 @@
                             ></path>
 
                             <path
-                                d="M12 3c-2.4 2.4-3.6 5.4-3.6 9s1.2 6.6 3.6 9"
+                                d="M12 3c-2.4 2.4-3.6 5.4-3.6 9s1.2 6.6-3.6 9"
                             ></path>
 
                         </svg>
@@ -1241,7 +1211,7 @@
                     </span>
 
 
-                    <span class="language-option-text">
+                    <span class="landing-option-text">
 
                         <strong>
                             Español
@@ -1255,7 +1225,7 @@
 
 
                     <span
-                        class="language-arrow"
+                        class="landing-arrow"
                         aria-hidden="true"
                     >
                         →
@@ -1271,7 +1241,7 @@
                  HELPER TEXT
             ================================================== -->
 
-            <p class="language-help">
+            <p class="landing-help">
 
                 You can change your language at any time.
 
@@ -1285,17 +1255,17 @@
              FOOTER
         ================================================== -->
 
-        <footer class="language-footer">
+        <footer class="landing-footer">
 
-            <div class="language-footer-brand">
+            <div class="landing-footer-brand">
                 ENHANCE MY RIDE
             </div>
 
-            <div class="language-footer-tagline">
+            <div class="landing-footer-tagline">
                 WE COME TO YOU. YOU RELAX. WE ENHANCE.
             </div>
 
-            <div class="language-footer-copy">
+            <div class="landing-footer-copy">
 
                 &copy;
                 <span id="currentYear"></span>
