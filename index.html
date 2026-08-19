@@ -27,6 +27,250 @@
 <style>
 
 /* =====================================================
+   CINEMATIC HOMEPAGE OPENING
+===================================================== */
+
+.home-intro-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            rgba(212,175,55,.09),
+            transparent 34%
+        ),
+        #050505;
+    opacity: 1;
+    visibility: visible;
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+.home-intro-overlay::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: min(720px, 90vw);
+    height: 1px;
+    transform: translate(-50%, -50%);
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(212,175,55,.45),
+            transparent
+        );
+    opacity: 0;
+    animation: introLine 1.2s ease .45s forwards;
+}
+
+.home-intro-overlay.opening-complete {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.home-intro-content {
+    position: relative;
+    z-index: 2;
+    width: min(900px, 90%);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.home-intro-brand {
+    opacity: 0;
+    transform: translateY(18px);
+    animation:
+        introBrand 1s cubic-bezier(.22,1,.36,1) .15s forwards;
+}
+
+.home-intro-brand-top {
+    display: block;
+    margin-bottom: 10px;
+    color: #d4af37;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(.65rem, 1.5vw, .95rem);
+    font-weight: 800;
+    letter-spacing: .48em;
+    text-indent: .48em;
+}
+
+.home-intro-brand-main {
+    display: block;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3rem, 8vw, 6.7rem);
+    font-weight: 400;
+    line-height: .88;
+    letter-spacing: -.035em;
+}
+
+.home-intro-brand-sub {
+    display: block;
+    margin-top: 17px;
+    color: rgba(255,255,255,.48);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(.48rem, 1.2vw, .72rem);
+    font-weight: 700;
+    letter-spacing: .42em;
+    text-indent: .42em;
+}
+
+.home-intro-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 42px auto 38px;
+    opacity: 0;
+    transform: scaleX(.4);
+    animation:
+        introDivider 1s cubic-bezier(.22,1,.36,1) .7s forwards;
+}
+
+.home-intro-divider::before,
+.home-intro-divider::after {
+    content: "";
+    width: 65px;
+    height: 1px;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4af37
+        );
+}
+
+.home-intro-divider::after {
+    background:
+        linear-gradient(
+            90deg,
+            #d4af37,
+            transparent
+        );
+}
+
+.home-intro-diamond {
+    width: 8px;
+    height: 8px;
+    border: 1px solid #d4af37;
+    transform: rotate(45deg);
+    box-shadow:
+        0 0 18px rgba(212,175,55,.35);
+}
+
+.home-intro-eyebrow {
+    margin: 0 0 30px;
+    color: #d4af37;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(.62rem, 1.4vw, .85rem);
+    font-weight: 800;
+    letter-spacing: .42em;
+    text-indent: .42em;
+    opacity: 0;
+    transform: translateY(14px);
+    animation:
+        introText 1s cubic-bezier(.22,1,.36,1) 1s forwards;
+}
+
+.home-intro-headline {
+    margin: 0 auto;
+    max-width: 900px;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 5vw, 4.8rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -.025em;
+    opacity: 0;
+    transform: translateY(20px);
+    animation:
+        introText 1s cubic-bezier(.22,1,.36,1) 1.15s forwards;
+}
+
+.home-intro-headline span {
+    color: #d4af37;
+}
+
+.home-intro-description {
+    max-width: 650px;
+    margin: 28px auto 0;
+    color: rgba(255,255,255,.55);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(.85rem, 1.7vw, 1.05rem);
+    line-height: 1.75;
+    opacity: 0;
+    transform: translateY(16px);
+    animation:
+        introText 1s cubic-bezier(.22,1,.36,1) 1.35s forwards;
+}
+
+@keyframes introBrand {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes introDivider {
+
+    from {
+        opacity: 0;
+        transform: scaleX(.4);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+}
+
+@keyframes introText {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes introLine {
+
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scaleX(.3);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scaleX(1);
+    }
+
+}
+
+
+/* =====================================================
    HOME HERO
 ===================================================== */
 
@@ -805,6 +1049,7 @@
     .home-values {
         grid-template-columns: 1fr;
     }
+
 }
 
 
@@ -823,6 +1068,7 @@
         border-left: 0;
         padding-left: 0;
     }
+
 }
 
 
@@ -962,6 +1208,81 @@
         background: #d4af37;
         color: #050505;
     }
+
+
+    /* =================================================
+       CINEMATIC INTRO — MOBILE
+    ================================================= */
+
+    .home-intro-content {
+        width: 94%;
+        padding: 20px 10px;
+    }
+
+    .home-intro-brand-top {
+        font-size: .58rem;
+        letter-spacing: .38em;
+        text-indent: .38em;
+    }
+
+    .home-intro-brand-main {
+        font-size: clamp(3.1rem, 15vw, 5rem);
+    }
+
+    .home-intro-brand-sub {
+        margin-top: 14px;
+        font-size: .42rem;
+        letter-spacing: .3em;
+        text-indent: .3em;
+    }
+
+    .home-intro-divider {
+        margin: 34px auto 30px;
+    }
+
+    .home-intro-divider::before,
+    .home-intro-divider::after {
+        width: 42px;
+    }
+
+    .home-intro-eyebrow {
+        margin-bottom: 23px;
+        font-size: .55rem;
+        letter-spacing: .32em;
+        text-indent: .32em;
+    }
+
+    .home-intro-headline {
+        font-size: clamp(2rem, 9vw, 3rem);
+        line-height: 1.03;
+    }
+
+    .home-intro-description {
+        margin-top: 22px;
+        padding: 0 12px;
+        font-size: .82rem;
+        line-height: 1.65;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .home-intro-overlay,
+    .home-intro-brand,
+    .home-intro-divider,
+    .home-intro-eyebrow,
+    .home-intro-headline,
+    .home-intro-description {
+        animation: none !important;
+        transition: none !important;
+    }
+
 }
 
 </style>
@@ -970,6 +1291,68 @@
 
 
 <body>
+
+
+<!-- =====================================================
+     CINEMATIC HOMEPAGE OPENING
+===================================================== -->
+
+<div
+    class="home-intro-overlay"
+    id="homeIntroOverlay"
+    aria-hidden="true"
+>
+
+<div class="home-intro-content">
+
+<div class="home-intro-brand">
+
+<span class="home-intro-brand-top">
+ENHANCE
+</span>
+
+<span class="home-intro-brand-main">
+MY RIDE
+</span>
+
+<span class="home-intro-brand-sub">
+AUTO SPA & MOBILE DETAILING
+</span>
+
+</div>
+
+
+<div class="home-intro-divider">
+
+<span class="home-intro-diamond"></span>
+
+</div>
+
+
+<p class="home-intro-eyebrow">
+PREMIUM MOBILE DETAILING
+</p>
+
+
+<h1 class="home-intro-headline">
+
+Your Ride Deserves
+<span>The Enhance.</span>
+
+</h1>
+
+
+<p class="home-intro-description">
+
+Premium mobile detailing delivered directly
+to your home, workplace, or convenient
+location throughout the Bay Area.
+
+</p>
+
+</div>
+
+</div>
 
 
 <!-- =====================================================
@@ -1053,8 +1436,6 @@ Service Area
 <div class="hero-slideshow" aria-hidden="true">
 
 
-<!-- CR-V FRONT -->
-
 <img
     class="hero-slide active"
     src="images/crv-front.webp"
@@ -1063,8 +1444,6 @@ Service Area
     decoding="async"
 >
 
-
-<!-- CR-V DRIVER INTERIOR -->
 
 <img
     class="hero-slide"
@@ -1075,8 +1454,6 @@ Service Area
 >
 
 
-<!-- CR-V SIDE -->
-
 <img
     class="hero-slide"
     src="images/crv-side.webp"
@@ -1085,8 +1462,6 @@ Service Area
     decoding="async"
 >
 
-
-<!-- CR-V REAR -->
 
 <img
     class="hero-slide"
@@ -1099,11 +1474,6 @@ Service Area
 
 </div>
 
-
-<!-- HERO TEXT INTENTIONALLY REMOVED -->
-
-
-<!-- FOUR SLIDESHOW DOTS -->
 
 <div
     class="hero-slide-controls"
@@ -1248,8 +1618,6 @@ transformations.
 <div class="transformation-preview-grid">
 
 
-<!-- MERCEDES -->
-
 <article class="transformation-preview">
 
 <a
@@ -1289,8 +1657,6 @@ Enhance Gold Package
 
 </article>
 
-
-<!-- LEXUS -->
 
 <article class="transformation-preview">
 
@@ -1386,8 +1752,6 @@ and needs.
 <div class="home-package-grid">
 
 
-<!-- GOLD -->
-
 <article class="home-package">
 
 <div class="package-top">
@@ -1436,8 +1800,6 @@ View Package →
 </article>
 
 
-<!-- BLACK LABEL -->
-
 <article class="home-package featured-package">
 
 <div class="package-top">
@@ -1485,8 +1847,6 @@ View Package →
 
 </article>
 
-
-<!-- SHOWROOM -->
 
 <article class="home-package">
 
@@ -2287,6 +2647,77 @@ Mobile Detailing. All rights reserved.
 ===================================================== -->
 
 <script src="js/script.js"></script>
+
+
+<!-- =====================================================
+     CINEMATIC HOMEPAGE OPENING
+===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const intro =
+            document.getElementById(
+                "homeIntroOverlay"
+            );
+
+
+        if (!intro) {
+            return;
+        }
+
+
+        /*
+            Keep the cinematic opening visible long
+            enough to feel intentional, but not so long
+            that it annoys returning visitors.
+        */
+
+        const INTRO_DURATION = 3000;
+
+
+        /*
+            Make sure the homepage itself is ready
+            underneath the opening.
+        */
+
+        document.body.classList.add(
+            "home-intro-active"
+        );
+
+
+        setTimeout(
+            function () {
+
+                intro.classList.add(
+                    "opening-complete"
+                );
+
+                document.body.classList.remove(
+                    "home-intro-active"
+                );
+
+
+                setTimeout(
+                    function () {
+
+                        intro.remove();
+
+                    },
+                    1100
+                );
+
+            },
+            INTRO_DURATION
+        );
+
+    }
+);
+
+</script>
 
 
 <!-- =====================================================
