@@ -52,927 +52,13 @@
 
 
     <!-- =====================================================
-         EXISTING SCAN STYLES
+         LANDING PAGE CSS
     ====================================================== -->
 
     <link
         rel="stylesheet"
         href="scan.css"
     >
-
-
-    <!-- =====================================================
-         LANDING PAGE STYLES
-    ====================================================== -->
-
-    <style>
-
-        .landing-page {
-
-            min-height: 100vh;
-
-            display: flex;
-
-            flex-direction: column;
-
-            background:
-
-                radial-gradient(
-                    circle at 50% 0%,
-                    rgba(201, 162, 39, 0.10),
-                    transparent 38%
-                ),
-
-                linear-gradient(
-                    180deg,
-                    #070707 0%,
-                    #050505 55%,
-                    #030303 100%
-                );
-
-        }
-
-
-        /* =================================================
-           HEADER
-        ================================================= */
-
-        .landing-header {
-
-            width: 100%;
-
-            padding:
-                28px 22px 0;
-
-            display: flex;
-
-            justify-content: center;
-
-            text-align: center;
-
-        }
-
-
-        .landing-brand {
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-
-            gap: 5px;
-
-        }
-
-
-        .landing-brand-top {
-
-            color: var(--gold-light);
-
-            font-size: 10px;
-
-            font-weight: 700;
-
-            letter-spacing: 5px;
-
-        }
-
-
-        .landing-brand-main {
-
-            font-family: var(--serif);
-
-            color: var(--white);
-
-            font-size: 35px;
-
-            line-height: 1;
-
-            letter-spacing: 1px;
-
-        }
-
-
-        .landing-brand-bottom {
-
-            color: var(--gray);
-
-            font-size: 7px;
-
-            font-weight: 600;
-
-            letter-spacing: 3px;
-
-        }
-
-
-        /* =================================================
-           MAIN
-        ================================================= */
-
-        .landing-main {
-
-            width: 100%;
-
-            max-width: 680px;
-
-            margin: 0 auto;
-
-            padding:
-                65px 22px 45px;
-
-            flex: 1;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: center;
-
-        }
-
-
-        /* =================================================
-           INTRO
-        ================================================= */
-
-        .landing-intro {
-
-            text-align: center;
-
-            animation:
-                landingReveal
-                1s
-                ease
-                both;
-
-        }
-
-
-        @keyframes landingReveal {
-
-            from {
-
-                opacity: 0;
-
-                transform:
-                    translateY(20px);
-
-            }
-
-            to {
-
-                opacity: 1;
-
-                transform:
-                    translateY(0);
-
-            }
-
-        }
-
-
-        .landing-eyebrow {
-
-            color: var(--gold-light);
-
-            font-size: 9px;
-
-            font-weight: 700;
-
-            letter-spacing: 4px;
-
-            margin-bottom: 17px;
-
-        }
-
-
-        .landing-intro h1 {
-
-            font-family: var(--serif);
-
-            color: var(--white);
-
-            font-size:
-                clamp(
-                    36px,
-                    9vw,
-                    56px
-                );
-
-            line-height: 1.08;
-
-            font-weight: 500;
-
-        }
-
-
-        .landing-intro h1 span {
-
-            color: var(--gold-light);
-
-        }
-
-
-        .landing-description {
-
-            max-width: 440px;
-
-            margin:
-                20px auto 0;
-
-            color: var(--gray);
-
-            font-size: 13px;
-
-            line-height: 1.75;
-
-        }
-
-
-        /* =================================================
-           DIVIDER
-        ================================================= */
-
-        .landing-divider {
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 10px;
-
-            margin:
-                28px auto 35px;
-
-        }
-
-
-        .landing-divider-line {
-
-            width: 48px;
-
-            height: 1px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    transparent,
-                    var(--gold)
-                );
-
-        }
-
-
-        .landing-divider-line:last-child {
-
-            background:
-                linear-gradient(
-                    90deg,
-                    var(--gold),
-                    transparent
-                );
-
-        }
-
-
-        .landing-divider-diamond {
-
-            width: 5px;
-
-            height: 5px;
-
-            border:
-                1px solid
-                var(--gold);
-
-            transform:
-                rotate(45deg);
-
-        }
-
-
-        /* =================================================
-           LANGUAGE OPTIONS
-        ================================================= */
-
-        .landing-options {
-
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 12px;
-
-        }
-
-
-        .landing-option {
-
-            position: relative;
-
-            width: 100%;
-
-            min-height: 82px;
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 17px;
-
-            padding:
-                14px 18px;
-
-            border:
-                1px solid
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.10
-                );
-
-            border-radius: 4px;
-
-            background:
-
-                linear-gradient(
-                    135deg,
-                    rgba(
-                        255,
-                        255,
-                        255,
-                        0.045
-                    ),
-                    rgba(
-                        255,
-                        255,
-                        255,
-                        0.015
-                    )
-                );
-
-            color: var(--white);
-
-            overflow: hidden;
-
-            transition:
-                transform .25s ease,
-                border-color .25s ease,
-                background .25s ease,
-                box-shadow .25s ease;
-
-            animation:
-                optionReveal
-                .7s
-                ease
-                both;
-
-        }
-
-
-        .landing-option:nth-child(1) {
-
-            animation-delay:
-                .15s;
-
-        }
-
-
-        .landing-option:nth-child(2) {
-
-            animation-delay:
-                .25s;
-
-        }
-
-
-        @keyframes optionReveal {
-
-            from {
-
-                opacity: 0;
-
-                transform:
-                    translateY(15px);
-
-            }
-
-            to {
-
-                opacity: 1;
-
-                transform:
-                    translateY(0);
-
-            }
-
-        }
-
-
-        .landing-option::before {
-
-            content: "";
-
-            position: absolute;
-
-            top: 0;
-
-            left: -100%;
-
-            width: 55%;
-
-            height: 100%;
-
-            background:
-
-                linear-gradient(
-                    90deg,
-                    transparent,
-                    rgba(
-                        255,
-                        255,
-                        255,
-                        0.055
-                    ),
-                    transparent
-                );
-
-            transition:
-                left .7s ease;
-
-        }
-
-
-        .landing-option:hover::before {
-
-            left: 140%;
-
-        }
-
-
-        .landing-option:hover {
-
-            transform:
-                translateY(-2px);
-
-            border-color:
-                rgba(
-                    201,
-                    162,
-                    39,
-                    .55
-                );
-
-            background:
-
-                linear-gradient(
-                    135deg,
-                    rgba(
-                        201,
-                        162,
-                        39,
-                        .10
-                    ),
-                    rgba(
-                        255,
-                        255,
-                        255,
-                        .02
-                    )
-                );
-
-            box-shadow:
-                0 12px 35px
-                rgba(
-                    0,
-                    0,
-                    0,
-                    .35
-                );
-
-        }
-
-
-        .landing-option:active {
-
-            transform:
-                scale(.985);
-
-        }
-
-
-        /* =================================================
-           PRIMARY LANGUAGE
-        ================================================= */
-
-        .landing-option.primary {
-
-            border-color:
-                rgba(
-                    201,
-                    162,
-                    39,
-                    .58
-                );
-
-            background:
-
-                linear-gradient(
-                    135deg,
-                    rgba(
-                        201,
-                        162,
-                        39,
-                        .14
-                    ),
-                    rgba(
-                        201,
-                        162,
-                        39,
-                        .035
-                    )
-                );
-
-            box-shadow:
-                0 8px 35px
-                rgba(
-                    201,
-                    162,
-                    39,
-                    .06
-                );
-
-        }
-
-
-        /* =================================================
-           LANGUAGE ICON
-        ================================================= */
-
-        .landing-icon {
-
-            flex:
-                0 0 45px;
-
-            width: 45px;
-
-            height: 45px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border:
-                1px solid
-                rgba(
-                    201,
-                    162,
-                    39,
-                    .35
-                );
-
-            border-radius: 50%;
-
-            color:
-                var(--gold-light);
-
-        }
-
-
-        .landing-icon svg {
-
-            width: 20px;
-
-            height: 20px;
-
-            fill: none;
-
-            stroke:
-                currentColor;
-
-            stroke-width: 1.35;
-
-            stroke-linecap: round;
-
-            stroke-linejoin: round;
-
-        }
-
-
-        /* =================================================
-           LANGUAGE TEXT
-        ================================================= */
-
-        .landing-option-text {
-
-            min-width: 0;
-
-            flex: 1;
-
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 4px;
-
-        }
-
-
-        .landing-option-text strong {
-
-            color:
-                var(--white);
-
-            font-size: 14px;
-
-            font-weight: 600;
-
-        }
-
-
-        .landing-option-text small {
-
-            color:
-                var(--gray);
-
-            font-size: 10px;
-
-            line-height: 1.4;
-
-        }
-
-
-        .landing-arrow {
-
-            color:
-                var(--gold-light);
-
-            font-size: 20px;
-
-            transition:
-                transform .25s ease;
-
-        }
-
-
-        .landing-option:hover
-        .landing-arrow {
-
-            transform:
-                translateX(4px);
-
-        }
-
-
-        /* =================================================
-           HELPER TEXT
-        ================================================= */
-
-        .landing-help {
-
-            text-align: center;
-
-            margin-top: 28px;
-
-            color:
-                var(--gray-dark);
-
-            font-size: 9px;
-
-            line-height: 1.6;
-
-            letter-spacing:
-                .3px;
-
-        }
-
-
-        /* =================================================
-           FOOTER
-        ================================================= */
-
-        .landing-footer {
-
-            width: 100%;
-
-            padding:
-                24px 20px 30px;
-
-            text-align: center;
-
-            border-top:
-                1px solid
-                rgba(
-                    255,
-                    255,
-                    255,
-                    .06
-                );
-
-        }
-
-
-        .landing-footer-brand {
-
-            color:
-                var(--white);
-
-            font-size: 10px;
-
-            font-weight: 700;
-
-            letter-spacing:
-                3px;
-
-        }
-
-
-        .landing-footer-tagline {
-
-            margin-top: 7px;
-
-            color:
-                var(--gold);
-
-            font-size: 7px;
-
-            font-weight: 600;
-
-            letter-spacing:
-                2.5px;
-
-        }
-
-
-        .landing-footer-copy {
-
-            margin-top: 15px;
-
-            color:
-                var(--gray-dark);
-
-            font-size: 8px;
-
-        }
-
-
-        /* =================================================
-           DESKTOP
-        ================================================= */
-
-        @media (min-width: 768px) {
-
-            .landing-header {
-
-                padding-top:
-                    40px;
-
-            }
-
-
-            .landing-main {
-
-                padding-top:
-                    80px;
-
-                padding-bottom:
-                    70px;
-
-            }
-
-
-            .landing-option {
-
-                min-height:
-                    88px;
-
-                padding:
-                    15px 22px;
-
-            }
-
-
-            .landing-option-text strong {
-
-                font-size: 15px;
-
-            }
-
-
-            .landing-option-text small {
-
-                font-size: 11px;
-
-            }
-
-        }
-
-
-        /* =================================================
-           SMALL PHONES
-        ================================================= */
-
-        @media (max-width: 380px) {
-
-            .landing-header {
-
-                padding-top:
-                    22px;
-
-            }
-
-
-            .landing-brand-main {
-
-                font-size: 31px;
-
-            }
-
-
-            .landing-main {
-
-                padding:
-                    50px 18px 35px;
-
-            }
-
-
-            .landing-description {
-
-                font-size: 12px;
-
-            }
-
-
-            .landing-option {
-
-                min-height: 74px;
-
-                padding:
-                    11px 13px;
-
-                gap: 12px;
-
-            }
-
-
-            .landing-icon {
-
-                flex-basis: 39px;
-
-                width: 39px;
-
-                height: 39px;
-
-            }
-
-
-            .landing-option-text strong {
-
-                font-size: 12px;
-
-            }
-
-
-            .landing-option-text small {
-
-                font-size: 9px;
-
-            }
-
-        }
-
-
-        /* =================================================
-           REDUCED MOTION
-        ================================================= */
-
-        @media (prefers-reduced-motion: reduce) {
-
-            .landing-intro,
-            .landing-option {
-
-                animation: none;
-
-            }
-
-
-            .landing-option {
-
-                transition: none;
-
-            }
-
-        }
-
-    </style>
 
 </head>
 
@@ -1000,128 +86,305 @@
 
 
     <!-- =====================================================
-         LANDING PAGE
+         MAIN LANDING PAGE
     ====================================================== -->
 
-    <div class="landing-page">
+    <div class="scan-page">
 
 
         <!-- =================================================
-             HEADER
+             HERO
         ================================================== -->
 
-        <header class="landing-header">
+        <section class="scan-hero">
 
-            <div class="landing-brand">
+            <div class="hero-overlay"></div>
 
-                <div class="landing-brand-top">
-                    ENHANCE
+
+            <div class="hero-content">
+
+
+                <!-- BRAND -->
+
+                <div class="brand-mark">
+
+                    <span class="brand-top">
+                        ENHANCE
+                    </span>
+
+                    <span class="brand-main">
+                        MY RIDE
+                    </span>
+
+                    <span class="brand-bottom">
+                        AUTO SPA &amp; MOBILE DETAILING
+                    </span>
+
                 </div>
 
-                <div class="landing-brand-main">
-                    My Ride
+
+                <!-- GOLD DIVIDER -->
+
+                <div
+                    class="gold-divider"
+                    aria-hidden="true"
+                >
+
+                    <span></span>
+
+                    <i></i>
+
+                    <span></span>
+
                 </div>
 
-                <div class="landing-brand-bottom">
-                    AUTO SPA &amp; MOBILE DETAILING
-                </div>
 
-            </div>
+                <!-- HERO MESSAGE -->
 
-        </header>
-
-
-        <!-- =================================================
-             MAIN CONTENT
-        ================================================== -->
-
-        <main class="landing-main">
-
-
-            <!-- =============================================
-                 INTRODUCTION
-            ============================================== -->
-
-            <section
-                class="landing-intro"
-                aria-labelledby="landingTitle"
-            >
-
-                <div class="landing-eyebrow">
+                <div class="hero-eyebrow">
                     PREMIUM MOBILE DETAILING
                 </div>
 
-                <h1 id="landingTitle">
+
+                <h1>
 
                     Your Ride Deserves
                     <span>to Be Enhanced.</span>
 
                 </h1>
 
-                <p class="landing-description">
 
-                    Premium mobile detailing delivered
-                    directly to your home, workplace,
-                    or convenient location throughout
-                    the Bay Area.
+                <p class="hero-description">
+
+                    Premium mobile detailing delivered directly
+                    to your home, workplace, or convenient
+                    location throughout the Bay Area.
 
                 </p>
 
-            </section>
-
-
-            <!-- =============================================
-                 GOLD DIVIDER
-            ============================================== -->
-
-            <div
-                class="landing-divider"
-                aria-hidden="true"
-            >
-
-                <span
-                    class="landing-divider-line"
-                ></span>
-
-                <span
-                    class="landing-divider-diamond"
-                ></span>
-
-                <span
-                    class="landing-divider-line"
-                ></span>
 
             </div>
 
-
-            <!-- =============================================
-                 LANGUAGE SELECTION
-            ============================================== -->
-
-            <section
-                class="landing-options"
-                aria-label="Language selection"
-            >
+        </section>
 
 
-                <!-- =========================================
-                     ENGLISH
-                ========================================== -->
+        <!-- =================================================
+             ACTIONS
+        ================================================== -->
+
+        <section class="actions-section">
+
+            <div class="actions-container">
+
+
+                <!-- GET QUOTE -->
 
                 <a
-                    href="index.html?lang=en"
-                    class="landing-option primary"
-                    aria-label="Continue in English"
+                    href="quote.html"
+                    class="action-button primary-action"
                 >
 
                     <span
-                        class="landing-icon"
+                        class="button-icon"
                         aria-hidden="true"
                     >
 
-                        <svg
-                            viewBox="0 0 24 24"
-                        >
+                        <svg viewBox="0 0 24 24">
+
+                            <rect
+                                x="5"
+                                y="3"
+                                width="14"
+                                height="18"
+                                rx="1"
+                            ></rect>
+
+                            <path
+                                d="M8 8h8"
+                            ></path>
+
+                            <path
+                                d="M8 12h8"
+                            ></path>
+
+                            <path
+                                d="M8 16h5"
+                            ></path>
+
+                        </svg>
+
+                    </span>
+
+
+                    <span class="button-text">
+
+                        <strong>
+                            Get Your Free Quote
+                        </strong>
+
+                        <small>
+                            Tell us about your vehicle
+                        </small>
+
+                    </span>
+
+
+                    <span
+                        class="button-arrow"
+                        aria-hidden="true"
+                    >
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- CALL -->
+
+                <a
+                    href="tel:+13233271806"
+                    class="action-button"
+                >
+
+                    <span
+                        class="button-icon"
+                        aria-hidden="true"
+                    >
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path
+                                d="M6.6 3.5
+                                   L9.2 3
+                                   C9.8 2.9
+                                   10.3 3.2
+                                   10.5 3.8
+                                   L11.7 7
+                                   C11.9 7.5
+                                   11.7 8
+                                   11.3 8.4
+                                   L9.7 9.7
+                                   C10.7 11.9
+                                   12.1 13.3
+                                   14.3 14.3
+                                   L15.6 12.7
+                                   C16 12.3
+                                   16.5 12.1
+                                   17 12.3
+                                   L20.2 13.5
+                                   C20.8 13.7
+                                   21.1 14.2
+                                   21 14.8
+                                   L20.5 17.4
+                                   C20.3 18.4
+                                   19.4 19
+                                   18.4 18.9
+                                   C10.6 18.2
+                                   5.8 13.4
+                                   5.1 5.6
+                                   C5 4.6
+                                   5.6 3.7
+                                   6.6 3.5Z"
+                            ></path>
+
+                        </svg>
+
+                    </span>
+
+
+                    <span class="button-text">
+
+                        <strong>
+                            Call Enhance My Ride
+                        </strong>
+
+                        <small>
+                            (323) 327-1806
+                        </small>
+
+                    </span>
+
+
+                    <span
+                        class="button-arrow"
+                        aria-hidden="true"
+                    >
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- TEXT -->
+
+                <a
+                    href="sms:+13233271806"
+                    class="action-button"
+                >
+
+                    <span
+                        class="button-icon"
+                        aria-hidden="true"
+                    >
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path
+                                d="M5 5.5
+                                   C5 4.7 5.7 4 6.5 4
+                                   H17.5
+                                   C18.3 4 19 4.7 19 5.5
+                                   V13.5
+                                   C19 14.3 18.3 15 17.5 15
+                                   H11
+                                   L7 19
+                                   V15
+                                   H6.5
+                                   C5.7 15 5 14.3 5 13.5
+                                   Z"
+                            ></path>
+
+                        </svg>
+
+                    </span>
+
+
+                    <span class="button-text">
+
+                        <strong>
+                            Text Us
+                        </strong>
+
+                        <small>
+                            Send us a message
+                        </small>
+
+                    </span>
+
+
+                    <span
+                        class="button-arrow"
+                        aria-hidden="true"
+                    >
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- WEBSITE -->
+
+                <a
+                    href="https://enhancemyride.com"
+                    class="action-button"
+                >
+
+                    <span
+                        class="button-icon"
+                        aria-hidden="true"
+                    >
+
+                        <svg viewBox="0 0 24 24">
 
                             <circle
                                 cx="12"
@@ -1134,11 +397,23 @@
                             ></path>
 
                             <path
-                                d="M12 3c2.4 2.4 3.6 5.4 3.6 9s-1.2 6.6-3.6 9"
+                                d="M12 3
+                                   C14.4 5.4
+                                   15.6 8.4
+                                   15.6 12
+                                   C15.6 15.6
+                                   14.4 18.6
+                                   12 21"
                             ></path>
 
                             <path
-                                d="M12 3c-2.4 2.4-3.6 5.4-3.6 9s1.2 6.6 3.6 9"
+                                d="M12 3
+                                   C9.6 5.4
+                                   8.4 8.4
+                                   8.4 12
+                                   C8.4 15.6
+                                   9.6 18.6
+                                   12 21"
                             ></path>
 
                         </svg>
@@ -1146,21 +421,21 @@
                     </span>
 
 
-                    <span class="landing-option-text">
+                    <span class="button-text">
 
                         <strong>
-                            English
+                            Visit Our Website
                         </strong>
 
                         <small>
-                            Continue in English
+                            Explore services, pricing &amp; more
                         </small>
 
                     </span>
 
 
                     <span
-                        class="landing-arrow"
+                        class="button-arrow"
                         aria-hidden="true"
                     >
                         →
@@ -1169,63 +444,223 @@
                 </a>
 
 
-                <!-- =========================================
-                     SPANISH
-                ========================================== -->
+                <!-- GALLERY -->
 
                 <a
-                    href="index.html?lang=es"
-                    class="landing-option"
-                    aria-label="Continuar en español"
+                    href="gallery.html"
+                    class="action-button"
                 >
 
                     <span
-                        class="landing-icon"
+                        class="button-icon"
                         aria-hidden="true"
                     >
 
-                        <svg
-                            viewBox="0 0 24 24"
-                        >
+                        <svg viewBox="0 0 24 24">
+
+                            <rect
+                                x="4"
+                                y="5"
+                                width="16"
+                                height="14"
+                                rx="1"
+                            ></rect>
+
+                            <circle
+                                cx="9"
+                                cy="10"
+                                r="1.5"
+                            ></circle>
+
+                            <path
+                                d="M4 16
+                                   L8.5 12
+                                   L12 15
+                                   L14.5 12.5
+                                   L20 17"
+                            ></path>
+
+                        </svg>
+
+                    </span>
+
+
+                    <span class="button-text">
+
+                        <strong>
+                            View Our Work
+                        </strong>
+
+                        <small>
+                            See real vehicle transformations
+                        </small>
+
+                    </span>
+
+
+                    <span
+                        class="button-arrow"
+                        aria-hidden="true"
+                    >
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- SERVICES -->
+
+                <a
+                    href="services.html"
+                    class="action-button"
+                >
+
+                    <span
+                        class="button-icon"
+                        aria-hidden="true"
+                    >
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path
+                                d="M14.7 6.3
+                                   A4.5 4.5 0 0 0
+                                   8.4 12.6
+                                   L4 17
+                                   L7 20
+                                   L11.4 15.6
+                                   A4.5 4.5 0 0 0
+                                   17.7 9.3
+                                   L14.7 12.3
+                                   L11.7 9.3
+                                   Z"
+                            ></path>
+
+                        </svg>
+
+                    </span>
+
+
+                    <span class="button-text">
+
+                        <strong>
+                            Explore Our Services
+                        </strong>
+
+                        <small>
+                            Gold, Black Label &amp; Showroom Edition
+                        </small>
+
+                    </span>
+
+
+                    <span
+                        class="button-arrow"
+                        aria-hidden="true"
+                    >
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- GOOGLE REVIEW -->
+
+                <a
+                    href="https://g.page/r/CRy_PYJmq6NYEBM/review"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="action-button"
+                >
+
+                    <span
+                        class="button-icon star-icon"
+                        aria-hidden="true"
+                    >
+                        ★
+                    </span>
+
+
+                    <span class="button-text">
+
+                        <strong>
+                            Leave Us A Google Review
+                        </strong>
+
+                        <small>
+                            Your feedback helps our small business
+                        </small>
+
+                    </span>
+
+
+                    <span
+                        class="button-arrow"
+                        aria-hidden="true"
+                    >
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- INSTAGRAM -->
+
+                <a
+                    href="https://www.instagram.com/enhancemyridemobiledetailing/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="action-button"
+                >
+
+                    <span
+                        class="button-icon"
+                        aria-hidden="true"
+                    >
+
+                        <svg viewBox="0 0 24 24">
+
+                            <rect
+                                x="4"
+                                y="4"
+                                width="16"
+                                height="16"
+                                rx="4"
+                            ></rect>
 
                             <circle
                                 cx="12"
                                 cy="12"
-                                r="9"
+                                r="3.5"
                             ></circle>
 
-                            <path
-                                d="M3 12h18"
-                            ></path>
-
-                            <path
-                                d="M12 3c2.4 2.4 3.6 5.4 3.6 9s-1.2 6.6-3.6 9"
-                            ></path>
-
-                            <path
-                                d="M12 3c-2.4 2.4-3.6 5.4-3.6 9s1.2 6.6-3.6 9"
-                            ></path>
+                            <circle
+                                cx="17.2"
+                                cy="6.8"
+                                r="1"
+                                class="filled"
+                            ></circle>
 
                         </svg>
 
                     </span>
 
 
-                    <span class="landing-option-text">
+                    <span class="button-text">
 
                         <strong>
-                            Español
+                            Follow Us On Instagram
                         </strong>
 
                         <small>
-                            Continuar en español
+                            @enhancemyridemobiledetailing
                         </small>
 
                     </span>
 
 
                     <span
-                        class="landing-arrow"
+                        class="button-arrow"
                         aria-hidden="true"
                     >
                         →
@@ -1234,44 +669,72 @@
                 </a>
 
 
-            </section>
+            </div>
+
+        </section>
 
 
-            <!-- =================================================
-                 HELPER TEXT
-            ================================================== -->
+        <!-- =================================================
+             TRUST / SERVICE AREA
+        ================================================== -->
 
-            <p class="landing-help">
+        <section class="trust-section">
 
-                You can change your language at any time.
+            <div class="trust-line"></div>
+
+
+            <p>
+                PREMIUM MOBILE DETAILING
+            </p>
+
+
+            <h2>
+
+                We Come To You.
+
+                <br>
+
+                <span>
+                    You Relax. We Enhance.
+                </span>
+
+            </h2>
+
+
+            <p class="trust-description">
+
+                Serving Alameda, Oakland,
+                San Francisco, San Leandro,
+                Berkeley, Emeryville, Hayward,
+                and surrounding Bay Area communities.
 
             </p>
 
 
-        </main>
+        </section>
 
 
         <!-- =================================================
              FOOTER
         ================================================== -->
 
-        <footer class="landing-footer">
+        <footer class="scan-footer">
 
-            <div class="landing-footer-brand">
+            <div class="footer-logo">
                 ENHANCE MY RIDE
             </div>
 
-            <div class="landing-footer-tagline">
+            <p>
                 WE COME TO YOU. YOU RELAX. WE ENHANCE.
-            </div>
+            </p>
 
-            <div class="landing-footer-copy">
+            <small>
 
                 &copy;
                 <span id="currentYear"></span>
                 Enhance My Ride Auto Spa &amp; Mobile Detailing
 
-            </div>
+            </small>
 
         </footer>
 
