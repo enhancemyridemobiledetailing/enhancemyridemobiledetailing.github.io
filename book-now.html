@@ -38,7 +38,7 @@
     <style>
 
         /* =====================================================
-           BOOKING HERO
+           BOOK NOW PAGE
         ===================================================== */
 
         .quote-hero {
@@ -64,6 +64,8 @@
 
         .quote-hero h1 {
             max-width: 850px;
+
+            margin-bottom: 0;
 
             font-size:
                 clamp(3.4rem, 7vw, 6.3rem);
@@ -108,7 +110,8 @@
             display: grid;
 
             grid-template-columns:
-                .72fr 1.28fr;
+                minmax(280px, .72fr)
+                minmax(0, 1.28fr);
 
             gap: 75px;
 
@@ -118,7 +121,7 @@
 
 
         /* =====================================================
-           LEFT INTRO
+           BOOKING INTRO
         ===================================================== */
 
         .quote-intro {
@@ -152,7 +155,7 @@
 
 
         /* =====================================================
-           CONTACT
+           CONTACT INFORMATION
         ===================================================== */
 
         .quote-contact {
@@ -254,7 +257,7 @@
 
 
         /* =====================================================
-           STARTING PRICE NOTE
+           STARTING PRICE
         ===================================================== */
 
         .quote-starting-price {
@@ -302,6 +305,8 @@
         ===================================================== */
 
         .quote-form-card {
+            width: 100%;
+
             overflow: hidden;
 
             border:
@@ -366,6 +371,8 @@
 
             width: 100%;
 
+            height: 1000px;
+
             min-height: 1000px;
 
             border: 0;
@@ -376,7 +383,7 @@
 
 
         /* =====================================================
-           FORM TRUST BAR
+           BOOKING TRUST BAR
         ===================================================== */
 
         .quote-trust-bar {
@@ -620,7 +627,7 @@
 
 
         /* =====================================================
-           SPECIALTY SERVICE CTA
+           SPECIALTY SERVICES
         ===================================================== */
 
         .quote-addon {
@@ -672,6 +679,8 @@
 
 
         .quote-addon .btn {
+            display: inline-flex;
+
             margin-top: 15px;
         }
 
@@ -727,7 +736,7 @@
 
 
         /* =====================================================
-           RESPONSIVE
+           TABLET
         ===================================================== */
 
         @media (max-width: 950px) {
@@ -764,6 +773,10 @@
 
 
 
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
         @media (max-width: 700px) {
 
             .quote-hero {
@@ -793,6 +806,8 @@
             .quote-form-frame,
             .quote-form-frame iframe {
                 min-height: 1000px;
+
+                height: 1000px;
             }
 
 
@@ -891,10 +906,44 @@
 
         }
 
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 420px) {
+
+            .quote-form-heading h3 {
+                font-size: 1.5rem;
+            }
+
+
+            .quote-contact > div {
+                padding: 19px;
+            }
+
+
+            .quote-note {
+                padding: 17px;
+            }
+
+
+            .quote-starting-price {
+                padding: 17px;
+            }
+
+
+            .quote-addon {
+                padding:
+                    30px 20px;
+            }
+
+        }
+
     </style>
 
 </head>
-
 
 
 <body>
@@ -907,6 +956,7 @@
 <header class="site-header">
 
     <div class="container nav-container">
+
 
         <a
             href="index.html"
@@ -961,6 +1011,7 @@
             <a
                 href="book-now.html"
                 class="active"
+                aria-current="page"
             >
                 Book Now
             </a>
@@ -988,552 +1039,553 @@
 <main>
 
 
-<!-- =====================================================
-     HERO
-====================================================== -->
+    <!-- =================================================
+         HERO
+    ================================================== -->
 
-<section class="page-hero quote-hero">
+    <section class="page-hero quote-hero">
 
-    <div class="container page-hero-content">
+        <div class="container page-hero-content">
 
-        <p class="eyebrow">
-            BOOK YOUR ENHANCE EXPERIENCE
-        </p>
+            <p class="eyebrow">
+                BOOK YOUR ENHANCE EXPERIENCE
+            </p>
 
-        <h1>
+            <h1>
 
-            Let's Enhance
+                Let's Enhance
 
-            <span>
-                Your Ride.
-            </span>
+                <span>
+                    Your Ride.
+                </span>
 
-        </h1>
+            </h1>
 
-        <p>
+            <p>
 
-            Choose your service, select an available time,
-            and book your mobile detailing appointment.
+                Choose your service, select an available time,
+                and book your mobile detailing appointment.
 
-        </p>
+            </p>
 
-    </div>
+        </div>
 
-</section>
-
-
-
-<!-- =====================================================
-     BOOKING
-====================================================== -->
-
-<section class="section quote-section">
-
-    <div class="container">
+    </section>
 
 
-        <div class="quote-layout">
+
+    <!-- =================================================
+         BOOKING
+    ================================================== -->
+
+    <section class="section quote-section">
+
+        <div class="container">
+
+
+            <div class="quote-layout">
+
+
+                <!-- =========================================
+                     INTRODUCTION
+                ========================================== -->
+
+                <div class="quote-intro">
+
+                    <p class="eyebrow">
+                        SCHEDULE YOUR DETAIL
+                    </p>
+
+                    <h2>
+
+                        Your Vehicle.
+
+                        <span class="gold-text">
+                            Your Time.
+                        </span>
+
+                    </h2>
+
+                    <p>
+                        Booking your detail should be simple.
+                    </p>
+
+                    <p>
+
+                        Select the service that fits your vehicle,
+                        choose an available appointment time,
+                        and provide the details we need to prepare
+                        for your visit.
+
+                    </p>
+
+
+                    <div class="quote-contact">
+
+
+                        <div>
+
+                            <span>
+                                CALL OR TEXT
+                            </span>
+
+                            <a href="tel:+13233271806">
+                                (323) 327-1806
+                            </a>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                EMAIL
+                            </span>
+
+                            <a href="mailto:info@enhancemyride.com">
+                                info@enhancemyride.com
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="quote-note">
+
+                        <span>
+                            ✓
+                        </span>
+
+                        <p>
+
+                            Have photos or special requests?
+                            Contact us directly before booking if
+                            your vehicle needs specialty services,
+                            heavy cleaning, pet hair removal,
+                            odor treatment, or other work that may
+                            require customized pricing.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="quote-starting-price">
+
+                        <strong>
+                            $149+
+                        </strong>
+
+                        <span>
+
+                            Signature detailing starts at $149.
+                            Final pricing may vary based on vehicle
+                            size, condition, excessive buildup,
+                            pet hair, stains, and requested services.
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     SETMORE BOOKING
+                ========================================== -->
+
+                <div class="quote-form-card">
+
+
+                    <div class="quote-form-heading">
+
+                        <p class="eyebrow">
+                            ENHANCE MY RIDE
+                        </p>
+
+                        <h3>
+                            Book Your Appointment
+                        </h3>
+
+                        <p>
+                            Select your service and choose an available time.
+                        </p>
+
+                    </div>
+
+
+                    <div class="quote-form-frame">
+
+                        <iframe
+                            src="https://enhancemyridemobiledetailing.setmore.com"
+                            width="100%"
+                            height="1000"
+                            frameborder="0"
+                            scrolling="yes"
+                            allow="web-share"
+                            title="Enhance My Ride online booking"
+                            loading="lazy"
+                        ></iframe>
+
+                    </div>
+
+
+                    <div class="quote-trust-bar">
+
+
+                        <div class="quote-trust-item">
+
+                            <strong>
+                                EASY BOOKING
+                            </strong>
+
+                            <span>
+                                Choose your appointment online.
+                            </span>
+
+                        </div>
+
+
+                        <div class="quote-trust-item">
+
+                            <strong>
+                                MOBILE SERVICE
+                            </strong>
+
+                            <span>
+                                We come to you.
+                            </span>
+
+                        </div>
+
+
+                        <div class="quote-trust-item">
+
+                            <strong>
+                                PROFESSIONAL
+                            </strong>
+
+                            <span>
+                                We inspect before we begin.
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
 
 
             <!-- =================================================
-                 INTRO
+                 WHAT TO EXPECT
             ================================================== -->
 
-            <div class="quote-intro">
+            <section class="quote-info-section">
+
+
+                <div class="quote-info-heading">
+
+                    <p class="eyebrow">
+                        BEFORE YOU BOOK
+                    </p>
+
+                    <h2>
+
+                        The More We Know,
+
+                        <span class="gold-text">
+                            The Better.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="quote-info-grid">
+
+
+                    <article class="quote-info-card">
+
+                        <span>
+                            01 • VEHICLE
+                        </span>
+
+                        <h3>
+                            Tell Us What You're Driving
+                        </h3>
+
+                        <p>
+
+                            Vehicle year, make, model, and size help
+                            us understand the appropriate service,
+                            labor, and time required.
+
+                        </p>
+
+                    </article>
+
+
+                    <article class="quote-info-card">
+
+                        <span>
+                            02 • CONDITION
+                        </span>
+
+                        <h3>
+                            Tell Us What It Needs
+                        </h3>
+
+                        <p>
+
+                            Let us know about dirt, stains, pet hair,
+                            odors, heavy buildup, neglected areas,
+                            or anything else you'd like addressed.
+
+                        </p>
+
+                    </article>
+
+
+                    <article class="quote-info-card">
+
+                        <span>
+                            03 • LOCATION
+                        </span>
+
+                        <h3>
+                            Tell Us Where We'll Meet You
+                        </h3>
+
+                        <p>
+
+                            Your city, ZIP code, and service location
+                            help us confirm availability and prepare
+                            for your mobile appointment.
+
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BOOKING PROCESS
+            ================================================== -->
+
+            <section class="quote-process">
+
+
+                <div class="quote-process-heading">
+
+                    <p class="eyebrow">
+                        YOUR ENHANCE EXPERIENCE
+                    </p>
+
+                    <h2>
+
+                        Simple.
+
+                        <span class="gold-text">
+                            Straightforward.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="quote-process-grid">
+
+
+                    <article>
+
+                        <span>
+                            01
+                        </span>
+
+                        <h3>
+                            Choose Your Service
+                        </h3>
+
+                        <p>
+
+                            Select the detailing service that best
+                            fits your vehicle and your needs.
+
+                        </p>
+
+                    </article>
+
+
+                    <article>
+
+                        <span>
+                            02
+                        </span>
+
+                        <h3>
+                            Choose Your Time
+                        </h3>
+
+                        <p>
+
+                            Select an available appointment time
+                            directly through our online booking system.
+
+                        </p>
+
+                    </article>
+
+
+                    <article>
+
+                        <span>
+                            03
+                        </span>
+
+                        <h3>
+                            Confirm Your Details
+                        </h3>
+
+                        <p>
+
+                            Provide the information needed so we can
+                            prepare for your appointment.
+
+                        </p>
+
+                    </article>
+
+
+                    <article>
+
+                        <span>
+                            04
+                        </span>
+
+                        <h3>
+                            We Come To You
+                        </h3>
+
+                        <p>
+
+                            Once your appointment is confirmed,
+                            we bring the Enhance experience to you.
+
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SPECIALTY SERVICE CTA
+            ================================================== -->
+
+            <section class="quote-addon">
+
+
+                <div>
+
+                    <p class="eyebrow">
+                        NEED SOMETHING CUSTOM?
+                    </p>
+
+                    <h2>
+
+                        Need Just One
+
+                        <span class="gold-text">
+                            Thing?
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+
+                        You don't have to book a full detail to
+                        contact Enhance My Ride.
+
+                    </p>
+
+                    <p>
+
+                        Ask about specialty services such as
+                        wheel polishing, headlight restoration,
+                        trim restoration, pet hair removal,
+                        engine bay detailing, odor treatment,
+                        heavy soil treatment, and more.
+
+                    </p>
+
+                    <a
+                        href="tel:+13233271806"
+                        class="btn btn-secondary"
+                    >
+                        Call (323) 327-1806
+                    </a>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FINAL CTA
+            ================================================== -->
+
+            <section class="quote-final-cta">
 
                 <p class="eyebrow">
-                    SCHEDULE YOUR DETAIL
+                    ENHANCE MY RIDE
                 </p>
 
                 <h2>
 
-                    Your Vehicle.
+                    We Come To You.
 
                     <span class="gold-text">
-                        Your Time.
+                        You Relax.
                     </span>
 
                 </h2>
 
                 <p>
-
-                    Booking your detail should be simple.
-
+                    Let's get your vehicle looking its best.
                 </p>
 
-                <p>
-
-                    Select the service that fits your vehicle,
-                    choose an available appointment time,
-                    and provide the details we need to prepare
-                    for your visit.
-
-                </p>
-
-
-                <div class="quote-contact">
-
-
-                    <div>
-
-                        <span>
-                            CALL OR TEXT
-                        </span>
-
-                        <a href="tel:+13233271806">
-                            (323) 327-1806
-                        </a>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            EMAIL
-                        </span>
-
-                        <a href="mailto:info@enhancemyride.com">
-                            info@enhancemyride.com
-                        </a>
-
-                    </div>
-
-
-                </div>
-
-
-                <div class="quote-note">
-
-                    <span>
-                        ✓
-                    </span>
-
-                    <p>
-
-                        Have photos or special requests?
-                        You can contact us directly before booking
-                        if your vehicle needs specialty services,
-                        heavy cleaning, pet hair removal, or other
-                        work that may require customized pricing.
-
-                    </p>
-
-                </div>
-
-
-                <div class="quote-starting-price">
-
-                    <strong>
-                        $149+
-                    </strong>
-
-                    <span>
-
-                        Signature detailing starts at $149.
-                        Final pricing may vary based on vehicle size,
-                        condition, excessive buildup, pet hair,
-                        stains, and requested services.
-
-                    </span>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- =================================================
-                 SETMORE BOOKING
-            ================================================== -->
-
-            <div class="quote-form-card">
-
-
-                <div class="quote-form-heading">
-
-                    <p class="eyebrow">
-                        ENHANCE MY RIDE
-                    </p>
-
-                    <h3>
-                        Book Your Appointment
-                    </h3>
-
-                    <p>
-                        Select your service and choose an available time.
-                    </p>
-
-                </div>
-
-
-                <div class="quote-form-frame">
-
-                    <iframe
-                        src="https://enhancemyridemobiledetailing.setmore.com"
-                        scrolling="yes"
-                        width="100%"
-                        height="1000"
-                        frameborder="0"
-                        allow="web-share"
-                        title="Enhance My Ride online booking"
-                        loading="lazy"
-                    ></iframe>
-
-                </div>
-
-
-                <div class="quote-trust-bar">
-
-                    <div class="quote-trust-item">
-
-                        <strong>
-                            EASY BOOKING
-                        </strong>
-
-                        <span>
-                            Choose your appointment online.
-                        </span>
-
-                    </div>
-
-
-                    <div class="quote-trust-item">
-
-                        <strong>
-                            MOBILE SERVICE
-                        </strong>
-
-                        <span>
-                            We come to you.
-                        </span>
-
-                    </div>
-
-
-                    <div class="quote-trust-item">
-
-                        <strong>
-                            PROFESSIONAL
-                        </strong>
-
-                        <span>
-                            We inspect before we begin.
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
+            </section>
 
 
         </div>
 
-
-
-        <!-- =================================================
-             WHAT TO EXPECT
-        ================================================== -->
-
-        <section class="quote-info-section">
-
-
-            <div class="quote-info-heading">
-
-                <p class="eyebrow">
-                    BEFORE YOU BOOK
-                </p>
-
-                <h2>
-
-                    The More We Know,
-
-                    <span class="gold-text">
-                        The Better.
-                    </span>
-
-                </h2>
-
-            </div>
-
-
-            <div class="quote-info-grid">
-
-
-                <article class="quote-info-card">
-
-                    <span>
-                        01 • VEHICLE
-                    </span>
-
-                    <h3>
-                        Tell Us What You're Driving
-                    </h3>
-
-                    <p>
-
-                        Vehicle year, make, model, and size help
-                        us understand the appropriate service,
-                        labor, and time required.
-
-                    </p>
-
-                </article>
-
-
-                <article class="quote-info-card">
-
-                    <span>
-                        02 • CONDITION
-                    </span>
-
-                    <h3>
-                        Tell Us What It Needs
-                    </h3>
-
-                    <p>
-
-                        Let us know about dirt, stains, pet hair,
-                        odors, heavy buildup, neglected areas,
-                        or anything else you'd like addressed.
-
-                    </p>
-
-                </article>
-
-
-                <article class="quote-info-card">
-
-                    <span>
-                        03 • LOCATION
-                    </span>
-
-                    <h3>
-                        Tell Us Where We'll Meet You
-                    </h3>
-
-                    <p>
-
-                        Your city, ZIP code, and service location
-                        help us confirm availability and prepare
-                        for your mobile appointment.
-
-                    </p>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             BOOKING PROCESS
-        ================================================== -->
-
-        <section class="quote-process">
-
-
-            <div class="quote-process-heading">
-
-                <p class="eyebrow">
-                    YOUR ENHANCE EXPERIENCE
-                </p>
-
-                <h2>
-
-                    Simple.
-
-                    <span class="gold-text">
-                        Straightforward.
-                    </span>
-
-                </h2>
-
-            </div>
-
-
-            <div class="quote-process-grid">
-
-
-                <article>
-
-                    <span>
-                        01
-                    </span>
-
-                    <h3>
-                        Choose Your Service
-                    </h3>
-
-                    <p>
-
-                        Select the detailing service that best
-                        fits your vehicle and your needs.
-
-                    </p>
-
-                </article>
-
-
-                <article>
-
-                    <span>
-                        02
-                    </span>
-
-                    <h3>
-                        Choose Your Time
-                    </h3>
-
-                    <p>
-
-                        Select an available appointment time
-                        directly through our online booking system.
-
-                    </p>
-
-                </article>
-
-
-                <article>
-
-                    <span>
-                        03
-                    </span>
-
-                    <h3>
-                        Confirm Your Details
-                    </h3>
-
-                    <p>
-
-                        Provide the information needed so we can
-                        prepare for your appointment.
-
-                    </p>
-
-                </article>
-
-
-                <article>
-
-                    <span>
-                        04
-                    </span>
-
-                    <h3>
-                        We Come To You
-                    </h3>
-
-                    <p>
-
-                        Once your appointment is confirmed,
-                        we bring the Enhance experience to you.
-
-                    </p>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             SPECIALTY SERVICE CTA
-        ================================================== -->
-
-        <section class="quote-addon">
-
-
-            <div>
-
-                <p class="eyebrow">
-                    NEED SOMETHING CUSTOM?
-                </p>
-
-                <h2>
-
-                    Need Just One
-
-                    <span class="gold-text">
-                        Thing?
-                    </span>
-
-                </h2>
-
-            </div>
-
-
-            <div>
-
-                <p>
-
-                    You don't have to book a full detail to
-                    contact Enhance My Ride.
-
-                </p>
-
-                <p>
-
-                    Ask about specialty services such as
-                    wheel polishing, headlight restoration,
-                    trim restoration, pet hair removal,
-                    engine bay detailing, odor treatment,
-                    heavy soil treatment, and more.
-
-                </p>
-
-                <a
-                    href="tel:+13233271806"
-                    class="btn btn-secondary"
-                >
-                    Call (323) 327-1806
-                </a>
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =================================================
-             FINAL CTA
-        ================================================== -->
-
-        <section class="quote-final-cta">
-
-            <p class="eyebrow">
-                ENHANCE MY RIDE
-            </p>
-
-            <h2>
-
-                We Come To You.
-
-                <span class="gold-text">
-                    You Relax.
-                </span>
-
-            </h2>
-
-            <p>
-                Let's get your vehicle looking its best.
-            </p>
-
-        </section>
-
-
-    </div>
-
-</section>
+    </section>
 
 
 </main>
@@ -1549,11 +1601,16 @@
     <div class="container footer-grid">
 
 
+        <!-- ===============================================
+             FOOTER BRAND
+        ================================================ -->
+
         <div class="footer-brand">
 
             <a
                 href="index.html"
                 class="logo"
+                aria-label="Enhance My Ride home"
             >
 
                 <span class="logo-main">
@@ -1576,6 +1633,10 @@
         </div>
 
 
+
+        <!-- ===============================================
+             FOOTER NAVIGATION
+        ================================================ -->
 
         <div class="footer-links">
 
@@ -1610,6 +1671,10 @@
         </div>
 
 
+
+        <!-- ===============================================
+             FOOTER CONTACT
+        ================================================ -->
 
         <div class="footer-links">
 
@@ -1660,6 +1725,10 @@
 
 
 
+    <!-- ===============================================
+         COPYRIGHT
+    ================================================ -->
+
     <div class="container footer-bottom">
 
         <p>
@@ -1697,9 +1766,13 @@
 
 
 
+<!-- =====================================================
+     SITE JAVASCRIPT
+====================================================== -->
+
 <script src="js/script.js"></script>
 
 
 </body>
 
-</html> 
+</html>
