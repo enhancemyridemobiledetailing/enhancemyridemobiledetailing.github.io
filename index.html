@@ -561,4 +561,2728 @@
       padding: 22px 23px 25px;
     }
 
-    .trans
+    .transformation-preview-content > span,
+    .package-label,
+    .addon-card > span,
+    .enhancement-list strong {
+      font-weight: 800;
+    }
+
+    .transformation-preview-content > span {
+      color: var(--gold);
+
+      font-size: 8px;
+
+      letter-spacing: .15em;
+    }
+
+    .transformation-preview-content h3 {
+      margin: 8px 0 5px;
+
+      color: var(--white);
+    }
+
+    .transformation-preview-content p {
+      margin: 0;
+
+      color:
+        rgba(255,255,255,.45);
+
+      font-size: 12px;
+    }
+
+    .center-link {
+      margin-top: 42px;
+
+      text-align: center;
+    }
+
+
+    /* =========================================================
+       PACKAGES
+    ========================================================= */
+
+    .home-package-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap: 20px;
+
+      align-items: stretch;
+    }
+
+    .home-package {
+      position: relative;
+
+      padding: 34px;
+
+      border:
+        1px solid
+        var(--border);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.045),
+          rgba(255,255,255,.015)
+        );
+
+      transition:
+        transform .35s ease,
+        border-color .35s ease;
+    }
+
+    .home-package:hover {
+      transform: translateY(-5px);
+
+      border-color:
+        rgba(212,175,55,.45);
+    }
+
+    .home-package.featured-package {
+      border-color:
+        rgba(212,175,55,.62);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(212,175,55,.12),
+          rgba(255,255,255,.025)
+        );
+
+      box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.3),
+
+        inset 0 1px 0
+        rgba(212,175,55,.08);
+    }
+
+    .package-top,
+    .packages-bottom {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 15px;
+    }
+
+    .package-top {
+      margin-bottom: 32px;
+    }
+
+    .package-number {
+      color:
+        rgba(255,255,255,.35);
+
+      font-size: 11px;
+
+      letter-spacing: .15em;
+    }
+
+    .package-label {
+      color: var(--gold);
+
+      font-size: 9px;
+
+      letter-spacing: .16em;
+    }
+
+    .home-package h3 {
+      margin-bottom: 12px;
+
+      color: var(--white);
+
+      font-size: 1.65rem;
+    }
+
+    .package-price {
+      margin-bottom: 18px;
+
+      color: var(--gold);
+
+      font-size: 3.2rem;
+
+      font-weight: 700;
+
+      line-height: 1;
+    }
+
+    .package-price sup {
+      position: relative;
+
+      top: .35em;
+
+      font-size: 1.3rem;
+
+      vertical-align: top;
+    }
+
+    .home-package > p {
+      min-height: 78px;
+
+      color: var(--muted);
+
+      font-size: .94rem;
+
+      line-height: 1.65;
+    }
+
+    .home-package ul {
+      margin: 25px 0 30px;
+
+      padding: 0;
+
+      list-style: none;
+    }
+
+    .home-package li {
+      position: relative;
+
+      padding:
+        9px 0 9px 20px;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,.07);
+
+      color:
+        rgba(255,255,255,.72);
+
+      font-size: .88rem;
+    }
+
+    .home-package li::before {
+      content: "✓";
+
+      position: absolute;
+
+      left: 0;
+
+      color: var(--gold);
+
+      font-weight: 700;
+    }
+
+    .package-link {
+      color: var(--gold);
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: .12em;
+
+      text-transform: uppercase;
+    }
+
+    .packages-bottom {
+      margin-top: 28px;
+    }
+
+    .packages-bottom p {
+      margin: 0;
+
+      color:
+        rgba(255,255,255,.42);
+
+      font-size: 11px;
+    }
+
+
+    /* =========================================================
+       ADD-ONS
+    ========================================================= */
+
+    .addon-grid h2 {
+      max-width: 550px;
+    }
+
+    .addon-grid > div:first-child p:not(.eyebrow) {
+      max-width: 550px;
+    }
+
+    .addon-card {
+      padding: 38px;
+
+      border:
+        1px solid
+        rgba(212,175,55,.22);
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(212,175,55,.1),
+          transparent 45%
+        ),
+        rgba(255,255,255,.025);
+    }
+
+    .addon-card > span {
+      color: var(--gold);
+
+      font-size: 9px;
+
+      letter-spacing: .18em;
+    }
+
+    .enhancement-list {
+      margin-top: 22px;
+    }
+
+    .enhancement-list > div {
+      padding: 17px 0;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,.08);
+    }
+
+    .enhancement-list strong {
+      display: block;
+
+      color: var(--white);
+
+      font-size: .95rem;
+    }
+
+    .enhancement-list span {
+      display: block;
+
+      margin-top: 4px;
+
+      color:
+        rgba(255,255,255,.43);
+
+      font-size: .78rem;
+    }
+
+    .addon-divider {
+      height: 1px;
+
+      margin: 8px 0 25px;
+
+      background:
+        rgba(255,255,255,.08);
+    }
+
+
+    /* =========================================================
+       PROCESS
+    ========================================================= */
+
+    .process-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+    }
+
+    .process-step {
+      padding: 0 30px;
+
+      border-left:
+        1px solid
+        rgba(255,255,255,.1);
+    }
+
+    .process-step:first-child {
+      padding-left: 0;
+
+      border-left: 0;
+    }
+
+    .process-number {
+      display: block !important;
+
+      margin:
+        0 0 22px !important;
+
+      padding: 0 !important;
+
+      border: 0 !important;
+
+      background:
+        transparent !important;
+
+      color:
+        var(--gold) !important;
+
+      font-size:
+        10px !important;
+
+      font-weight:
+        800 !important;
+
+      letter-spacing: .15em;
+    }
+
+    .process-step h3 {
+      margin-bottom: 10px;
+
+      color: var(--white);
+    }
+
+    .process-step p {
+      max-width: 230px;
+
+      margin: 0;
+
+      color:
+        rgba(255,255,255,.5);
+
+      font-size: .88rem;
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
+       VALUES
+    ========================================================= */
+
+    .home-values {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap: 18px;
+    }
+
+    .home-value {
+      padding: 35px;
+
+      border:
+        1px solid
+        var(--border);
+
+      background:
+        rgba(255,255,255,.02);
+    }
+
+    .home-value > span {
+      display: block;
+
+      margin-bottom: 35px;
+
+      color: var(--gold);
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      letter-spacing: .15em;
+    }
+
+    .home-value h3 {
+      margin-bottom: 12px;
+
+      color: var(--white);
+    }
+
+    .home-value p {
+      margin: 0;
+
+      color:
+        rgba(255,255,255,.5);
+
+      font-size: .88rem;
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
+       REVIEWS
+    ========================================================= */
+
+    .review-featured {
+      max-width: 920px;
+
+      margin: 0 auto;
+
+      padding: 55px;
+
+      border:
+        1px solid
+        rgba(212,175,55,.2);
+
+      background:
+        radial-gradient(
+          circle at top left,
+          rgba(212,175,55,.08),
+          transparent 45%
+        ),
+        var(--surface);
+
+      text-align: center;
+    }
+
+    .review-featured + .review-featured {
+      margin-top: 20px;
+
+      opacity: .92;
+    }
+
+    .review-stars {
+      margin-bottom: 25px;
+
+      color: var(--gold);
+
+      font-size: 17px;
+
+      letter-spacing: .16em;
+    }
+
+    .review-source {
+      margin-bottom: 22px;
+
+      color: var(--gold);
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      letter-spacing: .18em;
+    }
+
+    .review-featured blockquote {
+      max-width: 760px;
+
+      margin:
+        0 auto 28px;
+
+      color: var(--white);
+
+      font-size:
+        clamp(1.25rem,2.5vw,2rem);
+
+      line-height: 1.5;
+    }
+
+    .review-author strong,
+    .review-author span {
+      display: block;
+    }
+
+    .review-author strong {
+      color: var(--white);
+    }
+
+    .review-author span {
+      margin-top: 5px;
+
+      color:
+        rgba(255,255,255,.4);
+
+      font-size: 11px;
+    }
+
+    .review-google-badge {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin-top: 35px;
+
+      padding: 12px 18px;
+
+      border:
+        1px solid
+        var(--border);
+
+      text-align: left;
+    }
+
+    .review-google-badge > span {
+      color: var(--gold);
+
+      font-size: 20px;
+    }
+
+    .review-google-badge strong {
+      display: block;
+
+      color: var(--white);
+
+      font-size: 11px;
+    }
+
+    .review-google-badge small {
+      color:
+        rgba(255,255,255,.4);
+
+      font-size: 9px;
+    }
+
+
+    /* =========================================================
+       SERVICE AREA
+    ========================================================= */
+
+    .service-area-home-grid h2 {
+      max-width: 650px;
+    }
+
+    .service-area-home-grid > div:first-child p:not(.eyebrow) {
+      max-width: 560px;
+    }
+
+    .area-highlight {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 1px;
+
+      border:
+        1px solid
+        rgba(212,175,55,.2);
+
+      background:
+        rgba(212,175,55,.2);
+    }
+
+    .area-highlight div {
+      min-height: 125px;
+
+      display: grid;
+
+      place-items: center;
+
+      padding: 20px;
+
+      background: var(--surface);
+
+      color: var(--white);
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      letter-spacing: .12em;
+
+      text-align: center;
+    }
+
+
+    /* =========================================================
+       FINAL CTA
+    ========================================================= */
+
+    .home-final-cta {
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 130px 0;
+
+      border-block:
+        1px solid
+        rgba(212,175,55,.15);
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(212,175,55,.12),
+          transparent 48%
+        ),
+        var(--black);
+
+      text-align: center;
+    }
+
+    .home-final-cta h2 {
+      max-width: 900px;
+
+      margin:
+        0 auto 22px;
+
+      font-size:
+        clamp(2.7rem,5vw,5.5rem);
+
+      line-height: .98;
+    }
+
+    .home-final-cta > .container > p:not(.eyebrow) {
+      max-width: 580px;
+
+      margin:
+        0 auto 32px;
+
+      color:
+        rgba(255,255,255,.6);
+
+      line-height: 1.7;
+    }
+
+    .home-final-cta .hero-actions {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 14px;
+
+      flex-wrap: wrap;
+    }
+
+    .cta-tagline {
+      margin-top: 32px;
+
+      color:
+        rgba(255,255,255,.35);
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+      letter-spacing: .2em;
+    }
+
+
+    /* =========================================================
+       FLOATING ACTION BUTTONS
+    ========================================================= */
+
+    .floating-action-buttons {
+      position: fixed;
+
+      right: 24px;
+      bottom: 24px;
+
+      z-index: 9999;
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 10px;
+    }
+
+    .floating-action-buttons a {
+      min-width: 150px;
+
+      height: 48px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 0 18px;
+
+      border:
+        1px solid
+        rgba(212,175,55,.45);
+
+      background:
+        rgba(5,5,5,.96);
+
+      box-shadow:
+        0 12px 35px
+        rgba(0,0,0,.4);
+
+      backdrop-filter: blur(12px);
+
+      color: var(--white);
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      letter-spacing: .12em;
+
+      text-decoration: none;
+
+      transition:
+        transform .25s ease,
+        background .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+    }
+
+    .floating-action-buttons a:hover {
+      transform: translateY(-2px);
+
+      border-color: var(--gold);
+    }
+
+    .floating-action-buttons .floating-quote {
+      border-color: var(--gold);
+
+      background: var(--gold);
+
+      color: var(--black);
+    }
+
+    .floating-action-buttons .floating-quote:hover {
+      background: #e1c158;
+
+      color: var(--black);
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 1100px) {
+
+      .home-package-grid,
+      .home-values {
+        grid-template-columns: 1fr;
+      }
+
+      .home-package {
+        padding: 30px;
+      }
+
+      .home-package > p {
+        min-height: auto;
+      }
+
+      .home-intro-grid,
+      .addon-grid,
+      .service-area-home-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+      }
+
+    }
+
+
+    @media (max-width: 900px) {
+
+      .transformation-preview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns:
+          repeat(2,1fr);
+
+        gap: 40px 0;
+      }
+
+      .process-step:nth-child(3) {
+        padding-left: 0;
+
+        border-left: 0;
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      body {
+        padding-bottom: 64px;
+      }
+
+      .home-opening {
+        padding:
+          90px 18px 75px;
+      }
+
+      .home-opening::before {
+        width: 420px;
+
+        height: 420px;
+
+        top: -180px;
+      }
+
+      .home-brand-top {
+        font-size: 11px;
+
+        letter-spacing: 5px;
+      }
+
+      .home-brand-main {
+        font-size: 39px;
+      }
+
+      .home-brand-bottom {
+        font-size: 7px;
+
+        letter-spacing: 3px;
+      }
+
+      .home-opening-eyebrow {
+        font-size: 10px;
+
+        letter-spacing: 4px;
+      }
+
+      .home-opening-description {
+        padding: 0 4px;
+
+        font-size: 13px;
+      }
+
+      .home-hero {
+        min-height: 84svh;
+      }
+
+      .hero-slideshow::after {
+        background:
+          linear-gradient(
+            180deg,
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.62) 45%,
+            rgba(0,0,0,.94)
+          );
+      }
+
+      .hero-slide-controls {
+        bottom: 20px;
+      }
+
+      .home-intro,
+      .home-packages,
+      .home-transformations,
+      .home-enhancements,
+      .home-process,
+      .home-reviews,
+      .home-service-area {
+        padding-block: 75px;
+      }
+
+      .center-heading {
+        margin-bottom: 38px;
+      }
+
+      .home-intro-grid {
+        gap: 35px;
+      }
+
+      .packages-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+      .addon-card {
+        padding: 27px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+      }
+
+      .process-step,
+      .process-step:nth-child(3) {
+        padding: 28px 0;
+
+        border-top:
+          1px solid
+          rgba(255,255,255,.1);
+
+        border-left: 0;
+      }
+
+      .process-step:first-child {
+        padding-top: 0;
+
+        border-top: 0;
+      }
+
+      .process-step p {
+        max-width: none;
+      }
+
+      .review-featured {
+        padding: 35px 22px;
+      }
+
+      .review-featured blockquote {
+        font-size: 1.15rem;
+      }
+
+      .area-highlight div {
+        min-height: 90px;
+
+        font-size: 9px;
+      }
+
+      .home-final-cta {
+        padding: 90px 0;
+      }
+
+      .home-final-cta .hero-actions {
+        flex-direction: column;
+
+        width: 100%;
+      }
+
+      .home-final-cta .hero-actions .btn {
+        width: 100%;
+      }
+
+      .floating-action-buttons {
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        display: grid;
+
+        grid-template-columns:
+          1fr 1fr;
+
+        gap: 0;
+
+        height: 64px;
+
+        border-top:
+          1px solid
+          rgba(212,175,55,.35);
+
+        background:
+          rgba(5,5,5,.97);
+
+        backdrop-filter: blur(15px);
+      }
+
+      .floating-action-buttons a {
+        min-width: 0;
+
+        height: 64px;
+
+        border: 0;
+
+        border-radius: 0;
+
+        box-shadow: none;
+
+        background: transparent;
+
+        font-size: 10px;
+      }
+
+      .floating-action-buttons a + a {
+        border-left:
+          1px solid
+          rgba(255,255,255,.1);
+      }
+
+      .floating-action-buttons .floating-quote {
+        background: var(--gold);
+
+        color: var(--black);
+      }
+
+    }
+
+
+    @media (max-width: 380px) {
+
+      .home-brand-main {
+        font-size: 39px;
+      }
+
+      .home-opening-headline {
+        font-size: 34px;
+      }
+
+      .home-opening-description {
+        font-size: 13px;
+      }
+
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .home-opening,
+      .home-opening-content,
+      .hero-slide,
+      .home-package,
+      .home-gallery-image img,
+      .floating-action-buttons a {
+        animation: none !important;
+
+        transition: none !important;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================================================
+       OPENING EXPERIENCE
+  ========================================================= -->
+
+  <div
+    class="home-opening"
+    id="homeOpening"
+  >
+
+    <div class="home-opening-content">
+
+      <div class="home-brand-mark">
+
+        <span class="home-brand-top">
+          ENHANCE
+        </span>
+
+        <span class="home-brand-main">
+          MY RIDE
+        </span>
+
+        <span class="home-brand-bottom">
+          AUTO SPA &amp; MOBILE DETAILING
+        </span>
+
+      </div>
+
+
+      <div
+        class="home-gold-divider"
+        aria-hidden="true"
+      >
+
+        <span></span>
+
+        <i></i>
+
+        <span></span>
+
+      </div>
+
+
+      <p class="home-opening-eyebrow">
+        PREMIUM MOBILE DETAILING
+      </p>
+
+
+      <h1 class="home-opening-headline">
+        Your Ride Deserves
+        <span>to Be Enhanced.</span>
+      </h1>
+
+
+      <p class="home-opening-description">
+        Premium mobile detailing delivered directly to your home,
+        workplace, or convenient location throughout the Bay Area.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================================
+       HEADER
+  ========================================================= -->
+
+  <header class="site-header">
+
+    <div class="container nav-container">
+
+      <a
+        href="index.html"
+        class="logo"
+        aria-label="Enhance My Ride home"
+      >
+
+        <span class="logo-main">
+          ENHANCE MY RIDE
+        </span>
+
+        <span class="logo-sub">
+          AUTO SPA &amp; MOBILE DETAILING
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      <nav
+        class="main-nav"
+        id="mainNav"
+        aria-label="Main navigation"
+      >
+
+        <a
+          href="index.html"
+          class="active"
+        >
+          Home
+        </a>
+
+        <a href="gallery.html">
+          Gallery
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a href="book-now.html">
+          Book Now
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="service-area.html">
+          Service Area
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================================
+       MAIN
+  ========================================================= -->
+
+  <main>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section
+      class="home-hero"
+      aria-label="Enhance My Ride showcase"
+    >
+
+      <div class="hero-slideshow">
+
+        <img
+          class="hero-slide active"
+          src="images/crv-front.webp"
+          alt="Enhance My Ride mobile detailing vehicle"
+          fetchpriority="high"
+          decoding="async"
+        >
+
+        <img
+          class="hero-slide"
+          src="images/crv-driver-interior.webp"
+          alt="Clean vehicle interior detail"
+          loading="lazy"
+          decoding="async"
+        >
+
+        <img
+          class="hero-slide"
+          src="images/crv-side.webp"
+          alt="Enhance My Ride mobile detailing setup"
+          loading="lazy"
+          decoding="async"
+        >
+
+        <img
+          class="hero-slide"
+          src="images/crv-rear.webp"
+          alt="Enhance My Ride vehicle exterior"
+          loading="lazy"
+          decoding="async"
+        >
+
+      </div>
+
+
+      <div
+        class="hero-slide-controls"
+        aria-label="Hero slideshow controls"
+      >
+
+        <button
+          class="hero-slide-dot active"
+          type="button"
+          aria-label="Show hero image 1"
+        ></button>
+
+        <button
+          class="hero-slide-dot"
+          type="button"
+          aria-label="Show hero image 2"
+        ></button>
+
+        <button
+          class="hero-slide-dot"
+          type="button"
+          aria-label="Show hero image 3"
+        ></button>
+
+        <button
+          class="hero-slide-dot"
+          type="button"
+          aria-label="Show hero image 4"
+        ></button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
+
+    <section class="section home-intro">
+
+      <div class="container">
+
+        <div class="home-intro-grid">
+
+          <div>
+
+            <p class="eyebrow">
+              THE ENHANCE EXPERIENCE
+            </p>
+
+            <h2>
+              Your Vehicle.
+              <br>
+              <span class="gold-text">
+                Elevated.
+              </span>
+            </h2>
+
+          </div>
+
+
+          <div>
+
+            <p class="intro-large">
+              Your vehicle deserves more than a quick wash and a vacuum.
+            </p>
+
+            <p>
+              Enhance My Ride delivers a premium mobile detailing
+              experience built around convenience, attention to detail,
+              and a finish you can see and feel.
+            </p>
+
+            <p>
+              Whether your vehicle needs a complete detail or one specific
+              area restored, we're here to enhance it.
+            </p>
+
+            <a
+              href="about.html"
+              class="text-link"
+            >
+              Discover Enhance My Ride →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TRANSFORMATIONS
+    ====================================================== -->
+
+    <section class="section home-transformations">
+
+      <div class="container">
+
+        <div class="center-heading">
+
+          <p class="eyebrow">
+            REAL VEHICLES. REAL RESULTS.
+          </p>
+
+          <h2>
+            See The
+            <span class="gold-text">
+              Difference.
+            </span>
+          </h2>
+
+          <p>
+            See the finished results — then visit the gallery to explore
+            the real Before → After transformations.
+          </p>
+
+        </div>
+
+
+        <div class="transformation-preview-grid">
+
+
+          <article class="transformation-preview">
+
+            <a
+              href="gallery.html#mercedes"
+              class="home-gallery-image"
+            >
+
+              <img
+                src="images/mercedes-after-front.webp"
+                alt="Mercedes-Benz CLS 550 after professional detailing"
+                loading="lazy"
+                decoding="async"
+              >
+
+              <span class="image-view-label">
+                VIEW TRANSFORMATION
+              </span>
+
+            </a>
+
+
+            <div class="transformation-preview-content">
+
+              <span>
+                BEFORE → AFTER
+              </span>
+
+              <h3>
+                Mercedes-Benz CLS 550
+              </h3>
+
+              <p>
+                Enhance Gold Package
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="transformation-preview">
+
+            <a
+              href="gallery.html#lexus"
+              class="home-gallery-image"
+            >
+
+              <img
+                src="images/lexus-is250-after-front.webp"
+                alt="Lexus IS 250 after professional detailing"
+                loading="lazy"
+                decoding="async"
+              >
+
+              <span class="image-view-label">
+                VIEW TRANSFORMATION
+              </span>
+
+            </a>
+
+
+            <div class="transformation-preview-content">
+
+              <span>
+                BEFORE → AFTER
+              </span>
+
+              <h3>
+                Lexus IS 250
+              </h3>
+
+              <p>
+                Enhance Gold Package
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+        <div class="center-link">
+
+          <a
+            href="gallery.html"
+            class="btn btn-outline"
+          >
+            View The Full Gallery
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PACKAGES
+    ====================================================== -->
+
+    <section
+      class="section section-dark home-packages"
+    >
+
+      <div class="container">
+
+        <div class="center-heading">
+
+          <p class="eyebrow">
+            PREMIUM DETAILING
+          </p>
+
+          <h2>
+            Choose Your
+            <span class="gold-text">
+              Enhance.
+            </span>
+          </h2>
+
+          <p>
+            Three levels of detailing designed around your vehicle's
+            condition and needs.
+          </p>
+
+        </div>
+
+
+        <div class="home-package-grid">
+
+
+          <!-- GOLD -->
+
+          <article class="home-package">
+
+            <div class="package-top">
+
+              <span class="package-number">
+                01
+              </span>
+
+              <span class="package-label">
+                SIGNATURE
+              </span>
+
+            </div>
+
+
+            <h3>
+              Enhance Gold
+            </h3>
+
+
+            <div class="package-price">
+              <sup>$</sup>149+
+            </div>
+
+
+            <p>
+              A complete maintenance detail designed to bring back
+              the clean, refreshed feel your vehicle deserves.
+            </p>
+
+
+            <ul>
+
+              <li>
+                Exterior hand wash
+              </li>
+
+              <li>
+                Wheels &amp; tires cleaned
+              </li>
+
+              <li>
+                Tire dressing
+              </li>
+
+              <li>
+                Interior vacuum
+              </li>
+
+              <li>
+                Interior surface cleaning
+              </li>
+
+              <li>
+                Glass cleaned
+              </li>
+
+            </ul>
+
+
+            <a
+              href="services.html"
+              class="package-link"
+            >
+              View Package →
+            </a>
+
+          </article>
+
+
+          <!-- BLACK LABEL -->
+
+          <article
+            class="home-package featured-package"
+          >
+
+            <div class="package-top">
+
+              <span class="package-number">
+                02
+              </span>
+
+              <span class="package-label">
+                MOST POPULAR
+              </span>
+
+            </div>
+
+
+            <h3>
+              Enhance Black Label
+            </h3>
+
+
+            <div class="package-price">
+              <sup>$</sup>249+
+            </div>
+
+
+            <p>
+              Our most popular option for vehicles that need a deeper
+              interior and exterior transformation.
+            </p>
+
+
+            <ul>
+
+              <li>
+                Everything in Gold
+              </li>
+
+              <li>
+                Deep interior cleaning
+              </li>
+
+              <li>
+                Detailed wheel &amp; tire treatment
+              </li>
+
+              <li>
+                Interior trim treatment
+              </li>
+
+              <li>
+                Carpet &amp; mat deep cleaning
+              </li>
+
+              <li>
+                Exterior protection treatment
+              </li>
+
+            </ul>
+
+
+            <a
+              href="services.html"
+              class="package-link"
+            >
+              View Package →
+            </a>
+
+          </article>
+
+
+          <!-- SHOWROOM -->
+
+          <article class="home-package">
+
+            <div class="package-top">
+
+              <span class="package-number">
+                03
+              </span>
+
+              <span class="package-label">
+                ULTIMATE
+              </span>
+
+            </div>
+
+
+            <h3>
+              Showroom Edition
+            </h3>
+
+
+            <div class="package-price">
+              <sup>$</sup>399+
+            </div>
+
+
+            <p>
+              Our highest level of service for owners who want their
+              vehicle looking its absolute best.
+            </p>
+
+
+            <ul>
+
+              <li>
+                Everything in Black Label
+              </li>
+
+              <li>
+                Intensive interior detailing
+              </li>
+
+              <li>
+                Premium exterior treatment
+              </li>
+
+              <li>
+                Paint enhancement
+              </li>
+
+              <li>
+                Premium paint protection
+              </li>
+
+              <li>
+                Showroom finishing process
+              </li>
+
+            </ul>
+
+
+            <a
+              href="services.html"
+              class="package-link"
+            >
+              View Package →
+            </a>
+
+          </article>
+
+
+        </div>
+
+
+        <div class="packages-bottom">
+
+          <p>
+            Pricing starts at the amounts shown. Final pricing may
+            vary by vehicle size, condition, buildup, pet hair,
+            stains, and requested services.
+          </p>
+
+          <a
+            href="book-now.html"
+            class="text-link"
+          >
+            Book Your Detail →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ADD-ONS
+    ====================================================== -->
+
+    <section
+      class="section section-dark home-enhancements"
+    >
+
+      <div class="container">
+
+        <div class="addon-grid">
+
+
+          <div>
+
+            <p class="eyebrow">
+              PREMIUM ADD-ONS
+            </p>
+
+            <h2>
+              Enhance Just
+              <span class="gold-text">
+                What You Need.
+              </span>
+            </h2>
+
+            <p>
+              Not every vehicle needs a complete detail.
+              Sometimes one specific area can make a dramatic
+              difference.
+            </p>
+
+            <p>
+              Add specialized services to your package or request
+              a custom service based on your vehicle's condition.
+            </p>
+
+            <a
+              href="services.html"
+              class="text-link"
+            >
+              Explore All Services →
+            </a>
+
+          </div>
+
+
+          <div class="addon-card">
+
+            <span>
+              VEHICLE ENHANCEMENTS
+            </span>
+
+
+            <div class="enhancement-list">
+
+              <div>
+                <strong>
+                  Wheel Polishing
+                </strong>
+
+                <span>
+                  $50–$100 per set depending on condition
+                </span>
+              </div>
+
+
+              <div>
+                <strong>
+                  Headlight Restoration
+                </strong>
+
+                <span>
+                  Restore clarity and appearance
+                </span>
+              </div>
+
+
+              <div>
+                <strong>
+                  Trim Restoration
+                </strong>
+
+                <span>
+                  Refresh faded exterior trim
+                </span>
+              </div>
+
+
+              <div>
+                <strong>
+                  Pet Hair Removal
+                </strong>
+
+                <span>
+                  Custom pricing based on condition
+                </span>
+              </div>
+
+
+              <div>
+                <strong>
+                  Engine Bay Detail
+                </strong>
+
+                <span>
+                  Detailed engine compartment cleaning
+                </span>
+              </div>
+
+
+              <div>
+                <strong>
+                  Odor Treatment
+                </strong>
+
+                <span>
+                  Targeted interior odor treatment
+                </span>
+              </div>
+
+
+              <div>
+                <strong>
+                  Heavy Soil Treatment
+                </strong>
+
+                <span>
+                  For heavily soiled interiors and surfaces
+                </span>
+              </div>
+
+
+              <div>
+                <strong>
+                  Custom Service
+                </strong>
+
+                <span>
+                  Tell us exactly what your vehicle needs
+                </span>
+              </div>
+
+            </div>
+
+
+            <div class="addon-divider"></div>
+
+
+            <a
+              href="book-now.html"
+              class="btn btn-primary"
+            >
+              Book Now
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROCESS
+    ====================================================== -->
+
+    <section class="section home-process">
+
+      <div class="container">
+
+        <div class="center-heading">
+
+          <p class="eyebrow">
+            SIMPLE. CONVENIENT. PREMIUM.
+          </p>
+
+          <h2>
+            Detailing Without
+            <span class="gold-text">
+              The Hassle.
+            </span>
+          </h2>
+
+          <p>
+            From your first booking to the final inspection,
+            we make the process simple.
+          </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+          <div class="process-step">
+
+            <span class="process-number">
+              01 — BOOK
+            </span>
+
+            <h3>
+              Tell Us About Your Ride
+            </h3>
+
+            <p>
+              Book your service by telling us about your vehicle,
+              location, service needs, and photos when helpful.
+            </p>
+
+          </div>
+
+
+          <div class="process-step">
+
+            <span class="process-number">
+              02 — CONFIRM
+            </span>
+
+            <h3>
+              We Review The Details
+            </h3>
+
+            <p>
+              We'll help determine the right service based on
+              your vehicle's condition and needs.
+            </p>
+
+          </div>
+
+
+          <div class="process-step">
+
+            <span class="process-number">
+              03 — WE ARRIVE
+            </span>
+
+            <h3>
+              We Come To You
+            </h3>
+
+            <p>
+              Your home, workplace, or another convenient location
+              becomes your detailing location.
+            </p>
+
+          </div>
+
+
+          <div class="process-step">
+
+            <span class="process-number">
+              04 — ENHANCE
+            </span>
+
+            <h3>
+              Enjoy The Result
+            </h3>
+
+            <p>
+              We complete the service and perform a final
+              presentation inspection before we leave.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         WHY ENHANCE
+    ====================================================== -->
+
+    <section class="section section-dark">
+
+      <div class="container">
+
+        <div class="center-heading">
+
+          <p class="eyebrow">
+            WHY ENHANCE MY RIDE
+          </p>
+
+          <h2>
+            Premium Service.
+            <br>
+            Without The Hassle.
+          </h2>
+
+        </div>
+
+
+        <div class="home-values">
+
+
+          <div class="home-value">
+
+            <span>
+              01
+            </span>
+
+            <h3>
+              We Come To You
+            </h3>
+
+            <p>
+              Your home, workplace, or convenient location.
+              No waiting room. No shop drop-off.
+            </p>
+
+          </div>
+
+
+          <div class="home-value">
+
+            <span>
+              02
+            </span>
+
+            <h3>
+              Attention To Detail
+            </h3>
+
+            <p>
+              We focus on the areas that create the biggest
+              visual and functional difference.
+            </p>
+
+          </div>
+
+
+          <div class="home-value">
+
+            <span>
+              03
+            </span>
+
+            <h3>
+              Premium Experience
+            </h3>
+
+            <p>
+              From your booking to the final inspection,
+              every part of the experience should feel as
+              good as the finished vehicle.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         GOOGLE REVIEWS
+    ====================================================== -->
+
+    <section class="section home-reviews">
+
+      <div class="container">
+
+        <div class="center-heading">
+
+          <p class="eyebrow">
+            CLIENT EXPERIENCE
+          </p>
+
+          <h2>
+            Don't Just Take
+            <span class="gold-text">
+              Our Word For It.
+            </span>
+          </h2>
+
+          <p>
+            Real customers. Real experiences. Real results.
+          </p>
+
+        </div>
+
+
+        <!-- REVIEW 1 -->
+
+        <div class="review-featured">
+
+          <div class="review-stars">
+            ★ ★ ★ ★ ★
+          </div>
+
+          <div class="review-source">
+            GOOGLE REVIEW
+          </div>
+
+          <blockquote>
+            “He did his big one on my Lexus 😮‍💨 😮‍💨✅ !!!
+            So thankful I took a chance on this small business,
+            definitely will be adding this to my monthly expenses!”
+          </blockquote>
+
+          <div class="review-author">
+
+            <strong>
+              AESTHETICS
+            </strong>
+
+            <span>
+              Google Review · 5 Stars · Lexus
+            </span>
+
+          </div>
+
+
+          <div class="review-google-badge">
+
+            <span>
+              ★
+            </span>
+
+            <div>
+
+              <strong>
+                5.0 ★★★★★
+              </strong>
+
+              <small>
+                Google Business Profile
+              </small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- REVIEW 2 -->
+
+        <div class="review-featured">
+
+          <div class="review-stars">
+            ★ ★ ★ ★ ★
+          </div>
+
+          <div class="review-source">
+            GOOGLE REVIEW
+          </div>
+
+          <blockquote>
+            “10 for 10! Restored my dusty CLS 550 to showroom
+            beauty — Interior and Exterior. Amazing work.
+            Will be returning for additional services.
+            HIGHLY RECOMMEND!”
+          </blockquote>
+
+          <div class="review-author">
+
+            <strong>
+              Pretti Ladi
+            </strong>
+
+            <span>
+              Google Review · 5 Stars · Mercedes-Benz CLS 550
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="center-link">
+
+          <a
+            href="https://g.page/r/CRy_PYJmq6NYEBM/review"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline"
+          >
+            Leave Us A Google Review
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SERVICE AREA
+    ====================================================== -->
+
+    <section
+      class="section section-dark home-service-area"
+    >
+
+      <div class="container">
+
+        <div class="service-area-home-grid">
+
+
+          <div>
+
+            <p class="eyebrow">
+              MOBILE DETAILING • BAY AREA
+            </p>
+
+            <h2>
+              Wherever You Park,
+              <span class="gold-text">
+                We Can Come To You.
+              </span>
+            </h2>
+
+            <p>
+              Serving Alameda, Oakland, San Francisco,
+              San Leandro, Berkeley, Emeryville, Hayward,
+              and surrounding Bay Area communities.
+            </p>
+
+            <a
+              href="service-area.html"
+              class="text-link"
+            >
+              Explore Our Service Area →
+            </a>
+
+          </div>
+
+
+          <div class="area-highlight">
+
+            <div>
+              ALAMEDA
+            </div>
+
+            <div>
+              OAKLAND
+            </div>
+
+            <div>
+              SAN FRANCISCO
+            </div>
+
+            <div>
+              SAN LEANDRO
+            </div>
+
+            <div>
+              BERKELEY
+            </div>
+
+            <div>
+              EMERYVILLE
+            </div>
+
+            <div>
+              HAYWARD
+            </div>
+
+            <div>
+              SURROUNDING BAY AREA
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL CTA
+    ====================================================== -->
+
+    <section class="home-final-cta">
+
+      <div class="container">
+
+        <p class="eyebrow">
+          READY TO ENHANCE?
+        </p>
+
+
+        <h2>
+          Your Ride Deserves
+          <span>
+            to Be Enhanced.
+          </span>
+        </h2>
+
+
+        <p>
+          Tell us what you're driving and where you're located.
+          We'll help you find the right service.
+        </p>
+
+
+        <div class="hero-actions">
+
+          <a
+            href="book-now.html"
+            class="btn btn-primary"
+          >
+            Book Now
+          </a>
+
+
+          <a
+            href="tel:+13233271806"
+            class="btn btn-outline"
+          >
+            Call / Text (323) 327-1806
+          </a>
+
+        </div>
+
+
+        <div class="cta-tagline">
+          WE COME TO YOU. YOU RELAX. WE ENHANCE.
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+
+      <div class="footer-brand">
+
+        <a
+          href="index.html"
+          class="logo"
+        >
+
+          <span class="logo-main">
+            ENHANCE MY RIDE
+          </span>
+
+          <span class="logo-sub">
+            AUTO SPA &amp; MOBILE DETAILING
+          </span>
+
+        </a>
+
+
+        <p>
+          Premium mobile detailing delivered throughout Alameda,
+          Oakland, San Francisco and the greater Bay Area.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>
+          Explore
+        </h4>
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="gallery.html">
+          Gallery
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a href="book-now.html">
+          Book Now
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="service-area.html">
+          Service Area
+        </a>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>
+          Connect
+        </h4>
+
+        <a href="book-now.html">
+          Book Now
+        </a>
+
+        <a href="tel:+13233271806">
+          (323) 327-1806
+        </a>
+
+        <a href="mailto:info@enhancemyride.com">
+          info@enhancemyride.com
+        </a>
+
+        <a
+          href="https://www.instagram.com/enhancemyridemobiledetailing/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@enhancemyride"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok
+        </a>
+
+        <a
+          href="https://www.youtube.com/@enhancemyridemobiledetailing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <p>
+        © 2026 Enhance My Ride Auto Spa &amp; Mobile Detailing.
+        All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       MOBILE QUICK ACTIONS
+  ========================================================= -->
+
+  <div
+    class="floating-action-buttons"
+    aria-label="Quick contact actions"
+  >
+
+    <a
+      href="book-now.html"
+      class="floating-quote"
+    >
+      BOOK NOW
+    </a>
+
+    <a
+      href="tel:+13233271806"
+    >
+      CALL / TEXT
+    </a>
+
+  </div>
+
+
+  <!-- =========================================================
+       MAIN SITE JAVASCRIPT
+  ========================================================= -->
+
+  <script src="js/script.js"></script>
+
+
+  <!-- =========================================================
+       HOME PAGE JAVASCRIPT
+  ========================================================= -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+
+        /* =====================================================
+           OPENING ANIMATION
+        ===================================================== */
+
+        const opening =
+          document.getElementById(
+            "homeOpening"
+          );
+
+        if (opening) {
+
+          document.body.classList.add(
+            "home-opening-active"
+          );
+
+          window.setTimeout(
+            () => {
+
+              opening.classList.add(
+                "opening-complete"
+              );
+
+              document.body.classList.remove(
+                "home-opening-active"
+              );
+
+
+              window.setTimeout(
+                () => {
+
+                  opening.remove();
+
+                },
+                750
+              );
+
+            },
+            3000
+          );
+
+        }
+
+
+        /* =====================================================
+           HERO SLIDESHOW
+        ===================================================== */
+
+        const slides = [
+          ...document.querySelectorAll(
+            ".hero-slide"
+          )
+        ];
+
+        const dots = [
+          ...document.querySelectorAll(
+            ".hero-slide-dot"
+          )
+        ];
+
+
+        if (!slides.length) {
+          return;
+        }
+
+
+        let current = 0;
+
+        let timer = null;
+
+
+        function showSlide(index) {
+
+          slides.forEach(
+            (slide, number) => {
+
+              slide.classList.toggle(
+                "active",
+                number === index
+              );
+
+            }
+          );
+
+
+          dots.forEach(
+            (dot, number) => {
+
+              dot.classList.toggle(
+                "active",
+                number === index
+              );
+
+            }
+          );
+
+
+          current = index;
+
+        }
+
+
+        function startSlideshow() {
+
+          window.clearInterval(timer);
+
+
+          timer =
+            window.setInterval(
+              () => {
+
+                showSlide(
+                  (current + 1) %
+                  slides.length
+                );
+
+              },
+              6500
+            );
+
+        }
+
+
+        dots.forEach(
+          (dot, index) => {
+
+            dot.addEventListener(
+              "click",
+              () => {
+
+                showSlide(index);
+
+                startSlideshow();
+
+              }
+            );
+
+          }
+        );
+
+
+        showSlide(0);
+
+        startSlideshow();
+
+      }
+    );
+
+  </script>
+
+
+</body>
+</html> 
