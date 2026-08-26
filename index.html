@@ -14,11 +14,16 @@
   <meta name="theme-color" content="#050505">
   <meta name="robots" content="index, follow">
 
-  <meta property="og:title" content="Enhance My Ride | Premium Mobile Detailing">
+  <meta
+    property="og:title"
+    content="Enhance My Ride | Premium Mobile Detailing"
+  >
+
   <meta
     property="og:description"
     content="Premium mobile detailing delivered directly to your home, workplace, or convenient location throughout the Bay Area."
   >
+
   <meta property="og:type" content="website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +35,7 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+
 
   <style>
 
@@ -43,7 +49,7 @@
       --gold-light: #e2c45b;
       --black: #050505;
       --surface: #0b0b0b;
-      --white: #fff;
+      --white: #ffffff;
       --muted: rgba(255,255,255,.58);
       --border: rgba(255,255,255,.09);
     }
@@ -57,10 +63,14 @@
       position: fixed;
       inset: 0;
       z-index: 100000;
+
       min-height: 100svh;
+
       display: grid;
       place-items: center;
+
       padding: 90px 24px 75px;
+
       overflow: hidden;
 
       background:
@@ -83,6 +93,7 @@
         opacity .7s ease,
         visibility .7s ease;
     }
+
 
     .home-opening::before {
       content: "";
@@ -109,6 +120,7 @@
       pointer-events: none;
     }
 
+
     .home-opening::after {
       content: "";
 
@@ -131,11 +143,13 @@
         );
     }
 
+
     .home-opening.opening-complete {
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
     }
+
 
     .home-opening-content {
       position: relative;
@@ -149,6 +163,7 @@
       animation:
         homeHeroReveal 1.2s ease both;
     }
+
 
     @keyframes homeHeroReveal {
 
@@ -164,6 +179,7 @@
 
     }
 
+
     .home-brand-mark {
       display: flex;
       flex-direction: column;
@@ -173,6 +189,7 @@
 
       margin-bottom: 26px;
     }
+
 
     .home-brand-top {
       color: var(--gold-light);
@@ -186,6 +203,7 @@
       letter-spacing: 7px;
     }
 
+
     .home-brand-main {
       color: var(--white);
 
@@ -198,6 +216,7 @@
 
       letter-spacing: 2px;
     }
+
 
     .home-brand-bottom {
       margin-top: 8px;
@@ -213,6 +232,7 @@
       letter-spacing: 4px;
     }
 
+
     .home-gold-divider {
       display: flex;
       align-items: center;
@@ -222,6 +242,7 @@
 
       margin: 0 auto 26px;
     }
+
 
     .home-gold-divider span {
       width: 42px;
@@ -235,6 +256,7 @@
         );
     }
 
+
     .home-gold-divider span:last-child {
       background:
         linear-gradient(
@@ -244,6 +266,7 @@
         );
     }
 
+
     .home-gold-divider i {
       width: 5px;
       height: 5px;
@@ -252,6 +275,7 @@
 
       transform: rotate(45deg);
     }
+
 
     .home-opening-eyebrow {
       margin: 0 0 16px;
@@ -266,6 +290,7 @@
 
       letter-spacing: 4px;
     }
+
 
     .home-opening-headline {
       margin: 0;
@@ -282,10 +307,12 @@
       letter-spacing: -.5px;
     }
 
+
     .home-opening-headline span,
     .home-final-cta h2 span {
       color: var(--gold-light);
     }
+
 
     .home-opening-description {
       max-width: 540px;
@@ -319,6 +346,7 @@
       background: var(--black);
     }
 
+
     .hero-slideshow {
       position: absolute;
       inset: 0;
@@ -327,6 +355,7 @@
 
       background: var(--black);
     }
+
 
     .hero-slide {
       position: absolute;
@@ -347,10 +376,12 @@
         transform 7s ease;
     }
 
+
     .hero-slide.active {
       opacity: 1;
       transform: scale(1);
     }
+
 
     .hero-slideshow::after {
       content: "";
@@ -368,6 +399,7 @@
         );
     }
 
+
     .hero-slide-controls {
       position: absolute;
 
@@ -382,6 +414,7 @@
 
       transform: translateX(-50%);
     }
+
 
     .hero-slide-dot {
       width: 7px;
@@ -404,6 +437,7 @@
         background .3s ease,
         border-color .3s ease;
     }
+
 
     .hero-slide-dot.active {
       width: 28px;
@@ -429,25 +463,26 @@
       padding-block: 105px;
     }
 
+
     .home-intro-grid,
     .addon-grid,
     .service-area-home-grid {
       display: grid;
 
-      grid-template-columns:
-        1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 
       gap: 70px;
 
       align-items: center;
     }
 
+
     .home-intro-grid {
-      grid-template-columns:
-        .8fr 1.2fr;
+      grid-template-columns: .8fr 1.2fr;
 
       align-items: end;
     }
+
 
     .home-intro h2 {
       margin-bottom: 0;
@@ -457,6 +492,7 @@
 
       line-height: .98;
     }
+
 
     .intro-large {
       margin-bottom: 18px;
@@ -469,6 +505,7 @@
       line-height: 1.35;
     }
 
+
     .home-intro-grid > div:last-child p:not(.intro-large),
     .addon-grid > div:first-child p:not(.eyebrow),
     .service-area-home-grid > div:first-child p:not(.eyebrow) {
@@ -476,6 +513,7 @@
 
       line-height: 1.8;
     }
+
 
     .home-intro-grid > div:last-child p:not(.intro-large) {
       max-width: 680px;
@@ -495,6 +533,7 @@
       gap: 18px;
     }
 
+
     .transformation-preview {
       overflow: hidden;
 
@@ -505,6 +544,7 @@
       background: var(--surface);
     }
 
+
     .home-gallery-image {
       position: relative;
 
@@ -514,6 +554,7 @@
 
       overflow: hidden;
     }
+
 
     .home-gallery-image img {
       display: block;
@@ -527,10 +568,12 @@
         transform .6s ease;
     }
 
+
     .transformation-preview:hover
     .home-gallery-image img {
       transform: scale(1.045);
     }
+
 
     .image-view-label {
       position: absolute;
@@ -557,9 +600,11 @@
       letter-spacing: .15em;
     }
 
+
     .transformation-preview-content {
       padding: 22px 23px 25px;
     }
+
 
     .transformation-preview-content > span,
     .package-label,
@@ -567,6 +612,7 @@
     .enhancement-list strong {
       font-weight: 800;
     }
+
 
     .transformation-preview-content > span {
       color: var(--gold);
@@ -576,11 +622,13 @@
       letter-spacing: .15em;
     }
 
+
     .transformation-preview-content h3 {
       margin: 8px 0 5px;
 
       color: var(--white);
     }
+
 
     .transformation-preview-content p {
       margin: 0;
@@ -590,6 +638,7 @@
 
       font-size: 12px;
     }
+
 
     .center-link {
       margin-top: 42px;
@@ -613,6 +662,7 @@
       align-items: stretch;
     }
 
+
     .home-package {
       position: relative;
 
@@ -634,12 +684,14 @@
         border-color .35s ease;
     }
 
+
     .home-package:hover {
       transform: translateY(-5px);
 
       border-color:
         rgba(212,175,55,.45);
     }
+
 
     .home-package.featured-package {
       border-color:
@@ -660,6 +712,7 @@
         rgba(212,175,55,.08);
     }
 
+
     .package-top,
     .packages-bottom {
       display: flex;
@@ -670,9 +723,11 @@
       gap: 15px;
     }
 
+
     .package-top {
       margin-bottom: 32px;
     }
+
 
     .package-number {
       color:
@@ -683,6 +738,7 @@
       letter-spacing: .15em;
     }
 
+
     .package-label {
       color: var(--gold);
 
@@ -691,6 +747,7 @@
       letter-spacing: .16em;
     }
 
+
     .home-package h3 {
       margin-bottom: 12px;
 
@@ -698,6 +755,7 @@
 
       font-size: 1.65rem;
     }
+
 
     .package-price {
       margin-bottom: 18px;
@@ -711,6 +769,7 @@
       line-height: 1;
     }
 
+
     .package-price sup {
       position: relative;
 
@@ -720,6 +779,7 @@
 
       vertical-align: top;
     }
+
 
     .home-package > p {
       min-height: 78px;
@@ -731,6 +791,7 @@
       line-height: 1.65;
     }
 
+
     .home-package ul {
       margin: 25px 0 30px;
 
@@ -738,6 +799,7 @@
 
       list-style: none;
     }
+
 
     .home-package li {
       position: relative;
@@ -755,6 +817,7 @@
       font-size: .88rem;
     }
 
+
     .home-package li::before {
       content: "✓";
 
@@ -766,6 +829,7 @@
 
       font-weight: 700;
     }
+
 
     .package-link {
       color: var(--gold);
@@ -779,9 +843,11 @@
       text-transform: uppercase;
     }
 
+
     .packages-bottom {
       margin-top: 28px;
     }
+
 
     .packages-bottom p {
       margin: 0;
@@ -801,9 +867,11 @@
       max-width: 550px;
     }
 
+
     .addon-grid > div:first-child p:not(.eyebrow) {
       max-width: 550px;
     }
+
 
     .addon-card {
       padding: 38px;
@@ -821,6 +889,7 @@
         rgba(255,255,255,.025);
     }
 
+
     .addon-card > span {
       color: var(--gold);
 
@@ -829,9 +898,11 @@
       letter-spacing: .18em;
     }
 
+
     .enhancement-list {
       margin-top: 22px;
     }
+
 
     .enhancement-list > div {
       padding: 17px 0;
@@ -841,6 +912,7 @@
         rgba(255,255,255,.08);
     }
 
+
     .enhancement-list strong {
       display: block;
 
@@ -848,6 +920,7 @@
 
       font-size: .95rem;
     }
+
 
     .enhancement-list span {
       display: block;
@@ -859,6 +932,7 @@
 
       font-size: .78rem;
     }
+
 
     .addon-divider {
       height: 1px;
@@ -881,6 +955,7 @@
         repeat(4,1fr);
     }
 
+
     .process-step {
       padding: 0 30px;
 
@@ -889,11 +964,13 @@
         rgba(255,255,255,.1);
     }
 
+
     .process-step:first-child {
       padding-left: 0;
 
       border-left: 0;
     }
+
 
     .process-number {
       display: block !important;
@@ -920,11 +997,13 @@
       letter-spacing: .15em;
     }
 
+
     .process-step h3 {
       margin-bottom: 10px;
 
       color: var(--white);
     }
+
 
     .process-step p {
       max-width: 230px;
@@ -953,6 +1032,7 @@
       gap: 18px;
     }
 
+
     .home-value {
       padding: 35px;
 
@@ -963,6 +1043,7 @@
       background:
         rgba(255,255,255,.02);
     }
+
 
     .home-value > span {
       display: block;
@@ -978,11 +1059,13 @@
       letter-spacing: .15em;
     }
 
+
     .home-value h3 {
       margin-bottom: 12px;
 
       color: var(--white);
     }
+
 
     .home-value p {
       margin: 0;
@@ -1022,11 +1105,13 @@
       text-align: center;
     }
 
+
     .review-featured + .review-featured {
       margin-top: 20px;
 
       opacity: .92;
     }
+
 
     .review-stars {
       margin-bottom: 25px;
@@ -1037,6 +1122,7 @@
 
       letter-spacing: .16em;
     }
+
 
     .review-source {
       margin-bottom: 22px;
@@ -1049,6 +1135,7 @@
 
       letter-spacing: .18em;
     }
+
 
     .review-featured blockquote {
       max-width: 760px;
@@ -1064,14 +1151,17 @@
       line-height: 1.5;
     }
 
+
     .review-author strong,
     .review-author span {
       display: block;
     }
 
+
     .review-author strong {
       color: var(--white);
     }
+
 
     .review-author span {
       margin-top: 5px;
@@ -1081,6 +1171,7 @@
 
       font-size: 11px;
     }
+
 
     .review-google-badge {
       display: inline-flex;
@@ -1100,11 +1191,13 @@
       text-align: left;
     }
 
+
     .review-google-badge > span {
       color: var(--gold);
 
       font-size: 20px;
     }
+
 
     .review-google-badge strong {
       display: block;
@@ -1113,6 +1206,7 @@
 
       font-size: 11px;
     }
+
 
     .review-google-badge small {
       color:
@@ -1130,9 +1224,11 @@
       max-width: 650px;
     }
 
+
     .service-area-home-grid > div:first-child p:not(.eyebrow) {
       max-width: 560px;
     }
+
 
     .area-highlight {
       display: grid;
@@ -1149,6 +1245,7 @@
       background:
         rgba(212,175,55,.2);
     }
+
 
     .area-highlight div {
       min-height: 125px;
@@ -1199,6 +1296,7 @@
       text-align: center;
     }
 
+
     .home-final-cta h2 {
       max-width: 900px;
 
@@ -1210,6 +1308,7 @@
 
       line-height: .98;
     }
+
 
     .home-final-cta > .container > p:not(.eyebrow) {
       max-width: 580px;
@@ -1223,6 +1322,7 @@
       line-height: 1.7;
     }
 
+
     .home-final-cta .hero-actions {
       display: flex;
 
@@ -1232,6 +1332,7 @@
 
       flex-wrap: wrap;
     }
+
 
     .cta-tagline {
       margin-top: 32px;
@@ -1265,6 +1366,7 @@
 
       gap: 10px;
     }
+
 
     .floating-action-buttons a {
       min-width: 150px;
@@ -1309,11 +1411,13 @@
         border-color .25s ease;
     }
 
+
     .floating-action-buttons a:hover {
       transform: translateY(-2px);
 
       border-color: var(--gold);
     }
+
 
     .floating-action-buttons .floating-quote {
       border-color: var(--gold);
@@ -1322,6 +1426,7 @@
 
       color: var(--black);
     }
+
 
     .floating-action-buttons .floating-quote:hover {
       background: #e1c158;
@@ -1341,13 +1446,16 @@
         grid-template-columns: 1fr;
       }
 
+
       .home-package {
         padding: 30px;
       }
 
+
       .home-package > p {
         min-height: auto;
       }
+
 
       .home-intro-grid,
       .addon-grid,
@@ -1366,12 +1474,14 @@
         grid-template-columns: 1fr;
       }
 
+
       .process-grid {
         grid-template-columns:
           repeat(2,1fr);
 
         gap: 40px 0;
       }
+
 
       .process-step:nth-child(3) {
         padding-left: 0;
@@ -1388,18 +1498,20 @@
         padding-bottom: 64px;
       }
 
+
       .home-opening {
         padding:
           90px 18px 75px;
       }
 
+
       .home-opening::before {
         width: 420px;
-
         height: 420px;
 
         top: -180px;
       }
+
 
       .home-brand-top {
         font-size: 11px;
@@ -1407,9 +1519,11 @@
         letter-spacing: 5px;
       }
 
+
       .home-brand-main {
         font-size: 39px;
       }
+
 
       .home-brand-bottom {
         font-size: 7px;
@@ -1417,11 +1531,13 @@
         letter-spacing: 3px;
       }
 
+
       .home-opening-eyebrow {
         font-size: 10px;
 
         letter-spacing: 4px;
       }
+
 
       .home-opening-description {
         padding: 0 4px;
@@ -1429,9 +1545,11 @@
         font-size: 13px;
       }
 
+
       .home-hero {
         min-height: 84svh;
       }
+
 
       .hero-slideshow::after {
         background:
@@ -1443,9 +1561,11 @@
           );
       }
 
+
       .hero-slide-controls {
         bottom: 20px;
       }
+
 
       .home-intro,
       .home-packages,
@@ -1457,13 +1577,16 @@
         padding-block: 75px;
       }
 
+
       .center-heading {
         margin-bottom: 38px;
       }
 
+
       .home-intro-grid {
         gap: 35px;
       }
+
 
       .packages-bottom {
         flex-direction: column;
@@ -1471,15 +1594,18 @@
         align-items: flex-start;
       }
 
+
       .addon-card {
         padding: 27px;
       }
+
 
       .process-grid {
         grid-template-columns: 1fr;
 
         gap: 0;
       }
+
 
       .process-step,
       .process-step:nth-child(3) {
@@ -1492,23 +1618,28 @@
         border-left: 0;
       }
 
+
       .process-step:first-child {
         padding-top: 0;
 
         border-top: 0;
       }
 
+
       .process-step p {
         max-width: none;
       }
+
 
       .review-featured {
         padding: 35px 22px;
       }
 
+
       .review-featured blockquote {
         font-size: 1.15rem;
       }
+
 
       .area-highlight div {
         min-height: 90px;
@@ -1516,9 +1647,11 @@
         font-size: 9px;
       }
 
+
       .home-final-cta {
         padding: 90px 0;
       }
+
 
       .home-final-cta .hero-actions {
         flex-direction: column;
@@ -1526,9 +1659,11 @@
         width: 100%;
       }
 
+
       .home-final-cta .hero-actions .btn {
         width: 100%;
       }
+
 
       .floating-action-buttons {
         left: 0;
@@ -1554,6 +1689,7 @@
         backdrop-filter: blur(15px);
       }
 
+
       .floating-action-buttons a {
         min-width: 0;
 
@@ -1570,11 +1706,13 @@
         font-size: 10px;
       }
 
+
       .floating-action-buttons a + a {
         border-left:
           1px solid
           rgba(255,255,255,.1);
       }
+
 
       .floating-action-buttons .floating-quote {
         background: var(--gold);
@@ -1591,9 +1729,11 @@
         font-size: 39px;
       }
 
+
       .home-opening-headline {
         font-size: 34px;
       }
+
 
       .home-opening-description {
         font-size: 13px;
@@ -1656,13 +1796,9 @@
         class="home-gold-divider"
         aria-hidden="true"
       >
-
         <span></span>
-
         <i></i>
-
         <span></span>
-
       </div>
 
 
@@ -1719,11 +1855,9 @@
         aria-label="Open navigation menu"
         aria-expanded="false"
       >
-
         <span></span>
         <span></span>
         <span></span>
-
       </button>
 
 
@@ -2079,8 +2213,6 @@
         <div class="home-package-grid">
 
 
-          <!-- GOLD -->
-
           <article class="home-package">
 
             <div class="package-top">
@@ -2150,8 +2282,6 @@
 
           </article>
 
-
-          <!-- BLACK LABEL -->
 
           <article
             class="home-package featured-package"
@@ -2224,8 +2354,6 @@
 
           </article>
 
-
-          <!-- SHOWROOM -->
 
           <article class="home-package">
 
@@ -2714,8 +2842,6 @@
         </div>
 
 
-        <!-- REVIEW 1 -->
-
         <div class="review-featured">
 
           <div class="review-stars">
@@ -2767,8 +2893,6 @@
 
         </div>
 
-
-        <!-- REVIEW 2 -->
 
         <div class="review-featured">
 
@@ -3139,9 +3263,8 @@
         ===================================================== */
 
         const opening =
-          document.getElementById(
-            "homeOpening"
-          );
+          document.getElementById("homeOpening");
+
 
         if (opening) {
 
@@ -3149,12 +3272,14 @@
             "home-opening-active"
           );
 
+
           window.setTimeout(
             () => {
 
               opening.classList.add(
                 "opening-complete"
               );
+
 
               document.body.classList.remove(
                 "home-opening-active"
@@ -3164,7 +3289,9 @@
               window.setTimeout(
                 () => {
 
-                  opening.remove();
+                  if (opening) {
+                    opening.remove();
+                  }
 
                 },
                 750
@@ -3182,15 +3309,12 @@
         ===================================================== */
 
         const slides = [
-          ...document.querySelectorAll(
-            ".hero-slide"
-          )
+          ...document.querySelectorAll(".hero-slide")
         ];
 
+
         const dots = [
-          ...document.querySelectorAll(
-            ".hero-slide-dot"
-          )
+          ...document.querySelectorAll(".hero-slide-dot")
         ];
 
 
@@ -3200,7 +3324,6 @@
 
 
         let current = 0;
-
         let timer = null;
 
 
@@ -3285,4 +3408,4 @@
 
 
 </body>
-</html> 
+</html>
