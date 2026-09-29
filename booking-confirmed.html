@@ -21,80 +21,301 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="robots" content="noindex, nofollow">
+    <meta
+        name="robots"
+        content="noindex, nofollow"
+    >
 
-    <title>Booking Confirmed | Enhance My Ride</title>
+    <title>
+        Booking Confirmed | Enhance My Ride
+    </title>
 
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             min-height: 100vh;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #050505;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(212,175,55,.10),
+                    transparent 45%
+                ),
+                #050505;
+
             color: #fff;
-            font-family: Arial, sans-serif;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             text-align: center;
         }
 
+
         .container {
-            max-width: 650px;
-            padding: 40px 25px;
+            width: 100%;
+            max-width: 700px;
+
+            padding:
+                50px 25px;
         }
+
+
+        .eyebrow {
+            margin-bottom: 25px;
+
+            color: #d4af37;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            letter-spacing: .2em;
+            text-transform: uppercase;
+        }
+
+
+        h1 {
+            margin:
+                0 0 25px;
+
+            font-size:
+                clamp(2.8rem, 8vw, 5.5rem);
+
+            line-height: .95;
+        }
+
 
         .gold {
             color: #d4af37;
         }
 
-        h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            margin-bottom: 20px;
-        }
 
         p {
-            color: rgba(255,255,255,.65);
-            line-height: 1.7;
+            max-width: 600px;
+
+            margin:
+                0 auto 18px;
+
+            color:
+                rgba(255,255,255,.65);
+
+            line-height: 1.75;
+
             font-size: 1.05rem;
         }
 
+
+        .service-area {
+            margin-top: 30px;
+            padding: 20px;
+
+            border:
+                1px solid
+                rgba(212,175,55,.18);
+
+            background:
+                rgba(212,175,55,.035);
+        }
+
+
+        .service-area strong {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #d4af37;
+
+            font-size: .78rem;
+
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+
+        .service-area span {
+            display: block;
+
+            color:
+                rgba(255,255,255,.48);
+
+            font-size: .82rem;
+
+            line-height: 1.6;
+        }
+
+
+        .button-group {
+            margin-top: 30px;
+        }
+
+
         a {
             display: inline-block;
-            margin-top: 25px;
-            padding: 15px 25px;
+
+            padding:
+                15px 27px;
+
             background: #d4af37;
+
             color: #050505;
+
             text-decoration: none;
+
+            font-weight: 800;
+
+            transition:
+                transform .25s ease,
+                background .25s ease;
+        }
+
+
+        a:hover {
+            transform: translateY(-2px);
+
+            background: #e0bd45;
+        }
+
+
+        .contact {
+            margin-top: 30px;
+
+            color:
+                rgba(255,255,255,.38);
+
+            font-size: .8rem;
+        }
+
+
+        .contact a {
+            margin: 0;
+            padding: 0;
+
+            background: transparent;
+
+            color: #d4af37;
+
             font-weight: 700;
         }
+
+
+        .contact a:hover {
+            transform: none;
+
+            background: transparent;
+        }
+
+
+        @media (max-width: 600px) {
+
+            .container {
+                padding:
+                    40px 20px;
+            }
+
+            h1 {
+                font-size:
+                    clamp(2.7rem, 14vw, 4rem);
+            }
+
+            p {
+                font-size: .98rem;
+            }
+
+            .service-area {
+                padding: 18px;
+            }
+
+        }
+
     </style>
 
 </head>
 
+
 <body>
+
 
     <div class="container">
 
+        <div class="eyebrow">
+            ENHANCE MY RIDE
+        </div>
+
+
         <h1>
-            Booking <span class="gold">Confirmed.</span>
+            Booking
+
+            <span class="gold">
+                Confirmed.
+            </span>
         </h1>
 
-        <p>
-            Thank you for choosing Enhance My Ride Auto Spa & Mobile Detailing.
-            Your appointment has been successfully booked.
-        </p>
 
         <p>
-            We look forward to bringing the Enhance experience directly to you.
+            Thank you for choosing Enhance My Ride Auto Spa &
+            Mobile Detailing. Your appointment has been
+            successfully booked.
         </p>
 
-        <a href="index.html">
-            Return Home
-        </a>
+
+        <p>
+            We look forward to bringing the Enhance experience
+            directly to you.
+        </p>
+
+
+        <div class="service-area">
+
+            <strong>
+                Nine-County Bay Area Service
+            </strong>
+
+            <span>
+                Alameda • Contra Costa • Marin • Napa •
+                San Francisco • San Mateo • Santa Clara •
+                Solano • Sonoma
+            </span>
+
+        </div>
+
+
+        <div class="button-group">
+
+            <a href="index.html">
+                Return Home
+            </a>
+
+        </div>
+
+
+        <div class="contact">
+
+            Questions about your appointment?
+
+            <a href="tel:+13233271806">
+                (323) 327-1806
+            </a>
+
+        </div>
 
     </div>
+
 
 </body>
 
