@@ -3,28 +3,6 @@
 
 <head>
 
-    <!-- =====================================================
-         GOOGLE ADS / ANALYTICS
-         ===================================================== -->
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18449761533"></script>
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'AW-18449761533');
-    </script>
-
-
-    <!-- =====================================================
-         META
-         ===================================================== -->
-
     <meta charset="UTF-8">
 
     <meta
@@ -52,24 +30,20 @@
     >
 
     <link
+        rel="canonical"
+        href="https://enhancemyride.com/service-area.html"
+    >
+
+    <link
         rel="stylesheet"
         href="css/style.css"
     >
 
 
-    <!-- =====================================================
-         SERVICE AREA PAGE STYLES
-         ===================================================== -->
-
     <style>
-
-        /* =====================================================
-           HERO
-           ===================================================== */
 
         .service-area-hero {
             min-height: 58vh;
-
             display: flex;
             align-items: center;
 
@@ -82,97 +56,57 @@
                 #050505;
         }
 
-        .service-area-hero .page-hero-content {
-            max-width: 950px;
-        }
-
         .service-area-hero h1 {
             max-width: 900px;
-
-            font-size:
-                clamp(3.4rem, 7vw, 6.5rem);
-
+            margin: 0;
+            font-size: clamp(3.4rem,7vw,6.5rem);
             line-height: .9;
         }
 
         .service-area-hero h1 span {
             display: block;
-
             color: #d4af37;
         }
 
-        .service-area-hero .page-hero-content > p:last-child {
+        .service-area-hero p:last-child {
             max-width: 650px;
-
             margin-top: 28px;
-
-            color:
-                rgba(255,255,255,.62);
-
-            font-size: 1.05rem;
-
-            line-height: 1.75;
+            color: rgba(255,255,255,.62);
+            line-height: 1.8;
         }
 
 
-        /* =====================================================
-           SERVICE AREA INTRO
-           ===================================================== */
-
         .service-area-intro {
             max-width: 760px;
-
             margin-bottom: 55px;
         }
 
         .service-area-intro h2 {
             margin: 0;
-
-            font-size:
-                clamp(2.7rem, 5vw, 5rem);
-
+            font-size: clamp(2.7rem,5vw,5rem);
             line-height: .95;
         }
 
-        .service-area-intro p:not(.eyebrow) {
+        .service-area-intro p:last-child {
             max-width: 650px;
-
             margin-top: 25px;
-
-            color:
-                rgba(255,255,255,.52);
-
-            font-size: .95rem;
-
+            color: rgba(255,255,255,.52);
             line-height: 1.8;
         }
 
 
-        /* =====================================================
-           COUNTY GRID
-           ===================================================== */
-
         .service-area-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(3, minmax(0, 1fr));
-
+            grid-template-columns: repeat(3,minmax(0,1fr));
             gap: 1px;
 
-            border:
-                1px solid
-                rgba(255,255,255,.08);
-
-            background:
-                rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.08);
+            background: rgba(255,255,255,.08);
         }
 
         .service-area-card {
             min-height: 245px;
-
             padding: 34px;
-
             background: #090909;
 
             transition:
@@ -182,7 +116,6 @@
 
         .service-area-card:hover {
             background: #0d0d0d;
-
             transform: translateY(-3px);
         }
 
@@ -198,64 +131,43 @@
 
         .service-area-card span {
             display: block;
-
             margin-bottom: 14px;
 
             color: #d4af37;
 
             font-size: 9px;
-
             font-weight: 800;
-
-            line-height: 1.3;
-
             letter-spacing: .15em;
         }
 
         .service-area-card h3 {
             margin: 0 0 17px;
-
             color: #fff;
-
             font-size: 1.4rem;
-
             line-height: 1.1;
         }
 
         .service-area-card p {
             max-width: 390px;
-
             margin: 0;
 
-            color:
-                rgba(255,255,255,.48);
+            color: rgba(255,255,255,.48);
 
             font-size: .82rem;
-
             line-height: 1.75;
         }
 
 
-        /* =====================================================
-           BOOKING STRIP
-           ===================================================== */
-
         .service-area-booking {
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
-
             gap: 40px;
 
             margin-top: 70px;
-
             padding: 42px 45px;
 
-            border:
-                1px solid
-                rgba(212,175,55,.18);
+            border: 1px solid rgba(212,175,55,.18);
 
             background:
                 linear-gradient(
@@ -271,46 +183,27 @@
 
         .service-area-booking h2 {
             margin: 0 0 12px;
-
-            font-size:
-                clamp(2rem, 4vw, 3.2rem);
-
+            font-size: clamp(2rem,4vw,3.2rem);
             line-height: 1;
         }
 
         .service-area-booking p {
             margin: 0;
-
-            color:
-                rgba(255,255,255,.5);
-
+            color: rgba(255,255,255,.5);
             font-size: .9rem;
-
             line-height: 1.7;
         }
 
-        .service-area-booking-actions {
-            flex-shrink: 0;
-        }
-
-
-        /* =====================================================
-           RESPONSIVE
-           ===================================================== */
 
         @media (max-width: 950px) {
 
             .service-area-grid {
-                grid-template-columns:
-                    repeat(2, minmax(0, 1fr));
+                grid-template-columns: repeat(2,minmax(0,1fr));
             }
 
             .service-area-booking {
                 align-items: flex-start;
-
                 flex-direction: column;
-
-                gap: 25px;
             }
 
         }
@@ -323,8 +216,7 @@
             }
 
             .service-area-hero h1 {
-                font-size:
-                    clamp(3.1rem, 14vw, 5rem);
+                font-size: clamp(3.1rem,14vw,5rem);
             }
 
             .service-area-grid {
@@ -333,13 +225,11 @@
 
             .service-area-card {
                 min-height: auto;
-
                 padding: 30px 25px;
             }
 
             .service-area-booking {
                 margin-top: 55px;
-
                 padding: 32px 25px;
             }
 
@@ -353,10 +243,6 @@
 <body>
 
 
-    <!-- =====================================================
-         HEADER
-         ===================================================== -->
-
     <header class="site-header">
 
         <div class="container nav-container">
@@ -366,7 +252,6 @@
                 class="logo"
                 aria-label="Enhance My Ride home"
             >
-
                 <span class="logo-main">
                     ENHANCE MY RIDE
                 </span>
@@ -374,7 +259,6 @@
                 <span class="logo-sub">
                     AUTO SPA & MOBILE DETAILING
                 </span>
-
             </a>
 
 
@@ -385,11 +269,9 @@
                 aria-label="Open navigation menu"
                 aria-expanded="false"
             >
-
                 <span></span>
                 <span></span>
                 <span></span>
-
             </button>
 
 
@@ -437,16 +319,8 @@
     </header>
 
 
-    <!-- =====================================================
-         MAIN
-         ===================================================== -->
-
     <main>
 
-
-        <!-- =================================================
-             HERO
-             ================================================= -->
 
         <section class="page-hero service-area-hero">
 
@@ -457,13 +331,10 @@
                 </p>
 
                 <h1>
-
                     We Come
-
                     <span>
                         To You.
                     </span>
-
                 </h1>
 
                 <p>
@@ -477,10 +348,6 @@
         </section>
 
 
-        <!-- =================================================
-             SERVICE AREAS
-             ================================================= -->
-
         <section class="section">
 
             <div class="container">
@@ -493,13 +360,10 @@
                     </p>
 
                     <h2>
-
                         Serving The
-
                         <span class="gold-text">
                             Bay Area.
                         </span>
-
                     </h2>
 
                     <p>
@@ -512,10 +376,6 @@
 
                 <div class="service-area-grid">
 
-
-                    <!-- =================================================
-                         01 • ALAMEDA COUNTY
-                         ================================================= -->
 
                     <article class="service-area-card primary-area">
 
@@ -536,10 +396,6 @@
 
                     </article>
 
-
-                    <!-- =================================================
-                         02 • CONTRA COSTA COUNTY
-                         ================================================= -->
 
                     <article class="service-area-card">
 
@@ -562,10 +418,6 @@
                     </article>
 
 
-                    <!-- =================================================
-                         03 • SAN FRANCISCO COUNTY
-                         ================================================= -->
-
                     <article class="service-area-card primary-area">
 
                         <span>
@@ -583,10 +435,6 @@
 
                     </article>
 
-
-                    <!-- =================================================
-                         04 • SAN MATEO COUNTY
-                         ================================================= -->
 
                     <article class="service-area-card">
 
@@ -608,10 +456,6 @@
                     </article>
 
 
-                    <!-- =================================================
-                         05 • SANTA CLARA COUNTY
-                         ================================================= -->
-
                     <article class="service-area-card">
 
                         <span>
@@ -632,10 +476,6 @@
                     </article>
 
 
-                    <!-- =================================================
-                         06 • MARIN COUNTY
-                         ================================================= -->
-
                     <article class="service-area-card">
 
                         <span>
@@ -653,10 +493,6 @@
 
                     </article>
 
-
-                    <!-- =================================================
-                         07 • SOLANO COUNTY
-                         ================================================= -->
 
                     <article class="service-area-card">
 
@@ -676,10 +512,6 @@
                     </article>
 
 
-                    <!-- =================================================
-                         08 • SONOMA COUNTY
-                         ================================================= -->
-
                     <article class="service-area-card">
 
                         <span>
@@ -697,10 +529,6 @@
 
                     </article>
 
-
-                    <!-- =================================================
-                         09 • NAPA COUNTY
-                         ================================================= -->
 
                     <article class="service-area-card">
 
@@ -722,10 +550,6 @@
                 </div>
 
 
-                <!-- =================================================
-                     BOOKING STRIP
-                     ================================================= -->
-
                 <section class="service-area-booking">
 
                     <div class="service-area-booking-copy">
@@ -746,16 +570,12 @@
                     </div>
 
 
-                    <div class="service-area-booking-actions">
-
-                        <a
-                            href="book-now.html"
-                            class="btn btn-primary"
-                        >
-                            Book Now
-                        </a>
-
-                    </div>
+                    <a
+                        href="book-now.html"
+                        class="btn btn-primary"
+                    >
+                        Book Now
+                    </a>
 
                 </section>
 
@@ -766,23 +586,13 @@
     </main>
 
 
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-
     <footer class="site-footer">
 
         <div class="container footer-grid">
 
-
-            <!-- BRAND -->
-
             <div class="footer-brand">
 
-                <a
-                    href="index.html"
-                    class="logo"
-                >
+                <a href="index.html" class="logo">
 
                     <span class="logo-main">
                         ENHANCE MY RIDE
@@ -802,52 +612,25 @@
             </div>
 
 
-            <!-- EXPLORE -->
-
             <div class="footer-links">
 
-                <h4>
-                    Explore
-                </h4>
+                <h4>Explore</h4>
 
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="gallery.html">
-                    Gallery
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a href="book-now.html">
-                    Book Now
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="service-area.html">
-                    Service Area
-                </a>
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="services.html">Services</a>
+                <a href="book-now.html">Book Now</a>
+                <a href="about.html">About</a>
+                <a href="service-area.html">Service Area</a>
 
             </div>
 
 
-            <!-- CONNECT -->
-
             <div class="footer-links">
 
-                <h4>
-                    Connect
-                </h4>
+                <h4>Connect</h4>
 
-                <a href="book-now.html">
-                    Book Now
-                </a>
+                <a href="book-now.html">Book Now</a>
 
                 <a href="tel:+13233271806">
                     (323) 327-1806
@@ -898,33 +681,17 @@
     </footer>
 
 
-    <!-- =====================================================
-         FLOATING CALL BUTTON
-         ===================================================== -->
-
     <a
         href="tel:+13233271806"
         class="mobile-call-button"
         aria-label="Call Enhance My Ride"
     >
-
-        <span class="call-icon">
-            ☎
-        </span>
-
-        <span>
-            CALL
-        </span>
-
+        <span class="call-icon">☎</span>
+        <span>CALL</span>
     </a>
 
-
-    <!-- =====================================================
-         JAVASCRIPT
-         ===================================================== -->
 
     <script src="js/script.js"></script>
 
 </body>
-
 </html>
