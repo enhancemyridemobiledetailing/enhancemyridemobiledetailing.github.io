@@ -3,15 +3,27 @@
 
 <head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18449761533"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- =====================================================
+         GOOGLE ADS / ANALYTICS
+         ===================================================== -->
 
-  gtag('config', 'AW-18449761533');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18449761533"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'AW-18449761533');
+    </script>
+
+
+    <!-- =====================================================
+         META
+         ===================================================== -->
 
     <meta charset="UTF-8">
 
@@ -44,11 +56,16 @@
         href="css/style.css"
     >
 
+
+    <!-- =====================================================
+         SERVICES PAGE STYLES
+         ===================================================== -->
+
     <style>
 
         /* =====================================================
            SERVICES HERO
-        ===================================================== */
+           ===================================================== */
 
         .services-hero {
             min-height: 58vh;
@@ -88,8 +105,7 @@
 
             margin-top: 25px;
 
-            color:
-                rgba(255,255,255,.65);
+            color: rgba(255,255,255,.65);
 
             font-size: 1.05rem;
             line-height: 1.75;
@@ -98,7 +114,7 @@
 
         /* =====================================================
            SIGNATURE PACKAGES
-        ===================================================== */
+           ===================================================== */
 
         .services-packages-section {
             padding-top: 110px;
@@ -229,7 +245,7 @@
 
         /* =====================================================
            PRICING
-        ===================================================== */
+           ===================================================== */
 
         .service-price-label {
             display: block;
@@ -390,7 +406,7 @@
 
         /* =====================================================
            PACKAGE GUIDE
-        ===================================================== */
+           ===================================================== */
 
         .package-guide {
             padding-top: 65px;
@@ -460,7 +476,7 @@
 
         /* =====================================================
            MOBILE EXPERIENCE
-        ===================================================== */
+           ===================================================== */
 
         .mobile-service-section {
             padding: 110px 0;
@@ -554,8 +570,8 @@
 
 
         /* =====================================================
-           SPECIALTY SERVICES
-        ===================================================== */
+           PREMIUM ADD-ONS
+           ===================================================== */
 
         .specialty-section {
             padding: 110px 0;
@@ -576,7 +592,7 @@
             display: flex;
             flex-direction: column;
 
-            min-height: 380px;
+            min-height: 390px;
 
             padding: 30px;
 
@@ -585,12 +601,17 @@
                 rgba(255,255,255,.08);
 
             background:
-                rgba(255,255,255,.02);
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,.035),
+                    rgba(255,255,255,.012)
+                );
 
             transition:
                 transform .3s ease,
                 border-color .3s ease,
-                background .3s ease;
+                background .3s ease,
+                box-shadow .3s ease;
         }
 
         .addon-service-card:hover {
@@ -601,17 +622,16 @@
 
             background:
                 rgba(255,255,255,.035);
-        }
 
-        .addon-service-card.headlight-specialty {
-            border-color:
-                rgba(212,175,55,.45);
+            box-shadow:
+                0 20px 55px
+                rgba(0,0,0,.25);
         }
 
         .addon-service-card > span {
             display: block;
 
-            margin-bottom: 25px;
+            margin-bottom: 24px;
 
             color: #d4af37;
 
@@ -622,24 +642,25 @@
         }
 
         .addon-service-card h3 {
-            min-height: 50px;
+            min-height: 54px;
 
             margin-bottom: 12px;
 
             color: #fff;
 
-            font-size: 1.15rem;
+            font-size: 1.12rem;
             line-height: 1.25;
         }
 
         .addon-service-card > strong {
             display: block;
 
-            margin-bottom: 5px;
+            margin-bottom: 6px;
 
             color: #d4af37;
 
-            font-size: 1.05rem;
+            font-size: 1rem;
+            line-height: 1.3;
         }
 
         .addon-service-card > p {
@@ -649,6 +670,7 @@
                 rgba(255,255,255,.42);
 
             font-size: .76rem;
+            line-height: 1.5;
         }
 
         .addon-service-card .service-divider {
@@ -678,6 +700,9 @@
             letter-spacing: .13em;
 
             text-transform: uppercase;
+
+            transition:
+                color .25s ease;
         }
 
         .addon-link:hover {
@@ -687,7 +712,7 @@
 
         /* =====================================================
            VEHICLES
-        ===================================================== */
+           ===================================================== */
 
         .vehicle-section {
             padding: 110px 0;
@@ -749,7 +774,7 @@
 
         /* =====================================================
            REVIEWS
-        ===================================================== */
+           ===================================================== */
 
         .services-testimonial-section {
             padding: 110px 0;
@@ -875,7 +900,7 @@
 
         /* =====================================================
            FINAL CTA
-        ===================================================== */
+           ===================================================== */
 
         .services-cta {
             padding: 125px 0;
@@ -924,7 +949,7 @@
 
         /* =====================================================
            RESPONSIVE
-        ===================================================== */
+           ===================================================== */
 
         @media (max-width: 1100px) {
 
@@ -1024,31 +1049,6 @@
                 min-height: auto;
             }
 
-            .addon-service-card.headlight-specialty {
-                padding-top: 70px;
-
-                overflow: hidden;
-            }
-
-            .addon-service-card.headlight-specialty
-            .featured-badge {
-                top: 0;
-                right: 0;
-                left: auto;
-
-                transform: none;
-
-                width: auto;
-
-                padding: 10px 16px;
-
-                font-size: 8px;
-
-                letter-spacing: .14em;
-
-                text-align: center;
-            }
-
             .specialty-section {
                 padding-bottom: 115px;
             }
@@ -1088,7 +1088,7 @@
 
     <!-- =====================================================
          HEADER
-    ===================================================== -->
+         ===================================================== -->
 
     <header class="site-header">
 
@@ -1168,15 +1168,15 @@
 
 
     <!-- =====================================================
-         MAIN CONTENT
-    ===================================================== -->
+         MAIN
+         ===================================================== -->
 
     <main>
 
 
         <!-- =================================================
              HERO
-        ================================================== -->
+             ================================================= -->
 
         <section class="page-hero services-hero">
 
@@ -1208,7 +1208,7 @@
 
         <!-- =================================================
              SIGNATURE PACKAGES
-        ================================================== -->
+             ================================================= -->
 
         <section
             class="section services-packages-section"
@@ -1242,15 +1242,13 @@
                 <div class="service-package-grid">
 
 
-                    <!-- GOLD PACKAGE -->
+                    <!-- GOLD -->
 
                     <article class="service-package-card">
 
                         <div class="service-package-top">
 
-                            <span>
-                                01
-                            </span>
+                            <span>01</span>
 
                             <small>
                                 SIGNATURE
@@ -1308,7 +1306,7 @@
                     </article>
 
 
-                    <!-- BLACK LABEL PACKAGE -->
+                    <!-- BLACK LABEL -->
 
                     <article
                         class="service-package-card featured-service"
@@ -1320,9 +1318,7 @@
 
                         <div class="service-package-top">
 
-                            <span>
-                                02
-                            </span>
+                            <span>02</span>
 
                             <small>
                                 PREMIUM
@@ -1380,15 +1376,13 @@
                     </article>
 
 
-                    <!-- SHOWROOM PACKAGE -->
+                    <!-- SHOWROOM -->
 
                     <article class="service-package-card">
 
                         <div class="service-package-top">
 
-                            <span>
-                                03
-                            </span>
+                            <span>03</span>
 
                             <small>
                                 ULTIMATE
@@ -1470,9 +1464,11 @@
 
         <!-- =================================================
              PACKAGE GUIDE
-        ================================================== -->
+             ================================================= -->
 
-        <section class="section section-dark package-guide">
+        <section
+            class="section section-dark package-guide"
+        >
 
             <div class="container">
 
@@ -1560,7 +1556,7 @@
 
         <!-- =================================================
              MOBILE EXPERIENCE
-        ================================================== -->
+             ================================================= -->
 
         <section class="section mobile-service-section">
 
@@ -1677,10 +1673,13 @@
 
 
         <!-- =================================================
-             SPECIALTY SERVICES
-        ================================================== -->
+             PREMIUM ADD-ONS
+             ================================================= -->
 
-        <section class="section section-dark specialty-section">
+        <section
+            class="section section-dark specialty-section"
+            id="addons"
+        >
 
             <div class="container">
 
@@ -1710,18 +1709,127 @@
                 <div class="addon-service-grid">
 
 
-                    <!-- HEADLIGHT RESTORATION -->
+                    <!-- 01 -->
 
-                    <article
-                        class="addon-service-card headlight-specialty"
-                    >
-
-                        <div class="featured-badge">
-                            MOST REQUESTED
-                        </div>
+                    <article class="addon-service-card">
 
                         <span>
                             SPECIALTY 01
+                        </span>
+
+                        <h3>
+                            Wheel Polishing
+                        </h3>
+
+                        <strong>
+                            $50–$100 / Set
+                        </strong>
+
+                        <p>
+                            Depending on condition.
+                        </p>
+
+                        <div class="service-divider"></div>
+
+                        <p>
+                            A high-visibility upgrade designed to
+                            improve the finish and presentation of
+                            compatible wheels.
+                        </p>
+
+                        <a
+                            href="book-now.html"
+                            class="addon-link"
+                        >
+                            Book This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 02 -->
+
+                    <article class="addon-service-card">
+
+                        <span>
+                            SPECIALTY 02
+                        </span>
+
+                        <h3>
+                            Wheel Ceramic Coating
+                        </h3>
+
+                        <strong>
+                            Starting at $125
+                        </strong>
+
+                        <p>
+                            Based on wheel size and condition.
+                        </p>
+
+                        <div class="service-divider"></div>
+
+                        <p>
+                            Premium wheel protection designed to
+                            help resist brake dust, road grime,
+                            and contamination while making wheels
+                            easier to maintain.
+                        </p>
+
+                        <a
+                            href="book-now.html"
+                            class="addon-link"
+                        >
+                            Book This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 03 -->
+
+                    <article class="addon-service-card">
+
+                        <span>
+                            SPECIALTY 03
+                        </span>
+
+                        <h3>
+                            Glass Ceramic Coating
+                        </h3>
+
+                        <strong>
+                            Starting at $99
+                        </strong>
+
+                        <p>
+                            Based on glass condition.
+                        </p>
+
+                        <div class="service-divider"></div>
+
+                        <p>
+                            Hydrophobic protection for exterior glass
+                            designed to help water bead and improve
+                            visibility during wet weather.
+                        </p>
+
+                        <a
+                            href="book-now.html"
+                            class="addon-link"
+                        >
+                            Book This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 04 -->
+
+                    <article class="addon-service-card">
+
+                        <span>
+                            SPECIALTY 04
                         </span>
 
                         <h3>
@@ -1729,7 +1837,7 @@
                         </h3>
 
                         <strong>
-                            Custom Pricing
+                            Starting at $75
                         </strong>
 
                         <p>
@@ -1754,50 +1862,12 @@
                     </article>
 
 
-                    <!-- WHEEL POLISHING -->
+                    <!-- 05 -->
 
                     <article class="addon-service-card">
 
                         <span>
-                            SPECIALTY 02
-                        </span>
-
-                        <h3>
-                            Wheel Polishing
-                        </h3>
-
-                        <strong>
-                            $50–$100 / Set
-                        </strong>
-
-                        <p>
-                            Depending on condition.
-                        </p>
-
-                        <div class="service-divider"></div>
-
-                        <p>
-                            A high-visibility upgrade designed
-                            to improve the finish and presentation
-                            of compatible wheels.
-                        </p>
-
-                        <a
-                            href="book-now.html"
-                            class="addon-link"
-                        >
-                            Book This Service →
-                        </a>
-
-                    </article>
-
-
-                    <!-- TRIM RESTORATION -->
-
-                    <article class="addon-service-card">
-
-                        <span>
-                            SPECIALTY 03
+                            SPECIALTY 05
                         </span>
 
                         <h3>
@@ -1805,7 +1875,7 @@
                         </h3>
 
                         <strong>
-                            Custom Pricing
+                            Starting at $75
                         </strong>
 
                         <p>
@@ -1830,20 +1900,20 @@
                     </article>
 
 
-                    <!-- PET HAIR -->
+                    <!-- 06 -->
 
                     <article class="addon-service-card">
 
                         <span>
-                            SPECIALTY 04
+                            SPECIALTY 06
                         </span>
 
                         <h3>
-                            Pet Hair Removal
+                            Water Spot Removal
                         </h3>
 
                         <strong>
-                            Custom Pricing
+                            Starting at $75
                         </strong>
 
                         <p>
@@ -1853,9 +1923,9 @@
                         <div class="service-divider"></div>
 
                         <p>
-                            Deep removal of embedded pet hair
-                            from carpets, seats, mats, and
-                            difficult interior areas.
+                            Remove stubborn mineral deposits and
+                            water spotting from exterior surfaces
+                            and glass.
                         </p>
 
                         <a
@@ -1868,12 +1938,50 @@
                     </article>
 
 
-                    <!-- ENGINE BAY -->
+                    <!-- 07 -->
 
                     <article class="addon-service-card">
 
                         <span>
-                            SPECIALTY 05
+                            SPECIALTY 07
+                        </span>
+
+                        <h3>
+                            Scratch &amp; Scuff Removal
+                        </h3>
+
+                        <strong>
+                            Starting at $75
+                        </strong>
+
+                        <p>
+                            Based on severity.
+                        </p>
+
+                        <div class="service-divider"></div>
+
+                        <p>
+                            Targeted correction for isolated paint
+                            scratches, scuffs, and surface
+                            imperfections.
+                        </p>
+
+                        <a
+                            href="book-now.html"
+                            class="addon-link"
+                        >
+                            Book This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 08 -->
+
+                    <article class="addon-service-card">
+
+                        <span>
+                            SPECIALTY 08
                         </span>
 
                         <h3>
@@ -1881,7 +1989,7 @@
                         </h3>
 
                         <strong>
-                            Custom Pricing
+                            Starting at $75
                         </strong>
 
                         <p>
@@ -1905,12 +2013,238 @@
                     </article>
 
 
-                    <!-- HEAVY SOIL -->
+                    <!-- 09 -->
 
                     <article class="addon-service-card">
 
                         <span>
-                            SPECIALTY 06
+                            SPECIALTY 09
+                        </span>
+
+                        <h3>
+                            Undercarriage Cleaning
+                        </h3>
+
+                        <strong>
+                            Starting at $50
+                        </strong>
+
+                        <p>
+                            Based on vehicle and condition.
+                        </p>
+
+                        <div class="service-divider"></div>
+
+                        <p>
+                            Remove accumulated dirt, mud, and road
+                            grime from accessible underbody and
+                            wheel-well areas.
+                        </p>
+
+                        <a
+                            href="book-now.html"
+                            class="addon-link"
+                        >
+                            Book This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 10 -->
+
+                    <article class="addon-service-card">
+
+                        <span>
+                            SPECIALTY 10
+                        </span>
+
+                        <h3>
+                            Pet Hair Removal
+                        </h3>
+
+                        <strong>
+                            Custom Pricing
+                        </strong>
+
+                        <p>
+                            Based on severity.
+                        </p>
+
+                        <div class="service-divider"></div>
+
+                        <p>
+                            Deep removal of embedded pet hair from
+                            carpets, seats, mats, and difficult
+                            interior areas.
+                        </p>
+
+                        <a
+                            href="book-now.html"
+                            class="addon-link"
+                        >
+                            Book This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 11 -->
+
+                    <article class="addon-service-card">
+
+                        <span>
+                            SPECIALTY 11
+                        </span>
+
+                        <h3>
+                            Carpet &amp; Upholstery Extraction
+                        </h3>
+
+                        <strong>
+                            Starting at $75
+                        </strong>
+
+                        <p>
+                            Based on condition.
+                        </p>
+
+                        <div class="service-divider"></div>
+
+                        <p>
+                            Deep extraction cleaning for carpets,
+                            upholstery, floor mats, and heavily
+                            soiled fabric surfaces.
+                        </p>
+
+                        <a
+                            href="book-now.html"
+                            class="addon-link"
+                        >
+                            Book This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 12 -->
+
+                    <article class="addon-service-card">
+
+                        <span>
+                            SPECIALTY 12
+                        </span>
+
+                        <h3>
+                            Leather Deep Clean &amp; Conditioning
+                        </h3>
+
+                        <strong>
+                            Starting at $50
+                        </strong>
+
+                        <p>
+                            Based on condition.
+                        </p>
+
+                        <div class="service-divider"></div>
+
+                        <p>
+                            Deep-clean leather surfaces and apply
+                            conditioning treatment to refresh
+                            the interior.
+                        </p>
+
+                        <a
+                            href="book-now.html"
+                            class="addon-link"
+                        >
+                            Book This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 13 -->
+
+                    <article class="addon-service-card">
+
+                        <span>
+                            SPECIALTY 13
+                        </span>
+
+                        <h3>
+                            Headliner Deep Cleaning
+                        </h3>
+
+                        <strong>
+                            Starting at $50
+                        </strong>
+
+                        <p>
+                            Based on condition.
+                        </p>
+
+                        <div class="service-divider"></div>
+
+                        <p>
+                            Carefully clean and refresh stained or
+                            heavily soiled headliner fabric.
+                        </p>
+
+                        <a
+                            href="book-now.html"
+                            class="addon-link"
+                        >
+                            Book This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 14 -->
+
+                    <article class="addon-service-card">
+
+                        <span>
+                            SPECIALTY 14
+                        </span>
+
+                        <h3>
+                            Odor Treatment
+                        </h3>
+
+                        <strong>
+                            Starting at $75
+                        </strong>
+
+                        <p>
+                            Based on condition.
+                        </p>
+
+                        <div class="service-divider"></div>
+
+                        <p>
+                            Targeted treatment for lingering smoke,
+                            food, pet, and everyday interior odors.
+                        </p>
+
+                        <a
+                            href="book-now.html"
+                            class="addon-link"
+                        >
+                            Book This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 15 -->
+
+                    <article class="addon-service-card">
+
+                        <span>
+                            SPECIALTY 15
                         </span>
 
                         <h3>
@@ -1928,9 +2262,9 @@
                         <div class="service-divider"></div>
 
                         <p>
-                            For excessive dirt, mud, stains,
-                            sand, or heavily neglected interiors
-                            requiring additional labor.
+                            For excessive dirt, mud, stains, sand,
+                            or heavily neglected interiors requiring
+                            additional labor.
                         </p>
 
                         <a
@@ -1943,79 +2277,60 @@
                     </article>
 
 
-                    <!-- ODOR TREATMENT -->
+                    <!-- 16 -->
 
                     <article class="addon-service-card">
 
                         <span>
-                            SPECIALTY 07
+                            SPECIALTY 16
                         </span>
 
                         <h3>
-                            Odor Treatment
+                            Specialty Service
                         </h3>
 
                         <strong>
-                            Custom Pricing
+                            Custom Quote
                         </strong>
 
                         <p>
-                            Based on condition.
-                        </p>
-
-                        <div class="service-divider"></div>
-
-                        <p>
-                            Targeted treatment for lingering
-                            smoke, food, pet, and everyday odors.
-                        </p>
-
-                        <a
-                            href="book-now.html"
-                            class="addon-link"
-                        >
-                            Book This Service →
-                        </a>
-
-                    </article>
-
-
-                    <!-- CUSTOM SERVICE -->
-
-                    <article class="addon-service-card">
-
-                        <span>
-                            SPECIALTY 08
-                        </span>
-
-                        <h3>
-                            Custom Service
-                        </h3>
-
-                        <strong>
-                            Let's Talk
-                        </strong>
-
-                        <p>
-                            Tell us what you need.
+                            Tell us what your vehicle needs.
                         </p>
 
                         <div class="service-divider"></div>
 
                         <p>
                             Don't see the service you're looking for?
-                            Tell us what your vehicle needs and we'll
-                            help determine the right solution.
+                            Tell us what you're dealing with and we'll
+                            recommend the appropriate solution.
                         </p>
 
                         <a
                             href="book-now.html"
                             class="addon-link"
                         >
-                            Book This Service →
+                            Request A Quote →
                         </a>
 
                     </article>
+
+                </div>
+
+
+                <!-- ADD-ON NOTE -->
+
+                <div class="service-pricing-note">
+
+                    <span>
+                        ADD-ON PRICING
+                    </span>
+
+                    <p>
+                        Add-on pricing starts at the amounts shown.
+                        Final pricing may vary based on vehicle size,
+                        condition, severity, access, and additional
+                        labor required.
+                    </p>
 
                 </div>
 
@@ -2026,7 +2341,7 @@
 
         <!-- =================================================
              VEHICLES WE DETAIL
-        ================================================== -->
+             ================================================= -->
 
         <section class="section vehicle-section">
 
@@ -2120,7 +2435,7 @@
 
         <!-- =================================================
              GOOGLE REVIEWS
-        ================================================== -->
+             ================================================= -->
 
         <section
             class="section section-dark services-testimonial-section"
@@ -2249,7 +2564,7 @@
 
         <!-- =================================================
              FINAL CTA
-        ================================================== -->
+             ================================================= -->
 
         <section class="services-cta">
 
@@ -2288,7 +2603,7 @@
 
     <!-- =====================================================
          FOOTER
-    ===================================================== -->
+         ===================================================== -->
 
     <footer class="site-footer">
 
@@ -2421,7 +2736,7 @@
 
     <!-- =====================================================
          FLOATING CALL BUTTON
-    ===================================================== -->
+         ===================================================== -->
 
     <a
         href="tel:+13233271806"
@@ -2442,7 +2757,7 @@
 
     <!-- =====================================================
          SITE JAVASCRIPT
-    ===================================================== -->
+         ===================================================== -->
 
     <script src="js/script.js"></script>
 
