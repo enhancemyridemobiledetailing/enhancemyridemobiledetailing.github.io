@@ -3,19 +3,6 @@
 
 <head>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18449761533"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'AW-18449761533');
-    </script>
-
     <meta charset="UTF-8">
 
     <meta
@@ -24,12 +11,12 @@
     >
 
     <title>
-        About Enhance My Ride | Premium Mobile Detailing
+        About Enhance My Ride | Mobile Detailing
     </title>
 
     <meta
         name="description"
-        content="Learn about Enhance My Ride Auto Spa & Mobile Detailing, our approach to professional vehicle care, and the standards behind every detail."
+        content="Learn about Enhance My Ride Auto Spa & Mobile Detailing, our philosophy, standards, and approach to premium mobile vehicle care."
     >
 
     <meta
@@ -43,15 +30,17 @@
     >
 
     <link
+        rel="canonical"
+        href="https://enhancemyride.com/about.html"
+    >
+
+    <link
         rel="stylesheet"
         href="css/style.css"
     >
 
-    <style>
 
-        /* =====================================================
-           ABOUT PAGE
-        ===================================================== */
+    <style>
 
         .about-hero {
             min-height: 58vh;
@@ -61,24 +50,18 @@
 
             background:
                 radial-gradient(
-                    circle at 78% 48%,
+                    circle at 78% 45%,
                     rgba(212,175,55,.13),
                     transparent 38%
                 ),
                 #050505;
         }
 
-        .about-hero .page-hero-content {
-            max-width: 900px;
-        }
-
         .about-hero h1 {
             max-width: 900px;
-
-            font-size:
-                clamp(3.5rem, 7vw, 6.5rem);
-
-            line-height: .92;
+            margin: 0;
+            font-size: clamp(3.4rem,7vw,6.5rem);
+            line-height: .9;
         }
 
         .about-hero h1 span {
@@ -86,21 +69,13 @@
             color: #d4af37;
         }
 
-        .about-hero .page-hero-content > p:last-child {
+        .about-hero p:last-child {
             max-width: 650px;
-
-            margin-top: 25px;
-
-            color: rgba(255,255,255,.65);
-
-            font-size: 1.05rem;
-            line-height: 1.75;
+            margin-top: 28px;
+            color: rgba(255,255,255,.6);
+            line-height: 1.8;
         }
 
-
-        /* =====================================================
-           STORY
-        ===================================================== */
 
         .about-story {
             padding: 110px 0;
@@ -108,381 +83,158 @@
 
         .about-story-grid {
             display: grid;
-
-            grid-template-columns:
-                .8fr 1.2fr;
-
-            gap: 90px;
-
-            align-items: center;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 75px;
         }
 
-        .about-story-intro h2 {
-            max-width: 600px;
-
-            margin-bottom: 24px;
-        }
-
-        .about-story-intro > p:not(.eyebrow) {
-            max-width: 500px;
-
-            color: rgba(255,255,255,.52);
-
-            line-height: 1.8;
-        }
-
-        .about-story-copy {
-            padding-left: 35px;
-
-            border-left:
-                1px solid
-                rgba(212,175,55,.35);
+        .about-story h2 {
+            margin: 0;
+            font-size: clamp(2.7rem,5vw,5rem);
+            line-height: .95;
         }
 
         .about-story-copy p {
             margin: 0 0 22px;
-
-            color: rgba(255,255,255,.62);
-
-            font-size: .98rem;
-            line-height: 1.9;
+            color: rgba(255,255,255,.55);
+            line-height: 1.85;
         }
 
-        .about-story-copy p:last-child {
-            margin-bottom: 0;
-        }
-
-
-        /* =====================================================
-           BRAND STATEMENT
-        ===================================================== */
 
         .about-statement {
             padding: 120px 0;
-
-            border-top:
-                1px solid
-                rgba(212,175,55,.12);
-
-            border-bottom:
-                1px solid
-                rgba(212,175,55,.12);
+            border-block: 1px solid rgba(212,175,55,.15);
 
             background:
                 radial-gradient(
                     circle at center,
-                    rgba(212,175,55,.11),
-                    transparent 48%
-                ),
-                #070707;
+                    rgba(212,175,55,.1),
+                    transparent 50%
+                );
 
             text-align: center;
         }
 
         .about-statement h2 {
-            max-width: 1000px;
-
+            max-width: 950px;
             margin: 0 auto 25px;
-
-            font-size:
-                clamp(2.6rem, 5vw, 5.2rem);
-
-            line-height: .98;
+            font-size: clamp(3rem,6vw,6rem);
+            line-height: .92;
         }
 
         .about-statement h2 span {
+            display: block;
             color: #d4af37;
         }
 
-        .about-statement p:not(.eyebrow) {
+        .about-statement p:last-child {
             max-width: 650px;
-
             margin: 0 auto;
-
-            color: rgba(255,255,255,.52);
-
-            font-size: 1rem;
+            color: rgba(255,255,255,.5);
             line-height: 1.8;
         }
 
 
-        /* =====================================================
-           PHILOSOPHY
-        ===================================================== */
-
-        .about-philosophy {
+        .about-values {
             padding: 110px 0;
         }
 
-        .about-philosophy-grid {
+        .about-values-grid {
             display: grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
-            gap: 80px;
-
-            align-items: center;
-        }
-
-        .about-philosophy-copy h2 {
-            max-width: 650px;
-
-            margin-bottom: 25px;
-        }
-
-        .about-philosophy-copy p:not(.eyebrow) {
-            max-width: 650px;
-
-            color: rgba(255,255,255,.55);
-
-            line-height: 1.85;
-        }
-
-        .about-values {
-            display: grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
-            gap: 1px;
-
-            border:
-                1px solid
-                rgba(212,175,55,.18);
-
-            background:
-                rgba(212,175,55,.18);
+            grid-template-columns: repeat(3,1fr);
+            gap: 18px;
+            margin-top: 50px;
         }
 
         .about-value {
-            min-height: 165px;
-
-            padding: 30px;
-
+            padding: 35px;
+            border: 1px solid rgba(255,255,255,.09);
             background: #090909;
         }
 
-        .about-value span {
+        .about-value-number {
             display: block;
-
-            margin-bottom: 22px;
-
+            margin-bottom: 35px;
             color: #d4af37;
-
-            font-size: 9px;
+            font-size: 10px;
             font-weight: 800;
             letter-spacing: .15em;
         }
 
         .about-value h3 {
-            margin-bottom: 9px;
-
-            color: #fff;
-
-            font-size: 1rem;
+            margin-bottom: 12px;
         }
 
         .about-value p {
             margin: 0;
-
-            color: rgba(255,255,255,.43);
-
-            font-size: .8rem;
-            line-height: 1.65;
+            color: rgba(255,255,255,.48);
+            font-size: .88rem;
+            line-height: 1.75;
         }
 
-
-        /* =====================================================
-           STANDARDS
-        ===================================================== */
 
         .about-standards {
             padding: 110px 0;
-
-            background: #070707;
-        }
-
-        .about-standards-heading {
-            max-width: 700px;
-
-            margin-bottom: 55px;
-        }
-
-        .about-standards-heading h2 {
-            margin-bottom: 20px;
-        }
-
-        .about-standards-heading p:not(.eyebrow) {
-            max-width: 620px;
-
-            color: rgba(255,255,255,.5);
-
-            line-height: 1.8;
         }
 
         .about-standards-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(3, minmax(0, 1fr));
-
-            gap: 1px;
-
-            border:
-                1px solid
-                rgba(255,255,255,.08);
-
-            background:
-                rgba(255,255,255,.08);
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-top: 50px;
         }
 
         .about-standard {
-            min-height: 230px;
-
-            padding: 35px;
-
-            background: #090909;
+            padding: 32px;
+            border: 1px solid rgba(255,255,255,.08);
         }
 
-        .about-standard-number {
+        .about-standard strong {
             display: block;
-
-            margin-bottom: 50px;
-
-            color: #d4af37;
-
-            font-size: 9px;
-            font-weight: 800;
-            letter-spacing: .15em;
-        }
-
-        .about-standard h3 {
-            margin-bottom: 12px;
-
+            margin-bottom: 8px;
             color: #fff;
-
-            font-size: 1.08rem;
         }
 
-        .about-standard p {
-            margin: 0;
-
-            color: rgba(255,255,255,.43);
-
-            font-size: .82rem;
+        .about-standard span {
+            color: rgba(255,255,255,.45);
+            font-size: .84rem;
             line-height: 1.7;
         }
 
 
-        /* =====================================================
-           BRAND PROMISE
-        ===================================================== */
-
-        .about-promise {
+        .about-final {
             padding: 110px 0;
-        }
-
-        .about-promise-inner {
-            max-width: 900px;
-
-            margin: 0 auto;
-
+            border-top: 1px solid rgba(212,175,55,.15);
             text-align: center;
         }
 
-        .about-promise-inner h2 {
-            margin-bottom: 25px;
-
-            font-size:
-                clamp(2.5rem, 5vw, 4.8rem);
-
-            line-height: 1;
-        }
-
-        .about-promise-inner h2 span {
-            color: #d4af37;
-        }
-
-        .about-promise-inner > p:not(.eyebrow) {
-            max-width: 650px;
-
-            margin: 0 auto 30px;
-
-            color: rgba(255,255,255,.55);
-
-            line-height: 1.8;
-        }
-
-
-        /* =====================================================
-           FINAL CTA
-        ===================================================== */
-
-        .about-cta {
-            padding: 125px 0;
-
-            border-top:
-                1px solid
-                rgba(212,175,55,.15);
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(212,175,55,.11),
-                    transparent 48%
-                ),
-                #050505;
-
-            text-align: center;
-        }
-
-        .about-cta h2 {
+        .about-final h2 {
             max-width: 850px;
-
             margin: 0 auto 20px;
-
-            font-size:
-                clamp(2.7rem, 5vw, 5.2rem);
-
-            line-height: .98;
+            font-size: clamp(2.8rem,5vw,5.2rem);
+            line-height: .95;
         }
 
-        .about-cta h2 span {
-            color: #d4af37;
-        }
-
-        .about-cta p:not(.eyebrow) {
-            max-width: 580px;
-
+        .about-final p {
+            max-width: 600px;
             margin: 0 auto 30px;
-
-            color: rgba(255,255,255,.58);
-
-            line-height: 1.7;
+            color: rgba(255,255,255,.52);
+            line-height: 1.75;
         }
 
 
-        /* =====================================================
-           RESPONSIVE
-        ===================================================== */
+        @media (max-width: 850px) {
 
-        @media (max-width: 950px) {
-
-            .about-story-grid,
-            .about-philosophy-grid {
+            .about-story-grid {
                 grid-template-columns: 1fr;
-
-                gap: 50px;
+                gap: 40px;
             }
 
-            .about-story-copy {
-                padding-left: 25px;
+            .about-values-grid {
+                grid-template-columns: 1fr;
             }
 
             .about-standards-grid {
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
             }
 
         }
@@ -491,36 +243,20 @@
         @media (max-width: 650px) {
 
             .about-hero {
-                min-height: 48vh;
+                min-height: 50vh;
             }
 
             .about-hero h1 {
-                font-size:
-                    clamp(3rem, 15vw, 4.6rem);
+                font-size: clamp(3.1rem,14vw,5rem);
             }
 
             .about-story,
-            .about-philosophy,
-            .about-standards,
-            .about-promise {
-                padding-top: 75px;
-                padding-bottom: 75px;
-            }
-
-            .about-values {
-                grid-template-columns:
-                    1fr;
-            }
-
-            .about-value {
-                min-height: auto;
+            .about-values,
+            .about-standards {
+                padding: 75px 0;
             }
 
             .about-statement {
-                padding: 90px 0;
-            }
-
-            .about-cta {
                 padding: 90px 0;
             }
 
@@ -534,10 +270,6 @@
 <body>
 
 
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
-
     <header class="site-header">
 
         <div class="container nav-container">
@@ -547,7 +279,6 @@
                 class="logo"
                 aria-label="Enhance My Ride home"
             >
-
                 <span class="logo-main">
                     ENHANCE MY RIDE
                 </span>
@@ -555,22 +286,19 @@
                 <span class="logo-sub">
                     AUTO SPA & MOBILE DETAILING
                 </span>
-
             </a>
 
 
             <button
                 class="menu-toggle"
                 id="menuToggle"
+                type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false"
-                type="button"
             >
-
                 <span></span>
                 <span></span>
                 <span></span>
-
             </button>
 
 
@@ -592,7 +320,10 @@
                     Services
                 </a>
 
-                <a href="book-now.html">
+                <a
+                    href="book-now.html"
+                    class="nav-cta"
+                >
                     Book Now
                 </a>
 
@@ -615,16 +346,8 @@
     </header>
 
 
-    <!-- =====================================================
-         MAIN
-    ====================================================== -->
-
     <main>
 
-
-        <!-- =================================================
-             HERO
-        ================================================== -->
 
         <section class="page-hero about-hero">
 
@@ -636,7 +359,6 @@
 
                 <h1>
                     More Than A Detail.
-
                     <span>
                         An Experience.
                     </span>
@@ -644,8 +366,9 @@
 
                 <p>
                     Enhance My Ride was built around a simple idea:
-                    premium vehicle care should feel professional,
-                    personal, and effortless from start to finish.
+                    premium vehicle care should be convenient,
+                    professional, personal, and delivered directly
+                    to you.
                 </p>
 
             </div>
@@ -653,18 +376,15 @@
         </section>
 
 
-        <!-- =================================================
-             OUR STORY
-        ================================================== -->
+        <!-- STORY -->
 
-        <section class="section about-story">
+        <section class="about-story">
 
             <div class="container">
 
                 <div class="about-story-grid">
 
-
-                    <div class="about-story-intro">
+                    <div>
 
                         <p class="eyebrow">
                             OUR STORY
@@ -672,17 +392,10 @@
 
                         <h2>
                             Built With
-
                             <span class="gold-text">
                                 Purpose.
                             </span>
                         </h2>
-
-                        <p>
-                            Enhance My Ride Auto Spa & Mobile Detailing
-                            was created to bring a more intentional approach
-                            to professional vehicle care.
-                        </p>
 
                     </div>
 
@@ -690,26 +403,29 @@
                     <div class="about-story-copy">
 
                         <p>
-                            We believe a detail should be more than a
-                            vehicle simply looking clean. The process,
-                            communication, workmanship, and final
-                            presentation all matter.
+                            Enhance My Ride Auto Spa & Mobile Detailing
+                            was created to provide a different kind of
+                            detailing experience.
                         </p>
 
                         <p>
-                            Every vehicle is different. Its condition,
-                            materials, history, and owner's expectations
-                            all deserve consideration. That's why our
-                            approach is centered around understanding the
-                            vehicle first and delivering the level of care
-                            it actually needs.
+                            Instead of asking customers to drive to a shop,
+                            wait for their vehicle, and arrange their day
+                            around someone else's location, we bring the
+                            service directly to them.
                         </p>
 
                         <p>
-                            Enhance My Ride was built to create an experience
-                            customers can feel confident returning to —
-                            professional, consistent, and focused on the
-                            details that make a difference.
+                            Every vehicle deserves attention to detail,
+                            whether it needs a simple refresh or a deeper
+                            transformation. Our goal is to provide the
+                            level of care the vehicle actually needs.
+                        </p>
+
+                        <p>
+                            More importantly, we want every customer to
+                            feel that their vehicle was treated with the
+                            same attention we would give our own.
                         </p>
 
                     </div>
@@ -721,30 +437,27 @@
         </section>
 
 
-        <!-- =================================================
-             BRAND STATEMENT
-        ================================================== -->
+        <!-- STATEMENT -->
 
         <section class="about-statement">
 
             <div class="container">
 
                 <p class="eyebrow">
-                    THE ENHANCE MY RIDE EXPERIENCE
+                    THE ENHANCE EXPERIENCE
                 </p>
 
                 <h2>
                     We Come To You.
-
                     <span>
                         You Relax. We Enhance.
                     </span>
                 </h2>
 
                 <p>
-                    Our slogan represents the experience we want every
-                    customer to have: less hassle, more convenience,
-                    and professional attention given to your vehicle.
+                    That's more than a slogan. It's the experience
+                    we aim to deliver with every vehicle, every
+                    appointment, and every customer.
                 </p>
 
             </div>
@@ -752,122 +465,86 @@
         </section>
 
 
-        <!-- =================================================
-             PHILOSOPHY
-        ================================================== -->
+        <!-- VALUES -->
 
-        <section class="section about-philosophy">
+        <section class="about-values">
 
             <div class="container">
 
-                <div class="about-philosophy-grid">
+                <div class="center-heading">
+
+                    <p class="eyebrow">
+                        OUR PHILOSOPHY
+                    </p>
+
+                    <h2>
+                        What We
+                        <span class="gold-text">
+                            Stand For.
+                        </span>
+                    </h2>
+
+                </div>
 
 
-                    <div class="about-philosophy-copy">
+                <div class="about-values-grid">
 
-                        <p class="eyebrow">
-                            OUR PHILOSOPHY
-                        </p>
 
-                        <h2>
-                            Premium Doesn't Mean
+                    <article class="about-value">
 
-                            <span class="gold-text">
-                                Complicated.
-                            </span>
-                        </h2>
+                        <span class="about-value-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Attention To Detail
+                        </h3>
 
                         <p>
-                            A premium detailing experience should be easy
-                            for the customer while the work behind the
-                            scenes remains deliberate and professional.
+                            The finished vehicle matters, but so does
+                            every small area that contributes to the
+                            final result.
                         </p>
+
+                    </article>
+
+
+                    <article class="about-value">
+
+                        <span class="about-value-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Professional Service
+                        </h3>
 
                         <p>
-                            We focus on clear communication, careful
-                            workmanship, attention to detail, and a final
-                            result that reflects the standard we want
-                            associated with the Enhance My Ride name.
+                            Clear communication, careful work, and
+                            respect for your vehicle are part of the
+                            service—not extras.
                         </p>
 
-                    </div>
+                    </article>
 
 
-                    <div class="about-values">
+                    <article class="about-value">
 
+                        <span class="about-value-number">
+                            03
+                        </span>
 
-                        <div class="about-value">
+                        <h3>
+                            Convenience
+                        </h3>
 
-                            <span>
-                                QUALITY
-                            </span>
+                        <p>
+                            Mobile detailing means you don't have to
+                            rearrange your day just to take care of
+                            your vehicle.
+                        </p>
 
-                            <h3>
-                                Quality Work
-                            </h3>
-
-                            <p>
-                                We take the time to address the details
-                                that affect the finished result.
-                            </p>
-
-                        </div>
-
-
-                        <div class="about-value">
-
-                            <span>
-                                INTEGRITY
-                            </span>
-
-                            <h3>
-                                Honest Service
-                            </h3>
-
-                            <p>
-                                Recommendations should be based on the
-                                vehicle, not simply on selling more.
-                            </p>
-
-                        </div>
-
-
-                        <div class="about-value">
-
-                            <span>
-                                CONSISTENCY
-                            </span>
-
-                            <h3>
-                                Consistent Process
-                            </h3>
-
-                            <p>
-                                A structured approach helps create a
-                                dependable customer experience.
-                            </p>
-
-                        </div>
-
-
-                        <div class="about-value">
-
-                            <span>
-                                PRESENTATION
-                            </span>
-
-                            <h3>
-                                Final Presentation
-                            </h3>
-
-                            <p>
-                                The last details matter just as much
-                                as the first ones.
-                            </p>
-
-                        </div>
-
-                    </div>
+                    </article>
 
                 </div>
 
@@ -876,138 +553,72 @@
         </section>
 
 
-        <!-- =================================================
-             STANDARDS
-        ================================================== -->
+        <!-- STANDARDS -->
 
-        <section class="section about-standards">
+        <section class="about-standards section-dark">
 
             <div class="container">
 
-                <div class="about-standards-heading">
+                <div class="center-heading">
 
                     <p class="eyebrow">
                         OUR STANDARD
                     </p>
 
                     <h2>
-                        Details Matter.
-
+                        Every Appointment
                         <span class="gold-text">
-                            Every Time.
+                            Matters.
                         </span>
                     </h2>
-
-                    <p>
-                        The Enhance My Ride standard is built around
-                        three things: how we communicate, how we work,
-                        and how we leave the vehicle.
-                    </p>
 
                 </div>
 
 
                 <div class="about-standards-grid">
 
-
-                    <article class="about-standard">
-
-                        <span class="about-standard-number">
-                            01 — COMMUNICATION
-                        </span>
-
-                        <h3>
-                            Clear From Start To Finish
-                        </h3>
-
-                        <p>
-                            We believe customers should understand what
-                            they're booking, what their vehicle needs,
-                            and what to expect from the service.
-                        </p>
-
-                    </article>
-
-
-                    <article class="about-standard">
-
-                        <span class="about-standard-number">
-                            02 — WORKMANSHIP
-                        </span>
-
-                        <h3>
-                            Care In The Process
-                        </h3>
-
-                        <p>
-                            Professional results come from paying attention
-                            to the small things instead of rushing toward
-                            the finish line.
-                        </p>
-
-                    </article>
-
-
-                    <article class="about-standard">
-
-                        <span class="about-standard-number">
-                            03 — PRESENTATION
-                        </span>
-
-                        <h3>
-                            Finish With Intention
-                        </h3>
-
-                        <p>
-                            The final inspection matters. We want the
-                            finished vehicle to reflect the care put into
-                            the entire appointment.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             BRAND PROMISE
-        ================================================== -->
-
-        <section class="about-promise">
-
-            <div class="container">
-
-                <div class="about-promise-inner">
-
-                    <p class="eyebrow">
-                        THE BRAND PROMISE
-                    </p>
-
-                    <h2>
-                        Professional Care.
-
+                    <div class="about-standard">
+                        <strong>
+                            Vehicle Respect
+                        </strong>
                         <span>
-                            Personal Service.
+                            We treat every vehicle carefully and
+                            work according to its condition.
                         </span>
-                    </h2>
+                    </div>
 
-                    <p>
-                        Whether it's your everyday vehicle, a vehicle you
-                        take pride in, or something special, our goal is
-                        simple: provide an experience that feels worthy
-                        of the vehicle you're trusting us with.
-                    </p>
 
-                    <a
-                        href="gallery.html"
-                        class="text-link"
-                    >
-                        See The Results →
-                    </a>
+                    <div class="about-standard">
+                        <strong>
+                            Attention To Condition
+                        </strong>
+                        <span>
+                            Services are selected around what the
+                            vehicle actually needs.
+                        </span>
+                    </div>
+
+
+                    <div class="about-standard">
+                        <strong>
+                            Clean Presentation
+                        </strong>
+                        <span>
+                            We finish with a final inspection so the
+                            vehicle is presented properly.
+                        </span>
+                    </div>
+
+
+                    <div class="about-standard">
+                        <strong>
+                            Customer Experience
+                        </strong>
+                        <span>
+                            Professional communication and convenient
+                            service are part of the Enhance experience.
+                        </span>
+                    </div>
 
                 </div>
 
@@ -1016,29 +627,26 @@
         </section>
 
 
-        <!-- =================================================
-             FINAL CTA
-        ================================================== -->
+        <!-- FINAL -->
 
-        <section class="about-cta">
+        <section class="about-final">
 
             <div class="container">
 
                 <p class="eyebrow">
-                    READY TO EXPERIENCE THE DIFFERENCE?
+                    READY TO ENHANCE?
                 </p>
 
                 <h2>
-                    Let's
-
-                    <span>
-                        Enhance Your Ride.
+                    Your Vehicle.
+                    <span class="gold-text">
+                        Our Attention.
                     </span>
                 </h2>
 
                 <p>
-                    Choose your service and take the next step toward
-                    giving your vehicle the care it deserves.
+                    Choose your service and let us bring the detail
+                    directly to you.
                 </p>
 
                 <a
@@ -1055,24 +663,13 @@
     </main>
 
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
     <footer class="site-footer">
 
         <div class="container footer-grid">
 
-
-            <!-- BRAND -->
-
             <div class="footer-brand">
 
-                <a
-                    href="index.html"
-                    class="logo"
-                    aria-label="Enhance My Ride home"
-                >
+                <a href="index.html" class="logo">
 
                     <span class="logo-main">
                         ENHANCE MY RIDE
@@ -1085,59 +682,32 @@
                 </a>
 
                 <p>
-                    Premium mobile detailing with a focus on
-                    quality, convenience, and attention to detail.
+                    Premium mobile detailing throughout
+                    the San Francisco Bay Area.
                 </p>
 
             </div>
 
 
-            <!-- EXPLORE -->
-
             <div class="footer-links">
 
-                <h4>
-                    Explore
-                </h4>
+                <h4>Explore</h4>
 
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="gallery.html">
-                    Gallery
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a href="book-now.html">
-                    Book Now
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="service-area.html">
-                    Service Area
-                </a>
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="services.html">Services</a>
+                <a href="book-now.html">Book Now</a>
+                <a href="about.html">About</a>
+                <a href="service-area.html">Service Area</a>
 
             </div>
 
 
-            <!-- CONNECT -->
-
             <div class="footer-links">
 
-                <h4>
-                    Connect
-                </h4>
+                <h4>Connect</h4>
 
-                <a href="book-now.html">
-                    Book Now
-                </a>
+                <a href="book-now.html">Book Now</a>
 
                 <a href="tel:+13233271806">
                     (323) 327-1806
@@ -1188,33 +758,17 @@
     </footer>
 
 
-    <!-- =====================================================
-         FLOATING CALL BUTTON
-    ====================================================== -->
-
     <a
         href="tel:+13233271806"
         class="mobile-call-button"
         aria-label="Call Enhance My Ride"
     >
-
-        <span class="call-icon">
-            ☎
-        </span>
-
-        <span>
-            CALL
-        </span>
-
+        <span class="call-icon">☎</span>
+        <span>CALL</span>
     </a>
 
-
-    <!-- =====================================================
-         SITE JAVASCRIPT
-    ====================================================== -->
 
     <script src="js/script.js"></script>
 
 </body>
-
 </html>
