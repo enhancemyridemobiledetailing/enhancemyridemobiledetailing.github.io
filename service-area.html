@@ -33,12 +33,12 @@
     >
 
     <title>
-        Mobile Detailing Service Area | Enhance My Ride Auto Spa
+        Service Area | Enhance My Ride Auto Spa & Mobile Detailing
     </title>
 
     <meta
         name="description"
-        content="Enhance My Ride Auto Spa & Mobile Detailing serves Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa Clara, Solano, Sonoma, and surrounding Bay Area communities."
+        content="Enhance My Ride Auto Spa & Mobile Detailing provides mobile detailing throughout Alameda, Contra Costa, San Francisco, San Mateo, Santa Clara, Marin, Solano, Sonoma, and Napa counties."
     >
 
     <meta
@@ -76,7 +76,7 @@
             background:
                 radial-gradient(
                     circle at 78% 45%,
-                    rgba(212,175,55,.14),
+                    rgba(212,175,55,.13),
                     transparent 38%
                 ),
                 #050505;
@@ -87,10 +87,10 @@
         }
 
         .service-area-hero h1 {
-            max-width: 850px;
+            max-width: 900px;
 
             font-size:
-                clamp(3.5rem, 7vw, 6.5rem);
+                clamp(3.4rem, 7vw, 6.5rem);
 
             line-height: .9;
         }
@@ -169,9 +169,9 @@
         }
 
         .service-area-card {
-            min-height: 235px;
+            min-height: 245px;
 
-            padding: 32px;
+            padding: 34px;
 
             background: #090909;
 
@@ -190,7 +190,7 @@
             background:
                 radial-gradient(
                     circle at top right,
-                    rgba(212,175,55,.08),
+                    rgba(212,175,55,.09),
                     transparent 48%
                 ),
                 #090909;
@@ -213,7 +213,7 @@
         }
 
         .service-area-card h3 {
-            margin: 0 0 16px;
+            margin: 0 0 17px;
 
             color: #fff;
 
@@ -223,119 +223,74 @@
         }
 
         .service-area-card p {
-            max-width: 380px;
+            max-width: 390px;
 
             margin: 0;
 
             color:
-                rgba(255,255,255,.44);
+                rgba(255,255,255,.48);
 
-            font-size: .8rem;
+            font-size: .82rem;
 
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
 
         /* =====================================================
-           LOCATION CHECK
+           BOOKING STRIP
            ===================================================== */
 
-        .service-area-check {
-            display: grid;
-
-            grid-template-columns:
-                .9fr 1.1fr;
-
-            gap: 60px;
+        .service-area-booking {
+            display: flex;
 
             align-items: center;
 
-            margin-top: 75px;
+            justify-content: space-between;
 
-            padding: 55px;
+            gap: 40px;
+
+            margin-top: 70px;
+
+            padding: 42px 45px;
 
             border:
                 1px solid
-                rgba(212,175,55,.2);
+                rgba(212,175,55,.18);
 
             background:
-                radial-gradient(
-                    circle at 10% 50%,
+                linear-gradient(
+                    110deg,
                     rgba(212,175,55,.08),
-                    transparent 40%
-                ),
-                #090909;
+                    rgba(255,255,255,.025)
+                );
         }
 
-        .service-area-check h2 {
-            margin: 0;
+        .service-area-booking-copy {
+            max-width: 650px;
+        }
+
+        .service-area-booking h2 {
+            margin: 0 0 12px;
 
             font-size:
-                clamp(2.4rem, 4vw, 4rem);
+                clamp(2rem, 4vw, 3.2rem);
 
-            line-height: .98;
+            line-height: 1;
         }
 
-        .service-area-check-copy p {
-            margin: 0 0 20px;
+        .service-area-booking p {
+            margin: 0;
 
             color:
                 rgba(255,255,255,.5);
 
-            font-size: .88rem;
+            font-size: .9rem;
 
-            line-height: 1.75;
+            line-height: 1.7;
         }
 
-        .service-area-check-copy p:last-of-type {
-            margin-bottom: 25px;
-        }
-
-
-        /* =====================================================
-           FINAL CTA
-           ===================================================== */
-
-        .service-area-cta {
-            padding: 120px 0;
-
-            border-top:
-                1px solid
-                rgba(212,175,55,.15);
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(212,175,55,.1),
-                    transparent 50%
-                ),
-                #050505;
-
-            text-align: center;
-        }
-
-        .service-area-cta h2 {
-            max-width: 850px;
-
-            margin:
-                0 auto 20px;
-
-            font-size:
-                clamp(2.8rem, 5vw, 5.2rem);
-
-            line-height: .95;
-        }
-
-        .service-area-cta p:not(.eyebrow) {
-            max-width: 600px;
-
-            margin:
-                0 auto 30px;
-
-            color:
-                rgba(255,255,255,.52);
-
-            line-height: 1.75;
+        .service-area-booking-actions {
+            flex-shrink: 0;
         }
 
 
@@ -350,10 +305,12 @@
                     repeat(2, minmax(0, 1fr));
             }
 
-            .service-area-check {
-                grid-template-columns: 1fr;
+            .service-area-booking {
+                align-items: flex-start;
 
-                gap: 30px;
+                flex-direction: column;
+
+                gap: 25px;
             }
 
         }
@@ -367,7 +324,7 @@
 
             .service-area-hero h1 {
                 font-size:
-                    clamp(3.2rem, 14vw, 5rem);
+                    clamp(3.1rem, 14vw, 5rem);
             }
 
             .service-area-grid {
@@ -380,14 +337,10 @@
                 padding: 30px 25px;
             }
 
-            .service-area-check {
+            .service-area-booking {
                 margin-top: 55px;
 
                 padding: 32px 25px;
-            }
-
-            .service-area-cta {
-                padding: 85px 20px;
             }
 
         }
@@ -505,18 +458,18 @@
 
                 <h1>
 
-                    Premium Detailing
+                    We Come
 
                     <span>
-                        Brought To You.
+                        To You.
                     </span>
 
                 </h1>
 
                 <p>
-                    Enhance My Ride provides mobile detailing
-                    throughout the Bay Area, bringing professional
-                    vehicle care directly to your location.
+                    Enhance My Ride provides professional mobile
+                    detailing throughout the San Francisco Bay Area,
+                    bringing vehicle care directly to your location.
                 </p>
 
             </div>
@@ -550,9 +503,8 @@
                     </h2>
 
                     <p>
-                        Our primary service area covers nine Bay Area
-                        counties, with availability depending on your
-                        exact location and appointment requirements.
+                        Our service area covers nine Bay Area counties
+                        and the communities listed below.
                     </p>
 
                 </div>
@@ -561,7 +513,9 @@
                 <div class="service-area-grid">
 
 
-                    <!-- ALAMEDA -->
+                    <!-- =================================================
+                         01 • ALAMEDA COUNTY
+                         ================================================= -->
 
                     <article class="service-area-card primary-area">
 
@@ -583,7 +537,9 @@
                     </article>
 
 
-                    <!-- CONTRA COSTA -->
+                    <!-- =================================================
+                         02 • CONTRA COSTA COUNTY
+                         ================================================= -->
 
                     <article class="service-area-card">
 
@@ -598,15 +554,17 @@
                         <p>
                             Richmond, San Pablo, El Cerrito, Pinole,
                             Hercules, Martinez, Concord, Pleasant Hill,
-                            Walnut Creek, Lafayette, Danville,
-                            San Ramon, Antioch, Pittsburg, Brentwood,
-                            and surrounding communities.
+                            Walnut Creek, Lafayette, Moraga, Orinda,
+                            Danville, San Ramon, Antioch, Pittsburg,
+                            Brentwood, and Oakley.
                         </p>
 
                     </article>
 
 
-                    <!-- SAN FRANCISCO -->
+                    <!-- =================================================
+                         03 • SAN FRANCISCO COUNTY
+                         ================================================= -->
 
                     <article class="service-area-card primary-area">
 
@@ -619,15 +577,16 @@
                         </h3>
 
                         <p>
-                            San Francisco and surrounding neighborhoods,
-                            subject to suitable parking, access,
-                            and service conditions.
+                            San Francisco and its surrounding
+                            neighborhoods.
                         </p>
 
                     </article>
 
 
-                    <!-- SAN MATEO -->
+                    <!-- =================================================
+                         04 • SAN MATEO COUNTY
+                         ================================================= -->
 
                     <article class="service-area-card">
 
@@ -641,15 +600,17 @@
 
                         <p>
                             Daly City, South San Francisco, San Bruno,
-                            Pacifica, San Mateo, Burlingame, Belmont,
-                            Redwood City, Menlo Park, and surrounding
-                            communities.
+                            Pacifica, San Mateo, Foster City, Burlingame,
+                            Millbrae, Belmont, San Carlos, Redwood City,
+                            Menlo Park, and Half Moon Bay.
                         </p>
 
                     </article>
 
 
-                    <!-- SANTA CLARA -->
+                    <!-- =================================================
+                         05 • SANTA CLARA COUNTY
+                         ================================================= -->
 
                     <article class="service-area-card">
 
@@ -664,13 +625,16 @@
                         <p>
                             San Jose, Santa Clara, Sunnyvale, Mountain View,
                             Milpitas, Cupertino, Saratoga, Los Gatos,
-                            Campbell, Palo Alto, and surrounding communities.
+                            Campbell, Palo Alto, Los Altos, Morgan Hill,
+                            and Gilroy.
                         </p>
 
                     </article>
 
 
-                    <!-- MARIN -->
+                    <!-- =================================================
+                         06 • MARIN COUNTY
+                         ================================================= -->
 
                     <article class="service-area-card">
 
@@ -684,14 +648,15 @@
 
                         <p>
                             Sausalito, Mill Valley, San Rafael, Novato,
-                            Larkspur, Corte Madera, San Anselmo,
-                            and surrounding communities.
+                            Larkspur, Corte Madera, and San Anselmo.
                         </p>
 
                     </article>
 
 
-                    <!-- SOLANO -->
+                    <!-- =================================================
+                         07 • SOLANO COUNTY
+                         ================================================= -->
 
                     <article class="service-area-card">
 
@@ -705,13 +670,15 @@
 
                         <p>
                             Vallejo, Benicia, Fairfield, Suisun City,
-                            Vacaville, Dixon, and surrounding communities.
+                            Vacaville, and Dixon.
                         </p>
 
                     </article>
 
 
-                    <!-- SONOMA -->
+                    <!-- =================================================
+                         08 • SONOMA COUNTY
+                         ================================================= -->
 
                     <article class="service-area-card">
 
@@ -725,14 +692,15 @@
 
                         <p>
                             Petaluma, Santa Rosa, Rohnert Park, Cotati,
-                            Sonoma, Windsor, Healdsburg, Sebastopol,
-                            and surrounding communities.
+                            Sonoma, Windsor, Healdsburg, and Sebastopol.
                         </p>
 
                     </article>
 
 
-                    <!-- NAPA -->
+                    <!-- =================================================
+                         09 • NAPA COUNTY
+                         ================================================= -->
 
                     <article class="service-area-card">
 
@@ -746,8 +714,7 @@
 
                         <p>
                             Napa, American Canyon, Yountville,
-                            St. Helena, Calistoga, and surrounding
-                            communities.
+                            St. Helena, and Calistoga.
                         </p>
 
                     </article>
@@ -756,94 +723,41 @@
 
 
                 <!-- =================================================
-                     LOCATION CHECK
+                     BOOKING STRIP
                      ================================================= -->
 
-                <section class="service-area-check">
+                <section class="service-area-booking">
 
-                    <div>
+                    <div class="service-area-booking-copy">
 
                         <p class="eyebrow">
-                            NOT SURE IF WE COME TO YOU?
+                            YOUR LOCATION
                         </p>
 
                         <h2>
-
-                            Check Your
-
-                            <span class="gold-text">
-                                Location.
-                            </span>
-
+                            See If We're In Your Area.
                         </h2>
+
+                        <p>
+                            Enter your location when booking and we'll
+                            confirm availability for your appointment.
+                        </p>
 
                     </div>
 
 
-                    <div class="service-area-check-copy">
-
-                        <p>
-                            Don't see your city listed? Send us your
-                            city or ZIP code when requesting service.
-                            Locations outside our core area may be
-                            considered based on distance, scheduling,
-                            vehicle type, and requested services.
-                        </p>
-
-                        <p>
-                            We'll confirm availability before your
-                            appointment is finalized.
-                        </p>
+                    <div class="service-area-booking-actions">
 
                         <a
                             href="book-now.html"
                             class="btn btn-primary"
                         >
-                            Check Availability
+                            Book Now
                         </a>
 
                     </div>
 
                 </section>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             FINAL CTA
-             ================================================= -->
-
-        <section class="service-area-cta">
-
-            <div class="container">
-
-                <p class="eyebrow">
-                    READY TO ENHANCE?
-                </p>
-
-                <h2>
-
-                    We Come To You.
-
-                    <span>
-                        You Relax.
-                    </span>
-
-                </h2>
-
-                <p>
-                    Choose your service and request your
-                    appointment today.
-                </p>
-
-                <a
-                    href="book-now.html"
-                    class="btn btn-primary"
-                >
-                    Book Now
-                </a>
 
             </div>
 
