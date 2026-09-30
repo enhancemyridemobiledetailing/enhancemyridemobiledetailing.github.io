@@ -1,66 +1,94 @@
 /* =========================================================
    ENHANCE MY RIDE
    AUTO SPA & MOBILE DETAILING
-   SITE JAVASCRIPT
+   GLOBAL JAVASCRIPT
    ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
-       MOBILE NAVIGATION
+       MOBILE DROPDOWN / HAMBURGER MENU
        ===================================================== */
 
-    const menuToggle =
-        document.getElementById("menuToggle");
-
-    const mainNav =
-        document.getElementById("mainNav");
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
 
     if (menuToggle && mainNav) {
 
-        const closeMenu = () => {
+        menuToggle.addEventListener("click", function (event) {
 
-            menuToggle.classList.remove("active");
-            mainNav.classList.remove("active");
-            mainNav.classList.remove("mobile-open");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                "Open navigation menu"
-            );
-        };
-
-
-        menuToggle.addEventListener("click", (event) => {
-
+            event.preventDefault();
             event.stopPropagation();
+
+            menuToggle.classList.toggle("active");
+            mainNav.classList.toggle("active");
 
             const isOpen =
                 mainNav.classList.contains("active");
 
-            if (isOpen) {
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
 
-                closeMenu();
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
 
-            } else {
+        });
 
-                menuToggle.classList.add("active");
-                mainNav.classList.add("active");
-                mainNav.classList.add("mobile-open");
+
+        /* Close menu after clicking a link */
+
+        const navLinks =
+            mainNav.querySelectorAll("a");
+
+        navLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                menuToggle.classList.remove("active");
+                mainNav.classList.remove("active");
 
                 menuToggle.setAttribute(
                     "aria-expanded",
-                    "true"
+                    "false"
                 );
 
                 menuToggle.setAttribute(
                     "aria-label",
-                    "Close navigation menu"
+                    "Open navigation menu"
+                );
+
+            });
+
+        });
+
+
+        /* Close menu when clicking outside */
+
+        document.addEventListener("click", function (event) {
+
+            if (
+                mainNav.classList.contains("active") &&
+                !mainNav.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
+
+                menuToggle.classList.remove("active");
+                mainNav.classList.remove("active");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
                 );
 
             }
@@ -68,49 +96,34 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-        mainNav
-            .querySelectorAll("a")
-            .forEach(link => {
+        /* Close with Escape */
 
-                link.addEventListener(
-                    "click",
-                    closeMenu
+        document.addEventListener("keydown", function (event) {
+
+            if (event.key === "Escape") {
+
+                menuToggle.classList.remove("active");
+                mainNav.classList.remove("active");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
                 );
 
-            });
-
-
-        document.addEventListener(
-            "click",
-            event => {
-
-                if (
-                    !mainNav.contains(event.target) &&
-                    !menuToggle.contains(event.target)
-                ) {
-                    closeMenu();
-                }
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
 
             }
-        );
 
-
-        document.addEventListener(
-            "keydown",
-            event => {
-
-                if (event.key === "Escape") {
-                    closeMenu();
-                }
-
-            }
-        );
+        });
 
     }
 
 
     /* =====================================================
-       NAVIGATION SCROLL EFFECT
+       HEADER SCROLL EFFECT
        ===================================================== */
 
     const header =
@@ -118,15 +131,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (header) {
 
-        const updateHeader = () => {
+        function updateHeader() {
 
-            if (window.scrollY > 25) {
+            if (window.scrollY > 20) {
                 header.classList.add("scrolled");
             } else {
                 header.classList.remove("scrolled");
             }
 
-        };
+        }
 
         updateHeader();
 
@@ -163,9 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const galleryItems =
         Array.from(
-            document.querySelectorAll(
-                "[data-lightbox]"
-            )
+            document.querySelectorAll("[data-lightbox]")
         );
 
 
@@ -178,22 +189,21 @@ document.addEventListener("DOMContentLoaded", () => {
         let currentIndex = 0;
 
 
-        const getImage =
-            item => {
+        function getImage(item) {
 
-                if (
-                    item.tagName &&
-                    item.tagName.toLowerCase() === "img"
-                ) {
-                    return item;
-                }
+            if (
+                item.tagName &&
+                item.tagName.toLowerCase() === "img"
+            ) {
+                return item;
+            }
 
-                return item.querySelector("img");
+            return item.querySelector("img");
 
-            };
+        }
 
 
-        const updateLightbox = () => {
+        function updateLightbox() {
 
             const item =
                 galleryItems[currentIndex];
@@ -201,7 +211,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const image =
                 getImage(item);
 
-            if (!image) return;
+            if (!image) {
+                return;
+            }
 
             lightboxImage.src =
                 image.currentSrc ||
@@ -213,14 +225,16 @@ document.addEventListener("DOMContentLoaded", () => {
             if (lightboxCounter) {
 
                 lightboxCounter.textContent =
-                    `${currentIndex + 1} / ${galleryItems.length}`;
+                    (currentIndex + 1) +
+                    " / " +
+                    galleryItems.length;
 
             }
 
-        };
+        }
 
 
-        const openLightbox = index => {
+        function openLightbox(index) {
 
             currentIndex =
                 (index + galleryItems.length) %
@@ -238,10 +252,10 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.style.overflow =
                 "hidden";
 
-        };
+        }
 
 
-        const closeLightbox = () => {
+        function closeLightbox() {
 
             lightbox.classList.remove("active");
 
@@ -255,33 +269,35 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.style.overflow =
                 "";
 
-        };
+        }
 
 
-        const showPrevious = () => {
+        function previousImage() {
 
             openLightbox(
                 currentIndex - 1
             );
 
-        };
+        }
 
 
-        const showNext = () => {
+        function nextImage() {
 
             openLightbox(
                 currentIndex + 1
             );
 
-        };
+        }
 
 
         galleryItems.forEach(
-            (item, index) => {
+            function (item, index) {
 
                 item.addEventListener(
                     "click",
-                    () => openLightbox(index)
+                    function () {
+                        openLightbox(index);
+                    }
                 );
 
             }
@@ -302,7 +318,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             lightboxPrev.addEventListener(
                 "click",
-                showPrevious
+                previousImage
             );
 
         }
@@ -312,7 +328,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             lightboxNext.addEventListener(
                 "click",
-                showNext
+                nextImage
             );
 
         }
@@ -320,7 +336,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         lightbox.addEventListener(
             "click",
-            event => {
+            function (event) {
 
                 if (
                     event.target === lightbox
@@ -334,7 +350,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.addEventListener(
             "keydown",
-            event => {
+            function (event) {
 
                 if (
                     !lightbox.classList.contains(
@@ -344,43 +360,19 @@ document.addEventListener("DOMContentLoaded", () => {
                     return;
                 }
 
-                if (
-                    event.key === "Escape"
-                ) {
+                if (event.key === "Escape") {
                     closeLightbox();
                 }
 
-                if (
-                    event.key === "ArrowLeft"
-                ) {
-                    showPrevious();
+                if (event.key === "ArrowLeft") {
+                    previousImage();
                 }
 
-                if (
-                    event.key === "ArrowRight"
-                ) {
-                    showNext();
+                if (event.key === "ArrowRight") {
+                    nextImage();
                 }
 
             }
-        );
-
-    }
-
-
-    /* =====================================================
-       REDUCE MOTION SUPPORT
-       ===================================================== */
-
-    const prefersReducedMotion =
-        window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches;
-
-    if (prefersReducedMotion) {
-
-        document.documentElement.classList.add(
-            "reduce-motion"
         );
 
     }
