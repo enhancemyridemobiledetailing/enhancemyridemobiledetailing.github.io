@@ -5,17 +5,25 @@
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18449761533"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'AW-18449761533');
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'AW-18449761533');
     </script>
+
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>
         Gallery | Enhance My Ride Auto Spa & Mobile Detailing
@@ -23,14 +31,24 @@
 
     <meta
         name="description"
-        content="View real Before & After vehicle transformations from Enhance My Ride Auto Spa & Mobile Detailing serving Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa Clara, Solano, and Sonoma Counties."
+        content="View real vehicle transformations from Enhance My Ride Auto Spa & Mobile Detailing."
     >
 
-    <meta name="theme-color" content="#050505">
+    <meta
+        name="theme-color"
+        content="#050505"
+    >
 
-    <meta name="robots" content="index, follow">
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
-    <link rel="stylesheet" href="css/style.css">
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
 
     <style>
 
@@ -54,8 +72,13 @@
                 #050505;
         }
 
+        .gallery-hero .page-hero-content {
+            max-width: 900px;
+        }
+
         .gallery-hero h1 {
             margin: 0;
+
             max-width: 900px;
 
             font-size:
@@ -66,36 +89,41 @@
                 );
 
             line-height: .92;
+
             letter-spacing: -.045em;
         }
 
         .gallery-hero h1 span {
             display: block;
+
             color: #d4af37;
         }
 
         .gallery-hero-description {
-            max-width: 690px;
+            max-width: 650px;
+
             margin-top: 28px;
 
             color: rgba(255,255,255,.62);
 
             font-size: 1rem;
+
             line-height: 1.8;
         }
 
 
         /* =====================================================
-           MAIN
+           GALLERY MAIN
         ===================================================== */
 
-        .gallery-main-section {
+        .gallery-main {
             padding: 105px 0 120px;
         }
 
         .gallery-intro {
-            max-width: 800px;
-            margin-bottom: 85px;
+            max-width: 760px;
+
+            margin-bottom: 75px;
         }
 
         .gallery-intro h2 {
@@ -109,11 +137,13 @@
                 );
 
             line-height: .98;
+
             letter-spacing: -.04em;
         }
 
         .gallery-intro p:last-child {
-            max-width: 720px;
+            max-width: 650px;
+
             margin: 0;
 
             color: rgba(255,255,255,.52);
@@ -127,38 +157,43 @@
         ===================================================== */
 
         .gallery-project {
-            margin-bottom: 120px;
+            margin-bottom: 110px;
         }
 
         .gallery-project + .gallery-project {
-            padding-top: 110px;
+            padding-top: 105px;
 
             border-top:
                 1px solid
                 rgba(255,255,255,.08);
         }
 
-        .gallery-project-heading {
+        .gallery-project-header {
             display: flex;
+
             justify-content: space-between;
             align-items: flex-end;
 
             gap: 30px;
-            margin-bottom: 38px;
+
+            margin-bottom: 35px;
         }
 
         .project-number {
             display: block;
+
             margin-bottom: 12px;
 
             color: rgba(255,255,255,.28);
 
             font-size: 10px;
+
             font-weight: 800;
+
             letter-spacing: .18em;
         }
 
-        .gallery-project-heading h3 {
+        .gallery-project-header h3 {
             margin: 0;
 
             font-size:
@@ -169,34 +204,39 @@
                 );
 
             line-height: 1;
+
             letter-spacing: -.035em;
         }
 
         .project-meta {
             display: flex;
+
             flex-wrap: wrap;
+
             justify-content: flex-end;
 
-            gap: 9px;
+            gap: 8px;
         }
 
         .project-meta span {
-            padding: 9px 12px;
+            padding: 8px 11px;
 
             border:
                 1px solid
                 rgba(255,255,255,.1);
 
-            color: rgba(255,255,255,.48);
+            color: rgba(255,255,255,.42);
 
             font-size: 8px;
+
             font-weight: 800;
+
             letter-spacing: .13em;
         }
 
 
         /* =====================================================
-           BEFORE / AFTER
+           BEFORE / AFTER GRID
         ===================================================== */
 
         .gallery-ba-grid {
@@ -205,33 +245,33 @@
             grid-template-columns:
                 repeat(
                     2,
-                    minmax(0,1fr)
+                    minmax(0, 1fr)
                 );
 
-            gap: 26px;
+            gap: 24px;
         }
 
-        .gallery-ba-card,
-        .gallery-featured-card {
+        .gallery-card {
             position: relative;
 
-            margin: 0;
             overflow: hidden;
+
+            margin: 0;
 
             background: #080808;
 
             border:
                 1px solid
-                rgba(255,255,255,.1);
+                rgba(255,255,255,.09);
 
             cursor: zoom-in;
         }
 
-        .gallery-ba-card img,
-        .gallery-featured-card img {
+        .gallery-card img {
             display: block;
 
             width: 100%;
+
             aspect-ratio: 4 / 3;
 
             object-fit: cover;
@@ -240,25 +280,24 @@
                 transform .5s ease;
         }
 
-        .gallery-ba-card:hover img,
-        .gallery-featured-card:hover img {
+        .gallery-card:hover img {
             transform: scale(1.025);
         }
 
 
         /* =====================================================
-           LABELS
+           IMAGE LABEL
         ===================================================== */
 
-        .gallery-ba-label {
+        .gallery-label {
             position: absolute;
 
-            top: 16px;
-            left: 16px;
+            top: 15px;
+            left: 15px;
 
             z-index: 2;
 
-            padding: 8px 12px;
+            padding: 8px 11px;
 
             background:
                 rgba(0,0,0,.78);
@@ -270,28 +309,32 @@
             color: #fff;
 
             font-size: 8px;
+
             font-weight: 800;
+
             letter-spacing: .16em;
 
             pointer-events: none;
         }
 
-        .gallery-ba-label.after {
+        .gallery-label.after {
             background: #d4af37;
+
             border-color: #d4af37;
+
             color: #050505;
         }
 
 
         /* =====================================================
-           VIEW ICON
+           ZOOM ICON
         ===================================================== */
 
-        .gallery-view-icon {
+        .gallery-view {
             position: absolute;
 
-            top: 16px;
-            right: 16px;
+            top: 15px;
+            right: 15px;
 
             z-index: 2;
 
@@ -299,6 +342,7 @@
             height: 34px;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
@@ -318,18 +362,18 @@
 
 
         /* =====================================================
-           CAPTIONS
+           CAPTION
         ===================================================== */
 
-        .gallery-ba-card figcaption,
-        .gallery-featured-card figcaption {
+        .gallery-card figcaption {
             display: flex;
+
             justify-content: space-between;
             align-items: center;
 
-            gap: 20px;
+            gap: 15px;
 
-            padding: 16px 18px;
+            padding: 15px 17px;
 
             background: #090909;
 
@@ -338,47 +382,26 @@
                 rgba(255,255,255,.08);
         }
 
-        .gallery-ba-card figcaption strong,
-        .gallery-featured-card figcaption strong {
+        .gallery-card figcaption strong {
             color: #fff;
 
             font-size: 9px;
+
             font-weight: 800;
+
             letter-spacing: .14em;
         }
 
-        .gallery-ba-card figcaption span {
-            color: rgba(255,255,255,.38);
+        .gallery-card figcaption span {
+            color: rgba(255,255,255,.34);
 
-            font-size: 9px;
+            font-size: 8px;
+
             font-weight: 700;
+
             letter-spacing: .12em;
 
             text-transform: uppercase;
-        }
-
-
-        /* =====================================================
-           DESCRIPTION
-        ===================================================== */
-
-        .gallery-description {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            gap: 30px;
-            margin-top: 35px;
-        }
-
-        .gallery-description p {
-            max-width: 760px;
-            margin: 0;
-
-            color: rgba(255,255,255,.47);
-
-            font-size: .9rem;
-            line-height: 1.8;
         }
 
 
@@ -387,19 +410,18 @@
         ===================================================== */
 
         .gallery-featured {
-            margin-top: 35px;
-            padding-top: 110px;
+            padding-top: 105px;
 
             border-top:
                 1px solid
                 rgba(255,255,255,.08);
         }
 
-        .gallery-featured-heading {
-            margin-bottom: 38px;
+        .gallery-featured-header {
+            margin-bottom: 35px;
         }
 
-        .gallery-featured-heading h3 {
+        .gallery-featured-header h3 {
             margin: 0;
 
             font-size:
@@ -410,6 +432,7 @@
                 );
 
             line-height: 1;
+
             letter-spacing: -.035em;
         }
 
@@ -419,25 +442,21 @@
             grid-template-columns:
                 repeat(
                     2,
-                    minmax(0,1fr)
+                    minmax(0, 1fr)
                 );
 
-            gap: 26px;
-        }
-
-        .gallery-featured-card figcaption {
-            justify-content: flex-start;
+            gap: 24px;
         }
 
 
         /* =====================================================
-           CTA
+           FINAL CTA
         ===================================================== */
 
-        .gallery-coming-soon {
-            margin-top: 35px;
+        .gallery-cta {
+            margin-top: 110px;
 
-            padding: 90px 30px;
+            padding: 100px 30px;
 
             border:
                 1px solid
@@ -446,7 +465,7 @@
             background:
                 radial-gradient(
                     circle,
-                    rgba(212,175,55,.11),
+                    rgba(212,175,55,.1),
                     transparent 50%
                 ),
                 #080808;
@@ -454,8 +473,10 @@
             text-align: center;
         }
 
-        .gallery-coming-soon h2 {
-            margin: 0 0 20px;
+        .gallery-cta h2 {
+            max-width: 800px;
+
+            margin: 0 auto 20px;
 
             font-size:
                 clamp(
@@ -465,18 +486,18 @@
                 );
 
             line-height: .98;
+
             letter-spacing: -.04em;
         }
 
-        .gallery-coming-soon h2 span {
+        .gallery-cta h2 span {
             color: #d4af37;
         }
 
-        .gallery-coming-soon p:not(.eyebrow) {
+        .gallery-cta p:not(.eyebrow) {
             max-width: 560px;
 
-            margin:
-                0 auto 30px;
+            margin: 0 auto 30px;
 
             color: rgba(255,255,255,.5);
 
@@ -490,11 +511,13 @@
 
         .gallery-lightbox {
             position: fixed;
+
             inset: 0;
 
             z-index: 9999;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
@@ -504,7 +527,9 @@
                 rgba(0,0,0,.94);
 
             opacity: 0;
+
             visibility: hidden;
+
             pointer-events: none;
 
             transition:
@@ -514,12 +539,15 @@
 
         .gallery-lightbox.active {
             opacity: 1;
+
             visibility: visible;
+
             pointer-events: auto;
         }
 
         .gallery-lightbox-image {
             max-width: 92vw;
+
             max-height: 88vh;
 
             width: auto;
@@ -535,9 +563,11 @@
         .gallery-lightbox-close,
         .gallery-lightbox-arrow {
             position: absolute;
+
             z-index: 3;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
@@ -559,6 +589,7 @@
             height: 46px;
 
             color: #fff;
+
             font-size: 25px;
         }
 
@@ -571,6 +602,7 @@
             transform: translateY(-50%);
 
             color: #d4af37;
+
             font-size: 25px;
         }
 
@@ -584,35 +616,23 @@
 
 
         /* =====================================================
-           TABLET
+           RESPONSIVE
         ===================================================== */
 
         @media (max-width: 800px) {
 
-            .gallery-project-heading {
+            .gallery-project-header {
                 display: block;
             }
 
             .project-meta {
                 justify-content: flex-start;
+
                 margin-top: 20px;
-            }
-
-            .gallery-description {
-                display: block;
-            }
-
-            .gallery-description .text-link {
-                display: inline-block;
-                margin-top: 18px;
             }
 
         }
 
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
 
         @media (max-width: 650px) {
 
@@ -620,12 +640,12 @@
                 min-height: 48svh;
             }
 
-            .gallery-main-section {
+            .gallery-main {
                 padding: 75px 0 90px;
             }
 
             .gallery-intro {
-                margin-bottom: 65px;
+                margin-bottom: 60px;
             }
 
             .gallery-project {
@@ -639,15 +659,15 @@
             .gallery-ba-grid,
             .gallery-featured-grid {
                 grid-template-columns: 1fr;
-                gap: 22px;
+
+                gap: 20px;
             }
 
-            .gallery-ba-card img,
-            .gallery-featured-card img {
+            .gallery-card img {
                 aspect-ratio: 4 / 3;
             }
 
-            .gallery-ba-label {
+            .gallery-label {
                 top: 12px;
                 left: 12px;
 
@@ -656,22 +676,19 @@
                 font-size: 7px;
             }
 
-            .gallery-view-icon {
+            .gallery-view {
                 top: 12px;
                 right: 12px;
-            }
-
-            .gallery-ba-card figcaption,
-            .gallery-featured-card figcaption {
-                padding: 14px 15px;
             }
 
             .gallery-featured {
                 padding-top: 75px;
             }
 
-            .gallery-coming-soon {
-                padding: 70px 20px;
+            .gallery-cta {
+                margin-top: 75px;
+
+                padding: 75px 20px;
             }
 
             .gallery-lightbox {
@@ -680,6 +697,7 @@
 
             .gallery-lightbox-image {
                 max-width: 96vw;
+
                 max-height: 82vh;
             }
 
@@ -719,6 +737,7 @@
             class="logo"
             aria-label="Enhance My Ride home"
         >
+
             <span class="logo-main">
                 ENHANCE MY RIDE
             </span>
@@ -726,6 +745,7 @@
             <span class="logo-sub">
                 AUTO SPA & MOBILE DETAILING
             </span>
+
         </a>
 
 
@@ -736,9 +756,11 @@
             aria-label="Open navigation menu"
             aria-expanded="false"
         >
+
             <span></span>
             <span></span>
             <span></span>
+
         </button>
 
 
@@ -783,1203 +805,1405 @@
 </header>
 
 
+<!-- =====================================================
+     MAIN
+====================================================== -->
+
 <main>
 
 
-<!-- =====================================================
-     HERO
-====================================================== -->
+    <!-- =================================================
+         HERO
+    ================================================== -->
 
-<section class="page-hero gallery-hero">
+    <section class="page-hero gallery-hero">
 
-    <div class="container page-hero-content">
-
-        <p class="eyebrow">
-            REAL VEHICLES. REAL RESULTS.
-        </p>
-
-        <h1>
-            See The
-            <span>
-                Transformation.
-            </span>
-        </h1>
-
-        <p class="gallery-hero-description">
-            Don't just look at the finished vehicle.
-            See the real Before and After difference
-            across multiple areas of each detail.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     GALLERY
-====================================================== -->
-
-<section class="section gallery-main-section">
-
-    <div class="container">
-
-
-        <div class="gallery-intro">
+        <div class="container page-hero-content">
 
             <p class="eyebrow">
-                BEFORE → AFTER
+                REAL VEHICLES. REAL RESULTS.
             </p>
 
-            <h2>
-                Judge The Work.
-                <br>
-                <span class="gold-text">
-                    Not Just The Shine.
-                </span>
-            </h2>
+            <h1>
+                See The
 
-            <p>
-                Every matching Before and After pair is
-                displayed so you can see the actual
-                transformation clearly.
+                <span>
+                    Transformation.
+                </span>
+            </h1>
+
+            <p class="gallery-hero-description">
+                A closer look at the vehicles we've worked on,
+                from the condition we received them in to the
+                finished result.
             </p>
 
         </div>
 
+    </section>
 
-        <!-- =================================================
-             MERCEDES
-        ================================================== -->
 
-        <article
-            class="gallery-project"
-            id="mercedes"
-        >
+    <!-- =================================================
+         GALLERY
+    ================================================== -->
 
-            <div class="gallery-project-heading">
+    <section class="section gallery-main">
 
-                <div>
+        <div class="container">
 
-                    <span class="project-number">
-                        01
-                    </span>
 
-                    <p class="eyebrow">
-                        ENHANCE GOLD
-                    </p>
-
-                    <h3>
-                        Mercedes-Benz CLS 550
-                    </h3>
-
-                </div>
-
-                <div class="project-meta">
-
-                    <span>EXTERIOR</span>
-                    <span>INTERIOR</span>
-                    <span>BEFORE / AFTER</span>
-
-                </div>
-
-            </div>
-
-
-            <div class="gallery-ba-grid">
-
-
-                <!-- FRONT -->
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/mercedes-before-front.webp"
-                        alt="Mercedes-Benz CLS 550 front exterior before detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label">
-                        BEFORE
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>FRONT EXTERIOR</strong>
-                        <span>Before</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/mercedes-after-front.webp"
-                        alt="Mercedes-Benz CLS 550 front exterior after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label after">
-                        AFTER
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>FRONT EXTERIOR</strong>
-                        <span>After</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <!-- REAR -->
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/mercedes-before-rear.webp"
-                        alt="Mercedes-Benz CLS 550 rear exterior before detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label">
-                        BEFORE
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>REAR EXTERIOR</strong>
-                        <span>Before</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/mercedes-after-rear.webp"
-                        alt="Mercedes-Benz CLS 550 rear exterior after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label after">
-                        AFTER
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>REAR EXTERIOR</strong>
-                        <span>After</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <!-- INTERIOR -->
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/mercedes-before-interior.webp"
-                        alt="Mercedes-Benz CLS 550 interior before detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label">
-                        BEFORE
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>INTERIOR</strong>
-                        <span>Before</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/mercedes-after-interior.webp"
-                        alt="Mercedes-Benz CLS 550 interior after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label after">
-                        AFTER
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>INTERIOR</strong>
-                        <span>After</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <!-- PASSENGER FOOTWELL -->
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/mercedes-before-passenger-footwell.webp"
-                        alt="Mercedes-Benz CLS 550 passenger footwell before detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label">
-                        BEFORE
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>PASSENGER FOOTWELL</strong>
-                        <span>Before</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/mercedes-after-passenger-footwell.webp"
-                        alt="Mercedes-Benz CLS 550 passenger footwell after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label after">
-                        AFTER
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>PASSENGER FOOTWELL</strong>
-                        <span>After</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <!-- TRUNK -->
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/mercedes-before-trunk.webp"
-                        alt="Mercedes-Benz CLS 550 trunk before detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label">
-                        BEFORE
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>TRUNK</strong>
-                        <span>Before</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/mercedes-after-trunk.webp"
-                        alt="Mercedes-Benz CLS 550 trunk after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label after">
-                        AFTER
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>TRUNK</strong>
-                        <span>After</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <!-- WHEELS -->
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/mercedes-before-wheel.webp"
-                        alt="Mercedes-Benz CLS 550 wheel before cleaning"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label">
-                        BEFORE
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>WHEEL DETAIL</strong>
-                        <span>Before</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/mercedes-after-wheel.webp"
-                        alt="Mercedes-Benz CLS 550 wheel after cleaning"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label after">
-                        AFTER
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>WHEEL DETAIL</strong>
-                        <span>After</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <!-- FINISHED RESULT -->
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/mercedes-after-driver-side.webp"
-                        alt="Mercedes-Benz CLS 550 finished driver side after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label after">
-                        FINISHED
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>DRIVER SIDE</strong>
-                        <span>Finished Result</span>
-                    </figcaption>
-
-                </figure>
-
-            </div>
-
-
-            <div class="gallery-description">
-
-                <p>
-                    Mercedes-Benz CLS 550 completed with the
-                    Enhance Gold Package, including exterior
-                    hand wash, wheel and tire cleaning,
-                    interior cleaning, glass cleaning,
-                    and final presentation inspection.
-                </p>
-
-                <a
-                    href="book-now.html"
-                    class="text-link"
-                >
-                    Book Now →
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- =================================================
-             LEXUS
-        ================================================== -->
-
-        <article
-            class="gallery-project"
-            id="lexus"
-        >
-
-            <div class="gallery-project-heading">
-
-                <div>
-
-                    <span class="project-number">
-                        02
-                    </span>
-
-                    <p class="eyebrow">
-                        ENHANCE GOLD
-                    </p>
-
-                    <h3>
-                        Lexus IS 250
-                    </h3>
-
-                </div>
-
-                <div class="project-meta">
-
-                    <span>EXTERIOR</span>
-                    <span>INTERIOR</span>
-                    <span>BEFORE / AFTER</span>
-
-                </div>
-
-            </div>
-
-
-            <div class="gallery-ba-grid">
-
-
-                <!-- FRONT -->
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-before-front.webp"
-                        alt="Lexus IS 250 front exterior before detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label">
-                        BEFORE
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>FRONT EXTERIOR</strong>
-                        <span>Before</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-after-front.webp"
-                        alt="Lexus IS 250 front exterior after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label after">
-                        AFTER
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>FRONT EXTERIOR</strong>
-                        <span>After</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <!-- FRONT THREE QUARTER -->
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-before-front-three-quarter.webp"
-                        alt="Lexus IS 250 front three-quarter before detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label">
-                        BEFORE
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>FRONT THREE-QUARTER</strong>
-                        <span>Before</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-after-front-three-quarter.webp"
-                        alt="Lexus IS 250 front three-quarter after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label after">
-                        AFTER
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>FRONT THREE-QUARTER</strong>
-                        <span>After</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <!-- REAR THREE QUARTER -->
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-before-rear-three-quarter.webp"
-                        alt="Lexus IS 250 rear three-quarter before detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label">
-                        BEFORE
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>REAR THREE-QUARTER</strong>
-                        <span>Before</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-after-rear-three-quarter.webp"
-                        alt="Lexus IS 250 rear three-quarter after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label after">
-                        AFTER
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>REAR THREE-QUARTER</strong>
-                        <span>After</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <!-- CENTER CONSOLE -->
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-before-center-console.webp"
-                        alt="Lexus IS 250 center console before detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label">
-                        BEFORE
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>CENTER CONSOLE</strong>
-                        <span>Before</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-after-center-console.webp"
-                        alt="Lexus IS 250 center console after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label after">
-                        AFTER
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>CENTER CONSOLE</strong>
-                        <span>After</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <!-- DASHBOARD -->
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-before-dashboard.webp"
-                        alt="Lexus IS 250 dashboard before detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label">
-                        BEFORE
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>DASHBOARD</strong>
-                        <span>Before</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-after-dashboard.webp"
-                        alt="Lexus IS 250 dashboard after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label after">
-                        AFTER
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>DASHBOARD</strong>
-                        <span>After</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <!-- DRIVER INTERIOR -->
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-before-driver-interior.webp"
-                        alt="Lexus IS 250 driver interior before detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label">
-                        BEFORE
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>DRIVER INTERIOR</strong>
-                        <span>Before</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-after-driver-interior.webp"
-                        alt="Lexus IS 250 driver interior after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label after">
-                        AFTER
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>DRIVER INTERIOR</strong>
-                        <span>After</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <!-- FRONT PASSENGER -->
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-before-front-passenger-interior.webp"
-                        alt="Lexus IS 250 front passenger interior before detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label">
-                        BEFORE
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>FRONT PASSENGER</strong>
-                        <span>Before</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-after-front-passenger-interior.webp"
-                        alt="Lexus IS 250 front passenger interior after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label after">
-                        AFTER
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>FRONT PASSENGER</strong>
-                        <span>After</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <!-- REAR SEAT -->
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-before-rear-seat.webp"
-                        alt="Lexus IS 250 rear seat before detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label">
-                        BEFORE
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>REAR SEAT</strong>
-                        <span>Before</span>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-ba-card">
-
-                    <img
-                        src="images/lexus-is250-after-rear-seat.webp"
-                        alt="Lexus IS 250 rear seat after detailing"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span class="gallery-ba-label after">
-                        AFTER
-                    </span>
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>REAR SEAT</strong>
-                        <span>After</span>
-                    </figcaption>
-
-                </figure>
-
-            </div>
-
-
-            <div class="gallery-description">
-
-                <p>
-                    Lexus IS 250 completed with the Enhance Gold
-                    Package. The vehicle received a complete
-                    interior and exterior refresh, including
-                    detailed wheel and tire cleaning.
-                </p>
-
-                <a
-                    href="book-now.html"
-                    class="text-link"
-                >
-                    Book Now →
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- =================================================
-             FEATURED CR-V
-        ================================================== -->
-
-        <section
-            class="gallery-featured"
-            id="featured"
-        >
-
-            <div class="gallery-featured-heading">
-
-                <span class="project-number">
-                    FEATURED VEHICLE
-                </span>
+            <div class="gallery-intro">
 
                 <p class="eyebrow">
-                    ENHANCE MY RIDE
+                    BEFORE → AFTER
                 </p>
 
-                <h3>
-                    Honda CR-V
-                </h3>
+                <h2>
+                    The Work
+
+                    <span class="gold-text">
+                        Speaks For Itself.
+                    </span>
+                </h2>
+
+                <p>
+                    Explore real vehicle transformations and
+                    compare the details for yourself.
+                </p>
 
             </div>
 
 
-            <div class="gallery-featured-grid">
+            <!-- =================================================
+                 MERCEDES
+            ================================================== -->
 
-                <figure class="gallery-featured-card">
-
-                    <img
-                        src="images/crv-front.webp"
-                        alt="Honda CR-V front exterior"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>FRONT</strong>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-featured-card">
-
-                    <img
-                        src="images/crv-rear.webp"
-                        alt="Honda CR-V rear exterior"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>REAR</strong>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-featured-card">
-
-                    <img
-                        src="images/crv-side.webp"
-                        alt="Honda CR-V side profile"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>SIDE PROFILE</strong>
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-featured-card">
-
-                    <img
-                        src="images/crv-driver-interior.webp"
-                        alt="Honda CR-V driver interior"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                    <span
-                        class="gallery-view-icon"
-                        aria-hidden="true"
-                    >
-                        ↗
-                    </span>
-
-                    <figcaption>
-                        <strong>DRIVER INTERIOR</strong>
-                    </figcaption>
-
-                </figure>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             CTA
-        ================================================== -->
-
-        <section class="gallery-coming-soon">
-
-            <p class="eyebrow">
-                MORE TRANSFORMATIONS COMING
-            </p>
-
-            <h2>
-                Your Vehicle
-                <span>
-                    Could Be Next.
-                </span>
-            </h2>
-
-            <p>
-                We're constantly adding new projects.
-                Ready to see what we can do with your
-                vehicle? Let's get you on the schedule.
-            </p>
-
-            <a
-                href="book-now.html"
-                class="btn btn-primary"
+            <article
+                class="gallery-project"
+                id="mercedes"
             >
-                Book Now
-            </a>
 
-        </section>
+                <div class="gallery-project-header">
+
+                    <div>
+
+                        <span class="project-number">
+                            01
+                        </span>
+
+                        <p class="eyebrow">
+                            VEHICLE TRANSFORMATION
+                        </p>
+
+                        <h3>
+                            Mercedes-Benz CLS 550
+                        </h3>
+
+                    </div>
 
 
-    </div>
+                    <div class="project-meta">
 
-</section>
+                        <span>
+                            EXTERIOR
+                        </span>
 
+                        <span>
+                            INTERIOR
+                        </span>
+
+                        <span>
+                            BEFORE / AFTER
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-ba-grid">
+
+
+                    <!-- FRONT -->
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/mercedes-before-front.webp"
+                            alt="Mercedes-Benz CLS 550 front exterior before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label">
+                            BEFORE
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                FRONT EXTERIOR
+                            </strong>
+
+                            <span>
+                                Before
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/mercedes-after-front.webp"
+                            alt="Mercedes-Benz CLS 550 front exterior after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label after">
+                            AFTER
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                FRONT EXTERIOR
+                            </strong>
+
+                            <span>
+                                After
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- REAR -->
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/mercedes-before-rear.webp"
+                            alt="Mercedes-Benz CLS 550 rear exterior before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label">
+                            BEFORE
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                REAR EXTERIOR
+                            </strong>
+
+                            <span>
+                                Before
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/mercedes-after-rear.webp"
+                            alt="Mercedes-Benz CLS 550 rear exterior after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label after">
+                            AFTER
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                REAR EXTERIOR
+                            </strong>
+
+                            <span>
+                                After
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- INTERIOR -->
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/mercedes-before-interior.webp"
+                            alt="Mercedes-Benz CLS 550 interior before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label">
+                            BEFORE
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                INTERIOR
+                            </strong>
+
+                            <span>
+                                Before
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/mercedes-after-interior.webp"
+                            alt="Mercedes-Benz CLS 550 interior after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label after">
+                            AFTER
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                INTERIOR
+                            </strong>
+
+                            <span>
+                                After
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- FOOTWELL -->
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/mercedes-before-passenger-footwell.webp"
+                            alt="Mercedes-Benz CLS 550 passenger footwell before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label">
+                            BEFORE
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                PASSENGER FOOTWELL
+                            </strong>
+
+                            <span>
+                                Before
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/mercedes-after-passenger-footwell.webp"
+                            alt="Mercedes-Benz CLS 550 passenger footwell after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label after">
+                            AFTER
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                PASSENGER FOOTWELL
+                            </strong>
+
+                            <span>
+                                After
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- TRUNK -->
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/mercedes-before-trunk.webp"
+                            alt="Mercedes-Benz CLS 550 trunk before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label">
+                            BEFORE
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                TRUNK
+                            </strong>
+
+                            <span>
+                                Before
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/mercedes-after-trunk.webp"
+                            alt="Mercedes-Benz CLS 550 trunk after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label after">
+                            AFTER
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                TRUNK
+                            </strong>
+
+                            <span>
+                                After
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- WHEELS -->
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/mercedes-before-wheel.webp"
+                            alt="Mercedes-Benz CLS 550 wheel before cleaning"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label">
+                            BEFORE
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                WHEEL DETAIL
+                            </strong>
+
+                            <span>
+                                Before
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/mercedes-after-wheel.webp"
+                            alt="Mercedes-Benz CLS 550 wheel after cleaning"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label after">
+                            AFTER
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                WHEEL DETAIL
+                            </strong>
+
+                            <span>
+                                After
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- FINISHED -->
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/mercedes-after-driver-side.webp"
+                            alt="Mercedes-Benz CLS 550 finished driver side after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label after">
+                            FINISHED
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                DRIVER SIDE
+                            </strong>
+
+                            <span>
+                                Finished
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 LEXUS
+            ================================================== -->
+
+            <article
+                class="gallery-project"
+                id="lexus"
+            >
+
+                <div class="gallery-project-header">
+
+                    <div>
+
+                        <span class="project-number">
+                            02
+                        </span>
+
+                        <p class="eyebrow">
+                            VEHICLE TRANSFORMATION
+                        </p>
+
+                        <h3>
+                            Lexus IS 250
+                        </h3>
+
+                    </div>
+
+
+                    <div class="project-meta">
+
+                        <span>
+                            EXTERIOR
+                        </span>
+
+                        <span>
+                            INTERIOR
+                        </span>
+
+                        <span>
+                            BEFORE / AFTER
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-ba-grid">
+
+
+                    <!-- FRONT -->
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-before-front.webp"
+                            alt="Lexus IS 250 front exterior before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label">
+                            BEFORE
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                FRONT EXTERIOR
+                            </strong>
+
+                            <span>
+                                Before
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-after-front.webp"
+                            alt="Lexus IS 250 front exterior after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label after">
+                            AFTER
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                FRONT EXTERIOR
+                            </strong>
+
+                            <span>
+                                After
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- FRONT THREE QUARTER -->
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-before-front-three-quarter.webp"
+                            alt="Lexus IS 250 front three-quarter before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label">
+                            BEFORE
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                FRONT THREE-QUARTER
+                            </strong>
+
+                            <span>
+                                Before
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-after-front-three-quarter.webp"
+                            alt="Lexus IS 250 front three-quarter after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label after">
+                            AFTER
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                FRONT THREE-QUARTER
+                            </strong>
+
+                            <span>
+                                After
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- REAR THREE QUARTER -->
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-before-rear-three-quarter.webp"
+                            alt="Lexus IS 250 rear three-quarter before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label">
+                            BEFORE
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                REAR THREE-QUARTER
+                            </strong>
+
+                            <span>
+                                Before
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-after-rear-three-quarter.webp"
+                            alt="Lexus IS 250 rear three-quarter after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label after">
+                            AFTER
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                REAR THREE-QUARTER
+                            </strong>
+
+                            <span>
+                                After
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- CENTER CONSOLE -->
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-before-center-console.webp"
+                            alt="Lexus IS 250 center console before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label">
+                            BEFORE
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                CENTER CONSOLE
+                            </strong>
+
+                            <span>
+                                Before
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-after-center-console.webp"
+                            alt="Lexus IS 250 center console after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label after">
+                            AFTER
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                CENTER CONSOLE
+                            </strong>
+
+                            <span>
+                                After
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- DASHBOARD -->
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-before-dashboard.webp"
+                            alt="Lexus IS 250 dashboard before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label">
+                            BEFORE
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                DASHBOARD
+                            </strong>
+
+                            <span>
+                                Before
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-after-dashboard.webp"
+                            alt="Lexus IS 250 dashboard after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label after">
+                            AFTER
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                DASHBOARD
+                            </strong>
+
+                            <span>
+                                After
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- DRIVER INTERIOR -->
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-before-driver-interior.webp"
+                            alt="Lexus IS 250 driver interior before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label">
+                            BEFORE
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                DRIVER INTERIOR
+                            </strong>
+
+                            <span>
+                                Before
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-after-driver-interior.webp"
+                            alt="Lexus IS 250 driver interior after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label after">
+                            AFTER
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                DRIVER INTERIOR
+                            </strong>
+
+                            <span>
+                                After
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- FRONT PASSENGER -->
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-before-front-passenger-interior.webp"
+                            alt="Lexus IS 250 front passenger interior before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label">
+                            BEFORE
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                FRONT PASSENGER
+                            </strong>
+
+                            <span>
+                                Before
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-after-front-passenger-interior.webp"
+                            alt="Lexus IS 250 front passenger interior after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label after">
+                            AFTER
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                FRONT PASSENGER
+                            </strong>
+
+                            <span>
+                                After
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- REAR SEAT -->
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-before-rear-seat.webp"
+                            alt="Lexus IS 250 rear seat before detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label">
+                            BEFORE
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                REAR SEAT
+                            </strong>
+
+                            <span>
+                                Before
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/lexus-is250-after-rear-seat.webp"
+                            alt="Lexus IS 250 rear seat after detailing"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span class="gallery-label after">
+                            AFTER
+                        </span>
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                REAR SEAT
+                            </strong>
+
+                            <span>
+                                After
+                            </span>
+
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 FEATURED CR-V
+            ================================================== -->
+
+            <section
+                class="gallery-featured"
+                id="featured"
+            >
+
+                <div class="gallery-featured-header">
+
+                    <span class="project-number">
+                        03
+                    </span>
+
+                    <p class="eyebrow">
+                        FEATURED VEHICLE
+                    </p>
+
+                    <h3>
+                        Honda CR-V
+                    </h3>
+
+                </div>
+
+
+                <div class="gallery-featured-grid">
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/crv-front.webp"
+                            alt="Honda CR-V front exterior"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                FRONT
+                            </strong>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/crv-rear.webp"
+                            alt="Honda CR-V rear exterior"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                REAR
+                            </strong>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/crv-side.webp"
+                            alt="Honda CR-V side profile"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                SIDE PROFILE
+                            </strong>
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-card">
+
+                        <img
+                            src="images/crv-driver-interior.webp"
+                            alt="Honda CR-V driver interior"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                        <span
+                            class="gallery-view"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                        <figcaption>
+
+                            <strong>
+                                DRIVER INTERIOR
+                            </strong>
+
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FINAL CTA
+            ================================================== -->
+
+            <section class="gallery-cta">
+
+                <p class="eyebrow">
+                    YOUR VEHICLE COULD BE NEXT
+                </p>
+
+                <h2>
+                    Ready To
+
+                    <span>
+                        Enhance Your Ride?
+                    </span>
+                </h2>
+
+                <p>
+                    See what professional detailing can do
+                    for your vehicle.
+                </p>
+
+                <a
+                    href="book-now.html"
+                    class="btn btn-primary"
+                >
+                    Book Now
+                </a>
+
+            </section>
+
+
+        </div>
+
+    </section>
 
 </main>
 
@@ -1991,6 +2215,7 @@
 <footer class="site-footer">
 
     <div class="container footer-grid">
+
 
         <div class="footer-brand">
 
@@ -2011,9 +2236,8 @@
             </a>
 
             <p>
-                Premium mobile detailing delivered throughout
-                Alameda, Contra Costa, Marin, Napa, San Francisco,
-                San Mateo, Santa Clara, Solano, and Sonoma Counties.
+                Premium mobile detailing with a focus on
+                quality, convenience, and attention to detail.
             </p>
 
         </div>
@@ -2113,6 +2337,27 @@
 
 
 <!-- =====================================================
+     FLOATING CALL BUTTON
+====================================================== -->
+
+<a
+    href="tel:+13233271806"
+    class="mobile-call-button"
+    aria-label="Call Enhance My Ride"
+>
+
+    <span class="call-icon">
+        ☎
+    </span>
+
+    <span>
+        CALL
+    </span>
+
+</a>
+
+
+<!-- =====================================================
      LIGHTBOX
 ====================================================== -->
 
@@ -2173,7 +2418,7 @@
 
 
 <!-- =====================================================
-     GALLERY LIGHTBOX JAVASCRIPT
+     GALLERY LIGHTBOX
 ====================================================== -->
 
 <script>
@@ -2182,15 +2427,15 @@ document.addEventListener(
     "DOMContentLoaded",
     function () {
 
-        const galleryCards =
+        const cards =
             Array.from(
                 document.querySelectorAll(
-                    ".gallery-ba-card, .gallery-featured-card"
+                    ".gallery-card"
                 )
             );
 
-        const galleryImages =
-            galleryCards.map(
+        const images =
+            cards.map(
                 function (card) {
                     return card.querySelector("img");
                 }
@@ -2224,10 +2469,10 @@ document.addEventListener(
         let currentIndex = 0;
 
 
-        function updateLightbox() {
+        function updateImage() {
 
             const image =
-                galleryImages[currentIndex];
+                images[currentIndex];
 
             if (!image) {
                 return;
@@ -2245,16 +2490,9 @@ document.addEventListener(
 
         function openLightbox(index) {
 
-            if (
-                !galleryImages.length ||
-                !lightbox
-            ) {
-                return;
-            }
-
             currentIndex = index;
 
-            updateLightbox();
+            updateImage();
 
             lightbox.classList.add(
                 "active"
@@ -2275,10 +2513,6 @@ document.addEventListener(
 
         function closeLightbox() {
 
-            if (!lightbox) {
-                return;
-            }
-
             lightbox.classList.remove(
                 "active"
             );
@@ -2296,36 +2530,36 @@ document.addEventListener(
         }
 
 
-        function showPrevious() {
+        function previousImage() {
 
             currentIndex =
                 (
                     currentIndex -
                     1 +
-                    galleryImages.length
+                    images.length
                 ) %
-                galleryImages.length;
+                images.length;
 
-            updateLightbox();
+            updateImage();
 
         }
 
 
-        function showNext() {
+        function nextImage() {
 
             currentIndex =
                 (
                     currentIndex +
                     1
                 ) %
-                galleryImages.length;
+                images.length;
 
-            updateLightbox();
+            updateImage();
 
         }
 
 
-        galleryCards.forEach(
+        cards.forEach(
             function (card, index) {
 
                 card.addEventListener(
@@ -2349,13 +2583,13 @@ document.addEventListener(
 
         previousButton.addEventListener(
             "click",
-            showPrevious
+            previousImage
         );
 
 
         nextButton.addEventListener(
             "click",
-            showNext
+            nextImage
         );
 
 
@@ -2402,7 +2636,7 @@ document.addEventListener(
                     "ArrowLeft"
                 ) {
 
-                    showPrevious();
+                    previousImage();
 
                 }
 
@@ -2411,7 +2645,7 @@ document.addEventListener(
                     "ArrowRight"
                 ) {
 
-                    showNext();
+                    nextImage();
 
                 }
 
@@ -2419,7 +2653,7 @@ document.addEventListener(
         );
 
 
-        /* =================================================
+        /* ================================================
            MOBILE SWIPE
         ================================================= */
 
@@ -2461,11 +2695,11 @@ document.addEventListener(
 
                 if (difference > 0) {
 
-                    showNext();
+                    nextImage();
 
                 } else {
 
-                    showPrevious();
+                    previousImage();
 
                 }
 
