@@ -3,16 +3,28 @@
 
 <head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18449761533"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- =====================================================
+         GOOGLE ADS / ANALYTICS
+         ===================================================== -->
 
-  gtag('config', 'AW-18449761533');
-</script>
-    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18449761533"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'AW-18449761533');
+    </script>
+
+
+    <!-- =====================================================
+         META
+         ===================================================== -->
+
     <meta charset="UTF-8">
 
     <meta
@@ -26,7 +38,7 @@
 
     <meta
         name="description"
-        content="Enhance My Ride Auto Spa & Mobile Detailing provides premium mobile car detailing throughout Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa Clara, Solano, and Sonoma Counties, plus surrounding Bay Area communities."
+        content="Enhance My Ride Auto Spa & Mobile Detailing serves Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa Clara, Solano, Sonoma, and surrounding Bay Area communities."
     >
 
     <meta
@@ -44,14 +56,20 @@
         href="css/style.css"
     >
 
+
+    <!-- =====================================================
+         SERVICE AREA PAGE STYLES
+         ===================================================== -->
+
     <style>
 
         /* =====================================================
-           SERVICE AREA HERO
-        ===================================================== */
+           HERO
+           ===================================================== */
 
         .service-area-hero {
-            min-height: 60vh;
+            min-height: 58vh;
+
             display: flex;
             align-items: center;
 
@@ -60,11 +78,6 @@
                     circle at 78% 45%,
                     rgba(212,175,55,.14),
                     transparent 38%
-                ),
-                radial-gradient(
-                    circle at 15% 80%,
-                    rgba(255,255,255,.025),
-                    transparent 30%
                 ),
                 #050505;
         }
@@ -84,11 +97,12 @@
 
         .service-area-hero h1 span {
             display: block;
+
             color: #d4af37;
         }
 
         .service-area-hero .page-hero-content > p:last-child {
-            max-width: 680px;
+            max-width: 650px;
 
             margin-top: 28px;
 
@@ -96,29 +110,22 @@
                 rgba(255,255,255,.62);
 
             font-size: 1.05rem;
+
             line-height: 1.75;
         }
 
+
         /* =====================================================
-           INTRO
-        ===================================================== */
+           SERVICE AREA INTRO
+           ===================================================== */
 
         .service-area-intro {
-            display: grid;
+            max-width: 760px;
 
-            grid-template-columns:
-                .9fr 1.1fr;
-
-            gap: 90px;
-
-            align-items: end;
-
-            margin-bottom: 80px;
+            margin-bottom: 55px;
         }
 
         .service-area-intro h2 {
-            max-width: 650px;
-
             margin: 0;
 
             font-size:
@@ -127,45 +134,29 @@
             line-height: .95;
         }
 
-        .service-area-intro > div:last-child {
-            max-width: 560px;
-        }
+        .service-area-intro p:not(.eyebrow) {
+            max-width: 650px;
 
-        .service-area-intro > div:last-child p {
+            margin-top: 25px;
+
             color:
                 rgba(255,255,255,.52);
+
+            font-size: .95rem;
 
             line-height: 1.8;
         }
 
-        /* =====================================================
-           CORE AREA LABEL
-        ===================================================== */
-
-        .service-area-section-heading {
-            margin-bottom: 35px;
-        }
-
-        .service-area-section-heading h2 {
-            max-width: 700px;
-
-            margin: 0;
-
-            font-size:
-                clamp(2.4rem, 4vw, 4rem);
-
-            line-height: .98;
-        }
 
         /* =====================================================
-           SERVICE AREA GRID
-        ===================================================== */
+           COUNTY GRID
+           ===================================================== */
 
         .service-area-grid {
             display: grid;
 
             grid-template-columns:
-                repeat(3, 1fr);
+                repeat(3, minmax(0, 1fr));
 
             gap: 1px;
 
@@ -178,84 +169,90 @@
         }
 
         .service-area-card {
-            position: relative;
+            min-height: 235px;
 
-            min-height: 280px;
-
-            padding: 35px;
+            padding: 32px;
 
             background: #090909;
 
             transition:
-                transform .3s ease,
                 background .3s ease,
-                border-color .3s ease;
+                transform .3s ease;
         }
 
         .service-area-card:hover {
-            transform:
-                translateY(-4px);
-
             background: #0d0d0d;
+
+            transform: translateY(-3px);
         }
 
         .service-area-card.primary-area {
             background:
                 radial-gradient(
                     circle at top right,
-                    rgba(212,175,55,.07),
-                    transparent 45%
+                    rgba(212,175,55,.08),
+                    transparent 48%
                 ),
                 #090909;
         }
 
         .service-area-card span {
-    display: block;
+            display: block;
 
-    margin-bottom: 14px;
+            margin-bottom: 14px;
 
-    color: #d4af37;
+            color: #d4af37;
 
-    font-size: 9px;
+            font-size: 9px;
 
-    font-weight: 800;
+            font-weight: 800;
 
-    line-height: 1.2;
+            line-height: 1.3;
 
-    letter-spacing: .16em;
-}
+            letter-spacing: .15em;
+        }
 
-.service-area-card h3 {
-    margin: 0 0 18px;
+        .service-area-card h3 {
+            margin: 0 0 16px;
 
-    color: #fff;
+            color: #fff;
 
-    font-size: 1.55rem;
+            font-size: 1.4rem;
 
-    line-height: 1.1;
-}
+            line-height: 1.1;
+        }
 
         .service-area-card p {
-            max-width: 360px;
+            max-width: 380px;
 
             margin: 0;
 
             color:
-                rgba(255,255,255,.42);
+                rgba(255,255,255,.44);
 
             font-size: .8rem;
 
             line-height: 1.7;
         }
 
+
         /* =====================================================
-           BAY AREA COVERAGE
-        ===================================================== */
+           LOCATION CHECK
+           ===================================================== */
 
-        .service-area-coverage {
-            margin-top: 90px;
+        .service-area-check {
+            display: grid;
 
-            padding: 60px;
+            grid-template-columns:
+                .9fr 1.1fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+            margin-top: 75px;
+
+            padding: 55px;
 
             border:
                 1px solid
@@ -264,24 +261,13 @@
             background:
                 radial-gradient(
                     circle at 10% 50%,
-                    rgba(212,175,55,.09),
+                    rgba(212,175,55,.08),
                     transparent 40%
                 ),
                 #090909;
         }
 
-        .service-area-coverage-heading {
-            display: grid;
-
-            grid-template-columns:
-                .8fr 1.2fr;
-
-            gap: 70px;
-
-            align-items: center;
-        }
-
-        .service-area-coverage h2 {
+        .service-area-check h2 {
             margin: 0;
 
             font-size:
@@ -290,363 +276,28 @@
             line-height: .98;
         }
 
-        .service-area-coverage-copy p {
+        .service-area-check-copy p {
+            margin: 0 0 20px;
+
             color:
                 rgba(255,255,255,.5);
 
-            line-height: 1.75;
-        }
-
-        .service-area-cities {
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 10px;
-
-            margin-top: 30px;
-        }
-
-        .service-area-cities span {
-            padding:
-                10px 15px;
-
-            border:
-                1px solid
-                rgba(255,255,255,.1);
-
-            color:
-                rgba(255,255,255,.7);
-
-            background:
-                rgba(255,255,255,.025);
-
-            font-size: .72rem;
-
-            transition:
-                border-color .3s ease,
-                color .3s ease,
-                background .3s ease;
-        }
-
-        .service-area-cities span:hover {
-            border-color:
-                rgba(212,175,55,.4);
-
-            color: #d4af37;
-
-            background:
-                rgba(212,175,55,.04);
-        }
-
-        /* =====================================================
-           MOBILE EXPERIENCE
-        ===================================================== */
-
-        .mobile-detailing-benefits {
-            margin-top: 115px;
-
-            padding-top: 100px;
-
-            border-top:
-                1px solid
-                rgba(255,255,255,.08);
-        }
-
-        .benefit-heading {
-            max-width: 700px;
-
-            margin-bottom: 50px;
-        }
-
-        .benefit-heading h2 {
-            margin: 0;
-
-            font-size:
-                clamp(2.7rem, 5vw, 5rem);
-
-            line-height: .95;
-        }
-
-        .benefit-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 1px;
-
-            border:
-                1px solid
-                rgba(255,255,255,.08);
-
-            background:
-                rgba(255,255,255,.08);
-        }
-
-        .benefit-item {
-            min-height: 270px;
-
-            padding: 35px;
-
-            background: #090909;
-
-            transition:
-                background .3s ease;
-        }
-
-        .benefit-item:hover {
-            background: #0d0d0d;
-        }
-
-        .benefit-item > span {
-            display: block;
-
-            margin-bottom: 60px;
-
-            color: #d4af37;
-
-            font-size: 9px;
-
-            font-weight: 800;
-
-            letter-spacing: .15em;
-        }
-
-        .benefit-item h3 {
-            margin-bottom: 12px;
-
-            color: #fff;
-
-            font-size: 1.15rem;
-        }
-
-        .benefit-item p {
-            max-width: 360px;
-
-            margin: 0;
-
-            color:
-                rgba(255,255,255,.42);
-
-            font-size: .8rem;
-
-            line-height: 1.7;
-        }
-
-        /* =====================================================
-           LOCATION & SETUP
-        ===================================================== */
-
-        .service-area-setup {
-            display: grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
-            gap: 1px;
-
-            margin-top: 90px;
-
-            border:
-                1px solid
-                rgba(255,255,255,.08);
-
-            background:
-                rgba(255,255,255,.08);
-        }
-
-        .service-area-setup-card {
-            padding: 45px;
-
-            background: #090909;
-        }
-
-        .service-area-setup-card h3 {
-            margin-bottom: 18px;
-
-            color: #fff;
-
-            font-size: 1.3rem;
-        }
-
-        .service-area-setup-card p {
-            margin: 0;
-
-            color:
-                rgba(255,255,255,.45);
+            font-size: .88rem;
 
             line-height: 1.75;
-
-            font-size: .82rem;
         }
 
-        .service-area-setup-card ul {
-            margin:
-                22px 0 0;
-
-            padding: 0;
-
-            list-style: none;
+        .service-area-check-copy p:last-of-type {
+            margin-bottom: 25px;
         }
 
-        .service-area-setup-card li {
-            position: relative;
-
-            padding:
-                9px 0 9px 22px;
-
-            border-bottom:
-                1px solid
-                rgba(255,255,255,.06);
-
-            color:
-                rgba(255,255,255,.58);
-
-            font-size: .8rem;
-        }
-
-        .service-area-setup-card li::before {
-            content: "✓";
-
-            position: absolute;
-
-            left: 0;
-
-            color: #d4af37;
-
-            font-weight: 800;
-        }
-
-        /* =====================================================
-           SERVICE AVAILABILITY
-        ===================================================== */
-
-        .service-area-secondary {
-            display: grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
-            gap: 70px;
-
-            align-items: center;
-
-            margin-top: 100px;
-
-            padding: 60px;
-
-            border:
-                1px solid
-                rgba(212,175,55,.2);
-
-            background:
-                radial-gradient(
-                    circle at right,
-                    rgba(212,175,55,.08),
-                    transparent 45%
-                ),
-                #090909;
-        }
-
-        .service-area-secondary h2 {
-            margin: 0;
-
-            font-size:
-                clamp(2.5rem, 4vw, 4rem);
-
-            line-height: .98;
-        }
-
-        .service-area-secondary > div:last-child p {
-            color:
-                rgba(255,255,255,.5);
-
-            line-height: 1.75;
-        }
-
-        .service-area-secondary .btn {
-            margin-top: 15px;
-        }
-
-        /* =====================================================
-           LOCAL SEO / AREA TEXT
-        ===================================================== */
-
-        .service-area-local {
-            margin-top: 100px;
-
-            padding-top: 90px;
-
-            border-top:
-                1px solid
-                rgba(255,255,255,.08);
-        }
-
-        .service-area-local-heading {
-            max-width: 760px;
-
-            margin-bottom: 45px;
-        }
-
-        .service-area-local-heading h2 {
-            margin: 0;
-
-            font-size:
-                clamp(2.6rem, 5vw, 4.8rem);
-
-            line-height: .95;
-        }
-
-        .service-area-local-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 1px;
-
-            border:
-                1px solid
-                rgba(255,255,255,.08);
-
-            background:
-                rgba(255,255,255,.08);
-        }
-
-        .service-area-local-card {
-            padding: 35px;
-
-            background: #090909;
-        }
-
-        .service-area-local-card h3 {
-            margin-bottom: 12px;
-
-            color: #fff;
-
-            font-size: 1.1rem;
-        }
-
-        .service-area-local-card p {
-            margin: 0;
-
-            color:
-                rgba(255,255,255,.43);
-
-            font-size: .82rem;
-
-            line-height: 1.75;
-        }
 
         /* =====================================================
            FINAL CTA
-        ===================================================== */
+           ===================================================== */
 
         .service-area-cta {
-            margin-top: 100px;
-
-            padding: 110px 30px;
+            padding: 120px 0;
 
             border-top:
                 1px solid
@@ -657,7 +308,8 @@
                     circle at center,
                     rgba(212,175,55,.1),
                     transparent 50%
-                );
+                ),
+                #050505;
 
             text-align: center;
         }
@@ -666,66 +318,48 @@
             max-width: 850px;
 
             margin:
-                0 auto 22px;
+                0 auto 20px;
 
             font-size:
-                clamp(2.8rem, 5vw, 5rem);
+                clamp(2.8rem, 5vw, 5.2rem);
 
             line-height: .95;
         }
 
-        .service-area-cta > p:not(.eyebrow) {
+        .service-area-cta p:not(.eyebrow) {
             max-width: 600px;
 
             margin:
                 0 auto 30px;
 
             color:
-                rgba(255,255,255,.5);
+                rgba(255,255,255,.52);
 
             line-height: 1.75;
         }
 
+
         /* =====================================================
            RESPONSIVE
-        ===================================================== */
+           ===================================================== */
 
         @media (max-width: 950px) {
 
-            .service-area-intro {
-                grid-template-columns: 1fr;
-                gap: 35px;
-            }
-
             .service-area-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
             }
 
-            .service-area-coverage-heading {
+            .service-area-check {
                 grid-template-columns: 1fr;
+
                 gap: 30px;
-            }
-
-            .benefit-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .service-area-setup {
-                grid-template-columns: 1fr;
-            }
-
-            .service-area-secondary {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .service-area-local-grid {
-                grid-template-columns: 1fr;
             }
 
         }
 
-        @media (max-width: 700px) {
+
+        @media (max-width: 650px) {
 
             .service-area-hero {
                 min-height: 50vh;
@@ -742,53 +376,18 @@
 
             .service-area-card {
                 min-height: auto;
-                padding: 30px;
+
+                padding: 30px 25px;
             }
 
-            .service-area-coverage {
-                margin-top: 65px;
+            .service-area-check {
+                margin-top: 55px;
+
                 padding: 32px 25px;
-            }
-
-            .mobile-detailing-benefits {
-                margin-top: 75px;
-                padding-top: 75px;
-            }
-
-            .benefit-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .benefit-item {
-                min-height: auto;
-                padding: 30px;
-            }
-
-            .benefit-item > span {
-                margin-bottom: 30px;
-            }
-
-            .service-area-setup {
-                margin-top: 65px;
-            }
-
-            .service-area-setup-card {
-                padding: 32px 25px;
-            }
-
-            .service-area-secondary {
-                margin-top: 65px;
-                padding: 32px 25px;
-            }
-
-            .service-area-local {
-                margin-top: 75px;
-                padding-top: 75px;
             }
 
             .service-area-cta {
-                margin-top: 70px;
-                padding: 80px 20px;
+                padding: 85px 20px;
             }
 
         }
@@ -797,762 +396,446 @@
 
 </head>
 
+
 <body>
 
-<!-- =====================================================
-     HEADER
-====================================================== -->
 
-<header class="site-header">
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
 
-    <div class="container nav-container">
+    <header class="site-header">
 
-        <a
-            href="index.html"
-            class="logo"
-            aria-label="Enhance My Ride home"
-        >
-
-            <span class="logo-main">
-                ENHANCE MY RIDE
-            </span>
-
-            <span class="logo-sub">
-                AUTO SPA & MOBILE DETAILING
-            </span>
-
-        </a>
-
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-        <nav
-            class="main-nav"
-            id="mainNav"
-            aria-label="Main navigation"
-        >
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="gallery.html">
-                Gallery
-            </a>
-
-            <a href="services.html">
-                Services
-            </a>
+        <div class="container nav-container">
 
             <a
-                href="book-now.html"
-                class="nav-cta"
+                href="index.html"
+                class="logo"
+                aria-label="Enhance My Ride home"
             >
-                Book Now
+
+                <span class="logo-main">
+                    ENHANCE MY RIDE
+                </span>
+
+                <span class="logo-sub">
+                    AUTO SPA & MOBILE DETAILING
+                </span>
+
             </a>
 
-            <a href="about.html">
-                About
-            </a>
 
-            <a
-                href="service-area.html"
-                class="active"
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
             >
-                Service Area
-            </a>
 
-        </nav>
+                <span></span>
+                <span></span>
+                <span></span>
 
-    </div>
+            </button>
 
-</header>
 
-<main>
+            <nav
+                class="main-nav"
+                id="mainNav"
+                aria-label="Main navigation"
+            >
 
-<!-- =====================================================
-     HERO
-====================================================== -->
+                <a href="index.html">
+                    Home
+                </a>
 
-<section class="page-hero service-area-hero">
+                <a href="gallery.html">
+                    Gallery
+                </a>
 
-    <div class="container page-hero-content">
+                <a href="services.html">
+                    Services
+                </a>
 
-        <p class="eyebrow">
-            MOBILE DETAILING • BAY AREA
-        </p>
+                <a
+                    href="book-now.html"
+                    class="nav-cta"
+                >
+                    Book Now
+                </a>
 
-        <h1>
+                <a href="about.html">
+                    About
+                </a>
 
-            Premium Detailing,
+                <a
+                    href="service-area.html"
+                    class="active"
+                    aria-current="page"
+                >
+                    Service Area
+                </a>
 
-            <span>
-                Brought To You.
-            </span>
+            </nav>
 
-        </h1>
+        </div>
 
-        <p>
+    </header>
 
-            Enhance My Ride brings professional mobile
-            detailing directly to your home, workplace,
-            driveway, or another approved service location
-            throughout all nine Bay Area counties and
-            surrounding communities.
 
-        </p>
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
 
-    </div>
+    <main>
 
-</section>
 
-<!-- =====================================================
-     INTRO
-====================================================== -->
+        <!-- =================================================
+             HERO
+             ================================================= -->
 
-<section class="section">
+        <section class="page-hero service-area-hero">
 
-    <div class="container">
-
-        <div class="service-area-intro">
-
-            <div>
+            <div class="container page-hero-content">
 
                 <p class="eyebrow">
-                    YOUR LOCATION. OUR CRAFT.
+                    MOBILE DETAILING • BAY AREA
                 </p>
 
-                <h2>
+                <h1>
 
-                    Premium Vehicle Care
+                    Premium Detailing
 
-                    <span class="gold-text">
-                        Without The Detour.
+                    <span>
+                        Brought To You.
                     </span>
 
-                </h2>
-
-            </div>
-
-            <div>
+                </h1>
 
                 <p>
-
-                    Your vehicle should not have to spend the
-                    day sitting in a shop just to receive the
-                    attention it deserves.
-
-                </p>
-
-                <p>
-
-                    Enhance My Ride brings the equipment,
-                    professional products, and hands-on
-                    attention directly to you. You stay
-                    productive, relax at home, or continue
-                    your day while we enhance your vehicle.
-
+                    Enhance My Ride provides mobile detailing
+                    throughout the Bay Area, bringing professional
+                    vehicle care directly to your location.
                 </p>
 
             </div>
 
-        </div>
+        </section>
+
 
         <!-- =================================================
-             CORE SERVICE AREAS
-        ================================================== -->
+             SERVICE AREAS
+             ================================================= -->
 
-        <div class="service-area-section-heading">
+        <section class="section">
 
-            <p class="eyebrow">
-                NINE-COUNTY BAY AREA SERVICE AREA
-            </p>
+            <div class="container">
 
-            <h2>
 
-                Premium Mobile Detailing
-
-                <span class="gold-text">
-                    Across The Bay.
-                </span>
-
-            </h2>
-
-        </div>
-
-        <div class="service-area-grid">
-
-            <article class="service-area-card primary-area">
-
-                <span>
-                    01 • ALAMEDA COUNTY
-                </span>
-
-                <h3>
-                    Alameda County
-                </h3>
-
-                <p>
-
-                    Alameda, Oakland, Berkeley, San Leandro,
-                    Hayward, Fremont, Union City, Newark,
-                    Emeryville, Piedmont, Dublin, Pleasanton,
-                    and Livermore.
-
-                </p>
-
-            </article>
-
-            <article class="service-area-card">
-
-                <span>
-                    02 • CONTRA COSTA COUNTY
-                </span>
-
-                <h3>
-                    Contra Costa County
-                </h3>
-
-                <p>
-
-                    Richmond, San Pablo, El Cerrito, Pinole,
-                    Hercules, Martinez, Concord, Pleasant Hill,
-                    Walnut Creek, Lafayette, Moraga, Orinda,
-                    Danville, San Ramon, Antioch, Pittsburg,
-                    Brentwood, and Oakley.
-
-                </p>
-
-            </article>
-
-            <article class="service-area-card primary-area">
-
-                <span>
-                    03 • SAN FRANCISCO COUNTY
-                </span>
-
-                <h3>
-                    San Francisco County
-                </h3>
-
-                <p>
-
-                    San Francisco and surrounding city
-                    neighborhoods, subject to suitable parking,
-                    access, and local service requirements.
-
-                </p>
-
-            </article>
-
-            <article class="service-area-card">
-
-                <span>
-                    04 • SAN MATEO COUNTY
-                </span>
-
-                <h3>
-                    San Mateo County
-                </h3>
-
-                <p>
-
-                    Daly City, South San Francisco, San Bruno,
-                    Pacifica, San Mateo, Foster City, Burlingame,
-                    Millbrae, Belmont, San Carlos, Redwood City,
-                    Menlo Park, and Half Moon Bay.
-
-                </p>
-
-            </article>
-
-            <article class="service-area-card">
-
-                <span>
-                    05 • SANTA CLARA COUNTY
-                </span>
-
-                <h3>
-                    Santa Clara County
-                </h3>
-
-                <p>
-
-                    San Jose, Santa Clara, Sunnyvale, Mountain View,
-                    Milpitas, Cupertino, Saratoga, Los Gatos,
-                    Campbell, Palo Alto, Los Altos, Morgan Hill,
-                    and Gilroy.
-
-                </p>
-
-            </article>
-
-            <article class="service-area-card">
-
-                <span>
-                    06 • MARIN COUNTY
-                </span>
-
-                <h3>
-                    Marin County
-                </h3>
-
-                <p>
-
-                    Sausalito, Mill Valley, San Rafael, Novato,
-                    Larkspur, Corte Madera, San Anselmo, and
-                    nearby communities.
-
-                </p>
-
-            </article>
-
-            <article class="service-area-card">
-
-                <span>
-                    07 • SOLANO COUNTY
-                </span>
-
-                <h3>
-                    Solano County
-                </h3>
-
-                <p>
-
-                    Vallejo, Benicia, Fairfield, Suisun City,
-                    Vacaville, and Dixon.
-
-                </p>
-
-            </article>
-
-            <article class="service-area-card">
-
-                <span>
-                    08 • SONOMA COUNTY
-                </span>
-
-                <h3>
-                    Sonoma County
-                </h3>
-
-                <p>
-
-                    Petaluma, Santa Rosa, Rohnert Park, Cotati,
-                    Sonoma, Windsor, Healdsburg, and Sebastopol.
-
-                </p>
-
-            </article>
-
-            <article class="service-area-card">
-
-                <span>
-                    09 • NAPA COUNTY
-                </span>
-
-                <h3>
-                    Napa County
-                </h3>
-
-                <p>
-
-                    Napa, American Canyon, Yountville, St. Helena,
-                    and Calistoga.
-
-                </p>
-
-            </article>
-
-            <article class="service-area-card">
-
-                <span>
-                    10 • LOCATION CHECK
-                </span>
-
-                <h3>
-                    Don't See Your City?
-                </h3>
-
-                <p>
-
-                    Send us your city or ZIP code. Locations outside
-                    the listed service area may be considered
-                    depending on distance, scheduling, vehicle type,
-                    and requested services.
-
-                </p>
-
-            </article>
-
-        </div>
-
-        <!-- =================================================
-             COVERAGE
-        ================================================== -->
-
-        <section class="service-area-coverage">
-
-            <div class="service-area-coverage-heading">
-
-                <div>
+                <div class="service-area-intro">
 
                     <p class="eyebrow">
-                        BAY AREA COVERAGE
+                        WHERE WE SERVE
                     </p>
 
                     <h2>
 
-                        We Come To You,
+                        Serving The
 
                         <span class="gold-text">
-                            Wherever You Are.
+                            Bay Area.
                         </span>
 
                     </h2>
 
+                    <p>
+                        Our primary service area covers nine Bay Area
+                        counties, with availability depending on your
+                        exact location and appointment requirements.
+                    </p>
+
                 </div>
 
-                <div class="service-area-coverage-copy">
 
-                    <p>
+                <div class="service-area-grid">
 
-                        Enhance My Ride Auto Spa & Mobile
-                        Detailing serves customers throughout
-                        Alameda, Contra Costa, Marin, Napa,
-                        San Francisco, San Mateo, Santa Clara,
-                        Solano, and Sonoma Counties, plus
-                        surrounding Bay Area communities.
 
-                    </p>
+                    <!-- ALAMEDA -->
 
-                    <p>
+                    <article class="service-area-card primary-area">
 
-                        Because every mobile appointment is
-                        different, service availability can
-                        depend on the exact location, vehicle
-                        condition, requested package or
-                        service, access requirements, and
-                        scheduling.
+                        <span>
+                            01 • ALAMEDA COUNTY
+                        </span>
 
-                    </p>
+                        <h3>
+                            Alameda County
+                        </h3>
 
-                    <div class="service-area-cities">
+                        <p>
+                            Alameda, Oakland, San Leandro, Berkeley,
+                            Emeryville, Hayward, Fremont, Union City,
+                            Newark, Piedmont, Dublin, Pleasanton,
+                            and Livermore.
+                        </p>
 
-                        <span>Alameda County</span>
-                        <span>Contra Costa County</span>
-                        <span>Marin County</span>
-                        <span>Napa County</span>
-                        <span>San Francisco County</span>
-                        <span>San Mateo County</span>
-                        <span>Santa Clara County</span>
-                        <span>Solano County</span>
-                        <span>Sonoma County</span>
+                    </article>
+
+
+                    <!-- CONTRA COSTA -->
+
+                    <article class="service-area-card">
+
+                        <span>
+                            02 • CONTRA COSTA COUNTY
+                        </span>
+
+                        <h3>
+                            Contra Costa County
+                        </h3>
+
+                        <p>
+                            Richmond, San Pablo, El Cerrito, Pinole,
+                            Hercules, Martinez, Concord, Pleasant Hill,
+                            Walnut Creek, Lafayette, Danville,
+                            San Ramon, Antioch, Pittsburg, Brentwood,
+                            and surrounding communities.
+                        </p>
+
+                    </article>
+
+
+                    <!-- SAN FRANCISCO -->
+
+                    <article class="service-area-card primary-area">
+
+                        <span>
+                            03 • SAN FRANCISCO COUNTY
+                        </span>
+
+                        <h3>
+                            San Francisco
+                        </h3>
+
+                        <p>
+                            San Francisco and surrounding neighborhoods,
+                            subject to suitable parking, access,
+                            and service conditions.
+                        </p>
+
+                    </article>
+
+
+                    <!-- SAN MATEO -->
+
+                    <article class="service-area-card">
+
+                        <span>
+                            04 • SAN MATEO COUNTY
+                        </span>
+
+                        <h3>
+                            San Mateo County
+                        </h3>
+
+                        <p>
+                            Daly City, South San Francisco, San Bruno,
+                            Pacifica, San Mateo, Burlingame, Belmont,
+                            Redwood City, Menlo Park, and surrounding
+                            communities.
+                        </p>
+
+                    </article>
+
+
+                    <!-- SANTA CLARA -->
+
+                    <article class="service-area-card">
+
+                        <span>
+                            05 • SANTA CLARA COUNTY
+                        </span>
+
+                        <h3>
+                            Santa Clara County
+                        </h3>
+
+                        <p>
+                            San Jose, Santa Clara, Sunnyvale, Mountain View,
+                            Milpitas, Cupertino, Saratoga, Los Gatos,
+                            Campbell, Palo Alto, and surrounding communities.
+                        </p>
+
+                    </article>
+
+
+                    <!-- MARIN -->
+
+                    <article class="service-area-card">
+
+                        <span>
+                            06 • MARIN COUNTY
+                        </span>
+
+                        <h3>
+                            Marin County
+                        </h3>
+
+                        <p>
+                            Sausalito, Mill Valley, San Rafael, Novato,
+                            Larkspur, Corte Madera, San Anselmo,
+                            and surrounding communities.
+                        </p>
+
+                    </article>
+
+
+                    <!-- SOLANO -->
+
+                    <article class="service-area-card">
+
+                        <span>
+                            07 • SOLANO COUNTY
+                        </span>
+
+                        <h3>
+                            Solano County
+                        </h3>
+
+                        <p>
+                            Vallejo, Benicia, Fairfield, Suisun City,
+                            Vacaville, Dixon, and surrounding communities.
+                        </p>
+
+                    </article>
+
+
+                    <!-- SONOMA -->
+
+                    <article class="service-area-card">
+
+                        <span>
+                            08 • SONOMA COUNTY
+                        </span>
+
+                        <h3>
+                            Sonoma County
+                        </h3>
+
+                        <p>
+                            Petaluma, Santa Rosa, Rohnert Park, Cotati,
+                            Sonoma, Windsor, Healdsburg, Sebastopol,
+                            and surrounding communities.
+                        </p>
+
+                    </article>
+
+
+                    <!-- NAPA -->
+
+                    <article class="service-area-card">
+
+                        <span>
+                            09 • NAPA COUNTY
+                        </span>
+
+                        <h3>
+                            Napa County
+                        </h3>
+
+                        <p>
+                            Napa, American Canyon, Yountville,
+                            St. Helena, Calistoga, and surrounding
+                            communities.
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =================================================
+                     LOCATION CHECK
+                     ================================================= -->
+
+                <section class="service-area-check">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            NOT SURE IF WE COME TO YOU?
+                        </p>
+
+                        <h2>
+
+                            Check Your
+
+                            <span class="gold-text">
+                                Location.
+                            </span>
+
+                        </h2>
 
                     </div>
 
-                </div>
+
+                    <div class="service-area-check-copy">
+
+                        <p>
+                            Don't see your city listed? Send us your
+                            city or ZIP code when requesting service.
+                            Locations outside our core area may be
+                            considered based on distance, scheduling,
+                            vehicle type, and requested services.
+                        </p>
+
+                        <p>
+                            We'll confirm availability before your
+                            appointment is finalized.
+                        </p>
+
+                        <a
+                            href="book-now.html"
+                            class="btn btn-primary"
+                        >
+                            Check Availability
+                        </a>
+
+                    </div>
+
+                </section>
 
             </div>
 
         </section>
 
+
         <!-- =================================================
-             MOBILE EXPERIENCE
-        ================================================== -->
+             FINAL CTA
+             ================================================= -->
 
-        <section class="mobile-detailing-benefits">
+        <section class="service-area-cta">
 
-            <div class="benefit-heading">
+            <div class="container">
 
                 <p class="eyebrow">
-                    THE ENHANCE MY RIDE EXPERIENCE
+                    READY TO ENHANCE?
                 </p>
 
                 <h2>
 
-                    We Bring The
+                    We Come To You.
 
-                    <span class="gold-text">
-                        Detail To You.
+                    <span>
+                        You Relax.
                     </span>
 
                 </h2>
 
-            </div>
-
-            <div class="benefit-grid">
-
-                <article class="benefit-item">
-
-                    <span>01</span>
-
-                    <h3>
-                        At Your Home
-                    </h3>
-
-                    <p>
-
-                        Enjoy the convenience of having your
-                        vehicle professionally detailed right
-                        outside your home while you relax,
-                        work, or handle your day.
-
-                    </p>
-
-                </article>
-
-                <article class="benefit-item">
-
-                    <span>02</span>
-
-                    <h3>
-                        At Your Workplace
-                    </h3>
-
-                    <p>
-
-                        Make better use of your time by having
-                        your vehicle detailed while you're
-                        working, subject to property rules and
-                        service access.
-
-                    </p>
-
-                </article>
-
-                <article class="benefit-item">
-
-                    <span>03</span>
-
-                    <h3>
-                        At A Convenient Location
-                    </h3>
-
-                    <p>
-
-                        Have another suitable location in mind?
-                        Tell us where the vehicle will be parked
-                        and we'll confirm whether we can perform
-                        the service there.
-
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-        <!-- =================================================
-             LOCATION & SETUP
-        ================================================== -->
-
-        <section class="service-area-setup">
-
-            <article class="service-area-setup-card">
-
-                <p class="eyebrow">
-                    BEFORE YOUR APPOINTMENT
-                </p>
-
-                <h3>
-                    What We Need From You
-                </h3>
-
                 <p>
-
-                    We'll confirm the service location and
-                    setup requirements before your appointment
-                    so our arrival is smooth and your detail
-                    can begin without unnecessary delays.
-
-                </p>
-
-                <ul>
-
-                    <li>
-                        Safe and accessible vehicle location
-                    </li>
-
-                    <li>
-                        Adequate working space around the vehicle
-                    </li>
-
-                    <li>
-                        Water access when required
-                    </li>
-
-                    <li>
-                        Power access when required
-                    </li>
-
-                </ul>
-
-            </article>
-
-            <article class="service-area-setup-card">
-
-                <p class="eyebrow">
-                    WHERE WE CAN WORK
-                </p>
-
-                <h3>
-                    Your Location. Our Setup.
-                </h3>
-
-                <p>
-
-                    We can work at a variety of locations as
-                    long as the property, parking situation,
-                    and applicable local rules allow mobile
-                    detailing to be performed there.
-
-                </p>
-
-                <ul>
-
-                    <li>
-                        Home driveways
-                    </li>
-
-                    <li>
-                        Apartment or condo locations
-                    </li>
-
-                    <li>
-                        Workplace locations
-                    </li>
-
-                    <li>
-                        Suitable private locations
-                    </li>
-
-                </ul>
-
-            </article>
-
-        </section>
-
-        <!-- =================================================
-             LOCAL SERVICE EXPERIENCE
-        ================================================== -->
-
-        <section class="service-area-local">
-
-            <div class="service-area-local-heading">
-
-                <p class="eyebrow">
-                    PREMIUM DETAILING NEAR YOU
-                </p>
-
-                <h2>
-
-                    Professional Vehicle Care
-
-                    <span class="gold-text">
-                        Where Life Happens.
-                    </span>
-
-                </h2>
-
-            </div>
-
-            <div class="service-area-local-grid">
-
-                <article class="service-area-local-card">
-
-                    <h3>
-                        East Bay Mobile Detailing
-                    </h3>
-
-                    <p>
-
-                        From Alameda and Oakland to San Leandro,
-                        Berkeley, Emeryville, Hayward, and nearby
-                        communities, Enhance My Ride brings
-                        professional mobile detailing directly
-                        to your location.
-
-                    </p>
-
-                </article>
-
-                <article class="service-area-local-card">
-
-                    <h3>
-                        San Francisco Mobile Detailing
-                    </h3>
-
-                    <p>
-
-                        Enjoy premium mobile vehicle care without
-                        spending your day driving to and from a
-                        detailing shop. We bring the service to
-                        suitable locations throughout San Francisco.
-
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-        <!-- =================================================
-             OUTSIDE CORE AREA
-        ================================================== -->
-
-        <section class="service-area-secondary">
-
-            <div>
-
-                <p class="eyebrow">
-                    OUTSIDE OUR CORE AREA?
-                </p>
-
-                <h2>
-
-                    Don't See Your City?
-
-                    <span class="gold-text">
-                        Let's Talk.
-                    </span>
-
-                </h2>
-
-            </div>
-
-            <div>
-
-                <p>
-
-                    Your location may still be within reach.
-                    We may be able to travel beyond our core
-                    service area depending on distance,
-                    availability, vehicle type, and the
-                    services you're requesting.
-
-                </p>
-
-                <p>
-
-                    Include your city or ZIP code when
-                    booking your appointment and we'll
-                    confirm whether we can bring Enhance
-                    My Ride to you.
-
+                    Choose your service and request your
+                    appointment today.
                 </p>
 
                 <a
@@ -1566,197 +849,168 @@
 
         </section>
 
-        <!-- =================================================
-             FINAL CTA
-        ================================================== -->
+    </main>
 
-        <section class="service-area-cta">
 
-            <p class="eyebrow">
-                READY WHEN YOU ARE
-            </p>
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
 
-            <h2>
+    <footer class="site-footer">
 
-                Your Vehicle.
+        <div class="container footer-grid">
 
-                <span class="gold-text">
-                    Our Expertise.
-                </span>
 
-            </h2>
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+
+                    <span class="logo-main">
+                        ENHANCE MY RIDE
+                    </span>
+
+                    <span class="logo-sub">
+                        AUTO SPA & MOBILE DETAILING
+                    </span>
+
+                </a>
+
+                <p>
+                    Premium mobile detailing throughout
+                    the San Francisco Bay Area.
+                </p>
+
+            </div>
+
+
+            <!-- EXPLORE -->
+
+            <div class="footer-links">
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="book-now.html">
+                    Book Now
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="service-area.html">
+                    Service Area
+                </a>
+
+            </div>
+
+
+            <!-- CONNECT -->
+
+            <div class="footer-links">
+
+                <h4>
+                    Connect
+                </h4>
+
+                <a href="book-now.html">
+                    Book Now
+                </a>
+
+                <a href="tel:+13233271806">
+                    (323) 327-1806
+                </a>
+
+                <a href="mailto:info@enhancemyride.com">
+                    info@enhancemyride.com
+                </a>
+
+                <a
+                    href="https://www.instagram.com/enhancemyridemobiledetailing/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+
+                <a
+                    href="https://www.tiktok.com/@enhancemyride"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    TikTok
+                </a>
+
+                <a
+                    href="https://www.youtube.com/@enhancemyridemobiledetailing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    YouTube
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
 
             <p>
-
-                Tell us where your vehicle is located,
-                what you'd like enhanced, and when you'd
-                like us to come out. We'll take it from there.
-
-            </p>
-
-            <a
-                href="book-now.html"
-                class="btn btn-primary"
-            >
-                Book Now
-            </a>
-
-        </section>
-
-    </div>
-
-</section>
-
-</main>
-
-<!-- =====================================================
-     FOOTER
-====================================================== -->
-
-<footer class="site-footer">
-
-    <div class="container footer-grid">
-
-        <div class="footer-brand">
-
-            <a
-                href="index.html"
-                class="logo"
-            >
-
-                <span class="logo-main">
-                    ENHANCE MY RIDE
-                </span>
-
-                <span class="logo-sub">
-                    AUTO SPA & MOBILE DETAILING
-                </span>
-
-            </a>
-
-            <p>
-
-                Premium mobile detailing delivered throughout
-                Alameda, Contra Costa, Marin, Napa, San Francisco,
-                San Mateo, Santa Clara, Solano, Sonoma, and
-                surrounding Bay Area communities.
-
+                © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
+                All rights reserved.
             </p>
 
         </div>
 
-        <div class="footer-links">
+    </footer>
 
-            <h4>
-                Explore
-            </h4>
 
-            <a href="index.html">
-                Home
-            </a>
+    <!-- =====================================================
+         FLOATING CALL BUTTON
+         ===================================================== -->
 
-            <a href="gallery.html">
-                Gallery
-            </a>
+    <a
+        href="tel:+13233271806"
+        class="mobile-call-button"
+        aria-label="Call Enhance My Ride"
+    >
 
-            <a href="services.html">
-                Services
-            </a>
+        <span class="call-icon">
+            ☎
+        </span>
 
-            <a href="book-now.html">
-                Book Now
-            </a>
+        <span>
+            CALL
+        </span>
 
-            <a href="about.html">
-                About
-            </a>
+    </a>
 
-            <a href="service-area.html">
-                Service Area
-            </a>
 
-        </div>
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
 
-        <div class="footer-links">
-
-            <h4>
-                Connect
-            </h4>
-
-            <a href="book-now.html">
-                Book Now
-            </a>
-
-            <a href="tel:+13233271806">
-                (323) 327-1806
-            </a>
-
-            <a href="mailto:info@enhancemyride.com">
-                info@enhancemyride.com
-            </a>
-
-            <a
-                href="https://www.instagram.com/enhancemyridemobiledetailing/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Instagram
-            </a>
-
-            <a
-                href="https://www.tiktok.com/@enhancemyride"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                TikTok
-            </a>
-
-            <a
-                href="https://www.youtube.com/@enhancemyridemobiledetailing"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                YouTube
-            </a>
-
-        </div>
-
-    </div>
-
-    <div class="container footer-bottom">
-
-        <p>
-
-            © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
-            All rights reserved.
-
-        </p>
-
-    </div>
-
-</footer>
-
-<!-- =====================================================
-     FLOATING MOBILE CALL BUTTON
-====================================================== -->
-
-<a
-    href="tel:+13233271806"
-    class="mobile-call-button"
-    aria-label="Call Enhance My Ride"
->
-
-    <span class="call-icon">
-        ☎
-    </span>
-
-    <span>
-        CALL
-    </span>
-
-</a>
-
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>
