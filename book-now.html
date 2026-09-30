@@ -3,22 +3,6 @@
 
 <head>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18449761533"></script>
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'AW-18449761533');
-    </script>
-
-
     <meta charset="UTF-8">
 
     <meta
@@ -27,12 +11,12 @@
     >
 
     <title>
-        Book Now | Enhance My Ride Auto Spa & Mobile Detailing
+        Book Mobile Detailing | Enhance My Ride
     </title>
 
     <meta
         name="description"
-        content="Book your mobile detailing appointment with Enhance My Ride. Choose your detailing package, add the services your vehicle needs, and select your appointment time."
+        content="Book your mobile detailing appointment with Enhance My Ride Auto Spa & Mobile Detailing."
     >
 
     <meta
@@ -46,6 +30,11 @@
     >
 
     <link
+        rel="canonical"
+        href="https://enhancemyride.com/book-now.html"
+    >
+
+    <link
         rel="stylesheet"
         href="css/style.css"
     >
@@ -53,700 +42,182 @@
 
     <style>
 
-        /* =====================================================
-           BOOK NOW PAGE
-        ===================================================== */
-
         .booking-hero {
-            min-height: 52vh;
+            min-height: 48vh;
 
             display: flex;
             align-items: center;
 
             background:
                 radial-gradient(
-                    circle at 75% 50%,
-                    rgba(212,175,55,.12),
+                    circle at 78% 45%,
+                    rgba(212,175,55,.13),
                     transparent 38%
                 ),
                 #050505;
         }
 
-
-        .booking-hero .page-hero-content {
-            max-width: 850px;
-        }
-
-
         .booking-hero h1 {
             max-width: 850px;
-
-            margin-bottom: 0;
-
-            font-size:
-                clamp(3.4rem, 7vw, 6.3rem);
-
-            line-height: .92;
+            margin: 0;
+            font-size: clamp(3.4rem,7vw,6.4rem);
+            line-height: .9;
         }
-
 
         .booking-hero h1 span {
             display: block;
-
             color: #d4af37;
         }
 
-
-        .booking-hero .page-hero-content > p:last-child {
-            max-width: 620px;
-
-            margin-top: 25px;
-
-            color:
-                rgba(255,255,255,.58);
-
-            font-size: 1.05rem;
-
-            line-height: 1.75;
+        .booking-hero p:last-child {
+            max-width: 650px;
+            margin-top: 28px;
+            color: rgba(255,255,255,.6);
+            line-height: 1.8;
         }
 
-
-
-        /* =====================================================
-           BOOKING SECTION
-        ===================================================== */
 
         .booking-section {
-            padding-top: 90px;
-            padding-bottom: 100px;
+            padding: 90px 0 110px;
         }
-
-
-        .booking-shell {
-            max-width: 1150px;
-
-            margin: 0 auto;
-        }
-
-
-
-        /* =====================================================
-           INTRO
-        ===================================================== */
 
         .booking-intro {
-            max-width: 760px;
-
+            max-width: 700px;
             margin-bottom: 45px;
         }
 
-
         .booking-intro h2 {
-            margin: 0 0 18px;
-
-            font-size:
-                clamp(2.5rem, 5vw, 4.5rem);
-
-            line-height: .98;
+            margin: 0;
+            font-size: clamp(2.5rem,5vw,4.5rem);
+            line-height: .95;
         }
 
-
         .booking-intro p:last-child {
-            max-width: 650px;
-
-            margin: 0;
-
-            color:
-                rgba(255,255,255,.48);
-
-            font-size: .95rem;
-
+            margin-top: 20px;
+            color: rgba(255,255,255,.5);
             line-height: 1.75;
         }
 
 
-
-        /* =====================================================
-           BOOKING CARD
-        ===================================================== */
-
-        .booking-card {
-            overflow: hidden;
-
-            border:
-                1px solid
-                rgba(212,175,55,.22);
-
-            background:
-                #090909;
-
-            box-shadow:
-                0 35px 100px
-                rgba(0,0,0,.28);
-        }
-
-
-        .booking-card-header {
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 25px;
-
-            padding:
-                30px 35px;
-
-            border-bottom:
-                1px solid
-                rgba(255,255,255,.07);
-
-            background:
-                radial-gradient(
-                    circle at top right,
-                    rgba(212,175,55,.07),
-                    transparent 40%
-                );
-        }
-
-
-        .booking-card-header h3 {
-            margin: 5px 0 0;
-
-            color: #fff;
-
-            font-size: 1.55rem;
-        }
-
-
-        .booking-card-header p:last-child {
-            margin: 0;
-
-            color:
-                rgba(255,255,255,.4);
-
-            font-size: .75rem;
-        }
-
-
-        .booking-badge {
-            flex-shrink: 0;
-
-            padding:
-                9px 13px;
-
-            border:
-                1px solid
-                rgba(212,175,55,.3);
-
-            color: #d4af37;
-
-            font-size: .62rem;
-
-            font-weight: 800;
-
-            letter-spacing: .13em;
-
-            text-transform: uppercase;
-        }
-
-
-
-        /* =====================================================
-           SETMORE
-        ===================================================== */
-
         .booking-frame {
-            width: 100%;
+            overflow: hidden;
+            min-height: 850px;
 
-            min-height: 950px;
+            border:
+                1px solid
+                rgba(212,175,55,.2);
 
-            background: #fff;
+            background: #090909;
+            box-shadow: 0 25px 80px rgba(0,0,0,.3);
         }
-
 
         .booking-frame iframe {
             display: block;
-
             width: 100%;
-
-            height: 950px;
-
-            min-height: 950px;
-
+            min-height: 850px;
             border: 0;
-
-            background: #fff;
         }
 
 
-
-        /* =====================================================
-           BOOKING INSTRUCTIONS
-        ===================================================== */
-
-        .booking-instructions {
+        .booking-steps {
             display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 1px;
 
-            grid-template-columns:
-                repeat(3, 1fr);
+            margin-top: 30px;
 
-            border-top:
+            border:
                 1px solid
                 rgba(255,255,255,.08);
 
             background:
-                rgba(255,255,255,.03);
-        }
-
-
-        .booking-instruction {
-            min-height: 180px;
-
-            padding: 28px;
-
-            border-right:
-                1px solid
                 rgba(255,255,255,.08);
         }
 
-
-        .booking-instruction:last-child {
-            border-right: 0;
+        .booking-step {
+            padding: 28px;
+            background: #090909;
         }
 
-
-        .booking-instruction-number {
+        .booking-step-number {
             display: block;
-
-            margin-bottom: 35px;
-
+            margin-bottom: 20px;
             color: #d4af37;
-
-            font-size: .65rem;
-
+            font-size: 10px;
             font-weight: 800;
-
             letter-spacing: .15em;
         }
 
-
-        .booking-instruction h3 {
-            margin: 0 0 8px;
-
-            color: #fff;
-
-            font-size: 1rem;
+        .booking-step h3 {
+            margin-bottom: 8px;
         }
 
-
-        .booking-instruction p {
+        .booking-step p {
             margin: 0;
-
-            color:
-                rgba(255,255,255,.4);
-
-            font-size: .76rem;
-
-            line-height: 1.65;
+            color: rgba(255,255,255,.45);
+            font-size: .82rem;
+            line-height: 1.7;
         }
 
-
-
-        /* =====================================================
-           BOOKING NOTE
-        ===================================================== */
 
         .booking-note {
-            display: flex;
-
-            align-items: flex-start;
-
-            gap: 15px;
-
-            margin-top: 25px;
-
-            padding: 20px 22px;
-
-            border-left:
-                2px solid
-                #d4af37;
-
-            background:
-                rgba(212,175,55,.045);
-        }
-
-
-        .booking-note-icon {
-            flex-shrink: 0;
-
-            color: #d4af37;
-
-            font-weight: 800;
-        }
-
-
-        .booking-note p {
-            margin: 0;
-
-            color:
-                rgba(255,255,255,.43);
-
-            font-size: .75rem;
-
-            line-height: 1.7;
-        }
-
-
-
-        /* =====================================================
-           PRICING NOTE
-        ===================================================== */
-
-        .booking-pricing {
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 25px;
-
-            margin-top: 18px;
-
-            padding: 20px 22px;
-
-            border:
-                1px solid
-                rgba(212,175,55,.14);
-
-            background:
-                rgba(212,175,55,.025);
-        }
-
-
-        .booking-pricing strong {
-            flex-shrink: 0;
-
-            color: #d4af37;
-
-            font-size: 1.05rem;
-        }
-
-
-        .booking-pricing span {
-            color:
-                rgba(255,255,255,.4);
-
-            font-size: .72rem;
-
-            line-height: 1.55;
-        }
-
-
-
-        /* =====================================================
-           CUSTOM SERVICE
-        ===================================================== */
-
-        .custom-service {
-            display: grid;
-
-            grid-template-columns:
-                1fr auto;
-
-            align-items: center;
-
-            gap: 30px;
-
-            margin-top: 70px;
-
-            padding:
-                38px;
+            max-width: 850px;
+            margin: 30px auto 0;
+            padding: 22px 25px;
 
             border:
                 1px solid
                 rgba(255,255,255,.08);
 
-            background:
-                #090909;
-        }
-
-
-        .custom-service h2 {
-            margin: 0 0 10px;
-
-            font-size:
-                clamp(2rem, 4vw, 3.3rem);
-
-            line-height: 1;
-        }
-
-
-        .custom-service p {
-            max-width: 650px;
-
-            margin: 0;
-
-            color:
-                rgba(255,255,255,.43);
-
-            font-size: .82rem;
-
-            line-height: 1.7;
-        }
-
-
-        .custom-service .btn {
-            white-space: nowrap;
-        }
-
-
-
-        /* =====================================================
-           CONTACT
-        ===================================================== */
-
-        .booking-contact {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 1px;
-
-            margin-top: 70px;
-
-            border:
-                1px solid
-                rgba(255,255,255,.08);
-
-            background:
-                rgba(255,255,255,.08);
-        }
-
-
-        .booking-contact-item {
-            padding: 25px;
-
-            background:
-                #090909;
-        }
-
-
-        .booking-contact-item span {
-            display: block;
-
-            margin-bottom: 8px;
-
-            color: #d4af37;
-
-            font-size: .58rem;
-
-            font-weight: 800;
-
-            letter-spacing: .16em;
-        }
-
-
-        .booking-contact-item a {
-            color: #fff;
-
-            font-size: .9rem;
-
-            text-decoration: none;
-        }
-
-
-        .booking-contact-item a:hover {
-            color: #d4af37;
-        }
-
-
-
-        /* =====================================================
-           FINAL CTA
-        ===================================================== */
-
-        .booking-final {
-            margin-top: 90px;
-
-            padding:
-                90px 25px;
-
-            border-top:
-                1px solid
-                rgba(212,175,55,.15);
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(212,175,55,.09),
-                    transparent 55%
-                );
-
-            text-align: center;
-        }
-
-
-        .booking-final h2 {
-            max-width: 800px;
-
-            margin:
-                0 auto 18px;
-
-            font-size:
-                clamp(2.7rem, 5vw, 5rem);
-
-            line-height: .96;
-        }
-
-
-        .booking-final p {
-            margin: 0;
+            background: #090909;
 
             color:
                 rgba(255,255,255,.45);
 
-            font-size: .9rem;
+            font-size: .8rem;
+            line-height: 1.7;
+            text-align: center;
         }
 
 
+        .booking-contact {
+            margin-top: 40px;
+            text-align: center;
+        }
 
-        /* =====================================================
-           TABLET
-        ===================================================== */
+        .booking-contact p {
+            margin-bottom: 10px;
+            color: rgba(255,255,255,.4);
+            font-size: .8rem;
+        }
 
-        @media (max-width: 850px) {
-
-            .booking-instructions {
-                grid-template-columns:
-                    1fr;
-            }
-
-
-            .booking-instruction {
-                min-height: auto;
-
-                border-right: 0;
-
-                border-bottom:
-                    1px solid
-                    rgba(255,255,255,.08);
-            }
-
-
-            .booking-instruction:last-child {
-                border-bottom: 0;
-            }
-
-
-            .custom-service {
-                grid-template-columns: 1fr;
-            }
-
-
-            .custom-service .btn {
-                width: fit-content;
-            }
-
+        .booking-contact a {
+            color: #d4af37;
+            font-weight: 700;
         }
 
 
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
-
-        @media (max-width: 650px) {
+        @media (max-width: 700px) {
 
             .booking-hero {
-                min-height: 47vh;
+                min-height: 45vh;
             }
-
 
             .booking-hero h1 {
-                font-size:
-                    clamp(3rem, 14vw, 4.6rem);
+                font-size: clamp(3.1rem,14vw,5rem);
             }
-
 
             .booking-section {
-                padding-top: 70px;
-
-                padding-bottom: 75px;
+                padding: 70px 0 85px;
             }
 
-
-            .booking-card-header {
-                align-items: flex-start;
-
-                flex-direction: column;
-
-                padding:
-                    25px 22px;
-            }
-
-
-            .booking-frame {
-                min-height: 1000px;
-            }
-
-
+            .booking-frame,
             .booking-frame iframe {
-                height: 1000px;
-
-                min-height: 1000px;
+                min-height: 760px;
             }
 
-
-            .booking-note {
-                padding:
-                    17px;
-            }
-
-
-            .booking-pricing {
-                align-items: flex-start;
-
-                flex-direction: column;
-
-                gap: 8px;
-            }
-
-
-            .custom-service {
-                margin-top: 55px;
-
-                padding:
-                    30px 23px;
-            }
-
-
-            .custom-service .btn {
-                width: 100%;
-            }
-
-
-            .booking-contact {
+            .booking-steps {
                 grid-template-columns: 1fr;
-
-                margin-top: 55px;
-            }
-
-
-            .booking-contact-item {
-                padding:
-                    22px;
-            }
-
-
-            .booking-final {
-                margin-top: 65px;
-
-                padding:
-                    70px 20px;
             }
 
         }
@@ -759,461 +230,15 @@
 <body>
 
 
-<!-- =====================================================
-     HEADER
-====================================================== -->
+    <header class="site-header">
 
-<header class="site-header">
-
-    <div class="container nav-container">
-
-        <a
-            href="index.html"
-            class="logo"
-            aria-label="Enhance My Ride home"
-        >
-
-            <span class="logo-main">
-                ENHANCE MY RIDE
-            </span>
-
-            <span class="logo-sub">
-                AUTO SPA & MOBILE DETAILING
-            </span>
-
-        </a>
-
-
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-
-        <nav
-            class="main-nav"
-            id="mainNav"
-            aria-label="Main navigation"
-        >
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="gallery.html">
-                Gallery
-            </a>
-
-            <a href="services.html">
-                Services
-            </a>
-
-            <a
-                href="book-now.html"
-                class="active"
-                aria-current="page"
-            >
-                Book Now
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="service-area.html">
-                Service Area
-            </a>
-
-        </nav>
-
-    </div>
-
-</header>
-
-
-
-<!-- =====================================================
-     MAIN
-====================================================== -->
-
-<main>
-
-
-    <!-- =================================================
-         HERO
-    ================================================== -->
-
-    <section class="page-hero booking-hero">
-
-        <div class="container page-hero-content">
-
-            <p class="eyebrow">
-                BOOK YOUR ENHANCE EXPERIENCE
-            </p>
-
-            <h1>
-
-                Let's Enhance
-
-                <span>
-                    Your Ride.
-                </span>
-
-            </h1>
-
-            <p>
-                Choose your detailing package, add the services
-                your vehicle needs, and select your appointment time.
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =================================================
-         BOOKING
-    ================================================== -->
-
-    <section class="section booking-section">
-
-        <div class="container">
-
-            <div class="booking-shell">
-
-
-                <!-- =========================================
-                     INTRO
-                ========================================== -->
-
-                <div class="booking-intro">
-
-                    <p class="eyebrow">
-                        SIMPLE BOOKING
-                    </p>
-
-                    <h2>
-                        Build Your
-                        <span class="gold-text">
-                            Detail.
-                        </span>
-                    </h2>
-
-                    <p>
-                        Start with a detailing package, then add any
-                        additional services you'd like performed during
-                        the same appointment.
-                    </p>
-
-                </div>
-
-
-
-                <!-- =========================================
-                     BOOKING CARD
-                ========================================== -->
-
-                <div class="booking-card">
-
-
-                    <div class="booking-card-header">
-
-                        <div>
-
-                            <p class="eyebrow">
-                                ENHANCE MY RIDE
-                            </p>
-
-                            <h3>
-                                Choose Your Services
-                            </h3>
-
-                            <p>
-                                Select a package, then add any extras you need.
-                            </p>
-
-                        </div>
-
-
-                        <div class="booking-badge">
-                            Mobile Service
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- =====================================
-                         SETMORE BOOKING
-                    ====================================== -->
-
-                    <div class="booking-frame">
-
-                        <iframe
-                            src="https://enhancemyridemobiledetailing.setmore.com"
-                            width="100%"
-                            height="950"
-                            frameborder="0"
-                            scrolling="yes"
-                            allow="web-share"
-                            title="Enhance My Ride online booking"
-                            loading="lazy"
-                        ></iframe>
-
-                    </div>
-
-
-
-                    <!-- =====================================
-                         BOOKING STEPS
-                    ====================================== -->
-
-                    <div class="booking-instructions">
-
-
-                        <div class="booking-instruction">
-
-                            <span class="booking-instruction-number">
-                                01
-                            </span>
-
-                            <h3>
-                                Choose a Package
-                            </h3>
-
-                            <p>
-                                Start with Enhance Gold, Enhance Black Label,
-                                or Showroom Edition.
-                            </p>
-
-                        </div>
-
-
-                        <div class="booking-instruction">
-
-                            <span class="booking-instruction-number">
-                                02
-                            </span>
-
-                            <h3>
-                                Add What You Need
-                            </h3>
-
-                            <p>
-                                Add available services such as wheel polishing,
-                                pet hair removal, or other upgrades to the same booking.
-                            </p>
-
-                        </div>
-
-
-                        <div class="booking-instruction">
-
-                            <span class="booking-instruction-number">
-                                03
-                            </span>
-
-                            <h3>
-                                Choose Your Time
-                            </h3>
-
-                            <p>
-                                Select an available appointment and complete
-                                your contact and vehicle information.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =========================================
-                     PRICING NOTE
-                ========================================== -->
-
-                <div class="booking-pricing">
-
-                    <strong>
-                        Packages start at $149
-                    </strong>
-
-                    <span>
-                        Final pricing may vary based on vehicle size,
-                        condition, pet hair, stains, excessive buildup,
-                        and requested services.
-                    </span>
-
-                </div>
-
-
-
-                <!-- =========================================
-                     BOOKING NOTE
-                ========================================== -->
-
-                <div class="booking-note">
-
-                    <span class="booking-note-icon">
-                        ✓
-                    </span>
-
-                    <p>
-                        Need a specialty service that isn't available
-                        as an online add-on? Call or text us before booking.
-                        We'll help determine the appropriate service and pricing
-                        for your vehicle.
-                    </p>
-
-                </div>
-
-
-
-                <!-- =========================================
-                     CUSTOM SERVICE
-                ========================================== -->
-
-                <section class="custom-service">
-
-                    <div>
-
-                        <p class="eyebrow">
-                            CUSTOM REQUEST
-                        </p>
-
-                        <h2>
-                            Need Something
-                            <span class="gold-text">
-                                Specific?
-                            </span>
-                        </h2>
-
-                        <p>
-                            Ask about specialty work including headlight
-                            restoration, trim restoration, engine bay detailing,
-                            odor treatment, heavy soil treatment, and other
-                            vehicle-specific services.
-                        </p>
-
-                    </div>
-
-
-                    <div>
-
-                        <a
-                            href="tel:+13233271806"
-                            class="btn btn-secondary"
-                        >
-                            Call or Text
-                        </a>
-
-                    </div>
-
-                </section>
-
-
-
-                <!-- =========================================
-                     CONTACT
-                ========================================== -->
-
-                <div class="booking-contact">
-
-
-                    <div class="booking-contact-item">
-
-                        <span>
-                            CALL OR TEXT
-                        </span>
-
-                        <a href="tel:+13233271806">
-                            (323) 327-1806
-                        </a>
-
-                    </div>
-
-
-                    <div class="booking-contact-item">
-
-                        <span>
-                            EMAIL
-                        </span>
-
-                        <a href="mailto:info@enhancemyride.com">
-                            info@enhancemyride.com
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =========================================
-                     FINAL
-                ========================================== -->
-
-                <section class="booking-final">
-
-                    <p class="eyebrow">
-                        ENHANCE MY RIDE
-                    </p>
-
-                    <h2>
-                        We Come To You.
-                        <span class="gold-text">
-                            You Relax.
-                        </span>
-                    </h2>
-
-                    <p>
-                        Choose your services and reserve your appointment.
-                    </p>
-
-                </section>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-
-<!-- =====================================================
-     FOOTER
-====================================================== -->
-
-<footer class="site-footer">
-
-    <div class="container footer-grid">
-
-
-        <!-- FOOTER BRAND -->
-
-        <div class="footer-brand">
+        <div class="container nav-container">
 
             <a
                 href="index.html"
                 class="logo"
                 aria-label="Enhance My Ride home"
             >
-
                 <span class="logo-main">
                     ENHANCE MY RIDE
                 </span>
@@ -1221,144 +246,326 @@
                 <span class="logo-sub">
                     AUTO SPA & MOBILE DETAILING
                 </span>
-
             </a>
 
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <nav
+                class="main-nav"
+                id="mainNav"
+                aria-label="Main navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a
+                    href="book-now.html"
+                    class="nav-cta active"
+                    aria-current="page"
+                >
+                    Book Now
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="service-area.html">
+                    Service Area
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <section class="page-hero booking-hero">
+
+            <div class="container page-hero-content">
+
+                <p class="eyebrow">
+                    BOOK YOUR DETAIL
+                </p>
+
+                <h1>
+                    Let's Enhance
+                    <span>
+                        Your Ride.
+                    </span>
+                </h1>
+
+                <p>
+                    Choose your package, add any services you need,
+                    and select your preferred appointment time.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="booking-section">
+
+            <div class="container">
+
+
+                <div class="booking-intro">
+
+                    <p class="eyebrow">
+                        BUILD YOUR DETAIL
+                    </p>
+
+                    <h2>
+                        Your Appointment
+                        <span class="gold-text">
+                            Starts Here.
+                        </span>
+                    </h2>
+
+                    <p>
+                        Select your service through the booking system below.
+                        Packages and available add-ons can be combined when
+                        the booking system is configured to allow multiple
+                        services per appointment.
+                    </p>
+
+                </div>
+
+
+                <div class="booking-frame">
+
+                    <iframe
+                        src="https://enhancemyridemobiledetailing.setmore.com"
+                        title="Enhance My Ride online booking"
+                        loading="lazy"
+                    ></iframe>
+
+                </div>
+
+
+                <div class="booking-steps">
+
+                    <article class="booking-step">
+
+                        <span class="booking-step-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Choose A Package
+                        </h3>
+
+                        <p>
+                            Select Gold, Black Label,
+                            or Showroom Edition.
+                        </p>
+
+                    </article>
+
+
+                    <article class="booking-step">
+
+                        <span class="booking-step-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Add What You Need
+                        </h3>
+
+                        <p>
+                            Select available add-ons for
+                            your vehicle and requested service.
+                        </p>
+
+                    </article>
+
+
+                    <article class="booking-step">
+
+                        <span class="booking-step-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Choose Your Time
+                        </h3>
+
+                        <p>
+                            Select an available appointment
+                            that works for you.
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <div class="booking-note">
+                    Packages start at $149. Final pricing may vary
+                    based on vehicle size, condition, pet hair, stains,
+                    and requested services.
+                </div>
+
+
+                <div class="booking-contact">
+
+                    <p>
+                        Need something custom?
+                    </p>
+
+                    <a href="tel:+13233271806">
+                        Call / Text (323) 327-1806
+                    </a>
+
+                    <br>
+
+                    <a href="mailto:info@enhancemyride.com">
+                        info@enhancemyride.com
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+
+                    <span class="logo-main">
+                        ENHANCE MY RIDE
+                    </span>
+
+                    <span class="logo-sub">
+                        AUTO SPA & MOBILE DETAILING
+                    </span>
+
+                </a>
+
+                <p>
+                    Premium mobile detailing throughout
+                    the San Francisco Bay Area.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Explore</h4>
+
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="services.html">Services</a>
+                <a href="book-now.html">Book Now</a>
+                <a href="about.html">About</a>
+                <a href="service-area.html">Service Area</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Connect</h4>
+
+                <a href="book-now.html">Book Now</a>
+
+                <a href="tel:+13233271806">
+                    (323) 327-1806
+                </a>
+
+                <a href="mailto:info@enhancemyride.com">
+                    info@enhancemyride.com
+                </a>
+
+                <a
+                    href="https://www.instagram.com/enhancemyridemobiledetailing/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+
+                <a
+                    href="https://www.tiktok.com/@enhancemyride"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    TikTok
+                </a>
+
+                <a
+                    href="https://www.youtube.com/@enhancemyridemobiledetailing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    YouTube
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
             <p>
-                Premium mobile detailing brought directly to you
-                throughout the Bay Area.
+                © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
+                All rights reserved.
             </p>
 
         </div>
 
+    </footer>
 
 
-        <!-- FOOTER NAV -->
-
-        <div class="footer-links">
-
-            <h4>
-                Explore
-            </h4>
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="gallery.html">
-                Gallery
-            </a>
-
-            <a href="services.html">
-                Services
-            </a>
-
-            <a href="book-now.html">
-                Book Now
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="service-area.html">
-                Service Area
-            </a>
-
-        </div>
+    <a
+        href="tel:+13233271806"
+        class="mobile-call-button"
+        aria-label="Call Enhance My Ride"
+    >
+        <span class="call-icon">☎</span>
+        <span>CALL</span>
+    </a>
 
 
-
-        <!-- FOOTER CONTACT -->
-
-        <div class="footer-links">
-
-            <h4>
-                Connect
-            </h4>
-
-            <a href="tel:+13233271806">
-                (323) 327-1806
-            </a>
-
-            <a href="mailto:info@enhancemyride.com">
-                info@enhancemyride.com
-            </a>
-
-            <a
-                href="https://www.instagram.com/enhancemyridemobiledetailing/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Instagram
-            </a>
-
-            <a
-                href="https://www.tiktok.com/@enhancemyride"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                TikTok
-            </a>
-
-            <a
-                href="https://www.youtube.com/@enhancemyridemobiledetailing"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                YouTube
-            </a>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- COPYRIGHT -->
-
-    <div class="container footer-bottom">
-
-        <p>
-            © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
-            All rights reserved.
-        </p>
-
-    </div>
-
-</footer>
-
-
-
-<!-- =====================================================
-     FLOATING MOBILE CALL BUTTON
-====================================================== -->
-
-<a
-    href="tel:+13233271806"
-    class="mobile-call-button"
-    aria-label="Call Enhance My Ride"
->
-
-    <span class="call-icon">
-        ☎
-    </span>
-
-    <span>
-        CALL
-    </span>
-
-</a>
-
-
-
-<!-- =====================================================
-     SITE JAVASCRIPT
-====================================================== -->
-
-<script src="js/script.js"></script>
-
+    <script src="js/script.js"></script>
 
 </body>
-
 </html>
