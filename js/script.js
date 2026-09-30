@@ -7,7 +7,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
-       MOBILE DROPDOWN / HAMBURGER MENU
+       MOBILE NAVIGATION
        ===================================================== */
 
     const menuToggle = document.getElementById("menuToggle");
@@ -15,109 +15,153 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (menuToggle && mainNav) {
 
-        menuToggle.addEventListener("click", function (event) {
+        function openMenu() {
 
-            event.preventDefault();
-            event.stopPropagation();
-
-            menuToggle.classList.toggle("active");
-            mainNav.classList.toggle("active");
-
-            const isOpen =
-                mainNav.classList.contains("active");
+            mainNav.classList.add("active");
+            menuToggle.classList.add("active");
 
             menuToggle.setAttribute(
                 "aria-expanded",
-                isOpen ? "true" : "false"
+                "true"
             );
 
             menuToggle.setAttribute(
                 "aria-label",
-                isOpen
-                    ? "Close navigation menu"
-                    : "Open navigation menu"
+                "Close navigation menu"
             );
 
-        });
+        }
 
 
-        /* Close menu after clicking a link */
+        function closeMenu() {
+
+            mainNav.classList.remove("active");
+            menuToggle.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+        }
+
+
+        function toggleMenu(event) {
+
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+
+            const isOpen =
+                mainNav.classList.contains("active");
+
+            if (isOpen) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+
+        }
+
+
+        /* =================================================
+           HAMBURGER BUTTON
+           ================================================= */
+
+        menuToggle.addEventListener(
+            "click",
+            toggleMenu
+        );
+
+
+        /* =================================================
+           NAVIGATION LINKS
+           ================================================= */
 
         const navLinks =
             mainNav.querySelectorAll("a");
 
         navLinks.forEach(function (link) {
 
-            link.addEventListener("click", function () {
+            link.addEventListener(
+                "click",
+                function () {
 
-                menuToggle.classList.remove("active");
-                mainNav.classList.remove("active");
+                    closeMenu();
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-
-            });
+                }
+            );
 
         });
 
 
-        /* Close menu when clicking outside */
+        /* =================================================
+           CLICK OUTSIDE MENU
+           ================================================= */
 
-        document.addEventListener("click", function (event) {
+        document.addEventListener(
+            "click",
+            function (event) {
 
-            if (
-                mainNav.classList.contains("active") &&
-                !mainNav.contains(event.target) &&
-                !menuToggle.contains(event.target)
-            ) {
+                if (
+                    !mainNav.classList.contains("active")
+                ) {
+                    return;
+                }
 
-                menuToggle.classList.remove("active");
-                mainNav.classList.remove("active");
+                if (
+                    mainNav.contains(event.target) ||
+                    menuToggle.contains(event.target)
+                ) {
+                    return;
+                }
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
+                closeMenu();
 
             }
+        );
 
-        });
 
+        /* =================================================
+           ESCAPE KEY
+           ================================================= */
 
-        /* Close with Escape */
+        document.addEventListener(
+            "keydown",
+            function (event) {
 
-        document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape") {
 
-            if (event.key === "Escape") {
+                    closeMenu();
 
-                menuToggle.classList.remove("active");
-                mainNav.classList.remove("active");
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
+                }
 
             }
+        );
 
-        });
+
+        /* =================================================
+           RESET WHEN SCREEN SIZE CHANGES
+           ================================================= */
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                if (window.innerWidth > 900) {
+
+                    closeMenu();
+
+                }
+
+            }
+        );
 
     }
 
@@ -134,9 +178,13 @@ document.addEventListener("DOMContentLoaded", function () {
         function updateHeader() {
 
             if (window.scrollY > 20) {
+
                 header.classList.add("scrolled");
+
             } else {
+
                 header.classList.remove("scrolled");
+
             }
 
         }
@@ -146,7 +194,9 @@ document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener(
             "scroll",
             updateHeader,
-            { passive: true }
+            {
+                passive: true
+            }
         );
 
     }
@@ -157,26 +207,40 @@ document.addEventListener("DOMContentLoaded", function () {
        ===================================================== */
 
     const lightbox =
-        document.getElementById("galleryLightbox");
+        document.getElementById(
+            "galleryLightbox"
+        );
 
     const lightboxImage =
-        document.getElementById("lightboxImage");
+        document.getElementById(
+            "lightboxImage"
+        );
 
     const lightboxClose =
-        document.getElementById("lightboxClose");
+        document.getElementById(
+            "lightboxClose"
+        );
 
     const lightboxPrev =
-        document.getElementById("lightboxPrev");
+        document.getElementById(
+            "lightboxPrev"
+        );
 
     const lightboxNext =
-        document.getElementById("lightboxNext");
+        document.getElementById(
+            "lightboxNext"
+        );
 
     const lightboxCounter =
-        document.getElementById("lightboxCounter");
+        document.getElementById(
+            "lightboxCounter"
+        );
 
     const galleryItems =
         Array.from(
-            document.querySelectorAll("[data-lightbox]")
+            document.querySelectorAll(
+                "[data-lightbox]"
+            )
         );
 
 
@@ -189,13 +253,19 @@ document.addEventListener("DOMContentLoaded", function () {
         let currentIndex = 0;
 
 
+        /* =================================================
+           GET IMAGE
+           ================================================= */
+
         function getImage(item) {
 
             if (
                 item.tagName &&
                 item.tagName.toLowerCase() === "img"
             ) {
+
                 return item;
+
             }
 
             return item.querySelector("img");
@@ -203,10 +273,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
+        /* =================================================
+           UPDATE LIGHTBOX
+           ================================================= */
+
         function updateLightbox() {
 
             const item =
                 galleryItems[currentIndex];
+
+            if (!item) {
+                return;
+            }
 
             const image =
                 getImage(item);
@@ -222,6 +300,7 @@ document.addEventListener("DOMContentLoaded", function () {
             lightboxImage.alt =
                 image.alt || "";
 
+
             if (lightboxCounter) {
 
                 lightboxCounter.textContent =
@@ -234,15 +313,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
+        /* =================================================
+           OPEN LIGHTBOX
+           ================================================= */
+
         function openLightbox(index) {
 
             currentIndex =
-                (index + galleryItems.length) %
+                (
+                    index +
+                    galleryItems.length
+                ) %
                 galleryItems.length;
 
             updateLightbox();
 
-            lightbox.classList.add("active");
+            lightbox.classList.add(
+                "active"
+            );
 
             lightbox.setAttribute(
                 "aria-hidden",
@@ -255,9 +343,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
+        /* =================================================
+           CLOSE LIGHTBOX
+           ================================================= */
+
         function closeLightbox() {
 
-            lightbox.classList.remove("active");
+            lightbox.classList.remove(
+                "active"
+            );
 
             lightbox.setAttribute(
                 "aria-hidden",
@@ -272,6 +366,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
+        /* =================================================
+           PREVIOUS IMAGE
+           ================================================= */
+
         function previousImage() {
 
             openLightbox(
@@ -280,6 +378,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
+
+        /* =================================================
+           NEXT IMAGE
+           ================================================= */
 
         function nextImage() {
 
@@ -290,19 +392,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
+        /* =================================================
+           GALLERY ITEMS
+           ================================================= */
+
         galleryItems.forEach(
             function (item, index) {
 
                 item.addEventListener(
                     "click",
                     function () {
+
                         openLightbox(index);
+
                     }
                 );
 
             }
         );
 
+
+        /* =================================================
+           CLOSE BUTTON
+           ================================================= */
 
         if (lightboxClose) {
 
@@ -314,6 +426,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
+        /* =================================================
+           PREVIOUS BUTTON
+           ================================================= */
+
         if (lightboxPrev) {
 
             lightboxPrev.addEventListener(
@@ -323,6 +439,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
+
+        /* =================================================
+           NEXT BUTTON
+           ================================================= */
 
         if (lightboxNext) {
 
@@ -334,6 +454,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
+        /* =================================================
+           CLICK BACKDROP TO CLOSE
+           ================================================= */
+
         lightbox.addEventListener(
             "click",
             function (event) {
@@ -341,12 +465,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (
                     event.target === lightbox
                 ) {
+
                     closeLightbox();
+
                 }
 
             }
         );
 
+
+        /* =================================================
+           LIGHTBOX KEYBOARD CONTROLS
+           ================================================= */
 
         document.addEventListener(
             "keydown",
@@ -357,19 +487,32 @@ document.addEventListener("DOMContentLoaded", function () {
                         "active"
                     )
                 ) {
+
                     return;
+
                 }
+
 
                 if (event.key === "Escape") {
+
                     closeLightbox();
+
+                    return;
+
                 }
+
 
                 if (event.key === "ArrowLeft") {
+
                     previousImage();
+
                 }
 
+
                 if (event.key === "ArrowRight") {
+
                     nextImage();
+
                 }
 
             }
