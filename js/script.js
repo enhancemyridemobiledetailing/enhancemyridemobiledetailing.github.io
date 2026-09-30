@@ -6,19 +6,33 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
+
     /* =====================================================
        MOBILE NAVIGATION
        ===================================================== */
 
-    const menuToggle = document.getElementById("menuToggle");
-    const mainNav = document.getElementById("mainNav");
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const mainNav =
+        document.getElementById("mainNav");
+
+    const siteHeader =
+        document.querySelector(".site-header");
+
 
     if (menuToggle && mainNav) {
 
+
+        /* =================================================
+           OPEN MENU
+           ================================================= */
+
         function openMenu() {
 
-            mainNav.classList.add("active");
             menuToggle.classList.add("active");
+
+            mainNav.classList.add("active");
 
             menuToggle.setAttribute(
                 "aria-expanded",
@@ -30,13 +44,147 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Close navigation menu"
             );
 
+
+            /*
+             * Force the mobile navigation to appear.
+             *
+             * Your stylesheet has multiple older
+             * navigation systems in it, so these inline
+             * !important styles make the active menu
+             * visible without changing the rest of
+             * your website design.
+             */
+
+            if (window.innerWidth <= 900) {
+
+                const headerHeight =
+                    siteHeader
+                        ? siteHeader.getBoundingClientRect().height
+                        : 82;
+
+
+                mainNav.style.setProperty(
+                    "display",
+                    "flex",
+                    "important"
+                );
+
+                mainNav.style.setProperty(
+                    "position",
+                    "fixed",
+                    "important"
+                );
+
+                mainNav.style.setProperty(
+                    "top",
+                    headerHeight + "px",
+                    "important"
+                );
+
+                mainNav.style.setProperty(
+                    "left",
+                    "0",
+                    "important"
+                );
+
+                mainNav.style.setProperty(
+                    "right",
+                    "0",
+                    "important"
+                );
+
+                mainNav.style.setProperty(
+                    "width",
+                    "100%",
+                    "important"
+                );
+
+                mainNav.style.setProperty(
+                    "height",
+                    "auto",
+                    "important"
+                );
+
+                mainNav.style.setProperty(
+                    "max-height",
+                    "calc(100vh - " +
+                    headerHeight +
+                    "px)",
+                    "important"
+                );
+
+                mainNav.style.setProperty(
+                    "overflow-y",
+                    "auto",
+                    "important"
+                );
+
+                mainNav.style.setProperty(
+                    "flex-direction",
+                    "column",
+                    "important"
+                );
+
+                mainNav.style.setProperty(
+                    "align-items",
+                    "stretch",
+                    "important"
+                );
+
+                mainNav.style.setProperty(
+                    "background",
+                    "#050505",
+                    "important"
+                );
+
+                mainNav.style.setProperty(
+                    "visibility",
+                    "visible",
+                    "important"
+                );
+
+                mainNav.style.setProperty(
+                    "opacity",
+                    "1",
+                    "important"
+                );
+
+                mainNav.style.setProperty(
+                    "transform",
+                    "none",
+                    "important"
+                );
+
+                mainNav.style.setProperty(
+                    "z-index",
+                    "10001",
+                    "important"
+                );
+
+
+                document.body.classList.add(
+                    "menu-open"
+                );
+
+            }
+
         }
 
 
+        /* =================================================
+           CLOSE MENU
+           ================================================= */
+
         function closeMenu() {
 
-            mainNav.classList.remove("active");
-            menuToggle.classList.remove("active");
+            menuToggle.classList.remove(
+                "active"
+            );
+
+            mainNav.classList.remove(
+                "active"
+            );
+
 
             menuToggle.setAttribute(
                 "aria-expanded",
@@ -48,23 +196,113 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Open navigation menu"
             );
 
+
+            /*
+             * Remove only the inline styles that
+             * were added when the mobile menu opened.
+             */
+
+            mainNav.style.removeProperty(
+                "display"
+            );
+
+            mainNav.style.removeProperty(
+                "position"
+            );
+
+            mainNav.style.removeProperty(
+                "top"
+            );
+
+            mainNav.style.removeProperty(
+                "left"
+            );
+
+            mainNav.style.removeProperty(
+                "right"
+            );
+
+            mainNav.style.removeProperty(
+                "width"
+            );
+
+            mainNav.style.removeProperty(
+                "height"
+            );
+
+            mainNav.style.removeProperty(
+                "max-height"
+            );
+
+            mainNav.style.removeProperty(
+                "overflow-y"
+            );
+
+            mainNav.style.removeProperty(
+                "flex-direction"
+            );
+
+            mainNav.style.removeProperty(
+                "align-items"
+            );
+
+            mainNav.style.removeProperty(
+                "background"
+            );
+
+            mainNav.style.removeProperty(
+                "visibility"
+            );
+
+            mainNav.style.removeProperty(
+                "opacity"
+            );
+
+            mainNav.style.removeProperty(
+                "transform"
+            );
+
+            mainNav.style.removeProperty(
+                "z-index"
+            );
+
+
+            document.body.classList.remove(
+                "menu-open"
+            );
+
         }
 
+
+        /* =================================================
+           TOGGLE MENU
+           ================================================= */
 
         function toggleMenu(event) {
 
             if (event) {
+
                 event.preventDefault();
+
                 event.stopPropagation();
+
             }
 
+
             const isOpen =
-                mainNav.classList.contains("active");
+                mainNav.classList.contains(
+                    "active"
+                );
+
 
             if (isOpen) {
+
                 closeMenu();
+
             } else {
+
                 openMenu();
+
             }
 
         }
@@ -86,6 +324,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const navLinks =
             mainNav.querySelectorAll("a");
+
 
         navLinks.forEach(function (link) {
 
@@ -110,17 +349,29 @@ document.addEventListener("DOMContentLoaded", function () {
             function (event) {
 
                 if (
-                    !mainNav.classList.contains("active")
+                    !mainNav.classList.contains(
+                        "active"
+                    )
                 ) {
+
                     return;
+
                 }
 
+
                 if (
-                    mainNav.contains(event.target) ||
-                    menuToggle.contains(event.target)
+                    mainNav.contains(
+                        event.target
+                    ) ||
+                    menuToggle.contains(
+                        event.target
+                    )
                 ) {
+
                     return;
+
                 }
+
 
                 closeMenu();
 
@@ -136,7 +387,12 @@ document.addEventListener("DOMContentLoaded", function () {
             "keydown",
             function (event) {
 
-                if (event.key === "Escape") {
+                if (
+                    event.key === "Escape" &&
+                    mainNav.classList.contains(
+                        "active"
+                    )
+                ) {
 
                     closeMenu();
 
@@ -147,16 +403,57 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         /* =================================================
-           RESET WHEN SCREEN SIZE CHANGES
+           SCREEN SIZE CHANGE
            ================================================= */
 
         window.addEventListener(
             "resize",
             function () {
 
+                /*
+                 * If the screen becomes desktop-sized,
+                 * completely reset the mobile menu.
+                 */
+
                 if (window.innerWidth > 900) {
 
                     closeMenu();
+
+                }
+
+
+                /*
+                 * If the menu is open while the
+                 * mobile device is resized/rotated,
+                 * recalculate its position.
+                 */
+
+                if (
+                    window.innerWidth <= 900 &&
+                    mainNav.classList.contains(
+                        "active"
+                    )
+                ) {
+
+                    const headerHeight =
+                        siteHeader
+                            ? siteHeader.getBoundingClientRect().height
+                            : 82;
+
+
+                    mainNav.style.setProperty(
+                        "top",
+                        headerHeight + "px",
+                        "important"
+                    );
+
+                    mainNav.style.setProperty(
+                        "max-height",
+                        "calc(100vh - " +
+                        headerHeight +
+                        "px)",
+                        "important"
+                    );
 
                 }
 
@@ -171,7 +468,10 @@ document.addEventListener("DOMContentLoaded", function () {
        ===================================================== */
 
     const header =
-        document.querySelector(".site-header");
+        document.querySelector(
+            ".site-header"
+        );
+
 
     if (header) {
 
@@ -179,17 +479,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (window.scrollY > 20) {
 
-                header.classList.add("scrolled");
+                header.classList.add(
+                    "scrolled"
+                );
 
             } else {
 
-                header.classList.remove("scrolled");
+                header.classList.remove(
+                    "scrolled"
+                );
 
             }
 
         }
 
+
         updateHeader();
+
 
         window.addEventListener(
             "scroll",
@@ -250,6 +556,7 @@ document.addEventListener("DOMContentLoaded", function () {
         galleryItems.length
     ) {
 
+
         let currentIndex = 0;
 
 
@@ -261,14 +568,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (
                 item.tagName &&
-                item.tagName.toLowerCase() === "img"
+                item.tagName.toLowerCase() ===
+                    "img"
             ) {
 
                 return item;
 
             }
 
-            return item.querySelector("img");
+
+            return item.querySelector(
+                "img"
+            );
 
         }
 
@@ -280,22 +591,33 @@ document.addEventListener("DOMContentLoaded", function () {
         function updateLightbox() {
 
             const item =
-                galleryItems[currentIndex];
+                galleryItems[
+                    currentIndex
+                ];
+
 
             if (!item) {
+
                 return;
+
             }
+
 
             const image =
                 getImage(item);
 
+
             if (!image) {
+
                 return;
+
             }
+
 
             lightboxImage.src =
                 image.currentSrc ||
                 image.src;
+
 
             lightboxImage.alt =
                 image.alt || "";
@@ -326,16 +648,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 ) %
                 galleryItems.length;
 
+
             updateLightbox();
+
 
             lightbox.classList.add(
                 "active"
             );
 
+
             lightbox.setAttribute(
                 "aria-hidden",
                 "false"
             );
+
 
             document.body.style.overflow =
                 "hidden";
@@ -353,12 +679,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 "active"
             );
 
+
             lightbox.setAttribute(
                 "aria-hidden",
                 "true"
             );
 
+
             lightboxImage.src = "";
+
 
             document.body.style.overflow =
                 "";
@@ -403,7 +732,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     "click",
                     function () {
 
-                        openLightbox(index);
+                        openLightbox(
+                            index
+                        );
 
                     }
                 );
@@ -463,7 +794,8 @@ document.addEventListener("DOMContentLoaded", function () {
             function (event) {
 
                 if (
-                    event.target === lightbox
+                    event.target ===
+                    lightbox
                 ) {
 
                     closeLightbox();
@@ -493,7 +825,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
 
-                if (event.key === "Escape") {
+                if (
+                    event.key ===
+                    "Escape"
+                ) {
 
                     closeLightbox();
 
@@ -502,14 +837,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
 
-                if (event.key === "ArrowLeft") {
+                if (
+                    event.key ===
+                    "ArrowLeft"
+                ) {
 
                     previousImage();
+
+                    return;
 
                 }
 
 
-                if (event.key === "ArrowRight") {
+                if (
+                    event.key ===
+                    "ArrowRight"
+                ) {
 
                     nextImage();
 
