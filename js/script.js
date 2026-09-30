@@ -1,15 +1,10 @@
 /* =========================================================
    ENHANCE MY RIDE
-   GLOBAL JAVASCRIPT
+   AUTO SPA & MOBILE DETAILING
+   SITE JAVASCRIPT
    ========================================================= */
 
-
-/* =========================================================
-   DOM READY
-   ========================================================= */
-
-document.addEventListener("DOMContentLoaded", function () {
-
+document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        MOBILE NAVIGATION
@@ -21,117 +16,91 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainNav =
         document.getElementById("mainNav");
 
-
     if (menuToggle && mainNav) {
 
-        menuToggle.addEventListener(
-            "click",
-            function () {
+        const closeMenu = () => {
 
-                const isOpen =
-                    mainNav.classList.toggle("is-open");
+            menuToggle.classList.remove("active");
+            mainNav.classList.remove("active");
+            mainNav.classList.remove("mobile-open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+        };
 
 
-                menuToggle.classList.toggle(
-                    "is-open",
-                    isOpen
-                );
+        menuToggle.addEventListener("click", (event) => {
 
+            event.stopPropagation();
+
+            const isOpen =
+                mainNav.classList.contains("active");
+
+            if (isOpen) {
+
+                closeMenu();
+
+            } else {
+
+                menuToggle.classList.add("active");
+                mainNav.classList.add("active");
+                mainNav.classList.add("mobile-open");
 
                 menuToggle.setAttribute(
                     "aria-expanded",
-                    isOpen ? "true" : "false"
+                    "true"
                 );
 
-
-                document.body.classList.toggle(
-                    "menu-open",
-                    isOpen
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Close navigation menu"
                 );
 
             }
-        );
+
+        });
 
 
-        /* Close menu when navigation link is clicked */
-
-        const navLinks =
-            mainNav.querySelectorAll("a");
-
-
-        navLinks.forEach(
-            function (link) {
+        mainNav
+            .querySelectorAll("a")
+            .forEach(link => {
 
                 link.addEventListener(
                     "click",
-                    function () {
-
-                        mainNav.classList.remove(
-                            "is-open"
-                        );
-
-
-                        menuToggle.classList.remove(
-                            "is-open"
-                        );
-
-
-                        menuToggle.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-
-                        document.body.classList.remove(
-                            "menu-open"
-                        );
-
-                    }
+                    closeMenu
                 );
+
+            });
+
+
+        document.addEventListener(
+            "click",
+            event => {
+
+                if (
+                    !mainNav.contains(event.target) &&
+                    !menuToggle.contains(event.target)
+                ) {
+                    closeMenu();
+                }
 
             }
         );
 
 
-        /* Close menu when clicking outside */
-
         document.addEventListener(
-            "click",
-            function (event) {
+            "keydown",
+            event => {
 
-                const clickedInsideNav =
-                    mainNav.contains(event.target);
-
-                const clickedMenuButton =
-                    menuToggle.contains(event.target);
-
-
-                if (
-                    !clickedInsideNav &&
-                    !clickedMenuButton &&
-                    mainNav.classList.contains("is-open")
-                ) {
-
-                    mainNav.classList.remove(
-                        "is-open"
-                    );
-
-
-                    menuToggle.classList.remove(
-                        "is-open"
-                    );
-
-
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-
-                    document.body.classList.remove(
-                        "menu-open"
-                    );
-
+                if (event.key === "Escape") {
+                    closeMenu();
                 }
 
             }
@@ -141,114 +110,258 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       CURRENT YEAR
-       ===================================================== */
-
-    const yearElements =
-        document.querySelectorAll("[data-year]");
-
-
-    yearElements.forEach(
-        function (element) {
-
-            element.textContent =
-                new Date().getFullYear();
-
-        }
-    );
-
-
-    /* =====================================================
-       SMOOTH SCROLL
-       ===================================================== */
-
-    const smoothLinks =
-        document.querySelectorAll(
-            'a[href^="#"]'
-        );
-
-
-    smoothLinks.forEach(
-        function (link) {
-
-            link.addEventListener(
-                "click",
-                function (event) {
-
-                    const targetId =
-                        link.getAttribute("href");
-
-
-                    if (
-                        !targetId ||
-                        targetId === "#"
-                    ) {
-                        return;
-                    }
-
-
-                    const target =
-                        document.querySelector(
-                            targetId
-                        );
-
-
-                    if (target) {
-
-                        event.preventDefault();
-
-
-                        target.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start"
-                        });
-
-                    }
-
-                }
-            );
-
-        }
-    );
-
-
-    /* =====================================================
-       HEADER SCROLL EFFECT
+       NAVIGATION SCROLL EFFECT
        ===================================================== */
 
     const header =
         document.querySelector(".site-header");
 
-
     if (header) {
 
-        function updateHeader() {
+        const updateHeader = () => {
 
-            if (window.scrollY > 30) {
-
-                header.classList.add(
-                    "scrolled"
-                );
-
+            if (window.scrollY > 25) {
+                header.classList.add("scrolled");
             } else {
-
-                header.classList.remove(
-                    "scrolled"
-                );
-
+                header.classList.remove("scrolled");
             }
 
-        }
-
+        };
 
         updateHeader();
-
 
         window.addEventListener(
             "scroll",
             updateHeader,
-            {
-                passive: true
+            { passive: true }
+        );
+
+    }
+
+
+    /* =====================================================
+       GALLERY LIGHTBOX
+       ===================================================== */
+
+    const lightbox =
+        document.getElementById("galleryLightbox");
+
+    const lightboxImage =
+        document.getElementById("lightboxImage");
+
+    const lightboxClose =
+        document.getElementById("lightboxClose");
+
+    const lightboxPrev =
+        document.getElementById("lightboxPrev");
+
+    const lightboxNext =
+        document.getElementById("lightboxNext");
+
+    const lightboxCounter =
+        document.getElementById("lightboxCounter");
+
+    const galleryItems =
+        Array.from(
+            document.querySelectorAll(
+                "[data-lightbox]"
+            )
+        );
+
+
+    if (
+        lightbox &&
+        lightboxImage &&
+        galleryItems.length
+    ) {
+
+        let currentIndex = 0;
+
+
+        const getImage =
+            item => {
+
+                if (
+                    item.tagName &&
+                    item.tagName.toLowerCase() === "img"
+                ) {
+                    return item;
+                }
+
+                return item.querySelector("img");
+
+            };
+
+
+        const updateLightbox = () => {
+
+            const item =
+                galleryItems[currentIndex];
+
+            const image =
+                getImage(item);
+
+            if (!image) return;
+
+            lightboxImage.src =
+                image.currentSrc ||
+                image.src;
+
+            lightboxImage.alt =
+                image.alt || "";
+
+            if (lightboxCounter) {
+
+                lightboxCounter.textContent =
+                    `${currentIndex + 1} / ${galleryItems.length}`;
+
+            }
+
+        };
+
+
+        const openLightbox = index => {
+
+            currentIndex =
+                (index + galleryItems.length) %
+                galleryItems.length;
+
+            updateLightbox();
+
+            lightbox.classList.add("active");
+
+            lightbox.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+            document.body.style.overflow =
+                "hidden";
+
+        };
+
+
+        const closeLightbox = () => {
+
+            lightbox.classList.remove("active");
+
+            lightbox.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            lightboxImage.src = "";
+
+            document.body.style.overflow =
+                "";
+
+        };
+
+
+        const showPrevious = () => {
+
+            openLightbox(
+                currentIndex - 1
+            );
+
+        };
+
+
+        const showNext = () => {
+
+            openLightbox(
+                currentIndex + 1
+            );
+
+        };
+
+
+        galleryItems.forEach(
+            (item, index) => {
+
+                item.addEventListener(
+                    "click",
+                    () => openLightbox(index)
+                );
+
+            }
+        );
+
+
+        if (lightboxClose) {
+
+            lightboxClose.addEventListener(
+                "click",
+                closeLightbox
+            );
+
+        }
+
+
+        if (lightboxPrev) {
+
+            lightboxPrev.addEventListener(
+                "click",
+                showPrevious
+            );
+
+        }
+
+
+        if (lightboxNext) {
+
+            lightboxNext.addEventListener(
+                "click",
+                showNext
+            );
+
+        }
+
+
+        lightbox.addEventListener(
+            "click",
+            event => {
+
+                if (
+                    event.target === lightbox
+                ) {
+                    closeLightbox();
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (
+                    !lightbox.classList.contains(
+                        "active"
+                    )
+                ) {
+                    return;
+                }
+
+                if (
+                    event.key === "Escape"
+                ) {
+                    closeLightbox();
+                }
+
+                if (
+                    event.key === "ArrowLeft"
+                ) {
+                    showPrevious();
+                }
+
+                if (
+                    event.key === "ArrowRight"
+                ) {
+                    showNext();
+                }
+
             }
         );
 
@@ -256,46 +369,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       ESCAPE KEY CLOSES MOBILE MENU
+       REDUCE MOTION SUPPORT
        ===================================================== */
 
-    document.addEventListener(
-        "keydown",
-        function (event) {
+    const prefersReducedMotion =
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
 
-            if (
-                event.key === "Escape" &&
-                mainNav &&
-                mainNav.classList.contains("is-open")
-            ) {
+    if (prefersReducedMotion) {
 
-                mainNav.classList.remove(
-                    "is-open"
-                );
+        document.documentElement.classList.add(
+            "reduce-motion"
+        );
 
-
-                if (menuToggle) {
-
-                    menuToggle.classList.remove(
-                        "is-open"
-                    );
-
-
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                }
-
-
-                document.body.classList.remove(
-                    "menu-open"
-                );
-
-            }
-
-        }
-    );
+    }
 
 });
