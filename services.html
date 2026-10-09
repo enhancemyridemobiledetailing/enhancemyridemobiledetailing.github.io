@@ -39,6 +39,11 @@
         href="css/style.css"
     >
 
+    <!-- ELFSIGHT GOOGLE REVIEWS INTEGRATION -->
+    <script
+        src="https://elfsightcdn.com/platform.js"
+        async
+    ></script>
 
     <style>
 
@@ -74,7 +79,6 @@
             color: rgba(255,255,255,.6);
             line-height: 1.8;
         }
-
 
         .package-section {
             padding: 105px 0;
@@ -186,7 +190,6 @@
             font-weight: 800;
         }
 
-
         .package-guide {
             display: grid;
             grid-template-columns: repeat(3,1fr);
@@ -213,7 +216,6 @@
             color: rgba(255,255,255,.45);
             font-size: .8rem;
         }
-
 
         .addons-section {
             padding: 105px 0;
@@ -268,7 +270,6 @@
             text-transform: uppercase;
         }
 
-
         .service-types {
             padding: 90px 0;
             border-top: 1px solid rgba(255,255,255,.08);
@@ -292,6 +293,46 @@
             text-transform: uppercase;
         }
 
+        /* GOOGLE REVIEWS SECTION */
+
+        .services-reviews {
+            padding: 90px 0;
+            border-top: 1px solid rgba(212,175,55,.15);
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            background: #070707;
+        }
+
+        .services-reviews .center-heading {
+            margin-bottom: 40px;
+        }
+
+        .services-reviews .reviews-intro {
+            max-width: 650px;
+            margin: 20px auto 0;
+            color: rgba(255,255,255,.6);
+            line-height: 1.8;
+        }
+
+        .google-reviews-widget {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .reviews-cta {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .reviews-cta p {
+            margin-bottom: 18px;
+            color: rgba(255,255,255,.6);
+            line-height: 1.7;
+        }
+
+        .reviews-cta a {
+            display: inline-block;
+        }
 
         .services-final {
             padding: 110px 0;
@@ -319,7 +360,6 @@
             line-height: 1.75;
         }
 
-
         @media (max-width: 950px) {
 
             .package-grid {
@@ -335,7 +375,6 @@
             }
 
         }
-
 
         @media (max-width: 700px) {
 
@@ -361,7 +400,8 @@
                 padding: 25px;
             }
 
-            .service-types {
+            .service-types,
+            .services-reviews {
                 padding: 70px 0;
             }
 
@@ -371,9 +411,7 @@
 
 </head>
 
-
 <body>
-
 
     <header class="site-header">
 
@@ -393,7 +431,6 @@
                 </span>
             </a>
 
-
             <button
                 class="menu-toggle"
                 id="menuToggle"
@@ -405,7 +442,6 @@
                 <span></span>
                 <span></span>
             </button>
-
 
             <nav
                 class="main-nav"
@@ -450,9 +486,7 @@
 
     </header>
 
-
     <main>
-
 
         <section class="page-hero services-hero">
 
@@ -478,7 +512,6 @@
 
         </section>
 
-
         <!-- PACKAGES -->
 
         <section class="package-section">
@@ -500,9 +533,7 @@
 
                 </div>
 
-
                 <div class="package-grid">
-
 
                     <!-- GOLD -->
 
@@ -550,7 +581,6 @@
                         </a>
 
                     </article>
-
 
                     <!-- BLACK LABEL -->
 
@@ -603,7 +633,6 @@
 
                     </article>
 
-
                     <!-- SHOWROOM -->
 
                     <article class="package-card">
@@ -653,7 +682,6 @@
 
                 </div>
 
-
                 <div class="package-guide">
 
                     <div>
@@ -692,7 +720,6 @@
 
         </section>
 
-
         <!-- ADD-ONS -->
 
         <section class="addons-section section-dark">
@@ -719,9 +746,7 @@
 
                 </div>
 
-
                 <div class="addons-grid">
-
 
                     <article class="addon-card">
                         <span class="addon-number">01</span>
@@ -730,14 +755,12 @@
                         <a href="book-now.html">Add To Booking →</a>
                     </article>
 
-
                     <article class="addon-card">
                         <span class="addon-number">02</span>
                         <h3>Wheel Ceramic Coating</h3>
                         <div class="addon-price">Starting At $125</div>
                         <a href="book-now.html">Add To Booking →</a>
                     </article>
-
 
                     <article class="addon-card">
                         <span class="addon-number">03</span>
@@ -746,14 +769,12 @@
                         <a href="book-now.html">Add To Booking →</a>
                     </article>
 
-
                     <article class="addon-card">
                         <span class="addon-number">04</span>
                         <h3>Headlight Restoration</h3>
                         <div class="addon-price">Starting At $75</div>
                         <a href="book-now.html">Add To Booking →</a>
                     </article>
-
 
                     <article class="addon-card">
                         <span class="addon-number">05</span>
@@ -762,14 +783,12 @@
                         <a href="book-now.html">Add To Booking →</a>
                     </article>
 
-
                     <article class="addon-card">
                         <span class="addon-number">06</span>
                         <h3>Water Spot Removal</h3>
                         <div class="addon-price">Starting At $75</div>
                         <a href="book-now.html">Add To Booking →</a>
                     </article>
-
 
                     <article class="addon-card">
                         <span class="addon-number">07</span>
@@ -778,14 +797,12 @@
                         <a href="book-now.html">Add To Booking →</a>
                     </article>
 
-
                     <article class="addon-card">
                         <span class="addon-number">08</span>
                         <h3>Engine Bay Detail</h3>
                         <div class="addon-price">Starting At $75</div>
                         <a href="book-now.html">Add To Booking →</a>
                     </article>
-
 
                     <article class="addon-card">
                         <span class="addon-number">09</span>
@@ -794,14 +811,12 @@
                         <a href="book-now.html">Add To Booking →</a>
                     </article>
 
-
                     <article class="addon-card">
                         <span class="addon-number">10</span>
                         <h3>Pet Hair Removal</h3>
                         <div class="addon-price">Custom Pricing</div>
                         <a href="book-now.html">Add To Booking →</a>
                     </article>
-
 
                     <article class="addon-card">
                         <span class="addon-number">11</span>
@@ -810,14 +825,12 @@
                         <a href="book-now.html">Add To Booking →</a>
                     </article>
 
-
                     <article class="addon-card">
                         <span class="addon-number">12</span>
                         <h3>Leather Deep Clean</h3>
                         <div class="addon-price">Starting At $50</div>
                         <a href="book-now.html">Add To Booking →</a>
                     </article>
-
 
                     <article class="addon-card">
                         <span class="addon-number">13</span>
@@ -826,7 +839,6 @@
                         <a href="book-now.html">Add To Booking →</a>
                     </article>
 
-
                     <article class="addon-card">
                         <span class="addon-number">14</span>
                         <h3>Odor Treatment</h3>
@@ -834,14 +846,12 @@
                         <a href="book-now.html">Add To Booking →</a>
                     </article>
 
-
                     <article class="addon-card">
                         <span class="addon-number">15</span>
                         <h3>Heavy Soil Treatment</h3>
                         <div class="addon-price">Custom Pricing</div>
                         <a href="book-now.html">Add To Booking →</a>
                     </article>
-
 
                     <article class="addon-card">
                         <span class="addon-number">16</span>
@@ -855,7 +865,6 @@
             </div>
 
         </section>
-
 
         <!-- VEHICLE TYPES -->
 
@@ -878,7 +887,6 @@
 
                 </div>
 
-
                 <div class="service-types-list">
 
                     <span>Cars</span>
@@ -893,6 +901,67 @@
 
         </section>
 
+        <!-- GOOGLE REVIEWS -->
+
+        <section
+            class="services-reviews"
+            id="google-reviews"
+            aria-labelledby="services-reviews-title"
+        >
+
+            <div class="container">
+
+                <div class="center-heading">
+
+                    <p class="eyebrow">
+                        REAL CUSTOMER EXPERIENCES
+                    </p>
+
+                    <h2 id="services-reviews-title">
+                        The Results Speak.
+                        <span class="gold-text">
+                            Our Clients Agree.
+                        </span>
+                    </h2>
+
+                    <p class="reviews-intro">
+                        See what customers are saying about Enhance My Ride
+                        Auto Spa & Mobile Detailing.
+                    </p>
+
+                </div>
+
+                <!-- Elfsight Google Reviews widget -->
+                <div class="google-reviews-widget">
+
+                    <div
+                        class="elfsight-app-3044b402-0df7-4237-8572-14a2cb4b940b"
+                        data-elfsight-app-lazy
+                    ></div>
+
+                </div>
+
+                <div class="reviews-cta">
+
+                    <p>
+                        Had your vehicle detailed by us?
+                        We'd appreciate you sharing your experience.
+                    </p>
+
+                    <a
+                        href="https://maps.app.goo.gl/6eQD7x4xCzdMfhps9?g_st=ic"
+                        class="btn btn-outline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Leave A Google Review
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
 
         <!-- FINAL CTA -->
 
@@ -929,7 +998,6 @@
 
     </main>
 
-
     <footer class="site-footer">
 
         <div class="container footer-grid">
@@ -955,7 +1023,6 @@
 
             </div>
 
-
             <div class="footer-links">
 
                 <h4>Explore</h4>
@@ -968,7 +1035,6 @@
                 <a href="service-area.html">Service Area</a>
 
             </div>
-
 
             <div class="footer-links">
 
@@ -1012,7 +1078,6 @@
 
         </div>
 
-
         <div class="container footer-bottom">
 
             <p>
@@ -1024,7 +1089,6 @@
 
     </footer>
 
-
     <a
         href="tel:+13233271806"
         class="mobile-call-button"
@@ -1034,8 +1098,8 @@
         <span>CALL</span>
     </a>
 
-
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
