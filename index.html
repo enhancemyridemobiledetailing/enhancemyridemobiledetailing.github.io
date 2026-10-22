@@ -24,10 +24,10 @@
     .btn.outline:hover{background:var(--gold);color:#080808;border-color:var(--gold)}
     /* Header */
     .header{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-    .header-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:11px;min-width:0}
-    .brand-logo{width:58px;height:58px;display:block;object-fit:contain;flex-shrink:0;border-radius:50%}
-    .brand-name{font:1rem Georgia,serif;letter-spacing:.03em}
+    .header-inner{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:14px;min-width:0;flex-shrink:0}
+    .brand-logo{width:78px;height:78px;display:block;object-fit:contain;object-position:center;flex:0 0 78px;border-radius:50%;background:#080808;visibility:visible;opacity:1;max-width:none;min-width:78px}
+    .brand-name{display:block;font:1.25rem Georgia,serif;letter-spacing:.03em;line-height:1.25}
     .brand-sub{display:block;color:var(--muted);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase}
     .nav{display:flex;align-items:center;gap:22px}
     .nav a{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#d5d1c8}
@@ -110,7 +110,7 @@
     .footer-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.09);margin-top:30px;padding-top:17px;color:#706c63;font-size:.7rem}
     @media(min-width:1000px){.promise-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.promise-item{min-height:175px}.promise-item:nth-child(odd){border-right:0}.promise-item:not(:last-child){border-right:1px solid var(--line)}.promise-item:nth-child(-n+2){border-bottom:0}}
     @media(max-width:900px){.menu{display:block}.nav{display:none;position:absolute;top:100%;left:0;right:0;padding:12px 20px 20px;background:#080808;border-bottom:1px solid var(--line);align-items:stretch;flex-direction:column;gap:0}.nav.open{display:flex}.nav a{padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.07)}.nav .nav-book{text-align:center;margin-top:10px}.hero{height:650px;min-height:560px}.hero-content{min-height:560px}.intro-grid{grid-template-columns:1fr;gap:25px}.strip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.strip-item:nth-child(2){border-right:0}.strip-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.gallery-tiles{grid-template-columns:1fr 1fr}.gallery-tile:first-child{grid-column:span 2}.footer-top{grid-template-columns:1fr 1fr}.follow{grid-column:1/-1;grid-row:1}}
-    @media(max-width:560px){.container{width:min(100% - 30px,var(--max))}.header-inner{min-height:68px;gap:10px}.brand-logo{width:46px;height:46px}.brand-name{font-size:.86rem}.brand-sub{font-size:.49rem;letter-spacing:.06em}.hero{height:610px;min-height:560px;max-height:calc(100svh - 68px)}.hero-content{min-height:560px;padding-top:25px;padding-bottom:72px}.slide{background-position:center center}.slide::after{background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.3)),linear-gradient(0deg,rgba(0,0,0,.72),transparent 50%)}.hero h1{font-size:clamp(2.75rem,13vw,4.4rem)}.hero-text{font-size:.9rem}.hero-button-band{gap:8px;padding:14px 15px}.hero-button-band .btn{flex:1;min-width:0;max-width:220px;padding:10px 8px;font-size:.62rem;letter-spacing:.04em}.hero-tagline{font-size:.62rem;letter-spacing:.12em}.strip-item{min-height:100px;padding:13px 9px;gap:8px}.strip-icon{font-size:1.2rem}.strip-item strong{font-size:.61rem}.strip-item small{font-size:.63rem}.promise-item{min-height:145px;padding:20px 8px}.promise-item h2{font-size:1.28rem}.promise-item p{font-size:.61rem;letter-spacing:.07em}.intro,.reviews{padding:68px 0}.gallery{padding:62px 0}.gallery-head{align-items:flex-start;flex-direction:column}.gallery-head .btn{width:100%}.gallery-tiles{grid-template-columns:1fr 1fr;gap:8px}.gallery-tile,.gallery-tile img{min-height:150px}.footer-top{grid-template-columns:1fr;gap:25px}.follow{grid-column:auto;grid-row:auto;text-align:left}.socials{justify-content:flex-start}.footer-bottom{flex-direction:column}.cta{padding:65px 0}.cta-actions{flex-direction:column;align-items:stretch;max-width:330px;margin-inline:auto;margin-top:24px}}
+    @media(max-width:560px){.container{width:min(100% - 30px,var(--max))}.header-inner{min-height:68px;gap:10px}.brand-logo{width:58px;height:58px;flex-basis:58px}.header-inner{min-height:76px}.brand{gap:10px}.brand-name{font-size:1rem}.brand-name{font-size:.86rem}.brand-sub{font-size:.49rem;letter-spacing:.06em}.hero{height:610px;min-height:560px;max-height:calc(100svh - 68px)}.hero-content{min-height:560px;padding-top:25px;padding-bottom:72px}.slide{background-position:center center}.slide::after{background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.3)),linear-gradient(0deg,rgba(0,0,0,.72),transparent 50%)}.hero h1{font-size:clamp(2.75rem,13vw,4.4rem)}.hero-text{font-size:.9rem}.hero-button-band{gap:8px;padding:14px 15px}.hero-button-band .btn{flex:1;min-width:0;max-width:220px;padding:10px 8px;font-size:.62rem;letter-spacing:.04em}.hero-tagline{font-size:.62rem;letter-spacing:.12em}.strip-item{min-height:100px;padding:13px 9px;gap:8px}.strip-icon{font-size:1.2rem}.strip-item strong{font-size:.61rem}.strip-item small{font-size:.63rem}.promise-item{min-height:145px;padding:20px 8px}.promise-item h2{font-size:1.28rem}.promise-item p{font-size:.61rem;letter-spacing:.07em}.intro,.reviews{padding:68px 0}.gallery{padding:62px 0}.gallery-head{align-items:flex-start;flex-direction:column}.gallery-head .btn{width:100%}.gallery-tiles{grid-template-columns:1fr 1fr;gap:8px}.gallery-tile,.gallery-tile img{min-height:150px}.footer-top{grid-template-columns:1fr;gap:25px}.follow{grid-column:auto;grid-row:auto;text-align:left}.socials{justify-content:flex-start}.footer-bottom{flex-direction:column}.cta{padding:65px 0}.cta-actions{flex-direction:column;align-items:stretch;max-width:330px;margin-inline:auto;margin-top:24px}}
 
     /* Floating click-to-call button */
     .floating-call{position:fixed;right:20px;bottom:20px;z-index:100;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 20px;border:1px solid #f0d46e;border-radius:999px;background:linear-gradient(135deg,#ecd27a,#c9a227);color:#080808;box-shadow:0 8px 28px rgba(0,0,0,.45);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;transition:transform .2s,box-shadow .2s}
@@ -135,7 +135,7 @@
   <header class="header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Enhance My Ride homepage">
-        <img class="brand-logo" src="images/enhance-my-ride-logo.webp" alt="Enhance My Ride logo">
+        <img class="brand-logo" src="images/enhance-my-ride-logo.webp?v=3" alt="Enhance My Ride logo" width="1254" height="1254" loading="eager" fetchpriority="high" decoding="async">
         <span><span class="brand-name">Enhance My Ride</span><span class="brand-sub">Auto Spa &amp; Mobile Detailing</span></span>
       </a>
       <button class="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
@@ -308,7 +308,7 @@
     function startSlideshow() {
       clearInterval(slideshowTimer);
       if (!reducedMotion && slides.length > 1) {
-        slideshowTimer = setInterval(() => showSlide(activeSlide + 1), 4500);
+        slideshowTimer = setInterval(() => showSlide(activeSlide + 1), 3000);
       }
     }
 
