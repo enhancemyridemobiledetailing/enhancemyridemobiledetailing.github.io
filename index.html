@@ -51,6 +51,8 @@
     .dot{width:8px;height:8px;border:1px solid #fff;border-radius:50%;background:transparent;cursor:pointer;padding:0}
     .dot.active{width:24px;border-radius:6px;background:var(--gold);border-color:var(--gold)}
     .slide-count{font-size:.72rem;color:#eee;letter-spacing:.12em;margin-left:9px}
+    .hero-button-band{position:relative;z-index:4;display:flex;justify-content:center;align-items:center;gap:12px;padding:18px 20px;background:#080808;border-bottom:1px solid var(--line)}
+    .hero-button-band .btn{min-width:190px;min-height:42px;padding:10px 18px;font-size:.7rem}
     /* Service strip */
     .service-strip{background:#0c0c0c;border-bottom:1px solid var(--line)}
     .strip-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-left:1px solid var(--line);border-right:1px solid var(--line)}
@@ -108,7 +110,7 @@
     .footer-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.09);margin-top:30px;padding-top:17px;color:#706c63;font-size:.7rem}
     @media(min-width:1000px){.promise-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.promise-item{min-height:175px}.promise-item:nth-child(odd){border-right:0}.promise-item:not(:last-child){border-right:1px solid var(--line)}.promise-item:nth-child(-n+2){border-bottom:0}}
     @media(max-width:900px){.menu{display:block}.nav{display:none;position:absolute;top:100%;left:0;right:0;padding:12px 20px 20px;background:#080808;border-bottom:1px solid var(--line);align-items:stretch;flex-direction:column;gap:0}.nav.open{display:flex}.nav a{padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.07)}.nav .nav-book{text-align:center;margin-top:10px}.hero{height:650px;min-height:560px}.hero-content{min-height:560px}.intro-grid{grid-template-columns:1fr;gap:25px}.strip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.strip-item:nth-child(2){border-right:0}.strip-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.gallery-tiles{grid-template-columns:1fr 1fr}.gallery-tile:first-child{grid-column:span 2}.footer-top{grid-template-columns:1fr 1fr}.follow{grid-column:1/-1;grid-row:1}}
-    @media(max-width:560px){.container{width:min(100% - 30px,var(--max))}.header-inner{min-height:68px;gap:10px}.brand-mark{width:38px;height:38px}.brand-name{font-size:.86rem}.brand-sub{font-size:.49rem;letter-spacing:.06em}.hero{height:610px;min-height:560px;max-height:calc(100svh - 68px)}.hero-content{min-height:560px;padding-top:25px;padding-bottom:72px}.slide{background-position:center center}.slide::after{background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.3)),linear-gradient(0deg,rgba(0,0,0,.72),transparent 50%)}.hero h1{font-size:clamp(2.75rem,13vw,4.4rem)}.hero-text{font-size:.9rem}.hero-actions{flex-direction:row;align-items:center;justify-content:center;max-width:none;gap:8px}.hero-actions .btn{flex:1;min-width:0;padding:12px 10px;font-size:.62rem;letter-spacing:.04em}.hero-tagline{font-size:.62rem;letter-spacing:.12em}.strip-item{min-height:100px;padding:13px 9px;gap:8px}.strip-icon{font-size:1.2rem}.strip-item strong{font-size:.61rem}.strip-item small{font-size:.63rem}.promise-item{min-height:145px;padding:20px 8px}.promise-item h2{font-size:1.28rem}.promise-item p{font-size:.61rem;letter-spacing:.07em}.intro,.reviews{padding:68px 0}.gallery{padding:62px 0}.gallery-head{align-items:flex-start;flex-direction:column}.gallery-head .btn{width:100%}.gallery-tiles{grid-template-columns:1fr 1fr;gap:8px}.gallery-tile,.gallery-tile img{min-height:150px}.footer-top{grid-template-columns:1fr;gap:25px}.follow{grid-column:auto;grid-row:auto;text-align:left}.socials{justify-content:flex-start}.footer-bottom{flex-direction:column}.cta{padding:65px 0}.cta-actions{flex-direction:column;align-items:stretch;max-width:330px;margin-inline:auto;margin-top:24px}}
+    @media(max-width:560px){.container{width:min(100% - 30px,var(--max))}.header-inner{min-height:68px;gap:10px}.brand-mark{width:38px;height:38px}.brand-name{font-size:.86rem}.brand-sub{font-size:.49rem;letter-spacing:.06em}.hero{height:610px;min-height:560px;max-height:calc(100svh - 68px)}.hero-content{min-height:560px;padding-top:25px;padding-bottom:72px}.slide{background-position:center center}.slide::after{background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.3)),linear-gradient(0deg,rgba(0,0,0,.72),transparent 50%)}.hero h1{font-size:clamp(2.75rem,13vw,4.4rem)}.hero-text{font-size:.9rem}.hero-button-band{gap:8px;padding:14px 15px}.hero-button-band .btn{flex:1;min-width:0;max-width:220px;padding:10px 8px;font-size:.62rem;letter-spacing:.04em}.hero-tagline{font-size:.62rem;letter-spacing:.12em}.strip-item{min-height:100px;padding:13px 9px;gap:8px}.strip-icon{font-size:1.2rem}.strip-item strong{font-size:.61rem}.strip-item small{font-size:.63rem}.promise-item{min-height:145px;padding:20px 8px}.promise-item h2{font-size:1.28rem}.promise-item p{font-size:.61rem;letter-spacing:.07em}.intro,.reviews{padding:68px 0}.gallery{padding:62px 0}.gallery-head{align-items:flex-start;flex-direction:column}.gallery-head .btn{width:100%}.gallery-tiles{grid-template-columns:1fr 1fr;gap:8px}.gallery-tile,.gallery-tile img{min-height:150px}.footer-top{grid-template-columns:1fr;gap:25px}.follow{grid-column:auto;grid-row:auto;text-align:left}.socials{justify-content:flex-start}.footer-bottom{flex-direction:column}.cta{padding:65px 0}.cta-actions{flex-direction:column;align-items:stretch;max-width:330px;margin-inline:auto;margin-top:24px}}
 
     /* Floating click-to-call button */
     .floating-call{position:fixed;right:20px;bottom:20px;z-index:100;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 20px;border:1px solid #f0d46e;border-radius:999px;background:linear-gradient(135deg,#ecd27a,#c9a227);color:#080808;box-shadow:0 8px 28px rgba(0,0,0,.45);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;transition:transform .2s,box-shadow .2s}
@@ -157,12 +159,6 @@
         <div class="slide" style="background-image:url('images/IMG_4952.webp')" aria-hidden="true"></div>
         <div class="slide" style="background-image:url('images/IMG_4953.webp')" aria-hidden="true"></div>
       </div>
-      <div class="container hero-content">
-        <div class="hero-actions">
-          <a class="btn" href="services.html">View Our Services</a>
-          <a class="btn outline" href="book-now.html">Book Now</a>
-        </div>
-      </div>
       <div class="slide-controls" aria-label="Slideshow controls">
         <button class="dot active" type="button" aria-label="Show slide 1" aria-pressed="true"></button>
         <button class="dot" type="button" aria-label="Show slide 2" aria-pressed="false"></button>
@@ -177,6 +173,11 @@
         <span class="slide-count"><span id="slide-current">01</span> / 10</span>
       </div>
     </section>
+
+    <div class="hero-button-band" aria-label="Homepage actions">
+      <a class="btn" href="services.html">View Our Services</a>
+      <a class="btn outline" href="book-now.html">Book Now</a>
+    </div>
 
     <section class="service-strip" aria-label="Detailing services">
       <div class="container strip-grid">
@@ -307,7 +308,7 @@
     function startSlideshow() {
       clearInterval(slideshowTimer);
       if (!reducedMotion && slides.length > 1) {
-        slideshowTimer = setInterval(() => showSlide(activeSlide + 1), 5500);
+        slideshowTimer = setInterval(() => showSlide(activeSlide + 1), 4500);
       }
     }
 
