@@ -1,1105 +1,1321 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <title>Detailing Services & Packages | Enhance My Ride Auto Spa</title>
 
-    <title>
-        Mobile Detailing Services & Pricing | Enhance My Ride
-    </title>
+    <meta name="description" content="Explore premium mobile auto detailing packages from Enhance My Ride Auto Spa. Choose Enhance Gold, Enhance Elite, or Enhance Showroom. We come to you across the San Francisco Bay Area.">
 
-    <meta
-        name="description"
-        content="Explore Enhance My Ride mobile detailing packages, pricing, and available detailing add-ons throughout the San Francisco Bay Area."
-    >
+    <meta name="theme-color" content="#080808">
 
-    <meta
-        name="theme-color"
-        content="#050505"
-    >
-
-    <meta
-        name="robots"
-        content="index, follow"
-    >
-
-    <link
-        rel="canonical"
-        href="https://enhancemyride.com/services.html"
-    >
-
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
-
-    <!-- ELFSIGHT GOOGLE REVIEWS INTEGRATION -->
-    <script
-        src="https://elfsightcdn.com/platform.js"
-        async
-    ></script>
+    <link rel="canonical" href="https://enhancemyride.com/services.html">
+    <link rel="stylesheet" href="css/style.css">
 
     <style>
+        :root {
+            --emr-black: #080808;
+            --emr-panel: #111111;
+            --emr-panel-light: #181818;
+            --emr-gold: #d4af37;
+            --emr-gold-light: #f1d879;
+            --emr-white: #f7f7f7;
+            --emr-muted: #b6b6b6;
+            --emr-border: rgba(212, 175, 55, 0.25);
+            --emr-radius: 18px;
+        }
+
+        .services-page {
+            background: var(--emr-black);
+            color: var(--emr-white);
+            overflow: hidden;
+        }
+
+        .services-page * {
+            box-sizing: border-box;
+        }
+
+        .services-page a {
+            color: inherit;
+        }
+
+        .emr-container {
+            width: min(1160px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .emr-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+            color: var(--emr-gold-light);
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .emr-eyebrow::before {
+            content: "";
+            width: 28px;
+            height: 1px;
+            background: var(--emr-gold);
+        }
+
+        .emr-section-heading {
+            max-width: 760px;
+            margin: 0 auto 18px;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            font-weight: 850;
+            line-height: 1.08;
+            letter-spacing: -0.045em;
+        }
+
+        .emr-gold-text {
+            color: var(--emr-gold);
+        }
+
+        .emr-section-copy {
+            max-width: 690px;
+            margin: 0 auto;
+            color: var(--emr-muted);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .emr-button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            min-height: 50px;
+            padding: 14px 23px;
+            border: 1px solid var(--emr-gold);
+            border-radius: 7px;
+            background: var(--emr-gold);
+            color: #080808 !important;
+            font-size: 0.88rem;
+            font-weight: 850;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.2s ease, transform 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .emr-button:hover {
+            background: var(--emr-gold-light);
+            border-color: var(--emr-gold-light);
+            transform: translateY(-2px);
+        }
+
+        .emr-button-outline {
+            background: transparent;
+            color: var(--emr-gold-light) !important;
+        }
+
+        .emr-button-outline:hover {
+            background: var(--emr-gold);
+            color: #080808 !important;
+        }
+
+        /* HERO */
 
         .services-hero {
-            min-height: 55vh;
+            position: relative;
+            isolation: isolate;
             display: flex;
             align-items: center;
-
+            min-height: 510px;
+            padding: 100px 0 90px;
             background:
                 radial-gradient(
-                    circle at 78% 45%,
-                    rgba(212,175,55,.13),
-                    transparent 38%
+                    ellipse at 80% 25%,
+                    rgba(212, 175, 55, 0.16),
+                    transparent 42%
                 ),
-                #050505;
+                linear-gradient(135deg, #111111 0%, #080808 65%);
+            border-bottom: 1px solid var(--emr-border);
+        }
+
+        .services-hero::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: -120px;
+            width: 48%;
+            height: 100%;
+            background:
+                linear-gradient(
+                    135deg,
+                    transparent 35%,
+                    rgba(212, 175, 55, 0.06) 35%,
+                    rgba(212, 175, 55, 0.06) 36%,
+                    transparent 36%
+                );
+            pointer-events: none;
+        }
+
+        .services-hero-content {
+            max-width: 800px;
         }
 
         .services-hero h1 {
-            max-width: 900px;
-            margin: 0;
-            font-size: clamp(3.4rem,7vw,6.4rem);
-            line-height: .9;
+            margin: 0 0 25px;
+            font-size: clamp(2.8rem, 7vw, 5.6rem);
+            font-weight: 900;
+            line-height: 0.99;
+            letter-spacing: -0.065em;
         }
 
         .services-hero h1 span {
             display: block;
-            color: #d4af37;
+            margin-top: 10px;
+            color: var(--emr-gold);
         }
 
-        .services-hero p:last-child {
-            max-width: 650px;
+        .services-hero p {
+            max-width: 630px;
+            margin: 0 0 30px;
+            color: #d0d0d0;
+            font-size: clamp(1rem, 2vw, 1.12rem);
+            line-height: 1.85;
+        }
+
+        .services-hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .services-hero-note {
             margin-top: 28px;
-            color: rgba(255,255,255,.6);
-            line-height: 1.8;
-        }
-
-        .package-section {
-            padding: 105px 0;
-        }
-
-        .package-grid {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 18px;
-            margin-top: 50px;
-        }
-
-        .package-card {
-            position: relative;
-            padding: 35px;
-            border: 1px solid rgba(255,255,255,.09);
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,.045),
-                    rgba(255,255,255,.015)
-                );
-            transition:
-                transform .3s ease,
-                border-color .3s ease;
-        }
-
-        .package-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(212,175,55,.45);
-        }
-
-        .package-card.featured {
-            border-color: rgba(212,175,55,.65);
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(212,175,55,.11),
-                    rgba(255,255,255,.02)
-                );
-        }
-
-        .package-badge {
-            display: inline-block;
-            margin-bottom: 25px;
-            color: #d4af37;
-            font-size: 9px;
-            font-weight: 800;
-            letter-spacing: .16em;
-        }
-
-        .package-number {
-            display: block;
-            margin-bottom: 10px;
-            color: rgba(255,255,255,.35);
-            font-size: 10px;
-            letter-spacing: .15em;
-        }
-
-        .package-card h3 {
-            margin-bottom: 15px;
-            font-size: 1.7rem;
-        }
-
-        .package-price {
-            margin-bottom: 18px;
-            color: #d4af37;
-            font-size: 3.1rem;
-            font-weight: 700;
-            line-height: 1;
-        }
-
-        .package-price small {
-            display: inline-block;
-            margin-left: 5px;
-            color: rgba(255,255,255,.4);
-            font-size: 10px;
-            font-weight: 500;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-        }
-
-        .package-card > p {
-            min-height: 80px;
-            color: rgba(255,255,255,.52);
-            font-size: .88rem;
+            color: #a9a9a9;
+            font-size: 0.83rem;
             line-height: 1.7;
         }
 
-        .package-list {
-            margin: 25px 0 30px;
+        /* SERVICE PROMISE STRIP */
+
+        .emr-promise-strip {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background: #0d0d0d;
+        }
+
+        .emr-promise-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .emr-promise-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 25px 15px;
+            color: #e8e8e8;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .emr-promise-item + .emr-promise-item {
+            border-left: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .emr-promise-icon {
+            color: var(--emr-gold);
+            font-size: 1.2rem;
+        }
+
+        /* PACKAGE SECTION */
+
+        .emr-packages-section {
+            padding: 100px 0;
+        }
+
+        .emr-section-intro {
+            margin-bottom: 55px;
+            text-align: center;
+        }
+
+        .emr-package-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            align-items: stretch;
+            gap: 22px;
+        }
+
+        .emr-package-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            padding: 32px 27px 28px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--emr-radius);
+            background:
+                linear-gradient(
+                    155deg,
+                    rgba(255, 255, 255, 0.045),
+                    transparent 42%
+                ),
+                var(--emr-panel);
+            transition: transform 0.25s ease, border-color 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .emr-package-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.65);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .emr-package-card.featured {
+            border-color: var(--emr-gold);
+            background:
+                radial-gradient(
+                    ellipse at top,
+                    rgba(212, 175, 55, 0.12),
+                    transparent 55%
+                ),
+                #111111;
+        }
+
+        .emr-package-label {
+            display: inline-flex;
+            align-self: flex-start;
+            margin-bottom: 22px;
+            padding: 7px 11px;
+            border: 1px solid var(--emr-border);
+            border-radius: 4px;
+            color: var(--emr-gold-light);
+            font-size: 0.68rem;
+            font-weight: 850;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        .emr-package-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.65rem;
+            font-weight: 850;
+            letter-spacing: -0.035em;
+        }
+
+        .emr-package-description {
+            min-height: 74px;
+            margin: 0 0 22px;
+            color: var(--emr-muted);
+            font-size: 0.92rem;
+            line-height: 1.75;
+        }
+
+        .emr-package-price {
+            margin-bottom: 6px;
+            color: var(--emr-gold);
+            font-size: clamp(2.4rem, 4vw, 3.1rem);
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.055em;
+        }
+
+        .emr-package-price-note {
+            margin-bottom: 25px;
+            color: #a9a9a9;
+            font-size: 0.8rem;
+        }
+
+        .emr-package-divider {
+            height: 1px;
+            margin-bottom: 22px;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .emr-package-list-title {
+            margin: 0 0 14px;
+            color: #f1f1f1;
+            font-size: 0.85rem;
+            font-weight: 800;
+        }
+
+        .emr-package-list {
+            display: grid;
+            gap: 13px;
+            margin: 0 0 30px;
             padding: 0;
             list-style: none;
         }
 
-        .package-list li {
-            position: relative;
-            padding: 9px 0 9px 20px;
-            border-top: 1px solid rgba(255,255,255,.07);
-            color: rgba(255,255,255,.72);
-            font-size: .84rem;
+        .emr-package-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: #c9c9c9;
+            font-size: 0.87rem;
+            line-height: 1.6;
         }
 
-        .package-list li::before {
+        .emr-package-list li::before {
             content: "✓";
-            position: absolute;
-            left: 0;
-            color: #d4af37;
-            font-weight: 800;
+            flex: 0 0 auto;
+            color: var(--emr-gold);
+            font-weight: 900;
         }
 
-        .package-guide {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 1px;
-            margin-top: 25px;
-            border: 1px solid rgba(255,255,255,.08);
-            background: rgba(255,255,255,.08);
+        .emr-package-card .emr-button {
+            width: 100%;
+            margin-top: auto;
         }
 
-        .package-guide div {
-            padding: 22px;
-            background: #090909;
+        .emr-pricing-disclaimer {
+            max-width: 900px;
+            margin: 30px auto 0;
+            color: #999999;
+            font-size: 0.82rem;
+            line-height: 1.8;
+            text-align: center;
         }
 
-        .package-guide strong {
-            display: block;
-            margin-bottom: 5px;
-            color: #d4af37;
-            font-size: 10px;
-            letter-spacing: .12em;
-        }
+        /* HOW TO CHOOSE */
 
-        .package-guide span {
-            color: rgba(255,255,255,.45);
-            font-size: .8rem;
-        }
-
-        .addons-section {
-            padding: 105px 0;
-        }
-
-        .addons-grid {
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            gap: 1px;
-            margin-top: 50px;
-            border: 1px solid rgba(255,255,255,.08);
-            background: rgba(255,255,255,.08);
-        }
-
-        .addon-card {
-            min-height: 150px;
-            padding: 28px;
-            background: #090909;
-            transition: background .25s ease;
-        }
-
-        .addon-card:hover {
+        .emr-choice-section {
+            padding: 85px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             background: #0d0d0d;
         }
 
-        .addon-number {
-            display: block;
-            margin-bottom: 12px;
-            color: #d4af37;
-            font-size: 9px;
-            font-weight: 800;
-            letter-spacing: .15em;
+        .emr-choice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 28px;
+            margin-top: 45px;
         }
 
-        .addon-card h3 {
-            margin-bottom: 7px;
-            font-size: 1rem;
+        .emr-choice-item {
+            padding: 25px 0;
         }
 
-        .addon-price {
-            color: rgba(255,255,255,.42);
-            font-size: .76rem;
-        }
-
-        .addon-card a {
+        .emr-choice-number {
             display: inline-block;
-            margin-top: 16px;
-            color: #d4af37;
-            font-size: 9px;
+            margin-bottom: 18px;
+            color: var(--emr-gold);
+            font-size: 0.82rem;
+            font-weight: 900;
+            letter-spacing: 0.15em;
+        }
+
+        .emr-choice-item h3 {
+            margin: 0 0 12px;
+            font-size: 1.2rem;
             font-weight: 800;
-            letter-spacing: .12em;
-            text-transform: uppercase;
         }
 
-        .service-types {
-            padding: 90px 0;
-            border-top: 1px solid rgba(255,255,255,.08);
-        }
-
-        .service-types-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 35px;
-        }
-
-        .service-types-list span {
-            padding: 12px 18px;
-            border: 1px solid rgba(255,255,255,.1);
-            color: rgba(255,255,255,.6);
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: .1em;
-            text-transform: uppercase;
-        }
-
-        /* GOOGLE REVIEWS SECTION */
-
-        .services-reviews {
-            padding: 90px 0;
-            border-top: 1px solid rgba(212,175,55,.15);
-            border-bottom: 1px solid rgba(255,255,255,.08);
-            background: #070707;
-        }
-
-        .services-reviews .center-heading {
-            margin-bottom: 40px;
-        }
-
-        .services-reviews .reviews-intro {
-            max-width: 650px;
-            margin: 20px auto 0;
-            color: rgba(255,255,255,.6);
+        .emr-choice-item p {
+            margin: 0;
+            color: var(--emr-muted);
+            font-size: 0.92rem;
             line-height: 1.8;
         }
 
-        .google-reviews-widget {
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
+        /* ADD-ONS */
+
+        .emr-addons-section {
+            padding: 100px 0;
         }
 
-        .reviews-cta {
-            margin-top: 35px;
-            text-align: center;
+        .emr-addons-layout {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 65px;
+            align-items: start;
         }
 
-        .reviews-cta p {
-            margin-bottom: 18px;
-            color: rgba(255,255,255,.6);
-            line-height: 1.7;
+        .emr-addons-intro h2 {
+            margin: 0 0 20px;
+            font-size: clamp(2rem, 4vw, 3.15rem);
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: -0.05em;
         }
 
-        .reviews-cta a {
-            display: inline-block;
+        .emr-addons-intro p {
+            margin: 0 0 25px;
+            color: var(--emr-muted);
+            font-size: 0.97rem;
+            line-height: 1.85;
         }
 
-        .services-final {
-            padding: 110px 0;
-            border-top: 1px solid rgba(212,175,55,.15);
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(212,175,55,.1),
-                    transparent 50%
-                );
-            text-align: center;
-        }
-
-        .services-final h2 {
-            max-width: 850px;
-            margin: 0 auto 20px;
-            font-size: clamp(2.8rem,5vw,5.2rem);
-            line-height: .95;
-        }
-
-        .services-final p {
-            max-width: 600px;
-            margin: 0 auto 30px;
-            color: rgba(255,255,255,.52);
+        .emr-addons-note {
+            padding: 17px 19px;
+            border-left: 3px solid var(--emr-gold);
+            background: rgba(212, 175, 55, 0.07);
+            color: #d0d0d0;
+            font-size: 0.85rem;
             line-height: 1.75;
         }
 
-        @media (max-width: 950px) {
-
-            .package-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .package-card > p {
-                min-height: auto;
-            }
-
-            .package-guide {
-                grid-template-columns: 1fr;
-            }
-
+        .emr-addons-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
         }
 
-        @media (max-width: 700px) {
+        .emr-addon {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            min-height: 75px;
+            padding: 17px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            background: var(--emr-panel);
+        }
+
+        .emr-addon-mark {
+            display: flex;
+            flex: 0 0 25px;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            border: 1px solid var(--emr-border);
+            border-radius: 50%;
+            color: var(--emr-gold);
+            font-size: 0.8rem;
+            font-weight: 900;
+        }
+
+        .emr-addon span:last-child {
+            color: #e1e1e1;
+            font-size: 0.87rem;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        /* MOBILE SERVICE */
+
+        .emr-mobile-section {
+            padding: 75px 0;
+            border-top: 1px solid var(--emr-border);
+            border-bottom: 1px solid var(--emr-border);
+            background:
+                radial-gradient(
+                    ellipse at 10% 50%,
+                    rgba(212, 175, 55, 0.1),
+                    transparent 50%
+                ),
+                #101010;
+        }
+
+        .emr-mobile-panel {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .emr-mobile-panel h2 {
+            margin: 0 0 15px;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 900;
+            line-height: 1.12;
+            letter-spacing: -0.04em;
+        }
+
+        .emr-mobile-panel p {
+            max-width: 720px;
+            margin: 0;
+            color: var(--emr-muted);
+            font-size: 0.97rem;
+            line-height: 1.85;
+        }
+
+        /* REVIEWS */
+
+        .emr-reviews-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .emr-review-mark {
+            margin-bottom: 15px;
+            color: var(--emr-gold);
+            font-size: 2rem;
+            letter-spacing: 0.12em;
+        }
+
+        .emr-reviews-section h2 {
+            margin: 0 0 15px;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 900;
+            letter-spacing: -0.04em;
+        }
+
+        .emr-reviews-section p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: var(--emr-muted);
+            font-size: 0.96rem;
+            line-height: 1.8;
+        }
+
+        /* FINAL CTA */
+
+        .emr-final-cta {
+            padding: 85px 0;
+            background:
+                radial-gradient(
+                    ellipse at center,
+                    rgba(212, 175, 55, 0.14),
+                    transparent 65%
+                ),
+                #111111;
+            border-top: 1px solid var(--emr-border);
+            text-align: center;
+        }
+
+        .emr-final-cta h2 {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.055em;
+        }
+
+        .emr-final-cta p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: var(--emr-muted);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .emr-final-cta-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .emr-small-print {
+            margin-top: 25px;
+            color: #8f8f8f;
+            font-size: 0.8rem;
+            line-height: 1.7;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+            .emr-package-grid {
+                grid-template-columns: 1fr;
+                max-width: 620px;
+                margin: 0 auto;
+            }
+
+            .emr-package-description {
+                min-height: 0;
+            }
+
+            .emr-package-card {
+                padding: 30px;
+            }
+
+            .emr-choice-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .emr-choice-item {
+                padding: 20px 0;
+            }
+
+            .emr-addons-layout {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .emr-mobile-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .emr-mobile-panel .emr-button {
+                justify-self: start;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .emr-container {
+                width: min(100% - 30px, 1160px);
+            }
 
             .services-hero {
-                min-height: 48vh;
+                min-height: auto;
+                padding: 75px 0 65px;
             }
 
             .services-hero h1 {
-                font-size: clamp(3.1rem,14vw,5rem);
+                font-size: clamp(2.65rem, 13vw, 4.2rem);
             }
 
-            .package-section,
-            .addons-section {
-                padding: 75px 0;
+            .services-hero-actions {
+                flex-direction: column;
+                align-items: stretch;
             }
 
-            .addons-grid {
+            .services-hero-actions .emr-button {
+                width: 100%;
+            }
+
+            .emr-promise-grid {
                 grid-template-columns: 1fr;
             }
 
-            .addon-card {
-                min-height: auto;
-                padding: 25px;
+            .emr-promise-item {
+                justify-content: flex-start;
+                padding: 17px 8px;
+                text-align: left;
             }
 
-            .service-types,
-            .services-reviews {
+            .emr-promise-item + .emr-promise-item {
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+                border-left: 0;
+            }
+
+            .emr-packages-section,
+            .emr-addons-section {
                 padding: 70px 0;
             }
 
+            .emr-section-intro {
+                margin-bottom: 35px;
+            }
+
+            .emr-package-card {
+                padding: 25px 21px;
+            }
+
+            .emr-addons-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .emr-mobile-section {
+                padding: 60px 0;
+            }
+
+            .emr-mobile-panel .emr-button {
+                width: 100%;
+            }
+
+            .emr-final-cta {
+                padding: 65px 0;
+            }
+
+            .emr-final-cta-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .emr-final-cta-actions .emr-button {
+                width: 100%;
+            }
         }
 
+        @media (prefers-reduced-motion: reduce) {
+            .services-page *,
+            .services-page *::before,
+            .services-page *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
     </style>
-
 </head>
 
 <body>
+<div class="services-page">
 
+    <!-- HEADER -->
     <header class="site-header">
-
-        <div class="container nav-container">
-
-            <a
-                href="index.html"
-                class="logo"
-                aria-label="Enhance My Ride home"
-            >
-                <span class="logo-main">
-                    ENHANCE MY RIDE
-                </span>
-
-                <span class="logo-sub">
-                    AUTO SPA & MOBILE DETAILING
-                </span>
+        <div class="container">
+            <a class="logo" href="index.html" aria-label="Enhance My Ride home">
+                <img
+                    src="images/logo.png"
+                    alt="Enhance My Ride Auto Spa and Mobile Detailing"
+                >
             </a>
 
             <button
                 class="menu-toggle"
-                id="menuToggle"
-                type="button"
-                aria-label="Open navigation menu"
+                aria-label="Toggle navigation"
                 aria-expanded="false"
+                type="button"
             >
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <nav
-                class="main-nav"
-                id="mainNav"
-                aria-label="Main navigation"
-            >
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="gallery.html">
-                    Gallery
-                </a>
-
-                <a
-                    href="services.html"
-                    class="active"
-                    aria-current="page"
-                >
-                    Services
-                </a>
-
-                <a
-                    href="book-now.html"
-                    class="nav-cta"
-                >
-                    Book Now
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="service-area.html">
-                    Service Area
-                </a>
-
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="services.html" aria-current="page">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="service-area.html">Service Area</a>
+                <a class="nav-cta" href="book-now.html">Book Now</a>
             </nav>
-
         </div>
-
     </header>
 
     <main>
 
-        <section class="page-hero services-hero">
+        <!-- HERO -->
+        <section class="services-hero">
+            <div class="emr-container">
+                <div class="services-hero-content">
+                    <span class="emr-eyebrow">The Enhance Experience</span>
 
-            <div class="container page-hero-content">
+                    <h1>
+                        More Than a Wash.
+                        <span>A Higher Standard.</span>
+                    </h1>
 
-                <p class="eyebrow">
-                    PREMIUM DETAILING
-                </p>
+                    <p>
+                        Your vehicle deserves more than a quick clean.
+                        Discover premium mobile auto detailing designed to
+                        refresh your vehicle, elevate its appearance, and
+                        bring professional care directly to you.
+                    </p>
 
-                <h1>
-                    Choose Your
-                    <span>
-                        Level Of Care.
-                    </span>
-                </h1>
+                    <div class="services-hero-actions">
+                        <a class="emr-button" href="#packages">
+                            Explore Our Packages
+                            <span aria-hidden="true">→</span>
+                        </a>
 
-                <p>
-                    Three detailing packages designed around
-                    your vehicle's condition, needs, and desired finish.
-                </p>
+                        <a class="emr-button emr-button-outline" href="book-now.html">
+                            Request a Booking
+                        </a>
+                    </div>
 
+                    <div class="services-hero-note">
+                        Serving Alameda and the greater San Francisco Bay Area.
+                        <br>
+                        We come to you. You relax. We Enhance.
+                    </div>
+                </div>
             </div>
+        </section>
 
+        <!-- SERVICE PROMISE -->
+        <section class="emr-promise-strip" aria-label="Our service benefits">
+            <div class="emr-container">
+                <div class="emr-promise-grid">
+                    <div class="emr-promise-item">
+                        <span class="emr-promise-icon" aria-hidden="true">✦</span>
+                        <span>Premium Vehicle Care</span>
+                    </div>
+
+                    <div class="emr-promise-item">
+                        <span class="emr-promise-icon" aria-hidden="true">⌖</span>
+                        <span>Convenient Mobile Service</span>
+                    </div>
+
+                    <div class="emr-promise-item">
+                        <span class="emr-promise-icon" aria-hidden="true">◇</span>
+                        <span>Service Tailored to Your Vehicle</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- PACKAGES -->
+        <section class="emr-packages-section" id="packages">
+            <div class="emr-container">
 
-        <section class="package-section">
+                <div class="emr-section-intro">
+                    <span class="emr-eyebrow">Choose Your Experience</span>
 
-            <div class="container">
-
-                <div class="center-heading">
-
-                    <p class="eyebrow">
-                        SIGNATURE PACKAGES
-                    </p>
-
-                    <h2>
-                        Find Your
-                        <span class="gold-text">
-                            Enhance.
-                        </span>
+                    <h2 class="emr-section-heading">
+                        Three Levels of <span class="emr-gold-text">Enhancement.</span>
                     </h2>
 
+                    <p class="emr-section-copy">
+                        Whether your vehicle needs a refresh or a more
+                        comprehensive detailing experience, choose the
+                        starting package that best matches your goals.
+                        We'll help confirm the right service for your vehicle.
+                    </p>
                 </div>
 
-                <div class="package-grid">
+                <div class="emr-package-grid">
 
-                    <!-- GOLD -->
+                    <!-- ENHANCE GOLD -->
+                    <article class="emr-package-card" id="enhance-gold">
+                        <span class="emr-package-label">The Essential Experience</span>
 
-                    <article class="package-card">
+                        <h3>Enhance Gold</h3>
 
-                        <span class="package-number">
-                            01
-                        </span>
-
-                        <h3>
-                            Enhance Gold
-                        </h3>
-
-                        <div class="package-price">
-                            $149+
-                            <small>
-                                starting
-                            </small>
-                        </div>
-
-                        <p>
-                            A complete maintenance detail for
-                            vehicles that need a clean, refreshed finish.
+                        <p class="emr-package-description">
+                            A premium starting point for refreshing your
+                            vehicle's appearance and bringing back that
+                            clean, cared-for feeling.
                         </p>
 
-                        <ul class="package-list">
+                        <div class="emr-package-price">$180+</div>
+                        <div class="emr-package-price-note">Starting price</div>
 
-                            <li>Exterior hand wash</li>
-                            <li>Wheels & tires cleaned</li>
-                            <li>Tire dressing</li>
-                            <li>Exterior glass cleaned</li>
-                            <li>Interior vacuum</li>
-                            <li>Interior surface cleaning</li>
-                            <li>Dashboard & console cleaned</li>
-                            <li>Door jamb cleaning</li>
-                            <li>Final quality inspection</li>
+                        <div class="emr-package-divider"></div>
 
+                        <h4 class="emr-package-list-title">
+                            A great fit for:
+                        </h4>
+
+                        <ul class="emr-package-list">
+                            <li>Routine vehicle refreshes</li>
+                            <li>Vehicles needing general cleaning and care</li>
+                            <li>Owners looking to maintain a clean appearance</li>
+                            <li>A starting point for a personalized detail</li>
                         </ul>
 
                         <a
-                            href="book-now.html"
-                            class="btn btn-outline"
+                            class="emr-button emr-button-outline"
+                            href="book-now.html?package=enhance-gold"
                         >
-                            Book Gold
+                            Choose Enhance Gold
                         </a>
-
                     </article>
 
-                    <!-- BLACK LABEL -->
+                    <!-- ENHANCE ELITE -->
+                    <article class="emr-package-card featured" id="enhance-elite">
+                        <span class="emr-package-label">Elevated Vehicle Care</span>
 
-                    <article class="package-card featured">
+                        <h3>Enhance Elite</h3>
 
-                        <span class="package-number">
-                            02
-                        </span>
-
-                        <div class="package-badge">
-                            MOST POPULAR
-                        </div>
-
-                        <h3>
-                            Enhance Black Label
-                        </h3>
-
-                        <div class="package-price">
-                            $249+
-                            <small>
-                                starting
-                            </small>
-                        </div>
-
-                        <p>
-                            A deeper interior and exterior transformation
-                            for vehicles that need more attention.
+                        <p class="emr-package-description">
+                            A more involved detailing experience for owners
+                            who want extra attention to their vehicle's
+                            overall condition and presentation.
                         </p>
 
-                        <ul class="package-list">
+                        <div class="emr-package-price">$300+</div>
+                        <div class="emr-package-price-note">Starting price</div>
 
-                            <li>Everything in Gold</li>
-                            <li>Deep interior cleaning</li>
-                            <li>Carpet & mat deep cleaning</li>
-                            <li>Detailed wheel & tire treatment</li>
-                            <li>Interior trim treatment</li>
-                            <li>Hard-to-reach area detailing</li>
-                            <li>Enhanced exterior finishing</li>
-                            <li>Exterior protection treatment</li>
-                            <li>Final presentation inspection</li>
+                        <div class="emr-package-divider"></div>
 
+                        <h4 class="emr-package-list-title">
+                            A great fit for:
+                        </h4>
+
+                        <ul class="emr-package-list">
+                            <li>Vehicles needing more comprehensive attention</li>
+                            <li>Owners looking for an elevated finish</li>
+                            <li>Additional care based on vehicle condition</li>
+                            <li>A customized detailing plan</li>
                         </ul>
 
                         <a
-                            href="book-now.html"
-                            class="btn btn-primary"
+                            class="emr-button"
+                            href="book-now.html?package=enhance-elite"
                         >
-                            Book Black Label
+                            Choose Enhance Elite
                         </a>
-
                     </article>
 
-                    <!-- SHOWROOM -->
+                    <!-- ENHANCE SHOWROOM -->
+                    <article class="emr-package-card" id="enhance-showroom">
+                        <span class="emr-package-label">The Premium Experience</span>
 
-                    <article class="package-card">
+                        <h3>Enhance Showroom</h3>
 
-                        <span class="package-number">
-                            03
-                        </span>
-
-                        <h3>
-                            Showroom Edition
-                        </h3>
-
-                        <div class="package-price">
-                            $399+
-                            <small>
-                                starting
-                            </small>
-                        </div>
-
-                        <p>
-                            Our highest level of service for vehicles
-                            receiving a complete premium treatment.
+                        <p class="emr-package-description">
+                            Our highest starting tier for vehicles that
+                            call for a more extensive, carefully planned
+                            detailing experience.
                         </p>
 
-                        <ul class="package-list">
+                        <div class="emr-package-price">$500+</div>
+                        <div class="emr-package-price-note">Starting price</div>
 
-                            <li>Everything in Black Label</li>
-                            <li>Intensive interior detailing</li>
-                            <li>Premium exterior treatment</li>
-                            <li>Paint enhancement</li>
-                            <li>Premium paint protection</li>
-                            <li>Detailed trim restoration</li>
-                            <li>Enhanced wheel treatment</li>
-                            <li>Showroom finishing process</li>
-                            <li>Final multi-point inspection</li>
+                        <div class="emr-package-divider"></div>
 
+                        <h4 class="emr-package-list-title">
+                            A great fit for:
+                        </h4>
+
+                        <ul class="emr-package-list">
+                            <li>More extensive detailing goals</li>
+                            <li>Vehicles requiring additional time and attention</li>
+                            <li>Owners seeking a premium vehicle refresh</li>
+                            <li>Individual service planning around vehicle needs</li>
                         </ul>
 
                         <a
-                            href="book-now.html"
-                            class="btn btn-outline"
+                            class="emr-button emr-button-outline"
+                            href="book-now.html?package=enhance-showroom"
                         >
-                            Book Showroom
+                            Choose Enhance Showroom
                         </a>
-
                     </article>
 
                 </div>
 
-                <div class="package-guide">
-
-                    <div>
-                        <strong>
-                            GOLD
-                        </strong>
-
-                        <span>
-                            Maintained vehicle
-                        </span>
-                    </div>
-
-                    <div>
-                        <strong>
-                            BLACK LABEL
-                        </strong>
-
-                        <span>
-                            Deeper attention
-                        </span>
-                    </div>
-
-                    <div>
-                        <strong>
-                            SHOWROOM
-                        </strong>
-
-                        <span>
-                            Complete treatment
-                        </span>
-                    </div>
-
-                </div>
-
+                <p class="emr-pricing-disclaimer">
+                    All package prices are starting prices, not guaranteed
+                    final quotes. Final pricing depends on vehicle size,
+                    condition, interior or exterior needs, contamination,
+                    pet hair, stains, and the services requested. Specific
+                    package inclusions and final pricing will be confirmed
+                    before work begins.
+                </p>
             </div>
-
         </section>
 
-        <!-- ADD-ONS -->
+        <!-- HOW TO CHOOSE -->
+        <section class="emr-choice-section">
+            <div class="emr-container">
+                <div class="emr-section-intro">
+                    <span class="emr-eyebrow">Find Your Fit</span>
 
-        <section class="addons-section section-dark">
-
-            <div class="container">
-
-                <div class="center-heading">
-
-                    <p class="eyebrow">
-                        CUSTOM ENHANCEMENTS
-                    </p>
-
-                    <h2>
-                        Add What Your
-                        <span class="gold-text">
-                            Vehicle Needs.
-                        </span>
+                    <h2 class="emr-section-heading">
+                        Not Sure Which Package <span class="emr-gold-text">to Choose?</span>
                     </h2>
 
-                    <p>
-                        Add-ons can be selected alongside your
-                        detailing package during booking.
+                    <p class="emr-section-copy">
+                        You don't have to figure it all out alone. Tell us
+                        about your vehicle and what you want to accomplish,
+                        and we'll help determine the most appropriate service.
                     </p>
-
                 </div>
 
-                <div class="addons-grid">
-
-                    <article class="addon-card">
-                        <span class="addon-number">01</span>
-                        <h3>Wheel Polishing</h3>
-                        <div class="addon-price">$50–$100 / Set</div>
-                        <a href="book-now.html">Add To Booking →</a>
+                <div class="emr-choice-grid">
+                    <article class="emr-choice-item">
+                        <span class="emr-choice-number">01 / GOLD</span>
+                        <h3>Start with a Refresh</h3>
+                        <p>
+                            Choose Enhance Gold if you're looking for a
+                            premium starting point for general vehicle
+                            cleaning and upkeep.
+                        </p>
                     </article>
 
-                    <article class="addon-card">
-                        <span class="addon-number">02</span>
-                        <h3>Wheel Ceramic Coating</h3>
-                        <div class="addon-price">Starting At $125</div>
-                        <a href="book-now.html">Add To Booking →</a>
+                    <article class="emr-choice-item">
+                        <span class="emr-choice-number">02 / ELITE</span>
+                        <h3>Go a Step Further</h3>
+                        <p>
+                            Consider Enhance Elite when your vehicle needs
+                            more attention or you have additional detailing
+                            goals to discuss.
+                        </p>
                     </article>
 
-                    <article class="addon-card">
-                        <span class="addon-number">03</span>
-                        <h3>Glass Ceramic Coating</h3>
-                        <div class="addon-price">Starting At $99</div>
-                        <a href="book-now.html">Add To Booking →</a>
+                    <article class="emr-choice-item">
+                        <span class="emr-choice-number">03 / SHOWROOM</span>
+                        <h3>Plan a Premium Detail</h3>
+                        <p>
+                            Start with Enhance Showroom if you're seeking
+                            a more extensive service plan tailored to your
+                            vehicle's condition and desired result.
+                        </p>
                     </article>
-
-                    <article class="addon-card">
-                        <span class="addon-number">04</span>
-                        <h3>Headlight Restoration</h3>
-                        <div class="addon-price">Starting At $75</div>
-                        <a href="book-now.html">Add To Booking →</a>
-                    </article>
-
-                    <article class="addon-card">
-                        <span class="addon-number">05</span>
-                        <h3>Trim Restoration</h3>
-                        <div class="addon-price">Starting At $75</div>
-                        <a href="book-now.html">Add To Booking →</a>
-                    </article>
-
-                    <article class="addon-card">
-                        <span class="addon-number">06</span>
-                        <h3>Water Spot Removal</h3>
-                        <div class="addon-price">Starting At $75</div>
-                        <a href="book-now.html">Add To Booking →</a>
-                    </article>
-
-                    <article class="addon-card">
-                        <span class="addon-number">07</span>
-                        <h3>Scratch & Scuff Removal</h3>
-                        <div class="addon-price">Starting At $75</div>
-                        <a href="book-now.html">Add To Booking →</a>
-                    </article>
-
-                    <article class="addon-card">
-                        <span class="addon-number">08</span>
-                        <h3>Engine Bay Detail</h3>
-                        <div class="addon-price">Starting At $75</div>
-                        <a href="book-now.html">Add To Booking →</a>
-                    </article>
-
-                    <article class="addon-card">
-                        <span class="addon-number">09</span>
-                        <h3>Undercarriage Cleaning</h3>
-                        <div class="addon-price">Starting At $50</div>
-                        <a href="book-now.html">Add To Booking →</a>
-                    </article>
-
-                    <article class="addon-card">
-                        <span class="addon-number">10</span>
-                        <h3>Pet Hair Removal</h3>
-                        <div class="addon-price">Custom Pricing</div>
-                        <a href="book-now.html">Add To Booking →</a>
-                    </article>
-
-                    <article class="addon-card">
-                        <span class="addon-number">11</span>
-                        <h3>Carpet & Upholstery Extraction</h3>
-                        <div class="addon-price">Starting At $75</div>
-                        <a href="book-now.html">Add To Booking →</a>
-                    </article>
-
-                    <article class="addon-card">
-                        <span class="addon-number">12</span>
-                        <h3>Leather Deep Clean</h3>
-                        <div class="addon-price">Starting At $50</div>
-                        <a href="book-now.html">Add To Booking →</a>
-                    </article>
-
-                    <article class="addon-card">
-                        <span class="addon-number">13</span>
-                        <h3>Headliner Deep Cleaning</h3>
-                        <div class="addon-price">Starting At $50</div>
-                        <a href="book-now.html">Add To Booking →</a>
-                    </article>
-
-                    <article class="addon-card">
-                        <span class="addon-number">14</span>
-                        <h3>Odor Treatment</h3>
-                        <div class="addon-price">Starting At $75</div>
-                        <a href="book-now.html">Add To Booking →</a>
-                    </article>
-
-                    <article class="addon-card">
-                        <span class="addon-number">15</span>
-                        <h3>Heavy Soil Treatment</h3>
-                        <div class="addon-price">Custom Pricing</div>
-                        <a href="book-now.html">Add To Booking →</a>
-                    </article>
-
-                    <article class="addon-card">
-                        <span class="addon-number">16</span>
-                        <h3>Specialty Service</h3>
-                        <div class="addon-price">Custom Quote</div>
-                        <a href="book-now.html">Add To Booking →</a>
-                    </article>
-
                 </div>
-
             </div>
-
         </section>
 
-        <!-- VEHICLE TYPES -->
+        <!-- ADD-ON SERVICES -->
+        <section class="emr-addons-section" id="add-ons">
+            <div class="emr-container">
+                <div class="emr-addons-layout">
 
-        <section class="service-types">
+                    <div class="emr-addons-intro">
+                        <span class="emr-eyebrow">Personalize Your Detail</span>
 
-            <div class="container">
+                        <h2>
+                            The Finishing Touches Make the <span class="emr-gold-text">Difference.</span>
+                        </h2>
 
-                <div class="center-heading">
+                        <p>
+                            Every vehicle is different. Depending on its
+                            condition and your goals, additional services
+                            may be available to address specific areas that
+                            need extra attention.
+                        </p>
 
-                    <p class="eyebrow">
-                        VEHICLES WE SERVICE
-                    </p>
+                        <div class="emr-addons-note">
+                            Add-on availability and pricing are confirmed
+                            after reviewing the vehicle and requested work.
+                            Not every service is suitable for every vehicle.
+                        </div>
+                    </div>
 
-                    <h2>
-                        Built For
-                        <span class="gold-text">
-                            More Than Cars.
-                        </span>
-                    </h2>
+                    <div class="emr-addons-grid">
 
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Wheel Cleaning and Polishing</span>
+                        </div>
+
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Wheel Ceramic Protection</span>
+                        </div>
+
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Glass Ceramic Protection</span>
+                        </div>
+
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Headlight Restoration</span>
+                        </div>
+
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Exterior Trim Restoration</span>
+                        </div>
+
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Water Spot Treatment</span>
+                        </div>
+
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Scratch and Scuff Assessment</span>
+                        </div>
+
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Engine Bay Detailing</span>
+                        </div>
+
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Undercarriage Cleaning</span>
+                        </div>
+
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Pet Hair Removal</span>
+                        </div>
+
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Carpet and Upholstery Extraction</span>
+                        </div>
+
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Leather Cleaning and Care</span>
+                        </div>
+
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Headliner Spot Treatment</span>
+                        </div>
+
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Odor Treatment</span>
+                        </div>
+
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Heavy Soil Treatment</span>
+                        </div>
+
+                        <div class="emr-addon">
+                            <span class="emr-addon-mark" aria-hidden="true">+</span>
+                            <span>Other Specialty Detailing Requests</span>
+                        </div>
+
+                    </div>
                 </div>
-
-                <div class="service-types-list">
-
-                    <span>Cars</span>
-                    <span>SUVs</span>
-                    <span>Trucks</span>
-                    <span>Motorcycles</span>
-                    <span>Boats</span>
-
-                </div>
-
             </div>
+        </section>
 
+        <!-- MOBILE DETAILING -->
+        <section class="emr-mobile-section">
+            <div class="emr-container">
+                <div class="emr-mobile-panel">
+                    <div>
+                        <span class="emr-eyebrow">Premium Care, Delivered</span>
+
+                        <h2>
+                            Your Schedule. Your Location. <span class="emr-gold-text">Your Vehicle.</span>
+                        </h2>
+
+                        <p>
+                            Enjoy the convenience of mobile detailing across
+                            Alameda and the greater San Francisco Bay Area.
+                            Service availability depends on your location,
+                            appointment schedule, and the work requested.
+                        </p>
+                    </div>
+
+                    <a class="emr-button" href="service-area.html">
+                        Check Service Areas
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
         </section>
 
         <!-- GOOGLE REVIEWS -->
+        <section class="emr-reviews-section">
+            <div class="emr-container">
+                <div class="emr-review-mark" aria-label="Five stars">★★★★★</div>
 
-        <section
-            class="services-reviews"
-            id="google-reviews"
-            aria-labelledby="services-reviews-title"
-        >
-
-            <div class="container">
-
-                <div class="center-heading">
-
-                    <p class="eyebrow">
-                        REAL CUSTOMER EXPERIENCES
-                    </p>
-
-                    <h2 id="services-reviews-title">
-                        The Results Speak.
-                        <span class="gold-text">
-                            Our Clients Agree.
-                        </span>
-                    </h2>
-
-                    <p class="reviews-intro">
-                        See what customers are saying about Enhance My Ride
-                        Auto Spa & Mobile Detailing.
-                    </p>
-
-                </div>
-
-                <!-- Elfsight Google Reviews widget -->
-                <div class="google-reviews-widget">
-
-                    <div
-                        class="elfsight-app-3044b402-0df7-4237-8572-14a2cb4b940b"
-                        data-elfsight-app-lazy
-                    ></div>
-
-                </div>
-
-                <div class="reviews-cta">
-
-                    <p>
-                        Had your vehicle detailed by us?
-                        We'd appreciate you sharing your experience.
-                    </p>
-
-                    <a
-                        href="https://maps.app.goo.gl/6eQD7x4xCzdMfhps9?g_st=ic"
-                        class="btn btn-outline"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Leave A Google Review
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- FINAL CTA -->
-
-        <section class="services-final">
-
-            <div class="container">
-
-                <p class="eyebrow">
-                    READY TO BUILD YOUR DETAIL?
-                </p>
-
-                <h2>
-                    Choose Your Package.
-                    <span class="gold-text">
-                        Add What You Need.
-                    </span>
-                </h2>
+                <h2>See What Customers Are Saying</h2>
 
                 <p>
-                    Final pricing may vary based on vehicle size,
-                    condition, pet hair, stains, and requested services.
+                    Your trust matters to us. Explore our Google reviews
+                    and learn more about the experience customers have
+                    with Enhance My Ride Auto Spa &amp; Mobile Detailing.
                 </p>
 
                 <a
-                    href="book-now.html"
-                    class="btn btn-primary"
+                    class="emr-button emr-button-outline"
+                    href="https://maps.app.goo.gl/6eQD7x4xCzdMfhps9?g_st=ic"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
-                    Book Now
+                    Read Our Google Reviews
+                    <span aria-hidden="true">↗</span>
                 </a>
-
             </div>
+        </section>
 
+        <!-- FINAL CTA -->
+        <section class="emr-final-cta">
+            <div class="emr-container">
+                <span class="emr-eyebrow">Your Vehicle Deserves Better</span>
+
+                <h2>
+                    Ready to Give Your Ride the <span class="emr-gold-text">Enhance Treatment?</span>
+                </h2>
+
+                <p>
+                    Tell us about your vehicle, the services you're
+                    interested in, and where you're located. We'll help
+                    you take the next step toward a cleaner, refreshed ride.
+                </p>
+
+                <div class="emr-final-cta-actions">
+                    <a class="emr-button" href="book-now.html">
+                        Request Your Detail
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                    <a class="emr-button emr-button-outline" href="tel:+13233271806">
+                        Call (323) 327-1806
+                    </a>
+                </div>
+
+                <p class="emr-small-print">
+                    Enhance My Ride Auto Spa &amp; Mobile Detailing
+                    <br>
+                    We come to you. You relax. We Enhance.
+                </p>
+            </div>
         </section>
 
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
 
-        <div class="container footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" aria-label="Enhance My Ride home">
+                        <img
+                            src="images/logo.png"
+                            alt="Enhance My Ride Auto Spa and Mobile Detailing"
+                            loading="lazy"
+                        >
+                    </a>
 
-            <div class="footer-brand">
+                    <p>
+                        Premium mobile detailing delivered to your door.
+                        We come to you. You relax. We Enhance.
+                    </p>
+                </div>
 
-                <a href="index.html" class="logo">
+                <div class="footer-links">
+                    <h3>Explore</h3>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="about.html">About Us</a>
+                    <a href="service-area.html">Service Area</a>
+                    <a href="book-now.html">Book Now</a>
+                </div>
 
-                    <span class="logo-main">
-                        ENHANCE MY RIDE
-                    </span>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <a href="tel:+13233271806">(323) 327-1806</a>
+                    <a href="mailto:info@enhancemyride.com">
+                        info@enhancemyride.com
+                    </a>
 
-                    <span class="logo-sub">
-                        AUTO SPA & MOBILE DETAILING
-                    </span>
+                    <div class="footer-socials">
+                        <a
+                            href="https://www.instagram.com/enhancemyridemobiledetailing/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >Instagram</a>
 
-                </a>
+                        <a
+                            href="https://www.facebook.com/Enhancemyride"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >Facebook</a>
 
+                        <a
+                            href="https://www.tiktok.com/@enhancemyride"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >TikTok</a>
+
+                        <a
+                            href="https://www.youtube.com/@enhancemyridemobiledetailing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >YouTube</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
                 <p>
-                    Premium mobile detailing throughout
-                    the San Francisco Bay Area.
+                    &copy; <span id="current-year">2026</span>
+                    Enhance My Ride Auto Spa &amp; Mobile Detailing.
+                    All rights reserved.
                 </p>
-
             </div>
-
-            <div class="footer-links">
-
-                <h4>Explore</h4>
-
-                <a href="index.html">Home</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="services.html">Services</a>
-                <a href="book-now.html">Book Now</a>
-                <a href="about.html">About</a>
-                <a href="service-area.html">Service Area</a>
-
-            </div>
-
-            <div class="footer-links">
-
-                <h4>Connect</h4>
-
-                <a href="book-now.html">Book Now</a>
-
-                <a href="tel:+13233271806">
-                    (323) 327-1806
-                </a>
-
-                <a href="mailto:info@enhancemyride.com">
-                    info@enhancemyride.com
-                </a>
-
-                <a
-                    href="https://www.instagram.com/enhancemyridemobiledetailing/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Instagram
-                </a>
-
-                <a
-                    href="https://www.tiktok.com/@enhancemyride"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    TikTok
-                </a>
-
-                <a
-                    href="https://www.youtube.com/@enhancemyridemobiledetailing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    YouTube
-                </a>
-
-            </div>
-
         </div>
-
-        <div class="container footer-bottom">
-
-            <p>
-                © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
-                All rights reserved.
-            </p>
-
-        </div>
-
     </footer>
 
-    <a
-        href="tel:+13233271806"
-        class="mobile-call-button"
-        aria-label="Call Enhance My Ride"
-    >
-        <span class="call-icon">☎</span>
-        <span>CALL</span>
-    </a>
+</div>
 
-    <script src="js/script.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+    const yearElement = document.getElementById("current-year");
+
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+</script>
 
 </body>
-
 </html>
