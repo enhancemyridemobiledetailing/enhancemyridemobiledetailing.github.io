@@ -1,337 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Area | Enhance My Ride Auto Spa &amp; Mobile Detailing</title>
-    <meta name="description" content="Enhance My Ride offers mobile detailing within approximately 40 miles of Alameda, California, including Oakland, San Leandro, Berkeley, Emeryville, Hayward, and select San Francisco locations.">
-    <meta name="theme-color" content="#050505">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://enhancemyride.com/service-area.html">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Service Area page styles only. Shared site styling stays in css/style.css. */
-        .service-area-page-hero {
-            min-height: 52vh;
-            display: flex;
-            align-items: center;
-            background:
-                radial-gradient(circle at 80% 38%, rgba(212,175,55,.14), transparent 38%),
-                linear-gradient(115deg, #050505 18%, #111 100%);
-        }
-        .service-area-page-hero h1 {
-            max-width: 940px;
-            margin: 0;
-            font-size: clamp(3.2rem, 7vw, 6.3rem);
-            line-height: .95;
-        }
-        .service-area-page-hero h1 span {
-            display: block;
-            color: var(--emr-gold, #d4af37);
-        }
-        .service-area-page-hero .hero-copy {
-            max-width: 720px;
-            margin-top: 24px;
-            color: rgba(255,255,255,.68);
-            line-height: 1.9;
-        }
-        .service-area-page-hero .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 28px;
-        }
-        .service-area-intro {
-            max-width: 780px;
-            margin-bottom: 34px;
-        }
-        .service-area-intro h2,
-        .service-area-radius h2,
-        .service-area-final h2 { margin: 0; }
-        .service-area-intro > p:last-child {
-            max-width: 720px;
-            margin-top: 16px;
-            color: #aaa;
-            line-height: 1.85;
-        }
-        .service-area-cities {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 14px;
-        }
-        .service-area-city {
-            min-height: 150px;
-            padding: 23px;
-            border: 1px solid rgba(212,175,55,.23);
-            background: linear-gradient(145deg, #151515, #090909);
-        }
-        .service-area-city .city-number {
-            display: block;
-            color: #d4af37;
-            font-size: .68rem;
-            font-weight: 700;
-            letter-spacing: .14em;
-        }
-        .service-area-city h3 { margin-top: 13px; font-size: 1.3rem; }
-        .service-area-city p {
-            margin-top: 9px;
-            color: #aaa;
-            font-size: .87rem;
-            line-height: 1.7;
-        }
-        .service-area-radius-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px;
-        }
-        .service-area-radius {
-            padding: 30px;
-            border: 1px solid rgba(212,175,55,.23);
-            background: #101010;
-        }
-        .service-area-radius .radius-label {
-            color: #d4af37;
-            font-size: .7rem;
-            font-weight: 700;
-            letter-spacing: .16em;
-            text-transform: uppercase;
-        }
-        .service-area-radius h2 {
-            margin-top: 13px;
-            font-size: clamp(1.8rem, 3vw, 2.7rem);
-        }
-        .service-area-radius p {
-            margin-top: 13px;
-            color: #aaa;
-            line-height: 1.8;
-        }
-        .service-area-final {
-            padding: clamp(32px, 6vw, 65px);
-            border: 1px solid rgba(212,175,55,.28);
-            background: radial-gradient(circle at 90% 10%, rgba(212,175,55,.12), transparent 42%), #101010;
-        }
-        .service-area-final > p:not(.eyebrow) {
-            max-width: 740px;
-            margin-top: 16px;
-            color: #aaa;
-            line-height: 1.85;
-        }
-        .service-area-final .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 25px;
-        }
-        @media (max-width: 900px) {
-            .service-area-cities { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        }
-        @media (max-width: 650px) {
-            .service-area-page-hero { min-height: auto; }
-            .service-area-page-hero .container { padding-top: 62px; padding-bottom: 62px; }
-            .service-area-page-hero h1 { font-size: clamp(2.8rem, 12vw, 4.2rem); }
-            .service-area-page-hero .hero-actions,
-            .service-area-final .hero-actions { flex-direction: column; }
-            .service-area-page-hero .hero-actions .btn,
-            .service-area-final .hero-actions .btn { width: 100%; }
-            .service-area-cities,
-            .service-area-radius-grid { grid-template-columns: 1fr; }
-            .service-area-city { min-height: 0; }
-            .service-area-radius { padding: 25px; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service Area | Enhance My Ride Auto Spa &amp; Mobile Detailing</title>
+  <meta name="description" content="Check Enhance My Ride mobile detailing coverage around Alameda and nearby San Francisco Bay Area communities.">
+  <meta name="theme-color" content="#080808">
+  <link rel="canonical" href="https://enhancemyride.com/service-area.html">
+  <style>
+    :root{--bg:#080808;--panel:#101010;--gold:#d4af37;--gold2:#ecd27a;--white:#f6f4ee;--muted:#aaa69b;--line:rgba(212,175,55,.3);--max:1240px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:82px}
+    body{background:var(--bg);color:var(--white);font:16px/1.65 Arial,Helvetica,sans-serif;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(100% - 40px,var(--max));margin:auto}
+    .eyebrow{color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase}
+    .section-title{font:400 clamp(2rem,4vw,3.5rem)/1.15 Georgia,"Times New Roman",serif;margin-top:10px}
+    .copy{color:var(--muted);max-width:650px;margin-top:16px;line-height:1.9}
+    .gold{color:var(--gold)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:47px;padding:12px 22px;border:1px solid var(--gold);background:var(--gold);color:#080808;font-size:.73rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;transition:.2s}
+    .btn:hover{background:transparent;color:var(--gold2);transform:translateY(-2px)}
+    .btn.outline{background:rgba(0,0,0,.25);color:#fff;border-color:rgba(255,255,255,.6)}
+    .btn.outline:hover{background:var(--gold);color:#080808;border-color:var(--gold)}
+    /* Header */
+    .header{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .header-inner{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:14px;min-width:0;flex-shrink:0}
+    .brand-logo{width:78px;height:78px;display:block;object-fit:contain;object-position:center;flex:0 0 78px;border-radius:50%;background:#080808;visibility:visible;opacity:1;max-width:none;min-width:78px}
+    .brand-name{display:block;font:1.25rem Georgia,serif;letter-spacing:.03em;line-height:1.25}
+    .brand-sub{display:block;color:var(--muted);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase}
+    .nav{display:flex;align-items:center;gap:22px}
+    .nav a{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#d5d1c8}
+    .nav a:hover{color:var(--gold)}
+    .nav .nav-book{border:1px solid var(--gold);padding:9px 14px;color:var(--gold2)}
+    .menu{display:none;background:none;border:1px solid var(--line);color:var(--gold);font-size:1.4rem;width:42px;height:42px}
+    /* Slideshow hero */
+    .hero{position:relative;min-height:min(760px,78vw);height:690px;max-height:calc(100svh - 76px);min-height:560px;isolation:isolate;overflow:hidden;background:#111}
+    .slides,.slide{position:absolute;inset:0}
+    .slide{background-size:cover;background-position:center 53%;opacity:0;transform:scale(1.035);transition:opacity 1.2s ease,transform 7s linear;will-change:opacity}
+    .slide.active{opacity:1;transform:scale(1);z-index:1}
+    .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.62) 38%,rgba(0,0,0,.2) 78%),linear-gradient(0deg,rgba(0,0,0,.72),transparent 42%,rgba(0,0,0,.12))}
+    .hero-content{position:relative;z-index:2;min-height:560px;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;padding-top:36px;padding-bottom:80px;pointer-events:none}
+    .hero-content>*{pointer-events:auto}
+    .hero h1{font:500 clamp(3.2rem,7.8vw,7rem)/.99 Georgia,"Times New Roman",serif;letter-spacing:-.04em;text-transform:uppercase;margin-top:19px;max-width:800px;text-shadow:0 3px 24px #000}
+    .hero h1 span{display:block;color:var(--gold);letter-spacing:.04em}
+    .hero-text{max-width:510px;color:#e1ded6;margin-top:22px;font-size:1rem;line-height:1.8;text-shadow:0 2px 12px #000}
+    .hero-actions{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:14px;flex-wrap:nowrap;margin-top:0;width:100%;pointer-events:auto}
+    .hero-tagline{margin-top:25px;color:#e5dfce;font-size:.72rem;letter-spacing:.19em;text-transform:uppercase}
+    .slide-controls{position:absolute;z-index:3;bottom:26px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:9px}
+    .dot{width:8px;height:8px;border:1px solid #fff;border-radius:50%;background:transparent;cursor:pointer;padding:0}
+    .dot.active{width:24px;border-radius:6px;background:var(--gold);border-color:var(--gold)}
+    .slide-count{font-size:.72rem;color:#eee;letter-spacing:.12em;margin-left:9px}
+    .hero-button-band{position:relative;z-index:4;display:flex;justify-content:center;align-items:center;gap:12px;padding:18px 20px;background:#080808;border-bottom:1px solid var(--line)}
+    .hero-button-band .btn{min-width:190px;min-height:42px;padding:10px 18px;font-size:.7rem}
+    /* Service strip */
+    .service-strip{background:#0c0c0c;border-bottom:1px solid var(--line)}
+    .strip-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-left:1px solid var(--line);border-right:1px solid var(--line)}
+    .strip-item{min-height:110px;display:flex;align-items:center;justify-content:center;gap:12px;padding:20px;border-right:1px solid var(--line)}
+    .strip-item:last-child{border-right:0}
+    .strip-icon{color:var(--gold);font-size:1.45rem}
+    .strip-item strong{display:block;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
+    .strip-item small{display:block;color:var(--muted);font-size:.7rem;margin-top:3px}
+    /* Four-panel section requested by owner */
+    .promise{border-bottom:1px solid var(--line);background:#0b0b0b}
+    .promise-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+    .promise-item{min-height:180px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:28px 18px}
+    .promise-item:nth-child(odd){border-right:1px solid var(--line)}
+    .promise-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
+    .promise-item h2{color:var(--gold);font:400 clamp(1.45rem,3vw,2.25rem) Georgia,serif}
+    .promise-item p{margin-top:13px;color:#aaa69b;font-size:.78rem;letter-spacing:.13em}
+    /* Intro */
+    .intro{padding:95px 0}
+    .intro-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:75px;align-items:start}
+    .intro-quote{font:400 clamp(1.5rem,2.8vw,2.25rem)/1.55 Georgia,serif;color:#d7d2c7;margin-top:18px}
+    .intro-content p{color:var(--muted);margin-top:17px;line-height:1.95}
+    .text-link{display:inline-block;margin-top:23px;padding-bottom:5px;border-bottom:1px solid var(--gold);color:var(--gold2);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    /* Gallery */
+    .gallery{padding:78px 0;border-block:1px solid var(--line);background:radial-gradient(ellipse at 100% 0,rgba(212,175,55,.07),transparent 45%),#101010}
+    .gallery-head{display:flex;align-items:end;justify-content:space-between;gap:24px}
+    .gallery-tiles{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;margin-top:30px}
+    .gallery-tile{min-height:220px;position:relative;overflow:hidden;background:#161616;border:1px solid var(--line)}
+    .gallery-tile img{width:100%;height:100%;min-height:220px;object-fit:cover;display:block;transition:transform .5s}
+    .gallery-tile:hover img{transform:scale(1.04)}
+    .gallery-tile::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.65));pointer-events:none}
+    /* Google reviews */
+    .reviews{padding:90px 0;background:#090909}
+    .reviews-head{text-align:center;max-width:720px;margin:0 auto 30px}
+    .reviews-head .copy{margin-inline:auto}
+    .reviews-shell{background:#fff;color:#111;min-height:150px;padding:12px;border:1px solid var(--line)}
+    .reviews-note{margin-top:15px;text-align:center;color:#77746b;font-size:.75rem}
+    /* CTA */
+    .cta{padding:80px 0;border-top:1px solid var(--line);background:radial-gradient(ellipse at 50% 100%,rgba(212,175,55,.12),transparent 58%),#0e0e0e;text-align:center}
+    .cta .copy{margin-inline:auto}
+    .cta-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:27px}
+    /* Minimal footer */
+    .footer{padding:42px 0 22px;border-top:1px solid var(--line);background:#050505}
+    .footer-top{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:30px;align-items:start}
+    .footer-heading{color:var(--gold);font:400 1.05rem Georgia,serif;margin-bottom:12px}
+    .footer-text{color:#969187;font-size:.82rem;line-height:1.9}
+    .footer-links{display:flex;flex-wrap:wrap;gap:10px 18px}
+    .footer-links a{color:#bcb7ac;font-size:.78rem}
+    .footer-links a:hover{color:var(--gold)}
+    .follow{text-align:center}
+    .socials{display:flex;justify-content:center;align-items:center;gap:19px;margin:13px 0 8px}
+    .socials a{display:inline-flex;width:28px;height:28px;align-items:center;justify-content:center;color:var(--gold);transition:color .2s,transform .2s}
+    .socials a:hover{color:#fff;transform:translateY(-2px)}
+    .socials svg{width:23px;height:23px;fill:currentColor}
+    .handle{font-weight:700;letter-spacing:.04em;color:#eee;font-size:.92rem}
+    .footer-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.09);margin-top:30px;padding-top:17px;color:#706c63;font-size:.7rem}
+    @media(min-width:1000px){.promise-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.promise-item{min-height:175px}.promise-item:nth-child(odd){border-right:0}.promise-item:not(:last-child){border-right:1px solid var(--line)}.promise-item:nth-child(-n+2){border-bottom:0}}
+    @media(max-width:900px){.menu{display:block}.nav{display:none;position:absolute;top:100%;left:0;right:0;padding:12px 20px 20px;background:#080808;border-bottom:1px solid var(--line);align-items:stretch;flex-direction:column;gap:0}.nav.open{display:flex}.nav a{padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.07)}.nav .nav-book{text-align:center;margin-top:10px}.hero{height:650px;min-height:560px}.hero-content{min-height:560px}.intro-grid{grid-template-columns:1fr;gap:25px}.strip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.strip-item:nth-child(2){border-right:0}.strip-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.gallery-tiles{grid-template-columns:1fr 1fr}.gallery-tile:first-child{grid-column:span 2}.footer-top{grid-template-columns:1fr 1fr}.follow{grid-column:1/-1;grid-row:1}}
+    @media(max-width:560px){.container{width:min(100% - 30px,var(--max))}.header-inner{min-height:68px;gap:10px}.brand-logo{width:58px;height:58px;flex-basis:58px}.header-inner{min-height:76px}.brand{gap:10px}.brand-name{font-size:1rem}.brand-name{font-size:.86rem}.brand-sub{font-size:.49rem;letter-spacing:.06em}.hero{height:610px;min-height:560px;max-height:calc(100svh - 68px)}.hero-content{min-height:560px;padding-top:25px;padding-bottom:72px}.slide{background-position:center center}.slide::after{background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.3)),linear-gradient(0deg,rgba(0,0,0,.72),transparent 50%)}.hero h1{font-size:clamp(2.75rem,13vw,4.4rem)}.hero-text{font-size:.9rem}.hero-button-band{gap:8px;padding:14px 15px}.hero-button-band .btn{flex:1;min-width:0;max-width:220px;padding:10px 8px;font-size:.62rem;letter-spacing:.04em}.hero-tagline{font-size:.62rem;letter-spacing:.12em}.strip-item{min-height:100px;padding:13px 9px;gap:8px}.strip-icon{font-size:1.2rem}.strip-item strong{font-size:.61rem}.strip-item small{font-size:.63rem}.promise-item{min-height:145px;padding:20px 8px}.promise-item h2{font-size:1.28rem}.promise-item p{font-size:.61rem;letter-spacing:.07em}.intro,.reviews{padding:68px 0}.gallery{padding:62px 0}.gallery-head{align-items:flex-start;flex-direction:column}.gallery-head .btn{width:100%}.gallery-tiles{grid-template-columns:1fr 1fr;gap:8px}.gallery-tile,.gallery-tile img{min-height:150px}.footer-top{grid-template-columns:1fr;gap:25px}.follow{grid-column:auto;grid-row:auto;text-align:left}.socials{justify-content:flex-start}.footer-bottom{flex-direction:column}.cta{padding:65px 0}.cta-actions{flex-direction:column;align-items:stretch;max-width:330px;margin-inline:auto;margin-top:24px}}
+
+    /* Floating click-to-call button */
+    .floating-call{position:fixed;right:20px;bottom:20px;z-index:100;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 20px;border:1px solid #f0d46e;border-radius:999px;background:linear-gradient(135deg,#ecd27a,#c9a227);color:#080808;box-shadow:0 8px 28px rgba(0,0,0,.45);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;transition:transform .2s,box-shadow .2s}
+    .floating-call:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.55)}
+    .floating-call svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
+    @media(max-width:560px){.floating-call{right:14px;bottom:14px;min-height:52px;padding:0 17px;font-size:.72rem}}
+        @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+    /* Fresh page content; shared header/footer and global styling are copied from the approved homepage. */
+    .page-hero{padding:76px 0 68px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 80% 0,rgba(212,175,55,.13),transparent 50%),linear-gradient(120deg,#080808,#111)}
+    .page-hero h1{font:400 clamp(2.7rem,7vw,5.4rem)/1.05 Georgia,serif;margin-top:12px;max-width:900px}
+    .page-hero .copy{max-width:720px}
+    .page-section{padding:68px 0;border-bottom:1px solid var(--line)}
+    .page-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
+    .page-card{background:var(--panel);border:1px solid var(--line);padding:27px;min-width:0}
+    .page-card h2,.page-card h3{font:400 1.65rem/1.2 Georgia,serif;color:var(--white)}
+    .page-card p{color:var(--muted);margin-top:12px;line-height:1.8}
+    .page-card ul{margin:17px 0 0 18px;color:#d2cec4}.page-card li{padding:4px 0}
+    .price{font:400 2.3rem Georgia,serif;color:var(--gold);margin-top:15px}.price small{font:400 .75rem Arial,sans-serif;color:var(--muted)}
+    .page-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+    .callout{padding:28px;border:1px solid var(--line);background:linear-gradient(120deg,#111,#090909);margin-top:28px}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+    .gallery-card{overflow:hidden;background:var(--panel);border:1px solid var(--line)}
+    .gallery-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#151515}
+    .gallery-card figcaption{padding:13px 15px;color:var(--muted);font-size:.8rem}
+    .area-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:25px}
+    .area-item{padding:17px;border:1px solid var(--line);background:#101010;color:#e8e2d3}
+    .booking-frame{width:100%;height:760px;border:1px solid var(--line);background:#fff;margin-top:25px}
+    .about-split{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}
+    .check-list{list-style:none;margin:18px 0 0;padding:0}.check-list li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);color:#d4d0c6}.check-list li::before{content:'✦';color:var(--gold);margin-right:10px}
+    @media(max-width:900px){.page-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.area-list{grid-template-columns:repeat(2,minmax(0,1fr))}.about-split{grid-template-columns:1fr;gap:20px}}
+    @media(max-width:560px){.page-hero{padding:54px 0 48px}.page-section{padding:48px 0}.page-grid,.gallery-grid,.area-list{grid-template-columns:1fr}.page-card{padding:22px}.booking-frame{height:720px}}
+
+  </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo" aria-label="Enhance My Ride home">
-                <span class="logo-main">ENHANCE MY RIDE</span>
-                <span class="logo-sub">AUTO SPA &amp; MOBILE DETAILING</span>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Enhance My Ride homepage">
+        <img class="brand-logo" src="images/enhance-my-ride-logo.webp?v=3" alt="Enhance My Ride logo" width="1254" height="1254" loading="eager" fetchpriority="high" decoding="async">
+        <span><span class="brand-name">Enhance My Ride</span><span class="brand-sub">Auto Spa &amp; Mobile Detailing</span></span>
+      </a>
+      <button class="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <nav class="nav" id="main-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="service-area.html" aria-current="page">Service Area</a><a class="nav-book" href="book-now.html">Book Now ↗</a>
+      </nav>
+    </div>
+  </header>
+<main>
+<section class="page-hero"><div class="container"><p class="eyebrow">Mobile detailing coverage</p><h1>Premium Care, <span class="gold">Delivered to You.</span></h1><p class="copy">Our regular service area is centered around Alameda, California, with coverage across nearby Bay Area communities.</p><p class="copy"><strong style="color:var(--white)">Standard travel radius: up to 40 miles from Alameda.</strong> Locations beyond the standard radius may be possible with an additional travel fee.</p><div class="page-actions"><a class="btn" href="book-now.html">Check Availability</a><a class="btn outline" href="tel:+13233271806">Ask About Your Location</a></div></div></section><section class="page-section"><div class="container"><p class="eyebrow">Core service areas</p><h2 class="section-title">Serving the <span class="gold">Bay Area.</span></h2><p class="copy">Contact us to confirm availability for your address before choosing a time.</p><div class="area-list"><div class="area-item">Alameda</div><div class="area-item">Oakland</div><div class="area-item">San Leandro</div><div class="area-item">Berkeley</div><div class="area-item">Emeryville</div><div class="area-item">Hayward</div><div class="area-item">San Francisco</div><div class="area-item">Surrounding Bay Area communities</div></div><div class="callout"><h3 class="section-title" style="font-size:1.7rem">Outside the regular area?</h3><p class="copy">Send your city or ZIP code and we’ll let you know whether we can accommodate the location and whether a travel fee applies.</p><div class="page-actions"><a class="btn" href="mailto:info@enhancemyride.com?subject=Service%20Area%20Question">Email Us</a><a class="btn outline" href="tel:+13233271806">Call (323) 327-1806</a></div></div></div></section>
+</main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <h2 class="footer-heading">Enhance My Ride</h2>
+          <p class="footer-text">Auto Spa &amp; Mobile Detailing<br>We come to you. You relax. We Enhance.</p>
+        </div>
+        <div>
+          <h2 class="footer-heading">Explore</h2>
+          <div class="footer-links"><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="service-area.html">Service Area</a><a href="book-now.html">Book Now</a></div>
+          <p class="footer-text" style="margin-top:14px"><a href="tel:+13233271806">(323) 327-1806</a><br><a href="mailto:info@enhancemyride.com">info@enhancemyride.com</a></p>
+        </div>
+        <div class="follow">
+          <h2 class="footer-heading">Follow Us</h2>
+          <div class="socials">
+            <a href="https://www.facebook.com/Enhancemyride" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v1.9H7v3.1h2.8v8z"/></svg>
             </a>
-            <button class="menu-toggle" id="menuToggle" type="button"
-                aria-label="Open navigation menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-                <a href="index.html">Home</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="services.html">Services</a>
-                <a href="book-now.html" class="nav-cta">Book Now</a>
-                <a href="about.html">About</a>
-                <a href="service-area.html" class="active" aria-current="page">Service Area</a>
-            </nav>
+            <a href="https://www.instagram.com/enhancemyride/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4zm4.5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.2-3.4a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@enhancemyride" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 6.3a6.6 6.6 0 0 1-4.1-4.1V2h-3.8v13.7a2.9 2.9 0 1 1-2-2.8V9a6.8 6.8 0 1 0 5.8 6.7V9.1a10.3 10.3 0 0 0 5.2 1.4V6.7c-.4 0-.7-.1-1.1-.4z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@enhancemyride" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg>
+            </a>
+          </div>
         </div>
-    </header>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year">2026</span> Enhance My Ride Auto Spa &amp; Mobile Detailing</span><span>Premium care. Delivered to your door.</span></div>
+    </div>
+  </footer>
 
-    <main>
-        <section class="page-hero service-area-page-hero">
-            <div class="container page-hero-content">
-                <p class="eyebrow">MOBILE DETAILING · SAN FRANCISCO BAY AREA</p>
-                <h1>We Come <span>to You.</span></h1>
-                <p class="hero-copy">
-                    Based in Alameda, Enhance My Ride brings mobile detailing
-                    directly to suitable locations across the Bay Area.
-                    Our standard service radius is approximately 40 miles
-                    from Alameda, depending on your exact address.
-                </p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary" href="book-now.html">Check Availability</a>
-                    <a class="btn btn-outline" href="tel:+13233271806">Call (323) 327-1806</a>
-                </div>
-            </div>
-        </section>
+  <script>
+    // Same sticky header navigation behavior as the approved homepage.
+    const menuButton = document.querySelector(".menu");
+    const nav = document.querySelector("#main-nav");
+    if (menuButton && nav) {
+      menuButton.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        menuButton.setAttribute("aria-expanded", String(open));
+        menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+        menuButton.textContent = open ? "×" : "☰";
+      });
+      nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰";
+      }));
+    }
+    const year = document.querySelector("#year");
+    if (year) year.textContent = new Date().getFullYear();
+  </script>
+  <a class="floating-call" href="tel:+13233271806" aria-label="Call Enhance My Ride at (323) 327-1806">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.56 3.57.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.19 2.45.56 3.57a1 1 0 0 1-.25 1.02z"/></svg>
+    <span>Call Now</span>
+  </a>
 
-        <section class="section">
-            <div class="container">
-                <div class="service-area-intro">
-                    <p class="eyebrow">WHERE WE TRAVEL</p>
-                    <h2>Serving Alameda <span class="gold-text">and Beyond.</span></h2>
-                    <p>
-                        These are key service areas, not a guarantee that every address
-                        is within the standard radius. We confirm your exact location,
-                        access, travel, and appointment availability before finalizing
-                        your booking.
-                    </p>
-                </div>
-
-                <div class="service-area-cities">
-                    <article class="service-area-city">
-                        <span class="city-number">01 · HOME BASE</span>
-                        <h3>Alameda</h3>
-                        <p>Our primary service area and starting point for travel.</p>
-                    </article>
-                    <article class="service-area-city">
-                        <span class="city-number">02 · EAST BAY</span>
-                        <h3>Oakland</h3>
-                        <p>Mobile detailing at suitable residential and workplace locations.</p>
-                    </article>
-                    <article class="service-area-city">
-                        <span class="city-number">03 · EAST BAY</span>
-                        <h3>San Leandro</h3>
-                        <p>Convenient vehicle care across nearby neighborhoods.</p>
-                    </article>
-                    <article class="service-area-city">
-                        <span class="city-number">04 · EAST BAY</span>
-                        <h3>Berkeley</h3>
-                        <p>Appointments based on the service address and schedule.</p>
-                    </article>
-                    <article class="service-area-city">
-                        <span class="city-number">05 · EAST BAY</span>
-                        <h3>Emeryville</h3>
-                        <p>Mobile detailing where safe working access is available.</p>
-                    </article>
-                    <article class="service-area-city">
-                        <span class="city-number">06 · EAST BAY</span>
-                        <h3>Hayward</h3>
-                        <p>Availability depends on your address and travel route.</p>
-                    </article>
-                    <article class="service-area-city">
-                        <span class="city-number">07 · PENINSULA / BAY</span>
-                        <h3>San Francisco</h3>
-                        <p>Some locations may be available depending on travel and parking conditions.</p>
-                    </article>
-                    <article class="service-area-city">
-                        <span class="city-number">08 · NEARBY CITIES</span>
-                        <h3>Other Bay Area Areas</h3>
-                        <p>Ask us to check your address if your city is not listed.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-dark">
-            <div class="container">
-                <div class="service-area-intro">
-                    <p class="eyebrow">TRAVEL POLICY</p>
-                    <h2>Clear Travel. <span class="gold-text">No Surprises.</span></h2>
-                    <p>We confirm the service address and any applicable travel fee before an appointment is finalized.</p>
-                </div>
-                <div class="service-area-radius-grid">
-                    <article class="service-area-radius">
-                        <p class="radius-label">Standard service area</p>
-                        <h2>Within <span class="gold-text">40 Miles</span></h2>
-                        <p>
-                            We aim to serve locations within approximately 40 miles of
-                            Alameda. The exact address, route, parking, and suitability
-                            of the work location can affect availability.
-                        </p>
-                    </article>
-                    <article class="service-area-radius">
-                        <p class="radius-label">Extended travel</p>
-                        <h2>Outside the <span class="gold-text">Radius</span></h2>
-                        <p>
-                            Locations beyond our standard travel radius may be possible
-                            for an additional travel fee. Please confirm the fee and
-                            availability with us before booking.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="service-area-final">
-                    <p class="eyebrow">LET'S CHECK YOUR ADDRESS</p>
-                    <h2>Are We in <span class="gold-text">Your Area?</span></h2>
-                    <p>
-                        When requesting an appointment, include your city or full service
-                        address, vehicle year/make/model, and preferred date. We will
-                        confirm whether we can travel to you and let you know about any
-                        additional travel charge before the appointment is finalized.
-                    </p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="book-now.html">Submit a Booking Request</a>
-                        <a class="btn btn-outline" href="mailto:info@enhancemyride.com?subject=Service%20Area%20Check">Email Your Location</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="index.html" class="logo">
-                    <span class="logo-main">ENHANCE MY RIDE</span>
-                    <span class="logo-sub">AUTO SPA &amp; MOBILE DETAILING</span>
-                </a>
-                <p>
-                    Premium mobile detailing within 40 miles of Alameda, California.
-                    Extended travel may be available for an additional fee.
-                </p>
-            </div>
-            <div class="footer-links">
-                <h4>Explore</h4>
-                <a href="index.html">Home</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="services.html">Services</a>
-                <a href="book-now.html">Book Now</a>
-                <a href="about.html">About</a>
-                <a href="service-area.html" aria-current="page">Service Area</a>
-            </div>
-            <div class="footer-links">
-                <h4>Connect</h4>
-                <a href="book-now.html">Book Now</a>
-                <a href="tel:+13233271806">(323) 327-1806</a>
-                <a href="mailto:info@enhancemyride.com">info@enhancemyride.com</a>
-                <div class="footer-social-links">
-                    <a href="https://www.facebook.com/Enhancemyride" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Enhance My Ride on Facebook"><span>Facebook</span></a>
-                    <a href="https://www.instagram.com/enhancemyridemobiledetailing/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Enhance My Ride on Instagram"><span>Instagram</span></a>
-                    <a href="https://www.tiktok.com/@enhancemyride" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Enhance My Ride on TikTok"><span>TikTok</span></a>
-                    <a href="https://www.youtube.com/@enhancemyridemobiledetailing" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Enhance My Ride on YouTube"><span>YouTube</span></a>
-                </div>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <p>© <span id="current-year">2026</span> Enhance My Ride Auto Spa &amp; Mobile Detailing. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <a href="tel:+13233271806" class="mobile-call-button" aria-label="Call Enhance My Ride">
-        <span class="call-icon">☎</span>
-        <span>CALL</span>
-    </a>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
