@@ -1,866 +1,394 @@
-/* =========================================================
-   ENHANCE MY RIDE
-   AUTO SPA & MOBILE DETAILING
-   GLOBAL JAVASCRIPT
-   ========================================================= */
+
+// ============================================================
+// ENHANCE MY RIDE AUTO SPA & MOBILE DETAILING
+// SHARED WEBSITE JAVASCRIPT
+// ============================================================
+
+"use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+    initializeMobileNavigation();
+    initializeSmoothScroll();
+    initializeCurrentYear();
+    initializeBackToTop();
+    initializeGallery();
+    initializeBookingPackage();
+    initializeFormEnhancements();
+    initializeRevealAnimations();
+});
 
 
-    /* =====================================================
-       MOBILE NAVIGATION
-       ===================================================== */
+// ============================================================
+// 1. MOBILE NAVIGATION
+// Works with .menu-toggle and .main-nav
+// ============================================================
 
-    const menuToggle =
-        document.getElementById("menuToggle");
+function initializeMobileNavigation() {
+    const menuButton = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector(".main-nav");
 
-    const mainNav =
-        document.getElementById("mainNav");
+    if (!menuButton || !navigation) return;
 
-    const siteHeader =
-        document.querySelector(".site-header");
+    function openMenu() {
+        navigation.classList.add("active");
+        menuButton.setAttribute("aria-expanded", "true");
+        menuButton.setAttribute("aria-label", "Close navigation");
+        document.body.classList.add("menu-open");
+    }
 
+    function closeMenu() {
+        navigation.classList.remove("active");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation");
+        document.body.classList.remove("menu-open");
+    }
 
-    if (menuToggle && mainNav) {
+    function toggleMenu() {
+        const isOpen =
+            menuButton.getAttribute("aria-expanded") === "true";
 
-
-        /* =================================================
-           OPEN MENU
-           ================================================= */
-
-        function openMenu() {
-
-            menuToggle.classList.add("active");
-
-            mainNav.classList.add("active");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "true"
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                "Close navigation menu"
-            );
-
-
-            /*
-             * Force the mobile navigation to appear.
-             *
-             * Your stylesheet has multiple older
-             * navigation systems in it, so these inline
-             * !important styles make the active menu
-             * visible without changing the rest of
-             * your website design.
-             */
-
-            if (window.innerWidth <= 900) {
-
-                const headerHeight =
-                    siteHeader
-                        ? siteHeader.getBoundingClientRect().height
-                        : 82;
-
-
-                mainNav.style.setProperty(
-                    "display",
-                    "flex",
-                    "important"
-                );
-
-                mainNav.style.setProperty(
-                    "position",
-                    "fixed",
-                    "important"
-                );
-
-                mainNav.style.setProperty(
-                    "top",
-                    headerHeight + "px",
-                    "important"
-                );
-
-                mainNav.style.setProperty(
-                    "left",
-                    "0",
-                    "important"
-                );
-
-                mainNav.style.setProperty(
-                    "right",
-                    "0",
-                    "important"
-                );
-
-                mainNav.style.setProperty(
-                    "width",
-                    "100%",
-                    "important"
-                );
-
-                mainNav.style.setProperty(
-                    "height",
-                    "auto",
-                    "important"
-                );
-
-                mainNav.style.setProperty(
-                    "max-height",
-                    "calc(100vh - " +
-                    headerHeight +
-                    "px)",
-                    "important"
-                );
-
-                mainNav.style.setProperty(
-                    "overflow-y",
-                    "auto",
-                    "important"
-                );
-
-                mainNav.style.setProperty(
-                    "flex-direction",
-                    "column",
-                    "important"
-                );
-
-                mainNav.style.setProperty(
-                    "align-items",
-                    "stretch",
-                    "important"
-                );
-
-                mainNav.style.setProperty(
-                    "background",
-                    "#050505",
-                    "important"
-                );
-
-                mainNav.style.setProperty(
-                    "visibility",
-                    "visible",
-                    "important"
-                );
-
-                mainNav.style.setProperty(
-                    "opacity",
-                    "1",
-                    "important"
-                );
-
-                mainNav.style.setProperty(
-                    "transform",
-                    "none",
-                    "important"
-                );
-
-                mainNav.style.setProperty(
-                    "z-index",
-                    "10001",
-                    "important"
-                );
-
-
-                document.body.classList.add(
-                    "menu-open"
-                );
-
-            }
-
+        if (isOpen) {
+            closeMenu();
+        } else {
+            openMenu();
         }
+    }
 
+    menuButton.addEventListener("click", toggleMenu);
 
-        /* =================================================
-           CLOSE MENU
-           ================================================= */
+    // Close after a navigation link is selected.
+    navigation.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+    });
 
-        function closeMenu() {
-
-            menuToggle.classList.remove(
-                "active"
-            );
-
-            mainNav.classList.remove(
-                "active"
-            );
-
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                "Open navigation menu"
-            );
-
-
-            /*
-             * Remove only the inline styles that
-             * were added when the mobile menu opened.
-             */
-
-            mainNav.style.removeProperty(
-                "display"
-            );
-
-            mainNav.style.removeProperty(
-                "position"
-            );
-
-            mainNav.style.removeProperty(
-                "top"
-            );
-
-            mainNav.style.removeProperty(
-                "left"
-            );
-
-            mainNav.style.removeProperty(
-                "right"
-            );
-
-            mainNav.style.removeProperty(
-                "width"
-            );
-
-            mainNav.style.removeProperty(
-                "height"
-            );
-
-            mainNav.style.removeProperty(
-                "max-height"
-            );
-
-            mainNav.style.removeProperty(
-                "overflow-y"
-            );
-
-            mainNav.style.removeProperty(
-                "flex-direction"
-            );
-
-            mainNav.style.removeProperty(
-                "align-items"
-            );
-
-            mainNav.style.removeProperty(
-                "background"
-            );
-
-            mainNav.style.removeProperty(
-                "visibility"
-            );
-
-            mainNav.style.removeProperty(
-                "opacity"
-            );
-
-            mainNav.style.removeProperty(
-                "transform"
-            );
-
-            mainNav.style.removeProperty(
-                "z-index"
-            );
-
-
-            document.body.classList.remove(
-                "menu-open"
-            );
-
+    // Close when the Escape key is pressed.
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeMenu();
         }
+    });
+
+    // Close if the user taps outside the open navigation.
+    document.addEventListener("click", function (event) {
+        const isOpen =
+            menuButton.getAttribute("aria-expanded") === "true";
+
+        if (
+            isOpen &&
+            !navigation.contains(event.target) &&
+            !menuButton.contains(event.target)
+        ) {
+            closeMenu();
+        }
+    });
+
+    // Close the mobile menu when switching back to desktop layout.
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 820) {
+            closeMenu();
+        }
+    });
+}
 
 
-        /* =================================================
-           TOGGLE MENU
-           ================================================= */
+// ============================================================
+// 2. SMOOTH SCROLL FOR SAME-PAGE ANCHOR LINKS
+// ============================================================
 
-        function toggleMenu(event) {
+function initializeSmoothScroll() {
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
-            if (event) {
+    anchorLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            const targetId = link.getAttribute("href");
 
-                event.preventDefault();
+            if (!targetId || targetId === "#") return;
 
-                event.stopPropagation();
+            const target = document.querySelector(targetId);
 
+            if (!target) return;
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: window.matchMedia(
+                    "(prefers-reduced-motion: reduce)"
+                ).matches ? "auto" : "smooth",
+                block: "start"
+            });
+
+            // Keep the URL useful for direct links and browser history.
+            if (window.location.hash !== targetId) {
+                history.replaceState(null, "", targetId);
             }
+        });
+    });
+}
 
 
-            const isOpen =
-                mainNav.classList.contains(
-                    "active"
+// ============================================================
+// 3. AUTOMATIC COPYRIGHT YEAR
+// Supports the existing #current-year element.
+// ============================================================
+
+function initializeCurrentYear() {
+    const yearElements = document.querySelectorAll(
+        "#current-year, [data-current-year]"
+    );
+
+    const currentYear = new Date().getFullYear();
+
+    yearElements.forEach(function (element) {
+        element.textContent = currentYear;
+    });
+}
+
+
+// ============================================================
+// 4. BACK-TO-TOP BUTTON
+// Optional: add a button with id="back-to-top" to any page.
+// ============================================================
+
+function initializeBackToTop() {
+    const button = document.getElementById("back-to-top");
+
+    if (!button) return;
+
+    button.hidden = true;
+
+    function updateVisibility() {
+        button.hidden = window.scrollY < 450;
+    }
+
+    window.addEventListener("scroll", updateVisibility, {
+        passive: true
+    });
+
+    button.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches ? "auto" : "smooth"
+        });
+    });
+
+    updateVisibility();
+}
+
+
+// ============================================================
+// 5. GALLERY FILTERS
+// Optional markup:
+// Buttons: [data-gallery-filter="all"], "interior", "exterior"
+// Items:   [data-gallery-category="interior"]
+// ============================================================
+
+function initializeGallery() {
+    const filterButtons = document.querySelectorAll(
+        "[data-gallery-filter]"
+    );
+
+    const galleryItems = document.querySelectorAll(
+        "[data-gallery-category]"
+    );
+
+    if (!filterButtons.length || !galleryItems.length) return;
+
+    filterButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const selectedFilter =
+                button.getAttribute("data-gallery-filter");
+
+            filterButtons.forEach(function (otherButton) {
+                const isSelected = otherButton === button;
+
+                otherButton.classList.toggle("active", isSelected);
+                otherButton.setAttribute(
+                    "aria-pressed",
+                    String(isSelected)
                 );
+            });
+
+            galleryItems.forEach(function (item) {
+                const category =
+                    item.getAttribute("data-gallery-category");
+
+                const shouldShow =
+                    selectedFilter === "all" ||
+                    selectedFilter === category;
+
+                item.hidden = !shouldShow;
+            });
+        });
+    });
+}
 
 
-            if (isOpen) {
+// ============================================================
+// 6. BOOKING PACKAGE PREFILL
+// Supports package links such as:
+// book-now.html?package=enhance-gold
+// book-now.html?package=enhance-elite
+// book-now.html?package=enhance-showroom
+//
+// This preselects a matching form field if it exists.
+// It does not submit a booking or send customer information.
+// ============================================================
 
-                closeMenu();
+function initializeBookingPackage() {
+    const parameters = new URLSearchParams(window.location.search);
+    const requestedPackage = parameters.get("package");
 
-            } else {
+    if (!requestedPackage) return;
 
-                openMenu();
+    const allowedPackages = {
+        "enhance-gold": "Enhance Gold",
+        "enhance-elite": "Enhance Elite",
+        "enhance-showroom": "Enhance Showroom"
+    };
 
-            }
+    const selectedPackage = allowedPackages[
+        requestedPackage.toLowerCase()
+    ];
 
-        }
+    if (!selectedPackage) return;
 
+    // Try common booking form field names.
+    const packageField = document.querySelector(
+        '[name="package"], ' +
+        '[name="service"], ' +
+        '[name="servicePackage"], ' +
+        "#package, #service"
+    );
 
-        /* =================================================
-           HAMBURGER BUTTON
-           ================================================= */
+    if (!packageField) return;
 
-        menuToggle.addEventListener(
-            "click",
-            toggleMenu
-        );
+    if (packageField.tagName === "SELECT") {
+        const options = Array.from(packageField.options);
 
+        const matchingOption = options.find(function (option) {
+            const optionValue = option.value.trim().toLowerCase();
+            const optionText = option.textContent.trim().toLowerCase();
 
-        /* =================================================
-           NAVIGATION LINKS
-           ================================================= */
-
-        const navLinks =
-            mainNav.querySelectorAll("a");
-
-
-        navLinks.forEach(function (link) {
-
-            link.addEventListener(
-                "click",
-                function () {
-
-                    closeMenu();
-
-                }
+            return (
+                optionValue === requestedPackage.toLowerCase() ||
+                optionText === selectedPackage.toLowerCase()
             );
-
         });
 
-
-        /* =================================================
-           CLICK OUTSIDE MENU
-           ================================================= */
-
-        document.addEventListener(
-            "click",
-            function (event) {
-
-                if (
-                    !mainNav.classList.contains(
-                        "active"
-                    )
-                ) {
-
-                    return;
-
-                }
-
-
-                if (
-                    mainNav.contains(
-                        event.target
-                    ) ||
-                    menuToggle.contains(
-                        event.target
-                    )
-                ) {
-
-                    return;
-
-                }
-
-
-                closeMenu();
-
-            }
-        );
-
-
-        /* =================================================
-           ESCAPE KEY
-           ================================================= */
-
-        document.addEventListener(
-            "keydown",
-            function (event) {
-
-                if (
-                    event.key === "Escape" &&
-                    mainNav.classList.contains(
-                        "active"
-                    )
-                ) {
-
-                    closeMenu();
-
-                }
-
-            }
-        );
-
-
-        /* =================================================
-           SCREEN SIZE CHANGE
-           ================================================= */
-
-        window.addEventListener(
-            "resize",
-            function () {
-
-                /*
-                 * If the screen becomes desktop-sized,
-                 * completely reset the mobile menu.
-                 */
-
-                if (window.innerWidth > 900) {
-
-                    closeMenu();
-
-                }
-
-
-                /*
-                 * If the menu is open while the
-                 * mobile device is resized/rotated,
-                 * recalculate its position.
-                 */
-
-                if (
-                    window.innerWidth <= 900 &&
-                    mainNav.classList.contains(
-                        "active"
-                    )
-                ) {
-
-                    const headerHeight =
-                        siteHeader
-                            ? siteHeader.getBoundingClientRect().height
-                            : 82;
-
-
-                    mainNav.style.setProperty(
-                        "top",
-                        headerHeight + "px",
-                        "important"
-                    );
-
-                    mainNav.style.setProperty(
-                        "max-height",
-                        "calc(100vh - " +
-                        headerHeight +
-                        "px)",
-                        "important"
-                    );
-
-                }
-
-            }
-        );
-
-    }
-
-
-    /* =====================================================
-       HEADER SCROLL EFFECT
-       ===================================================== */
-
-    const header =
-        document.querySelector(
-            ".site-header"
-        );
-
-
-    if (header) {
-
-        function updateHeader() {
-
-            if (window.scrollY > 20) {
-
-                header.classList.add(
-                    "scrolled"
-                );
-
-            } else {
-
-                header.classList.remove(
-                    "scrolled"
-                );
-
-            }
-
+        if (matchingOption) {
+            packageField.value = matchingOption.value;
+            packageField.dispatchEvent(
+                new Event("change", { bubbles: true })
+            );
         }
 
-
-        updateHeader();
-
-
-        window.addEventListener(
-            "scroll",
-            updateHeader,
-            {
-                passive: true
-            }
-        );
-
+        return;
     }
-
-
-    /* =====================================================
-       GALLERY LIGHTBOX
-       ===================================================== */
-
-    const lightbox =
-        document.getElementById(
-            "galleryLightbox"
-        );
-
-    const lightboxImage =
-        document.getElementById(
-            "lightboxImage"
-        );
-
-    const lightboxClose =
-        document.getElementById(
-            "lightboxClose"
-        );
-
-    const lightboxPrev =
-        document.getElementById(
-            "lightboxPrev"
-        );
-
-    const lightboxNext =
-        document.getElementById(
-            "lightboxNext"
-        );
-
-    const lightboxCounter =
-        document.getElementById(
-            "lightboxCounter"
-        );
-
-    const galleryItems =
-        Array.from(
-            document.querySelectorAll(
-                "[data-lightbox]"
-            )
-        );
-
 
     if (
-        lightbox &&
-        lightboxImage &&
-        galleryItems.length
+        packageField.tagName === "INPUT" &&
+        ["text", "hidden"].includes(packageField.type)
     ) {
-
-
-        let currentIndex = 0;
-
-
-        /* =================================================
-           GET IMAGE
-           ================================================= */
-
-        function getImage(item) {
-
-            if (
-                item.tagName &&
-                item.tagName.toLowerCase() ===
-                    "img"
-            ) {
-
-                return item;
-
-            }
-
-
-            return item.querySelector(
-                "img"
-            );
-
-        }
-
-
-        /* =================================================
-           UPDATE LIGHTBOX
-           ================================================= */
-
-        function updateLightbox() {
-
-            const item =
-                galleryItems[
-                    currentIndex
-                ];
-
-
-            if (!item) {
-
-                return;
-
-            }
-
-
-            const image =
-                getImage(item);
-
-
-            if (!image) {
-
-                return;
-
-            }
-
-
-            lightboxImage.src =
-                image.currentSrc ||
-                image.src;
-
-
-            lightboxImage.alt =
-                image.alt || "";
-
-
-            if (lightboxCounter) {
-
-                lightboxCounter.textContent =
-                    (currentIndex + 1) +
-                    " / " +
-                    galleryItems.length;
-
-            }
-
-        }
-
-
-        /* =================================================
-           OPEN LIGHTBOX
-           ================================================= */
-
-        function openLightbox(index) {
-
-            currentIndex =
-                (
-                    index +
-                    galleryItems.length
-                ) %
-                galleryItems.length;
-
-
-            updateLightbox();
-
-
-            lightbox.classList.add(
-                "active"
-            );
-
-
-            lightbox.setAttribute(
-                "aria-hidden",
-                "false"
-            );
-
-
-            document.body.style.overflow =
-                "hidden";
-
-        }
-
-
-        /* =================================================
-           CLOSE LIGHTBOX
-           ================================================= */
-
-        function closeLightbox() {
-
-            lightbox.classList.remove(
-                "active"
-            );
-
-
-            lightbox.setAttribute(
-                "aria-hidden",
-                "true"
-            );
-
-
-            lightboxImage.src = "";
-
-
-            document.body.style.overflow =
-                "";
-
-        }
-
-
-        /* =================================================
-           PREVIOUS IMAGE
-           ================================================= */
-
-        function previousImage() {
-
-            openLightbox(
-                currentIndex - 1
-            );
-
-        }
-
-
-        /* =================================================
-           NEXT IMAGE
-           ================================================= */
-
-        function nextImage() {
-
-            openLightbox(
-                currentIndex + 1
-            );
-
-        }
-
-
-        /* =================================================
-           GALLERY ITEMS
-           ================================================= */
-
-        galleryItems.forEach(
-            function (item, index) {
-
-                item.addEventListener(
-                    "click",
-                    function () {
-
-                        openLightbox(
-                            index
-                        );
-
-                    }
-                );
-
-            }
+        packageField.value = selectedPackage;
+        packageField.dispatchEvent(
+            new Event("input", { bubbles: true })
         );
-
-
-        /* =================================================
-           CLOSE BUTTON
-           ================================================= */
-
-        if (lightboxClose) {
-
-            lightboxClose.addEventListener(
-                "click",
-                closeLightbox
-            );
-
-        }
-
-
-        /* =================================================
-           PREVIOUS BUTTON
-           ================================================= */
-
-        if (lightboxPrev) {
-
-            lightboxPrev.addEventListener(
-                "click",
-                previousImage
-            );
-
-        }
-
-
-        /* =================================================
-           NEXT BUTTON
-           ================================================= */
-
-        if (lightboxNext) {
-
-            lightboxNext.addEventListener(
-                "click",
-                nextImage
-            );
-
-        }
-
-
-        /* =================================================
-           CLICK BACKDROP TO CLOSE
-           ================================================= */
-
-        lightbox.addEventListener(
-            "click",
-            function (event) {
-
-                if (
-                    event.target ===
-                    lightbox
-                ) {
-
-                    closeLightbox();
-
-                }
-
-            }
+        packageField.dispatchEvent(
+            new Event("change", { bubbles: true })
         );
+    }
+}
 
 
-        /* =================================================
-           LIGHTBOX KEYBOARD CONTROLS
-           ================================================= */
+// ============================================================
+// 7. FORM ENHANCEMENTS
+// Adds a submitting class only when a form is actually submitted.
+// Does not intercept or replace the form's existing submission.
+// ============================================================
 
-        document.addEventListener(
-            "keydown",
-            function (event) {
+function initializeFormEnhancements() {
+    const forms = document.querySelectorAll(
+        "form[data-emr-form]"
+    );
 
-                if (
-                    !lightbox.classList.contains(
-                        "active"
-                    )
-                ) {
+    forms.forEach(function (form) {
+        form.addEventListener("submit", function () {
+            form.classList.add("is-submitting");
 
-                    return;
+            const submitButton = form.querySelector(
+                'button[type="submit"], ' +
+                'input[type="submit"]'
+            );
 
-                }
-
-
-                if (
-                    event.key ===
-                    "Escape"
-                ) {
-
-                    closeLightbox();
-
-                    return;
-
-                }
-
-
-                if (
-                    event.key ===
-                    "ArrowLeft"
-                ) {
-
-                    previousImage();
-
-                    return;
-
-                }
-
-
-                if (
-                    event.key ===
-                    "ArrowRight"
-                ) {
-
-                    nextImage();
-
-                }
-
+            if (submitButton) {
+                submitButton.setAttribute("aria-busy", "true");
             }
-        );
+        });
+    });
+}
 
+
+// ============================================================
+// 8. OPTIONAL SCROLL REVEAL ANIMATIONS
+//
+// Add data-reveal to elements you want to animate.
+// Example: <div data-reveal>...</div>
+//
+// Elements remain visible if IntersectionObserver is unsupported
+// or if the visitor prefers reduced motion.
+// ============================================================
+
+function initializeRevealAnimations() {
+    const revealElements = document.querySelectorAll(
+        "[data-reveal]"
+    );
+
+    if (!revealElements.length) return;
+
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (
+        reducedMotion ||
+        !("IntersectionObserver" in window)
+    ) {
+        revealElements.forEach(function (element) {
+            element.classList.add("is-visible");
+        });
+
+        return;
     }
 
-});
+    revealElements.forEach(function (element) {
+        element.classList.add("reveal-pending");
+    });
+
+    const observer = new IntersectionObserver(
+        function (entries, activeObserver) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add("is-visible");
+                entry.target.classList.remove("reveal-pending");
+
+                activeObserver.unobserve(entry.target);
+            });
+        },
+        {
+            threshold: 0.12,
+            rootMargin: "0px 0px -35px 0px"
+        }
+    );
+
+    revealElements.forEach(function (element) {
+        observer.observe(element);
+    });
+}
+
+
+// ============================================================
+// END OF ENHANCE MY RIDE SHARED JAVASCRIPT
+// ============================================================
