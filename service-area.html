@@ -2,367 +2,302 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-    <title>
-        Service Area | Enhance My Ride Auto Spa & Mobile Detailing
-    </title>
-    <meta
-        name="description"
-        content="Enhance My Ride Auto Spa & Mobile Detailing offers mobile detailing within 40 miles of Alameda, California. Extended travel may be available for an additional fee."
-    >
-    <meta
-        name="theme-color"
-        content="#050505"
-    >
-    <meta
-        name="robots"
-        content="index, follow"
-    >
-    <link
-        rel="canonical"
-        href="https://enhancemyride.com/service-area.html"
-    >
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Area | Enhance My Ride Auto Spa &amp; Mobile Detailing</title>
+    <meta name="description" content="Enhance My Ride offers mobile detailing within approximately 40 miles of Alameda, California, including Oakland, San Leandro, Berkeley, Emeryville, Hayward, and select San Francisco locations.">
+    <meta name="theme-color" content="#050505">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://enhancemyride.com/service-area.html">
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        .service-area-hero {
-            min-height: 58vh;
+        /* Service Area page styles only. Shared site styling stays in css/style.css. */
+        .service-area-page-hero {
+            min-height: 52vh;
             display: flex;
             align-items: center;
             background:
-                radial-gradient(
-                    circle at 78% 45%,
-                    rgba(212,175,55,.13),
-                    transparent 38%
-                ),
-                #050505;
+                radial-gradient(circle at 80% 38%, rgba(212,175,55,.14), transparent 38%),
+                linear-gradient(115deg, #050505 18%, #111 100%);
         }
-        .service-area-hero h1 {
-            max-width: 900px;
+        .service-area-page-hero h1 {
+            max-width: 940px;
             margin: 0;
-            font-size: clamp(3.4rem,7vw,6.5rem);
-            line-height: .9;
-        }
-        .service-area-hero h1 span {
-            display: block;
-            color: #d4af37;
-        }
-        .service-area-hero p:last-child {
-            max-width: 650px;
-            margin-top: 28px;
-            color: rgba(255,255,255,.62);
-            line-height: 1.8;
-        }
-        .service-area-intro {
-            max-width: 760px;
-            margin-bottom: 55px;
-        }
-        .service-area-intro h2 {
-            margin: 0;
-            font-size: clamp(2.7rem,5vw,5rem);
+            font-size: clamp(3.2rem, 7vw, 6.3rem);
             line-height: .95;
         }
-        .service-area-intro p:last-child {
-            max-width: 650px;
-            margin-top: 25px;
-            color: rgba(255,255,255,.52);
-            line-height: 1.8;
-        }
-        .service-area-grid {
-            display: grid;
-            grid-template-columns: repeat(3,minmax(0,1fr));
-            gap: 1px;
-            border: 1px solid rgba(255,255,255,.08);
-            background: rgba(255,255,255,.08);
-        }
-        .service-area-card {
-            min-height: 245px;
-            padding: 34px;
-            background: #090909;
-            transition:
-                background .3s ease,
-                transform .3s ease;
-        }
-        .service-area-card:hover {
-            background: #0d0d0d;
-            transform: translateY(-3px);
-        }
-        .service-area-card.primary-area {
-            background:
-                radial-gradient(
-                    circle at top right,
-                    rgba(212,175,55,.09),
-                    transparent 48%
-                ),
-                #090909;
-        }
-        .service-area-card span {
+        .service-area-page-hero h1 span {
             display: block;
-            margin-bottom: 14px;
-            color: #d4af37;
-            font-size: 9px;
-            font-weight: 800;
-            letter-spacing: .15em;
+            color: var(--emr-gold, #d4af37);
         }
-        .service-area-card h3 {
-            margin: 0 0 17px;
-            color: #fff;
-            font-size: 1.4rem;
-            line-height: 1.1;
+        .service-area-page-hero .hero-copy {
+            max-width: 720px;
+            margin-top: 24px;
+            color: rgba(255,255,255,.68);
+            line-height: 1.9;
         }
-        .service-area-card p {
-            max-width: 390px;
-            margin: 0;
-            color: rgba(255,255,255,.48);
-            font-size: .82rem;
-            line-height: 1.75;
-        }
-        .service-area-booking {
+        .service-area-page-hero .hero-actions {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
-            margin-top: 70px;
-            padding: 42px 45px;
-            border: 1px solid rgba(212,175,55,.18);
-            background:
-                linear-gradient(
-                    110deg,
-                    rgba(212,175,55,.08),
-                    rgba(255,255,255,.025)
-                );
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
         }
-        .service-area-booking-copy {
-            max-width: 650px;
+        .service-area-intro {
+            max-width: 780px;
+            margin-bottom: 34px;
         }
-        .service-area-booking h2 {
-            margin: 0 0 12px;
-            font-size: clamp(2rem,4vw,3.2rem);
-            line-height: 1;
+        .service-area-intro h2,
+        .service-area-radius h2,
+        .service-area-final h2 { margin: 0; }
+        .service-area-intro > p:last-child {
+            max-width: 720px;
+            margin-top: 16px;
+            color: #aaa;
+            line-height: 1.85;
         }
-        .service-area-booking p {
-            margin: 0;
-            color: rgba(255,255,255,.5);
-            font-size: .9rem;
+        .service-area-cities {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+        .service-area-city {
+            min-height: 150px;
+            padding: 23px;
+            border: 1px solid rgba(212,175,55,.23);
+            background: linear-gradient(145deg, #151515, #090909);
+        }
+        .service-area-city .city-number {
+            display: block;
+            color: #d4af37;
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: .14em;
+        }
+        .service-area-city h3 { margin-top: 13px; font-size: 1.3rem; }
+        .service-area-city p {
+            margin-top: 9px;
+            color: #aaa;
+            font-size: .87rem;
             line-height: 1.7;
         }
-        @media (max-width: 950px) {
-            .service-area-grid {
-                grid-template-columns: repeat(2,minmax(0,1fr));
-            }
-            .service-area-booking {
-                align-items: flex-start;
-                flex-direction: column;
-            }
+        .service-area-radius-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+        .service-area-radius {
+            padding: 30px;
+            border: 1px solid rgba(212,175,55,.23);
+            background: #101010;
+        }
+        .service-area-radius .radius-label {
+            color: #d4af37;
+            font-size: .7rem;
+            font-weight: 700;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+        }
+        .service-area-radius h2 {
+            margin-top: 13px;
+            font-size: clamp(1.8rem, 3vw, 2.7rem);
+        }
+        .service-area-radius p {
+            margin-top: 13px;
+            color: #aaa;
+            line-height: 1.8;
+        }
+        .service-area-final {
+            padding: clamp(32px, 6vw, 65px);
+            border: 1px solid rgba(212,175,55,.28);
+            background: radial-gradient(circle at 90% 10%, rgba(212,175,55,.12), transparent 42%), #101010;
+        }
+        .service-area-final > p:not(.eyebrow) {
+            max-width: 740px;
+            margin-top: 16px;
+            color: #aaa;
+            line-height: 1.85;
+        }
+        .service-area-final .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+        @media (max-width: 900px) {
+            .service-area-cities { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         }
         @media (max-width: 650px) {
-            .service-area-hero {
-                min-height: 50vh;
-            }
-            .service-area-hero h1 {
-                font-size: clamp(3.1rem,14vw,5rem);
-            }
-            .service-area-grid {
-                grid-template-columns: 1fr;
-            }
-            .service-area-card {
-                min-height: auto;
-                padding: 30px 25px;
-            }
-            .service-area-booking {
-                margin-top: 55px;
-                padding: 32px 25px;
-            }
+            .service-area-page-hero { min-height: auto; }
+            .service-area-page-hero .container { padding-top: 62px; padding-bottom: 62px; }
+            .service-area-page-hero h1 { font-size: clamp(2.8rem, 12vw, 4.2rem); }
+            .service-area-page-hero .hero-actions,
+            .service-area-final .hero-actions { flex-direction: column; }
+            .service-area-page-hero .hero-actions .btn,
+            .service-area-final .hero-actions .btn { width: 100%; }
+            .service-area-cities,
+            .service-area-radius-grid { grid-template-columns: 1fr; }
+            .service-area-city { min-height: 0; }
+            .service-area-radius { padding: 25px; }
         }
     </style>
 </head>
 <body>
     <header class="site-header">
         <div class="container nav-container">
-            <a
-                href="index.html"
-                class="logo"
-                aria-label="Enhance My Ride home"
-            >
-                <span class="logo-main">
-                    ENHANCE MY RIDE
-                </span>
-                <span class="logo-sub">
-                    AUTO SPA & MOBILE DETAILING
-                </span>
+            <a href="index.html" class="logo" aria-label="Enhance My Ride home">
+                <span class="logo-main">ENHANCE MY RIDE</span>
+                <span class="logo-sub">AUTO SPA &amp; MOBILE DETAILING</span>
             </a>
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                type="button"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="menu-toggle" id="menuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
             </button>
-            <nav
-                class="main-nav"
-                id="mainNav"
-                aria-label="Main navigation"
-            >
-                <a href="index.html">
-                    Home
-                </a>
-                <a href="gallery.html">
-                    Gallery
-                </a>
-                <a href="services.html">
-                    Services
-                </a>
-                <a
-                    href="book-now.html"
-                    class="nav-cta"
-                >
-                    Book Now
-                </a>
-                <a href="about.html">
-                    About
-                </a>
-                <a
-                    href="service-area.html"
-                    class="active"
-                    aria-current="page"
-                >
-                    Service Area
-                </a>
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="services.html">Services</a>
+                <a href="book-now.html" class="nav-cta">Book Now</a>
+                <a href="about.html">About</a>
+                <a href="service-area.html" class="active" aria-current="page">Service Area</a>
             </nav>
         </div>
     </header>
+
     <main>
-        <section class="page-hero service-area-hero">
+        <section class="page-hero service-area-page-hero">
             <div class="container page-hero-content">
-                <p class="eyebrow">
-                    MOBILE DETAILING • 40-MILE SERVICE AREA
+                <p class="eyebrow">MOBILE DETAILING · SAN FRANCISCO BAY AREA</p>
+                <h1>We Come <span>to You.</span></h1>
+                <p class="hero-copy">
+                    Based in Alameda, Enhance My Ride brings mobile detailing
+                    directly to suitable locations across the Bay Area.
+                    Our standard service radius is approximately 40 miles
+                    from Alameda, depending on your exact address.
                 </p>
-                <h1>
-                    We Come
-                    <span>
-                        To You.
-                    </span>
-                </h1>
-                <p>
-                    Enhance My Ride brings professional mobile detailing
-                    directly to your location, with a standard service
-                    radius of up to 40 miles from Alameda, California.
-                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="book-now.html">Check Availability</a>
+                    <a class="btn btn-outline" href="tel:+13233271806">Call (323) 327-1806</a>
+                </div>
             </div>
         </section>
+
         <section class="section">
             <div class="container">
                 <div class="service-area-intro">
-                    <p class="eyebrow">
-                        WHERE WE SERVE
-                    </p>
-                    <h2>
-                        Serving Alameda
-                        <span class="gold-text">
-                            And Beyond.
-                        </span>
-                    </h2>
+                    <p class="eyebrow">WHERE WE TRAVEL</p>
+                    <h2>Serving Alameda <span class="gold-text">and Beyond.</span></h2>
                     <p>
-                        Our standard service area extends up to 40 miles
-                        from Alameda, California. Your exact location
-                        determines whether your appointment falls within
-                        our standard travel radius.
+                        These are key service areas, not a guarantee that every address
+                        is within the standard radius. We confirm your exact location,
+                        access, travel, and appointment availability before finalizing
+                        your booking.
                     </p>
                 </div>
-                <div class="service-area-grid">
-                    <article class="service-area-card primary-area">
-                        <span>
-                            01 • STANDARD SERVICE AREA
-                        </span>
-                        <h3>
-                            Within 40 Miles
-                        </h3>
+
+                <div class="service-area-cities">
+                    <article class="service-area-city">
+                        <span class="city-number">01 · HOME BASE</span>
+                        <h3>Alameda</h3>
+                        <p>Our primary service area and starting point for travel.</p>
+                    </article>
+                    <article class="service-area-city">
+                        <span class="city-number">02 · EAST BAY</span>
+                        <h3>Oakland</h3>
+                        <p>Mobile detailing at suitable residential and workplace locations.</p>
+                    </article>
+                    <article class="service-area-city">
+                        <span class="city-number">03 · EAST BAY</span>
+                        <h3>San Leandro</h3>
+                        <p>Convenient vehicle care across nearby neighborhoods.</p>
+                    </article>
+                    <article class="service-area-city">
+                        <span class="city-number">04 · EAST BAY</span>
+                        <h3>Berkeley</h3>
+                        <p>Appointments based on the service address and schedule.</p>
+                    </article>
+                    <article class="service-area-city">
+                        <span class="city-number">05 · EAST BAY</span>
+                        <h3>Emeryville</h3>
+                        <p>Mobile detailing where safe working access is available.</p>
+                    </article>
+                    <article class="service-area-city">
+                        <span class="city-number">06 · EAST BAY</span>
+                        <h3>Hayward</h3>
+                        <p>Availability depends on your address and travel route.</p>
+                    </article>
+                    <article class="service-area-city">
+                        <span class="city-number">07 · PENINSULA / BAY</span>
+                        <h3>San Francisco</h3>
+                        <p>Some locations may be available depending on travel and parking conditions.</p>
+                    </article>
+                    <article class="service-area-city">
+                        <span class="city-number">08 · NEARBY CITIES</span>
+                        <h3>Other Bay Area Areas</h3>
+                        <p>Ask us to check your address if your city is not listed.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-dark">
+            <div class="container">
+                <div class="service-area-intro">
+                    <p class="eyebrow">TRAVEL POLICY</p>
+                    <h2>Clear Travel. <span class="gold-text">No Surprises.</span></h2>
+                    <p>We confirm the service address and any applicable travel fee before an appointment is finalized.</p>
+                </div>
+                <div class="service-area-radius-grid">
+                    <article class="service-area-radius">
+                        <p class="radius-label">Standard service area</p>
+                        <h2>Within <span class="gold-text">40 Miles</span></h2>
                         <p>
-                            We provide mobile detailing at locations
-                            within a 40-mile radius of Alameda, including
-                            Alameda, Oakland, San Leandro, Berkeley,
-                            Emeryville, Hayward, and other nearby
-                            communities, subject to your exact address.
+                            We aim to serve locations within approximately 40 miles of
+                            Alameda. The exact address, route, parking, and suitability
+                            of the work location can affect availability.
                         </p>
                     </article>
-                    <article class="service-area-card">
-                        <span>
-                            02 • EXTENDED TRAVEL
-                        </span>
-                        <h3>
-                            Outside Our Radius
-                        </h3>
+                    <article class="service-area-radius">
+                        <p class="radius-label">Extended travel</p>
+                        <h2>Outside the <span class="gold-text">Radius</span></h2>
                         <p>
-                            Located more than 40 miles from Alameda?
-                            We may still be able to come to you for an
-                            additional travel fee, depending on your
-                            location, requested services, and availability.
-                        </p>
-                    </article>
-                    <article class="service-area-card primary-area">
-                        <span>
-                            03 • CONFIRM YOUR LOCATION
-                        </span>
-                        <h3>
-                            Let's Check Your Address
-                        </h3>
-                        <p>
-                            Share your service location when booking.
-                            We'll review your address and confirm
-                            appointment availability and any applicable
-                            additional travel fee before your appointment.
+                            Locations beyond our standard travel radius may be possible
+                            for an additional travel fee. Please confirm the fee and
+                            availability with us before booking.
                         </p>
                     </article>
                 </div>
-                <section class="service-area-booking">
-                    <div class="service-area-booking-copy">
-                        <p class="eyebrow">
-                            YOUR LOCATION
-                        </p>
-                        <h2>
-                            See If We're In Your Area.
-                        </h2>
-                        <p>
-                            Enter your location when booking and we'll
-                            confirm availability for your appointment.
-                            Locations outside our standard 40-mile radius
-                            may be accommodated for an additional travel fee.
-                        </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="service-area-final">
+                    <p class="eyebrow">LET'S CHECK YOUR ADDRESS</p>
+                    <h2>Are We in <span class="gold-text">Your Area?</span></h2>
+                    <p>
+                        When requesting an appointment, include your city or full service
+                        address, vehicle year/make/model, and preferred date. We will
+                        confirm whether we can travel to you and let you know about any
+                        additional travel charge before the appointment is finalized.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="book-now.html">Submit a Booking Request</a>
+                        <a class="btn btn-outline" href="mailto:info@enhancemyride.com?subject=Service%20Area%20Check">Email Your Location</a>
                     </div>
-                    <a
-                        href="book-now.html"
-                        class="btn btn-primary"
-                    >
-                        Book Now
-                    </a>
-                </section>
+                </div>
             </div>
         </section>
     </main>
+
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-brand">
                 <a href="index.html" class="logo">
-                    <span class="logo-main">
-                        ENHANCE MY RIDE
-                    </span>
-                    <span class="logo-sub">
-                        AUTO SPA & MOBILE DETAILING
-                    </span>
+                    <span class="logo-main">ENHANCE MY RIDE</span>
+                    <span class="logo-sub">AUTO SPA &amp; MOBILE DETAILING</span>
                 </a>
                 <p>
-                    Premium mobile detailing within 40 miles of Alameda,
-                    California, with extended travel available for an
-                    additional fee.
+                    Premium mobile detailing within 40 miles of Alameda, California.
+                    Extended travel may be available for an additional fee.
                 </p>
             </div>
             <div class="footer-links">
@@ -372,55 +307,31 @@
                 <a href="services.html">Services</a>
                 <a href="book-now.html">Book Now</a>
                 <a href="about.html">About</a>
-                <a href="service-area.html">Service Area</a>
+                <a href="service-area.html" aria-current="page">Service Area</a>
             </div>
             <div class="footer-links">
                 <h4>Connect</h4>
                 <a href="book-now.html">Book Now</a>
-                <a href="tel:+13233271806">
-                    (323) 327-1806
-                </a>
-                <a href="mailto:info@enhancemyride.com">
-                    info@enhancemyride.com
-                </a>
-                <a
-                    href="https://www.instagram.com/enhancemyridemobiledetailing/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Instagram
-                </a>
-                <a
-                    href="https://www.tiktok.com/@enhancemyride"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    TikTok
-                </a>
-                <a
-                    href="https://www.youtube.com/@enhancemyridemobiledetailing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    YouTube
-                </a>
+                <a href="tel:+13233271806">(323) 327-1806</a>
+                <a href="mailto:info@enhancemyride.com">info@enhancemyride.com</a>
+                <div class="footer-social-links">
+                    <a href="https://www.facebook.com/Enhancemyride" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Enhance My Ride on Facebook"><span>Facebook</span></a>
+                    <a href="https://www.instagram.com/enhancemyridemobiledetailing/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Enhance My Ride on Instagram"><span>Instagram</span></a>
+                    <a href="https://www.tiktok.com/@enhancemyride" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Enhance My Ride on TikTok"><span>TikTok</span></a>
+                    <a href="https://www.youtube.com/@enhancemyridemobiledetailing" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Enhance My Ride on YouTube"><span>YouTube</span></a>
+                </div>
             </div>
         </div>
         <div class="container footer-bottom">
-            <p>
-                © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
-                All rights reserved.
-            </p>
+            <p>© <span id="current-year">2026</span> Enhance My Ride Auto Spa &amp; Mobile Detailing. All rights reserved.</p>
         </div>
     </footer>
-    <a
-        href="tel:+13233271806"
-        class="mobile-call-button"
-        aria-label="Call Enhance My Ride"
-    >
+
+    <a href="tel:+13233271806" class="mobile-call-button" aria-label="Call Enhance My Ride">
         <span class="call-icon">☎</span>
         <span>CALL</span>
     </a>
+
     <script src="js/script.js"></script>
 </body>
 </html>
