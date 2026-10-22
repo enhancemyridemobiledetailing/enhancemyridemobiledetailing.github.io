@@ -1,56 +1,295 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Detailing Services & Packages | Enhance My Ride</title><meta name="description" content="Explore premium mobile detailing packages from Enhance My Ride Auto Spa & Mobile Detailing across Alameda and the San Francisco Bay Area."><meta name="theme-color" content="#080808">
-<link rel="canonical" href="https://enhancemyride.com/services.html"><style>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Detailing Services & Packages | Enhance My Ride</title>
+<meta name="description" content="Explore premium mobile detailing packages from Enhance My Ride Auto Spa & Mobile Detailing across Alameda and the San Francisco Bay Area.">
+<meta name="theme-color" content="#080808">
+<link rel="canonical" href="https://enhancemyride.com/services.html">
+<style>
 :root{--bg:#080808;--panel:#111;--gold:#d4af37;--gold2:#ecd27a;--white:#f6f4ee;--muted:#aaa69b;--line:rgba(212,175,55,.28);--max:1180px}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{background:var(--bg);color:var(--white);font:16px/1.7 Arial,Helvetica,sans-serif}
-a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
 .container{width:min(100% - 36px,var(--max));margin:auto}
 .header{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .header-inner{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand-logo{width:62px;height:62px;object-fit:contain;border-radius:50%;background:#080808;flex-shrink:0}
-.brand-name{display:block;font:1.12rem Georgia,serif;line-height:1.25}.brand-sub{display:block;color:var(--muted);font-size:.57rem;letter-spacing:.1em;text-transform:uppercase}
-.nav{display:flex;align-items:center;gap:19px}.nav a{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#ddd8ce}.nav a:hover,.nav a[aria-current=page]{color:var(--gold2)}.nav .nav-book{border:1px solid var(--gold);padding:9px 13px;color:var(--gold2)}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand-logo{width:62px;height:62px;object-fit:contain;border-radius:50%;background:#080808;flex-shrink:0}
+.brand-name{display:block;font:1.12rem Georgia,serif;line-height:1.25}
+.brand-sub{display:block;color:var(--muted);font-size:.57rem;letter-spacing:.1em;text-transform:uppercase}
+.nav{display:flex;align-items:center;gap:19px}
+.nav a{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#ddd8ce}
+.nav a:hover,.nav a[aria-current=page]{color:var(--gold2)}
+.nav .nav-book{border:1px solid var(--gold);padding:9px 13px;color:var(--gold2)}
 .menu{display:none;background:none;border:1px solid var(--line);color:var(--gold);font-size:1.4rem;width:42px;height:42px}
 .eyebrow{color:var(--gold);font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
-h1,h2,h3{font-weight:400}h1{font:400 clamp(2.8rem,7vw,5.7rem)/1.04 Georgia,'Times New Roman',serif;letter-spacing:-.035em}h2{font:400 clamp(2rem,4vw,3.2rem)/1.15 Georgia,'Times New Roman',serif}h3{font:400 1.45rem/1.25 Georgia,'Times New Roman',serif}
-.gold{color:var(--gold)}.lead{max-width:720px;color:#d5d0c5;font-size:1.05rem;line-height:1.9;margin-top:18px}.muted{color:var(--muted)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 20px;background:var(--gold);border:1px solid var(--gold);color:#080808;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;transition:.2s}.btn:hover{background:transparent;color:var(--gold2);transform:translateY(-2px)}.btn.outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,.45)}.btn.outline:hover{border-color:var(--gold);color:var(--gold2)}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.page-hero{padding:92px 0 76px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 80% 0,rgba(212,175,55,.12),transparent 50%),linear-gradient(135deg,#101010,#070707)}
-.section{padding:76px 0;border-bottom:1px solid rgba(255,255,255,.07)}.section-head{max-width:760px;margin-bottom:30px}.section-head p{color:var(--muted);margin-top:14px;max-width:700px}
-.grid{display:grid;gap:18px}.card{background:linear-gradient(145deg,#151515,#0c0c0c);border:1px solid var(--line);padding:26px}.card p{color:var(--muted);margin-top:10px}.card ul{padding-left:19px;margin-top:14px;color:#d2cdc2}.card li{margin:6px 0}
-.kicker{font-size:.68rem;color:var(--gold2);letter-spacing:.16em;text-transform:uppercase;font-weight:700}.price{font:400 2.4rem Georgia,serif;color:var(--gold);margin:14px 0 4px}.price small{font:400 .82rem Arial,sans-serif;color:var(--muted)}.badge{display:inline-block;border:1px solid var(--gold);color:var(--gold2);padding:5px 9px;font-size:.63rem;letter-spacing:.12em;text-transform:uppercase}
+h1,h2,h3{font-weight:400}
+h1{font:400 clamp(2.8rem,7vw,5.7rem)/1.04 Georgia,'Times New Roman',serif;letter-spacing:-.035em}
+h2{font:400 clamp(2rem,4vw,3.2rem)/1.15 Georgia,'Times New Roman',serif}
+h3{font:400 1.45rem/1.25 Georgia,'Times New Roman',serif}
+.gold{color:var(--gold)}
+.lead{max-width:720px;color:#d5d0c5;font-size:1.05rem;line-height:1.9;margin-top:18px}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 20px;background:var(--gold);border:1px solid var(--gold);color:#080808;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;transition:.2s}
+.btn:hover{background:transparent;color:var(--gold2);transform:translateY(-2px)}
+.btn.outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,.45)}
+.btn.outline:hover{border-color:var(--gold);color:var(--gold2)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.page-hero{padding:92px 0 76px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 80% 0,rgba(212,175,55,.12),transparent 50%),linear-gradient(135deg,#101010,#070707)}
+.section{padding:76px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.section-head{max-width:760px;margin-bottom:30px}
+.section-head p{color:var(--muted);margin-top:14px;max-width:700px}
+.grid{display:grid;gap:18px}
+.card{background:linear-gradient(145deg,#151515,#0c0c0c);border:1px solid var(--line);padding:26px}
+.card p{color:var(--muted);margin-top:10px}
+.card ul{padding-left:19px;margin-top:14px;color:#d2cdc2}
+.card li{margin:6px 0}
+.kicker{font-size:.68rem;color:var(--gold2);letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.price{font:400 2.4rem Georgia,serif;color:var(--gold);margin:14px 0 4px}
+.price small{font:400 .82rem Arial,sans-serif;color:var(--muted)}
+.badge{display:inline-block;border:1px solid var(--gold);color:var(--gold2);padding:5px 9px;font-size:.63rem;letter-spacing:.12em;text-transform:uppercase}
 .callout{padding:38px;border:1px solid var(--line);background:radial-gradient(ellipse at 100% 0,rgba(212,175,55,.11),transparent 50%),#101010}
-.footer{padding:38px 0 22px;background:#050505}.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}.footer h3{font-size:1.05rem;color:var(--gold);margin-bottom:10px}.footer p,.footer a{color:#aaa69b;font-size:.82rem}.footer-links{display:flex;gap:10px 16px;flex-wrap:wrap}.socials{display:flex;gap:15px;flex-wrap:wrap;margin-top:10px}.footer-bottom{border-top:1px solid rgba(255,255,255,.09);margin-top:24px;padding-top:15px;color:#777268;font-size:.7rem;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.footer{padding:38px 0 22px;background:#050505}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+.footer h3{font-size:1.05rem;color:var(--gold);margin-bottom:10px}
+.footer p,.footer a{color:#aaa69b;font-size:.82rem}
+.footer-links{display:flex;gap:10px 16px;flex-wrap:wrap}
+.socials{display:flex;gap:15px;flex-wrap:wrap;margin-top:10px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.09);margin-top:24px;padding-top:15px;color:#777268;font-size:.7rem;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .floating-call{position:fixed;right:18px;bottom:18px;z-index:100;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 19px;border-radius:999px;background:linear-gradient(135deg,#ecd27a,#c9a227);color:#080808;font-size:.74rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 8px 28px #0008}
-@media(max-width:900px){.menu{display:block}.nav{display:none;position:absolute;top:100%;left:0;right:0;padding:10px 20px 20px;background:#080808;border-bottom:1px solid var(--line);align-items:stretch;flex-direction:column;gap:0}.nav.open{display:flex}.nav a{padding:12px 4px;border-bottom:1px solid #ffffff12}.nav .nav-book{text-align:center;margin-top:10px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:last-child{grid-column:1/-1}}
-@media(max-width:560px){.header-inner{min-height:72px}.brand-logo{width:52px;height:52px}.brand{gap:9px}.brand-name{font-size:.93rem}.brand-sub{font-size:.48rem;letter-spacing:.05em}.container{width:min(100% - 28px,var(--max))}.page-hero{padding:66px 0 54px}.section{padding:54px 0}.lead{font-size:.96rem}.card{padding:21px}.callout{padding:25px}.footer-grid{grid-template-columns:1fr}.footer-grid>div:last-child{grid-column:auto}}
-</style></head><body>
-<header class="header"><div class="container header-inner"><a class="brand" href="index.html" aria-label="Enhance My Ride homepage">
+@media(max-width:900px){
+  .menu{display:block}
+.nav{display:none;position:absolute;top:100%;left:0;right:0;padding:10px 20px 20px;background:#080808;border-bottom:1px solid var(--line);align-items:stretch;flex-direction:column;gap:0}
+.nav.open{display:flex}
+.nav a{padding:12px 4px;border-bottom:1px solid #ffffff12}
+.nav .nav-book{text-align:center;margin-top:10px}
+.footer-grid{grid-template-columns:1fr 1fr}
+.footer-grid>div:last-child{grid-column:1/-1}
+}
+@media(max-width:560px){
+  .header-inner{min-height:72px}
+.brand-logo{width:52px;height:52px}
+.brand{gap:9px}
+.brand-name{font-size:.93rem}
+.brand-sub{font-size:.48rem;letter-spacing:.05em}
+.container{width:min(100% - 28px,var(--max))}
+.page-hero{padding:66px 0 54px}
+.section{padding:54px 0}
+.lead{font-size:.96rem}
+.card{padding:21px}
+.callout{padding:25px}
+.footer-grid{grid-template-columns:1fr}
+.footer-grid>div:last-child{grid-column:auto}
+}
+</style>
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="brand" href="index.html" aria-label="Enhance My Ride homepage">
 <img class="brand-logo" src="images/enhance-my-ride-logo.webp?v=4" alt="Enhance My Ride logo" width="1254" height="1254" loading="eager">
-<span><span class="brand-name">Enhance My Ride</span><span class="brand-sub">Auto Spa &amp; Mobile Detailing</span></span></a>
-<button class="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button><nav class="nav" id="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="services.html" aria-current="page">Services</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="service-area.html">Service Area</a><a class="nav-book" href="book-now.html">Book Now ↗</a></nav></div></header>
+<span>
+<span class="brand-name">Enhance My Ride</span>
+<span class="brand-sub">Auto Spa &amp; Mobile Detailing</span>
+</span>
+</a>
+<button class="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
+<nav class="nav" id="main-nav" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="services.html" aria-current="page">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About</a>
+<a href="service-area.html">Service Area</a>
+<a class="nav-book" href="book-now.html">Book Now ↗</a>
+</nav>
+</div>
+</header>
 <main>
-<section class="page-hero"><div class="container"><p class="eyebrow">Premium mobile detailing · Bay Area</p><h1>More Than a Wash.<br><span class="gold">A Higher Standard.</span></h1><p class="lead">Choose the level of care your vehicle needs. We bring our mobile setup to you, with thoughtful workmanship and a premium finish from the first touch to the final inspection.</p><div class="actions"><a class="btn" href="book-now.html">Book Your Detail</a><a class="btn outline" href="gallery.html">View Our Work</a></div></div></section>
-<section class="section"><div class="container"><div class="section-head"><p class="eyebrow">Our packages</p><h2>Three Levels of <span class="gold">Enhancement.</span></h2><p>Starting prices are shown below. Final pricing may vary by vehicle size, condition, pet hair, stains, and requested services.</p></div>
+<section class="page-hero">
+<div class="container">
+<p class="eyebrow">Premium mobile detailing · Bay Area</p>
+<h1>More Than a Wash.<br>
+<span class="gold">A Higher Standard.</span>
+</h1>
+<p class="lead">Choose the level of care your vehicle needs. We bring our mobile setup to you, with thoughtful workmanship and a premium finish from the first touch to the final inspection.</p>
+<div class="actions">
+<a class="btn" href="book-now.html">Book Your Detail</a>
+<a class="btn outline" href="gallery.html">View Our Work</a>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<p class="eyebrow">Our packages</p>
+<h2>Three Levels of <span class="gold">Enhancement.</span>
+</h2>
+<p>Starting prices are shown below. Final pricing may vary by vehicle size, condition, pet hair, stains, and requested services.</p>
+</div>
 <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr))">
-<article class="card"><span class="kicker">Essential care</span><h3 style="margin-top:12px">Enhance Gold</h3><p class="price">$149 <small>starting</small></p><p>A premium refresh for drivers who want their vehicle clean, cared for, and ready for the road.</p><ul><li>Exterior hand wash and dry</li><li>Wheels and tires cleaned</li><li>Interior vacuum and wipe-down</li><li>Interior glass cleaned</li><li>Tire finish and final inspection</li></ul><div class="actions"><a class="btn" href="book-now.html?package=gold">Choose Gold</a></div></article>
-<article class="card" style="border-color:var(--gold)"><span class="badge">Most popular</span><h3 style="margin-top:14px">Enhance Black Label</h3><p class="price">$249 <small>starting</small></p><p>A deeper clean for customers who want more attention on interior details and exterior finish.</p><ul><li>Everything in Enhance Gold</li><li>More detailed interior cleaning</li><li>Door jambs and detailed touchpoints</li><li>Enhanced wheel and tire treatment</li><li>Protective finishing treatment where appropriate</li></ul><div class="actions"><a class="btn" href="book-now.html?package=black-label">Choose Black Label</a></div></article>
-<article class="card"><span class="kicker">Ultimate treatment</span><h3 style="margin-top:12px">Showroom Edition</h3><p class="price">$399 <small>starting</small></p><p>Our highest-level detail for a comprehensive reset and a carefully finished presentation.</p><ul><li>Everything in Black Label</li><li>More intensive interior and exterior detailing</li><li>Targeted attention to buildup and neglected areas</li><li>Premium protection options based on vehicle condition</li><li>Final presentation and quality check</li></ul><div class="actions"><a class="btn" href="book-now.html?package=showroom">Choose Showroom</a></div></article></div>
-<p class="muted" style="font-size:.82rem;margin-top:20px">Services included may vary based on vehicle condition and package suitability. Paint correction, stain removal, heavy pet hair, and other intensive work may require a separate quote.</p></div></section>
-<section class="section"><div class="container"><div class="section-head"><p class="eyebrow">Customize your detail</p><h2>The Finishing Touches <span class="gold">Matter.</span></h2><p>Add-on services can be quoted after we learn more about your vehicle and what you want to achieve.</p></div>
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))"><div class="card"><h3>Wheel Polishing</h3><p>For suitable wheel finishes; typically quoted at $50–$100 per set.</p></div><div class="card"><h3>Headlight Restoration</h3><p>Improve the appearance of cloudy or oxidized headlights.</p></div><div class="card"><h3>Trim Restoration</h3><p>Refresh faded exterior trim where the material and condition allow.</p></div><div class="card"><h3>Pet Hair Removal</h3><p>Additional labor for stubborn or heavily embedded pet hair.</p></div><div class="card"><h3>Heavy Soil Treatment</h3><p>Extra attention for unusually dirty interiors and accumulated grime.</p></div><div class="card"><h3>Engine Bay Detail</h3><p>Careful cleaning of accessible engine bay surfaces when appropriate.</p></div><div class="card"><h3>Odor Treatment</h3><p>Targeted treatment based on the odor source and interior materials.</p></div><div class="card"><h3>Paint Correction</h3><p>Quoted separately after inspecting paint condition and expectations.</p></div></div></div></section>
-<section class="section"><div class="container"><div class="callout"><p class="eyebrow">Not sure what you need?</p><h2 style="margin-top:8px">Let's find the right <span class="gold">package.</span></h2><p class="muted" style="margin-top:12px;max-width:700px">Tell us your vehicle, its condition, and your priorities. We can help you choose a realistic starting point before confirming your quote.</p><div class="actions"><a class="btn" href="book-now.html">Request a Quote</a><a class="btn outline" href="tel:+13233271806">Call (323) 327-1806</a></div></div></div></section>
+<article class="card">
+<span class="kicker">Essential care</span>
+<h3 style="margin-top:12px">Enhance Gold</h3>
+<p class="price">$180 <small>starting</small>
+</p>
+<p>A premium refresh for drivers who want their vehicle clean, cared for, and ready for the road.</p>
+<ul>
+<li>Exterior hand wash and dry</li>
+<li>Wheels and tires cleaned</li>
+<li>Interior vacuum and wipe-down</li>
+<li>Interior glass cleaned</li>
+<li>Tire finish and final inspection</li>
+</ul>
+<div class="actions">
+<a class="btn" href="book-now.html?package=gold">Choose Gold</a>
+</div>
+</article>
+<article class="card" style="border-color:var(--gold)">
+<span class="badge">Most popular</span>
+<h3 style="margin-top:14px">Enhance Elite</h3>
+<p class="price">$300 <small>starting</small>
+</p>
+<p>A deeper clean for customers who want more attention on interior details and exterior finish.</p>
+<ul>
+<li>Everything in Enhance Gold</li>
+<li>More detailed interior cleaning</li>
+<li>Door jambs and detailed touchpoints</li>
+<li>Enhanced wheel and tire treatment</li>
+<li>Protective finishing treatment where appropriate</li>
+</ul>
+<div class="actions">
+<a class="btn" href="book-now.html?package=black-label">Choose Black Label</a>
+</div>
+</article>
+<article class="card">
+<span class="kicker">Ultimate treatment</span>
+<h3 style="margin-top:12px">Enhance Showroom</h3>
+<p class="price">$500 <small>starting</small>
+</p>
+<p>Our highest-level detail for a comprehensive reset and a carefully finished presentation.</p>
+<ul>
+<li>Everything in Black Label</li>
+<li>More intensive interior and exterior detailing</li>
+<li>Targeted attention to buildup and neglected areas</li>
+<li>Premium protection options based on vehicle condition</li>
+<li>Final presentation and quality check</li>
+</ul>
+<div class="actions">
+<a class="btn" href="book-now.html?package=showroom">Choose Showroom</a>
+</div>
+</article>
+</div>
+<p class="muted" style="font-size:.82rem;margin-top:20px">Services included may vary based on vehicle condition and package suitability. Paint correction, stain removal, heavy pet hair, and other intensive work may require a separate quote.</p>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<p class="eyebrow">Customize your detail</p>
+<h2>The Finishing Touches <span class="gold">Matter.</span>
+</h2>
+<p>Add-on services can be quoted after we learn more about your vehicle and what you want to achieve.</p>
+</div>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))">
+<div class="card">
+<h3>Wheel Polishing</h3>
+<p>For suitable wheel finishes; typically quoted at $50–$100 per set.</p>
+</div>
+<div class="card">
+<h3>Headlight Restoration</h3>
+<p>Improve the appearance of cloudy or oxidized headlights.</p>
+</div>
+<div class="card">
+<h3>Trim Restoration</h3>
+<p>Refresh faded exterior trim where the material and condition allow.</p>
+</div>
+<div class="card">
+<h3>Pet Hair Removal</h3>
+<p>Additional labor for stubborn or heavily embedded pet hair.</p>
+</div>
+<div class="card">
+<h3>Heavy Soil Treatment</h3>
+<p>Extra attention for unusually dirty interiors and accumulated grime.</p>
+</div>
+<div class="card">
+<h3>Engine Bay Detail</h3>
+<p>Careful cleaning of accessible engine bay surfaces when appropriate.</p>
+</div>
+<div class="card">
+<h3>Odor Treatment</h3>
+<p>Targeted treatment based on the odor source and interior materials.</p>
+</div>
+<div class="card">
+<h3>Paint Correction</h3>
+<p>Quoted separately after inspecting paint condition and expectations.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="callout">
+<p class="eyebrow">Not sure what you need?</p>
+<h2 style="margin-top:8px">Let's find the right <span class="gold">package.</span>
+</h2>
+<p class="muted" style="margin-top:12px;max-width:700px">Tell us your vehicle, its condition, and your priorities. We can help you choose a realistic starting point before confirming your quote.</p>
+<div class="actions">
+<a class="btn" href="book-now.html">Request a Quote</a>
+<a class="btn outline" href="tel:+13233271806">Call (323) 327-1806</a>
+</div>
+</div>
+</div>
+</section>
 </main>
-<footer class="footer"><div class="container"><div class="footer-grid">
-<div><h3>Enhance My Ride</h3><p>Auto Spa &amp; Mobile Detailing<br>We come to you. You relax. We Enhance.</p></div>
-<div><h3>Explore</h3><div class="footer-links"><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="service-area.html">Service Area</a><a href="book-now.html">Book Now</a></div><p style="margin-top:12px"><a href="tel:+13233271806">(323) 327-1806</a><br><a href="mailto:info@enhancemyride.com">info@enhancemyride.com</a></p></div>
-<div><h3>Follow Us</h3><div class="socials"><a href="https://www.facebook.com/Enhancemyride" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/enhancemyridemobiledetailing/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.tiktok.com/@enhancemyride" target="_blank" rel="noopener noreferrer">TikTok</a><a href="https://www.youtube.com/@enhancemyridemobiledetailing" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
-<div class="footer-bottom"><span>© <span class="year">2026</span> Enhance My Ride Auto Spa &amp; Mobile Detailing</span><span>Premium care. Delivered to your door.</span></div></div></footer>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<h3>Enhance My Ride</h3>
+<p>Auto Spa &amp; Mobile Detailing<br>We come to you. You relax. We Enhance.</p>
+</div>
+<div>
+<h3>Explore</h3>
+<div class="footer-links">
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About</a>
+<a href="service-area.html">Service Area</a>
+<a href="book-now.html">Book Now</a>
+</div>
+<p style="margin-top:12px">
+<a href="tel:+13233271806">(323) 327-1806</a>
+<br>
+<a href="mailto:info@enhancemyride.com">info@enhancemyride.com</a>
+</p>
+</div>
+<div>
+<h3>Follow Us</h3>
+<div class="socials">
+<a href="https://www.facebook.com/Enhancemyride" target="_blank" rel="noopener noreferrer">Facebook</a>
+<a href="https://www.instagram.com/enhancemyridemobiledetailing/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a href="https://www.tiktok.com/@enhancemyride" target="_blank" rel="noopener noreferrer">TikTok</a>
+<a href="https://www.youtube.com/@enhancemyridemobiledetailing" target="_blank" rel="noopener noreferrer">YouTube</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© <span class="year">2026</span> Enhance My Ride Auto Spa &amp; Mobile Detailing</span>
+<span>Premium care. Delivered to your door.</span>
+</div>
+</div>
+</footer>
 <a class="floating-call" href="tel:+13233271806" aria-label="Call Enhance My Ride">(323) 327-1806 · Call Now</a>
 <script>
+
 const menuButton=document.querySelector(".menu"),nav=document.querySelector("#main-nav");
 if(menuButton&&nav){menuButton.addEventListener("click",()=>{const open=nav.classList.toggle("open");menuButton.setAttribute("aria-expanded",String(open));menuButton.setAttribute("aria-label",open?"Close navigation":"Open navigation");menuButton.textContent=open?"×":"☰";});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");menuButton.setAttribute("aria-expanded","false");menuButton.textContent="☰";}));}
 document.querySelectorAll(".year").forEach(el=>el.textContent=new Date().getFullYear());
-</script></body></html>
+
+</script>
+</body>
+</html>
