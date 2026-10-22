@@ -1,1921 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>
-        Gallery | Enhance My Ride Auto Spa & Mobile Detailing
-    </title>
-
-    <meta
-        name="description"
-        content="View real vehicle transformations by Enhance My Ride Auto Spa & Mobile Detailing, including Mercedes-Benz, Lexus, engine bay detailing, and headlight restoration projects throughout the Bay Area."
-    >
-
-    <meta
-        name="theme-color"
-        content="#050505"
-    >
-
-    <meta
-        name="robots"
-        content="index, follow"
-    >
-
-    <link
-        rel="canonical"
-        href="https://enhancemyride.com/gallery.html"
-    >
-
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
-
-
-    <style>
-
-        /* =====================================================
-           GALLERY HERO
-        ===================================================== */
-
-        .gallery-hero {
-            min-height: 55vh;
-
-            display: flex;
-            align-items: center;
-
-            background:
-                radial-gradient(
-                    circle at 78% 45%,
-                    rgba(212,175,55,.13),
-                    transparent 38%
-                ),
-                #050505;
-        }
-
-
-        .gallery-hero h1 {
-            max-width: 800px;
-            margin: 0;
-
-            font-size: clamp(
-                3.5rem,
-                7vw,
-                6.5rem
-            );
-
-            line-height: .9;
-        }
-
-
-        .gallery-hero h1 span {
-            display: block;
-            color: #d4af37;
-        }
-
-
-        .gallery-hero p:last-child {
-            max-width: 650px;
-            margin-top: 28px;
-
-            color: rgba(255,255,255,.6);
-
-            line-height: 1.8;
-        }
-
-
-
-        /* =====================================================
-           PROJECT SECTIONS
-        ===================================================== */
-
-        .gallery-project {
-            padding: 100px 0;
-        }
-
-
-        .gallery-project + .gallery-project {
-            border-top:
-                1px solid
-                rgba(255,255,255,.08);
-        }
-
-
-        .gallery-project-heading {
-            margin-bottom: 45px;
-        }
-
-
-        .gallery-project-heading h2 {
-            margin: 0;
-
-            font-size: clamp(
-                2.5rem,
-                5vw,
-                4.8rem
-            );
-
-            line-height: .95;
-        }
-
-
-        .gallery-project-heading p:last-child {
-            max-width: 650px;
-
-            margin-top: 18px;
-
-            color: rgba(255,255,255,.5);
-
-            line-height: 1.7;
-        }
-
-
-
-        /* =====================================================
-           BEFORE / AFTER GRID
-        ===================================================== */
-
-        .before-after-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 18px;
-        }
-
-
-        .gallery-image-card {
-            position: relative;
-
-            overflow: hidden;
-
-            cursor: pointer;
-
-            border:
-                1px solid
-                rgba(255,255,255,.08);
-
-            background: #090909;
-        }
-
-
-        .gallery-image-card img {
-            display: block;
-
-            width: 100%;
-
-            aspect-ratio: 4 / 3;
-
-            object-fit: cover;
-
-            transition:
-                transform .5s ease;
-        }
-
-
-        .gallery-image-card:hover img {
-            transform: scale(1.04);
-        }
-
-
-        .gallery-image-label {
-            position: absolute;
-
-            left: 15px;
-            bottom: 15px;
-
-            padding: 8px 11px;
-
-            background:
-                rgba(0,0,0,.75);
-
-            color: #fff;
-
-            font-size: 8px;
-
-            font-weight: 800;
-
-            letter-spacing: .15em;
-        }
-
-
-        .gallery-image-label.after {
-            background: #d4af37;
-            color: #050505;
-        }
-
-
-
-        /* =====================================================
-           PROJECT META
-        ===================================================== */
-
-        .gallery-project-meta {
-            display: flex;
-
-            justify-content: space-between;
-
-            gap: 20px;
-
-            margin-top: 20px;
-
-            color:
-                rgba(255,255,255,.4);
-
-            font-size: 11px;
-
-            letter-spacing: .08em;
-        }
-
-
-
-        /* =====================================================
-           SECONDARY IMAGE GRID
-        ===================================================== */
-
-        .gallery-featured {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 18px;
-
-            margin-top: 18px;
-        }
-
-
-        .gallery-featured img {
-            display: block;
-
-            width: 100%;
-
-            height: 100%;
-
-            min-height: 350px;
-
-            object-fit: cover;
-
-            border:
-                1px solid
-                rgba(255,255,255,.08);
-
-            cursor: pointer;
-
-            transition:
-                transform .5s ease;
-        }
-
-
-        .gallery-featured img:hover {
-            transform: scale(1.015);
-        }
-
-
-
-        /* =====================================================
-           ENGINE BAY DETAIL
-        ===================================================== */
-
-        .engine-bay-section {
-            background:
-                radial-gradient(
-                    circle at 80% 40%,
-                    rgba(212,175,55,.035),
-                    transparent 40%
-                ),
-                #050505;
-        }
-
-
-        .engine-bay-project {
-            margin-top: 55px;
-        }
-
-
-        .engine-bay-project:first-of-type {
-            margin-top: 0;
-        }
-
-
-        .engine-bay-project + .engine-bay-project {
-            padding-top: 70px;
-
-            border-top:
-                1px solid
-                rgba(255,255,255,.07);
-        }
-
-
-        .engine-bay-label {
-            margin-bottom: 20px;
-
-            color:
-                rgba(255,255,255,.35);
-
-            font-size: 10px;
-
-            font-weight: 800;
-
-            letter-spacing: .15em;
-        }
-
-
-
-        /* =====================================================
-           HEADLIGHT RESTORATION
-        ===================================================== */
-
-        .headlight-restoration-section {
-            background:
-                radial-gradient(
-                    circle at 20% 40%,
-                    rgba(212,175,55,.04),
-                    transparent 40%
-                ),
-                #050505;
-        }
-
-
-        .headlight-restoration-note {
-            max-width: 700px;
-
-            margin-top: 25px;
-
-            color:
-                rgba(255,255,255,.48);
-
-            line-height: 1.8;
-        }
-
-
-        .headlight-result {
-            margin-top: 18px;
-        }
-
-
-        .headlight-result img {
-            width: 100%;
-            display: block;
-
-            aspect-ratio: 16 / 9;
-
-            object-fit: cover;
-
-            border:
-                1px solid
-                rgba(255,255,255,.08);
-
-            cursor: pointer;
-
-            transition:
-                transform .5s ease;
-        }
-
-
-        .headlight-result img:hover {
-            transform: scale(1.015);
-        }
-
-
-
-        /* =====================================================
-           FINAL CTA
-        ===================================================== */
-
-        .gallery-final {
-            padding: 110px 0;
-
-            border-top:
-                1px solid
-                rgba(212,175,55,.15);
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(212,175,55,.09),
-                    transparent 50%
-                );
-
-            text-align: center;
-        }
-
-
-        .gallery-final h2 {
-            max-width: 800px;
-
-            margin:
-                0 auto 20px;
-
-            font-size: clamp(
-                2.8rem,
-                5vw,
-                5rem
-            );
-
-            line-height: .95;
-        }
-
-
-        .gallery-final p {
-            max-width: 600px;
-
-            margin:
-                0 auto 30px;
-
-            color:
-                rgba(255,255,255,.5);
-
-            line-height: 1.75;
-        }
-
-
-
-        /* =====================================================
-           LIGHTBOX
-        ===================================================== */
-
-        .lightbox {
-            position: fixed;
-
-            inset: 0;
-
-            z-index: 99999;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            padding: 50px;
-
-            background:
-                rgba(0,0,0,.96);
-
-            opacity: 0;
-
-            visibility: hidden;
-
-            pointer-events: none;
-
-            transition:
-                opacity .25s ease,
-                visibility .25s ease;
-        }
-
-
-        .lightbox.active {
-            opacity: 1;
-
-            visibility: visible;
-
-            pointer-events: auto;
-        }
-
-
-        .lightbox-image {
-            max-width: 90vw;
-
-            max-height: 82vh;
-
-            object-fit: contain;
-
-            box-shadow:
-                0 20px 80px
-                rgba(0,0,0,.6);
-        }
-
-
-        .lightbox-close,
-        .lightbox-arrow {
-            position: absolute;
-
-            z-index: 2;
-
-            display: grid;
-
-            place-items: center;
-
-            border:
-                1px solid
-                rgba(255,255,255,.2);
-
-            background:
-                rgba(0,0,0,.7);
-
-            color: #fff;
-
-            cursor: pointer;
-        }
-
-
-        .lightbox-close {
-            top: 25px;
-            right: 25px;
-
-            width: 45px;
-            height: 45px;
-
-            font-size: 30px;
-        }
-
-
-        .lightbox-arrow {
-            top: 50%;
-
-            width: 55px;
-            height: 55px;
-
-            transform:
-                translateY(-50%);
-
-            font-size: 35px;
-        }
-
-
-        .lightbox-prev {
-            left: 25px;
-        }
-
-
-        .lightbox-next {
-            right: 25px;
-        }
-
-
-        .lightbox-counter {
-            position: absolute;
-
-            bottom: 22px;
-
-            left: 50%;
-
-            transform:
-                translateX(-50%);
-
-            color:
-                rgba(255,255,255,.6);
-
-            font-size: 11px;
-
-            letter-spacing: .12em;
-        }
-
-
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
-
-        @media (max-width: 700px) {
-
-            .gallery-hero {
-                min-height: 48vh;
-            }
-
-
-            .gallery-hero h1 {
-                font-size:
-                    clamp(
-                        3.2rem,
-                        14vw,
-                        5rem
-                    );
-            }
-
-
-            .gallery-project {
-                padding: 75px 0;
-            }
-
-
-            .before-after-grid,
-            .gallery-featured {
-                grid-template-columns: 1fr;
-            }
-
-
-            .gallery-featured img {
-                min-height: auto;
-            }
-
-
-            .gallery-project-meta {
-                flex-direction: column;
-
-                gap: 8px;
-            }
-
-
-            .engine-bay-project + .engine-bay-project {
-                padding-top: 55px;
-            }
-
-
-            .lightbox {
-                padding:
-                    30px 10px 80px;
-            }
-
-
-            .lightbox-image {
-                max-width: 96vw;
-
-                max-height: 78vh;
-            }
-
-
-            .lightbox-arrow {
-                top: auto;
-
-                bottom: 20px;
-
-                transform: none;
-
-                width: 45px;
-
-                height: 45px;
-            }
-
-
-            .lightbox-prev {
-                left: 20px;
-            }
-
-
-            .lightbox-next {
-                right: 20px;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery | Enhance My Ride Auto Spa & Mobile Detailing</title>
+<meta name="description" content="View vehicle transformations by Enhance My Ride, including Mercedes-Benz, Lexus, engine bay detailing, and headlight restoration.">
+<meta name="theme-color" content="#080808">
+<link rel="canonical" href="https://enhancemyride.com/gallery.html">
+<style>
+:root{--bg:#080808;--panel:#111;--gold:#d4af37;--gold2:#ecd27a;--white:#f6f4ee;--muted:#aaa69b;--line:rgba(212,175,55,.28);--max:1180px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--white);font:16px/1.7 Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(100% - 36px,var(--max));margin:auto}
+.header{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.header-inner{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand-logo{width:62px;height:62px;object-fit:contain;border-radius:50%;background:#080808;flex-shrink:0}
+.brand-name{display:block;font:1.12rem Georgia,serif;line-height:1.25}
+.brand-sub{display:block;color:var(--muted);font-size:.57rem;letter-spacing:.1em;text-transform:uppercase}
+.nav{display:flex;align-items:center;gap:19px}
+.nav a{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#ddd8ce}
+.nav a:hover,.nav a[aria-current=page]{color:var(--gold2)}
+.nav .nav-book{border:1px solid var(--gold);padding:9px 13px;color:var(--gold2)}
+.menu{display:none;background:none;border:1px solid var(--line);color:var(--gold);font-size:1.4rem;width:42px;height:42px}
+.eyebrow{color:var(--gold);font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+h1,h2,h3{font-weight:400}
+h1{font:400 clamp(2.8rem,7vw,5.7rem)/1.04 Georgia,'Times New Roman',serif;letter-spacing:-.035em}
+h2{font:400 clamp(2rem,4vw,3.2rem)/1.15 Georgia,'Times New Roman',serif}
+h3{font:400 1.45rem/1.25 Georgia,'Times New Roman',serif}
+.gold{color:var(--gold)}
+.lead{max-width:720px;color:#d5d0c5;font-size:1.05rem;line-height:1.9;margin-top:18px}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 20px;background:var(--gold);border:1px solid var(--gold);color:#080808;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;transition:.2s}
+.btn:hover{background:transparent;color:var(--gold2);transform:translateY(-2px)}
+.btn.outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,.45)}
+.btn.outline:hover{border-color:var(--gold);color:var(--gold2)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.page-hero{padding:92px 0 76px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 80% 0,rgba(212,175,55,.12),transparent 50%),linear-gradient(135deg,#101010,#070707)}
+.section{padding:76px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.section-head{max-width:760px;margin-bottom:30px}
+.section-head p{color:var(--muted);margin-top:14px;max-width:700px}
+.grid{display:grid;gap:18px}
+.card{background:linear-gradient(145deg,#151515,#0c0c0c);border:1px solid var(--line);padding:26px}
+.card p{color:var(--muted);margin-top:10px}
+.card ul{padding-left:19px;margin-top:14px;color:#d2cdc2}
+.card li{margin:6px 0}
+.kicker{font-size:.68rem;color:var(--gold2);letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.price{font:400 2.4rem Georgia,serif;color:var(--gold);margin:14px 0 4px}
+.price small{font:400 .82rem Arial,sans-serif;color:var(--muted)}
+.badge{display:inline-block;border:1px solid var(--gold);color:var(--gold2);padding:5px 9px;font-size:.63rem;letter-spacing:.12em;text-transform:uppercase}
+.callout{padding:38px;border:1px solid var(--line);background:radial-gradient(ellipse at 100% 0,rgba(212,175,55,.11),transparent 50%),#101010}
+.footer{padding:38px 0 22px;background:#050505}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+.footer h3{font-size:1.05rem;color:var(--gold);margin-bottom:10px}
+.footer p,.footer a{color:#aaa69b;font-size:.82rem}
+.footer-links{display:flex;gap:10px 16px;flex-wrap:wrap}
+.socials{display:flex;gap:15px;flex-wrap:wrap;margin-top:10px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.09);margin-top:24px;padding-top:15px;color:#777268;font-size:.7rem;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.floating-call{position:fixed;right:18px;bottom:18px;z-index:100;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 19px;border-radius:999px;background:linear-gradient(135deg,#ecd27a,#c9a227);color:#080808;font-size:.74rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 8px 28px #0008}
+@media(max-width:900px){
+  .menu{display:block}
+.nav{display:none;position:absolute;top:100%;left:0;right:0;padding:10px 20px 20px;background:#080808;border-bottom:1px solid var(--line);align-items:stretch;flex-direction:column;gap:0}
+.nav.open{display:flex}
+.nav a{padding:12px 4px;border-bottom:1px solid #ffffff12}
+.nav .nav-book{text-align:center;margin-top:10px}
+.footer-grid{grid-template-columns:1fr 1fr}
+.footer-grid>div:last-child{grid-column:1/-1}
+}
+@media(max-width:560px){
+  .header-inner{min-height:72px}
+.brand-logo{width:52px;height:52px}
+.brand{gap:9px}
+.brand-name{font-size:.93rem}
+.brand-sub{font-size:.48rem;letter-spacing:.05em}
+.container{width:min(100% - 28px,var(--max))}
+.page-hero{padding:66px 0 54px}
+.section{padding:54px 0}
+.lead{font-size:.96rem}
+.card{padding:21px}
+.callout{padding:25px}
+.footer-grid{grid-template-columns:1fr}
+.footer-grid>div:last-child{grid-column:auto}
+}
+</style>
 </head>
-
-
 <body>
-
-
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
-
-    <header class="site-header">
-
-        <div class="container nav-container">
-
-            <a
-                href="index.html"
-                class="logo"
-                aria-label="Enhance My Ride home"
-            >
-
-                <span class="logo-main">
-                    ENHANCE MY RIDE
-                </span>
-
-                <span class="logo-sub">
-                    AUTO SPA & MOBILE DETAILING
-                </span>
-
-            </a>
-
-
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                type="button"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-            >
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-
-            <nav
-                class="main-nav"
-                id="mainNav"
-                aria-label="Main navigation"
-            >
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a
-                    href="gallery.html"
-                    class="active"
-                    aria-current="page"
-                >
-                    Gallery
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a
-                    href="book-now.html"
-                    class="nav-cta"
-                >
-                    Book Now
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="service-area.html">
-                    Service Area
-                </a>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-
-    <main>
-
-
-        <!-- =================================================
-             HERO
-        ================================================== -->
-
-        <section class="page-hero gallery-hero">
-
-            <div class="container page-hero-content">
-
-                <p class="eyebrow">
-                    REAL VEHICLES • REAL RESULTS
-                </p>
-
-                <h1>
-                    See The
-                    <span>
-                        Difference.
-                    </span>
-                </h1>
-
-                <p>
-                    Explore real vehicle transformations and
-                    specialty services completed by Enhance My Ride.
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             PROJECT 01 — MERCEDES
-        ================================================== -->
-
-        <section
-            class="gallery-project"
-            id="mercedes"
-        >
-
-            <div class="container">
-
-                <div class="gallery-project-heading">
-
-                    <p class="eyebrow">
-                        PROJECT 01
-                    </p>
-
-                    <h2>
-                        Mercedes-Benz
-                        <span class="gold-text">
-                            CLS 550
-                        </span>
-                    </h2>
-
-                    <p>
-                        A complete interior and exterior enhancement
-                        focused on restoring a cleaner, refreshed,
-                        more refined appearance.
-                    </p>
-
-                </div>
-
-
-                <div class="before-after-grid">
-
-                    <div
-                        class="gallery-image-card"
-                        data-lightbox
-                    >
-
-                        <img
-                            src="images/mercedes-before-front.webp"
-                            alt="Mercedes-Benz CLS 550 before detailing"
-                            loading="lazy"
-                            decoding="async"
-                        >
-
-                        <span class="gallery-image-label">
-                            BEFORE
-                        </span>
-
-                    </div>
-
-
-                    <div
-                        class="gallery-image-card"
-                        data-lightbox
-                    >
-
-                        <img
-                            src="images/mercedes-after-front.webp"
-                            alt="Mercedes-Benz CLS 550 after detailing"
-                            loading="lazy"
-                            decoding="async"
-                        >
-
-                        <span class="gallery-image-label after">
-                            AFTER
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="gallery-featured">
-
-                    <img
-                        src="images/mercedes-after-interior.webp"
-                        alt="Mercedes-Benz CLS 550 detailed interior"
-                        loading="lazy"
-                        decoding="async"
-                        data-lightbox
-                    >
-
-                    <img
-                        src="images/mercedes-after-wheel.webp"
-                        alt="Mercedes-Benz CLS 550 detailed wheel"
-                        loading="lazy"
-                        decoding="async"
-                        data-lightbox
-                    >
-
-                </div>
-
-
-                <div class="gallery-project-meta">
-
-                    <span>
-                        INTERIOR + EXTERIOR
-                    </span>
-
-                    <span>
-                        ENHANCE GOLD
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             PROJECT 02 — LEXUS
-        ================================================== -->
-
-        <section
-            class="gallery-project section-dark"
-            id="lexus"
-        >
-
-            <div class="container">
-
-                <div class="gallery-project-heading">
-
-                    <p class="eyebrow">
-                        PROJECT 02
-                    </p>
-
-                    <h2>
-                        Lexus
-                        <span class="gold-text">
-                            IS 250
-                        </span>
-                    </h2>
-
-                    <p>
-                        A complete refresh showing the difference
-                        professional interior and exterior detailing
-                        can make.
-                    </p>
-
-                </div>
-
-
-                <div class="before-after-grid">
-
-                    <div
-                        class="gallery-image-card"
-                        data-lightbox
-                    >
-
-                        <img
-                            src="images/lexus-is250-before-front.webp"
-                            alt="Lexus IS 250 before detailing"
-                            loading="lazy"
-                            decoding="async"
-                        >
-
-                        <span class="gallery-image-label">
-                            BEFORE
-                        </span>
-
-                    </div>
-
-
-                    <div
-                        class="gallery-image-card"
-                        data-lightbox
-                    >
-
-                        <img
-                            src="images/lexus-is250-after-front.webp"
-                            alt="Lexus IS 250 after detailing"
-                            loading="lazy"
-                            decoding="async"
-                        >
-
-                        <span class="gallery-image-label after">
-                            AFTER
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="gallery-featured">
-
-                    <img
-                        src="images/lexus-is250-after-dashboard.webp"
-                        alt="Lexus IS 250 detailed dashboard"
-                        loading="lazy"
-                        decoding="async"
-                        data-lightbox
-                    >
-
-                    <img
-                        src="images/lexus-is250-after-driver-interior.webp"
-                        alt="Lexus IS 250 detailed driver interior"
-                        loading="lazy"
-                        decoding="async"
-                        data-lightbox
-                    >
-
-                </div>
-
-
-                <div class="gallery-project-meta">
-
-                    <span>
-                        INTERIOR + EXTERIOR
-                    </span>
-
-                    <span>
-                        ENHANCE GOLD
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             PROJECT 03 — ENGINE BAY DETAIL
-        ================================================== -->
-
-        <section
-            class="gallery-project engine-bay-section"
-            id="engine-bay-detail"
-        >
-
-            <div class="container">
-
-                <div class="gallery-project-heading">
-
-                    <p class="eyebrow">
-                        SPECIALTY SERVICE
-                    </p>
-
-                    <h2>
-                        Engine Bay
-                        <span class="gold-text">
-                            Detail.
-                        </span>
-                    </h2>
-
-                    <p>
-                        Deep cleaning and careful detailing of the
-                        engine compartment, restoring a cleaner,
-                        darker, more refined appearance under the hood.
-                    </p>
-
-                </div>
-
-
-
-                <!-- ENGINE BAY JOB 01 -->
-
-                <div class="engine-bay-project">
-
-                    <p class="engine-bay-label">
-                        ENGINE BAY DETAIL • PROJECT 01
-                    </p>
-
-
-                    <div class="before-after-grid">
-
-
-                        <div
-                            class="gallery-image-card"
-                            data-lightbox
-                        >
-
-                            <img
-                                src="images/engine-bay-before-1.webp"
-                                alt="Dirty engine bay before professional engine bay detailing"
-                                loading="lazy"
-                                decoding="async"
-                            >
-
-                            <span class="gallery-image-label">
-                                BEFORE
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            class="gallery-image-card"
-                            data-lightbox
-                        >
-
-                            <img
-                                src="images/engine-bay-after-1.webp"
-                                alt="Clean engine bay after professional engine bay detailing"
-                                loading="lazy"
-                                decoding="async"
-                            >
-
-                            <span class="gallery-image-label after">
-                                AFTER
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- ENGINE BAY JOB 02 -->
-
-                <div class="engine-bay-project">
-
-                    <p class="engine-bay-label">
-                        ENGINE BAY DETAIL • PROJECT 02
-                    </p>
-
-
-                    <div class="before-after-grid">
-
-
-                        <div
-                            class="gallery-image-card"
-                            data-lightbox
-                        >
-
-                            <img
-                                src="images/engine-bay-before-2.webp"
-                                alt="Honda engine bay before detailing"
-                                loading="lazy"
-                                decoding="async"
-                            >
-
-                            <span class="gallery-image-label">
-                                BEFORE
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            class="gallery-image-card"
-                            data-lightbox
-                        >
-
-                            <img
-                                src="images/engine-bay-after-2.webp"
-                                alt="Honda engine bay after professional detailing"
-                                loading="lazy"
-                                decoding="async"
-                            >
-
-                            <span class="gallery-image-label after">
-                                AFTER
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="gallery-project-meta">
-
-                    <span>
-                        ENGINE BAY DETAILING
-                    </span>
-
-                    <span>
-                        SPECIALTY SERVICE
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             PROJECT 04 — HEADLIGHT RESTORATION
-        ================================================== -->
-
-        <section
-            class="gallery-project headlight-restoration-section"
-            id="headlight-restoration"
-        >
-
-            <div class="container">
-
-                <div class="gallery-project-heading">
-
-                    <p class="eyebrow">
-                        SPECIALTY SERVICE
-                    </p>
-
-                    <h2>
-                        Headlight
-                        <span class="gold-text">
-                            Restoration.
-                        </span>
-                    </h2>
-
-                    <p>
-                        Restoration work designed to improve the
-                        appearance of cloudy, weathered, and oxidized
-                        headlight lenses.
-                    </p>
-
-                    <p class="headlight-restoration-note">
-                        Each restoration is performed according to
-                        the condition of the lens. Results can vary
-                        depending on oxidation, UV damage, scratches,
-                        and the overall condition of the headlight.
-                    </p>
-
-                </div>
-
-
-                <div class="before-after-grid">
-
-
-                    <!-- BEFORE -->
-
-                    <div
-                        class="gallery-image-card"
-                        data-lightbox
-                    >
-
-                        <img
-                            src="images/headlight-restoration-before.webp"
-                            alt="Cloudy oxidized headlight before restoration"
-                            loading="lazy"
-                            decoding="async"
-                        >
-
-                        <span class="gallery-image-label">
-                            BEFORE
-                        </span>
-
-                    </div>
-
-
-                    <!-- AFTER -->
-
-                    <div
-                        class="gallery-image-card"
-                        data-lightbox
-                    >
-
-                        <img
-                            src="images/headlight-restoration-after.webp"
-                            alt="Clear restored headlight after professional restoration"
-                            loading="lazy"
-                            decoding="async"
-                        >
-
-                        <span class="gallery-image-label after">
-                            AFTER
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- FULL VEHICLE RESULT -->
-
-                <div class="headlight-result">
-
-                    <img
-                        src="images/headlight-restoration-before-after.webp"
-                        alt="Headlight restoration before and after full vehicle comparison"
-                        loading="lazy"
-                        decoding="async"
-                        data-lightbox
-                    >
-
-                </div>
-
-
-
-                <div class="gallery-project-meta">
-
-                    <span>
-                        HEADLIGHT RESTORATION
-                    </span>
-
-                    <span>
-                        BEFORE + AFTER
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             FINAL CTA
-        ================================================== -->
-
-        <section class="gallery-final">
-
-            <div class="container">
-
-                <p class="eyebrow">
-                    READY FOR YOUR VEHICLE?
-                </p>
-
-                <h2>
-                    Let's Create
-                    <span class="gold-text">
-                        Your Transformation.
-                    </span>
-                </h2>
-
-                <p>
-                    Choose your service and request your appointment.
-                    Enhance My Ride comes directly to you.
-                </p>
-
-                <a
-                    href="book-now.html"
-                    class="btn btn-primary"
-                >
-                    Book Now
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-    <footer class="site-footer">
-
-        <div class="container footer-grid">
-
-
-            <div class="footer-brand">
-
-                <a
-                    href="index.html"
-                    class="logo"
-                >
-
-                    <span class="logo-main">
-                        ENHANCE MY RIDE
-                    </span>
-
-                    <span class="logo-sub">
-                        AUTO SPA & MOBILE DETAILING
-                    </span>
-
-                </a>
-
-                <p>
-                    Premium mobile detailing throughout
-                    the San Francisco Bay Area.
-                </p>
-
-            </div>
-
-
-
-            <div class="footer-links">
-
-                <h4>
-                    Explore
-                </h4>
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="gallery.html">
-                    Gallery
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a href="book-now.html">
-                    Book Now
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="service-area.html">
-                    Service Area
-                </a>
-
-            </div>
-
-
-
-            <div class="footer-links">
-
-                <h4>
-                    Connect
-                </h4>
-
-                <a href="book-now.html">
-                    Book Now
-                </a>
-
-                <a href="tel:+13233271806">
-                    (323) 327-1806
-                </a>
-
-                <a href="mailto:info@enhancemyride.com">
-                    info@enhancemyride.com
-                </a>
-
-                <a
-                    href="https://www.instagram.com/enhancemyridemobiledetailing/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Instagram
-                </a>
-
-                <a
-                    href="https://www.tiktok.com/@enhancemyride"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    TikTok
-                </a>
-
-                <a
-                    href="https://www.youtube.com/@enhancemyridemobiledetailing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    YouTube
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="container footer-bottom">
-
-            <p>
-                © 2026 Enhance My Ride Auto Spa & Mobile Detailing.
-                All rights reserved.
-            </p>
-
-        </div>
-
-    </footer>
-
-
-
-    <!-- =====================================================
-         MOBILE CALL BUTTON
-    ====================================================== -->
-
-    <a
-        href="tel:+13233271806"
-        class="mobile-call-button"
-        aria-label="Call Enhance My Ride"
-    >
-
-        <span class="call-icon">
-            ☎
-        </span>
-
-        <span>
-            CALL
-        </span>
-
-    </a>
-
-
-
-    <!-- =====================================================
-         LIGHTBOX
-    ====================================================== -->
-
-    <div
-        class="lightbox"
-        id="galleryLightbox"
-        aria-hidden="true"
-        role="dialog"
-        aria-modal="true"
-        aria-label="Gallery image viewer"
-    >
-
-        <button
-            class="lightbox-close"
-            id="lightboxClose"
-            type="button"
-            aria-label="Close image"
-        >
-            ×
-        </button>
-
-
-        <button
-            class="lightbox-arrow lightbox-prev"
-            id="lightboxPrev"
-            type="button"
-            aria-label="Previous image"
-        >
-            ‹
-        </button>
-
-
-        <img
-            class="lightbox-image"
-            id="lightboxImage"
-            src=""
-            alt=""
-        >
-
-
-        <button
-            class="lightbox-arrow lightbox-next"
-            id="lightboxNext"
-            type="button"
-            aria-label="Next image"
-        >
-            ›
-        </button>
-
-
-        <div
-            class="lightbox-counter"
-            id="lightboxCounter"
-        >
-            1 / 1
-        </div>
-
-    </div>
-
-
-
-    <!-- =====================================================
-         SITE JAVASCRIPT
-    ====================================================== -->
-
-    <script src="js/script.js"></script>
-
-
-
-    <!-- =====================================================
-         GALLERY LIGHTBOX JAVASCRIPT
-    ====================================================== -->
-
-    <script>
-
-        document.addEventListener(
-            "DOMContentLoaded",
-            function () {
-
-                const lightbox =
-                    document.getElementById(
-                        "galleryLightbox"
-                    );
-
-                const lightboxImage =
-                    document.getElementById(
-                        "lightboxImage"
-                    );
-
-                const closeButton =
-                    document.getElementById(
-                        "lightboxClose"
-                    );
-
-                const previousButton =
-                    document.getElementById(
-                        "lightboxPrev"
-                    );
-
-                const nextButton =
-                    document.getElementById(
-                        "lightboxNext"
-                    );
-
-                const counter =
-                    document.getElementById(
-                        "lightboxCounter"
-                    );
-
-
-                const clickableImages =
-                    Array.from(
-                        document.querySelectorAll(
-                            "[data-lightbox]"
-                        )
-                    );
-
-
-                const images =
-                    clickableImages
-                        .map(function (element) {
-
-                            if (
-                                element.tagName ===
-                                "IMG"
-                            ) {
-                                return element;
-                            }
-
-                            return element.querySelector(
-                                "img"
-                            );
-
-                        })
-                        .filter(Boolean);
-
-
-                let currentIndex = 0;
-
-
-
-                function updateLightbox() {
-
-                    if (!images.length) {
-                        return;
-                    }
-
-
-                    const image =
-                        images[currentIndex];
-
-
-                    lightboxImage.src =
-                        image.currentSrc ||
-                        image.src;
-
-
-                    lightboxImage.alt =
-                        image.alt || "";
-
-
-                    counter.textContent =
-                        (currentIndex + 1) +
-                        " / " +
-                        images.length;
-
-                }
-
-
-
-                function openLightbox(index) {
-
-                    currentIndex = index;
-
-                    updateLightbox();
-
-
-                    lightbox.classList.add(
-                        "active"
-                    );
-
-
-                    lightbox.setAttribute(
-                        "aria-hidden",
-                        "false"
-                    );
-
-
-                    document.body.style.overflow =
-                        "hidden";
-
-                }
-
-
-
-                function closeLightbox() {
-
-                    lightbox.classList.remove(
-                        "active"
-                    );
-
-
-                    lightbox.setAttribute(
-                        "aria-hidden",
-                        "true"
-                    );
-
-
-                    lightboxImage.src =
-                        "";
-
-
-                    document.body.style.overflow =
-                        "";
-
-                }
-
-
-
-                function showPrevious() {
-
-                    currentIndex =
-                        (
-                            currentIndex -
-                            1 +
-                            images.length
-                        ) %
-                        images.length;
-
-
-                    updateLightbox();
-
-                }
-
-
-
-                function showNext() {
-
-                    currentIndex =
-                        (
-                            currentIndex +
-                            1
-                        ) %
-                        images.length;
-
-
-                    updateLightbox();
-
-                }
-
-
-
-                clickableImages.forEach(
-                    function (
-                        element,
-                        index
-                    ) {
-
-                        element.addEventListener(
-                            "click",
-                            function () {
-
-                                openLightbox(
-                                    index
-                                );
-
-                            }
-                        );
-
-                    }
-                );
-
-
-
-                closeButton.addEventListener(
-                    "click",
-                    closeLightbox
-                );
-
-
-                previousButton.addEventListener(
-                    "click",
-                    showPrevious
-                );
-
-
-                nextButton.addEventListener(
-                    "click",
-                    showNext
-                );
-
-
-
-                lightbox.addEventListener(
-                    "click",
-                    function (event) {
-
-                        if (
-                            event.target ===
-                            lightbox
-                        ) {
-
-                            closeLightbox();
-
-                        }
-
-                    }
-                );
-
-
-
-                document.addEventListener(
-                    "keydown",
-                    function (event) {
-
-                        if (
-                            !lightbox.classList.contains(
-                                "active"
-                            )
-                        ) {
-
-                            return;
-
-                        }
-
-
-                        if (
-                            event.key ===
-                            "Escape"
-                        ) {
-
-                            closeLightbox();
-
-                        }
-
-
-                        if (
-                            event.key ===
-                            "ArrowLeft"
-                        ) {
-
-                            showPrevious();
-
-                        }
-
-
-                        if (
-                            event.key ===
-                            "ArrowRight"
-                        ) {
-
-                            showNext();
-
-                        }
-
-                    }
-                );
-
-
-
-                let touchStartX = 0;
-
-
-                lightbox.addEventListener(
-                    "touchstart",
-                    function (event) {
-
-                        touchStartX =
-                            event.changedTouches[0]
-                                .screenX;
-
-                    },
-                    {
-                        passive: true
-                    }
-                );
-
-
-                lightbox.addEventListener(
-                    "touchend",
-                    function (event) {
-
-                        const touchEndX =
-                            event.changedTouches[0]
-                                .screenX;
-
-
-                        const difference =
-                            touchStartX -
-                            touchEndX;
-
-
-                        if (
-                            Math.abs(
-                                difference
-                            ) < 50
-                        ) {
-
-                            return;
-
-                        }
-
-
-                        if (
-                            difference > 0
-                        ) {
-
-                            showNext();
-
-                        } else {
-
-                            showPrevious();
-
-                        }
-
-                    },
-                    {
-                        passive: true
-                    }
-                );
-
-            }
-        );
-
-    </script>
-
-
+<header class="header">
+<div class="container header-inner">
+<a class="brand" href="index.html" aria-label="Enhance My Ride homepage">
+<img class="brand-logo" src="images/enhance-my-ride-logo.webp?v=4" alt="Enhance My Ride logo" width="1254" height="1254" loading="eager">
+<span>
+<span class="brand-name">Enhance My Ride</span>
+<span class="brand-sub">Auto Spa &amp; Mobile Detailing</span>
+</span>
+</a>
+<button class="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
+<nav class="nav" id="main-nav" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="gallery.html" aria-current="page">Gallery</a>
+<a href="about.html">About</a>
+<a href="service-area.html">Service Area</a>
+<a class="nav-book" href="book-now.html">Book Now ↗</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="page-hero">
+<div class="container">
+<p class="eyebrow">Real vehicles · Real detailing</p>
+<h1>See the <span class="gold">Difference.</span>
+</h1>
+<p class="lead">Explore selected before-and-after work and detailing details. Every vehicle has its own needs; our goal is a cleaner, more cared-for finish with attention to the little things.</p>
+<div class="actions">
+<a class="btn" href="book-now.html">Book Your Transformation</a>
+<a class="btn outline" href="services.html">Explore Packages</a>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<p class="eyebrow">Featured transformation</p>
+<h2>Mercedes-Benz <span class="gold">CLS 550</span>
+</h2>
+<p>A closer look at exterior presentation, interior details, and wheel finish.</p>
+</div>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))">
+<figure class="card" style="padding:10px">
+<img src="images/mercedes-before-front.webp" alt="Mercedes-Benz CLS 550 before detailing" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+<figcaption class="muted" style="padding:10px 6px 2px">Before · Exterior</figcaption>
+</figure>
+<figure class="card" style="padding:10px">
+<img src="images/mercedes-after-front.webp" alt="Mercedes-Benz CLS 550 after exterior detailing" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+<figcaption class="muted" style="padding:10px 6px 2px">After · Exterior</figcaption>
+</figure>
+<figure class="card" style="padding:10px">
+<img src="images/mercedes-after-interior.webp" alt="Detailed Mercedes-Benz interior" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+<figcaption class="muted" style="padding:10px 6px 2px">Interior details</figcaption>
+</figure>
+<figure class="card" style="padding:10px">
+<img src="images/mercedes-after-wheel.webp" alt="Clean Mercedes-Benz wheel after detailing" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+<figcaption class="muted" style="padding:10px 6px 2px">Wheel finish</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<p class="eyebrow">Interior refresh</p>
+<h2>Lexus IS 250</h2>
+<p>Interior and exterior details focused on a cleaner, refreshed presentation.</p>
+</div>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))">
+<figure class="card" style="padding:10px">
+<img src="images/lexus-is250-before-front.webp" alt="Lexus IS 250 before detailing" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+<figcaption class="muted" style="padding:10px 6px 2px">Before · Exterior</figcaption>
+</figure>
+<figure class="card" style="padding:10px">
+<img src="images/lexus-is250-after-front.webp" alt="Lexus IS 250 after detailing" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+<figcaption class="muted" style="padding:10px 6px 2px">After · Exterior</figcaption>
+</figure>
+<figure class="card" style="padding:10px">
+<img src="images/lexus-is250-after-dashboard.webp" alt="Cleaned Lexus dashboard" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+<figcaption class="muted" style="padding:10px 6px 2px">Dashboard detail</figcaption>
+</figure>
+<figure class="card" style="padding:10px">
+<img src="images/lexus-is250-after-driver-interior.webp" alt="Detailed Lexus driver area" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+<figcaption class="muted" style="padding:10px 6px 2px">Driver area</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<p class="eyebrow">Specialty details</p>
+<h2>Details That Make a <span class="gold">Difference.</span>
+</h2>
+</div>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))">
+<figure class="card" style="padding:10px">
+<img src="images/engine-bay-before-1.webp" alt="Engine bay before cleaning" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+<figcaption class="muted" style="padding:10px 6px 2px">Engine bay · Before</figcaption>
+</figure>
+<figure class="card" style="padding:10px">
+<img src="images/engine-bay-after-1.webp" alt="Engine bay after cleaning" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+<figcaption class="muted" style="padding:10px 6px 2px">Engine bay · After</figcaption>
+</figure>
+<figure class="card" style="padding:10px">
+<img src="images/engine-bay-before-2.webp" alt="Second engine bay before cleaning" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+<figcaption class="muted" style="padding:10px 6px 2px">Engine bay · Before</figcaption>
+</figure>
+<figure class="card" style="padding:10px">
+<img src="images/engine-bay-after-2.webp" alt="Second engine bay after cleaning" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+<figcaption class="muted" style="padding:10px 6px 2px">Engine bay · After</figcaption>
+</figure>
+<figure class="card" style="padding:10px">
+<img src="images/headlight-restoration-before.webp" alt="Cloudy headlight before restoration" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+<figcaption class="muted" style="padding:10px 6px 2px">Headlights · Before</figcaption>
+</figure>
+<figure class="card" style="padding:10px">
+<img src="images/headlight-restoration-after.webp" alt="Headlight after restoration" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+<figcaption class="muted" style="padding:10px 6px 2px">Headlights · After</figcaption>
+</figure>
+<figure class="card" style="padding:10px">
+<img src="images/headlight-restoration-before-after.webp" alt="Headlight restoration before and after comparison" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+<figcaption class="muted" style="padding:10px 6px 2px">Before-and-after comparison</figcaption>
+</figure>
+</div>
+<div class="callout" style="margin-top:28px">
+<p class="eyebrow">Follow the latest work</p>
+<h2 style="margin-top:8px">More vehicles. More <span class="gold">transformations.</span>
+</h2>
+<p class="muted" style="margin-top:10px">Follow our social pages for recent details and behind-the-scenes mobile setup content.</p>
+<div class="actions">
+<a class="btn" href="https://www.instagram.com/enhancemyridemobiledetailing/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a class="btn outline" href="https://www.tiktok.com/@enhancemyride" target="_blank" rel="noopener noreferrer">TikTok</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<h3>Enhance My Ride</h3>
+<p>Auto Spa &amp; Mobile Detailing<br>We come to you. You relax. We Enhance.</p>
+</div>
+<div>
+<h3>Explore</h3>
+<div class="footer-links">
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About</a>
+<a href="service-area.html">Service Area</a>
+<a href="book-now.html">Book Now</a>
+</div>
+<p style="margin-top:12px">
+<a href="tel:+13233271806">(323) 327-1806</a>
+<br>
+<a href="mailto:info@enhancemyride.com">info@enhancemyride.com</a>
+</p>
+</div>
+<div>
+<h3>Follow Us</h3>
+<div class="socials">
+<a href="https://www.facebook.com/Enhancemyride" target="_blank" rel="noopener noreferrer">Facebook</a>
+<a href="https://www.instagram.com/enhancemyridemobiledetailing/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a href="https://www.tiktok.com/@enhancemyride" target="_blank" rel="noopener noreferrer">TikTok</a>
+<a href="https://www.youtube.com/@enhancemyridemobiledetailing" target="_blank" rel="noopener noreferrer">YouTube</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© <span class="year">2026</span> Enhance My Ride Auto Spa &amp; Mobile Detailing</span>
+<span>Premium care. Delivered to your door.</span>
+</div>
+</div>
+</footer>
+<a class="floating-call" href="tel:+13233271806" aria-label="Call Enhance My Ride">(323) 327-1806 · Call Now</a>
+<script>
+
+const menuButton=document.querySelector(".menu"),nav=document.querySelector("#main-nav");
+if(menuButton&&nav){menuButton.addEventListener("click",()=>{const open=nav.classList.toggle("open");menuButton.setAttribute("aria-expanded",String(open));menuButton.setAttribute("aria-label",open?"Close navigation":"Open navigation");menuButton.textContent=open?"×":"☰";});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");menuButton.setAttribute("aria-expanded","false");menuButton.textContent="☰";}));}
+document.querySelectorAll(".year").forEach(el=>el.textContent=new Date().getFullYear());
+
+</script>
 </body>
-
 </html>
