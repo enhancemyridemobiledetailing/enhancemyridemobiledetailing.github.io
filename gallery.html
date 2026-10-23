@@ -1,224 +1,1459 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gallery | Enhance My Ride Auto Spa &amp; Mobile Detailing</title>
-  <meta name="description" content="View the Enhance My Ride mobile detailing photo gallery and explore examples of our work.">
-  <meta name="theme-color" content="#080808">
-  <link rel="canonical" href="https://enhancemyride.com/gallery.html">
-  <style>
-    :root{--bg:#080808;--panel:#101010;--gold:#d4af37;--gold2:#ecd27a;--white:#f6f4ee;--muted:#aaa69b;--line:rgba(212,175,55,.3);--max:1240px}
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;scroll-padding-top:82px}
-    body{background:var(--bg);color:var(--white);font:16px/1.65 Arial,Helvetica,sans-serif;overflow-x:hidden}
-    a{color:inherit;text-decoration:none}
-    .container{width:min(100% - 40px,var(--max));margin:auto}
-    .eyebrow{color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase}
-    .section-title{font:400 clamp(2rem,4vw,3.5rem)/1.15 Georgia,"Times New Roman",serif;margin-top:10px}
-    .copy{color:var(--muted);max-width:650px;margin-top:16px;line-height:1.9}
-    .gold{color:var(--gold)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:47px;padding:12px 22px;border:1px solid var(--gold);background:var(--gold);color:#080808;font-size:.73rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;transition:.2s}
-    .btn:hover{background:transparent;color:var(--gold2);transform:translateY(-2px)}
-    .btn.outline{background:rgba(0,0,0,.25);color:#fff;border-color:rgba(255,255,255,.6)}
-    .btn.outline:hover{background:var(--gold);color:#080808;border-color:var(--gold)}
-    /* Header */
-    .header{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-    .header-inner{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:14px;min-width:0;flex-shrink:0}
-    .brand-logo{width:78px;height:78px;display:block;object-fit:contain;object-position:center;flex:0 0 78px;border-radius:50%;background:#080808;visibility:visible;opacity:1;max-width:none;min-width:78px}
-    .brand-name{display:block;font:1.25rem Georgia,serif;letter-spacing:.03em;line-height:1.25}
-    .brand-sub{display:block;color:var(--muted);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase}
-    .nav{display:flex;align-items:center;gap:22px}
-    .nav a{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#d5d1c8}
-    .nav a:hover{color:var(--gold)}
-    .nav .nav-book{border:1px solid var(--gold);padding:9px 14px;color:var(--gold2)}
-    .menu{display:none;background:none;border:1px solid var(--line);color:var(--gold);font-size:1.4rem;width:42px;height:42px}
-    /* Slideshow hero */
-    .hero{position:relative;min-height:min(760px,78vw);height:690px;max-height:calc(100svh - 76px);min-height:560px;isolation:isolate;overflow:hidden;background:#111}
-    .slides,.slide{position:absolute;inset:0}
-    .slide{background-size:cover;background-position:center 53%;opacity:0;transform:scale(1.035);transition:opacity 1.2s ease,transform 7s linear;will-change:opacity}
-    .slide.active{opacity:1;transform:scale(1);z-index:1}
-    .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.62) 38%,rgba(0,0,0,.2) 78%),linear-gradient(0deg,rgba(0,0,0,.72),transparent 42%,rgba(0,0,0,.12))}
-    .hero-content{position:relative;z-index:2;min-height:560px;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;padding-top:36px;padding-bottom:80px;pointer-events:none}
-    .hero-content>*{pointer-events:auto}
-    .hero h1{font:500 clamp(3.2rem,7.8vw,7rem)/.99 Georgia,"Times New Roman",serif;letter-spacing:-.04em;text-transform:uppercase;margin-top:19px;max-width:800px;text-shadow:0 3px 24px #000}
-    .hero h1 span{display:block;color:var(--gold);letter-spacing:.04em}
-    .hero-text{max-width:510px;color:#e1ded6;margin-top:22px;font-size:1rem;line-height:1.8;text-shadow:0 2px 12px #000}
-    .hero-actions{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:14px;flex-wrap:nowrap;margin-top:0;width:100%;pointer-events:auto}
-    .hero-tagline{margin-top:25px;color:#e5dfce;font-size:.72rem;letter-spacing:.19em;text-transform:uppercase}
-    .slide-controls{position:absolute;z-index:3;bottom:26px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:9px}
-    .dot{width:8px;height:8px;border:1px solid #fff;border-radius:50%;background:transparent;cursor:pointer;padding:0}
-    .dot.active{width:24px;border-radius:6px;background:var(--gold);border-color:var(--gold)}
-    .slide-count{font-size:.72rem;color:#eee;letter-spacing:.12em;margin-left:9px}
-    .hero-button-band{position:relative;z-index:4;display:flex;justify-content:center;align-items:center;gap:12px;padding:18px 20px;background:#080808;border-bottom:1px solid var(--line)}
-    .hero-button-band .btn{min-width:190px;min-height:42px;padding:10px 18px;font-size:.7rem}
-    /* Service strip */
-    .service-strip{background:#0c0c0c;border-bottom:1px solid var(--line)}
-    .strip-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-left:1px solid var(--line);border-right:1px solid var(--line)}
-    .strip-item{min-height:110px;display:flex;align-items:center;justify-content:center;gap:12px;padding:20px;border-right:1px solid var(--line)}
-    .strip-item:last-child{border-right:0}
-    .strip-icon{color:var(--gold);font-size:1.45rem}
-    .strip-item strong{display:block;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
-    .strip-item small{display:block;color:var(--muted);font-size:.7rem;margin-top:3px}
-    /* Four-panel section requested by owner */
-    .promise{border-bottom:1px solid var(--line);background:#0b0b0b}
-    .promise-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
-    .promise-item{min-height:180px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:28px 18px}
-    .promise-item:nth-child(odd){border-right:1px solid var(--line)}
-    .promise-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
-    .promise-item h2{color:var(--gold);font:400 clamp(1.45rem,3vw,2.25rem) Georgia,serif}
-    .promise-item p{margin-top:13px;color:#aaa69b;font-size:.78rem;letter-spacing:.13em}
-    /* Intro */
-    .intro{padding:95px 0}
-    .intro-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:75px;align-items:start}
-    .intro-quote{font:400 clamp(1.5rem,2.8vw,2.25rem)/1.55 Georgia,serif;color:#d7d2c7;margin-top:18px}
-    .intro-content p{color:var(--muted);margin-top:17px;line-height:1.95}
-    .text-link{display:inline-block;margin-top:23px;padding-bottom:5px;border-bottom:1px solid var(--gold);color:var(--gold2);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-    /* Gallery */
-    .gallery{padding:78px 0;border-block:1px solid var(--line);background:radial-gradient(ellipse at 100% 0,rgba(212,175,55,.07),transparent 45%),#101010}
-    .gallery-head{display:flex;align-items:end;justify-content:space-between;gap:24px}
-    .gallery-tiles{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;margin-top:30px}
-    .gallery-tile{min-height:220px;position:relative;overflow:hidden;background:#161616;border:1px solid var(--line)}
-    .gallery-tile img{width:100%;height:100%;min-height:220px;object-fit:cover;display:block;transition:transform .5s}
-    .gallery-tile:hover img{transform:scale(1.04)}
-    .gallery-tile::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.65));pointer-events:none}
-    /* Google reviews */
-    .reviews{padding:90px 0;background:#090909}
-    .reviews-head{text-align:center;max-width:720px;margin:0 auto 30px}
-    .reviews-head .copy{margin-inline:auto}
-    .reviews-shell{background:#fff;color:#111;min-height:150px;padding:12px;border:1px solid var(--line)}
-    .reviews-note{margin-top:15px;text-align:center;color:#77746b;font-size:.75rem}
-    /* CTA */
-    .cta{padding:80px 0;border-top:1px solid var(--line);background:radial-gradient(ellipse at 50% 100%,rgba(212,175,55,.12),transparent 58%),#0e0e0e;text-align:center}
-    .cta .copy{margin-inline:auto}
-    .cta-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:27px}
-    /* Minimal footer */
-    .footer{padding:42px 0 22px;border-top:1px solid var(--line);background:#050505}
-    .footer-top{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:30px;align-items:start}
-    .footer-heading{color:var(--gold);font:400 1.05rem Georgia,serif;margin-bottom:12px}
-    .footer-text{color:#969187;font-size:.82rem;line-height:1.9}
-    .footer-links{display:flex;flex-wrap:wrap;gap:10px 18px}
-    .footer-links a{color:#bcb7ac;font-size:.78rem}
-    .footer-links a:hover{color:var(--gold)}
-    .follow{text-align:center}
-    .socials{display:flex;justify-content:center;align-items:center;gap:19px;margin:13px 0 8px}
-    .socials a{display:inline-flex;width:28px;height:28px;align-items:center;justify-content:center;color:var(--gold);transition:color .2s,transform .2s}
-    .socials a:hover{color:#fff;transform:translateY(-2px)}
-    .socials svg{width:23px;height:23px;fill:currentColor}
-    .handle{font-weight:700;letter-spacing:.04em;color:#eee;font-size:.92rem}
-    .footer-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.09);margin-top:30px;padding-top:17px;color:#706c63;font-size:.7rem}
-    @media(min-width:1000px){.promise-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.promise-item{min-height:175px}.promise-item:nth-child(odd){border-right:0}.promise-item:not(:last-child){border-right:1px solid var(--line)}.promise-item:nth-child(-n+2){border-bottom:0}}
-    @media(max-width:900px){.menu{display:block}.nav{display:none;position:absolute;top:100%;left:0;right:0;padding:12px 20px 20px;background:#080808;border-bottom:1px solid var(--line);align-items:stretch;flex-direction:column;gap:0}.nav.open{display:flex}.nav a{padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.07)}.nav .nav-book{text-align:center;margin-top:10px}.hero{height:650px;min-height:560px}.hero-content{min-height:560px}.intro-grid{grid-template-columns:1fr;gap:25px}.strip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.strip-item:nth-child(2){border-right:0}.strip-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.gallery-tiles{grid-template-columns:1fr 1fr}.gallery-tile:first-child{grid-column:span 2}.footer-top{grid-template-columns:1fr 1fr}.follow{grid-column:1/-1;grid-row:1}}
-    @media(max-width:560px){.container{width:min(100% - 30px,var(--max))}.header-inner{min-height:68px;gap:10px}.brand-logo{width:58px;height:58px;flex-basis:58px}.header-inner{min-height:76px}.brand{gap:10px}.brand-name{font-size:1rem}.brand-name{font-size:.86rem}.brand-sub{font-size:.49rem;letter-spacing:.06em}.hero{height:610px;min-height:560px;max-height:calc(100svh - 68px)}.hero-content{min-height:560px;padding-top:25px;padding-bottom:72px}.slide{background-position:center center}.slide::after{background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.3)),linear-gradient(0deg,rgba(0,0,0,.72),transparent 50%)}.hero h1{font-size:clamp(2.75rem,13vw,4.4rem)}.hero-text{font-size:.9rem}.hero-button-band{gap:8px;padding:14px 15px}.hero-button-band .btn{flex:1;min-width:0;max-width:220px;padding:10px 8px;font-size:.62rem;letter-spacing:.04em}.hero-tagline{font-size:.62rem;letter-spacing:.12em}.strip-item{min-height:100px;padding:13px 9px;gap:8px}.strip-icon{font-size:1.2rem}.strip-item strong{font-size:.61rem}.strip-item small{font-size:.63rem}.promise-item{min-height:145px;padding:20px 8px}.promise-item h2{font-size:1.28rem}.promise-item p{font-size:.61rem;letter-spacing:.07em}.intro,.reviews{padding:68px 0}.gallery{padding:62px 0}.gallery-head{align-items:flex-start;flex-direction:column}.gallery-head .btn{width:100%}.gallery-tiles{grid-template-columns:1fr 1fr;gap:8px}.gallery-tile,.gallery-tile img{min-height:150px}.footer-top{grid-template-columns:1fr;gap:25px}.follow{grid-column:auto;grid-row:auto;text-align:left}.socials{justify-content:flex-start}.footer-bottom{flex-direction:column}.cta{padding:65px 0}.cta-actions{flex-direction:column;align-items:stretch;max-width:330px;margin-inline:auto;margin-top:24px}}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* Floating click-to-call button */
-    .floating-call{position:fixed;right:20px;bottom:20px;z-index:100;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 20px;border:1px solid #f0d46e;border-radius:999px;background:linear-gradient(135deg,#ecd27a,#c9a227);color:#080808;box-shadow:0 8px 28px rgba(0,0,0,.45);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;transition:transform .2s,box-shadow .2s}
-    .floating-call:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.55)}
-    .floating-call svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
-    @media(max-width:560px){.floating-call{right:14px;bottom:14px;min-height:52px;padding:0 17px;font-size:.72rem}}
-        @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
-    /* Fresh page content; shared header/footer and global styling are copied from the approved homepage. */
-    .page-hero{padding:76px 0 68px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 80% 0,rgba(212,175,55,.13),transparent 50%),linear-gradient(120deg,#080808,#111)}
-    .page-hero h1{font:400 clamp(2.7rem,7vw,5.4rem)/1.05 Georgia,serif;margin-top:12px;max-width:900px}
-    .page-hero .copy{max-width:720px}
-    .page-section{padding:68px 0;border-bottom:1px solid var(--line)}
-    .page-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
-    .page-card{background:var(--panel);border:1px solid var(--line);padding:27px;min-width:0}
-    .page-card h2,.page-card h3{font:400 1.65rem/1.2 Georgia,serif;color:var(--white)}
-    .page-card p{color:var(--muted);margin-top:12px;line-height:1.8}
-    .page-card ul{margin:17px 0 0 18px;color:#d2cec4}.page-card li{padding:4px 0}
-    .price{font:400 2.3rem Georgia,serif;color:var(--gold);margin-top:15px}.price small{font:400 .75rem Arial,sans-serif;color:var(--muted)}
-    .page-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-    .callout{padding:28px;border:1px solid var(--line);background:linear-gradient(120deg,#111,#090909);margin-top:28px}
-    .gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
-    .gallery-card{overflow:hidden;background:var(--panel);border:1px solid var(--line)}
-    .gallery-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#151515}
-    .gallery-card figcaption{padding:13px 15px;color:var(--muted);font-size:.8rem}
-    .area-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:25px}
-    .area-item{padding:17px;border:1px solid var(--line);background:#101010;color:#e8e2d3}
-    .booking-frame{width:100%;height:760px;border:1px solid var(--line);background:#fff;margin-top:25px}
-    .about-split{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}
-    .check-list{list-style:none;margin:18px 0 0;padding:0}.check-list li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);color:#d4d0c6}.check-list li::before{content:'✦';color:var(--gold);margin-right:10px}
-    @media(max-width:900px){.page-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.area-list{grid-template-columns:repeat(2,minmax(0,1fr))}.about-split{grid-template-columns:1fr;gap:20px}}
-    @media(max-width:560px){.page-hero{padding:54px 0 48px}.page-section{padding:48px 0}.page-grid,.gallery-grid,.area-list{grid-template-columns:1fr}.page-card{padding:22px}.booking-frame{height:720px}}
+    <title>Detailing Gallery | Enhance My Ride Auto Spa &amp; Mobile Detailing</title>
+    <meta name="description" content="Explore vehicle transformations and detailing work from Enhance My Ride Auto Spa & Mobile Detailing in Alameda and the San Francisco Bay Area.">
+    <meta name="theme-color" content="#080808">
+    <link rel="canonical" href="https://enhancemyride.com/gallery.html">
+    <link rel="icon" href="images/enhance-my-ride-logo.webp?v=3">
 
-  </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gallery-black: #080808;
+            --gallery-card: #151515;
+            --gallery-gold: #d4af37;
+            --gallery-gold-light: #f0d778;
+            --gallery-white: #ffffff;
+            --gallery-muted: #bcbcbc;
+            --gallery-border: rgba(212, 175, 55, .27);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 105px;
+        }
+
+        body {
+            background: var(--gallery-black);
+            color: var(--gallery-white);
+            font-family: "Montserrat", sans-serif;
+            line-height: 1.7;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--gallery-gold-light);
+            outline-offset: 4px;
+        }
+
+        .gallery-page {
+            overflow: hidden;
+        }
+
+        .gallery-page .container {
+            width: min(92%, 1200px);
+            margin-inline: auto;
+        }
+
+        .gallery-page .gold-text {
+            color: var(--gallery-gold);
+        }
+
+        .gallery-page .eyebrow {
+            margin-bottom: 12px;
+            color: var(--gallery-gold);
+            font-size: .75rem;
+            font-weight: 800;
+            letter-spacing: .19em;
+            text-transform: uppercase;
+        }
+
+        .gallery-page h1,
+        .gallery-page h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            line-height: 1.2;
+        }
+
+        .gallery-page h1 {
+            margin-bottom: 20px;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+        }
+
+        .gallery-page h2 {
+            margin-bottom: 17px;
+            font-size: clamp(2rem, 4vw, 3rem);
+        }
+
+        .gallery-page p {
+            color: var(--gallery-muted);
+        }
+
+        .gallery-page .section {
+            padding: 78px 0;
+        }
+
+        .section-heading {
+            max-width: 790px;
+            margin: 0 auto 38px;
+            text-align: center;
+        }
+
+        .section-heading > p:last-child {
+            max-width: 700px;
+            margin-inline: auto;
+        }
+
+        .gallery-btn {
+            display: inline-flex;
+            min-height: 48px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 21px;
+            border: 1px solid var(--gallery-gold);
+            border-radius: 7px;
+            font-size: .84rem;
+            font-weight: 800;
+            text-align: center;
+            transition: transform .2s ease, background .2s ease;
+        }
+
+        .gallery-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .gallery-btn-primary {
+            background: var(--gallery-gold);
+            color: #080808;
+        }
+
+        .gallery-btn-primary:hover {
+            background: var(--gallery-gold-light);
+        }
+
+        .gallery-btn-outline {
+            background: transparent;
+            color: var(--gallery-gold);
+        }
+
+        .gallery-btn-outline:hover {
+            background: rgba(212, 175, 55, .1);
+        }
+
+        /* Header */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(8, 8, 8, .97);
+            border-bottom: 1px solid var(--gallery-border);
+            backdrop-filter: blur(12px);
+        }
+
+        .nav-container {
+            display: flex;
+            min-height: 80px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 22px;
+        }
+
+        .gallery-page .logo {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+        }
+
+        .gallery-page .logo img {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            display: grid;
+            gap: 2px;
+        }
+
+        .gallery-page .logo-main {
+            color: var(--gallery-gold);
+            font-size: .9rem;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .gallery-page .logo-sub {
+            color: #d1d1d1;
+            font-size: .62rem;
+            line-height: 1.4;
+        }
+
+        .gallery-page .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .gallery-page .main-nav a {
+            color: #ededed;
+            font-size: .78rem;
+            font-weight: 600;
+        }
+
+        .gallery-page .main-nav a:hover,
+        .gallery-page .main-nav a[aria-current="page"] {
+            color: var(--gallery-gold);
+        }
+
+        .gallery-page .main-nav .nav-cta {
+            padding: 9px 14px;
+            border-radius: 6px;
+            background: var(--gallery-gold);
+            color: #080808;
+            font-weight: 800;
+        }
+
+        .gallery-page .main-nav .nav-cta:hover {
+            background: var(--gallery-gold-light);
+            color: #080808;
+        }
+
+        /* Hero */
+
+        .gallery-hero {
+            padding: 95px 0 75px;
+            text-align: center;
+            background:
+                radial-gradient(ellipse at top, rgba(212,175,55,.15), transparent 65%),
+                linear-gradient(180deg, #111111, #080808);
+            border-bottom: 1px solid var(--gallery-border);
+        }
+
+        .gallery-hero-content {
+            max-width: 900px;
+            margin-inline: auto;
+        }
+
+        .gallery-hero-description {
+            max-width: 730px;
+            margin-inline: auto;
+            font-size: .98rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin-top: 28px;
+        }
+
+        /* Quick navigation */
+
+        .gallery-jump-section {
+            padding: 20px 0;
+            background: #101010;
+            border-bottom: 1px solid rgba(255,255,255,.07);
+        }
+
+        .gallery-jump-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .gallery-jump-links a {
+            padding: 9px 14px;
+            border: 1px solid var(--gallery-border);
+            border-radius: 999px;
+            color: #e8e8e8;
+            font-size: .77rem;
+            font-weight: 700;
+        }
+
+        .gallery-jump-links a:hover {
+            border-color: var(--gallery-gold);
+            color: var(--gallery-gold);
+        }
+
+        /* Main photo gallery */
+
+        .main-gallery-section {
+            background: #0b0b0b;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 17px;
+        }
+
+        .gallery-card {
+            min-width: 0;
+            overflow: hidden;
+            background: var(--gallery-card);
+            border: 1px solid var(--gallery-border);
+            border-radius: 12px;
+            transition: transform .2s ease, border-color .2s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--gallery-gold);
+        }
+
+        .gallery-image-button {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 0;
+            overflow: hidden;
+            background: #202020;
+            border: 0;
+            cursor: zoom-in;
+            aspect-ratio: 4 / 3;
+        }
+
+        .gallery-image-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .4s ease;
+        }
+
+        .gallery-card:hover .gallery-image-button img {
+            transform: scale(1.045);
+        }
+
+        .image-open-label {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            padding: 6px 9px;
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 5px;
+            background: rgba(0,0,0,.72);
+            color: #fff;
+            font-size: .68rem;
+            font-weight: 700;
+        }
+
+        .gallery-card-caption {
+            padding: 15px;
+        }
+
+        .gallery-card-caption span {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--gallery-gold);
+            font-size: .65rem;
+            font-weight: 800;
+            letter-spacing: .13em;
+            text-transform: uppercase;
+        }
+
+        .gallery-card-caption h3 {
+            font-size: .88rem;
+            line-height: 1.4;
+        }
+
+        .gallery-card-caption p {
+            margin-top: 6px;
+            font-size: .75rem;
+        }
+
+        .gallery-disclaimer {
+            margin-top: 25px;
+            text-align: center;
+            font-size: .78rem;
+        }
+
+        /* Specialty service sections */
+
+        .specialty-section {
+            background: #101010;
+            border-top: 1px solid rgba(255,255,255,.04);
+        }
+
+        .specialty-section.alternate {
+            background: #090909;
+        }
+
+        .specialty-layout {
+            display: grid;
+            grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+            gap: 35px;
+            align-items: center;
+        }
+
+        .specialty-copy h2 {
+            margin-bottom: 18px;
+        }
+
+        .specialty-copy > p:not(.eyebrow) {
+            margin-bottom: 14px;
+            font-size: .9rem;
+        }
+
+        .specialty-copy .gallery-btn {
+            margin-top: 12px;
+        }
+
+        .specialty-photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .specialty-photo-slot {
+            display: flex;
+            min-height: 210px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            text-align: center;
+            background:
+                linear-gradient(145deg, rgba(212,175,55,.08), transparent 65%),
+                #151515;
+            border: 1px dashed rgba(212,175,55,.55);
+            border-radius: 12px;
+        }
+
+        .specialty-photo-slot .slot-icon {
+            color: var(--gallery-gold);
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .specialty-photo-slot strong {
+            font-size: .85rem;
+        }
+
+        .specialty-photo-slot span {
+            color: var(--gallery-muted);
+            font-size: .72rem;
+        }
+
+        .specialty-photo-slot.wide {
+            grid-column: 1 / -1;
+            min-height: 150px;
+        }
+
+        .specialty-note {
+            margin-top: 15px;
+            font-size: .76rem !important;
+        }
+
+        /* Before and after placeholder */
+
+        .before-after-placeholder {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .before-after-placeholder .specialty-photo-slot {
+            min-height: 190px;
+        }
+
+        .before-after-label {
+            display: inline-block;
+            padding: 4px 9px;
+            border-radius: 4px;
+            background: var(--gallery-gold);
+            color: #080808;
+            font-size: .65rem;
+            font-weight: 800;
+            letter-spacing: .1em;
+        }
+
+        /* Final CTA */
+
+        .gallery-final-cta {
+            padding: 82px 0;
+            text-align: center;
+            background:
+                radial-gradient(ellipse at center, rgba(212,175,55,.13), transparent 65%),
+                #080808;
+            border-top: 1px solid var(--gallery-border);
+        }
+
+        .gallery-final-content {
+            max-width: 820px;
+            margin-inline: auto;
+        }
+
+        .gallery-final-content > p:not(.eyebrow) {
+            max-width: 680px;
+            margin-inline: auto;
+        }
+
+        .gallery-final-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin-top: 27px;
+        }
+
+        /* Lightbox */
+
+        .gallery-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            background: rgba(0,0,0,.94);
+        }
+
+        .gallery-lightbox.is-open {
+            display: flex;
+        }
+
+        .lightbox-content {
+            width: min(100%, 1100px);
+            max-height: 94vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 13px;
+        }
+
+        .lightbox-content img {
+            width: auto;
+            max-width: 100%;
+            max-height: 78vh;
+            object-fit: contain;
+            border: 1px solid var(--gallery-border);
+            border-radius: 8px;
+        }
+
+        .lightbox-caption {
+            color: #fff;
+            text-align: center;
+            font-size: .9rem;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 17px;
+            right: 19px;
+            width: 45px;
+            height: 45px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--gallery-border);
+            border-radius: 50%;
+            background: #171717;
+            color: var(--gallery-gold);
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+
+        /* Footer */
+
+        .gallery-page .site-footer {
+            padding: 48px 0 22px;
+            background: #050505;
+            border-top: 1px solid var(--gallery-border);
+        }
+
+        .gallery-page .footer-container {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr;
+            gap: 35px;
+        }
+
+        .gallery-page .footer-brand > p {
+            margin-top: 14px;
+            font-size: .82rem;
+        }
+
+        .gallery-page .footer-links,
+        .gallery-page .footer-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 9px;
+        }
+
+        .gallery-page .footer-links h3,
+        .gallery-page .footer-contact h3 {
+            margin-bottom: 8px;
+            color: var(--gallery-gold);
+            font-size: .95rem;
+        }
+
+        .gallery-page .footer-links a,
+        .gallery-page .footer-contact p,
+        .gallery-page .footer-contact a {
+            font-size: .8rem;
+            overflow-wrap: anywhere;
+        }
+
+        .gallery-page .footer-links a:hover,
+        .gallery-page .footer-contact a:hover {
+            color: var(--gallery-gold);
+        }
+
+        .gallery-page .footer-socials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 14px;
+            margin-top: 5px;
+        }
+
+        .gallery-page .footer-bottom {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,.1);
+            text-align: center;
+        }
+
+        .gallery-page .footer-bottom p {
+            font-size: .74rem;
+        }
+
+        .gallery-page .floating-call-button {
+            position: fixed;
+            right: 16px;
+            bottom: 16px;
+            z-index: 900;
+            display: inline-flex;
+            min-height: 46px;
+            align-items: center;
+            justify-content: center;
+            padding: 11px 17px;
+            border-radius: 999px;
+            background: var(--gallery-gold);
+            color: #080808;
+            box-shadow: 0 5px 22px rgba(0,0,0,.45);
+            font-size: .8rem;
+            font-weight: 800;
+        }
+
+        .gallery-page .floating-call-button:hover {
+            background: var(--gallery-gold-light);
+        }
+
+        @media (max-width: 1000px) {
+            .gallery-page .nav-container {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 13px 0;
+                gap: 12px;
+            }
+
+            .gallery-page .main-nav {
+                justify-content: flex-start;
+                gap: 12px 17px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .specialty-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .specialty-photo-grid {
+                max-width: 760px;
+                width: 100%;
+                margin-inline: auto;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .gallery-page .section {
+                padding: 57px 0;
+            }
+
+            .gallery-hero {
+                padding: 65px 0 55px;
+            }
+
+            .gallery-hero-description {
+                font-size: .9rem;
+            }
+
+            .hero-actions,
+            .gallery-final-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 11px;
+            }
+
+            .gallery-card {
+                border-radius: 9px;
+            }
+
+            .gallery-card-caption {
+                padding: 11px;
+            }
+
+            .gallery-card-caption h3 {
+                font-size: .77rem;
+            }
+
+            .gallery-card-caption p {
+                font-size: .7rem;
+            }
+
+            .gallery-jump-links {
+                justify-content: flex-start;
+            }
+
+            .specialty-photo-grid {
+                gap: 10px;
+            }
+
+            .specialty-photo-slot {
+                min-height: 160px;
+                padding: 13px;
+            }
+
+            .specialty-photo-slot.wide {
+                min-height: 125px;
+            }
+
+            .before-after-placeholder .specialty-photo-slot {
+                min-height: 155px;
+            }
+
+            .gallery-page .footer-container {
+                grid-template-columns: 1fr;
+                gap: 27px;
+            }
+
+            .gallery-page .floating-call-button {
+                right: 12px;
+                bottom: 12px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-image-button {
+                aspect-ratio: 5 / 4;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: .01ms !important;
+            }
+        }
+    </style>
 </head>
-<body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Enhance My Ride homepage">
-        <img class="brand-logo" src="images/enhance-my-ride-logo.webp?v=3" alt="Enhance My Ride logo" width="1254" height="1254" loading="eager" fetchpriority="high" decoding="async">
-        <span><span class="brand-name">Enhance My Ride</span><span class="brand-sub">Auto Spa &amp; Mobile Detailing</span></span>
-      </a>
-      <button class="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
-      <nav class="nav" id="main-nav" aria-label="Main navigation">
-        <a href="index.html" aria-current="page">Home</a><a href="services.html">Services</a><a href="gallery.html" aria-current="page">Gallery</a><a href="about.html">About</a><a href="service-area.html">Service Area</a><a class="nav-book" href="book-now.html">Book Now ↗</a>
-      </nav>
-    </div>
-  </header>
-<main>
-<section class="page-hero"><div class="container"><p class="eyebrow">Real work. Careful details.</p><h1>See the <span class="gold">Enhance Difference.</span></h1><p class="copy">Explore photos from the Enhance My Ride detailing showcase. Every vehicle and every result is different; ask us what’s right for yours.</p><div class="page-actions"><a class="btn" href="book-now.html">Book Your Detail</a><a class="btn outline" href="services.html">Explore Services</a></div></div></section><section class="page-section"><div class="container"><p class="eyebrow">The gallery</p><h2 class="section-title">A closer look at <span class="gold">our work.</span></h2><div class="gallery-grid"><figure class="gallery-card"><img src="images/IMG_3412.webp" alt="Enhance My Ride mobile detailing work, photo 1" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_3555.webp" alt="Enhance My Ride mobile detailing work, photo 2" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_3609.webp" alt="Enhance My Ride mobile detailing work, photo 3" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_3948.webp" alt="Enhance My Ride mobile detailing work, photo 4" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_4318-1.webp" alt="Enhance My Ride mobile detailing work, photo 5" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_4559.webp" alt="Enhance My Ride mobile detailing work, photo 6" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_4880.webp" alt="Enhance My Ride mobile detailing work, photo 7" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_3235.webp" alt="Enhance My Ride mobile detailing work, photo 8" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_4952.webp" alt="Enhance My Ride mobile detailing work, photo 9" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_4953.webp" alt="Enhance My Ride mobile detailing work, photo 10" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_4890.webp" alt="Enhance My Ride mobile detailing work, photo 11" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_4876.webp" alt="Enhance My Ride mobile detailing work, photo 12" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_4600.webp" alt="Enhance My Ride mobile detailing work, photo 13" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_4592.webp" alt="Enhance My Ride mobile detailing work, photo 14" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_4587.webp" alt="Enhance My Ride mobile detailing work, photo 15" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_4584.webp" alt="Enhance My Ride mobile detailing work, photo 16" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_4564.webp" alt="Enhance My Ride mobile detailing work, photo 17" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_3956.webp" alt="Enhance My Ride mobile detailing work, photo 18" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_3926.webp" alt="Enhance My Ride mobile detailing work, photo 19" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure><figure class="gallery-card"><img src="images/IMG_3601.webp" alt="Enhance My Ride mobile detailing work, photo 20" loading="lazy" decoding="async"><figcaption>Enhance My Ride · Detailing showcase</figcaption></figure></div></div></section>
-</main>
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div>
-          <h2 class="footer-heading">Enhance My Ride</h2>
-          <p class="footer-text">Auto Spa &amp; Mobile Detailing<br>We come to you. You relax. We Enhance.</p>
-        </div>
-        <div>
-          <h2 class="footer-heading">Explore</h2>
-          <div class="footer-links"><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="service-area.html">Service Area</a><a href="book-now.html">Book Now</a></div>
-          <p class="footer-text" style="margin-top:14px"><a href="tel:+13233271806">(323) 327-1806</a><br><a href="mailto:info@enhancemyride.com">info@enhancemyride.com</a></p>
-        </div>
-        <div class="follow">
-          <h2 class="footer-heading">Follow Us</h2>
-          <div class="socials">
-            <a href="https://www.facebook.com/Enhancemyride" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v1.9H7v3.1h2.8v8z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/enhancemyride/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4zm4.5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.2-3.4a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
-            </a>
-            <a href="https://www.tiktok.com/@enhancemyride" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 6.3a6.6 6.6 0 0 1-4.1-4.1V2h-3.8v13.7a2.9 2.9 0 1 1-2-2.8V9a6.8 6.8 0 1 0 5.8 6.7V9.1a10.3 10.3 0 0 0 5.2 1.4V6.7c-.4 0-.7-.1-1.1-.4z"/></svg>
-            </a>
-            <a href="https://www.youtube.com/@enhancemyride" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom"><span>© <span id="year">2026</span> Enhance My Ride Auto Spa &amp; Mobile Detailing</span><span>Premium care. Delivered to your door.</span></div>
-    </div>
-  </footer>
 
-  <script>
-    // Same sticky header navigation behavior as the approved homepage.
-    const menuButton = document.querySelector(".menu");
-    const nav = document.querySelector("#main-nav");
-    if (menuButton && nav) {
-      menuButton.addEventListener("click", () => {
-        const open = nav.classList.toggle("open");
-        menuButton.setAttribute("aria-expanded", String(open));
-        menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
-        menuButton.textContent = open ? "×" : "☰";
-      });
-      nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
-        nav.classList.remove("open");
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.textContent = "☰";
-      }));
-    }
-    const year = document.querySelector("#year");
-    if (year) year.textContent = new Date().getFullYear();
-  </script>
-  <a class="floating-call" href="tel:+13233271806" aria-label="Call Enhance My Ride at (323) 327-1806">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.56 3.57.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.19 2.45.56 3.57a1 1 0 0 1-.25 1.02z"/></svg>
-    <span>Call Now</span>
-  </a>
+<body class="gallery-page">
 
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" aria-label="Enhance My Ride home">
+                <img
+                    src="images/enhance-my-ride-logo.webp?v=3"
+                    alt="Enhance My Ride Auto Spa logo"
+                    width="56"
+                    height="56"
+                >
+                <span class="logo-text">
+                    <span class="logo-main">ENHANCE MY RIDE</span>
+                    <span class="logo-sub">AUTO SPA &amp; MOBILE DETAILING</span>
+                </span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mainNav"
+                type="button"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html" class="active" aria-current="page">Gallery</a>
+                <a href="service-area.html">Service Area</a>
+                <a href="about.html">About</a>
+                <a href="book-now.html" class="nav-cta">Book Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="gallery-hero">
+            <div class="container gallery-hero-content">
+                <p class="eyebrow">The Enhance My Ride Difference</p>
+
+                <h1>
+                    Every Detail Makes
+                    <span class="gold-text">A Difference.</span>
+                </h1>
+
+                <p class="gallery-hero-description">
+                    Explore our detailing gallery, from interior refreshes
+                    to exterior finishes and specialty services. Every vehicle
+                    has different needs, and every detail deserves attention.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#vehicle-gallery" class="gallery-btn gallery-btn-primary">
+                        Explore the Gallery
+                    </a>
+
+                    <a href="book-now.html" class="gallery-btn gallery-btn-outline">
+                        Request an Appointment
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY CATEGORY NAVIGATION -->
+        <section class="gallery-jump-section" aria-label="Gallery categories">
+            <div class="container gallery-jump-links">
+                <a href="#vehicle-gallery">Vehicle Gallery</a>
+                <a href="#headlight-restoration">Headlight Restoration</a>
+                <a href="#engine-bay-detail">Engine Bay Detail</a>
+                <a href="#stain-mold-treatment">Stain, Mold &amp; Mildew</a>
+            </div>
+        </section>
+
+        <!-- MAIN GALLERY: ALL 20 EXISTING IMAGE FILENAMES PRESERVED -->
+        <section class="section main-gallery-section" id="vehicle-gallery">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Our Work</p>
+
+                    <h2>
+                        The Vehicle
+                        <span class="gold-text">Gallery.</span>
+                    </h2>
+
+                    <p>
+                        Browse our existing collection of vehicle photos.
+                        Select any image to view it larger. More specialty
+                        service photos will be added as those projects are completed.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_3235.webp" data-caption="Vehicle Detailing — Gallery Photo 1" aria-label="Enlarge gallery photo 1">
+                            <img src="images/IMG_3235.webp" alt="Vehicle detailing gallery photo 1" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Vehicle Detail</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_3412.webp" data-caption="Vehicle Detailing — Gallery Photo 2" aria-label="Enlarge gallery photo 2">
+                            <img src="images/IMG_3412.webp" alt="Vehicle detailing gallery photo 2" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Exterior Finish</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_3555.webp" data-caption="Vehicle Detailing — Gallery Photo 3" aria-label="Enlarge gallery photo 3">
+                            <img src="images/IMG_3555.webp" alt="Vehicle detailing gallery photo 3" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Vehicle Transformation</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_3601.webp" data-caption="Vehicle Detailing — Gallery Photo 4" aria-label="Enlarge gallery photo 4">
+                            <img src="images/IMG_3601.webp" alt="Vehicle detailing gallery photo 4" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Detailing Work</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_3609.webp" data-caption="Vehicle Detailing — Gallery Photo 5" aria-label="Enlarge gallery photo 5">
+                            <img src="images/IMG_3609.webp" alt="Vehicle detailing gallery photo 5" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Detailing Work</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_3926.webp" data-caption="Vehicle Detailing — Gallery Photo 6" aria-label="Enlarge gallery photo 6">
+                            <img src="images/IMG_3926.webp" alt="Vehicle detailing gallery photo 6" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Exterior Care</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_3948.webp" data-caption="Vehicle Detailing — Gallery Photo 7" aria-label="Enlarge gallery photo 7">
+                            <img src="images/IMG_3948.webp" alt="Vehicle detailing gallery photo 7" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Vehicle Finish</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_3956.webp" data-caption="Vehicle Detailing — Gallery Photo 8" aria-label="Enlarge gallery photo 8">
+                            <img src="images/IMG_3956.webp" alt="Vehicle detailing gallery photo 8" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Detailing Results</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_4318-1.webp" data-caption="Vehicle Detailing — Gallery Photo 9" aria-label="Enlarge gallery photo 9">
+                            <img src="images/IMG_4318-1.webp" alt="Vehicle detailing gallery photo 9" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Vehicle Detail</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_4559.webp" data-caption="Vehicle Detailing — Gallery Photo 10" aria-label="Enlarge gallery photo 10">
+                            <img src="images/IMG_4559.webp" alt="Vehicle detailing gallery photo 10" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Exterior Detailing</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_4564.webp" data-caption="Vehicle Detailing — Gallery Photo 11" aria-label="Enlarge gallery photo 11">
+                            <img src="images/IMG_4564.webp" alt="Vehicle detailing gallery photo 11" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Exterior Finish</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_4584.webp" data-caption="Vehicle Detailing — Gallery Photo 12" aria-label="Enlarge gallery photo 12">
+                            <img src="images/IMG_4584.webp" alt="Vehicle detailing gallery photo 12" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Detailing Results</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_4587.webp" data-caption="Vehicle Detailing — Gallery Photo 13" aria-label="Enlarge gallery photo 13">
+                            <img src="images/IMG_4587.webp" alt="Vehicle detailing gallery photo 13" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Vehicle Care</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_4592.webp" data-caption="Vehicle Detailing — Gallery Photo 14" aria-label="Enlarge gallery photo 14">
+                            <img src="images/IMG_4592.webp" alt="Vehicle detailing gallery photo 14" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Detailing Work</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_4600.webp" data-caption="Vehicle Detailing — Gallery Photo 15" aria-label="Enlarge gallery photo 15">
+                            <img src="images/IMG_4600.webp" alt="Vehicle detailing gallery photo 15" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Vehicle Finish</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_4876.webp" data-caption="Vehicle Detailing — Gallery Photo 16" aria-label="Enlarge gallery photo 16">
+                            <img src="images/IMG_4876.webp" alt="Vehicle detailing gallery photo 16" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Exterior Care</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_4880.webp" data-caption="Vehicle Detailing — Gallery Photo 17" aria-label="Enlarge gallery photo 17">
+                            <img src="images/IMG_4880.webp" alt="Vehicle detailing gallery photo 17" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Detailing Results</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_4890.webp" data-caption="Vehicle Detailing — Gallery Photo 18" aria-label="Enlarge gallery photo 18">
+                            <img src="images/IMG_4890.webp" alt="Vehicle detailing gallery photo 18" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Vehicle Detail</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_4952.webp" data-caption="Vehicle Detailing — Gallery Photo 19" aria-label="Enlarge gallery photo 19">
+                            <img src="images/IMG_4952.webp" alt="Vehicle detailing gallery photo 19" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Exterior Finish</h3>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <button class="gallery-image-button" type="button" data-lightbox="images/IMG_4953.webp" data-caption="Vehicle Detailing — Gallery Photo 20" aria-label="Enlarge gallery photo 20">
+                            <img src="images/IMG_4953.webp" alt="Vehicle detailing gallery photo 20" loading="lazy" decoding="async">
+                            <span class="image-open-label">View Photo ↗</span>
+                        </button>
+                        <div class="gallery-card-caption">
+                            <span>Detailing Gallery</span>
+                            <h3>Detailing Results</h3>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="gallery-disclaimer">
+                    Photos showcase the existing gallery collection. Results
+                    vary by vehicle condition, materials, and service performed.
+                </p>
+            </div>
+        </section>
+
+        <!-- HEADLIGHT RESTORATION -->
+        <section class="section specialty-section" id="headlight-restoration">
+            <div class="container specialty-layout">
+                <div class="specialty-copy">
+                    <p class="eyebrow">Specialty Service</p>
+
+                    <h2>
+                        Headlight
+                        <span class="gold-text">Restoration.</span>
+                    </h2>
+
+                    <p>
+                        Cloudy, oxidized headlights can detract from a vehicle's
+                        appearance. Headlight restoration focuses on improving
+                        clarity and presentation where the lens condition allows.
+                    </p>
+
+                    <p>
+                        We'll assess the headlight material and condition before
+                        recommending an appropriate treatment. The achievable
+                        result depends on the lens and the extent of deterioration.
+                    </p>
+
+                    <a href="book-now.html" class="gallery-btn gallery-btn-primary">
+                        Request Headlight Restoration
+                    </a>
+
+                    <p class="specialty-note">
+                        Photo placeholders are ready for your future before-and-after
+                        headlight restoration images.
+                    </p>
+                </div>
+
+                <div class="before-after-placeholder">
+                    <div class="specialty-photo-slot">
+                        <span class="before-after-label">BEFORE</span>
+                        <span class="slot-icon" aria-hidden="true">＋</span>
+                        <strong>Before Photo</strong>
+                        <span>Add your original headlight photo later</span>
+                    </div>
+
+                    <div class="specialty-photo-slot">
+                        <span class="before-after-label">AFTER</span>
+                        <span class="slot-icon" aria-hidden="true">＋</span>
+                        <strong>After Photo</strong>
+                        <span>Add your restored headlight photo later</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENGINE BAY DETAIL -->
+        <section class="section specialty-section alternate" id="engine-bay-detail">
+            <div class="container specialty-layout">
+                <div class="specialty-copy">
+                    <p class="eyebrow">Specialty Service</p>
+
+                    <h2>
+                        Engine Bay
+                        <span class="gold-text">Detailing.</span>
+                    </h2>
+
+                    <p>
+                        A carefully performed engine bay detail can help refresh
+                        the appearance of accessible engine-compartment surfaces
+                        and remove accumulated grime.
+                    </p>
+
+                    <p>
+                        Cleaning methods are selected with care around sensitive
+                        components, electrical connections, and the condition of
+                        the vehicle. Not every engine bay is suitable for the
+                        same cleaning approach.
+                    </p>
+
+                    <a href="book-now.html" class="gallery-btn gallery-btn-primary">
+                        Request an Engine Bay Detail
+                    </a>
+
+                    <p class="specialty-note">
+                        Add your engine bay before-and-after photos here once
+                        the service images are ready.
+                    </p>
+                </div>
+
+                <div class="specialty-photo-grid">
+                    <div class="specialty-photo-slot">
+                        <span class="slot-icon" aria-hidden="true">＋</span>
+                        <strong>Engine Bay Before</strong>
+                        <span>Future image placeholder</span>
+                    </div>
+
+                    <div class="specialty-photo-slot">
+                        <span class="slot-icon" aria-hidden="true">＋</span>
+                        <strong>Engine Bay After</strong>
+                        <span>Future image placeholder</span>
+                    </div>
+
+                    <div class="specialty-photo-slot wide">
+                        <span class="slot-icon" aria-hidden="true">＋</span>
+                        <strong>Engine Bay Detail Showcase</strong>
+                        <span>Add a finished engine bay photo here</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STAIN, MOLD & MILDEW TREATMENT -->
+        <section class="section specialty-section" id="stain-mold-treatment">
+            <div class="container specialty-layout">
+                <div class="specialty-copy">
+                    <p class="eyebrow">Interior Specialty Care</p>
+
+                    <h2>
+                        Stain, Mold &amp; Mildew
+                        <span class="gold-text">Treatment.</span>
+                    </h2>
+
+                    <p>
+                        Interior stains and moisture-related concerns require
+                        careful assessment. We'll review the affected material,
+                        the size of the area, and the likely source before
+                        determining whether detailing treatment is appropriate.
+                    </p>
+
+                    <p>
+                        Some stains may be permanent, and suspected mold or
+                        extensive mildew may require specialist assessment or
+                        remediation beyond routine automotive detailing.
+                        We do not promise complete mold removal or guarantee
+                        that an underlying moisture problem will be resolved
+                        through detailing alone.
+                    </p>
+
+                    <a href="book-now.html" class="gallery-btn gallery-btn-primary">
+                        Request an Interior Assessment
+                    </a>
+
+                    <p class="specialty-note">
+                        Upload your future stain and moisture-related service
+                        photos here after the website redesign is complete.
+                    </p>
+                </div>
+
+                <div class="specialty-photo-grid">
+                    <div class="specialty-photo-slot">
+                        <span class="slot-icon" aria-hidden="true">＋</span>
+                        <strong>Interior Before</strong>
+                        <span>Future stain photo placeholder</span>
+                    </div>
+
+                    <div class="specialty-photo-slot">
+                        <span class="slot-icon" aria-hidden="true">＋</span>
+                        <strong>Interior After</strong>
+                        <span>Future treatment photo placeholder</span>
+                    </div>
+
+                    <div class="specialty-photo-slot wide">
+                        <span class="slot-icon" aria-hidden="true">＋</span>
+                        <strong>Specialty Interior Treatment</strong>
+                        <span>Add your own service photos here</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="gallery-final-cta">
+            <div class="container gallery-final-content">
+                <p class="eyebrow">Your Vehicle Deserves the Enhance Treatment</p>
+
+                <h2>
+                    Let's Make Your Ride
+                    <span class="gold-text">Stand Out.</span>
+                </h2>
+
+                <p>
+                    Tell us about your vehicle and the service you need.
+                    We'll review your request, discuss the appropriate
+                    detailing options, and provide a personalized quote.
+                </p>
+
+                <div class="gallery-final-actions">
+                    <a href="book-now.html" class="gallery-btn gallery-btn-primary">
+                        Request an Appointment
+                    </a>
+
+                    <a href="services.html" class="gallery-btn gallery-btn-outline">
+                        Explore Our Services
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo" aria-label="Enhance My Ride home">
+                    <img
+                        src="images/enhance-my-ride-logo.webp?v=3"
+                        alt="Enhance My Ride logo"
+                        width="56"
+                        height="56"
+                        loading="lazy"
+                    >
+                    <span class="logo-text">
+                        <span class="logo-main">ENHANCE MY RIDE</span>
+                        <span class="logo-sub">AUTO SPA &amp; MOBILE DETAILING</span>
+                    </span>
+                </a>
+
+                <p>We come to you. You relax. We Enhance.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html" aria-current="page">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="service-area.html">Service Area</a>
+                <a href="book-now.html">Book Now</a>
+                <a href="booking-policies.html">Booking Policies</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><a href="tel:+13233271806">(323) 327-1806</a></p>
+                <p><a href="mailto:info@enhancemyride.com">info@enhancemyride.com</a></p>
+
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/enhancemyridemobiledetailing/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.tiktok.com/@enhancemyride" target="_blank" rel="noopener noreferrer">TikTok</a>
+                    <a href="https://www.facebook.com/enhancemyridemobiledetailing/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://www.youtube.com/@enhancemyridemobiledetailing" target="_blank" rel="noopener noreferrer">YouTube</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>
+                    &copy; <span id="current-year">2026</span>
+                    Enhance My Ride Auto Spa &amp; Mobile Detailing.
+                    All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a class="floating-call-button" href="tel:+13233271806" aria-label="Call Enhance My Ride">
+        Call Us
+    </a>
+
+    <!-- LIGHTBOX -->
+    <div
+        class="gallery-lightbox"
+        id="galleryLightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Expanded gallery photo"
+        aria-hidden="true"
+    >
+        <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close expanded photo">
+            &times;
+        </button>
+
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <script src="js/script.js" defer></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const yearElement = document.getElementById("current-year");
+
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+
+            const lightbox = document.getElementById("galleryLightbox");
+            const lightboxImage = document.getElementById("lightboxImage");
+            const lightboxCaption = document.getElementById("lightboxCaption");
+            const closeButton = document.getElementById("lightboxClose");
+            const imageButtons = document.querySelectorAll("[data-lightbox]");
+            let previouslyFocusedElement = null;
+
+            function openLightbox(button) {
+                previouslyFocusedElement = document.activeElement;
+
+                lightboxImage.src = button.dataset.lightbox;
+                lightboxImage.alt =
+                    button.querySelector("img")?.alt || "Expanded vehicle detailing photo";
+
+                lightboxCaption.textContent = button.dataset.caption || "";
+                lightbox.classList.add("is-open");
+                lightbox.setAttribute("aria-hidden", "false");
+                document.body.style.overflow = "hidden";
+                closeButton.focus();
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove("is-open");
+                lightbox.setAttribute("aria-hidden", "true");
+                lightboxImage.src = "";
+                document.body.style.overflow = "";
+
+                if (previouslyFocusedElement) {
+                    previouslyFocusedElement.focus();
+                }
+            }
+
+            imageButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    openLightbox(button);
+                });
+            });
+
+            closeButton.addEventListener("click", closeLightbox);
+
+            lightbox.addEventListener("click", function (event) {
+                if (event.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            document.addEventListener("keydown", function (event) {
+                if (
+                    event.key === "Escape" &&
+                    lightbox.classList.contains("is-open")
+                ) {
+                    closeLightbox();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
