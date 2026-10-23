@@ -1,0 +1,1276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Policies | Enhance My Ride Auto Spa</title>
+
+    <meta
+        name="description"
+        content="Review the appointment, deposit, payment, cancellation, rescheduling, and service policies for Enhance My Ride Auto Spa & Mobile Detailing."
+    >
+
+    <meta name="theme-color" content="#080808">
+
+    <link rel="canonical" href="https://enhancemyride.com/booking-policies.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --black: #080808;
+            --panel: #141414;
+            --panel-light: #1b1b1b;
+            --gold: #d4af37;
+            --gold-light: #f0d77a;
+            --white: #f8f7f2;
+            --muted: #b8b8b8;
+            --line: rgba(212, 175, 55, 0.25);
+            --content-width: 1050px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            margin: 0;
+            background: var(--black);
+            color: var(--white);
+            font-family: "DM Sans", sans-serif;
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        a:focus-visible,
+        button:focus-visible,
+        summary:focus-visible {
+            outline: 2px solid var(--gold-light);
+            outline-offset: 4px;
+        }
+
+        .container {
+            width: min(var(--content-width), calc(100% - 40px));
+            margin-inline: auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-top: 0;
+            line-height: 1.25;
+        }
+
+        h1,
+        h2 {
+            font-family: "Playfair Display", Georgia, serif;
+        }
+
+        h1 {
+            margin-bottom: 18px;
+            font-size: clamp(2.7rem, 7vw, 4.6rem);
+            font-weight: 600;
+            letter-spacing: -0.035em;
+        }
+
+        h2 {
+            font-size: clamp(1.55rem, 3vw, 2rem);
+        }
+
+        h3 {
+            font-size: 1.05rem;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+        .gold {
+            color: var(--gold);
+        }
+
+        .eyebrow {
+            margin-bottom: 12px;
+            color: var(--gold);
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .site-header {
+            position: sticky;
+            z-index: 1000;
+            top: 0;
+            border-bottom: 1px solid var(--line);
+            background: rgba(8, 8, 8, 0.96);
+            backdrop-filter: blur(14px);
+        }
+
+        .nav-wrap {
+            display: flex;
+            min-height: 82px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: inline-flex;
+            min-width: 0;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand img {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+        }
+
+        .brand-copy {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.3;
+        }
+
+        .brand-name {
+            color: var(--white);
+            font-size: 0.86rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .brand-tagline {
+            margin-top: 4px;
+            color: var(--gold);
+            font-size: 0.67rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #e6e6e6;
+            font-size: 0.84rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover,
+        .nav-links a[aria-current="page"] {
+            color: var(--gold);
+        }
+
+        .nav-links .nav-cta {
+            padding: 10px 16px;
+            border: 1px solid var(--gold);
+            border-radius: 999px;
+            color: var(--gold);
+        }
+
+        .nav-links .nav-cta:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        .menu-button {
+            display: none;
+            min-width: 44px;
+            min-height: 44px;
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            background: transparent;
+            color: var(--gold);
+            font: inherit;
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+
+        .hero {
+            padding: 92px 0 78px;
+            border-bottom: 1px solid var(--line);
+            background:
+                radial-gradient(
+                    ellipse at 50% 0%,
+                    rgba(212, 175, 55, 0.13),
+                    transparent 65%
+                ),
+                #0b0b0b;
+            text-align: center;
+        }
+
+        .hero .intro {
+            max-width: 730px;
+            margin: 0 auto;
+            color: var(--muted);
+            font-size: 1.02rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 13px;
+            margin-top: 28px;
+        }
+
+        .button {
+            display: inline-flex;
+            min-height: 47px;
+            align-items: center;
+            justify-content: center;
+            padding: 11px 21px;
+            border: 1px solid var(--gold);
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            transition:
+                background 0.2s ease,
+                color 0.2s ease;
+        }
+
+        .button-primary {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        .button-primary:hover {
+            background: var(--gold-light);
+        }
+
+        .button-secondary {
+            background: transparent;
+            color: var(--gold);
+        }
+
+        .button-secondary:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        .policy-content {
+            padding: 65px 0 90px;
+        }
+
+        .policy-layout {
+            display: grid;
+            grid-template-columns: 250px minmax(0, 1fr);
+            align-items: start;
+            gap: 35px;
+        }
+
+        .policy-nav {
+            position: sticky;
+            top: 110px;
+            padding: 23px;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: var(--panel);
+        }
+
+        .policy-nav h2 {
+            margin-bottom: 15px;
+            font-family: "DM Sans", sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .policy-nav a {
+            display: block;
+            padding: 9px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            color: #d6d6d6;
+            font-size: 0.84rem;
+            text-decoration: none;
+        }
+
+        .policy-nav a:last-child {
+            border-bottom: 0;
+        }
+
+        .policy-nav a:hover {
+            color: var(--gold);
+        }
+
+        .policy-main {
+            min-width: 0;
+        }
+
+        .policy-card {
+            margin-bottom: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.11);
+            border-radius: 15px;
+            background: var(--panel);
+            scroll-margin-top: 110px;
+        }
+
+        .policy-card h2 {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            margin-bottom: 17px;
+        }
+
+        .section-number {
+            display: inline-flex;
+            width: 35px;
+            height: 35px;
+            flex: 0 0 35px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            color: var(--gold);
+            font-family: "DM Sans", sans-serif;
+            font-size: 0.82rem;
+        }
+
+        .policy-card p,
+        .policy-card li {
+            color: #d0d0d0;
+            font-size: 0.94rem;
+        }
+
+        .policy-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-card ul,
+        .policy-card ol {
+            display: grid;
+            gap: 9px;
+            padding-left: 22px;
+        }
+
+        .policy-card li::marker {
+            color: var(--gold);
+        }
+
+        .important-note {
+            margin-top: 20px;
+            padding: 17px 19px;
+            border-left: 3px solid var(--gold);
+            background: #0c0c0c;
+        }
+
+        .important-note p {
+            margin: 0;
+            font-size: 0.88rem;
+        }
+
+        .deposit-table-wrap {
+            overflow-x: auto;
+            margin: 22px 0;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+        }
+
+        .deposit-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .deposit-table th,
+        .deposit-table td {
+            padding: 15px 17px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+            vertical-align: top;
+        }
+
+        .deposit-table th {
+            background: #1c1c1c;
+            color: var(--gold);
+            font-size: 0.82rem;
+        }
+
+        .deposit-table td {
+            color: #e2e2e2;
+            font-size: 0.9rem;
+        }
+
+        .deposit-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .deposit-amount {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .example-box {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .example {
+            padding: 16px;
+            border: 1px solid rgba(212, 175, 55, 0.18);
+            border-radius: 10px;
+            background: #101010;
+        }
+
+        .example strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--gold);
+        }
+
+        .example span {
+            color: #d5d5d5;
+            font-size: 0.87rem;
+        }
+
+        .policy-card a {
+            color: var(--gold);
+            text-underline-offset: 4px;
+        }
+
+        .final-callout {
+            margin-top: 30px;
+            padding: 28px;
+            border: 1px solid var(--gold);
+            border-radius: 15px;
+            background:
+                linear-gradient(
+                    120deg,
+                    rgba(212, 175, 55, 0.08),
+                    transparent 75%
+                ),
+                var(--panel);
+            text-align: center;
+        }
+
+        .final-callout h2 {
+            margin-bottom: 10px;
+        }
+
+        .final-callout p {
+            max-width: 660px;
+            margin: 0 auto;
+            color: var(--muted);
+        }
+
+        .site-footer {
+            padding: 43px 0 23px;
+            border-top: 1px solid var(--line);
+            background: #060606;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.8fr 0.8fr;
+            gap: 35px;
+            padding-bottom: 30px;
+        }
+
+        .footer-description {
+            max-width: 370px;
+            color: var(--muted);
+            font-size: 0.87rem;
+        }
+
+        .footer-heading {
+            margin-bottom: 13px;
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .footer-links {
+            display: grid;
+            gap: 8px;
+        }
+
+        .footer-links a {
+            width: fit-content;
+            color: #c9c9c9;
+            font-size: 0.86rem;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 12px;
+            padding-top: 19px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #929292;
+            font-size: 0.77rem;
+        }
+
+        @media (max-width: 950px) {
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 0.78rem;
+            }
+
+            .policy-layout {
+                grid-template-columns: 210px minmax(0, 1fr);
+                gap: 22px;
+            }
+
+            .policy-card {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .container {
+                width: min(100% - 30px, var(--content-width));
+            }
+
+            .nav-wrap {
+                min-height: 72px;
+            }
+
+            .brand img {
+                width: 48px;
+                height: 48px;
+            }
+
+            .brand-name {
+                max-width: 210px;
+                font-size: 0.76rem;
+            }
+
+            .brand-tagline {
+                font-size: 0.61rem;
+            }
+
+            .menu-button {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: calc(100% + 1px);
+                right: 0;
+                left: 0;
+                display: none;
+                align-items: stretch;
+                padding: 14px 20px 21px;
+                border-bottom: 1px solid var(--line);
+                background: #090909;
+            }
+
+            .nav-links.is-open {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .nav-links a {
+                padding: 12px 8px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+                font-size: 0.92rem;
+            }
+
+            .nav-links .nav-cta {
+                margin-top: 12px;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 70px 0 60px;
+            }
+
+            .hero .intro {
+                font-size: 0.95rem;
+            }
+
+            .policy-content {
+                padding: 40px 0 65px;
+            }
+
+            .policy-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .policy-nav {
+                position: static;
+            }
+
+            .policy-nav h2 {
+                margin-bottom: 10px;
+            }
+
+            .policy-nav a {
+                padding: 10px 0;
+            }
+
+            .policy-card {
+                padding: 22px 19px;
+            }
+
+            .policy-card h2 {
+                font-size: 1.45rem;
+            }
+
+            .example-box {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html" aria-label="Enhance My Ride home">
+                <img
+                    src="images/enhance-my-ride-logo.webp?v=3"
+                    alt="Enhance My Ride Auto Spa logo"
+                    width="56"
+                    height="56"
+                >
+                <span class="brand-copy">
+                    <span class="brand-name">ENHANCE MY RIDE</span>
+                    <span class="brand-tagline">We come to you. You relax. We Enhance.</span>
+                </span>
+            </a>
+
+            <button
+                class="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="primary-navigation"
+                aria-expanded="false"
+            >☰</button>
+
+            <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="service-area.html">Service Area</a>
+                <a href="booking-policies.html" aria-current="page">Booking Policies</a>
+                <a class="nav-cta" href="book-now.html">Request a Detail</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <p class="eyebrow">Clear Terms. Professional Service.</p>
+                <h1>Booking <span class="gold">Policies</span></h1>
+
+                <p class="intro">
+                    We want every customer to understand the appointment process
+                    before committing to a service. Please read these policies
+                    carefully before requesting, confirming, or changing an appointment.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="book-now.html">
+                        Request an Appointment
+                    </a>
+                    <a class="button button-secondary" href="services.html">
+                        Review Our Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="policy-content">
+            <div class="container policy-layout">
+                <aside class="policy-nav" aria-label="Booking policy sections">
+                    <h2>On This Page</h2>
+                    <a href="#booking-confirmation">Booking Confirmation</a>
+                    <a href="#deposits">Deposits</a>
+                    <a href="#cancellations">Cancellations & Refunds</a>
+                    <a href="#rescheduling">Rescheduling</a>
+                    <a href="#quotes">Quotes & Additional Work</a>
+                    <a href="#standalone">Standalone Services</a>
+                    <a href="#arrival">Arrival & Access</a>
+                    <a href="#service-limits">Service Limitations</a>
+                    <a href="#contact">Questions & Contact</a>
+                </aside>
+
+                <div class="policy-main">
+                    <article class="policy-card" id="booking-confirmation">
+                        <h2>
+                            <span class="section-number">01</span>
+                            Booking Confirmation
+                        </h2>
+
+                        <p>
+                            Submitting a booking request, contacting us, or receiving
+                            a preliminary estimate does not by itself reserve an appointment.
+                        </p>
+
+                        <p>
+                            <strong class="gold">
+                                An appointment is not confirmed until the required
+                                deposit has been received and Enhance My Ride has
+                                sent confirmation.
+                            </strong>
+                        </p>
+
+                        <p>
+                            Before confirmation, we will work with you to establish
+                            the service scope, agreed price, appointment date and
+                            time, service location, and applicable deposit.
+                            Please do not assume that your requested time is reserved
+                            until you receive our confirmation.
+                        </p>
+
+                        <div class="important-note">
+                            <p>
+                                Keep your booking confirmation and any written
+                                agreement about the services, price, and appointment
+                                changes for your records.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="policy-card" id="deposits">
+                        <h2>
+                            <span class="section-number">02</span>
+                            Deposits & Payment
+                        </h2>
+
+                        <p>
+                            A deposit is required to confirm a booking. The required
+                            deposit is based on the total agreed job price.
+                        </p>
+
+                        <div class="deposit-table-wrap">
+                            <table class="deposit-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Agreed Job Price</th>
+                                        <th scope="col">Required Deposit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>$300 or less</td>
+                                        <td><span class="deposit-amount">$50</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Above $300</td>
+                                        <td><span class="deposit-amount">20% of the agreed price</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="example-box">
+                            <div class="example">
+                                <strong>Example: $250 job</strong>
+                                <span>$50 deposit. The remaining $200 is due according to the agreed payment terms.</span>
+                            </div>
+
+                            <div class="example">
+                                <strong>Example: $500 job</strong>
+                                <span>$100 deposit. The remaining $400 is due according to the agreed payment terms.</span>
+                            </div>
+                        </div>
+
+                        <h3 style="margin-top: 27px;">Important Deposit Terms</h3>
+
+                        <ul>
+                            <li>
+                                The deposit is applied toward the agreed total price
+                                unless otherwise stated in a written agreement.
+                            </li>
+                            <li>
+                                The deposit amount and payment instructions will be
+                                communicated before you pay.
+                            </li>
+                            <li>
+                                Any remaining balance, approved additional work,
+                                and other agreed charges must be paid according to
+                                the terms communicated for your appointment.
+                            </li>
+                            <li>
+                                We will not add unapproved extra services or
+                                charges without discussing them with you.
+                            </li>
+                        </ul>
+
+                        <p>
+                            Deposits are intended to secure appointment time and
+                            prepare for the agreed service. Refund eligibility,
+                            including any applicable cancellation rights, is subject
+                            to applicable law and the circumstances of the booking.
+                        </p>
+                    </article>
+
+                    <article class="policy-card" id="cancellations">
+                        <h2>
+                            <span class="section-number">03</span>
+                            Cancellations & Refunds
+                        </h2>
+
+                        <p>
+                            Please contact us as soon as possible if you need to
+                            cancel an appointment. Early notice gives us a better
+                            opportunity to adjust our schedule.
+                        </p>
+
+                        <p>
+                            Our business policy is that deposits are generally
+                            nonrefundable when permitted by law. However, this
+                            policy does not remove any refund, cancellation, or
+                            other rights that may apply under California law
+                            or other applicable law.
+                        </p>
+
+                        <ul>
+                            <li>
+                                Contact us directly to communicate a cancellation
+                                and retain a record of your message.
+                            </li>
+                            <li>
+                                If we must cancel or cannot provide the agreed
+                                service, we will communicate with you about
+                                appropriate next steps.
+                            </li>
+                            <li>
+                                If a refund or other remedy is required by law,
+                                we will comply with the applicable requirement.
+                            </li>
+                            <li>
+                                A rescheduling request is not the same as a
+                                confirmed rescheduled appointment; the new date
+                                must be agreed upon.
+                            </li>
+                        </ul>
+
+                        <div class="important-note">
+                            <p>
+                                Nothing in this policy is intended to waive or
+                                restrict a customer's rights under applicable law.
+                                Legal cancellation periods or refund requirements
+                                may apply in some circumstances.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="policy-card" id="rescheduling">
+                        <h2>
+                            <span class="section-number">04</span>
+                            Rescheduling
+                        </h2>
+
+                        <p>
+                            We understand that circumstances change. We offer
+                            <strong class="gold">
+                                one complimentary reschedule when you provide at
+                                least 24 hours' notice
+                            </strong>,
+                            subject to availability.
+                        </p>
+
+                        <ul>
+                            <li>
+                                Contact us at least 24 hours before your scheduled
+                                appointment to request your complimentary reschedule.
+                            </li>
+                            <li>
+                                The replacement date and time must be mutually
+                                agreed upon and available in our schedule.
+                            </li>
+                            <li>
+                                Requests made with less than 24 hours' notice,
+                                repeated changes, or missed appointments may require
+                                a new agreement and may affect future booking
+                                arrangements, subject to applicable law.
+                            </li>
+                            <li>
+                                If weather, safety, vehicle access, or another
+                                significant circumstance prevents service, we will
+                                discuss available options with you.
+                            </li>
+                        </ul>
+
+                        <p>
+                            Please wait for confirmation of the new date and time
+                            before treating a rescheduled appointment as finalized.
+                        </p>
+                    </article>
+
+                    <article class="policy-card" id="quotes">
+                        <h2>
+                            <span class="section-number">05</span>
+                            Quotes, Pricing & Additional Work
+                        </h2>
+
+                        <p>
+                            Advertised package prices are starting prices, not
+                            a guarantee that every vehicle will qualify for the
+                            starting rate. Your quote will reflect the service
+                            scope agreed upon for your vehicle.
+                        </p>
+
+                        <p>Factors that may affect the quote include:</p>
+
+                        <ul>
+                            <li>Vehicle size and configuration.</li>
+                            <li>Interior or exterior condition.</li>
+                            <li>Heavy soil, excessive pet hair, or significant staining.</li>
+                            <li>Specialty treatments or additional requested services.</li>
+                            <li>Service location and any disclosed travel charge.</li>
+                        </ul>
+
+                        <p>
+                            We will communicate applicable charges and the agreed
+                            service scope before beginning work. If we discover an
+                            issue that materially changes the work required, we
+                            will discuss the options and any price adjustment with
+                            you before proceeding with the additional work.
+                        </p>
+
+                        <p>
+                            Please review our
+                            <a href="services.html">services and package descriptions</a>
+                            for the current starting prices and available service options.
+                        </p>
+                    </article>
+
+                    <article class="policy-card" id="standalone">
+                        <h2>
+                            <span class="section-number">06</span>
+                            Standalone Services & Minimum Charge
+                        </h2>
+
+                        <p>
+                            Individual services may be requested without purchasing
+                            a complete detailing package, subject to availability
+                            and whether the requested work is suitable for your vehicle.
+                        </p>
+
+                        <p>
+                            The minimum charge for a standalone mobile appointment
+                            is <strong class="gold">$100</strong>.
+                        </p>
+
+                        <ul>
+                            <li>
+                                The minimum applies to a standalone mobile
+                                appointment, not automatically to each individual
+                                service included in a combined quote.
+                            </li>
+                            <li>
+                                Multiple requested services can be assessed together
+                                and quoted as one appointment.
+                            </li>
+                            <li>
+                                An add-on requested alongside an existing package
+                                is quoted at its applicable additional price; the
+                                standalone minimum is not automatically added just
+                                because an add-on is requested.
+                            </li>
+                            <li>
+                                Travel charges, if applicable, will be disclosed
+                                before you approve the quote.
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="policy-card" id="arrival">
+                        <h2>
+                            <span class="section-number">07</span>
+                            Arrival, Access & Vehicle Preparation
+                        </h2>
+
+                        <p>
+                            To help us complete your appointment efficiently,
+                            please provide accurate location and vehicle details
+                            and make the vehicle accessible at the agreed time.
+                        </p>
+
+                        <ul>
+                            <li>
+                                Tell us about parking restrictions, access codes,
+                                gate instructions, and any location limitations
+                                before the appointment.
+                            </li>
+                            <li>
+                                Remove valuable personal items and loose belongings
+                                from areas you want detailed.
+                            </li>
+                            <li>
+                                Inform us about known vehicle issues, sensitive
+                                materials, prior damage, or other conditions that
+                                could affect the requested work.
+                            </li>
+                            <li>
+                                Make sure the service location is safe and that
+                                we have the agreed access to the vehicle.
+                            </li>
+                        </ul>
+
+                        <p>
+                            If the vehicle or location is materially different
+                            from what was described, we may need to revise the
+                            quote or reschedule after discussing the situation
+                            with you.
+                        </p>
+                    </article>
+
+                    <article class="policy-card" id="service-limits">
+                        <h2>
+                            <span class="section-number">08</span>
+                            Service Limitations & Results
+                        </h2>
+
+                        <p>
+                            Every vehicle and surface is different. We select
+                            cleaning methods based on the vehicle's materials,
+                            condition, and the agreed service.
+                        </p>
+
+                        <ul>
+                            <li>
+                                Some stains, odors, scratches, oxidation, and
+                                other defects may be permanent or only partially
+                                improved.
+                            </li>
+                            <li>
+                                Cleaning and detailing are cosmetic services and
+                                do not constitute mechanical repair.
+                            </li>
+                            <li>
+                                Paint correction, polishing, restoration, and
+                                other specialized procedures must be specifically
+                                discussed and quoted.
+                            </li>
+                            <li>
+                                We will not knowingly proceed with a treatment
+                                that we consider inappropriate for a surface or
+                                that presents an unreasonable risk of damage.
+                            </li>
+                        </ul>
+
+                        <p>
+                            We will explain relevant limitations where reasonably
+                            identifiable before performing the applicable treatment.
+                            Nothing in this section limits rights or responsibilities
+                            that cannot legally be excluded.
+                        </p>
+                    </article>
+
+                    <article class="policy-card" id="contact">
+                        <h2>
+                            <span class="section-number">09</span>
+                            Questions & Contact
+                        </h2>
+
+                        <p>
+                            If you have questions about a quote, deposit,
+                            cancellation, or appointment, contact us directly
+                            so we can discuss your specific situation.
+                        </p>
+
+                        <ul>
+                            <li>
+                                Email:
+                                <a href="mailto:info@enhancemyride.com">
+                                    info@enhancemyride.com
+                                </a>
+                            </li>
+                            <li>
+                                Phone:
+                                <a href="tel:+13233271806">(323) 327-1806</a>
+                            </li>
+                        </ul>
+
+                        <p>
+                            Please include your appointment date and any relevant
+                            confirmation details when contacting us about an existing booking.
+                        </p>
+                    </article>
+
+                    <div class="final-callout">
+                        <p class="eyebrow">Ready to Get Started?</p>
+                        <h2>Let's Enhance Your Ride.</h2>
+                        <p>
+                            Review the available services, request a quote, and
+                            make sure you understand the booking terms before
+                            submitting your appointment request.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a class="button button-primary" href="book-now.html">
+                                Request an Appointment
+                            </a>
+                            <a class="button button-secondary" href="services.html">
+                                View Services
+                            </a>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 24px; color: #8f8f8f; font-size: 0.78rem;">
+                        These policies are intended as general business terms and
+                        should be reviewed by a qualified California attorney
+                        before publication. They do not replace applicable law or
+                        any specific written agreement that governs your booking.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a class="brand" href="index.html">
+                        <img
+                            src="images/enhance-my-ride-logo.webp?v=3"
+                            alt=""
+                            width="56"
+                            height="56"
+                            loading="lazy"
+                        >
+                        <span class="brand-copy">
+                            <span class="brand-name">ENHANCE MY RIDE</span>
+                            <span class="brand-tagline">We come to you. You relax. We Enhance.</span>
+                        </span>
+                    </a>
+
+                    <p class="footer-description" style="margin-top: 15px;">
+                        Premium mobile auto detailing serving Alameda and
+                        surrounding San Francisco Bay Area communities.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Explore</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Services</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="about.html">About</a>
+                        <a href="service-area.html">Service Area</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <div class="footer-links">
+                        <a href="book-now.html">Request an Appointment</a>
+                        <a href="mailto:info@enhancemyride.com">Email Us</a>
+                        <a href="tel:+13233271806">(323) 327-1806</a>
+                        <a href="booking-policies.html">Booking Policies</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>
+                    © <span id="current-year"></span>
+                    Enhance My Ride Auto Spa & Mobile Detailing.
+                </span>
+                <span>We come to you. You relax. We Enhance.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuButton = document.querySelector(".menu-button");
+        const navigation = document.querySelector("#primary-navigation");
+
+        if (menuButton && navigation) {
+            menuButton.addEventListener("click", () => {
+                const isOpen = navigation.classList.toggle("is-open");
+
+                menuButton.setAttribute("aria-expanded", String(isOpen));
+                menuButton.setAttribute(
+                    "aria-label",
+                    isOpen ? "Close navigation menu" : "Open navigation menu"
+                );
+                menuButton.textContent = isOpen ? "✕" : "☰";
+            });
+
+            navigation.querySelectorAll("a").forEach((link) => {
+                link.addEventListener("click", () => {
+                    navigation.classList.remove("is-open");
+                    menuButton.setAttribute("aria-expanded", "false");
+                    menuButton.setAttribute("aria-label", "Open navigation menu");
+                    menuButton.textContent = "☰";
+                });
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape") {
+                    navigation.classList.remove("is-open");
+                    menuButton.setAttribute("aria-expanded", "false");
+                    menuButton.setAttribute("aria-label", "Open navigation menu");
+                    menuButton.textContent = "☰";
+                }
+            });
+        }
+
+        const yearElement = document.querySelector("#current-year");
+
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+    </script>
+</body>
+</html>
