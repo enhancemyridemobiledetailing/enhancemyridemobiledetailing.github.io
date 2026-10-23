@@ -6,16 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>About Us | Enhance My Ride Auto Spa &amp; Mobile Detailing</title>
-  <meta name="description" content="Learn about Enhance My Ride Auto Spa & Mobile Detailing. Convenient mobile vehicle care, thoughtful attention to detail, and clear communication throughout Alameda and the San Francisco Bay Area.">
+  <meta name="description" content="Learn about Enhance My Ride Auto Spa & Mobile Detailing. Discover our approach to convenient mobile detailing, thoughtful vehicle care, and clear communication throughout Alameda and the San Francisco Bay Area.">
   <meta name="theme-color" content="#080808">
   <link rel="canonical" href="https://enhancemyride.com/about.html">
 
-  <meta property="og:title" content="About Us | Enhance My Ride Auto Spa & Mobile Detailing">
-  <meta property="og:description" content="We come to you. You relax. We Enhance. Discover our approach to mobile detailing.">
+  <meta property="og:title" content="About Us | Enhance My Ride Auto Spa &amp; Mobile Detailing">
+  <meta property="og:description" content="We come to you. You relax. We Enhance. Discover our approach to professional mobile detailing.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://enhancemyride.com/about.html">
 
   <link rel="icon" href="images/enhance-my-ride-logo.webp?v=3" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -36,14 +39,16 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 100px;
+      scroll-padding-top: 110px;
     }
 
     body {
       margin: 0;
       background: var(--bg);
       color: var(--white);
-      font: 16px/1.7 Arial, Helvetica, sans-serif;
+      font-family: "Montserrat", Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
       overflow-x: clip;
     }
 
@@ -79,7 +84,7 @@
     .eyebrow {
       margin: 0 0 17px;
       color: var(--gold-light);
-      font-size: .76rem;
+      font-size: .74rem;
       font-weight: 700;
       letter-spacing: .2em;
       text-transform: uppercase;
@@ -89,19 +94,21 @@
     h2,
     h3 {
       margin-top: 0;
-      line-height: 1.15;
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 600;
+      line-height: 1.18;
     }
 
     h1 {
       margin-bottom: 22px;
-      font-size: clamp(2.8rem, 7vw, 5.2rem);
-      letter-spacing: -.055em;
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      letter-spacing: -.035em;
     }
 
     h2 {
       margin-bottom: 18px;
-      font-size: clamp(2rem, 4.5vw, 3.2rem);
-      letter-spacing: -.035em;
+      font-size: clamp(2rem, 4.5vw, 3.15rem);
+      letter-spacing: -.025em;
     }
 
     h3 {
@@ -123,7 +130,8 @@
       border-radius: 4px;
       background: linear-gradient(135deg, var(--gold-light), var(--gold));
       color: #080808;
-      font-size: .9rem;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: .85rem;
       font-weight: 800;
       text-align: center;
       text-decoration: none;
@@ -144,18 +152,18 @@
       background: rgba(212, 175, 55, .08);
     }
 
-    /* HEADER */
+    /* SHARED SITE HEADER */
 
-    .header {
+    .site-header {
       position: sticky;
       z-index: 1000;
       top: 0;
       border-bottom: 1px solid var(--line);
-      background: rgba(8, 8, 8, .96);
+      background: rgba(8, 8, 8, .97);
       backdrop-filter: blur(14px);
     }
 
-    .header-inner {
+    .nav-container {
       display: flex;
       min-height: 88px;
       align-items: center;
@@ -172,7 +180,7 @@
       text-decoration: none;
     }
 
-    .brand img {
+    .brand-logo {
       width: 58px;
       height: 58px;
       flex: 0 0 auto;
@@ -182,11 +190,11 @@
     .brand-copy {
       display: flex;
       flex-direction: column;
-      line-height: 1.25;
+      line-height: 1.3;
     }
 
     .brand-name {
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       font-weight: 800;
       letter-spacing: .015em;
     }
@@ -194,31 +202,33 @@
     .brand-subtitle {
       margin-top: 5px;
       color: var(--gold-light);
-      font-size: .62rem;
+      font-size: .61rem;
+      font-weight: 600;
       letter-spacing: .09em;
       text-transform: uppercase;
     }
 
-    .nav {
+    .main-nav {
       display: flex;
       align-items: center;
       justify-content: flex-end;
       gap: 20px;
     }
 
-    .nav a {
+    .main-nav a {
       color: #d4d0c6;
-      font-size: .85rem;
+      font-size: .82rem;
+      font-weight: 500;
       text-decoration: none;
       transition: color .2s ease;
     }
 
-    .nav a:hover,
-    .nav a[aria-current="page"] {
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
       color: var(--gold-light);
     }
 
-    .nav .nav-cta {
+    .main-nav .nav-cta {
       padding: 10px 15px;
       border: 1px solid var(--gold);
       border-radius: 3px;
@@ -226,7 +236,7 @@
       font-weight: 700;
     }
 
-    .menu {
+    .menu-toggle {
       display: none;
       width: 46px;
       height: 44px;
@@ -263,7 +273,7 @@
 
     .hero-copy > p:not(.eyebrow) {
       max-width: 690px;
-      font-size: 1.06rem;
+      font-size: 1rem;
     }
 
     .actions {
@@ -321,7 +331,7 @@
 
     .highlight span {
       color: var(--muted);
-      font-size: .87rem;
+      font-size: .84rem;
     }
 
     /* CONTENT SECTIONS */
@@ -349,9 +359,10 @@
     .story-card blockquote {
       margin: 0;
       color: var(--white);
+      font-family: "Montserrat", Arial, sans-serif;
       font-size: clamp(1.8rem, 3.4vw, 2.7rem);
       font-weight: 800;
-      line-height: 1.2;
+      line-height: 1.25;
       letter-spacing: -.04em;
     }
 
@@ -410,7 +421,7 @@
 
     .approach-card p {
       margin-bottom: 0;
-      font-size: .94rem;
+      font-size: .92rem;
     }
 
     .expectations-grid {
@@ -494,9 +505,9 @@
       justify-content: center;
     }
 
-    /* EXACT SHARED FOOTER DESIGN */
+    /* SHARED SITE FOOTER */
 
-    .footer {
+    .site-footer {
       padding: 58px 0 20px;
       border-top: 1px solid var(--line);
       background: #050505;
@@ -530,14 +541,15 @@
     }
 
     .footer-brand-name {
-      font-size: 1.12rem;
+      font-size: 1.08rem;
       font-weight: 800;
     }
 
     .footer-brand-sub {
       margin-top: 5px;
       color: var(--gold-light);
-      font-size: .65rem;
+      font-size: .63rem;
+      font-weight: 600;
       letter-spacing: .08em;
       text-transform: uppercase;
     }
@@ -545,19 +557,21 @@
     .footer-text {
       max-width: 350px;
       color: var(--muted);
-      font-size: .9rem;
+      font-size: .87rem;
     }
 
     .footer-slogan {
       color: var(--gold-light);
-      font-size: .9rem;
+      font-size: .88rem;
       font-weight: 700;
     }
 
     .footer-heading {
       margin: 0 0 17px;
       color: var(--gold-light);
-      font-size: .9rem;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: .85rem;
+      font-weight: 700;
       letter-spacing: .08em;
       text-transform: uppercase;
     }
@@ -572,9 +586,10 @@
 
     .footer-links a {
       color: var(--muted);
-      font-size: .9rem;
+      font-size: .87rem;
       text-decoration: none;
       overflow-wrap: anywhere;
+      transition: color .2s ease;
     }
 
     .footer-links a:hover,
@@ -625,7 +640,7 @@
     .footer-bottom p {
       margin: 0;
       color: #817d73;
-      font-size: .8rem;
+      font-size: .78rem;
     }
 
     .footer-tagline {
@@ -650,7 +665,7 @@
       background: linear-gradient(135deg, var(--gold-light), var(--gold));
       box-shadow: 0 8px 30px rgba(0, 0, 0, .4);
       color: #080808;
-      font-size: .9rem;
+      font-size: .85rem;
       font-weight: 800;
       text-decoration: none;
     }
@@ -662,12 +677,12 @@
     }
 
     @media (max-width: 1020px) {
-      .nav {
+      .main-nav {
         gap: 13px;
       }
 
-      .nav a {
-        font-size: .8rem;
+      .main-nav a {
+        font-size: .77rem;
       }
 
       .footer-top {
@@ -685,29 +700,29 @@
         width: calc(100% - 32px);
       }
 
-      .header-inner {
+      .nav-container {
         min-height: 76px;
       }
 
-      .brand img {
+      .brand-logo {
         width: 48px;
         height: 48px;
       }
 
       .brand-name {
-        font-size: .94rem;
+        font-size: .92rem;
       }
 
       .brand-subtitle {
-        font-size: .56rem;
+        font-size: .54rem;
       }
 
-      .menu {
+      .menu-toggle {
         display: inline-flex;
         flex: 0 0 auto;
       }
 
-      .nav {
+      .main-nav {
         position: absolute;
         top: 100%;
         right: 0;
@@ -720,18 +735,18 @@
         background: #080808;
       }
 
-      .nav.is-open {
+      .main-nav.is-open {
         display: flex;
         flex-direction: column;
       }
 
-      .nav a {
+      .main-nav a {
         padding: 13px 8px;
         border-bottom: 1px solid rgba(255, 255, 255, .07);
-        font-size: .95rem;
+        font-size: .92rem;
       }
 
-      .nav .nav-cta {
+      .main-nav .nav-cta {
         margin-top: 10px;
         text-align: center;
       }
@@ -793,7 +808,7 @@
 
     @media (max-width: 560px) {
       h1 {
-        font-size: clamp(2.55rem, 12vw, 3.6rem);
+        font-size: clamp(2.5rem, 11vw, 3.5rem);
       }
 
       .actions {
@@ -838,11 +853,11 @@
 </head>
 
 <body>
-
-  <header class="header">
-    <div class="container header-inner">
+  <header class="site-header">
+    <div class="container nav-container">
       <a class="brand" href="index.html" aria-label="Enhance My Ride home">
         <img
+          class="brand-logo"
           src="images/enhance-my-ride-logo.webp?v=3"
           alt="Enhance My Ride logo"
           width="1254"
@@ -855,18 +870,18 @@
       </a>
 
       <button
-        class="menu"
+        class="menu-toggle"
         type="button"
         aria-label="Open navigation"
         aria-controls="main-nav"
         aria-expanded="false"
       >☰</button>
 
-      <nav class="nav" id="main-nav" aria-label="Main navigation">
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="gallery.html">Gallery</a>
-        <a href="about.html" aria-current="page">About</a>
+        <a href="about.html" aria-current="page">About Us</a>
         <a href="service-area.html">Service Area</a>
         <a class="nav-cta" href="book-now.html">Book Now ↗</a>
       </nav>
@@ -1095,15 +1110,12 @@
       </div>
     </section>
 
-    <!-- Closing call to action -->
     <section class="cta">
       <div class="container cta-content">
         <p class="eyebrow">Your Next Detail Starts Here</p>
         <h2>Ready to <span class="gold">Enhance Your Ride?</span></h2>
         <p>
-          Tell us about your vehicle, what you'd like done, and where
-          you're located. We'll review your request and help you take
-          the next step.
+          Tell us about your vehicle, what you'd like done, and where you're located. We'll review your request and help you take the next step.
         </p>
 
         <div class="actions">
@@ -1114,7 +1126,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
         <div>
@@ -1135,8 +1147,7 @@
           </a>
 
           <p class="footer-text">
-            Premium mobile detailing based in Alameda, California.
-            Professional vehicle care delivered to a suitable location near you.
+            Premium mobile detailing based in Alameda, California. Professional vehicle care delivered to a suitable location near you.
           </p>
 
           <p class="footer-slogan">We come to you. You relax. We Enhance.</p>
@@ -1222,10 +1233,17 @@
 
   <script>
     (() => {
-      const menuButton = document.querySelector(".menu");
+      const menuButton = document.querySelector(".menu-toggle");
       const nav = document.getElementById("main-nav");
 
       if (menuButton && nav) {
+        const closeMenu = () => {
+          nav.classList.remove("is-open");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Open navigation");
+          menuButton.textContent = "☰";
+        };
+
         menuButton.addEventListener("click", () => {
           const isOpen = nav.classList.toggle("is-open");
 
@@ -1238,30 +1256,21 @@
         });
 
         nav.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => {
-            nav.classList.remove("is-open");
-            menuButton.setAttribute("aria-expanded", "false");
-            menuButton.setAttribute("aria-label", "Open navigation");
-            menuButton.textContent = "☰";
-          });
+          link.addEventListener("click", closeMenu);
         });
 
         document.addEventListener("keydown", (event) => {
-          if (event.key === "Escape") {
-            nav.classList.remove("is-open");
-            menuButton.setAttribute("aria-expanded", "false");
-            menuButton.setAttribute("aria-label", "Open navigation");
-            menuButton.textContent = "☰";
-          }
+          if (event.key === "Escape") closeMenu();
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 800) closeMenu();
         });
       }
 
       const year = document.getElementById("current-year");
-      if (year) {
-        year.textContent = new Date().getFullYear();
-      }
+      if (year) year.textContent = new Date().getFullYear();
     })();
   </script>
-
 </body>
 </html>
