@@ -1,226 +1,1267 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About | Enhance My Ride Auto Spa &amp; Mobile Detailing</title>
-  <meta name="description" content="Learn about Enhance My Ride Auto Spa & Mobile Detailing and our mobile vehicle-care approach.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Us | Enhance My Ride Auto Spa &amp; Mobile Detailing</title>
+  <meta name="description" content="Learn about Enhance My Ride Auto Spa & Mobile Detailing. Convenient mobile vehicle care, thoughtful attention to detail, and clear communication throughout Alameda and the San Francisco Bay Area.">
   <meta name="theme-color" content="#080808">
   <link rel="canonical" href="https://enhancemyride.com/about.html">
+
+  <meta property="og:title" content="About Us | Enhance My Ride Auto Spa & Mobile Detailing">
+  <meta property="og:description" content="We come to you. You relax. We Enhance. Discover our approach to mobile detailing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://enhancemyride.com/about.html">
+
+  <link rel="icon" href="images/enhance-my-ride-logo.webp?v=3" type="image/webp">
+
   <style>
-    :root{--bg:#080808;--panel:#101010;--gold:#d4af37;--gold2:#ecd27a;--white:#f6f4ee;--muted:#aaa69b;--line:rgba(212,175,55,.3);--max:1240px}
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;scroll-padding-top:82px}
-    body{background:var(--bg);color:var(--white);font:16px/1.65 Arial,Helvetica,sans-serif;overflow-x:hidden}
-    a{color:inherit;text-decoration:none}
-    .container{width:min(100% - 40px,var(--max));margin:auto}
-    .eyebrow{color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase}
-    .section-title{font:400 clamp(2rem,4vw,3.5rem)/1.15 Georgia,"Times New Roman",serif;margin-top:10px}
-    .copy{color:var(--muted);max-width:650px;margin-top:16px;line-height:1.9}
-    .gold{color:var(--gold)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:47px;padding:12px 22px;border:1px solid var(--gold);background:var(--gold);color:#080808;font-size:.73rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;transition:.2s}
-    .btn:hover{background:transparent;color:var(--gold2);transform:translateY(-2px)}
-    .btn.outline{background:rgba(0,0,0,.25);color:#fff;border-color:rgba(255,255,255,.6)}
-    .btn.outline:hover{background:var(--gold);color:#080808;border-color:var(--gold)}
-    /* Header */
-    .header{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-    .header-inner{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:14px;min-width:0;flex-shrink:0}
-    .brand-logo{width:78px;height:78px;display:block;object-fit:contain;object-position:center;flex:0 0 78px;border-radius:50%;background:#080808;visibility:visible;opacity:1;max-width:none;min-width:78px}
-    .brand-name{display:block;font:1.25rem Georgia,serif;letter-spacing:.03em;line-height:1.25}
-    .brand-sub{display:block;color:var(--muted);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase}
-    .nav{display:flex;align-items:center;gap:22px}
-    .nav a{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#d5d1c8}
-    .nav a:hover{color:var(--gold)}
-    .nav .nav-book{border:1px solid var(--gold);padding:9px 14px;color:var(--gold2)}
-    .menu{display:none;background:none;border:1px solid var(--line);color:var(--gold);font-size:1.4rem;width:42px;height:42px}
-    /* Slideshow hero */
-    .hero{position:relative;min-height:min(760px,78vw);height:690px;max-height:calc(100svh - 76px);min-height:560px;isolation:isolate;overflow:hidden;background:#111}
-    .slides,.slide{position:absolute;inset:0}
-    .slide{background-size:cover;background-position:center 53%;opacity:0;transform:scale(1.035);transition:opacity 1.2s ease,transform 7s linear;will-change:opacity}
-    .slide.active{opacity:1;transform:scale(1);z-index:1}
-    .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.62) 38%,rgba(0,0,0,.2) 78%),linear-gradient(0deg,rgba(0,0,0,.72),transparent 42%,rgba(0,0,0,.12))}
-    .hero-content{position:relative;z-index:2;min-height:560px;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;padding-top:36px;padding-bottom:80px;pointer-events:none}
-    .hero-content>*{pointer-events:auto}
-    .hero h1{font:500 clamp(3.2rem,7.8vw,7rem)/.99 Georgia,"Times New Roman",serif;letter-spacing:-.04em;text-transform:uppercase;margin-top:19px;max-width:800px;text-shadow:0 3px 24px #000}
-    .hero h1 span{display:block;color:var(--gold);letter-spacing:.04em}
-    .hero-text{max-width:510px;color:#e1ded6;margin-top:22px;font-size:1rem;line-height:1.8;text-shadow:0 2px 12px #000}
-    .hero-actions{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:14px;flex-wrap:nowrap;margin-top:0;width:100%;pointer-events:auto}
-    .hero-tagline{margin-top:25px;color:#e5dfce;font-size:.72rem;letter-spacing:.19em;text-transform:uppercase}
-    .slide-controls{position:absolute;z-index:3;bottom:26px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:9px}
-    .dot{width:8px;height:8px;border:1px solid #fff;border-radius:50%;background:transparent;cursor:pointer;padding:0}
-    .dot.active{width:24px;border-radius:6px;background:var(--gold);border-color:var(--gold)}
-    .slide-count{font-size:.72rem;color:#eee;letter-spacing:.12em;margin-left:9px}
-    .hero-button-band{position:relative;z-index:4;display:flex;justify-content:center;align-items:center;gap:12px;padding:18px 20px;background:#080808;border-bottom:1px solid var(--line)}
-    .hero-button-band .btn{min-width:190px;min-height:42px;padding:10px 18px;font-size:.7rem}
-    /* Service strip */
-    .service-strip{background:#0c0c0c;border-bottom:1px solid var(--line)}
-    .strip-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-left:1px solid var(--line);border-right:1px solid var(--line)}
-    .strip-item{min-height:110px;display:flex;align-items:center;justify-content:center;gap:12px;padding:20px;border-right:1px solid var(--line)}
-    .strip-item:last-child{border-right:0}
-    .strip-icon{color:var(--gold);font-size:1.45rem}
-    .strip-item strong{display:block;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
-    .strip-item small{display:block;color:var(--muted);font-size:.7rem;margin-top:3px}
-    /* Four-panel section requested by owner */
-    .promise{border-bottom:1px solid var(--line);background:#0b0b0b}
-    .promise-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
-    .promise-item{min-height:180px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:28px 18px}
-    .promise-item:nth-child(odd){border-right:1px solid var(--line)}
-    .promise-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
-    .promise-item h2{color:var(--gold);font:400 clamp(1.45rem,3vw,2.25rem) Georgia,serif}
-    .promise-item p{margin-top:13px;color:#aaa69b;font-size:.78rem;letter-spacing:.13em}
-    /* Intro */
-    .intro{padding:95px 0}
-    .intro-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:75px;align-items:start}
-    .intro-quote{font:400 clamp(1.5rem,2.8vw,2.25rem)/1.55 Georgia,serif;color:#d7d2c7;margin-top:18px}
-    .intro-content p{color:var(--muted);margin-top:17px;line-height:1.95}
-    .text-link{display:inline-block;margin-top:23px;padding-bottom:5px;border-bottom:1px solid var(--gold);color:var(--gold2);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-    /* Gallery */
-    .gallery{padding:78px 0;border-block:1px solid var(--line);background:radial-gradient(ellipse at 100% 0,rgba(212,175,55,.07),transparent 45%),#101010}
-    .gallery-head{display:flex;align-items:end;justify-content:space-between;gap:24px}
-    .gallery-tiles{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;margin-top:30px}
-    .gallery-tile{min-height:220px;position:relative;overflow:hidden;background:#161616;border:1px solid var(--line)}
-    .gallery-tile img{width:100%;height:100%;min-height:220px;object-fit:cover;display:block;transition:transform .5s}
-    .gallery-tile:hover img{transform:scale(1.04)}
-    .gallery-tile::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.65));pointer-events:none}
-    /* Google reviews */
-    .reviews{padding:90px 0;background:#090909}
-    .reviews-head{text-align:center;max-width:720px;margin:0 auto 30px}
-    .reviews-head .copy{margin-inline:auto}
-    .reviews-shell{background:#fff;color:#111;min-height:150px;padding:12px;border:1px solid var(--line)}
-    .reviews-note{margin-top:15px;text-align:center;color:#77746b;font-size:.75rem}
-    /* CTA */
-    .cta{padding:80px 0;border-top:1px solid var(--line);background:radial-gradient(ellipse at 50% 100%,rgba(212,175,55,.12),transparent 58%),#0e0e0e;text-align:center}
-    .cta .copy{margin-inline:auto}
-    .cta-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:27px}
-    /* Minimal footer */
-    .footer{padding:42px 0 22px;border-top:1px solid var(--line);background:#050505}
-    .footer-top{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:30px;align-items:start}
-    .footer-heading{color:var(--gold);font:400 1.05rem Georgia,serif;margin-bottom:12px}
-    .footer-text{color:#969187;font-size:.82rem;line-height:1.9}
-    .footer-links{display:flex;flex-wrap:wrap;gap:10px 18px}
-    .footer-links a{color:#bcb7ac;font-size:.78rem}
-    .footer-links a:hover{color:var(--gold)}
-    .follow{text-align:center}
-    .socials{display:flex;justify-content:center;align-items:center;gap:19px;margin:13px 0 8px}
-    .socials a{display:inline-flex;width:28px;height:28px;align-items:center;justify-content:center;color:var(--gold);transition:color .2s,transform .2s}
-    .socials a:hover{color:#fff;transform:translateY(-2px)}
-    .socials svg{width:23px;height:23px;fill:currentColor}
-    .handle{font-weight:700;letter-spacing:.04em;color:#eee;font-size:.92rem}
-    .footer-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.09);margin-top:30px;padding-top:17px;color:#706c63;font-size:.7rem}
-    @media(min-width:1000px){.promise-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.promise-item{min-height:175px}.promise-item:nth-child(odd){border-right:0}.promise-item:not(:last-child){border-right:1px solid var(--line)}.promise-item:nth-child(-n+2){border-bottom:0}}
-    @media(max-width:900px){.menu{display:block}.nav{display:none;position:absolute;top:100%;left:0;right:0;padding:12px 20px 20px;background:#080808;border-bottom:1px solid var(--line);align-items:stretch;flex-direction:column;gap:0}.nav.open{display:flex}.nav a{padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.07)}.nav .nav-book{text-align:center;margin-top:10px}.hero{height:650px;min-height:560px}.hero-content{min-height:560px}.intro-grid{grid-template-columns:1fr;gap:25px}.strip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.strip-item:nth-child(2){border-right:0}.strip-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.gallery-tiles{grid-template-columns:1fr 1fr}.gallery-tile:first-child{grid-column:span 2}.footer-top{grid-template-columns:1fr 1fr}.follow{grid-column:1/-1;grid-row:1}}
-    @media(max-width:560px){.container{width:min(100% - 30px,var(--max))}.header-inner{min-height:68px;gap:10px}.brand-logo{width:58px;height:58px;flex-basis:58px}.header-inner{min-height:76px}.brand{gap:10px}.brand-name{font-size:1rem}.brand-name{font-size:.86rem}.brand-sub{font-size:.49rem;letter-spacing:.06em}.hero{height:610px;min-height:560px;max-height:calc(100svh - 68px)}.hero-content{min-height:560px;padding-top:25px;padding-bottom:72px}.slide{background-position:center center}.slide::after{background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.3)),linear-gradient(0deg,rgba(0,0,0,.72),transparent 50%)}.hero h1{font-size:clamp(2.75rem,13vw,4.4rem)}.hero-text{font-size:.9rem}.hero-button-band{gap:8px;padding:14px 15px}.hero-button-band .btn{flex:1;min-width:0;max-width:220px;padding:10px 8px;font-size:.62rem;letter-spacing:.04em}.hero-tagline{font-size:.62rem;letter-spacing:.12em}.strip-item{min-height:100px;padding:13px 9px;gap:8px}.strip-icon{font-size:1.2rem}.strip-item strong{font-size:.61rem}.strip-item small{font-size:.63rem}.promise-item{min-height:145px;padding:20px 8px}.promise-item h2{font-size:1.28rem}.promise-item p{font-size:.61rem;letter-spacing:.07em}.intro,.reviews{padding:68px 0}.gallery{padding:62px 0}.gallery-head{align-items:flex-start;flex-direction:column}.gallery-head .btn{width:100%}.gallery-tiles{grid-template-columns:1fr 1fr;gap:8px}.gallery-tile,.gallery-tile img{min-height:150px}.footer-top{grid-template-columns:1fr;gap:25px}.follow{grid-column:auto;grid-row:auto;text-align:left}.socials{justify-content:flex-start}.footer-bottom{flex-direction:column}.cta{padding:65px 0}.cta-actions{flex-direction:column;align-items:stretch;max-width:330px;margin-inline:auto;margin-top:24px}}
+    :root {
+      --bg: #080808;
+      --panel: #111111;
+      --panel-light: #171715;
+      --gold: #d4af37;
+      --gold-light: #ecd27a;
+      --white: #f6f4ee;
+      --muted: #aaa69b;
+      --line: rgba(212, 175, 55, .25);
+      --max: 1180px;
+    }
 
-    /* Floating click-to-call button */
-    .floating-call{position:fixed;right:20px;bottom:20px;z-index:100;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 20px;border:1px solid #f0d46e;border-radius:999px;background:linear-gradient(135deg,#ecd27a,#c9a227);color:#080808;box-shadow:0 8px 28px rgba(0,0,0,.45);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;transition:transform .2s,box-shadow .2s}
-    .floating-call:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.55)}
-    .floating-call svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
-    @media(max-width:560px){.floating-call{right:14px;bottom:14px;min-height:52px;padding:0 17px;font-size:.72rem}}
-        @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
-    /* Fresh page content; shared header/footer and global styling are copied from the approved homepage. */
-    .page-hero{padding:76px 0 68px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 80% 0,rgba(212,175,55,.13),transparent 50%),linear-gradient(120deg,#080808,#111)}
-    .page-hero h1{font:400 clamp(2.7rem,7vw,5.4rem)/1.05 Georgia,serif;margin-top:12px;max-width:900px}
-    .page-hero .copy{max-width:720px}
-    .page-section{padding:68px 0;border-bottom:1px solid var(--line)}
-    .page-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
-    .page-card{background:var(--panel);border:1px solid var(--line);padding:27px;min-width:0}
-    .page-card h2,.page-card h3{font:400 1.65rem/1.2 Georgia,serif;color:var(--white)}
-    .page-card p{color:var(--muted);margin-top:12px;line-height:1.8}
-    .page-card ul{margin:17px 0 0 18px;color:#d2cec4}.page-card li{padding:4px 0}
-    .price{font:400 2.3rem Georgia,serif;color:var(--gold);margin-top:15px}.price small{font:400 .75rem Arial,sans-serif;color:var(--muted)}
-    .page-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-    .callout{padding:28px;border:1px solid var(--line);background:linear-gradient(120deg,#111,#090909);margin-top:28px}
-    .gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
-    .gallery-card{overflow:hidden;background:var(--panel);border:1px solid var(--line)}
-    .gallery-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#151515}
-    .gallery-card figcaption{padding:13px 15px;color:var(--muted);font-size:.8rem}
-    .area-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:25px}
-    .area-item{padding:17px;border:1px solid var(--line);background:#101010;color:#e8e2d3}
-    .booking-frame{width:100%;height:760px;border:1px solid var(--line);background:#fff;margin-top:25px}
-    .about-split{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}
-    .check-list{list-style:none;margin:18px 0 0;padding:0}.check-list li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);color:#d4d0c6}.check-list li::before{content:'✦';color:var(--gold);margin-right:10px}
-    @media(max-width:900px){.page-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.area-list{grid-template-columns:repeat(2,minmax(0,1fr))}.about-split{grid-template-columns:1fr;gap:20px}}
-    @media(max-width:560px){.page-hero{padding:54px 0 48px}.page-section{padding:48px 0}.page-grid,.gallery-grid,.area-list{grid-template-columns:1fr}.page-card{padding:22px}.booking-frame{height:720px}}
+    * {
+      box-sizing: border-box;
+    }
 
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--white);
+      font: 16px/1.7 Arial, Helvetica, sans-serif;
+      overflow-x: clip;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--gold-light);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .gold {
+      color: var(--gold-light);
+    }
+
+    .eyebrow {
+      margin: 0 0 17px;
+      color: var(--gold-light);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin-top: 0;
+      line-height: 1.15;
+    }
+
+    h1 {
+      margin-bottom: 22px;
+      font-size: clamp(2.8rem, 7vw, 5.2rem);
+      letter-spacing: -.055em;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      letter-spacing: -.035em;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 23px;
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      color: #080808;
+      font-size: .9rem;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+      transition: transform .2s ease, filter .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.07);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--gold-light);
+    }
+
+    .btn-outline:hover {
+      background: rgba(212, 175, 55, .08);
+    }
+
+    /* HEADER */
+
+    .header {
+      position: sticky;
+      z-index: 1000;
+      top: 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(8, 8, 8, .96);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      display: flex;
+      min-height: 88px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      flex: 0 0 auto;
+      object-fit: contain;
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+    }
+
+    .brand-name {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: .015em;
+    }
+
+    .brand-subtitle {
+      margin-top: 5px;
+      color: var(--gold-light);
+      font-size: .62rem;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+
+    .nav a {
+      color: #d4d0c6;
+      font-size: .85rem;
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+
+    .nav a:hover,
+    .nav a[aria-current="page"] {
+      color: var(--gold-light);
+    }
+
+    .nav .nav-cta {
+      padding: 10px 15px;
+      border: 1px solid var(--gold);
+      border-radius: 3px;
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+
+    .menu {
+      display: none;
+      width: 46px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--panel);
+      color: var(--gold-light);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* ABOUT HERO */
+
+    .hero {
+      padding: 100px 0 90px;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(ellipse at 85% 20%, rgba(212, 175, 55, .12), transparent 38%),
+        linear-gradient(135deg, #0b0b0a, #11110f 58%, #080808);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      align-items: center;
+      gap: 64px;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+    }
+
+    .hero-copy > p:not(.eyebrow) {
+      max-width: 690px;
+      font-size: 1.06rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .hero-mark {
+      display: flex;
+      min-height: 330px;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background:
+        radial-gradient(circle, rgba(212, 175, 55, .1), transparent 65%),
+        var(--panel);
+    }
+
+    .hero-mark img {
+      width: min(100%, 310px);
+      max-height: 310px;
+      object-fit: contain;
+    }
+
+    /* HIGHLIGHTS */
+
+    .highlights {
+      border-bottom: 1px solid var(--line);
+      background: #0d0d0c;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .highlight {
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .highlight + .highlight {
+      border-left: 1px solid var(--line);
+    }
+
+    .highlight strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--gold-light);
+    }
+
+    .highlight span {
+      color: var(--muted);
+      font-size: .87rem;
+    }
+
+    /* CONTENT SECTIONS */
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      align-items: start;
+      gap: 62px;
+    }
+
+    .story-card {
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background:
+        linear-gradient(145deg, rgba(212, 175, 55, .09), transparent 65%),
+        var(--panel);
+    }
+
+    .story-card blockquote {
+      margin: 0;
+      color: var(--white);
+      font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -.04em;
+    }
+
+    .story-card blockquote span {
+      color: var(--gold-light);
+    }
+
+    .story-card p:last-child,
+    .story-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-dark {
+      border-block: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .section-intro {
+      max-width: 730px;
+      margin-bottom: 38px;
+    }
+
+    .section-intro > p:last-child {
+      margin-bottom: 0;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .approach-card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: #0b0b0b;
+    }
+
+    .approach-number {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      color: var(--gold-light);
+      font-weight: 800;
+    }
+
+    .approach-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .approach-card p {
+      margin-bottom: 0;
+      font-size: .94rem;
+    }
+
+    .expectations-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      gap: 55px;
+    }
+
+    .expectations-list {
+      display: grid;
+      gap: 15px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .expectations-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: #dedbd2;
+    }
+
+    .list-check {
+      display: inline-flex;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      color: var(--gold-light);
+      font-size: .8rem;
+      font-weight: 800;
+    }
+
+    .expectations-note {
+      padding: 28px;
+      border-left: 3px solid var(--gold);
+      background: var(--panel);
+    }
+
+    .expectations-note h3 {
+      margin-bottom: 12px;
+    }
+
+    .expectations-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    .text-link {
+      color: var(--gold-light);
+      text-underline-offset: 4px;
+    }
+
+    /* CLOSING CTA */
+
+    .cta {
+      padding: 78px 0;
+      border-top: 1px solid var(--line);
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, .12), transparent 60%),
+        #0d0d0c;
+      text-align: center;
+    }
+
+    .cta-content {
+      max-width: 790px;
+      margin: 0 auto;
+    }
+
+    .cta-content > p:not(.eyebrow) {
+      max-width: 650px;
+      margin: 0 auto 28px;
+    }
+
+    .cta .actions {
+      justify-content: center;
+    }
+
+    /* EXACT SHARED FOOTER DESIGN */
+
+    .footer {
+      padding: 58px 0 20px;
+      border-top: 1px solid var(--line);
+      background: #050505;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr 1fr;
+      gap: 42px;
+      padding-bottom: 38px;
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .footer-logo {
+      width: 76px;
+      height: 76px;
+      flex: 0 0 auto;
+      object-fit: contain;
+    }
+
+    .footer-brand-name,
+    .footer-brand-sub {
+      display: block;
+    }
+
+    .footer-brand-name {
+      font-size: 1.12rem;
+      font-weight: 800;
+    }
+
+    .footer-brand-sub {
+      margin-top: 5px;
+      color: var(--gold-light);
+      font-size: .65rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .footer-text {
+      max-width: 350px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .footer-slogan {
+      color: var(--gold-light);
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    .footer-heading {
+      margin: 0 0 17px;
+      color: var(--gold-light);
+      font-size: .9rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 9px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-size: .9rem;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .footer-links a:hover,
+    .footer-links a[aria-current="page"] {
+      color: var(--gold-light);
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 0;
+    }
+
+    .social-link {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--gold-light);
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .social-link:hover {
+      transform: translateY(-2px);
+      background: rgba(212, 175, 55, .1);
+    }
+
+    .social-link svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, .09);
+    }
+
+    .footer-bottom p {
+      margin: 0;
+      color: #817d73;
+      font-size: .8rem;
+    }
+
+    .footer-tagline {
+      color: var(--gold-light) !important;
+    }
+
+    /* FLOATING CALL BUTTON */
+
+    .floating-call {
+      position: fixed;
+      z-index: 900;
+      right: 20px;
+      bottom: 20px;
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 19px;
+      border: 1px solid var(--gold-light);
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      box-shadow: 0 8px 30px rgba(0, 0, 0, .4);
+      color: #080808;
+      font-size: .9rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .floating-call svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    @media (max-width: 1020px) {
+      .nav {
+        gap: 13px;
+      }
+
+      .nav a {
+        font-size: .8rem;
+      }
+
+      .footer-top {
+        gap: 28px;
+      }
+
+      .hero-grid,
+      .story-grid {
+        gap: 38px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        width: calc(100% - 32px);
+      }
+
+      .header-inner {
+        min-height: 76px;
+      }
+
+      .brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-name {
+        font-size: .94rem;
+      }
+
+      .brand-subtitle {
+        font-size: .56rem;
+      }
+
+      .menu {
+        display: inline-flex;
+        flex: 0 0 auto;
+      }
+
+      .nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 16px 18px;
+        border-bottom: 1px solid var(--line);
+        background: #080808;
+      }
+
+      .nav.is-open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav a {
+        padding: 13px 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, .07);
+        font-size: .95rem;
+      }
+
+      .nav .nav-cta {
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      .hero {
+        padding: 72px 0;
+      }
+
+      .hero-grid,
+      .story-grid,
+      .expectations-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 35px;
+      }
+
+      .hero-mark {
+        min-height: 240px;
+      }
+
+      .hero-mark img {
+        width: min(100%, 230px);
+        max-height: 230px;
+      }
+
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .highlight {
+        padding: 18px;
+      }
+
+      .highlight + .highlight {
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .story-grid,
+      .expectations-grid {
+        gap: 28px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 24px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      h1 {
+        font-size: clamp(2.55rem, 12vw, 3.6rem);
+      }
+
+      .actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .actions .btn {
+        width: 100%;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .floating-call {
+        right: 12px;
+        bottom: 12px;
+        min-height: 46px;
+        padding: 11px 15px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <header class="header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Enhance My Ride homepage">
-        <img class="brand-logo" src="images/enhance-my-ride-logo.webp?v=3" alt="Enhance My Ride logo" width="1254" height="1254" loading="eager" fetchpriority="high" decoding="async">
-        <span><span class="brand-name">Enhance My Ride</span><span class="brand-sub">Auto Spa &amp; Mobile Detailing</span></span>
+      <a class="brand" href="index.html" aria-label="Enhance My Ride home">
+        <img
+          src="images/enhance-my-ride-logo.webp?v=3"
+          alt="Enhance My Ride logo"
+          width="1254"
+          height="1254"
+        >
+        <span class="brand-copy">
+          <span class="brand-name">Enhance My Ride</span>
+          <span class="brand-subtitle">Auto Spa &amp; Mobile Detailing</span>
+        </span>
       </a>
-      <button class="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
+
+      <button
+        class="menu"
+        type="button"
+        aria-label="Open navigation"
+        aria-controls="main-nav"
+        aria-expanded="false"
+      >☰</button>
+
       <nav class="nav" id="main-nav" aria-label="Main navigation">
-        <a href="index.html" aria-current="page">Home</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="about.html" aria-current="page">About</a><a href="service-area.html">Service Area</a><a class="nav-book" href="book-now.html">Book Now ↗</a>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="service-area.html">Service Area</a>
+        <a class="nav-cta" href="book-now.html">Book Now ↗</a>
       </nav>
     </div>
   </header>
-<main>
-<section class="page-hero"><div class="container"><p class="eyebrow">About Enhance My Ride</p><h1>More Than a Clean. <span class="gold">A Better Standard.</span></h1><p class="copy">We bring a considered, convenient detailing experience to your home, workplace, or another agreed location across the Bay Area.</p></div></section>
-<section class="page-section"><div class="container about-split"><div><p class="eyebrow">Our approach</p><h2 class="section-title">We come to you.<br><span class="gold">You relax.</span></h2><p class="copy">We Enhance.</p><div class="page-actions"><a class="btn" href="book-now.html">Request an Appointment</a></div></div><div><h2 class="section-title" style="font-size:2rem">Care in every detail.</h2><p class="copy">Enhance My Ride Auto Spa &amp; Mobile Detailing is built around convenience, careful workmanship, and a professional experience. Our goal is to make vehicle care easier by bringing the service to you.</p><p class="copy">We’ll discuss your vehicle’s condition and goals, recommend an appropriate service level, and clarify the price before work begins. Each vehicle has different needs, so the service plan should fit the vehicle—not the other way around.</p><ul class="check-list"><li>Mobile service at an agreed location</li><li>Package options for different detailing needs</li><li>Clear starting prices and condition-based quotes</li><li>Service coverage centered around Alameda and the Bay Area</li></ul></div></div></section>
-<section class="page-section"><div class="container"><p class="eyebrow">Start with the right service</p><h2 class="section-title">Your vehicle. Your priorities. <span class="gold">Our attention.</span></h2><p class="copy">Explore the packages, see the gallery, or contact us to discuss your vehicle before booking.</p><div class="page-actions"><a class="btn" href="services.html">View Services</a><a class="btn outline" href="gallery.html">View Gallery</a><a class="btn outline" href="tel:+13233271806">Call Us</a></div></div></section>
-</main>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">The Enhance My Ride Difference</p>
+
+          <h1>
+            More Than a Clean.<br>
+            <span class="gold">A Better Standard.</span>
+          </h1>
+
+          <p>
+            Enhance My Ride Auto Spa &amp; Mobile Detailing brings
+            thoughtful vehicle care to your home, workplace, or another
+            agreed location across the San Francisco Bay Area. Our goal
+            is to make keeping your vehicle clean and cared for more
+            convenient, with attention to the details that make a difference.
+          </p>
+
+          <div class="actions">
+            <a class="btn" href="book-now.html">Request an Appointment ↗</a>
+            <a class="btn btn-outline" href="services.html">Explore Our Services</a>
+          </div>
+        </div>
+
+        <div class="hero-mark">
+          <img
+            src="images/enhance-my-ride-logo.webp?v=3"
+            alt="Enhance My Ride Auto Spa and Mobile Detailing logo"
+            width="1254"
+            height="1254"
+            fetchpriority="high"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="highlights" aria-label="Our approach">
+      <div class="container highlights-grid">
+        <div class="highlight">
+          <strong>Mobile Convenience</strong>
+          <span>Vehicle care at an agreed location</span>
+        </div>
+
+        <div class="highlight">
+          <strong>Thoughtful Attention</strong>
+          <span>Services suited to your vehicle's needs</span>
+        </div>
+
+        <div class="highlight">
+          <strong>Clear Communication</strong>
+          <span>Understand the quote before work begins</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container story-grid">
+        <aside class="story-card">
+          <p class="eyebrow">Our Approach</p>
+
+          <blockquote>
+            We come to you.<br>
+            You relax.<br>
+            <span>We Enhance.</span>
+          </blockquote>
+
+          <p>
+            Your vehicle. Your priorities. A detailing experience
+            designed around your day.
+          </p>
+        </aside>
+
+        <div class="story-copy">
+          <p class="eyebrow">About Enhance My Ride</p>
+
+          <h2>
+            Vehicle care that fits
+            <span class="gold">your day.</span>
+          </h2>
+
+          <p>
+            Your time matters. Mobile detailing means you can get on with
+            your day while we focus on your vehicle. Whether you want to
+            refresh your daily driver, improve the appearance of your
+            interior, or give your vehicle more thorough attention, we
+            want the process to feel convenient and straightforward.
+          </p>
+
+          <p>
+            We begin by understanding your priorities. We'll discuss the
+            vehicle's condition, the areas you'd like us to focus on,
+            and which available services may suit your goals.
+          </p>
+
+          <p>
+            No two vehicles are exactly alike. The appropriate service
+            depends on the vehicle, its current condition, and the result
+            you're looking for. Our aim is to make those options clear
+            before work begins.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-intro">
+          <p class="eyebrow">How We Work</p>
+
+          <h2>
+            A clear plan.
+            <span class="gold">Attention to detail.</span>
+          </h2>
+
+          <p>
+            We aim to make each step clear, from your first inquiry
+            through the agreed service and final review.
+          </p>
+        </div>
+
+        <div class="approach-grid">
+          <article class="approach-card">
+            <span class="approach-number">01</span>
+            <h3>Understand Your Needs</h3>
+            <p>
+              Tell us about your vehicle, its condition, and what you'd
+              like to accomplish. Details and photos can help us
+              understand the work requested.
+            </p>
+          </article>
+
+          <article class="approach-card">
+            <span class="approach-number">02</span>
+            <h3>Review Your Options</h3>
+            <p>
+              We'll review the requested service, discuss relevant
+              condition factors, and confirm the quote and scope
+              before the work begins.
+            </p>
+          </article>
+
+          <article class="approach-card">
+            <span class="approach-number">03</span>
+            <h3>Focus on the Details</h3>
+            <p>
+              We work through the agreed service with attention to
+              your priorities and review the results with you
+              when practical.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container expectations-grid">
+        <div>
+          <p class="eyebrow">What You Can Expect</p>
+
+          <h2>
+            Professional service starts with
+            <span class="gold">clear expectations.</span>
+          </h2>
+
+          <p>
+            We want you to understand what's included, what may affect
+            pricing, and what to expect before your appointment gets
+            underway.
+          </p>
+        </div>
+
+        <ul class="expectations-list">
+          <li>
+            <span class="list-check" aria-hidden="true">✓</span>
+            <span>Mobile service at an agreed location.</span>
+          </li>
+
+          <li>
+            <span class="list-check" aria-hidden="true">✓</span>
+            <span>Three starting package levels to explore.</span>
+          </li>
+
+          <li>
+            <span class="list-check" aria-hidden="true">✓</span>
+            <span>Optional services based on your vehicle's needs.</span>
+          </li>
+
+          <li>
+            <span class="list-check" aria-hidden="true">✓</span>
+            <span>Clear communication about the requested work and pricing.</span>
+          </li>
+
+          <li>
+            <span class="list-check" aria-hidden="true">✓</span>
+            <span>Service coverage centered around Alameda and surrounding Bay Area communities.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="expectations-note">
+          <h3>Every vehicle has its own needs.</h3>
+
+          <p>
+            Vehicle size, heavy soil, pet hair, stains, and requested
+            services can affect the time required and final price.
+            Package prices are starting prices. We'll review the details
+            and confirm the quote before beginning the agreed work.
+          </p>
+
+          <p>
+            Not sure whether your location is covered? Review our
+            <a class="text-link" href="service-area.html">Service Area</a>
+            page for more information.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing call to action -->
+    <section class="cta">
+      <div class="container cta-content">
+        <p class="eyebrow">Your Next Detail Starts Here</p>
+        <h2>Ready to <span class="gold">Enhance Your Ride?</span></h2>
+        <p>
+          Tell us about your vehicle, what you'd like done, and where
+          you're located. We'll review your request and help you take
+          the next step.
+        </p>
+
+        <div class="actions">
+          <a class="btn" href="book-now.html">Request an Appointment ↗</a>
+          <a class="btn btn-outline" href="tel:+13233271806">Call (323) 327-1806</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
         <div>
-          <h2 class="footer-heading">Enhance My Ride</h2>
-          <p class="footer-text">Auto Spa &amp; Mobile Detailing<br>We come to you. You relax. We Enhance.</p>
+          <a class="footer-brand" href="index.html" aria-label="Enhance My Ride home">
+            <img
+              class="footer-logo"
+              src="images/enhance-my-ride-logo.webp?v=3"
+              alt="Enhance My Ride logo"
+              width="1254"
+              height="1254"
+              loading="lazy"
+              decoding="async"
+            >
+            <span>
+              <span class="footer-brand-name">Enhance My Ride</span>
+              <span class="footer-brand-sub">Auto Spa &amp; Mobile Detailing</span>
+            </span>
+          </a>
+
+          <p class="footer-text">
+            Premium mobile detailing based in Alameda, California.
+            Professional vehicle care delivered to a suitable location near you.
+          </p>
+
+          <p class="footer-slogan">We come to you. You relax. We Enhance.</p>
         </div>
+
         <div>
           <h2 class="footer-heading">Explore</h2>
-          <div class="footer-links"><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="service-area.html">Service Area</a><a href="book-now.html">Book Now</a></div>
-          <p class="footer-text" style="margin-top:14px"><a href="tel:+13233271806">(323) 327-1806</a><br><a href="mailto:info@enhancemyride.com">info@enhancemyride.com</a></p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html" aria-current="page">About Us</a></li>
+            <li><a href="service-area.html">Service Area</a></li>
+            <li><a href="book-now.html">Book Now</a></li>
+            <li><a href="booking-policies.html">Booking Policies</a></li>
+          </ul>
         </div>
-        <div class="follow">
+
+        <div>
           <h2 class="footer-heading">Follow Us</h2>
+          <p class="footer-text">
+            Follow our work, vehicle transformations, and mobile detailing journey.
+          </p>
+
           <div class="socials">
-            <a href="https://www.facebook.com/Enhancemyride" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v1.9H7v3.1h2.8v8z"/></svg>
+            <a class="social-link"
+               href="https://www.instagram.com/enhancemyridemobiledetailing/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm5 3.1a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4Zm0 2.2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm5.1-3.4a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/>
+              </svg>
             </a>
-            <a href="https://www.instagram.com/enhancemyride/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4zm4.5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.2-3.4a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
+
+            <a class="social-link"
+               href="https://www.facebook.com/enhancemyridemobiledetailing/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13.5 22v-8.8h3l.45-3.45H13.5V7.55c0-1 .28-1.68 1.72-1.68h1.84V2.78A24 24 0 0 0 14.38 2C11.72 2 9.9 3.62 9.9 6.6v3.15H6.9v3.45h3V22h3.6Z"/>
+              </svg>
             </a>
-            <a href="https://www.tiktok.com/@enhancemyride" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 6.3a6.6 6.6 0 0 1-4.1-4.1V2h-3.8v13.7a2.9 2.9 0 1 1-2-2.8V9a6.8 6.8 0 1 0 5.8 6.7V9.1a10.3 10.3 0 0 0 5.2 1.4V6.7c-.4 0-.7-.1-1.1-.4z"/></svg>
+
+            <a class="social-link"
+               href="https://www.tiktok.com/@enhancemyride"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="TikTok">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19.6 6.3a6.4 6.4 0 0 1-4.1-4.1V2h-3.8v13.7a2.9 2.9 0 1 1-2-2.75V9.1a7 7 0 1 0 5.8 6.9V9a10 10 0 0 0 5.8 1.85V7.1a6.5 6.5 0 0 1-1.7-.8Z"/>
+              </svg>
             </a>
-            <a href="https://www.youtube.com/@enhancemyride" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg>
+
+            <a class="social-link"
+               href="https://www.youtube.com/@enhancemyride"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/>
+              </svg>
             </a>
           </div>
+
+          <ul class="footer-links" style="margin-top:22px">
+            <li><a href="tel:+13233271806">(323) 327-1806</a></li>
+            <li><a href="mailto:info@enhancemyride.com">info@enhancemyride.com</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-bottom"><span>© <span id="year">2026</span> Enhance My Ride Auto Spa &amp; Mobile Detailing</span><span>Premium care. Delivered to your door.</span></div>
+
+      <div class="footer-bottom">
+        <p>© <span id="current-year">2026</span> Enhance My Ride Auto Spa &amp; Mobile Detailing.</p>
+        <p class="footer-tagline">Premium care. Delivered to your door.</p>
+      </div>
     </div>
   </footer>
 
-  <script>
-    // Same sticky header navigation behavior as the approved homepage.
-    const menuButton = document.querySelector(".menu");
-    const nav = document.querySelector("#main-nav");
-    if (menuButton && nav) {
-      menuButton.addEventListener("click", () => {
-        const open = nav.classList.toggle("open");
-        menuButton.setAttribute("aria-expanded", String(open));
-        menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
-        menuButton.textContent = open ? "×" : "☰";
-      });
-      nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
-        nav.classList.remove("open");
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.textContent = "☰";
-      }));
-    }
-    const year = document.querySelector("#year");
-    if (year) year.textContent = new Date().getFullYear();
-  </script>
-  <a class="floating-call" href="tel:+13233271806" aria-label="Call Enhance My Ride at (323) 327-1806">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.56 3.57.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.19 2.45.56 3.57a1 1 0 0 1-.25 1.02z"/></svg>
+  <a class="floating-call" href="tel:+13233271806" aria-label="Call Enhance My Ride now">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.3 11.3 0 0 0 3.55.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.3 11.3 0 0 0 .57 3.55 1 1 0 0 1-.25 1l-2.22 2.25Z"/>
+    </svg>
     <span>Call Now</span>
   </a>
+
+  <script>
+    (() => {
+      const menuButton = document.querySelector(".menu");
+      const nav = document.getElementById("main-nav");
+
+      if (menuButton && nav) {
+        menuButton.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("is-open");
+
+          menuButton.setAttribute("aria-expanded", String(isOpen));
+          menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation" : "Open navigation"
+          );
+          menuButton.textContent = isOpen ? "×" : "☰";
+        });
+
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            nav.classList.remove("is-open");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute("aria-label", "Open navigation");
+            menuButton.textContent = "☰";
+          });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            nav.classList.remove("is-open");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute("aria-label", "Open navigation");
+            menuButton.textContent = "☰";
+          }
+        });
+      }
+
+      const year = document.getElementById("current-year");
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
 
 </body>
 </html>
