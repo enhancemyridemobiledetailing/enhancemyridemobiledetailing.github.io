@@ -1,747 +1,1602 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gallery | Enhance My Ride Auto Spa &amp; Mobile Detailing</title>
-  <meta name="description" content="Explore the mobile detailing gallery from Enhance My Ride Auto Spa & Mobile Detailing in the San Francisco Bay Area.">
-  <meta name="theme-color" content="#080808">
-  <link rel="canonical" href="https://enhancemyride.com/gallery.html">
-
-  <style>
-    :root {
-      --bg:#080808;
-      --panel:#101010;
-      --gold:#d4af37;
-      --gold2:#ecd27a;
-      --white:#f6f4ee;
-      --muted:#aaa69b;
-      --line:rgba(212,175,55,.3);
-      --max:1240px;
-    }
-
-    * { box-sizing:border-box; margin:0; padding:0; }
-
-    html {
-      scroll-behavior:smooth;
-      scroll-padding-top:100px;
-    }
-
-    body {
-      background:var(--bg);
-      color:var(--white);
-      font:16px/1.65 Arial,Helvetica,sans-serif;
-      overflow-x:hidden;
-    }
-
-    a { color:inherit; text-decoration:none; }
-    img { display:block; max-width:100%; }
-    .container { width:min(100% - 40px,var(--max)); margin:auto; }
-    .gold { color:var(--gold); }
-
-    .eyebrow {
-      color:var(--gold);
-      font-size:.72rem;
-      font-weight:700;
-      letter-spacing:.24em;
-      text-transform:uppercase;
-    }
-
-    .section-title {
-      font:400 clamp(2rem,4vw,3.5rem)/1.15 Georgia,"Times New Roman",serif;
-      margin-top:10px;
-    }
-
-    .copy {
-      color:var(--muted);
-      max-width:720px;
-      margin-top:16px;
-      line-height:1.9;
-    }
-
-    .btn {
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:47px;
-      padding:12px 22px;
-      border:1px solid var(--gold);
-      background:var(--gold);
-      color:#080808;
-      font-size:.73rem;
-      font-weight:800;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      transition:background .2s,color .2s,transform .2s;
-    }
-
-    .btn:hover {
-      background:transparent;
-      color:var(--gold2);
-      transform:translateY(-2px);
-    }
-
-    .btn.outline {
-      background:rgba(0,0,0,.25);
-      color:#fff;
-      border-color:rgba(255,255,255,.6);
-    }
-
-    .btn.outline:hover {
-      background:var(--gold);
-      color:#080808;
-      border-color:var(--gold);
-    }
-
-    /* Shared site header */
-    .header {
-      position:sticky;
-      top:0;
-      z-index:50;
-      background:rgba(7,7,7,.96);
-      -webkit-backdrop-filter:blur(14px);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid var(--line);
-    }
-
-    .header-inner {
-      min-height:92px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-
-    .brand {
-      display:flex;
-      align-items:center;
-      gap:14px;
-      min-width:0;
-      flex-shrink:0;
-    }
-
-    .brand-logo {
-      width:78px;
-      height:78px;
-      object-fit:contain;
-      flex:0 0 78px;
-      border-radius:50%;
-      background:#080808;
-    }
-
-    .brand-name {
-      display:block;
-      font:1.25rem Georgia,serif;
-      letter-spacing:.03em;
-      line-height:1.25;
-    }
-
-    .brand-sub {
-      display:block;
-      color:var(--muted);
-      font-size:.55rem;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
-
-    .nav {
-      display:flex;
-      align-items:center;
-      gap:22px;
-    }
-
-    .nav a {
-      font-size:.7rem;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color:#d5d1c8;
-    }
-
-    .nav a:hover,
-    .nav a[aria-current="page"] { color:var(--gold); }
-
-    .nav .nav-book {
-      border:1px solid var(--gold);
-      padding:9px 14px;
-      color:var(--gold2);
-    }
-
-    .menu {
-      display:none;
-      background:none;
-      border:1px solid var(--line);
-      color:var(--gold);
-      font-size:1.4rem;
-      width:42px;
-      height:42px;
-      cursor:pointer;
-    }
-
-    /* Gallery hero */
-    .page-hero {
-      padding:82px 0 72px;
-      border-bottom:1px solid var(--line);
-      background:
-        radial-gradient(ellipse at 80% 0,rgba(212,175,55,.13),transparent 50%),
-        linear-gradient(120deg,#080808,#111);
-    }
-
-    .page-hero h1 {
-      font:400 clamp(2.7rem,7vw,5.4rem)/1.05 Georgia,"Times New Roman",serif;
-      margin-top:12px;
-      max-width:900px;
-    }
-
-    .page-actions {
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      margin-top:27px;
-    }
-
-    /* Main gallery */
-    .page-section {
-      padding:72px 0;
-      border-bottom:1px solid var(--line);
-    }
-
-    .section-intro { max-width:790px; }
-    .section-intro .copy { max-width:750px; }
-
-    .gallery-grid {
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:16px;
-      margin-top:32px;
-    }
-
-    .gallery-card {
-      min-width:0;
-      margin:0;
-      overflow:hidden;
-      background:var(--panel);
-      border:1px solid var(--line);
-    }
-
-    .gallery-card a {
-      display:block;
-      overflow:hidden;
-      background:#151515;
-    }
-
-    .gallery-card img {
-      display:block;
-      width:100%;
-      aspect-ratio:4/3;
-      object-fit:cover;
-      background:#151515;
-      transition:transform .4s ease;
-    }
-
-    .gallery-card a:hover img { transform:scale(1.035); }
-
-    .gallery-card figcaption {
-      padding:13px 15px;
-      color:var(--muted);
-      font-size:.8rem;
-    }
-
-    /* Specialty-photo sections for later */
-    .specialty-grid {
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:16px;
-      margin-top:30px;
-    }
-
-    .specialty-card {
-      min-height:165px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      padding:24px;
-      background:var(--panel);
-      border:1px dashed rgba(212,175,55,.45);
-    }
-
-    .specialty-card h3 {
-      color:var(--gold2);
-      font:400 1.35rem/1.35 Georgia,"Times New Roman",serif;
-    }
-
-    .specialty-card p {
-      color:var(--muted);
-      font-size:.88rem;
-      margin-top:10px;
-      line-height:1.8;
-    }
-
-    /* CTA */
-    .callout {
-      padding:35px;
-      border:1px solid var(--line);
-      background:
-        radial-gradient(ellipse at 100% 0,rgba(212,175,55,.1),transparent 55%),
-        #101010;
-    }
-
-    .callout .section-title { max-width:700px; }
-
-    .callout .copy { max-width:720px; }
-
-    /* Shared footer */
-    .footer {
-      padding:58px 0 24px;
-      background:#050505;
-      border-top:1px solid var(--line);
-    }
-
-    .footer-top {
-      display:grid;
-      grid-template-columns:1.1fr 1fr .7fr;
-      gap:38px;
-      align-items:start;
-    }
-
-    .footer-heading {
-      color:var(--gold);
-      font:400 1.8rem Georgia,"Times New Roman",serif;
-      margin-bottom:20px;
-    }
-
-    .footer-text {
-      color:var(--muted);
-      font-size:.95rem;
-      line-height:1.9;
-    }
-
-    .footer-text a:hover,
-    .footer-links a:hover { color:var(--gold2); }
-
-    .footer-links {
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px 22px;
-    }
-
-    .footer-links a {
-      color:#c5c0b5;
-      font-size:.9rem;
-    }
-
-    .follow { text-align:left; }
-
-    .socials {
-      display:flex;
-      align-items:center;
-      gap:22px;
-    }
-
-    .socials a {
-      width:36px;
-      height:36px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:var(--gold);
-      transition:transform .2s,color .2s;
-    }
-
-    .socials a:hover {
-      color:var(--gold2);
-      transform:translateY(-3px);
-    }
-
-    .socials svg {
-      width:35px;
-      height:35px;
-      fill:currentColor;
-    }
-
-    .footer-bottom {
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-      margin-top:48px;
-      padding-top:24px;
-      border-top:1px solid #ffffff20;
-      color:#77736a;
-      font-size:.82rem;
-    }
-
-    /* Same floating call button as About */
-    .floating-call {
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      z-index:100;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      min-height:56px;
-      padding:0 20px;
-      border:1px solid #f0d46e;
-      border-radius:999px;
-      background:linear-gradient(135deg,#ecd27a,#c9a227);
-      color:#080808;
-      box-shadow:0 8px 28px rgba(0,0,0,.45);
-      font-size:.78rem;
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      transition:transform .2s,box-shadow .2s;
-    }
-
-    .floating-call:hover {
-      transform:translateY(-3px);
-      box-shadow:0 12px 32px rgba(0,0,0,.55);
-    }
-
-    .floating-call svg {
-      width:20px;
-      height:20px;
-      fill:currentColor;
-      flex-shrink:0;
-    }
-
-    @media(max-width:1000px) {
-      .menu { display:block; }
-
-      .nav {
-        display:none;
-        position:absolute;
-        top:100%;
-        left:0;
-        right:0;
-        padding:12px 20px 20px;
-        background:#080808;
-        border-bottom:1px solid var(--line);
-        flex-direction:column;
-        align-items:stretch;
-        gap:0;
-      }
-
-      .nav.open { display:flex; }
-
-      .nav a {
-        padding:13px 4px;
-        border-bottom:1px solid #ffffff12;
-      }
-
-      .nav .nav-book {
-        text-align:center;
-        margin-top:10px;
-      }
-
-      .gallery-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-      .specialty-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-      .footer-top { grid-template-columns:1fr 1fr; }
-      .follow { grid-column:1/-1; }
-    }
-
-    @media(max-width:560px) {
-      .container { width:min(100% - 28px,var(--max)); }
-      .header-inner { min-height:76px; gap:12px; }
-      .brand { gap:10px; }
-      .brand-logo { width:57px; height:57px; flex-basis:57px; }
-      .brand-name { font-size:1.05rem; }
-      .brand-sub { font-size:.48rem; letter-spacing:.07em; }
-
-      .page-hero { padding:57px 0 50px; }
-      .page-hero h1 { font-size:clamp(2.5rem,11vw,4rem); }
-      .page-section { padding:52px 0; }
-
-      .page-actions { flex-direction:column; align-items:stretch; }
-      .page-actions .btn { width:100%; }
-
-      .gallery-grid {
-        grid-template-columns:repeat(2,minmax(0,1fr));
-        gap:9px;
-      }
-
-      .gallery-card figcaption {
-        padding:10px;
-        font-size:.73rem;
-      }
-
-      .specialty-grid { grid-template-columns:1fr; }
-      .specialty-card { min-height:135px; padding:22px; }
-      .callout { padding:25px; }
-
-      .footer-top { grid-template-columns:1fr; gap:30px; }
-      .follow { grid-column:auto; }
-      .socials { gap:20px; }
-      .footer-bottom { flex-direction:column; gap:8px; margin-top:32px; }
-
-      .floating-call {
-        right:14px;
-        bottom:14px;
-        min-height:52px;
-        padding:0 17px;
-        font-size:.72rem;
-      }
-    }
-
-    @media(prefers-reduced-motion:reduce) {
-      html { scroll-behavior:auto; }
-      *,*::before,*::after { transition:none!important; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Enhance My Ride Auto Spa &amp; Mobile Detailing</title>
+    <meta name="description" content="Explore the Enhance My Ride mobile detailing gallery. View vehicle transformations and examples of our detailing work throughout the San Francisco Bay Area.">
+    <meta name="theme-color" content="#080808">
+    <link rel="canonical" href="https://enhancemyride.com/gallery.html">
+    <link rel="icon" href="images/enhance-my-ride-logo.webp?v=3">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --black: #080808;
+            --black-soft: #111111;
+            --black-card: #171715;
+            --gold: #d4af37;
+            --gold-light: #ecd27a;
+            --white: #f6f4ee;
+            --muted: #aaa69b;
+            --line: rgba(212, 175, 55, 0.25);
+            --max: 1180px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            min-width: 320px;
+            overflow-x: hidden;
+            background: var(--black);
+            color: var(--white);
+            font-family: "Montserrat", sans-serif;
+            line-height: 1.7;
+        }
+
+        body.no-scroll {
+            overflow: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img,
+        svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        button {
+            font: inherit;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--gold-light);
+            outline-offset: 4px;
+        }
+
+        .container {
+            width: min(92%, var(--max));
+            margin-inline: auto;
+        }
+
+        .gold {
+            color: var(--gold);
+        }
+
+        .eyebrow {
+            margin-bottom: 12px;
+            color: var(--gold);
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            line-height: 1.2;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: clamp(2.6rem, 6vw, 4.8rem);
+        }
+
+        h2 {
+            margin-bottom: 18px;
+            font-size: clamp(2rem, 4vw, 3rem);
+        }
+
+        p {
+            color: var(--muted);
+        }
+
+        /* Header and navigation */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(8, 8, 8, 0.97);
+            border-bottom: 1px solid var(--line);
+            backdrop-filter: blur(14px);
+        }
+
+        .nav-container {
+            position: relative;
+            display: flex;
+            min-height: 82px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            min-width: 0;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand img {
+            width: 58px;
+            height: 58px;
+            flex-shrink: 0;
+            object-fit: contain;
+        }
+
+        .brand-name {
+            display: block;
+            color: var(--gold);
+            font-size: 0.96rem;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .brand-tagline {
+            display: block;
+            margin-top: 3px;
+            color: #c9c9c9;
+            font-size: 0.66rem;
+            line-height: 1.4;
+        }
+
+        .menu {
+            display: none;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--black-card);
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        .nav a {
+            color: #e7e7e7;
+            font-size: 0.78rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .nav a:hover,
+        .nav a[aria-current="page"] {
+            color: var(--gold);
+        }
+
+        .nav .nav-book {
+            padding: 10px 15px;
+            border-radius: 6px;
+            background: var(--gold);
+            color: #080808;
+            font-weight: 800;
+        }
+
+        .nav .nav-book:hover {
+            background: var(--gold-light);
+            color: #080808;
+        }
+
+        /* Gallery introduction */
+
+        .gallery-hero {
+            position: relative;
+            padding: 88px 0 76px;
+            overflow: hidden;
+            border-bottom: 1px solid var(--line);
+            background:
+                radial-gradient(
+                    ellipse at 80% 0%,
+                    rgba(212, 175, 55, 0.14),
+                    transparent 55%
+                ),
+                linear-gradient(180deg, #111111 0%, #080808 100%);
+        }
+
+        .gallery-hero-content {
+            max-width: 850px;
+        }
+
+        .gallery-hero h1 {
+            margin-bottom: 22px;
+        }
+
+        .gallery-hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero-copy {
+            max-width: 690px;
+            font-size: 1rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin-top: 28px;
+        }
+
+        .btn {
+            display: inline-flex;
+            min-height: 48px;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 13px 22px;
+            border: 1px solid var(--gold);
+            border-radius: 8px;
+            font-size: 0.84rem;
+            font-weight: 800;
+            text-align: center;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #080808;
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--gold);
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        /* Continuous photo gallery */
+
+        .gallery-section {
+            padding: 72px 0 88px;
+            background:
+                radial-gradient(
+                    ellipse at 100% 0%,
+                    rgba(212, 175, 55, 0.045),
+                    transparent 40%
+                ),
+                var(--black);
+        }
+
+        .gallery-heading {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .gallery-heading h2 {
+            margin-bottom: 12px;
+        }
+
+        .gallery-description {
+            max-width: 650px;
+            font-size: 0.9rem;
+        }
+
+        .gallery-count {
+            flex-shrink: 0;
+            color: var(--gold);
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            white-space: nowrap;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .gallery-item {
+            position: relative;
+            min-width: 0;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: var(--black-card);
+        }
+
+        .gallery-image-button {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 0;
+            overflow: hidden;
+            border: 0;
+            background: #111;
+            cursor: zoom-in;
+            text-align: left;
+        }
+
+        .gallery-image-button img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            transition: transform 0.45s ease, filter 0.3s ease;
+        }
+
+        .gallery-image-button::after {
+            position: absolute;
+            inset: 45% 0 0;
+            background: linear-gradient(
+                180deg,
+                transparent,
+                rgba(0, 0, 0, 0.64)
+            );
+            content: "";
+            pointer-events: none;
+        }
+
+        .gallery-item:hover .gallery-image-button img {
+            transform: scale(1.045);
+        }
+
+        .gallery-item:hover .gallery-image-button img {
+            filter: brightness(1.04);
+        }
+
+        .expand-hint {
+            position: absolute;
+            right: 13px;
+            bottom: 13px;
+            z-index: 1;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            color: #fff;
+            font-size: 0.74rem;
+            font-weight: 700;
+            text-shadow: 0 1px 6px #000;
+        }
+
+        .expand-hint svg {
+            width: 19px;
+            height: 19px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .gallery-caption {
+            padding: 13px 15px 15px;
+            color: #d4d0c6;
+            font-size: 0.8rem;
+        }
+
+        .gallery-caption span {
+            display: block;
+            margin-top: 2px;
+            color: var(--muted);
+            font-size: 0.72rem;
+        }
+
+        /* Enlarged photo viewer */
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: rgba(0, 0, 0, 0.96);
+            overscroll-behavior: contain;
+        }
+
+        .lightbox.is-open {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            max-width: 1500px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .lightbox-toolbar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            pointer-events: none;
+        }
+
+        .lightbox-counter {
+            padding: 9px 13px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 8px;
+            background: rgba(10, 10, 10, 0.85);
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            pointer-events: auto;
+        }
+
+        .lightbox-close {
+            display: inline-grid;
+            width: 46px;
+            height: 46px;
+            flex-shrink: 0;
+            place-items: center;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            background: #111;
+            color: #fff;
+            font-size: 1.8rem;
+            line-height: 1;
+            cursor: pointer;
+            pointer-events: auto;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .lightbox-close:hover {
+            background: var(--gold);
+            color: #080808;
+        }
+
+        .lightbox-stage {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            min-height: 0;
+            align-items: center;
+            justify-content: center;
+            padding: 62px 62px 75px;
+            touch-action: pan-y;
+        }
+
+        .lightbox-image {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .lightbox-arrow {
+            position: absolute;
+            top: 50%;
+            z-index: 4;
+            display: inline-grid;
+            width: 52px;
+            height: 52px;
+            place-items: center;
+            transform: translateY(-50%);
+            border: 1px solid rgba(212, 175, 55, 0.8);
+            border-radius: 50%;
+            background: rgba(8, 8, 8, 0.85);
+            color: var(--gold-light);
+            font-size: 1.8rem;
+            line-height: 1;
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .lightbox-arrow:hover {
+            background: var(--gold);
+            color: #080808;
+        }
+
+        .lightbox-prev {
+            left: 0;
+        }
+
+        .lightbox-next {
+            right: 0;
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            right: 65px;
+            bottom: 15px;
+            left: 65px;
+            color: #dedad1;
+            font-size: 0.84rem;
+            text-align: center;
+        }
+
+        .lightbox-help {
+            display: block;
+            margin-top: 4px;
+            color: #99958b;
+            font-size: 0.72rem;
+        }
+
+        /* Closing call to action */
+
+        .cta {
+            padding: 80px 0;
+            border-top: 1px solid var(--line);
+            background:
+                radial-gradient(
+                    ellipse at 50% 100%,
+                    rgba(212, 175, 55, 0.12),
+                    transparent 58%
+                ),
+                #0e0e0e;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 760px;
+            margin-inline: auto;
+        }
+
+        .cta h2 {
+            margin-bottom: 18px;
+        }
+
+        .cta-content > p:not(.eyebrow) {
+            max-width: 670px;
+            margin-inline: auto;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin-top: 28px;
+        }
+
+        /* Exact shared footer */
+
+        .footer {
+            padding: 55px 0 25px;
+            border-top: 1px solid var(--line);
+            background: #050505;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr 1fr;
+            gap: 35px;
+            padding-bottom: 32px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .footer-logo {
+            width: 65px;
+            height: 65px;
+            flex-shrink: 0;
+            object-fit: contain;
+        }
+
+        .footer-brand-name,
+        .footer-brand-sub {
+            display: block;
+        }
+
+        .footer-brand-name {
+            color: var(--gold);
+            font-size: 0.92rem;
+            font-weight: 800;
+        }
+
+        .footer-brand-sub {
+            color: #c9c9c9;
+            font-size: 0.75rem;
+            line-height: 1.5;
+        }
+
+        .footer-text {
+            margin-bottom: 12px;
+            font-size: 0.82rem;
+        }
+
+        .footer-slogan {
+            color: var(--gold);
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .footer-heading {
+            margin-bottom: 15px;
+            color: var(--gold);
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            display: grid;
+            gap: 9px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            overflow-wrap: anywhere;
+            font-size: 0.82rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover,
+        .footer-links a[aria-current="page"] {
+            color: var(--gold);
+        }
+
+        .socials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .social-link {
+            display: grid;
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            place-items: center;
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            background: #111;
+            transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-2px);
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.12);
+        }
+
+        .social-link svg {
+            width: 19px;
+            height: 19px;
+            fill: var(--gold);
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px 20px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-bottom p {
+            font-size: 0.75rem;
+        }
+
+        .footer-tagline {
+            color: var(--gold);
+        }
+
+        /* Floating call button */
+
+        .floating-call {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 900;
+            display: inline-flex;
+            min-height: 48px;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 17px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #080808;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+            font-size: 0.82rem;
+            font-weight: 800;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .floating-call:hover {
+            transform: translateY(-2px);
+            background: var(--gold-light);
+        }
+
+        .floating-call svg {
+            width: 19px;
+            height: 19px;
+            fill: currentColor;
+        }
+
+        /* Responsive layout */
+
+        @media (max-width: 1000px) {
+            .nav {
+                gap: 13px;
+            }
+
+            .nav a {
+                font-size: 0.73rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 14px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .nav-container {
+                min-height: 76px;
+                flex-wrap: wrap;
+                padding: 12px 0;
+            }
+
+            .brand img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .menu {
+                display: inline-flex;
+                margin-left: auto;
+            }
+
+            .nav {
+                display: none;
+                width: 100%;
+                align-items: stretch;
+                flex-direction: column;
+                gap: 0;
+                padding: 8px 0 12px;
+            }
+
+            .nav.is-open {
+                display: flex;
+            }
+
+            .nav a {
+                padding: 11px 8px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+                font-size: 0.85rem;
+            }
+
+            .nav .nav-book {
+                margin-top: 8px;
+                padding: 12px 15px;
+                text-align: center;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .footer-top > div:first-child {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery-hero {
+                padding: 62px 0 54px;
+            }
+
+            .hero-copy {
+                font-size: 0.91rem;
+            }
+
+            .hero-actions {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .gallery-section {
+                padding: 55px 0 65px;
+            }
+
+            .gallery-heading {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .gallery-image-button img {
+                aspect-ratio: 4 / 3;
+            }
+
+            .gallery-caption {
+                padding: 12px 14px;
+            }
+
+            .lightbox {
+                padding: 10px;
+            }
+
+            .lightbox-stage {
+                padding: 65px 0 95px;
+            }
+
+            .lightbox-toolbar {
+                top: 3px;
+                right: 3px;
+                left: 3px;
+            }
+
+            .lightbox-close {
+                width: 44px;
+                height: 44px;
+            }
+
+            .lightbox-arrow {
+                top: auto;
+                bottom: 40px;
+                width: 46px;
+                height: 46px;
+                transform: none;
+                background: rgba(8, 8, 8, 0.95);
+            }
+
+            .lightbox-prev {
+                left: calc(50% - 58px);
+            }
+
+            .lightbox-next {
+                right: calc(50% - 58px);
+            }
+
+            .lightbox-caption {
+                right: 4px;
+                bottom: 6px;
+                left: 4px;
+                font-size: 0.76rem;
+            }
+
+            .lightbox-help {
+                font-size: 0.65rem;
+            }
+
+            .cta {
+                padding: 62px 0;
+            }
+
+            .actions {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 27px;
+            }
+
+            .footer-top > div:first-child {
+                grid-column: auto;
+            }
+
+            .footer-bottom {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .floating-call {
+                right: 12px;
+                bottom: 12px;
+                min-height: 44px;
+                padding: 10px 14px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Enhance My Ride homepage">
-        <img class="brand-logo" src="images/enhance-my-ride-logo.webp?v=3" alt="Enhance My Ride logo" width="1254" height="1254">
-        <span>
-          <span class="brand-name">Enhance My Ride</span>
-          <span class="brand-sub">Auto Spa &amp; Mobile Detailing</span>
-        </span>
-      </a>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a class="brand" href="index.html" aria-label="Enhance My Ride home">
+                <img
+                    src="images/enhance-my-ride-logo.webp?v=3"
+                    alt="Enhance My Ride Auto Spa logo"
+                    width="58"
+                    height="58"
+                >
+                <span>
+                    <span class="brand-name">ENHANCE MY RIDE</span>
+                    <span class="brand-tagline">AUTO SPA &amp; MOBILE DETAILING</span>
+                </span>
+            </a>
 
-      <button class="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
+            <button
+                class="menu"
+                type="button"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="main-nav"
+            >☰</button>
 
-      <nav class="nav" id="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="gallery.html" aria-current="page">Gallery</a>
-        <a href="about.html">About</a>
-        <a href="service-area.html">Service Area</a>
-        <a class="nav-book" href="book-now.html">Book Now ↗</a>
-      </nav>
+            <nav class="nav" id="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html" aria-current="page">Gallery</a>
+                <a href="about.html">About Us</a>
+                <a href="service-area.html">Service Area</a>
+                <a href="book-now.html" class="nav-book">Book Now ↗</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-hero">
+            <div class="container gallery-hero-content">
+                <p class="eyebrow">Real work. Careful details.</p>
+
+                <h1>
+                    See the <span>Enhance Difference.</span>
+                </h1>
+
+                <p class="hero-copy">
+                    Explore our detailing showcase. Tap any photo to see it
+                    larger, then swipe or use the arrows to move through the
+                    entire gallery.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn btn-gold" href="#gallery">Explore the Gallery ↓</a>
+                    <a class="btn btn-outline" href="book-now.html">Book Your Detail ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+            <div class="container">
+                <div class="gallery-heading">
+                    <div>
+                        <p class="eyebrow">The Gallery</p>
+                        <h2 id="gallery-title">A Closer Look at <span class="gold">Our Work.</span></h2>
+                        <p class="gallery-description">
+                            Browse the full collection below. Select any image
+                            to enlarge it, swipe through the photos on your
+                            phone, or use the left and right arrows.
+                        </p>
+                    </div>
+
+                    <p class="gallery-count">20 PHOTOS</p>
+                </div>
+
+                <div class="gallery-grid" id="gallery-grid">
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="0" aria-label="Enlarge gallery photo 1">
+                            <img src="images/IMG_3412.webp" alt="Vehicle detailing showcase, photo 1" loading="lazy" decoding="async">
+                            <span class="expand-hint">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5"/>
+                                    <path d="M3 8l6-5M21 8l-6-5M3 16l6 5M21 16l-6 5"/>
+                                </svg>
+                                Enlarge
+                            </span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 01</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="1" aria-label="Enlarge gallery photo 2">
+                            <img src="images/IMG_3555.webp" alt="Vehicle detailing showcase, photo 2" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 02</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="2" aria-label="Enlarge gallery photo 3">
+                            <img src="images/IMG_3609.webp" alt="Vehicle detailing showcase, photo 3" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 03</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="3" aria-label="Enlarge gallery photo 4">
+                            <img src="images/IMG_3948.webp" alt="Vehicle detailing showcase, photo 4" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 04</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="4" aria-label="Enlarge gallery photo 5">
+                            <img src="images/IMG_4318-1.webp" alt="Vehicle detailing showcase, photo 5" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 05</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="5" aria-label="Enlarge gallery photo 6">
+                            <img src="images/IMG_4559.webp" alt="Vehicle detailing showcase, photo 6" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 06</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="6" aria-label="Enlarge gallery photo 7">
+                            <img src="images/IMG_4880.webp" alt="Vehicle detailing showcase, photo 7" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 07</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="7" aria-label="Enlarge gallery photo 8">
+                            <img src="images/IMG_3235.webp" alt="Vehicle detailing showcase, photo 8" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 08</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="8" aria-label="Enlarge gallery photo 9">
+                            <img src="images/IMG_4952.webp" alt="Vehicle detailing showcase, photo 9" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 09</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="9" aria-label="Enlarge gallery photo 10">
+                            <img src="images/IMG_4953.webp" alt="Vehicle detailing showcase, photo 10" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 10</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="10" aria-label="Enlarge gallery photo 11">
+                            <img src="images/IMG_4890.webp" alt="Vehicle detailing showcase, photo 11" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 11</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="11" aria-label="Enlarge gallery photo 12">
+                            <img src="images/IMG_4876.webp" alt="Vehicle detailing showcase, photo 12" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 12</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="12" aria-label="Enlarge gallery photo 13">
+                            <img src="images/IMG_4600.webp" alt="Vehicle detailing showcase, photo 13" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 13</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="13" aria-label="Enlarge gallery photo 14">
+                            <img src="images/IMG_4592.webp" alt="Vehicle detailing showcase, photo 14" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 14</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="14" aria-label="Enlarge gallery photo 15">
+                            <img src="images/IMG_4587.webp" alt="Vehicle detailing showcase, photo 15" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 15</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="15" aria-label="Enlarge gallery photo 16">
+                            <img src="images/IMG_4584.webp" alt="Vehicle detailing showcase, photo 16" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 16</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="16" aria-label="Enlarge gallery photo 17">
+                            <img src="images/IMG_4564.webp" alt="Vehicle detailing showcase, photo 17" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 17</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="17" aria-label="Enlarge gallery photo 18">
+                            <img src="images/IMG_3956.webp" alt="Vehicle detailing showcase, photo 18" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 18</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="18" aria-label="Enlarge gallery photo 19">
+                            <img src="images/IMG_3926.webp" alt="Vehicle detailing showcase, photo 19" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 19</span></figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <button class="gallery-image-button" type="button" data-index="19" aria-label="Enlarge gallery photo 20">
+                            <img src="images/IMG_3601.webp" alt="Vehicle detailing showcase, photo 20" loading="lazy" decoding="async">
+                            <span class="expand-hint">⤢ Enlarge</span>
+                        </button>
+                        <figcaption class="gallery-caption">Enhance My Ride <span>Detailing showcase · 20</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing call to action -->
+        <section class="cta">
+            <div class="container cta-content">
+                <p class="eyebrow">Your Next Detail Starts Here</p>
+                <h2>Ready to <span class="gold">Enhance Your Ride?</span></h2>
+                <p>
+                    Tell us about your vehicle, what you'd like done, and where
+                    you're located. We'll review your request and help you take
+                    the next step.
+                </p>
+
+                <div class="actions">
+                    <a class="btn btn-gold" href="book-now.html">Request an Appointment ↗</a>
+                    <a class="btn btn-outline" href="tel:+13233271806">Call (323) 327-1806</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <a class="footer-brand" href="index.html" aria-label="Enhance My Ride home">
+                        <img
+                            class="footer-logo"
+                            src="images/enhance-my-ride-logo.webp?v=3"
+                            alt="Enhance My Ride logo"
+                            width="1254"
+                            height="1254"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                        <span>
+                            <span class="footer-brand-name">Enhance My Ride</span>
+                            <span class="footer-brand-sub">Auto Spa &amp; Mobile Detailing</span>
+                        </span>
+                    </a>
+
+                    <p class="footer-text">
+                        Premium mobile detailing based in Alameda, California.
+                        Professional vehicle care delivered to a suitable location near you.
+                    </p>
+
+                    <p class="footer-slogan">We come to you. You relax. We Enhance.</p>
+                </div>
+
+                <div>
+                    <h2 class="footer-heading">Explore</h2>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="service-area.html">Service Area</a></li>
+                        <li><a href="book-now.html">Book Now</a></li>
+                        <li><a href="booking-policies.html">Booking Policies</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="footer-heading">Follow Us</h2>
+                    <p class="footer-text">
+                        Follow our work, vehicle transformations, and mobile detailing journey.
+                    </p>
+
+                    <div class="socials">
+                        <a class="social-link"
+                           href="https://www.instagram.com/enhancemyridemobiledetailing/"
+                           target="_blank" rel="noopener noreferrer"
+                           aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm5 3.1a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4Zm0 2.2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm5.1-3.4a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/>
+                            </svg>
+                        </a>
+
+                        <a class="social-link"
+                           href="https://www.facebook.com/enhancemyridemobiledetailing/"
+                           target="_blank" rel="noopener noreferrer"
+                           aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M13.5 22v-8.8h3l.45-3.45H13.5V7.55c0-1 .28-1.68 1.72-1.68h1.84V2.78A24 24 0 0 0 14.38 2C11.72 2 9.9 3.62 9.9 6.6v3.15H6.9v3.45h3V22h3.6Z"/>
+                            </svg>
+                        </a>
+
+                        <a class="social-link"
+                           href="https://www.tiktok.com/@enhancemyride"
+                           target="_blank" rel="noopener noreferrer"
+                           aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19.6 6.3a6.4 6.4 0 0 1-4.1-4.1V2h-3.8v13.7a2.9 2.9 0 1 1-2-2.75V9.1a7 7 0 1 0 5.8 6.9V9a10 10 0 0 0 5.8 1.85V7.1a6.5 6.5 0 0 1-1.7-.8Z"/>
+                            </svg>
+                        </a>
+
+                        <a class="social-link"
+                           href="https://www.youtube.com/@enhancemyride"
+                           target="_blank" rel="noopener noreferrer"
+                           aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <ul class="footer-links" style="margin-top:22px">
+                        <li><a href="tel:+13233271806">(323) 327-1806</a></li>
+                        <li><a href="mailto:info@enhancemyride.com">info@enhancemyride.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="current-year">2026</span> Enhance My Ride Auto Spa &amp; Mobile Detailing.</p>
+                <p class="footer-tagline">Premium care. Delivered to your door.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a class="floating-call" href="tel:+13233271806" aria-label="Call Enhance My Ride now">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.3 11.3 0 0 0 3.55.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.3 11.3 0 0 0 .57 3.55 1 1 0 0 1-.25 1l-2.22 2.25Z"/>
+        </svg>
+        <span>Call Now</span>
+    </a>
+
+    <!-- Enlarged gallery viewer -->
+    <div
+        class="lightbox"
+        id="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Enlarged photo gallery"
+        aria-hidden="true"
+    >
+        <div class="lightbox-content">
+            <div class="lightbox-toolbar">
+                <span class="lightbox-counter" id="lightbox-counter">1 / 20</span>
+                <button
+                    class="lightbox-close"
+                    id="lightbox-close"
+                    type="button"
+                    aria-label="Close enlarged image"
+                >×</button>
+            </div>
+
+            <button
+                class="lightbox-arrow lightbox-prev"
+                id="lightbox-prev"
+                type="button"
+                aria-label="Previous photo"
+            >‹</button>
+
+            <div class="lightbox-stage" id="lightbox-stage">
+                <img class="lightbox-image" id="lightbox-image" src="" alt="">
+            </div>
+
+            <button
+                class="lightbox-arrow lightbox-next"
+                id="lightbox-next"
+                type="button"
+                aria-label="Next photo"
+            >›</button>
+
+            <p class="lightbox-caption">
+                <span id="lightbox-caption">Enhance My Ride detailing showcase</span>
+                <span class="lightbox-help">Swipe to browse · Use arrows to navigate · Tap × to exit</span>
+            </p>
+        </div>
     </div>
-  </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">Real work. Careful details.</p>
-        <h1>See the <span class="gold">Enhance Difference.</span></h1>
-        <p class="copy">Explore photos from the Enhance My Ride detailing showcase. Every vehicle and every result is different; ask us what is right for yours.</p>
-        <div class="page-actions">
-          <a class="btn" href="book-now.html">Book Your Detail</a>
-          <a class="btn outline" href="services.html">Explore Services</a>
-        </div>
-      </div>
-    </section>
+    <script>
+        (() => {
+            /* Mobile navigation */
+            const menuButton = document.querySelector(".menu");
+            const nav = document.getElementById("main-nav");
 
-    <section class="page-section" id="gallery">
-      <div class="container">
-        <div class="section-intro">
-          <p class="eyebrow">The gallery</p>
-          <h2 class="section-title">A closer look at <span class="gold">our work.</span></h2>
-          <p class="copy">Browse our existing detailing photos. The original image filenames are preserved so you do not have to rename the files in your images folder.</p>
-        </div>
+            if (menuButton && nav) {
+                menuButton.addEventListener("click", () => {
+                    const isOpen = nav.classList.toggle("is-open");
 
-        <div class="gallery-grid">
-          <figure class="gallery-card">
-            <a href="images/IMG_3235.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_3235.webp" alt="Enhance My Ride detailing photo 1" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_3412.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_3412.webp" alt="Enhance My Ride detailing photo 2" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_3555.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_3555.webp" alt="Enhance My Ride detailing photo 3" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_3601.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_3601.webp" alt="Enhance My Ride detailing photo 4" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_3609.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_3609.webp" alt="Enhance My Ride detailing photo 5" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_3926.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_3926.webp" alt="Enhance My Ride detailing photo 6" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_3948.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_3948.webp" alt="Enhance My Ride detailing photo 7" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_3956.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_3956.webp" alt="Enhance My Ride detailing photo 8" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_4318-1.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_4318-1.webp" alt="Enhance My Ride detailing photo 9" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_4559.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_4559.webp" alt="Enhance My Ride detailing photo 10" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_4564.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_4564.webp" alt="Enhance My Ride detailing photo 11" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_4584.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_4584.webp" alt="Enhance My Ride detailing photo 12" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_4587.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_4587.webp" alt="Enhance My Ride detailing photo 13" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_4592.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_4592.webp" alt="Enhance My Ride detailing photo 14" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_4600.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_4600.webp" alt="Enhance My Ride detailing photo 15" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_4876.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_4876.webp" alt="Enhance My Ride detailing photo 16" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_4880.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_4880.webp" alt="Enhance My Ride detailing photo 17" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_4890.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_4890.webp" alt="Enhance My Ride detailing photo 18" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_4952.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_4952.webp" alt="Enhance My Ride detailing photo 19" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <a href="images/IMG_4953.webp" target="_blank" rel="noopener noreferrer"><img src="images/IMG_4953.webp" alt="Enhance My Ride detailing photo 20" loading="lazy" decoding="async"></a>
-            <figcaption>Enhance My Ride · Detailing showcase</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+                    menuButton.setAttribute("aria-expanded", String(isOpen));
+                    menuButton.setAttribute(
+                        "aria-label",
+                        isOpen ? "Close navigation" : "Open navigation"
+                    );
+                    menuButton.textContent = isOpen ? "×" : "☰";
+                });
 
-    <section class="page-section" id="specialty-gallery">
-      <div class="container">
-        <div class="section-intro">
-          <p class="eyebrow">Specialty work</p>
-          <h2 class="section-title">More ways to <span class="gold">Enhance.</span></h2>
-          <p class="copy">These dedicated sections are ready for your additional photos once you finish organizing the website images.</p>
-        </div>
+                nav.querySelectorAll("a").forEach((link) => {
+                    link.addEventListener("click", () => {
+                        nav.classList.remove("is-open");
+                        menuButton.setAttribute("aria-expanded", "false");
+                        menuButton.setAttribute("aria-label", "Open navigation");
+                        menuButton.textContent = "☰";
+                    });
+                });
 
-        <div class="specialty-grid">
-          <article class="specialty-card">
-            <h3>Headlight Restoration</h3>
-            <p>Before-and-after photos will be added here.</p>
-          </article>
-          <article class="specialty-card">
-            <h3>Engine Bay Detailing</h3>
-            <p>Engine bay detail photos will be added here.</p>
-          </article>
-          <article class="specialty-card">
-            <h3>Stain, Mold &amp; Mildew Treatment</h3>
-            <p>Interior treatment photos will be added here.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+                document.addEventListener("keydown", (event) => {
+                    if (event.key === "Escape") {
+                        nav.classList.remove("is-open");
+                        menuButton.setAttribute("aria-expanded", "false");
+                        menuButton.setAttribute("aria-label", "Open navigation");
+                        menuButton.textContent = "☰";
+                    }
+                });
+            }
 
-    <section class="page-section">
-      <div class="container">
-        <div class="callout">
-          <p class="eyebrow">Ready for your own transformation?</p>
-          <h2 class="section-title">Let's care for your <span class="gold">vehicle.</span></h2>
-          <p class="copy">Tell us about your vehicle and the results you want. We'll review your request, provide a quote, and confirm your appointment through our booking process.</p>
-          <div class="page-actions">
-            <a class="btn" href="book-now.html">Request an Appointment</a>
-            <a class="btn outline" href="services.html">View Packages</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+            /* Update copyright year */
+            const year = document.getElementById("current-year");
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div>
-          <h2 class="footer-heading">Enhance My Ride</h2>
-          <p class="footer-text">Auto Spa &amp; Mobile Detailing<br>We come to you. You relax. We Enhance.</p>
-        </div>
+            if (year) {
+                year.textContent = new Date().getFullYear();
+            }
 
-        <div>
-          <h2 class="footer-heading">Explore</h2>
-          <div class="footer-links">
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
-            <a href="service-area.html">Service Area</a>
-            <a href="book-now.html">Book Now</a>
-          </div>
-          <p class="footer-text" style="margin-top:14px">
-            <a href="tel:+13233271806">(323) 327-1806</a><br>
-            <a href="mailto:info@enhancemyride.com">info@enhancemyride.com</a>
-          </p>
-        </div>
+            /* Gallery lightbox */
+            const galleryButtons = Array.from(
+                document.querySelectorAll(".gallery-image-button")
+            );
 
-        <div class="follow">
-          <h2 class="footer-heading">Follow Us</h2>
-          <div class="socials">
-            <a href="https://www.facebook.com/enhancemyridemobiledetailing/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v1.9H7v3.1h2.8v8z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/enhancemyridemobiledetailing/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4zm4.5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.2-3.4a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
-            </a>
-            <a href="https://www.tiktok.com/@enhancemyride" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 6.3a6.6 6.6 0 0 1-4.1-4.1V2h-3.8v13.7a2.9 2.9 0 1 1-2-2.8V9a6.8 6.8 0 1 0 5.8 6.7V9.1a10.3 10.3 0 0 0 5.2 1.4V6.7c-.4 0-.7-.1-1.1-.4z"/></svg>
-            </a>
-            <a href="https://www.youtube.com/@enhancemyridemobiledetailing" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImage = document.getElementById("lightbox-image");
+            const lightboxCounter = document.getElementById("lightbox-counter");
+            const lightboxCaption = document.getElementById("lightbox-caption");
+            const closeButton = document.getElementById("lightbox-close");
+            const previousButton = document.getElementById("lightbox-prev");
+            const nextButton = document.getElementById("lightbox-next");
+            const lightboxStage = document.getElementById("lightbox-stage");
 
-      <div class="footer-bottom">
-        <span>© <span id="year">2026</span> Enhance My Ride Auto Spa &amp; Mobile Detailing</span>
-        <span>Premium care. Delivered to your door.</span>
-      </div>
-    </div>
-  </footer>
+            let currentIndex = 0;
+            let lastFocusedElement = null;
+            let touchStartX = 0;
+            let touchStartY = 0;
+            let touchEndX = 0;
+            let touchEndY = 0;
 
-  <a class="floating-call" href="tel:+13233271806" aria-label="Call Enhance My Ride at (323) 327-1806">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.56 3.57.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.19 2.45.56 3.57a1 1 0 0 1-.25 1.02z"/></svg>
-    <span>Call Now</span>
-  </a>
+            const galleryImages = galleryButtons.map((button, index) => {
+                const image = button.querySelector("img");
 
-  <script>
-    (() => {
-      const menuButton = document.querySelector(".menu");
-      const nav = document.querySelector("#main-nav");
+                return {
+                    src: image.getAttribute("src"),
+                    alt: image.getAttribute("alt") || `Gallery photo ${index + 1}`,
+                    caption: `Enhance My Ride · Detailing showcase ${String(index + 1).padStart(2, "0")}`
+                };
+            });
 
-      if (menuButton && nav) {
-        menuButton.addEventListener("click", () => {
-          const open = nav.classList.toggle("open");
-          menuButton.setAttribute("aria-expanded", String(open));
-          menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
-          menuButton.textContent = open ? "×" : "☰";
-        });
+            function showImage(index) {
+                if (!galleryImages.length) return;
 
-        nav.querySelectorAll("a").forEach(link => {
-          link.addEventListener("click", () => {
-            nav.classList.remove("open");
-            menuButton.setAttribute("aria-expanded", "false");
-            menuButton.setAttribute("aria-label", "Open navigation");
-            menuButton.textContent = "☰";
-          });
-        });
-      }
+                currentIndex =
+                    (index + galleryImages.length) % galleryImages.length;
 
-      const year = document.querySelector("#year");
-      if (year) year.textContent = new Date().getFullYear();
-    })();
-  </script>
+                const photo = galleryImages[currentIndex];
+
+                lightboxImage.src = photo.src;
+                lightboxImage.alt = photo.alt;
+                lightboxCounter.textContent =
+                    `${currentIndex + 1} / ${galleryImages.length}`;
+                lightboxCaption.textContent = photo.caption;
+
+                previousButton.disabled = false;
+                nextButton.disabled = false;
+            }
+
+            function openLightbox(index) {
+                lastFocusedElement = document.activeElement;
+
+                showImage(index);
+
+                lightbox.classList.add("is-open");
+                lightbox.setAttribute("aria-hidden", "false");
+                document.body.classList.add("no-scroll");
+
+                closeButton.focus();
+            }
+
+            function closeLightbox() {
+                if (!lightbox.classList.contains("is-open")) return;
+
+                lightbox.classList.remove("is-open");
+                lightbox.setAttribute("aria-hidden", "true");
+                document.body.classList.remove("no-scroll");
+
+                lightboxImage.removeAttribute("src");
+
+                if (lastFocusedElement) {
+                    lastFocusedElement.focus();
+                }
+            }
+
+            function showPrevious() {
+                showImage(currentIndex - 1);
+            }
+
+            function showNext() {
+                showImage(currentIndex + 1);
+            }
+
+            galleryButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    openLightbox(Number(button.dataset.index));
+                });
+            });
+
+            closeButton.addEventListener("click", closeLightbox);
+            previousButton.addEventListener("click", showPrevious);
+            nextButton.addEventListener("click", showNext);
+
+            /* Close when tapping the dark background */
+            lightbox.addEventListener("click", (event) => {
+                if (event.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            /* Keyboard navigation */
+            document.addEventListener("keydown", (event) => {
+                if (!lightbox.classList.contains("is-open")) return;
+
+                if (event.key === "Escape") {
+                    event.preventDefault();
+                    closeLightbox();
+                } else if (event.key === "ArrowLeft") {
+                    event.preventDefault();
+                    showPrevious();
+                } else if (event.key === "ArrowRight") {
+                    event.preventDefault();
+                    showNext();
+                }
+            });
+
+            /* Touch swipe support for iPhone and other touchscreens */
+            lightboxStage.addEventListener("touchstart", (event) => {
+                if (!event.touches.length) return;
+
+                touchStartX = event.touches[0].clientX;
+                touchStartY = event.touches[0].clientY;
+                touchEndX = touchStartX;
+                touchEndY = touchStartY;
+            }, { passive: true });
+
+            lightboxStage.addEventListener("touchmove", (event) => {
+                if (!event.touches.length) return;
+
+                touchEndX = event.touches[0].clientX;
+                touchEndY = event.touches[0].clientY;
+            }, { passive: true });
+
+            lightboxStage.addEventListener("touchend", () => {
+                const deltaX = touchEndX - touchStartX;
+                const deltaY = touchEndY - touchStartY;
+                const minimumSwipe = 45;
+
+                if (
+                    Math.abs(deltaX) >= minimumSwipe &&
+                    Math.abs(deltaX) > Math.abs(deltaY) * 1.2
+                ) {
+                    if (deltaX < 0) {
+                        showNext();
+                    } else {
+                        showPrevious();
+                    }
+                }
+
+                touchStartX = 0;
+                touchStartY = 0;
+                touchEndX = 0;
+                touchEndY = 0;
+            }, { passive: true });
+
+            /* Preload adjacent images for smoother navigation */
+            function preloadImage(src) {
+                const image = new Image();
+                image.src = src;
+            }
+
+            lightbox.addEventListener("transitionend", () => {
+                if (!lightbox.classList.contains("is-open")) return;
+
+                preloadImage(
+                    galleryImages[(currentIndex + 1) % galleryImages.length].src
+                );
+                preloadImage(
+                    galleryImages[
+                        (currentIndex - 1 + galleryImages.length) %
+                        galleryImages.length
+                    ].src
+                );
+            });
+        })();
+    </script>
 </body>
 </html>
