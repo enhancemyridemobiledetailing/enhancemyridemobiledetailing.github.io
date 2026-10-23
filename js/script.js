@@ -1,4 +1,3 @@
-
 // ============================================================
 // ENHANCE MY RIDE AUTO SPA & MOBILE DETAILING
 // SHARED WEBSITE JAVASCRIPT
