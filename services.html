@@ -1,16 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Services &amp; Packages | Enhance My Ride Auto Spa &amp; Mobile Detailing</title>
-  <meta name="description" content="Explore premium mobile detailing packages, specialty vehicle care, and starting prices from Enhance My Ride Auto Spa & Mobile Detailing in Alameda and the San Francisco Bay Area.">
+  <title>Mobile Detailing Services &amp; Packages | Enhance My Ride</title>
+  <meta name="description" content="Explore mobile detailing packages from Enhance My Ride Auto Spa & Mobile Detailing. Compare Enhance Gold, Enhance Black Label, Showroom Edition, and specialty detailing services across Alameda and the San Francisco Bay Area.">
   <meta name="theme-color" content="#080808">
   <link rel="canonical" href="https://enhancemyride.com/services.html">
 
-  <meta property="og:title" content="Services &amp; Packages | Enhance My Ride Auto Spa &amp; Mobile Detailing">
-  <meta property="og:description" content="Explore mobile detailing packages and specialty services. We come to you. You relax. We Enhance.">
+  <meta property="og:title" content="Services | Enhance My Ride Auto Spa &amp; Mobile Detailing">
+  <meta property="og:description" content="Explore premium mobile detailing packages and specialty services. We come to you. You relax. We Enhance.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://enhancemyride.com/services.html">
 
@@ -111,7 +112,7 @@
     }
 
     h3 {
-      font-size: 1.35rem;
+      font-size: 1.2rem;
     }
 
     p {
@@ -151,7 +152,7 @@
       background: rgba(212, 175, 55, .08);
     }
 
-    /* SHARED SITE HEADER — MATCHES ABOUT PAGE */
+    /* SHARED SITE HEADER — MATCHES ABOUT.HTML */
 
     .site-header {
       position: sticky;
@@ -251,40 +252,101 @@
 
     /* SERVICES HERO */
 
-    .page-hero {
-      padding: 88px 0 78px;
+    .hero {
+      padding: 100px 0 90px;
       border-bottom: 1px solid var(--line);
       background:
-        radial-gradient(ellipse at 85% 15%, rgba(212, 175, 55, .12), transparent 40%),
+        radial-gradient(ellipse at 85% 20%, rgba(212, 175, 55, .12), transparent 38%),
         linear-gradient(135deg, #0b0b0a, #11110f 58%, #080808);
     }
 
-    .page-hero h1 {
-      max-width: 900px;
-      margin-bottom: 22px;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      align-items: center;
+      gap: 64px;
     }
 
-    .page-hero .copy {
-      max-width: 740px;
+    .hero-copy {
+      max-width: 760px;
+    }
+
+    .hero-copy > p:not(.eyebrow) {
+      max-width: 690px;
       font-size: 1rem;
     }
 
-    .hero-actions {
+    .actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
       margin-top: 30px;
     }
 
-    /* PACKAGE SECTIONS */
+    .hero-mark {
+      display: flex;
+      min-height: 330px;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background:
+        radial-gradient(circle, rgba(212, 175, 55, .1), transparent 65%),
+        var(--panel);
+    }
 
-    .page-section {
-      padding: 82px 0;
+    .hero-mark img {
+      width: min(100%, 310px);
+      max-height: 310px;
+      object-fit: contain;
+    }
+
+    /* PACKAGE HIGHLIGHTS */
+
+    .highlights {
       border-bottom: 1px solid var(--line);
+      background: #0d0d0c;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .highlight {
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .highlight + .highlight {
+      border-left: 1px solid var(--line);
+    }
+
+    .highlight strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--gold-light);
+    }
+
+    .highlight span {
+      color: var(--muted);
+      font-size: .84rem;
+    }
+
+    /* GENERAL SECTIONS */
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-dark {
+      border-block: 1px solid var(--line);
+      background: var(--panel);
     }
 
     .section-intro {
-      max-width: 790px;
+      max-width: 760px;
       margin-bottom: 38px;
     }
 
@@ -292,166 +354,227 @@
       margin-bottom: 0;
     }
 
-    .copy {
-      max-width: 750px;
-      margin-top: 16px;
-      line-height: 1.9;
-    }
+    /* PACKAGES */
 
-    .page-grid {
+    .package-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       align-items: stretch;
       gap: 20px;
     }
 
-    .page-card {
+    .package-card {
+      position: relative;
       display: flex;
-      min-width: 0;
       flex-direction: column;
-      align-items: flex-start;
-      padding: 30px;
+      padding: 30px 26px;
       border: 1px solid var(--line);
       border-radius: 5px;
-      background:
-        linear-gradient(145deg, rgba(212, 175, 55, .055), transparent 55%),
-        #101010;
+      background: #0b0b0b;
     }
 
-    .page-card.featured {
+    .package-card.featured {
       border-color: var(--gold);
-      box-shadow: inset 0 3px 0 var(--gold);
       background:
-        linear-gradient(145deg, rgba(212, 175, 55, .11), transparent 65%),
-        #111110;
+        linear-gradient(160deg, rgba(212, 175, 55, .12), transparent 55%),
+        #0b0b0b;
     }
 
-    .card-kicker {
+    .package-label {
+      margin-bottom: 12px;
       color: var(--gold-light);
-      font-size: .7rem;
-      font-weight: 700;
-      letter-spacing: .15em;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .14em;
       text-transform: uppercase;
     }
 
-    .page-card h3 {
-      margin: 14px 0 0;
-      font-size: 1.65rem;
+    .package-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.45rem;
     }
 
-    .price {
-      margin: 18px 0 0;
-      color: var(--gold-light);
-      font-family: "Playfair Display", Georgia, serif;
+    .package-price {
+      margin: 0 0 3px;
+      color: var(--white);
       font-size: 2.7rem;
+      font-weight: 800;
       line-height: 1.2;
+      letter-spacing: -.04em;
     }
 
-    .price small {
-      color: var(--muted);
-      font-family: "Montserrat", Arial, sans-serif;
-      font-size: .75rem;
-      font-weight: 500;
+    .package-price span {
+      color: var(--gold-light);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0;
     }
 
-    .page-card .card-description {
-      margin: 16px 0 0;
-      color: var(--muted);
-      line-height: 1.8;
+    .package-description {
+      min-height: 76px;
+      margin: 15px 0 20px;
+      font-size: .9rem;
     }
 
-    .page-card ul {
-      width: 100%;
+    .package-divider {
+      height: 1px;
+      margin: 0 0 20px;
+      border: 0;
+      background: var(--line);
+    }
+
+    .package-features {
+      display: grid;
+      gap: 12px;
       padding: 0;
-      margin: 22px 0 28px;
+      margin: 0 0 28px;
       list-style: none;
     }
 
-    .page-card li {
-      position: relative;
-      padding: 9px 0 9px 25px;
-      border-bottom: 1px solid rgba(255, 255, 255, .06);
+    .package-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
       color: #dedbd2;
-      font-size: .9rem;
-      line-height: 1.65;
+      font-size: .88rem;
     }
 
-    .page-card li::before {
-      position: absolute;
-      top: 9px;
-      left: 0;
+    .feature-check {
+      flex: 0 0 auto;
       color: var(--gold-light);
-      content: "✓";
       font-weight: 800;
     }
 
-    .card-actions {
+    .package-card .btn {
       width: 100%;
       margin-top: auto;
     }
 
-    .card-actions .btn {
-      width: 100%;
-    }
-
-    .price-note {
-      margin-top: 28px;
-      color: var(--muted);
-      font-size: .84rem;
-      line-height: 1.9;
+    .pricing-note {
+      margin: 28px 0 0;
+      padding: 20px 22px;
+      border-left: 3px solid var(--gold);
+      background: var(--panel);
+      font-size: .88rem;
     }
 
     /* SPECIALTY SERVICES */
 
-    .specialty-section {
-      background: #0d0d0c;
-    }
-
     .specialty-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      gap: 20px;
     }
 
     .specialty-card {
-      padding: 26px;
+      padding: 27px;
       border: 1px solid var(--line);
       border-radius: 5px;
-      background: #090909;
+      background: #0b0b0b;
     }
 
     .specialty-card h3 {
-      margin-bottom: 12px;
-      color: var(--gold-light);
-      font-size: 1.3rem;
+      margin-bottom: 10px;
     }
 
     .specialty-card p {
       margin: 0;
-      font-size: .92rem;
-      line-height: 1.85;
+      font-size: .9rem;
     }
 
-    /* QUOTE CALLOUT */
+    .specialty-tag {
+      display: inline-block;
+      margin-bottom: 15px;
+      color: var(--gold-light);
+      font-size: .69rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
 
-    .callout {
-      padding: 38px;
+    .service-note {
+      margin-top: 30px;
+      padding: 25px 28px;
+      border-left: 3px solid var(--gold);
+      background: #0b0b0b;
+    }
+
+    .service-note h3 {
+      margin-bottom: 10px;
+    }
+
+    .service-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* PROCESS */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .process-card {
+      padding: 28px;
       border: 1px solid var(--line);
       border-radius: 5px;
+      background: #0b0b0b;
+    }
+
+    .process-number {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      color: var(--gold-light);
+      font-weight: 800;
+    }
+
+    .process-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .process-card p {
+      margin-bottom: 0;
+      font-size: .92rem;
+    }
+
+    .text-link {
+      color: var(--gold-light);
+      text-underline-offset: 4px;
+    }
+
+    /* CLOSING CTA — MATCHES ABOUT.HTML */
+
+    .cta {
+      padding: 78px 0;
+      border-top: 1px solid var(--line);
       background:
-        radial-gradient(ellipse at 100% 0, rgba(212, 175, 55, .1), transparent 55%),
-        var(--panel);
+        radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, .12), transparent 60%),
+        #0d0d0c;
+      text-align: center;
     }
 
-    .callout .section-title {
-      max-width: 700px;
+    .cta-content {
+      max-width: 790px;
+      margin: 0 auto;
     }
 
-    .callout .copy {
-      max-width: 720px;
+    .cta-content > p:not(.eyebrow) {
+      max-width: 650px;
+      margin: 0 auto 28px;
     }
 
-    /* SHARED SITE FOOTER — MATCHES ABOUT PAGE */
+    .cta .actions {
+      justify-content: center;
+    }
+
+    /* SHARED SITE FOOTER — MATCHES ABOUT.HTML */
 
     .site-footer {
       padding: 58px 0 20px;
@@ -593,7 +716,7 @@
       color: var(--gold-light) !important;
     }
 
-    /* FLOATING CALL BUTTON */
+    /* FLOATING CALL BUTTON — MATCHES ABOUT.HTML */
 
     .floating-call {
       position: fixed;
@@ -635,12 +758,12 @@
         gap: 28px;
       }
 
-      .page-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .hero-grid {
+        gap: 38px;
       }
 
-      .specialty-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .package-card {
+        padding: 25px 20px;
       }
     }
 
@@ -700,12 +823,49 @@
         text-align: center;
       }
 
-      .page-hero {
-        padding: 70px 0 62px;
+      .hero {
+        padding: 72px 0;
       }
 
-      .page-section {
-        padding: 66px 0;
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-mark {
+        min-height: 240px;
+      }
+
+      .hero-mark img {
+        width: min(100%, 230px);
+        max-height: 230px;
+      }
+
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .highlight {
+        padding: 18px;
+      }
+
+      .highlight + .highlight {
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .package-grid,
+      .specialty-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .package-description {
+        min-height: 0;
       }
 
       .footer-top {
@@ -719,26 +879,13 @@
         font-size: clamp(2.5rem, 11vw, 3.5rem);
       }
 
-      .page-grid,
-      .specialty-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .page-card {
-        padding: 25px;
-      }
-
-      .hero-actions {
+      .actions {
         align-items: stretch;
         flex-direction: column;
       }
 
-      .hero-actions .btn {
+      .actions .btn {
         width: 100%;
-      }
-
-      .callout {
-        padding: 25px;
       }
 
       .footer-top {
@@ -810,214 +957,373 @@
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">Premium Mobile Detailing · San Francisco Bay Area</p>
-        <h1>More Than a Wash.<br><span class="gold">A Higher Standard.</span></h1>
-        <p class="copy">
-          Choose the level of care your vehicle needs. We bring our mobile
-          detailing setup to you, with thoughtful workmanship and attention
-          to detail from the first touch to the final inspection.
-        </p>
-        <div class="hero-actions">
-          <a class="btn" href="book-now.html">Request an Appointment ↗</a>
-          <a class="btn btn-outline" href="gallery.html">View Our Work</a>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Our Detailing Services</p>
+
+          <h1>
+            More Than a Clean.<br>
+            <span class="gold">A Higher Standard.</span>
+          </h1>
+
+          <p>
+            Discover mobile detailing designed around your vehicle's
+            needs. From a thorough interior and exterior refresh to
+            more comprehensive detailing, Enhance My Ride brings
+            professional vehicle care to a suitable agreed location.
+          </p>
+
+          <p>
+            Choose the package that best fits your goals, then contact
+            us to discuss your vehicle, its condition, and any additional
+            services you may need.
+          </p>
+
+          <div class="actions">
+            <a class="btn" href="book-now.html">Request an Appointment ↗</a>
+            <a class="btn btn-outline" href="#packages">Compare Packages</a>
+          </div>
+        </div>
+
+        <div class="hero-mark">
+          <img
+            src="images/enhance-my-ride-logo.webp?v=3"
+            alt="Enhance My Ride Auto Spa and Mobile Detailing logo"
+            width="1254"
+            height="1254"
+            fetchpriority="high"
+          >
         </div>
       </div>
     </section>
 
-    <section class="page-section" id="packages">
+    <section class="highlights" aria-label="Our detailing services">
+      <div class="container highlights-grid">
+        <div class="highlight">
+          <strong>Three Detail Packages</strong>
+          <span>Choose a starting level of service</span>
+        </div>
+
+        <div class="highlight">
+          <strong>Specialty Add-Ons</strong>
+          <span>Additional care for specific needs</span>
+        </div>
+
+        <div class="highlight">
+          <strong>Mobile Convenience</strong>
+          <span>Service at an agreed location</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="packages">
       <div class="container">
         <div class="section-intro">
-          <p class="eyebrow">Our Packages</p>
-          <h2>Three Levels of <span class="gold">Enhancement.</span></h2>
-          <p class="copy">
-            Starting prices are shown below. Your final quote depends on
-            vehicle size, condition, pet hair, stains, and requested services.
+          <p class="eyebrow">Choose Your Detail</p>
+
+          <h2>
+            Find your
+            <span class="gold">perfect package.</span>
+          </h2>
+
+          <p>
+            Each package provides a starting point for your detail.
+            The right option depends on your vehicle's condition,
+            your priorities, and the results you're looking for.
+            Ask us about the appropriate service before booking.
           </p>
         </div>
 
-        <div class="page-grid">
-          <article class="page-card">
-            <span class="card-kicker">Essential Care</span>
+        <div class="package-grid">
+          <article class="package-card">
+            <p class="package-label">Essential Care</p>
+
             <h3>Enhance Gold</h3>
-            <p class="price">$149 <small>starting</small></p>
-            <p class="card-description">
-              A premium refresh for drivers who want their vehicle cleaned,
-              cared for, and ready for the road.
+
+            <p class="package-price">$149 <span>starting</span></p>
+
+            <p class="package-description">
+              A thoughtful refresh for drivers looking to improve
+              their vehicle's overall cleanliness and presentation.
             </p>
-            <ul>
-              <li>Exterior hand wash and dry</li>
-              <li>Wheels and tires cleaned</li>
-              <li>Interior vacuum and wipe-down</li>
-              <li>Interior glass cleaned</li>
-              <li>Tire finish and final inspection</li>
+
+            <hr class="package-divider">
+
+            <ul class="package-features">
+              <li><span class="feature-check">✓</span><span>Exterior wash and cleaning</span></li>
+              <li><span class="feature-check">✓</span><span>Wheel and tire cleaning</span></li>
+              <li><span class="feature-check">✓</span><span>Interior vacuuming</span></li>
+              <li><span class="feature-check">✓</span><span>Interior surface wipe-down</span></li>
+              <li><span class="feature-check">✓</span><span>Interior and exterior glass cleaning</span></li>
+              <li><span class="feature-check">✓</span><span>Final presentation check</span></li>
             </ul>
-            <div class="card-actions">
-              <a class="btn" href="book-now.html">Request Gold</a>
-            </div>
+
+            <a class="btn btn-outline" href="book-now.html">Request Gold ↗</a>
           </article>
 
-          <article class="page-card featured">
-            <span class="card-kicker">Premium Care</span>
+          <article class="package-card featured">
+            <p class="package-label">Enhanced Care</p>
+
             <h3>Enhance Black Label</h3>
-            <p class="price">$249 <small>starting</small></p>
-            <p class="card-description">
-              A more comprehensive detail for customers seeking deeper
-              interior attention and a refined exterior finish.
+
+            <p class="package-price">$249 <span>starting</span></p>
+
+            <p class="package-description">
+              A more comprehensive detail for drivers wanting
+              additional attention to interior and exterior condition.
             </p>
-            <ul>
-              <li>Everything included in Enhance Gold</li>
-              <li>More detailed interior cleaning</li>
-              <li>Door jambs and detailed touchpoints</li>
-              <li>Enhanced wheel and tire treatment</li>
-              <li>Protective finishing treatment where appropriate</li>
+
+            <hr class="package-divider">
+
+            <ul class="package-features">
+              <li><span class="feature-check">✓</span><span>More comprehensive exterior cleaning</span></li>
+              <li><span class="feature-check">✓</span><span>Detailed wheel and tire cleaning</span></li>
+              <li><span class="feature-check">✓</span><span>Thorough interior vacuuming</span></li>
+              <li><span class="feature-check">✓</span><span>Detailed interior surface cleaning</span></li>
+              <li><span class="feature-check">✓</span><span>Attention to accessible crevices and touchpoints</span></li>
+              <li><span class="feature-check">✓</span><span>Interior and exterior glass cleaning</span></li>
             </ul>
-            <div class="card-actions">
-              <a class="btn" href="book-now.html">Request Black Label</a>
-            </div>
+
+            <a class="btn" href="book-now.html">Request Black Label ↗</a>
           </article>
 
-          <article class="page-card">
-            <span class="card-kicker">Ultimate Treatment</span>
+          <article class="package-card">
+            <p class="package-label">Premium Presentation</p>
+
             <h3>Showroom Edition</h3>
-            <p class="price">$399 <small>starting</small></p>
-            <p class="card-description">
-              Our highest-level detail for a comprehensive reset and
-              carefully finished presentation.
+
+            <p class="package-price">$399 <span>starting</span></p>
+
+            <p class="package-description">
+              A premium detailing option for vehicles that need
+              more extensive attention and a carefully planned finish.
             </p>
-            <ul>
-              <li>Everything included in Enhance Black Label</li>
-              <li>More intensive interior and exterior detailing</li>
-              <li>Targeted attention to buildup and neglected areas</li>
-              <li>Premium protection options based on condition</li>
-              <li>Final presentation and quality check</li>
+
+            <hr class="package-divider">
+
+            <ul class="package-features">
+              <li><span class="feature-check">✓</span><span>Comprehensive interior and exterior detailing</span></li>
+              <li><span class="feature-check">✓</span><span>Detailed wheel and tire care</span></li>
+              <li><span class="feature-check">✓</span><span>Thorough cleaning of accessible interior areas</span></li>
+              <li><span class="feature-check">✓</span><span>Extra attention to vehicle presentation</span></li>
+              <li><span class="feature-check">✓</span><span>Finishing touches suited to the agreed service</span></li>
+              <li><span class="feature-check">✓</span><span>Service scope confirmed before work begins</span></li>
             </ul>
-            <div class="card-actions">
-              <a class="btn" href="book-now.html">Request Showroom</a>
-            </div>
+
+            <a class="btn btn-outline" href="book-now.html">Request Showroom ↗</a>
           </article>
         </div>
 
-        <p class="price-note">
-          All package prices are starting prices, not guaranteed final quotes.
+        <p class="pricing-note">
+          <strong class="gold">Pricing information:</strong>
+          Package prices are starting prices, not guaranteed final totals.
           Final pricing may vary based on vehicle size, condition, pet hair,
-          stains, and requested services. Intensive stain removal, heavy pet
-          hair, mold or mildew concerns, paint correction, and other specialty
-          services may require assessment and a separate quote.
+          stains, heavy soil, and requested services. We'll review the
+          details and confirm the scope and quote before work begins.
+          Specific inclusions may be adjusted to suit the agreed service.
         </p>
       </div>
     </section>
 
-    <section class="page-section specialty-section" id="specialty-services">
+    <section class="section section-dark" id="specialty-services">
       <div class="container">
         <div class="section-intro">
-          <p class="eyebrow">Specialty Services</p>
-          <h2>Details That Make a <span class="gold">Difference.</span></h2>
-          <p class="copy">
-            Specialty work may be added to a suitable package or quoted
-            separately. We review the vehicle's condition and the requested
-            scope before confirming pricing.
+          <p class="eyebrow">Specialty Detailing</p>
+
+          <h2>
+            Extra attention where
+            <span class="gold">your vehicle needs it.</span>
+          </h2>
+
+          <p>
+            Need more than a standard detail? Ask about these
+            specialty services. Availability and suitability depend
+            on the vehicle, material, condition, and requested result.
+            Add-on work is quoted separately.
           </p>
         </div>
 
         <div class="specialty-grid">
           <article class="specialty-card">
+            <span class="specialty-tag">Exterior</span>
             <h3>Headlight Restoration</h3>
             <p>
-              Improve the appearance of cloudy or oxidized headlights.
-              Results depend on lens condition and the restoration method required.
+              Help improve the appearance of cloudy or oxidized
+              headlight lenses. Results depend on lens condition
+              and the type of damage.
             </p>
           </article>
 
           <article class="specialty-card">
-            <h3>Engine Bay Detail</h3>
-            <p>
-              Careful cleaning of appropriate engine-bay surfaces using
-              methods suited to the vehicle and its condition.
-            </p>
-          </article>
-
-          <article class="specialty-card">
-            <h3>Stain Removal</h3>
-            <p>
-              Targeted treatment for interior spots and stains. Results vary
-              with material, stain type, and how long the stain has been present.
-            </p>
-          </article>
-
-          <article class="specialty-card">
-            <h3>Mold &amp; Mildew Assessment</h3>
-            <p>
-              Moisture-related concerns require assessment before work is
-              accepted. Extensive contamination may require a qualified
-              remediation specialist.
-            </p>
-          </article>
-
-          <article class="specialty-card">
-            <h3>Wheel Polishing</h3>
-            <p>
-              For suitable wheel finishes; quoted separately depending on
-              condition and finish.
-            </p>
-          </article>
-
-          <article class="specialty-card">
+            <span class="specialty-tag">Exterior</span>
             <h3>Trim Restoration</h3>
             <p>
-              Refresh faded exterior trim where the material and condition allow.
+              Refresh suitable faded exterior trim with a product
+              selected for the material and its condition.
             </p>
           </article>
 
           <article class="specialty-card">
+            <span class="specialty-tag">Wheels</span>
+            <h3>Wheel Polishing</h3>
+            <p>
+              For suitable wheel finishes; quoted separately depending
+              on condition and finish.
+            </p>
+          </article>
+
+          <article class="specialty-card">
+            <span class="specialty-tag">Interior</span>
             <h3>Pet Hair Removal</h3>
             <p>
-              Additional labor for stubborn or heavily embedded pet hair.
+              Additional attention to embedded pet hair in carpets,
+              upholstery, and other accessible interior surfaces.
+              Pricing depends on the amount and difficulty of removal.
             </p>
           </article>
 
           <article class="specialty-card">
+            <span class="specialty-tag">Interior</span>
+            <h3>Stain Removal</h3>
+            <p>
+              Targeted treatment for suitable interior stains.
+              Removal results vary with the stain, material,
+              age, and previous cleaning attempts.
+            </p>
+          </article>
+
+          <article class="specialty-card">
+            <span class="specialty-tag">Deep Cleaning</span>
             <h3>Heavy Soil Treatment</h3>
             <p>
-              Extra attention for unusually dirty interiors and accumulated grime.
+              Additional cleaning for vehicles with substantial
+              dirt buildup, neglected surfaces, or unusually
+              demanding interior conditions.
             </p>
           </article>
 
           <article class="specialty-card">
+            <span class="specialty-tag">Under the Hood</span>
+            <h3>Engine Bay Detail</h3>
+            <p>
+              Careful cleaning of suitable engine bay surfaces using
+              an approach appropriate for the vehicle and its components.
+            </p>
+          </article>
+
+          <article class="specialty-card">
+            <span class="specialty-tag">Interior Care</span>
             <h3>Odor Treatment</h3>
             <p>
-              Targeted treatment based on the odor source and affected interior materials.
+              Targeted treatment for certain unwanted vehicle odors.
+              Results depend on the source; persistent contamination
+              may require additional work.
             </p>
           </article>
 
           <article class="specialty-card">
+            <span class="specialty-tag">Paint Care</span>
             <h3>Paint Correction</h3>
             <p>
-              Quoted separately after reviewing paint condition, expectations,
-              and the level of correction requested.
+              Machine polishing intended to improve suitable paint
+              defects such as swirl marks and light surface imperfections.
+              Assessment is needed before recommending correction.
             </p>
           </article>
+
+          <article class="specialty-card">
+            <span class="specialty-tag">Paint Care</span>
+            <h3>Paint Decontamination</h3>
+            <p>
+              Ask about suitable chemical and mechanical
+              decontamination to help remove bonded contaminants
+              before polishing or applying protection.
+            </p>
+          </article>
+        </div>
+
+        <div class="service-note">
+          <h3>Not sure which service you need?</h3>
+          <p>
+            Tell us what you're seeing and what result you're hoping
+            to achieve. Photos can help us assess the condition and
+            determine whether a specialty service is appropriate.
+            We'll discuss the quote before starting additional work.
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="page-section">
+    <section class="section">
       <div class="container">
-        <div class="callout">
-          <p class="eyebrow">Not Sure Which Service Is Right?</p>
-          <h2 class="section-title">
-            Let's find the right <span class="gold">package.</span>
+        <div class="section-intro">
+          <p class="eyebrow">The Booking Process</p>
+
+          <h2>
+            Simple from inquiry
+            <span class="gold">to appointment.</span>
           </h2>
-          <p class="copy">
-            Tell us about your vehicle, its condition, and your priorities.
-            We'll review your request and provide a quote before the
-            appointment is confirmed.
+
+          <p>
+            We'll help you identify the appropriate service and
+            understand the proposed work before your detail begins.
           </p>
-          <div class="hero-actions">
-            <a class="btn" href="book-now.html">Request an Appointment ↗</a>
-            <a class="btn btn-outline" href="tel:+13233271806">Call (323) 327-1806</a>
-          </div>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card">
+            <span class="process-number">01</span>
+            <h3>Tell Us About Your Vehicle</h3>
+            <p>
+              Share your vehicle type, its condition, your location,
+              and the areas you want us to focus on.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <span class="process-number">02</span>
+            <h3>Review Your Quote</h3>
+            <p>
+              We'll review the requested services and any relevant
+              condition or travel factors before confirming the scope
+              and price.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <span class="process-number">03</span>
+            <h3>Arrange Your Detail</h3>
+            <p>
+              Once the service and appointment details are agreed,
+              we'll confirm the next steps and prepare for your detail.
+            </p>
+          </article>
+        </div>
+
+        <p class="pricing-note">
+          Mobile appointments require a suitable agreed service location.
+          See our <a class="text-link" href="service-area.html">Service Area</a>
+          page for travel coverage, and review our
+          <a class="text-link" href="booking-policies.html">Booking Policies</a>
+          before your appointment.
+        </p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-content">
+        <p class="eyebrow">Your Next Detail Starts Here</p>
+
+        <h2>Ready to <span class="gold">Enhance Your Ride?</span></h2>
+
+        <p>
+          Tell us about your vehicle, what you'd like done, and where you're located. We'll review your request and help you take the next step.
+        </p>
+
+        <div class="actions">
+          <a class="btn" href="book-now.html">Request an Appointment ↗</a>
+          <a class="btn btn-outline" href="tel:+13233271806">Call (323) 327-1806</a>
         </div>
       </div>
     </section>
