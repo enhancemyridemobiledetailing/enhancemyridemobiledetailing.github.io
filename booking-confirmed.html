@@ -1,208 +1,370 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18449761533"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18449761533');
-  gtag('event', 'conversion', {
-    'send_to': 'AW-18449761533/CyYBCI6u_fYcEP2JxN1E',
-    'value': 1.0,
-    'currency': 'USD'
-  });
-</script>
-<meta charset="UTF-8">
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-<meta
-    name="robots"
-    content="noindex, nofollow"
->
-<title>
-    Booking Confirmed | Enhance My Ride
-</title>
-<style>
+  <!-- Google Ads conversion tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18449761533"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'AW-18449761533');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#080808">
+
+  <title>Booking Confirmed | Enhance My Ride Auto Spa &amp; Mobile Detailing</title>
+
+  <link rel="icon" href="images/enhance-my-ride-logo.webp?v=3" type="image/webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #080808;
+      --black-soft: #111111;
+      --gold: #d4af37;
+      --gold-light: #f1d778;
+      --white: #ffffff;
+      --muted: #bdbdbd;
+      --border: rgba(212, 175, 55, 0.3);
+    }
+
     * {
-        box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background:
-            radial-gradient(
-                circle at center,
-                rgba(212,175,55,.10),
-                transparent 45%
-            ),
-            #050505;
-        color: #fff;
-        font-family:
-            Arial,
-            Helvetica,
-            sans-serif;
-        text-align: center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 16px;
+      background:
+        radial-gradient(
+          ellipse at top,
+          rgba(212, 175, 55, 0.12),
+          transparent 48%
+        ),
+        var(--black);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      line-height: 1.7;
     }
+
     .container {
-        width: 100%;
-        max-width: 700px;
-        padding:
-            50px 25px;
+      width: 100%;
+      max-width: 680px;
+      margin: auto;
+      padding: 36px 24px;
     }
+
+    .logo {
+      display: block;
+      width: min(190px, 58%);
+      max-height: 155px;
+      object-fit: contain;
+      margin: 0 auto 22px;
+    }
+
     .eyebrow {
-        margin-bottom: 25px;
-        color: #d4af37;
-        font-size: 10px;
-        font-weight: 800;
-        letter-spacing: .2em;
-        text-transform: uppercase;
+      margin-bottom: 17px;
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
+
     h1 {
-        margin:
-            0 0 25px;
-        font-size:
-            clamp(2.8rem, 8vw, 5.5rem);
-        line-height: .95;
+      margin-bottom: 24px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.7rem, 8vw, 4.8rem);
+      line-height: 1.08;
     }
+
     .gold {
-        color: #d4af37;
+      display: block;
+      color: var(--gold);
     }
-    p {
-        max-width: 600px;
-        margin:
-            0 auto 18px;
-        color:
-            rgba(255,255,255,.65);
-        line-height: 1.75;
-        font-size: 1.05rem;
+
+    .confirmation-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 66px;
+      height: 66px;
+      margin: 0 auto 24px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.09);
+      color: var(--gold-light);
+      font-size: 2rem;
+      font-weight: 700;
     }
+
+    .message {
+      max-width: 570px;
+      margin: 0 auto 16px;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 1rem;
+    }
+
+    .tagline {
+      margin-top: 20px;
+      color: var(--gold-light);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-style: italic;
+    }
+
+    .divider {
+      width: 76px;
+      height: 3px;
+      margin: 27px auto;
+      border-radius: 5px;
+      background: var(--gold);
+    }
+
     .service-area {
-        margin-top: 30px;
-        padding: 20px;
-        border:
-            1px solid
-            rgba(212,175,55,.18);
-        background:
-            rgba(212,175,55,.035);
+      margin-top: 28px;
+      padding: 23px 20px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: linear-gradient(
+        135deg,
+        rgba(212, 175, 55, 0.07),
+        rgba(255, 255, 255, 0.015)
+      );
     }
+
     .service-area strong {
-        display: block;
-        margin-bottom: 8px;
-        color: #d4af37;
-        font-size: .78rem;
-        letter-spacing: .12em;
-        text-transform: uppercase;
+      display: block;
+      margin-bottom: 9px;
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
-    .service-area span {
-        display: block;
-        color:
-            rgba(255,255,255,.48);
-        font-size: .82rem;
-        line-height: 1.6;
+
+    .service-area p {
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.8;
     }
+
     .button-group {
-        margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 28px;
     }
-    a {
-        display: inline-block;
-        padding:
-            15px 27px;
-        background: #d4af37;
-        color: #050505;
-        text-decoration: none;
-        font-weight: 800;
-        transition:
-            transform .25s ease,
-            background .25s ease;
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 49px;
+      padding: 14px 25px;
+      border: 1px solid var(--gold);
+      border-radius: 7px;
+      background: var(--gold);
+      color: var(--black);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
     }
-    a:hover {
-        transform: translateY(-2px);
-        background: #e0bd45;
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+      background: var(--gold-light);
+      outline: none;
     }
+
+    .button-secondary {
+      background: transparent;
+      color: var(--gold-light);
+    }
+
+    .button-secondary:hover,
+    .button-secondary:focus-visible {
+      background: rgba(212, 175, 55, 0.1);
+      color: var(--gold-light);
+    }
+
     .contact {
-        margin-top: 30px;
-        color:
-            rgba(255,255,255,.38);
-        font-size: .8rem;
+      margin-top: 30px;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.82rem;
     }
+
     .contact a {
-        margin: 0;
-        padding: 0;
-        background: transparent;
-        color: #d4af37;
-        font-weight: 700;
+      color: var(--gold-light);
+      font-weight: 700;
+      text-decoration: none;
     }
+
     .contact a:hover {
-        transform: none;
-        background: transparent;
+      text-decoration: underline;
     }
-    @media (max-width: 600px) {
-        .container {
-            padding:
-                40px 20px;
-        }
-        h1 {
-            font-size:
-                clamp(2.7rem, 14vw, 4rem);
-        }
-        p {
-            font-size: .98rem;
-        }
-        .service-area {
-            padding: 18px;
-        }
+
+    footer {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: #858585;
+      font-size: 0.72rem;
     }
-</style>
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--gold-light);
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px 5px;
+      }
+
+      .logo {
+        width: min(165px, 55%);
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 12vw, 3.5rem);
+      }
+
+      .message {
+        font-size: 0.92rem;
+      }
+
+      .service-area {
+        padding: 20px 15px;
+      }
+
+      .button-group {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="container">
-    <div class="eyebrow">
-        ENHANCE MY RIDE
-    </div>
+  <main class="container">
+    <a href="index.html" aria-label="Enhance My Ride home">
+      <img
+        class="logo"
+        src="images/enhance-my-ride-logo.webp?v=3"
+        alt="Enhance My Ride Auto Spa & Mobile Detailing"
+      >
+    </a>
+
+    <div class="eyebrow">Enhance My Ride Auto Spa &amp; Mobile Detailing</div>
+
+    <div class="confirmation-icon" aria-hidden="true">✓</div>
+
     <h1>
-        Booking
-        <span class="gold">
-            Confirmed.
-        </span>
+      Booking
+      <span class="gold">Confirmed.</span>
     </h1>
-    <p>
-        Thank you for choosing Enhance My Ride Auto Spa &
-        Mobile Detailing. Your appointment has been
-        successfully booked.
+
+    <p class="message">
+      Thank you for choosing Enhance My Ride Auto Spa &amp;
+      Mobile Detailing. We appreciate your business and look
+      forward to taking care of your vehicle.
     </p>
-    <p>
-        We look forward to bringing the Enhance experience
-        directly to you.
+
+    <p class="message">
+      Please keep an eye out for any appointment details or
+      follow-up communication from us.
     </p>
-    <div class="service-area">
-        <strong>
-            Our Service Area
-        </strong>
-        <span>
-            Standard mobile detailing service is available
-            within 40 miles of Alameda, California.
-            Extended travel may be available for an additional
-            fee, depending on location and availability.
-        </span>
-    </div>
+
+    <p class="tagline">
+      We come to you. You relax. We Enhance.
+    </p>
+
+    <div class="divider"></div>
+
+    <section class="service-area">
+      <strong>Our Service Area</strong>
+      <p>
+        We provide mobile detailing throughout Alameda and the
+        San Francisco Bay Area, with standard service generally
+        within 35 miles of Alameda, California. Extended travel
+        may be available for an additional fee, depending on
+        location and availability.
+      </p>
+    </section>
+
     <div class="button-group">
-        <a href="index.html">
-            Return Home
-        </a>
+      <a class="button" href="index.html">Return Home</a>
+      <a class="button button-secondary" href="services.html">Explore Our Services</a>
     </div>
+
     <div class="contact">
-        Questions about your appointment?
-        <a href="tel:+13233271806">
-            (323) 327-1806
-        </a>
+      Questions about your appointment?<br>
+      Call us at <a href="tel:+13233271806">(323) 327-1806</a>
+      <br>
+      Email <a href="mailto:info@enhancemyride.com">info@enhancemyride.com</a>
     </div>
-</div>
+
+    <footer>
+      <p>
+        <a href="booking-policies.html">Booking Policies</a>
+        &nbsp; · &nbsp;
+        <a href="service-area.html">Service Area</a>
+      </p>
+      <p style="margin-top: 10px;">
+        &copy; <span id="year"></span>
+        Enhance My Ride Auto Spa &amp; Mobile Detailing.
+        All rights reserved.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+  </script>
 </body>
 </html>
