@@ -1,15 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Book Now | Enhance My Ride Auto Spa &amp; Mobile Detailing</title>
-    <meta name="description" content="Request a mobile detailing appointment with Enhance My Ride Auto Spa & Mobile Detailing. Explore our packages, request your preferred time, and receive a personalized quote.">
+    <meta name="description" content="Book a consultation with Enhance My Ride Auto Spa & Mobile Detailing. Explore our detailing packages and request a personalized quote.">
     <meta name="theme-color" content="#080808">
     <link rel="canonical" href="https://enhancemyride.com/book-now.html">
     <link rel="icon" href="images/enhance-my-ride-logo.webp?v=3">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -17,20 +16,17 @@
     <style>
         :root {
             --black: #080808;
-            --black-soft: #111111;
             --black-card: #171715;
             --gold: #d4af37;
             --gold-light: #ecd27a;
             --white: #f6f4ee;
             --muted: #aaa69b;
-            --line: rgba(212, 175, 55, 0.25);
+            --line: rgba(212,175,55,.25);
             --max: 1180px;
             --radius: 16px;
         }
 
-        *,
-        *::before,
-        *::after {
+        *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -38,7 +34,7 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 110px;
+            scroll-padding-top: 100px;
         }
 
         body {
@@ -46,14 +42,8 @@
             overflow-x: hidden;
             background: var(--black);
             color: var(--white);
-            font-family: "Montserrat", sans-serif;
+            font-family: Montserrat, sans-serif;
             line-height: 1.7;
-        }
-
-        body,
-        button,
-        a {
-            -webkit-tap-highlight-color: transparent;
         }
 
         a {
@@ -61,21 +51,16 @@
             text-decoration: none;
         }
 
-        img,
-        svg {
+        img, svg {
             display: block;
             max-width: 100%;
         }
 
-        button,
-        input,
-        textarea,
-        select {
+        button, input, textarea, select {
             font: inherit;
         }
 
-        a:focus-visible,
-        button:focus-visible {
+        a:focus-visible, button:focus-visible {
             outline: 3px solid var(--gold-light);
             outline-offset: 4px;
         }
@@ -85,46 +70,27 @@
             margin-inline: auto;
         }
 
-        .gold {
-            color: var(--gold);
-        }
+        .gold { color: var(--gold); }
 
-        .eyebrow {
-            margin-bottom: 12px;
-            color: var(--gold);
-            font-size: 0.76rem;
-            font-weight: 800;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-        }
-
-        h1,
-        h2 {
+        h1, h2 {
             font-family: "Playfair Display", Georgia, serif;
             line-height: 1.2;
         }
 
-        h1 {
-            margin-bottom: 20px;
-            font-size: clamp(2.5rem, 6vw, 4.6rem);
-        }
+        h1 { font-size: clamp(2.5rem, 6vw, 4.6rem); margin-bottom: 20px; }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 18px; }
+        h3 { font-size: 1.12rem; line-height: 1.35; }
+        p { color: var(--muted); }
 
-        h2 {
-            margin-bottom: 18px;
-            font-size: clamp(2rem, 4vw, 3rem);
-        }
+        .section { padding: 78px 0; }
 
-        h3 {
-            font-size: 1.12rem;
-            line-height: 1.35;
-        }
-
-        p {
-            color: var(--muted);
-        }
-
-        .section {
-            padding: 78px 0;
+        .eyebrow {
+            margin-bottom: 12px;
+            color: var(--gold);
+            font-size: .76rem;
+            font-weight: 800;
+            letter-spacing: .2em;
+            text-transform: uppercase;
         }
 
         .section-heading {
@@ -138,8 +104,6 @@
             margin-inline: auto;
         }
 
-        /* Buttons */
-
         .btn {
             display: inline-flex;
             min-height: 48px;
@@ -149,43 +113,37 @@
             padding: 13px 22px;
             border: 1px solid var(--gold);
             border-radius: 8px;
-            font-size: 0.86rem;
+            font-size: .86rem;
             font-weight: 800;
             line-height: 1.4;
             text-align: center;
             cursor: pointer;
-            transition: transform 0.2s ease, background 0.2s ease;
+            transition: transform .2s ease, background .2s ease;
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-        }
+        .btn:hover { transform: translateY(-2px); }
 
         .btn-gold {
             background: var(--gold);
             color: #080808;
         }
 
-        .btn-gold:hover {
-            background: var(--gold-light);
-        }
+        .btn-gold:hover { background: var(--gold-light); }
 
         .btn-outline {
             background: transparent;
             color: var(--gold);
         }
 
-        .btn-outline:hover {
-            background: rgba(212, 175, 55, 0.1);
-        }
+        .btn-outline:hover { background: rgba(212,175,55,.1); }
 
-        /* Header and navigation */
+        /* Header */
 
         .site-header {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(8, 8, 8, 0.97);
+            background: rgba(8,8,8,.97);
             border-bottom: 1px solid var(--line);
             backdrop-filter: blur(14px);
         }
@@ -216,7 +174,7 @@
         .brand-name {
             display: block;
             color: var(--gold);
-            font-size: 0.96rem;
+            font-size: .96rem;
             font-weight: 800;
             line-height: 1.3;
         }
@@ -225,7 +183,7 @@
             display: block;
             margin-top: 3px;
             color: #c9c9c9;
-            font-size: 0.66rem;
+            font-size: .66rem;
             line-height: 1.4;
         }
 
@@ -247,20 +205,17 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            gap: 20px;
+            gap: 18px;
         }
 
         .nav a {
             color: #e7e7e7;
-            font-size: 0.78rem;
+            font-size: .78rem;
             font-weight: 600;
-            transition: color 0.2s ease;
         }
 
         .nav a:hover,
-        .nav a[aria-current="page"] {
-            color: var(--gold);
-        }
+        .nav a[aria-current="page"] { color: var(--gold); }
 
         .nav .nav-book {
             padding: 10px 15px;
@@ -278,24 +233,16 @@
         /* Hero */
 
         .hero {
-            position: relative;
-            isolation: isolate;
             padding: 92px 0 78px;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            border-bottom: 1px solid rgba(212,175,55,.15);
             background:
-                radial-gradient(ellipse at top, rgba(212, 175, 55, 0.15), transparent 65%),
+                radial-gradient(ellipse at top, rgba(212,175,55,.15), transparent 65%),
                 linear-gradient(180deg, #101010 0%, #080808 100%);
             text-align: center;
         }
 
-        .hero-content {
-            max-width: 880px;
-            margin-inline: auto;
-        }
-
-        .hero h1 span {
-            color: var(--gold);
-        }
+        .hero-content { max-width: 880px; margin-inline: auto; }
+        .hero h1 span { color: var(--gold); }
 
         .hero-description {
             max-width: 720px;
@@ -314,18 +261,16 @@
         .trust-line {
             margin-top: 28px;
             color: #d5d5d5;
-            font-size: 0.8rem;
+            font-size: .8rem;
         }
 
-        .trust-line span {
-            color: var(--gold);
-        }
+        .trust-line span { color: var(--gold); }
 
         /* Booking steps */
 
         .steps-grid {
             display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-template-columns: repeat(4, minmax(0,1fr));
             gap: 18px;
         }
 
@@ -348,25 +293,19 @@
             font-weight: 800;
         }
 
-        .step-card h3 {
-            margin-bottom: 10px;
-        }
-
-        .step-card p {
-            font-size: 0.87rem;
-        }
+        .step-card h3 { margin-bottom: 10px; }
+        .step-card p { font-size: .87rem; }
 
         /* Packages */
 
         .packages-section {
-            border-top: 1px solid rgba(255, 255, 255, 0.04);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            border-block: 1px solid rgba(255,255,255,.04);
             background: #0d0d0d;
         }
 
         .packages-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(3, minmax(0,1fr));
             align-items: stretch;
             gap: 20px;
         }
@@ -382,7 +321,7 @@
 
         .package-card.featured {
             border-color: var(--gold);
-            box-shadow: 0 0 28px rgba(212, 175, 55, 0.08);
+            box-shadow: 0 0 28px rgba(212,175,55,.08);
         }
 
         .package-card h3 {
@@ -402,13 +341,13 @@
             display: block;
             margin-top: 5px;
             color: var(--muted);
-            font-size: 0.76rem;
+            font-size: .76rem;
             font-weight: 500;
         }
 
         .package-card p {
             margin-bottom: 22px;
-            font-size: 0.88rem;
+            font-size: .88rem;
         }
 
         .package-card .btn {
@@ -419,52 +358,47 @@
         .price-disclaimer {
             max-width: 850px;
             margin: 26px auto 0;
-            font-size: 0.79rem;
+            font-size: .79rem;
             text-align: center;
         }
 
-        /* Booking layout */
+        /* Booking calendar and information */
 
         .booking-layout {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
+            grid-template-columns: minmax(0,1fr) minmax(280px,.7fr);
             align-items: start;
             gap: 28px;
         }
 
-        .booking-panel,
-        .info-panel {
+        .booking-panel, .info-panel {
             padding: 28px;
             border: 1px solid var(--line);
             border-radius: var(--radius);
             background: var(--black-card);
         }
 
-        .booking-panel h3,
-        .info-panel h3 {
-            margin-bottom: 12px;
-        }
+        .booking-panel h3, .info-panel h3 { margin-bottom: 12px; }
 
-        .booking-panel > p,
-        .info-panel > p {
+        .booking-panel > p, .info-panel > p {
             margin-bottom: 22px;
-            font-size: 0.9rem;
+            font-size: .9rem;
         }
 
         .booking-frame-wrap {
             width: 100%;
             min-height: 760px;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255,255,255,.12);
             border-radius: 10px;
             background: #fff;
         }
 
-        .booking-frame {
-            display: block;
+        /* Calendly's widget fills the existing white booking area. */
+        .calendly-inline-widget {
             width: 100%;
+            min-width: 0;
             height: 760px;
-            border: 0;
             background: #fff;
         }
 
@@ -473,24 +407,20 @@
             padding: 17px;
             border: 1px solid var(--line);
             border-radius: 10px;
-            background: rgba(212, 175, 55, 0.07);
-            font-size: 0.84rem;
+            background: rgba(212,175,55,.07);
+            font-size: .84rem;
         }
 
-        .booking-fallback p {
-            margin-top: 5px;
-        }
+        .booking-fallback p { margin-top: 5px; }
 
-        .booking-fallback a {
+        .booking-fallback a, .policy-link {
             color: var(--gold);
             font-weight: 800;
             text-decoration: underline;
             text-underline-offset: 3px;
         }
 
-        .info-panel + .info-panel {
-            margin-top: 20px;
-        }
+        .info-panel + .info-panel { margin-top: 20px; }
 
         .info-list {
             display: grid;
@@ -500,7 +430,7 @@
 
         .info-list li {
             display: grid;
-            grid-template-columns: 28px minmax(0, 1fr);
+            grid-template-columns: 28px minmax(0,1fr);
             align-items: start;
             gap: 10px;
         }
@@ -515,13 +445,13 @@
             display: block;
             margin-bottom: 3px;
             color: var(--white);
-            font-size: 0.88rem;
+            font-size: .88rem;
         }
 
         .info-list span {
             display: block;
             color: var(--muted);
-            font-size: 0.82rem;
+            font-size: .82rem;
         }
 
         .deposit-box {
@@ -529,7 +459,7 @@
             padding: 20px;
             border-left: 3px solid var(--gold);
             border-radius: 0 9px 9px 0;
-            background: rgba(212, 175, 55, 0.08);
+            background: rgba(212,175,55,.08);
         }
 
         .deposit-box h3 {
@@ -539,17 +469,13 @@
 
         .deposit-box p {
             margin-top: 8px;
-            font-size: 0.84rem;
+            font-size: .84rem;
         }
 
         .policy-link {
             display: inline-block;
             margin-top: 15px;
-            color: var(--gold);
-            font-size: 0.84rem;
-            font-weight: 800;
-            text-decoration: underline;
-            text-underline-offset: 4px;
+            font-size: .84rem;
         }
 
         .contact-links {
@@ -561,7 +487,7 @@
         .contact-links a {
             overflow-wrap: anywhere;
             color: var(--gold);
-            font-size: 0.88rem;
+            font-size: .88rem;
             font-weight: 700;
         }
 
@@ -577,13 +503,8 @@
             text-align: center;
         }
 
-        .service-area-box p {
-            margin-bottom: 15px;
-        }
-
-        .service-area-box p:last-of-type {
-            margin-bottom: 23px;
-        }
+        .service-area-box p { margin-bottom: 15px; }
+        .service-area-box p:last-of-type { margin-bottom: 23px; }
 
         /* FAQ */
 
@@ -607,15 +528,33 @@
             font-size: 1rem;
         }
 
-        .faq-item p {
-            font-size: 0.88rem;
+        .faq-item p { font-size: .88rem; }
+        .faq-item .policy-link { margin-top: 0; }
+
+        /* Closing call to action */
+
+        .cta {
+            padding: 75px 0;
+            border-top: 1px solid var(--line);
+            background:
+                radial-gradient(ellipse at top, rgba(212,175,55,.1), transparent 70%),
+                #0d0d0d;
+            text-align: center;
         }
 
-        .faq-item .policy-link {
-            margin-top: 0;
+        .cta-content { max-width: 850px; margin-inline: auto; }
+        .cta h2 span { color: var(--gold); }
+        .cta p { max-width: 720px; margin: 0 auto 20px; }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin-top: 25px;
         }
 
-        /* Exact shared footer styling */
+        /* Footer */
 
         .footer {
             padding: 55px 0 25px;
@@ -625,7 +564,7 @@
 
         .footer-top {
             display: grid;
-            grid-template-columns: 1.4fr 0.8fr 1fr;
+            grid-template-columns: 1.4fr .8fr 1fr;
             gap: 35px;
             padding-bottom: 32px;
         }
@@ -644,39 +583,36 @@
             object-fit: contain;
         }
 
-        .footer-brand-name,
-        .footer-brand-sub {
-            display: block;
-        }
+        .footer-brand-name, .footer-brand-sub { display: block; }
 
         .footer-brand-name {
             color: var(--gold);
-            font-size: 0.92rem;
+            font-size: .92rem;
             font-weight: 800;
         }
 
         .footer-brand-sub {
             color: #c9c9c9;
-            font-size: 0.75rem;
+            font-size: .75rem;
             line-height: 1.5;
         }
 
         .footer-text {
             margin-bottom: 12px;
-            font-size: 0.82rem;
+            font-size: .82rem;
         }
 
-        .footer-slogan {
+        .footer-slogan, .footer-tagline {
             color: var(--gold);
-            font-size: 0.82rem;
+            font-size: .82rem;
             font-weight: 700;
         }
 
         .footer-heading {
             margin-bottom: 15px;
             color: var(--gold);
-            font-family: "Montserrat", sans-serif;
-            font-size: 0.95rem;
+            font-family: Montserrat, sans-serif;
+            font-size: .95rem;
         }
 
         .footer-links {
@@ -687,12 +623,10 @@
 
         .footer-links a {
             overflow-wrap: anywhere;
-            font-size: 0.82rem;
-            transition: color 0.2s ease;
+            font-size: .82rem;
         }
 
-        .footer-links a:hover,
-        .footer-links a[aria-current="page"] {
+        .footer-links a:hover, .footer-links a[aria-current="page"] {
             color: var(--gold);
         }
 
@@ -712,13 +646,12 @@
             border: 1px solid var(--line);
             border-radius: 50%;
             background: #111;
-            transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+            transition: background .2s ease, transform .2s ease;
         }
 
         .social-link:hover {
             transform: translateY(-2px);
-            border-color: var(--gold);
-            background: rgba(212, 175, 55, 0.12);
+            background: rgba(212,175,55,.12);
         }
 
         .social-link svg {
@@ -734,18 +667,10 @@
             flex-wrap: wrap;
             gap: 10px 20px;
             padding-top: 22px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255,255,255,.1);
         }
 
-        .footer-bottom p {
-            font-size: 0.75rem;
-        }
-
-        .footer-tagline {
-            color: var(--gold);
-        }
-
-        /* Floating call button */
+        .footer-bottom p { font-size: .75rem; }
 
         .floating-call {
             position: fixed;
@@ -761,15 +686,9 @@
             border-radius: 999px;
             background: var(--gold);
             color: #080808;
-            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
-            font-size: 0.82rem;
+            box-shadow: 0 6px 24px rgba(0,0,0,.45);
+            font-size: .82rem;
             font-weight: 800;
-            transition: background 0.2s ease, transform 0.2s ease;
-        }
-
-        .floating-call:hover {
-            transform: translateY(-2px);
-            background: var(--gold-light);
         }
 
         .floating-call svg {
@@ -778,34 +697,18 @@
             fill: currentColor;
         }
 
-        /* Responsive layout */
+        /* Responsive */
 
         @media (max-width: 1050px) {
-            .nav-container {
-                gap: 16px;
-            }
-
-            .nav {
-                gap: 13px;
-            }
-
-            .nav a {
-                font-size: 0.74rem;
-            }
-
-            .steps-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
+            .nav-container { gap: 16px; }
+            .nav { gap: 12px; }
+            .nav a { font-size: .74rem; }
+            .steps-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
             .booking-layout {
-                grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr);
+                grid-template-columns: minmax(0,1fr) minmax(260px,.8fr);
                 gap: 18px;
             }
-
-            .booking-panel,
-            .info-panel {
-                padding: 22px;
-            }
+            .booking-panel, .info-panel { padding: 22px; }
         }
 
         @media (max-width: 800px) {
@@ -815,10 +718,7 @@
                 padding: 12px 0;
             }
 
-            .brand img {
-                width: 50px;
-                height: 50px;
-            }
+            .brand img { width: 50px; height: 50px; }
 
             .menu {
                 display: inline-flex;
@@ -834,714 +734,443 @@
                 padding: 8px 0 12px;
             }
 
-            .nav.is-open {
-                display: flex;
-            }
+            .nav.is-open { display: flex; }
 
             .nav a {
-                padding: 11px 8px;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-                font-size: 0.85rem;
+                padding: 12px 4px;
+                font-size: .88rem;
             }
 
-            .nav .nav-book {
-                margin-top: 8px;
-                padding: 12px 15px;
-                text-align: center;
-            }
-
-            .booking-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .packages-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .package-card {
-                width: 100%;
-                max-width: 650px;
-                margin-inline: auto;
-            }
-
-            .footer-top {
-                grid-template-columns: 1fr 1fr;
-                gap: 30px;
-            }
-
-            .footer-top > div:first-child {
-                grid-column: 1 / -1;
-            }
+            .nav .nav-book { text-align: center; }
+            .booking-layout { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+            .footer-top > div:first-child { grid-column: 1 / -1; }
         }
 
         @media (max-width: 600px) {
-            .section {
-                padding: 58px 0;
-            }
-
-            .hero {
-                padding: 68px 0 58px;
-            }
-
-            .hero-description {
-                font-size: 0.91rem;
-            }
-
-            .hero-actions {
-                align-items: stretch;
-                flex-direction: column;
-            }
-
-            .hero-actions .btn {
-                width: 100%;
-            }
-
-            .steps-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .booking-panel,
-            .info-panel {
-                padding: 19px;
-            }
-
-            .booking-frame-wrap {
-                min-height: 720px;
-            }
-
-            .booking-frame {
-                height: 720px;
-            }
-
-            .service-area-box {
-                padding: 23px 18px;
-            }
-
-            .faq-item {
-                padding: 19px;
-            }
-
-            .footer-top {
-                grid-template-columns: 1fr;
-                gap: 27px;
-            }
-
-            .footer-top > div:first-child {
-                grid-column: auto;
-            }
-
-            .footer-bottom {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-
-            .floating-call {
-                right: 12px;
-                bottom: 12px;
-                min-height: 44px;
-                padding: 10px 14px;
-            }
+            .section { padding: 58px 0; }
+            .hero { padding: 65px 0 55px; }
+            .steps-grid, .packages-grid, .footer-top { grid-template-columns: 1fr; }
+            .footer-top > div:first-child { grid-column: auto; }
+            .booking-panel, .info-panel { padding: 18px; }
+            .booking-frame-wrap { min-height: 780px; }
+            .calendly-inline-widget { height: 780px; }
+            .footer-bottom { align-items: flex-start; flex-direction: column; }
+            .service-area-box { padding: 24px 18px; }
+            .floating-call { right: 12px; bottom: 12px; }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-
-            *,
-            *::before,
-            *::after {
-                scroll-behavior: auto !important;
-                transition-duration: 0.01ms !important;
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                transition-duration: .01ms !important;
+                animation-duration: .01ms !important;
             }
         }
     </style>
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="container nav-container">
-            <a class="brand" href="index.html" aria-label="Enhance My Ride home">
-                <img
-                    src="images/enhance-my-ride-logo.webp?v=3"
-                    alt="Enhance My Ride Auto Spa logo"
-                    width="58"
-                    height="58"
-                >
-                <span>
-                    <span class="brand-name">ENHANCE MY RIDE</span>
-                    <span class="brand-tagline">AUTO SPA &amp; MOBILE DETAILING</span>
-                </span>
-            </a>
+<header class="site-header">
+    <div class="container nav-container">
+        <a class="brand" href="index.html" aria-label="Enhance My Ride home">
+            <img src="images/enhance-my-ride-logo.webp?v=3" alt="Enhance My Ride logo" width="1254" height="1254">
+            <span>
+                <span class="brand-name">Enhance My Ride</span>
+                <span class="brand-tagline">Auto Spa &amp; Mobile Detailing</span>
+            </span>
+        </a>
 
-            <button
-                class="menu"
-                type="button"
-                aria-label="Open navigation"
-                aria-expanded="false"
-                aria-controls="main-nav"
-            >☰</button>
+        <button class="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
 
-            <nav class="nav" id="main-nav" aria-label="Main navigation">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="about.html">About Us</a>
-                <a href="service-area.html">Service Area</a>
-                <a href="book-now.html" class="nav-book" aria-current="page">Book Now ↗</a>
-            </nav>
+        <nav class="nav" id="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="service-area.html">Service Area</a>
+            <a href="book-now.html" class="nav-book" aria-current="page">Book Now</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container hero-content">
+            <p class="eyebrow">Premium Mobile Detailing</p>
+            <h1>Let's <span>Enhance Your Ride.</span></h1>
+            <p class="hero-description">
+                Start with a quick phone consultation. Tell us about your
+                vehicle, what you want done, and where you're located.
+                We'll discuss the next steps for your detailing service.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-gold" href="#booking">Book a Consultation ↓</a>
+                <a class="btn btn-outline" href="services.html">Explore Services</a>
+            </div>
+            <p class="trust-line"><span>✓</span> We come to you. You relax. We Enhance.</p>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section class="hero">
-            <div class="container hero-content">
-                <p class="eyebrow">Your vehicle. Our attention to detail.</p>
-                <h1>Let's <span>Enhance</span> Your Ride</h1>
-
-                <p class="hero-description">
-                    Request your mobile detailing appointment and let us learn
-                    about your vehicle, your goals, and the level of care you
-                    need. We'll review your request and provide the next steps
-                    before your appointment is confirmed.
-                </p>
-
-                <div class="hero-actions">
-                    <a class="btn btn-gold" href="#booking">Request an Appointment</a>
-                    <a class="btn btn-outline" href="services.html">Explore Our Services</a>
-                </div>
-
-                <p class="trust-line">
-                    <span>Premium detailing.</span>
-                    Delivered to your door.
-                    <span>Mobile convenience.</span>
-                </p>
-            </div>
-        </section>
-
-        <section class="section" aria-labelledby="steps-title">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">Simple. Personal. Professional.</p>
-                    <h2 id="steps-title">How Booking Works</h2>
-                    <p>
-                        Every vehicle is different. We review the job first so
-                        we can discuss your needs, confirm the appropriate
-                        service, and provide an accurate quote.
-                    </p>
-                </div>
-
-                <div class="steps-grid">
-                    <article class="step-card">
-                        <span class="step-number">1</span>
-                        <h3>Request Your Time</h3>
-                        <p>
-                            Submit your preferred appointment time through
-                            Setmore. Your requested time is not yet confirmed.
-                        </p>
-                    </article>
-
-                    <article class="step-card">
-                        <span class="step-number">2</span>
-                        <h3>We Review the Job</h3>
-                        <p>
-                            We review your vehicle, requested services,
-                            condition, location, and scheduling availability.
-                        </p>
-                    </article>
-
-                    <article class="step-card">
-                        <span class="step-number">3</span>
-                        <h3>Approve Your Quote</h3>
-                        <p>
-                            We'll discuss the service and final quote with you.
-                            If approved, we'll send instructions for your
-                            required deposit.
-                        </p>
-                    </article>
-
-                    <article class="step-card">
-                        <span class="step-number">4</span>
-                        <h3>Receive Confirmation</h3>
-                        <p>
-                            Your appointment is confirmed only after the
-                            required deposit is received and we send you
-                            confirmation.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section packages-section" aria-labelledby="packages-title">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">Choose Your Experience</p>
-                    <h2 id="packages-title">Detailing Packages</h2>
-                    <p>
-                        Select a package to help us understand your goals.
-                        Final recommendations and pricing depend on your
-                        vehicle and the work required.
-                    </p>
-                </div>
-
-                <div class="packages-grid">
-                    <article class="package-card">
-                        <h3>Enhance Gold</h3>
-                        <div class="package-price">
-                            $149
-                            <small>Starting price</small>
-                        </div>
-                        <p>
-                            A premium starting point for drivers looking to
-                            refresh their vehicle and elevate its overall
-                            appearance.
-                        </p>
-                        <a class="btn btn-outline" href="services.html">
-                            View Package Details
-                        </a>
-                    </article>
-
-                    <article class="package-card featured">
-                        <h3>Enhance Black Label</h3>
-                        <div class="package-price">
-                            $249
-                            <small>Starting price</small>
-                        </div>
-                        <p>
-                            An elevated detailing experience for owners who
-                            want more comprehensive attention to their
-                            vehicle's interior and exterior.
-                        </p>
-                        <a class="btn btn-gold" href="services.html">
-                            View Package Details
-                        </a>
-                    </article>
-
-                    <article class="package-card">
-                        <h3>Showroom Edition</h3>
-                        <div class="package-price">
-                            $399
-                            <small>Starting price</small>
-                        </div>
-                        <p>
-                            Our top-tier option for vehicles needing a more
-                            extensive, carefully planned detailing experience.
-                        </p>
-                        <a class="btn btn-outline" href="services.html">
-                            View Package Details
-                        </a>
-                    </article>
-                </div>
-
-                <p class="price-disclaimer">
-                    All prices are starting prices, not guaranteed final
-                    quotes. Final pricing may vary based on vehicle size,
-                    condition, pet hair, staining, contamination, and
-                    requested services. We'll review the job and agree on
-                    the quote with you before requesting a deposit.
-                </p>
-            </div>
-        </section>
-
-        <section class="section" id="booking" aria-labelledby="booking-title">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">Start Your Booking Request</p>
-                    <h2 id="booking-title">Request Your Appointment</h2>
-                    <p>
-                        Use the booking calendar below to submit your preferred
-                        time. We'll review your request before approving the
-                        job and arranging your deposit.
-                    </p>
-                </div>
-
-                <div class="booking-layout">
-                    <div class="booking-panel">
-                        <h3>Setmore Booking Calendar</h3>
-                        <p>
-                            Choose your preferred time through our existing
-                            booking system. Submitting a request does not
-                            guarantee that the requested time or service is
-                            available.
-                        </p>
-
-                        <div class="booking-frame-wrap">
-                            <iframe
-                                class="booking-frame"
-                                src="https://enhancemyridemobiledetailing.setmore.com"
-                                title="Enhance My Ride appointment booking"
-                                loading="lazy"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                            ></iframe>
-                        </div>
-
-                        <div class="booking-fallback">
-                            <strong>Having trouble with the calendar?</strong>
-                            <p>
-                                Open our booking page directly in your browser:
-                                <a
-                                    href="https://enhancemyridemobiledetailing.setmore.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >Book through Setmore</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <aside aria-label="Booking information">
-                        <div class="info-panel">
-                            <h3>Before You Book</h3>
-
-                            <ul class="info-list">
-                                <li>
-                                    <span class="info-icon">✓</span>
-                                    <span>
-                                        <strong>Tell us about your vehicle</strong>
-                                        Include the vehicle year, make, model,
-                                        condition, and the services you want
-                                        whenever those details are requested.
-                                    </span>
-                                </li>
-
-                                <li>
-                                    <span class="info-icon">✓</span>
-                                    <span>
-                                        <strong>Request your preferred time</strong>
-                                        We'll review the requested time and
-                                        job details before approving the
-                                        appointment.
-                                    </span>
-                                </li>
-
-                                <li>
-                                    <span class="info-icon">✓</span>
-                                    <span>
-                                        <strong>Review your quote</strong>
-                                        We will discuss the final agreed price
-                                        before requesting your deposit.
-                                    </span>
-                                </li>
-
-                                <li>
-                                    <span class="info-icon">✓</span>
-                                    <span>
-                                        <strong>Wait for confirmation</strong>
-                                        Your appointment is not confirmed
-                                        until the required deposit is received
-                                        and we send confirmation.
-                                    </span>
-                                </li>
-                            </ul>
-
-                            <div class="deposit-box">
-                                <h3>Our Deposit Policy</h3>
-                                <p>
-                                    Jobs with an agreed total of $300 or less
-                                    require a $50 deposit.
-                                </p>
-                                <p>
-                                    Jobs above $300 require a deposit equal to
-                                    20% of the final agreed quote.
-                                </p>
-                                <p>
-                                    We send the payment request after reviewing
-                                    the job and receiving your approval of the
-                                    quote. No deposit is collected through this
-                                    page itself.
-                                </p>
-                                <a class="policy-link" href="booking-policies.html">
-                                    Read Full Booking Policies →
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="info-panel">
-                            <h3>Prefer to Contact Us?</h3>
-                            <p>
-                                Have a question about your vehicle, package,
-                                or service needs? Reach out before submitting
-                                your request.
-                            </p>
-
-                            <div class="contact-links">
-                                <a href="tel:+13233271806">Call: (323) 327-1806</a>
-                                <a href="mailto:info@enhancemyride.com">Email: info@enhancemyride.com</a>
-                            </div>
-                        </div>
-                    </aside>
-                </div>
-            </div>
-        </section>
-
-        <section class="section packages-section" aria-labelledby="area-title">
-            <div class="container">
-                <div class="service-area-box">
-                    <p class="eyebrow">Mobile Detailing, Delivered</p>
-                    <h2 id="area-title">We Come to You</h2>
-
-                    <p>
-                        Enhance My Ride serves Alameda and surrounding San
-                        Francisco Bay Area communities, including Oakland,
-                        San Leandro, Berkeley, Emeryville, Hayward, and
-                        San Francisco.
-                    </p>
-
-                    <p>
-                        Our standard service radius is up to 40 miles from
-                        Alameda. Requests outside that radius may require
-                        an additional travel fee, which will be discussed
-                        before your booking is confirmed.
-                    </p>
-
-                    <a class="btn btn-gold" href="service-area.html">
-                        View Service Areas
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" aria-labelledby="faq-title">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">Good to Know</p>
-                    <h2 id="faq-title">Booking Questions</h2>
-                    <p>A few important details before you request your appointment.</p>
-                </div>
-
-                <div class="faq-list">
-                    <article class="faq-item">
-                        <h3>Is my appointment confirmed when I select a time?</h3>
-                        <p>
-                            No. Your selected time is a request. We must first
-                            review the job and availability, agree on the
-                            quote, receive the required deposit, and send
-                            confirmation.
-                        </p>
-                    </article>
-
-                    <article class="faq-item">
-                        <h3>When do I pay the deposit?</h3>
-                        <p>
-                            After we review the job and you approve the quote,
-                            we will send a payment request for the required
-                            deposit. This booking page does not itself collect
-                            that deposit.
-                        </p>
-                    </article>
-
-                    <article class="faq-item">
-                        <h3>Can the final price be different from the package price?</h3>
-                        <p>
-                            Yes. Advertised prices are starting prices. Vehicle
-                            size, condition, pet hair, stains, and additional
-                            services can affect the final agreed quote.
-                        </p>
-                    </article>
-
-                    <article class="faq-item">
-                        <h3>Can I reschedule my appointment?</h3>
-                        <p>
-                            One complimentary reschedule is available with at
-                            least 24 hours' notice, subject to availability.
-                            Please review the full booking policies for
-                            additional details.
-                        </p>
-                    </article>
-
-                    <article class="faq-item">
-                        <h3>What is the minimum price for a standalone service?</h3>
-                        <p>
-                            The minimum charge for a standalone mobile
-                            appointment is $100. Additional services requested
-                            during a package appointment are quoted separately
-                            as applicable.
-                        </p>
-                    </article>
-
-                    <article class="faq-item">
-                        <h3>Where can I read the complete policies?</h3>
-                        <p>
-                            Visit our
-                            <a class="policy-link" href="booking-policies.html">Booking Policies page</a>
-                            for the full terms, including deposits,
-                            rescheduling, cancellations, and other booking
-                            conditions.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Closing call to action -->
-        <section class="cta">
-            <div class="container cta-content">
-                <p class="eyebrow">Your Next Detail Starts Here</p>
-                <h2>Ready to <span class="gold">Enhance Your Ride?</span></h2>
-                <p>
-                    Tell us about your vehicle, what you'd like done, and where
-                    you're located. We'll review your request and help you take
-                    the next step.
-                </p>
-
-                <div class="actions">
-                    <a class="btn btn-gold" href="book-now.html">Request an Appointment ↗</a>
-                    <a class="btn btn-outline" href="tel:+13233271806">Call (323) 327-1806</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
+    <section class="section" aria-labelledby="steps-title">
         <div class="container">
-            <div class="footer-top">
-                <div>
-                    <a class="footer-brand" href="index.html" aria-label="Enhance My Ride home">
-                        <img
-                            class="footer-logo"
-                            src="images/enhance-my-ride-logo.webp?v=3"
-                            alt="Enhance My Ride logo"
-                            width="1254"
-                            height="1254"
-                            loading="lazy"
-                            decoding="async"
-                        >
-                        <span>
-                            <span class="footer-brand-name">Enhance My Ride</span>
-                            <span class="footer-brand-sub">Auto Spa &amp; Mobile Detailing</span>
-                        </span>
-                    </a>
-
-                    <p class="footer-text">
-                        Premium mobile detailing based in Alameda, California.
-                        Professional vehicle care delivered to a suitable location near you.
-                    </p>
-
-                    <p class="footer-slogan">We come to you. You relax. We Enhance.</p>
-                </div>
-
-                <div>
-                    <h2 class="footer-heading">Explore</h2>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="service-area.html">Service Area</a></li>
-                        <li><a href="book-now.html" aria-current="page">Book Now</a></li>
-                        <li><a href="booking-policies.html">Booking Policies</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h2 class="footer-heading">Follow Us</h2>
-                    <p class="footer-text">
-                        Follow our work, vehicle transformations, and mobile detailing journey.
-                    </p>
-
-                    <div class="socials">
-                        <a class="social-link"
-                           href="https://www.instagram.com/enhancemyridemobiledetailing/"
-                           target="_blank" rel="noopener noreferrer"
-                           aria-label="Instagram">
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm5 3.1a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4Zm0 2.2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm5.1-3.4a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/>
-                            </svg>
-                        </a>
-
-                        <a class="social-link"
-                           href="https://www.facebook.com/enhancemyridemobiledetailing/"
-                           target="_blank" rel="noopener noreferrer"
-                           aria-label="Facebook">
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M13.5 22v-8.8h3l.45-3.45H13.5V7.55c0-1 .28-1.68 1.72-1.68h1.84V2.78A24 24 0 0 0 14.38 2C11.72 2 9.9 3.62 9.9 6.6v3.15H6.9v3.45h3V22h3.6Z"/>
-                            </svg>
-                        </a>
-
-                        <a class="social-link"
-                           href="https://www.tiktok.com/@enhancemyride"
-                           target="_blank" rel="noopener noreferrer"
-                           aria-label="TikTok">
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M19.6 6.3a6.4 6.4 0 0 1-4.1-4.1V2h-3.8v13.7a2.9 2.9 0 1 1-2-2.75V9.1a7 7 0 1 0 5.8 6.9V9a10 10 0 0 0 5.8 1.85V7.1a6.5 6.5 0 0 1-1.7-.8Z"/>
-                            </svg>
-                        </a>
-
-                        <a class="social-link"
-                           href="https://www.youtube.com/@enhancemyride"
-                           target="_blank" rel="noopener noreferrer"
-                           aria-label="YouTube">
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <ul class="footer-links" style="margin-top:22px">
-                        <li><a href="tel:+13233271806">(323) 327-1806</a></li>
-                        <li><a href="mailto:info@enhancemyride.com">info@enhancemyride.com</a></li>
-                    </ul>
-                </div>
+            <div class="section-heading">
+                <p class="eyebrow">Simple Process</p>
+                <h2 id="steps-title">How Booking Works</h2>
+                <p>We make it easy to start your detailing request and understand the next steps.</p>
             </div>
 
-            <div class="footer-bottom">
-                <p>© <span id="current-year">2026</span> Enhance My Ride Auto Spa &amp; Mobile Detailing.</p>
-                <p class="footer-tagline">Premium care. Delivered to your door.</p>
+            <div class="steps-grid">
+                <article class="step-card">
+                    <span class="step-number">1</span>
+                    <h3>Book a Consultation</h3>
+                    <p>Choose an available time for a 30-minute phone call.</p>
+                </article>
+                <article class="step-card">
+                    <span class="step-number">2</span>
+                    <h3>Tell Us About Your Vehicle</h3>
+                    <p>Share your vehicle details, condition, desired service, and location.</p>
+                </article>
+                <article class="step-card">
+                    <span class="step-number">3</span>
+                    <h3>Review Your Quote</h3>
+                    <p>We'll discuss the work, final agreed price, and any travel fee if applicable.</p>
+                </article>
+                <article class="step-card">
+                    <span class="step-number">4</span>
+                    <h3>Confirm Your Service</h3>
+                    <p>After the quote is agreed upon, we'll arrange the service date and deposit.</p>
+                </article>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <a class="floating-call" href="tel:+13233271806" aria-label="Call Enhance My Ride now">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.3 11.3 0 0 0 3.55.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.3 11.3 0 0 0 .57 3.55 1 1 0 0 1-.25 1l-2.22 2.25Z"/>
-        </svg>
-        <span>Call Now</span>
-    </a>
+    <section class="section packages-section" aria-labelledby="packages-title">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Choose Your Level of Care</p>
+                <h2 id="packages-title">Detailing Packages</h2>
+                <p>We'll help you select the right service for your vehicle during the consultation.</p>
+            </div>
 
-    <script>
-        (() => {
-            const menuButton = document.querySelector(".menu");
-            const nav = document.getElementById("main-nav");
+            <div class="packages-grid">
+                <article class="package-card">
+                    <h3>Enhance Gold</h3>
+                    <p class="package-price">$149 <small>Starting price</small></p>
+                    <p>A premium starting point for maintaining a clean, refreshed vehicle.</p>
+                    <a class="btn btn-outline" href="services.html">View Package Details</a>
+                </article>
 
-            if (menuButton && nav) {
-                menuButton.addEventListener("click", () => {
-                    const isOpen = nav.classList.toggle("is-open");
+                <article class="package-card featured">
+                    <h3>Enhance Black Label</h3>
+                    <p class="package-price">$249 <small>Starting price</small></p>
+                    <p>Enhanced care for customers looking for a more comprehensive detail.</p>
+                    <a class="btn btn-gold" href="services.html">View Package Details</a>
+                </article>
 
-                    menuButton.setAttribute("aria-expanded", String(isOpen));
-                    menuButton.setAttribute(
-                        "aria-label",
-                        isOpen ? "Close navigation" : "Open navigation"
-                    );
-                    menuButton.textContent = isOpen ? "×" : "☰";
-                });
+                <article class="package-card">
+                    <h3>Showroom Edition</h3>
+                    <p class="package-price">$399 <small>Starting price</small></p>
+                    <p>Our ultimate package for customers seeking a premium detailing experience.</p>
+                    <a class="btn btn-outline" href="services.html">View Package Details</a>
+                </article>
+            </div>
 
-                nav.querySelectorAll("a").forEach((link) => {
-                    link.addEventListener("click", () => {
-                        nav.classList.remove("is-open");
-                        menuButton.setAttribute("aria-expanded", "false");
-                        menuButton.setAttribute("aria-label", "Open navigation");
-                        menuButton.textContent = "☰";
-                    });
-                });
+            <p class="price-disclaimer">
+                All prices are starting prices, not guaranteed final quotes.
+                Final pricing may vary based on vehicle size, condition, pet hair,
+                staining, contamination, and requested services. We'll review
+                the job and agree on the quote before requesting a deposit.
+            </p>
+        </div>
+    </section>
 
-                document.addEventListener("keydown", (event) => {
-                    if (event.key === "Escape") {
-                        nav.classList.remove("is-open");
-                        menuButton.setAttribute("aria-expanded", "false");
-                        menuButton.setAttribute("aria-label", "Open navigation");
-                        menuButton.textContent = "☰";
-                    }
-                });
+    <section class="section" id="booking" aria-labelledby="booking-title">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Start Your Booking Request</p>
+                <h2 id="booking-title">Book a Phone Consultation</h2>
+                <p>
+                    Use the calendar to choose a 30-minute phone consultation.
+                    This is not the detailing appointment itself. We'll discuss
+                    your vehicle, service needs, quote, and next steps.
+                </p>
+            </div>
+
+            <div class="booking-layout">
+                <div class="booking-panel">
+                    <h3>Calendly Booking Calendar</h3>
+                    <p>
+                        Select a convenient time below. Please provide your
+                        vehicle details and preferred service location when
+                        completing the booking form.
+                    </p>
+
+                    <div class="booking-frame-wrap">
+                        <div
+                            class="calendly-inline-widget"
+                            data-url="https://calendly.com/enhancemyridemobiledetailing/30min"
+                            aria-label="Schedule a consultation with Enhance My Ride">
+                        </div>
+                    </div>
+
+                    <div class="booking-fallback">
+                        <strong>Having trouble loading the calendar?</strong>
+                        <p>
+                            <a href="https://calendly.com/enhancemyridemobiledetailing/30min"
+                               target="_blank" rel="noopener noreferrer">
+                                Open the Calendly booking page directly →
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <aside aria-label="Booking information">
+                    <div class="info-panel">
+                        <h3>Before You Book</h3>
+                        <ul class="info-list">
+                            <li>
+                                <span class="info-icon">✓</span>
+                                <span>
+                                    <strong>Tell us about your vehicle</strong>
+                                    Include the year, make, model, condition,
+                                    and services you're interested in.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="info-icon">✓</span>
+                                <span>
+                                    <strong>Share your location</strong>
+                                    We serve Alameda and surrounding Bay Area communities.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="info-icon">✓</span>
+                                <span>
+                                    <strong>Review your quote</strong>
+                                    We'll agree on the final price before requesting your deposit.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="info-icon">✓</span>
+                                <span>
+                                    <strong>Wait for confirmation</strong>
+                                    Your detailing appointment is not confirmed until
+                                    the service arrangements and required deposit
+                                    are completed and we send confirmation.
+                                </span>
+                            </li>
+                        </ul>
+
+                        <div class="deposit-box">
+                            <h3>Our Deposit Policy</h3>
+                            <p>Jobs with an agreed total of $300 or less require a $50 deposit.</p>
+                            <p>Jobs above $300 require a deposit equal to 20% of the final agreed quote.</p>
+                            <p>We send the payment request after reviewing the job and receiving your approval of the quote. This page does not collect the deposit.</p>
+                            <a class="policy-link" href="booking-policies.html">Read Full Booking Policies →</a>
+                        </div>
+                    </div>
+
+                    <div class="info-panel">
+                        <h3>Prefer to Contact Us?</h3>
+                        <p>Have a question about your vehicle, package, or service needs? Reach out before booking.</p>
+                        <div class="contact-links">
+                            <a href="tel:+13233271806">Call: (323) 327-1806</a>
+                            <a href="mailto:info@enhancemyride.com">Email: info@enhancemyride.com</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section class="section packages-section" aria-labelledby="area-title">
+        <div class="container">
+            <div class="service-area-box">
+                <p class="eyebrow">Mobile Detailing, Delivered</p>
+                <h2 id="area-title">We Come to You</h2>
+                <p>
+                    Enhance My Ride serves Alameda and surrounding San Francisco
+                    Bay Area communities, including Oakland, San Leandro,
+                    Berkeley, Emeryville, Hayward, and San Francisco.
+                </p>
+                <p>
+                    Our standard service radius is up to 40 miles from Alameda.
+                    Requests outside that radius may require an additional travel
+                    fee, which will be discussed before your booking is confirmed.
+                </p>
+                <a class="btn btn-gold" href="service-area.html">View Service Areas</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Good to Know</p>
+                <h2 id="faq-title">Booking Questions</h2>
+                <p>A few important details before you request your appointment.</p>
+            </div>
+
+            <div class="faq-list">
+                <article class="faq-item">
+                    <h3>Is my detailing appointment confirmed when I select a time?</h3>
+                    <p>No. Calendly books a phone consultation. Your actual detailing date, agreed quote, deposit, and service confirmation are arranged separately.</p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>When do I pay the deposit?</h3>
+                    <p>After we review the job and you approve the quote, we'll send a payment request for the required deposit. This booking page does not collect the deposit.</p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>Can the final price be different from the package price?</h3>
+                    <p>Yes. Advertised prices are starting prices. Vehicle size, condition, pet hair, stains, contamination, and additional services can affect the final agreed quote.</p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>Can I reschedule my appointment?</h3>
+                    <p>One complimentary reschedule is available with at least 24 hours' notice, subject to availability. Please review the full booking policies for additional details.</p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>What is the minimum price for a standalone service?</h3>
+                    <p>The minimum charge for a standalone mobile appointment is $100. Additional services requested during a package appointment are quoted separately as applicable.</p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>Where can I read the complete policies?</h3>
+                    <p>Visit our <a class="policy-link" href="booking-policies.html">Booking Policies page</a> for full terms, including deposits, rescheduling, and cancellations.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container cta-content">
+            <p class="eyebrow">Your Next Detail Starts Here</p>
+            <h2>Ready to <span>Enhance Your Ride?</span></h2>
+            <p>
+                Tell us about your vehicle, what you'd like done, and where
+                you're located. We'll review your request and help you take
+                the next step.
+            </p>
+            <div class="actions">
+                <a class="btn btn-gold" href="#booking">Book a Consultation ↗</a>
+                <a class="btn btn-outline" href="tel:+13233271806">Call (323) 327-1806</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div>
+                <a class="footer-brand" href="index.html" aria-label="Enhance My Ride home">
+                    <img class="footer-logo"
+                         src="images/enhance-my-ride-logo.webp?v=3"
+                         alt="Enhance My Ride logo"
+                         width="1254" height="1254" loading="lazy" decoding="async">
+                    <span>
+                        <span class="footer-brand-name">Enhance My Ride</span>
+                        <span class="footer-brand-sub">Auto Spa &amp; Mobile Detailing</span>
+                    </span>
+                </a>
+                <p class="footer-text">
+                    Premium mobile detailing based in Alameda, California.
+                    Professional vehicle care delivered to a suitable location near you.
+                </p>
+                <p class="footer-slogan">We come to you. You relax. We Enhance.</p>
+            </div>
+
+            <div>
+                <h2 class="footer-heading">Explore</h2>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service-area.html">Service Area</a></li>
+                    <li><a href="book-now.html" aria-current="page">Book Now</a></li>
+                    <li><a href="booking-policies.html">Booking Policies</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="footer-heading">Follow Us</h2>
+                <p class="footer-text">Follow our work, vehicle transformations, and mobile detailing journey.</p>
+
+                <div class="socials">
+                    <a class="social-link" href="https://www.instagram.com/enhancemyridemobiledetailing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm5 3.1a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4Zm0 2.2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm5.1-3.4a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/></svg>
+                    </a>
+                    <a class="social-link" href="https://www.facebook.com/enhancemyridemobiledetailing/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.8h3l.45-3.45H13.5V7.55c0-1 .28-1.68 1.72-1.68h1.84V2.78A24 24 0 0 0 14.38 2C11.72 2 9.9 3.62 9.9 6.6v3.15H6.9v3.45h3V22h3.6Z"/></svg>
+                    </a>
+                    <a class="social-link" href="https://www.tiktok.com/@enhancemyride" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 6.3a6.4 6.4 0 0 1-4.1-4.1V2h-3.8v13.7a2.9 2.9 0 1 1-2-2.75V9.1a7 7 0 1 0 5.8 6.9V9a10 10 0 0 0 5.8 1.85V7.1a6.5 6.5 0 0 1-1.7-.8Z"/></svg>
+                    </a>
+                    <a class="social-link" href="https://www.youtube.com/@enhancemyride" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+                    </a>
+                </div>
+
+                <ul class="footer-links" style="margin-top:22px">
+                    <li><a href="tel:+13233271806">(323) 327-1806</a></li>
+                    <li><a href="mailto:info@enhancemyride.com">info@enhancemyride.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="current-year">2026</span> Enhance My Ride Auto Spa &amp; Mobile Detailing.</p>
+            <p class="footer-tagline">Premium care. Delivered to your door.</p>
+        </div>
+    </div>
+</footer>
+
+<a class="floating-call" href="tel:+13233271806" aria-label="Call Enhance My Ride now">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.3 11.3 0 0 0 3.55.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.3 11.3 0 0 0 .57 3.55 1 1 0 0 1-.25 1l-2.22 2.25Z"/></svg>
+    <span>Call Now</span>
+</a>
+
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+(() => {
+    const menuButton = document.querySelector(".menu");
+    const nav = document.getElementById("main-nav");
+
+    if (menuButton && nav) {
+        menuButton.addEventListener("click", () => {
+            const isOpen = nav.classList.toggle("is-open");
+            menuButton.setAttribute("aria-expanded", String(isOpen));
+            menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+            menuButton.textContent = isOpen ? "×" : "☰";
+        });
+
+        nav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("is-open");
+                menuButton.setAttribute("aria-expanded", "false");
+                menuButton.setAttribute("aria-label", "Open navigation");
+                menuButton.textContent = "☰";
+            });
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                nav.classList.remove("is-open");
+                menuButton.setAttribute("aria-expanded", "false");
+                menuButton.setAttribute("aria-label", "Open navigation");
+                menuButton.textContent = "☰";
             }
+        });
+    }
 
-            const year = document.getElementById("current-year");
-
-            if (year) {
-                year.textContent = new Date().getFullYear();
-            }
-        })();
-    </script>
+    const year = document.getElementById("current-year");
+    if (year) year.textContent = new Date().getFullYear();
+})();
+</script>
 </body>
 </html>
