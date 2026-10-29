@@ -28,7 +28,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/IMG_3235.webp" fetchpriority="high">
 
   <script type="application/ld+json">
   {
@@ -368,15 +369,6 @@
       transform: scale(1);
     }
 
-    .slide::after {
-      position: absolute;
-      inset: 0;
-      content: "";
-      background:
-        linear-gradient(90deg, rgba(0,0,0,.86) 0%, rgba(0,0,0,.62) 42%, rgba(0,0,0,.18) 100%),
-        linear-gradient(0deg, rgba(0,0,0,.72), transparent 45%, rgba(0,0,0,.15));
-    }
-
     .hero-content {
       position: relative;
       z-index: 2;
@@ -391,78 +383,6 @@
 
     .hero-content > * {
       max-width: 760px;
-    }
-
-    .hero h1 {
-      margin-bottom: 0;
-      font-size: clamp(3rem, 7vw, 6.3rem);
-      letter-spacing: -.045em;
-      text-transform: uppercase;
-      text-shadow: 0 3px 24px #000;
-    }
-
-    .hero h1 span {
-      display: block;
-      color: var(--gold);
-      letter-spacing: .015em;
-    }
-
-    .hero-text {
-      max-width: 590px;
-      margin-top: 24px;
-      color: #e1ded6;
-      font-size: 1rem;
-      line-height: 1.9;
-      text-shadow: 0 2px 12px #000;
-    }
-
-    .hero .actions {
-      margin-top: 30px;
-    }
-
-    .hero-tagline {
-      margin-top: 25px;
-      color: #e5dfce;
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .17em;
-      text-transform: uppercase;
-    }
-
-    .slide-controls {
-      position: absolute;
-      z-index: 5;
-      bottom: 25px;
-      left: 50%;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transform: translateX(-50%);
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      padding: 0;
-      border: 1px solid #fff;
-      border-radius: 50%;
-      background: transparent;
-      cursor: pointer;
-    }
-
-    .dot.active {
-      width: 24px;
-      border-radius: 6px;
-      background: var(--gold);
-      border-color: var(--gold);
-    }
-
-    .slide-count {
-      margin-left: 8px;
-      color: #eee;
-      font-size: .72rem;
-      letter-spacing: .12em;
-      white-space: nowrap;
     }
 
     /* SERVICE HIGHLIGHTS */
@@ -937,53 +857,6 @@
         padding-bottom: 125px;
       }
 
-      .slide-controls {
-        bottom: 18px;
-        gap: 6px;
-      }
-
-      .dot {
-        width: 7px;
-        height: 7px;
-      }
-
-      .dot.active {
-        width: 20px;
-      }
-
-      .slide-count {
-        font-size: .65rem;
-      }
-
-      .slide::after {
-        background:
-          linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.35)),
-          linear-gradient(0deg, rgba(0,0,0,.75), transparent 52%);
-      }
-
-      .hero h1 {
-        font-size: clamp(2.7rem, 12.5vw, 4.2rem);
-      }
-
-      .hero-text {
-        font-size: .9rem;
-      }
-
-      .hero .actions {
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .hero .actions .btn {
-        width: 100%;
-      }
-
-      .hero-tagline {
-        font-size: .62rem;
-        letter-spacing: .12em;
-      }
-
       .strip-item {
         min-height: 100px;
         gap: 8px;
@@ -1079,9 +952,10 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="css/premium.css">
 </head>
 
-<body>
+<body class="home-page">
 
   <!-- HEADER -->
   <header class="site-header">
@@ -1126,72 +1000,24 @@
 
     <!-- HERO -->
     <section class="hero" aria-label="Enhance My Ride mobile detailing">
-
-      <div class="slides" aria-live="off">
-        <div class="slide active" style="background-image:url('images/IMG_3412.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_3555.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_3609.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_3948.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_4318-1.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_4559.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_4880.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_3235.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_4952.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_4953.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_4890.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_4876.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_4600.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_4592.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_4587.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_4584.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_4564.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_3956.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_3926.webp')"></div>
-        <div class="slide" style="background-image:url('images/IMG_3601.webp')"></div>
+      <div class="slides" aria-hidden="true">
+        <div class="slide active">
+          <img src="images/IMG_3235.webp" alt="" width="1152" height="1536" fetchpriority="high" decoding="async">
+        </div>
+        <div class="slide">
+          <img data-src="images/IMG_4318-1.webp" alt="" width="1152" height="1536" decoding="async">
+        </div>
+        <div class="slide">
+          <img data-src="images/IMG_4876.webp" alt="" width="1152" height="1536" decoding="async">
+        </div>
       </div>
 
       <div class="container hero-content">
-
-        <p class="eyebrow">Premium Mobile Auto Detailing · Alameda, California</p>
-
-        <h1>
-          Mobile Detailing.
-          <span>Delivered to You.</span>
-        </h1>
-
-        <p class="hero-text">
-          Professional vehicle care at your home or workplace.
-          We bring our own water and power, so you can enjoy a
-          convenient detailing experience without supplying either.
-        </p>
-
         <div class="actions">
           <a class="btn" href="book-now.html">Book Your Detail ↗</a>
           <a class="btn btn-outline" href="services.html">Explore Services</a>
         </div>
-
-        <p class="hero-tagline">We come to you. You relax. We Enhance.</p>
-
       </div>
-
-      <div class="slide-controls" aria-label="Slideshow controls">
-        <button class="dot active" type="button" aria-label="Show slide 1"></button>
-        <button class="dot" type="button" aria-label="Show slide 2"></button>
-        <button class="dot" type="button" aria-label="Show slide 3"></button>
-        <button class="dot" type="button" aria-label="Show slide 4"></button>
-        <button class="dot" type="button" aria-label="Show slide 5"></button>
-        <button class="dot" type="button" aria-label="Show slide 6"></button>
-        <button class="dot" type="button" aria-label="Show slide 7"></button>
-        <button class="dot" type="button" aria-label="Show slide 8"></button>
-        <button class="dot" type="button" aria-label="Show slide 9"></button>
-        <button class="dot" type="button" aria-label="Show slide 10"></button>
-
-        <span class="slide-count">
-          <span id="slide-current">01</span> /
-          <span id="slide-total">20</span>
-        </span>
-      </div>
-
     </section>
 
     <!-- SERVICE HIGHLIGHTS -->
@@ -1247,10 +1073,10 @@
         </div>
 
         <div class="intro-content">
-          <h2>
+          <h1>
             The Difference Is<br>
             <span class="gold">In the Details.</span>
-          </h2>
+          </h1>
 
           <p>
             Enhance My Ride Auto Spa &amp; Mobile Detailing provides
@@ -1295,7 +1121,7 @@
 
           <a class="gallery-tile" href="gallery.html" aria-label="View our detailing gallery">
             <img
-              src="images/IMG_3412.webp"
+              src="images/optimized/gallery/IMG_3412.jpg"
               alt="Vehicle detailing work by Enhance My Ride"
               loading="lazy"
               decoding="async"
@@ -1304,7 +1130,7 @@
 
           <a class="gallery-tile" href="gallery.html" aria-label="View more detailing work">
             <img
-              src="images/IMG_3555.webp"
+              src="images/optimized/gallery/IMG_3555.jpg"
               alt="Mobile detailing results by Enhance My Ride"
               loading="lazy"
               decoding="async"
@@ -1313,7 +1139,7 @@
 
           <a class="gallery-tile" href="gallery.html" aria-label="Explore our vehicle transformations">
             <img
-              src="images/IMG_3609.webp"
+              src="images/optimized/gallery/IMG_3609.jpg"
               alt="Vehicle transformation by Enhance My Ride"
               loading="lazy"
               decoding="async"
@@ -1569,86 +1395,71 @@
         });
       }
 
-      /* SLIDESHOW */
-      const slides = Array.from(document.querySelectorAll(".slide"));
-      const dots = Array.from(document.querySelectorAll(".dot"));
-      const current = document.querySelector("#slide-current");
-      const total = document.querySelector("#slide-total");
-
-      let activeSlide = 0;
-      let slideshowTimer = null;
-
+      /* Cinematic hero slideshow: load only the next image when needed. */
+      const slides = Array.from(document.querySelectorAll(".home-page .slide"));
       const reducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
       ).matches;
+      let activeSlide = 0;
+      let slideshowTimer = null;
 
-      if (total) {
-        total.textContent = String(slides.length).padStart(2, "0");
-      }
-
-      function updateDots() {
-        dots.forEach((dot, index) => {
-          const targetIndex = Math.round(
-            index * (slides.length - 1) / Math.max(dots.length - 1, 1)
-          );
-
-          const isActive = targetIndex === activeSlide;
-
-          dot.classList.toggle("active", isActive);
-          dot.setAttribute("aria-pressed", String(isActive));
-        });
+      function queueNextSlide(delay = 6500) {
+        window.clearTimeout(slideshowTimer);
+        if (reducedMotion || document.hidden || slides.length < 2) return;
+        slideshowTimer = window.setTimeout(() => {
+          loadAndShow((activeSlide + 1) % slides.length);
+        }, delay);
       }
 
       function showSlide(index) {
-        if (!slides.length) return;
-
-        activeSlide = (index + slides.length) % slides.length;
-
+        activeSlide = index;
         slides.forEach((slide, slideIndex) => {
-          const isActive = slideIndex === activeSlide;
-
-          slide.classList.toggle("active", isActive);
-          slide.setAttribute("aria-hidden", String(!isActive));
+          const active = slideIndex === activeSlide;
+          slide.classList.toggle("active", active);
+          slide.setAttribute("aria-hidden", String(!active));
         });
-
-        if (current) {
-          current.textContent = String(activeSlide + 1).padStart(2, "0");
-        }
-
-        updateDots();
+        queueNextSlide();
       }
 
-      function startSlideshow() {
-        clearInterval(slideshowTimer);
+      function loadAndShow(index) {
+        const slide = slides[index];
+        const image = slide && slide.querySelector("img");
+        if (!image) return;
 
-        if (!reducedMotion && slides.length > 1) {
-          slideshowTimer = setInterval(() => {
-            showSlide(activeSlide + 1);
-          }, 5000);
+        const source = image.dataset.src;
+        if (!source) {
+          showSlide(index);
+          return;
         }
+
+        const preload = new Image();
+        preload.decoding = "async";
+        preload.onload = async () => {
+          image.src = source;
+          delete image.dataset.src;
+          if (image.decode) {
+            try { await image.decode(); } catch (_) { /* The image has loaded; show it without waiting for decode. */ }
+          }
+          showSlide(index);
+        };
+        preload.onerror = () => {
+          activeSlide = index;
+          queueNextSlide(1200);
+        };
+        preload.src = source;
       }
 
-      dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
-          const targetIndex = Math.round(
-            index * (slides.length - 1) / Math.max(dots.length - 1, 1)
-          );
-
-          showSlide(targetIndex);
-          startSlideshow();
+      if (slides.length) {
+        slides.forEach((slide, index) => {
+          slide.setAttribute("aria-hidden", String(index !== 0));
         });
-      });
+        queueNextSlide();
+      }
 
       document.addEventListener("visibilitychange", () => {
-        if (document.hidden) {
-          clearInterval(slideshowTimer);
-        } else {
-          startSlideshow();
-        }
+        window.clearTimeout(slideshowTimer);
+        if (!document.hidden) queueNextSlide();
       });
-
-      showSlide(0);
-      startSlideshow();
 
       /* CURRENT YEAR */
       const year = document.querySelector("#current-year");
