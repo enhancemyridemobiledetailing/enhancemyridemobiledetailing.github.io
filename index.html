@@ -29,7 +29,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="images/IMG_3235.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="images/optimized/hero/home-01.jpg" media="(min-width: 801px)" fetchpriority="high">
+  <link rel="preload" as="image" href="images/optimized/gallery/IMG_3235.jpg" media="(max-width: 800px)" fetchpriority="high">
 
   <script type="application/ld+json">
   {
@@ -1002,17 +1003,43 @@
     <section class="hero" aria-label="Enhance My Ride mobile detailing">
       <div class="slides" aria-hidden="true">
         <div class="slide active">
-          <img src="images/IMG_3235.webp" alt="" width="1152" height="1536" fetchpriority="high" decoding="async">
+          <picture>
+            <source media="(min-width: 801px)" srcset="images/optimized/hero/home-01.jpg">
+            <img src="images/optimized/gallery/IMG_3235.jpg" alt="" width="1280" height="720" fetchpriority="high" decoding="async">
+          </picture>
         </div>
         <div class="slide">
-          <img data-src="images/IMG_4318-1.webp" alt="" width="1152" height="1536" decoding="async">
+          <picture>
+            <source media="(min-width: 801px)" data-srcset="images/optimized/hero/home-02.jpg">
+            <img data-mobile-src="images/optimized/gallery/IMG_4318-1.jpg" alt="" width="1280" height="720" decoding="async">
+          </picture>
         </div>
         <div class="slide">
-          <img data-src="images/IMG_4876.webp" alt="" width="1152" height="1536" decoding="async">
+          <picture>
+            <source media="(min-width: 801px)" data-srcset="images/optimized/hero/home-03.jpg">
+            <img data-mobile-src="images/optimized/gallery/IMG_4876.jpg" alt="" width="1280" height="720" decoding="async">
+          </picture>
+        </div>
+        <div class="slide">
+          <picture>
+            <source media="(min-width: 801px)" data-srcset="images/optimized/hero/home-04.jpg">
+            <img data-mobile-src="images/optimized/gallery/IMG_4584.jpg" alt="" width="1280" height="720" decoding="async">
+          </picture>
+        </div>
+        <div class="slide">
+          <picture>
+            <source media="(min-width: 801px)" data-srcset="images/optimized/hero/home-05.jpg">
+            <img data-mobile-src="images/optimized/gallery/IMG_4952.jpg" alt="" width="1280" height="720" decoding="async">
+          </picture>
         </div>
       </div>
 
       <div class="container hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">Premium Mobile Detailing</p>
+          <h1>Care, brought to <span class="gold">your door.</span></h1>
+          <p>Thoughtful vehicle detailing at your home or workplace across Alameda and the Bay Area.</p>
+        </div>
         <div class="actions">
           <a class="btn" href="book-now.html">Book Your Detail ↗</a>
           <a class="btn btn-outline" href="services.html">Explore Services</a>
@@ -1073,10 +1100,10 @@
         </div>
 
         <div class="intro-content">
-          <h1>
+          <h2>
             The Difference Is<br>
             <span class="gold">In the Details.</span>
-          </h1>
+          </h2>
 
           <p>
             Enhance My Ride Auto Spa &amp; Mobile Detailing provides
@@ -1395,19 +1422,78 @@
         });
       }
 
-      /* Cinematic hero slideshow: load only the next image when needed. */
+      /* Keep the next hero image ready so each transition lands on schedule. */
       const slides = Array.from(document.querySelectorAll(".home-page .slide"));
       const reducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
       ).matches;
+      const slideInterval = 2000;
       let activeSlide = 0;
       let slideshowTimer = null;
 
-      function queueNextSlide(delay = 6500) {
+      function nextAvailableSlide() {
+        for (let offset = 1; offset <= slides.length; offset += 1) {
+          const index = (activeSlide + offset) % slides.length;
+          if (slides[index].dataset.failed !== "true") return index;
+        }
+        return -1;
+      }
+
+      function preloadSlide(index) {
+        const slide = slides[index];
+        const image = slide && slide.querySelector("img");
+        if (!slide || !image) return Promise.resolve(false);
+        if (slide.dataset.loaded === "true") return Promise.resolve(true);
+        if (slide._loadPromise) return slide._loadPromise;
+
+        const source = slide.querySelector("source[data-srcset]");
+        const desktop = window.matchMedia("(min-width: 801px)").matches;
+        const imageUrl = desktop && source
+          ? source.dataset.srcset
+          : image.dataset.mobileSrc;
+        if (!imageUrl) return Promise.resolve(false);
+
+        slide._loadPromise = new Promise(resolve => {
+          const preload = new Image();
+          preload.decoding = "async";
+          preload.onload = async () => {
+            if (source) {
+              source.srcset = source.dataset.srcset;
+              delete source.dataset.srcset;
+            }
+            image.src = image.dataset.mobileSrc;
+            delete image.dataset.mobileSrc;
+            if (image.decode) {
+              try { await image.decode(); } catch (_) { /* The browser can still display a loaded image. */ }
+            }
+            slide.dataset.loaded = "true";
+            resolve(true);
+          };
+          preload.onerror = () => {
+            slide.dataset.failed = "true";
+            resolve(false);
+          };
+          preload.src = imageUrl;
+        });
+
+        return slide._loadPromise;
+      }
+
+      function queueNextSlide(delay = slideInterval) {
         window.clearTimeout(slideshowTimer);
         if (reducedMotion || document.hidden || slides.length < 2) return;
+        const nextIndex = nextAvailableSlide();
+        if (nextIndex < 0) return;
+        const nextImageReady = preloadSlide(nextIndex);
         slideshowTimer = window.setTimeout(() => {
-          loadAndShow((activeSlide + 1) % slides.length);
+          nextImageReady.then(ready => {
+            if (document.hidden) return;
+            if (ready) {
+              showSlide(nextIndex);
+            } else {
+              queueNextSlide(500);
+            }
+          });
         }, delay);
       }
 
@@ -1421,38 +1507,11 @@
         queueNextSlide();
       }
 
-      function loadAndShow(index) {
-        const slide = slides[index];
-        const image = slide && slide.querySelector("img");
-        if (!image) return;
-
-        const source = image.dataset.src;
-        if (!source) {
-          showSlide(index);
-          return;
-        }
-
-        const preload = new Image();
-        preload.decoding = "async";
-        preload.onload = async () => {
-          image.src = source;
-          delete image.dataset.src;
-          if (image.decode) {
-            try { await image.decode(); } catch (_) { /* The image has loaded; show it without waiting for decode. */ }
-          }
-          showSlide(index);
-        };
-        preload.onerror = () => {
-          activeSlide = index;
-          queueNextSlide(1200);
-        };
-        preload.src = source;
-      }
-
       if (slides.length) {
         slides.forEach((slide, index) => {
           slide.setAttribute("aria-hidden", String(index !== 0));
         });
+        slides[0].dataset.loaded = "true";
         queueNextSlide();
       }
 
