@@ -32,3 +32,37 @@ body:not(.redesign-home) .card,body:not(.redesign-home) .panel,body:not(.redesig
 @keyframes panel-arrive{from{opacity:.5;transform:scale(1.07)}to{opacity:1;transform:scale(1.02)}}
 @media(max-width:800px){body.redesign-home .cinema-hero {min-height:calc(100svh - 72px);min-height:680px;align-items:flex-end}body.redesign-home .cinema-panels {grid-template-columns:1fr 1fr 1fr;gap:2px}body.redesign-home .cinema-panel img {filter:brightness(.55) saturate(.78)}body.redesign-home .cinema-panel:nth-child(2) {margin-top:27px}body.redesign-home .cinema-panel:nth-child(3) {margin-top:54px}body.redesign-home .cinema-panel figcaption {left:9px;right:6px;bottom:22px}body.redesign-home .cinema-panel figcaption span {font-size:.43rem}body.redesign-home .cinema-panel figcaption b {font-size:1rem}body.redesign-home .cinema-panel figcaption small {display:none}body.redesign-home .cinema-shade {background:linear-gradient(90deg,#050505a8,#05050536 70%),linear-gradient(0deg,#050505df 0%,#05050555 55%,#05050520)}body.redesign-home .cinema-copy {width:88%;padding:0 0 85px}body.redesign-home .cinema-copy h1 {font-size:clamp(3.35rem,12vw,6.6rem)}body.redesign-home .hero-deck {max-width:330px;font-size:.84rem}body.redesign-home .hero-proof {gap:9px;font-size:.45rem;letter-spacing:.12em}body.redesign-home .hero-scroll {display:none}body.redesign-home .section-pad {padding:78px 6%}body.redesign-home .intro-grid,body.redesign-home .rig-section,body.redesign-home .review-section,body.redesign-home .quote-section {grid-template-columns:1fr}body.redesign-home .intro-grid {gap:26px}body.redesign-home .work-grid {grid-template-columns:1fr 1fr;grid-template-rows:repeat(2,minmax(250px,46vw))}body.redesign-home .work-card-wide {grid-row:span 2}body.redesign-home .rig-visual {max-height:none}body.redesign-home .rig-visual>img {height:min(105vw,680px)}body.redesign-home .rig-caption {grid-column:1;margin-top:-47px}body.redesign-home .package-grid {grid-template-columns:1fr}body.redesign-home .package-card {min-height:260px}body.redesign-home .specialty-band {align-items:flex-start;flex-direction:column;padding:52px 6%}body.redesign-home .review-section {gap:28px}body.redesign-home .area-actions {align-items:flex-start;flex-direction:column}body.redesign-home .quote-section {gap:30px}body.redesign-home .footer-main {grid-template-columns:1fr}body.redesign-home .footer-links {grid-column:1;grid-row:auto;justify-content:flex-start}body.redesign-home .footer-bottom {flex-direction:column}}
 @media(max-width:480px){body.redesign-home .brand-name {font-size:1.07rem}body.redesign-home .brand-tagline {font-size:.49rem}body.redesign-home .cinema-hero {min-height:690px}body.redesign-home .cinema-copy h1 {font-size:clamp(3.15rem,14vw,4.6rem)}body.redesign-home .cinema-panel figcaption b {font-size:.8rem}body.redesign-home .hero-actions {align-items:stretch;flex-direction:column;max-width:320px}body.redesign-home .hero-actions .btn {width:100%}body.redesign-home .service-rail {gap:7px 10px;font-size:.48rem}body.redesign-home .service-rail i {font-size:.55rem}body.redesign-home .section-top {align-items:flex-start;flex-direction:column;gap:4px}body.redesign-home .section-top h2 {font-size:3.2rem}body.redesign-home .section-top>.text-link {margin-top:8px}body.redesign-home .work-grid {grid-template-columns:1fr 1fr;grid-template-rows:repeat(2,minmax(200px,54vw));gap:7px}body.redesign-home .work-card-wide {grid-row:span 2}body.redesign-home .work-label {left:10px;bottom:11px}body.redesign-home .work-label b {font-size:1.2rem}body.redesign-home .work-label small {font-size:.45rem}body.redesign-home .rig-caption {font-size:.43rem}body.redesign-home .form-row {grid-template-columns:1fr}body.redesign-home .quote-form {padding:19px}body.redesign-home .footer-links {gap:12px}body.redesign-home .footer-links a {font-size:.6rem}}
+
+/* November hero and gallery refinement */
+body.redesign-home .cinema-copy{width:min(91%,1220px);padding-bottom:clamp(80px,11vh,125px)}
+body.redesign-home .cinema-copy>.eyebrow{font-size:clamp(.55rem,.72vw,.67rem);letter-spacing:.13em;line-height:1.6;max-width:650px}
+body.redesign-home .cinema-copy h1{max-width:1040px;font-size:clamp(2.65rem,5.2vw,5.5rem);font-weight:800;line-height:1.12;letter-spacing:-.025em;text-wrap:pretty}
+body.redesign-home .cinema-copy h1 span,body.redesign-home .cinema-copy h1 em{display:inline}
+body.redesign-home .cinema-copy h1 em{white-space:normal}
+body.redesign-home .hero-deck{max-width:520px;margin-top:19px}
+body.redesign-home .hero-proof{margin-top:24px;font-size:.51rem;letter-spacing:.12em;flex-wrap:wrap}
+body.redesign-home .comparison-preview{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-top:38px;padding:28px 30px;border:1px solid var(--hairline);background:#0b0b0a}
+body.redesign-home .comparison-preview h3{margin:4px 0 10px;font:800 clamp(1.8rem,3.3vw,3.2rem)/1 var(--display)}
+body.redesign-home .comparison-preview h3 em{color:var(--gold)}
+body.redesign-home .comparison-preview p:not(.eyebrow){max-width:640px;color:#c3bfb7;font-size:.78rem;line-height:1.7}
+body.redesign-home .comparison-preview .btn{flex-shrink:0}
+@media(max-width:800px){
+ body.redesign-home .cinema-copy{width:88%;padding-bottom:85px}
+ body.redesign-home .cinema-copy h1{font-size:clamp(2.4rem,7.3vw,4.25rem);line-height:1.12;max-width:630px}
+ body.redesign-home .cinema-copy>.eyebrow{font-size:.55rem;letter-spacing:.12em}
+ body.redesign-home .comparison-preview{flex-direction:column;align-items:flex-start;padding:24px}
+ body.redesign-home .cinema-panel{opacity:0;transition:opacity 1.1s ease}
+ body.redesign-home .cinema-panel.is-active{opacity:1}
+ body.redesign-home .cinema-panels{display:block}
+ body.redesign-home .cinema-panel{position:absolute;inset:0;margin:0!important}
+ body.redesign-home .cinema-panel img{filter:brightness(.6) saturate(.8)}
+}
+@media(max-width:480px){
+ body.redesign-home .cinema-copy h1{font-size:clamp(2.05rem,8.6vw,3.15rem);line-height:1.16}
+ body.redesign-home .cinema-copy h1 span{display:block}
+ body.redesign-home .cinema-copy h1 em{display:block}
+ body.redesign-home .hero-actions{max-width:310px}
+ body.redesign-home .hero-proof{font-size:.42rem}
+ body.redesign-home .cinema-copy>.eyebrow{max-width:300px}
+}
+@media(prefers-reduced-motion:reduce){body.redesign-home .cinema-panel{transition:none}}
