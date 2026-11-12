@@ -1,4 +1,11 @@
 (() => {
+  const siteHeader = document.querySelector(".site-header");
+  if (siteHeader && document.body.classList.contains("redesign-home")) {
+    const updateHeader = () => siteHeader.classList.toggle("is-scrolled", window.scrollY > 12);
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+  }
+
   const menuButton = document.querySelector(".menu");
   const nav = document.querySelector("#main-nav");
   if (menuButton && nav) {

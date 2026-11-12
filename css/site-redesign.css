@@ -57,3 +57,60 @@ body.redesign-home .floating-call{position:fixed;z-index:1100}
  body.redesign-home .hero-actions{max-width:315px}
 }
 @media(prefers-reduced-motion:reduce){body.redesign-home .cinema-panel{transition:none}}
+
+/* Homepage refinements: retain the Enhance My Ride identity and assets. */
+body.redesign-home .site-header{position:fixed;inset:0 0 auto;z-index:1200;background:linear-gradient(180deg,rgba(5,5,5,.62),rgba(5,5,5,.08));border-bottom-color:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;transition:background .3s ease,border-color .3s ease,backdrop-filter .3s ease}
+body.redesign-home .site-header.is-scrolled{background:rgba(7,7,7,.9);border-bottom-color:rgba(212,175,55,.16);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+body.redesign-home .nav-container{min-height:78px}
+body.redesign-home .cinema-hero{height:100svh;min-height:620px;min-height:100svh}
+body.redesign-home .cinema-panel img{filter:brightness(.94) saturate(.9);object-position:center 48%}
+body.redesign-home .cinema-panel::after{background:linear-gradient(180deg,rgba(3,3,3,.08) 0%,rgba(3,3,3,0) 48%,rgba(3,3,3,.48) 100%)}
+body.redesign-home .cinema-panel figcaption{top:clamp(92px,13vh,124px);bottom:auto;left:clamp(18px,3.4vw,56px);right:14px;gap:5px;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+body.redesign-home .cinema-panel figcaption span{font-size:.51rem;letter-spacing:.16em}
+body.redesign-home .cinema-panel figcaption b{display:inline-block;justify-self:start;padding:5px 10px;background:rgba(5,5,5,.68);font-size:clamp(.95rem,1.7vw,1.45rem);letter-spacing:.06em}
+body.redesign-home .cinema-panel figcaption small{max-width:220px;font-size:.45rem}
+body.redesign-home .cinema-shade{background:linear-gradient(180deg,rgba(4,4,4,.08) 0%,transparent 28%,rgba(4,4,4,.12) 48%,rgba(4,4,4,.55) 73%,rgba(4,4,4,.9) 100%),linear-gradient(90deg,rgba(4,4,4,.24) 0%,rgba(4,4,4,.08) 56%,rgba(4,4,4,.06) 100%)}
+body.redesign-home .cinema-copy{width:min(90%,1240px);padding:clamp(122px,16vh,158px) 0 clamp(52px,8vh,78px)}
+body.redesign-home .cinema-copy>.eyebrow{font-size:clamp(.55rem,.68vw,.64rem);letter-spacing:.15em;line-height:1.45;margin-bottom:15px}
+body.redesign-home .cinema-copy h1{max-width:1100px;font-size:clamp(3.2rem,5.8vw,6rem);line-height:.98;letter-spacing:-.025em;text-transform:uppercase;text-wrap:pretty;text-shadow:0 4px 24px rgba(0,0,0,.36)}
+body.redesign-home .hero-deck{font-size:clamp(.82rem,1.05vw,.98rem);margin-top:17px}
+body.redesign-home .hero-actions{margin-top:21px}
+body.redesign-home .hero-scroll{display:none}
+body.redesign-home .service-rail{border-top:1px solid rgba(212,175,55,.14);border-bottom:1px solid rgba(212,175,55,.2);background:#0b0b0a}
+body.redesign-home .intro-block{padding-top:clamp(38px,4.6vw,58px);padding-bottom:clamp(38px,4.6vw,58px);background:#10100f;border-bottom:1px solid rgba(212,175,55,.16)}
+body.redesign-home .intro-grid{grid-template-columns:.9fr 1.1fr;gap:clamp(28px,6vw,82px)}
+body.redesign-home .intro-grid h2{font-size:clamp(1.8rem,3.25vw,3.15rem);line-height:.98}
+body.redesign-home .intro-grid>div p{margin:0;font-size:.78rem;line-height:1.75}
+body.redesign-home .intro-grid .muted-line{margin-top:8px;font-size:.69rem}
+body.redesign-home .intro-grid .text-link{margin-top:8px}
+body.redesign-home .work-section{background:#0b0b0a}
+body.redesign-home .work-grid{display:flex;grid-template-columns:none;grid-template-rows:none;gap:10px;margin-top:30px;padding:0 0 12px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scrollbar-color:rgba(212,175,55,.58) rgba(255,255,255,.08);scrollbar-width:thin}
+body.redesign-home .work-card,body.redesign-home .work-card-wide{flex:0 0 clamp(260px,29vw,380px);grid-row:auto;min-height:clamp(330px,34vw,430px);aspect-ratio:4/5;scroll-snap-align:start}
+body.redesign-home .work-card img{display:block;object-position:center;}
+body.redesign-home .floating-call{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));left:auto;top:auto;z-index:1100;display:inline-flex;min-height:48px;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:var(--gold);color:#080808;box-shadow:0 8px 28px rgba(0,0,0,.48);font-size:.78rem;font-weight:800;text-decoration:none;transition:background .2s ease,transform .2s ease}
+body.redesign-home .floating-call:hover{transform:translateY(-2px);background:var(--gold-bright)}
+body.redesign-home .floating-call svg{width:19px;height:19px;fill:currentColor}
+@media(max-width:800px){
+ body.redesign-home .nav-container{min-height:72px}
+ body.redesign-home .cinema-hero{height:100svh;min-height:640px;align-items:flex-end}
+ body.redesign-home .cinema-panel figcaption{display:none}
+ body.redesign-home .cinema-panel img{filter:brightness(.78) saturate(.84);object-position:center 50%}
+ body.redesign-home .cinema-shade{background:linear-gradient(180deg,rgba(4,4,4,.16),transparent 25%,rgba(4,4,4,.14) 46%,rgba(4,4,4,.72) 77%,rgba(4,4,4,.94) 100%),linear-gradient(90deg,rgba(4,4,4,.2),rgba(4,4,4,.04) 70%)}
+ body.redesign-home .cinema-copy{width:90%;padding:0 0 76px}
+ body.redesign-home .cinema-copy h1{font-size:clamp(2.75rem,7.9vw,4.6rem);line-height:1.02;max-width:660px}
+ body.redesign-home .hero-deck{max-width:340px;font-size:.84rem}
+ body.redesign-home .work-card,body.redesign-home .work-card-wide{flex-basis:72vw;min-height:350px}
+ body.redesign-home .intro-block{padding-top:42px;padding-bottom:42px}
+ body.redesign-home .intro-grid{grid-template-columns:1fr;gap:18px}
+ body.redesign-home .intro-grid h2{max-width:520px;font-size:clamp(2.2rem,8vw,3rem)}
+ body.redesign-home .site-footer{padding-bottom:100px}
+}
+@media(max-width:480px){
+ body.redesign-home .cinema-copy{padding-bottom:76px}
+ body.redesign-home .cinema-copy h1{font-size:clamp(2.4rem,8.6vw,3.5rem);line-height:1.08;letter-spacing:-.025em}
+ body.redesign-home .cinema-copy>.eyebrow{font-size:.53rem;letter-spacing:.12em}
+ body.redesign-home .hero-actions{max-width:315px}
+ body.redesign-home .work-card,body.redesign-home .work-card-wide{flex-basis:78vw;min-height:340px}
+ body.redesign-home .floating-call{right:max(12px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom));min-height:46px;padding:10px 14px;font-size:.72rem}
+}
+@media(max-width:480px){body.redesign-home .floating-call{width:46px;height:46px;padding:0;border-radius:50%}body.redesign-home .floating-call span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;clip-path:inset(50%)} }
