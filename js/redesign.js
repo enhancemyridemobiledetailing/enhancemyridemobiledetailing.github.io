@@ -23,25 +23,6 @@
     });
   }
 
-  // Mobile hero: deliberate 8-second dwell, rather than rapid cycling.
-  const heroPanels = Array.from(document.querySelectorAll(".cinema-panel"));
-  if (heroPanels.length > 1) {
-    let activePanel = 0;
-    const setPanel = index => {
-      heroPanels.forEach((panel, i) => panel.classList.toggle("is-active", i === index));
-    };
-    setPanel(0);
-    const mobile = window.matchMedia("(max-width: 800px)");
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (!reduced.matches) {
-      window.setInterval(() => {
-        if (!mobile.matches || document.hidden) return;
-        activePanel = (activePanel + 1) % heroPanels.length;
-        setPanel(activePanel);
-      }, 8000);
-    }
-  }
-
   const year = document.querySelector("#current-year");
   if (year) year.textContent = new Date().getFullYear();
 
