@@ -23,6 +23,21 @@
     });
   }
 
+  // Rotate existing real detailing photographs on mobile every 8 seconds.
+  const heroPanels = [...document.querySelectorAll(".cinema-panel")];
+  if (heroPanels.length > 1) {
+    let active = 0;
+    const activate = () => heroPanels.forEach((panel, index) => panel.classList.toggle("is-active", index === active));
+    activate();
+    const mobile = window.matchMedia("(max-width: 800px)");
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      window.setInterval(() => {
+        if (!mobile.matches || document.hidden) return;
+        active = (active + 1) % heroPanels.length;
+        activate();
+      }, 8000);
+    }
+  }
   const year = document.querySelector("#current-year");
   if (year) year.textContent = new Date().getFullYear();
 
